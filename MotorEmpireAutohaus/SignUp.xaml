@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MotorEmpireAutohaus.SignUp"
+             Title="SignUp">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Image Source="{AppThemeBinding Dark=authentication.png, Light=auth_light.png}"
+             Margin="10"
+             VerticalOptions="StartAndExpand"
+             x:Name="AuthenticationLogo"
+             Aspect="AspectFit"
+                   WidthRequest="250"
+                   HeightRequest="250"
+             ></Image>
+
+            <VerticalStackLayout HorizontalOptions="Center">
+                <Frame BackgroundColor="{AppThemeBinding Dark=#7B7C7C, Light=#dbdbdb}"
+                       WidthRequest="340"
+                       HeightRequest="505"
+                       CornerRadius="50"
+                       HorizontalOptions="Center">
+                    <VerticalStackLayout>
+                        <Label Text="Welcome!"
+                           FontSize="Title"
+                           FontFamily="Kollektif"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"/>
+                        <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Margin="0,5,0,20">
+                            <Label Text="Sign up "
+                                   FontSize="20"
+                                   FontFamily="Kollektif"
+                                   HorizontalOptions="Center"
+                                   TextColor="{AppThemeBinding Dark=#333652, Light=#3D8361}"/>
+
+                            <Label Text="to continue."
+                                   FontFamily="Kollektif"
+                                   HorizontalOptions="Center"
+                                   TextColor="{AppThemeBinding Light=Black, Dark=White}"
+                                   FontSize="19"></Label>
+                        </HorizontalStackLayout>
+
+                        <VerticalStackLayout HorizontalOptions="CenterAndExpand">
+                            <Label Text="Email" 
+                               HorizontalOptions="Start"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               Margin="10,0,0,10"/>
+
+                            <Frame CornerRadius="15"
+                                   HeightRequest="45"
+                                   WidthRequest="300"
+                                   HasShadow="True"
+                                   BorderColor="Transparent"
+                                   Padding="5"
+                                   Margin="0,0,0,25">
+
+                                <HorizontalStackLayout>
+                                    <Image Source="email.png"
+                                           WidthRequest="24"
+                                           HeightRequest="24"
+                                           Margin="5"/>
+
+                                    <Entry Placeholder="Your email address here"
+                                           HeightRequest="45"
+                                           MaxLength="50"
+                                           TextColor="Black"
+                                           FontFamily="Roboto"
+                                           Margin="5,0,0,0"/>
+                                </HorizontalStackLayout>
+                            </Frame>
+                        </VerticalStackLayout>
+
+                        <VerticalStackLayout HorizontalOptions="CenterAndExpand">
+                            <Label Text="Password" 
+                               HorizontalOptions="Start"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               Margin="10,0,0,10"/>
+
+                            <Frame CornerRadius="15"
+                                   HeightRequest="45"
+                                   WidthRequest="300"
+                                   HasShadow="True"
+                                   BorderColor="Transparent"
+                                   Padding="5"
+                                   Margin="0,0,0,25">
+
+                                <HorizontalStackLayout>
+                                    <Image Source="password.png"
+                                           WidthRequest="24"
+                                           HeightRequest="24"
+                                           Margin="5"/>
+                                    <Entry Placeholder="Your Password here"
+                                           x:Name="passwordEntry"
+                                           HeightRequest="45"
+                                           MaxLength="50"
+                                           TextColor="Black"
+                                           FontFamily="Roboto"
+                                           IsPassword="true"
+                                           Margin="5,0,0,0"
+                                           WidthRequest="215"/>
+                                    <ImageButton Source="eye.png" 
+                                                 WidthRequest="24"
+                                                 HeightRequest="24"
+                                                 HorizontalOptions="End"
+                                                 Clicked="SetPasswordToVisible"
+                                                 Margin="5"/>
+                                </HorizontalStackLayout>
+                            </Frame>
+                        </VerticalStackLayout>
+
+                        <HorizontalStackLayout Margin="0,10,0,0"
+                                               Padding="0">
+                            <CheckBox IsChecked="False" Color="{AppThemeBinding Dark=White,Light=#3D8361}"/>
+                            <Label Text="Remember Me" 
+                                   TextColor="{AppThemeBinding Dark=White, Light=Black}"
+                                   FontSize="Small"
+                                   HorizontalOptions="StartAndExpand"
+                                   VerticalTextAlignment="Center"
+                                   HorizontalTextAlignment="Center"/>
+
+                            <Label Text="Forgot Password"
+                                   TextColor="{AppThemeBinding Dark=#333652, Light=#3D8361}"
+                                   FontAttributes="Bold"
+                                   HorizontalOptions="End"
+                                   VerticalTextAlignment="Center"
+                                   HorizontalTextAlignment="End"
+                                   Margin="60,0,0,0"/>
+
+                        </HorizontalStackLayout>
+
+                        <Button Margin="0,15,0,0"
+                                Text="Sign In"
+                                BackgroundColor="{AppThemeBinding Dark=#333652, Light=#1C6758}"
+                                TextColor="White"
+                                FontFamily="Kollektif"
+                                FontSize="22"
+                                CornerRadius="15"
+                                FontAttributes="Bold">
+
+                        </Button>
+
+                        <VerticalStackLayout HorizontalOptions="Center" Margin="25">
+                            <Label Text="Have an account already?"
+                                   FontSize="Medium"
+                                   FontAttributes="Bold"
+                                   FontFamily="Roboto"
+                                   TextColor="{AppThemeBinding Dark=White, Light=Black}"/>
+                            <Label Text=" Sign In!"
+                                   FontSize="Large"
+                                   FontAttributes="Bold"
+                                   FontFamily="Roboto"
+                                   TextColor="{AppThemeBinding Dark=#333652, Light=#1C6758}"
+                                   HorizontalOptions="Center"/>
+                            <VerticalStackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="NavigateToSignInPage"/>
+                            </VerticalStackLayout.GestureRecognizers>
+                        </VerticalStackLayout>
+
+                    </VerticalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
