@@ -16,7 +16,8 @@
 
             <VerticalStackLayout HorizontalOptions="Center">
                 <Frame BackgroundColor="{AppThemeBinding Dark=#7B7C7C, Light=#dbdbdb}"
-                       WidthRequest="340"
+                       MinimumWidthRequest="340"
+                       MaximumWidthRequest="2400"
                        HeightRequest="505"
                        CornerRadius="50"
                        HorizontalOptions="Center">
@@ -52,6 +53,7 @@
                                    WidthRequest="300"
                                    HasShadow="True"
                                    BorderColor="Transparent"
+                                   BackgroundColor="{AppThemeBinding Dark=White, Light=White}"
                                    Padding="5"
                                    Margin="0,0,0,25">
 
@@ -62,11 +64,19 @@
                                            Margin="5"/>
 
                                     <Entry Placeholder="Your email address here"
-                                           HeightRequest="45"
+                                           x:Name="emailEntry"
                                            MaxLength="50"
                                            TextColor="Black"
+                                           WidthRequest="215"
+                                           BackgroundColor="{AppThemeBinding Dark=White, Light=White}"
                                            FontFamily="Roboto"
                                            Margin="5,0,0,0"/>
+                                    <ImageButton Source="eye.png" 
+                                                 WidthRequest="24"
+                                                 HeightRequest="24"
+                                                 HorizontalOptions="End"
+                                                 Margin="5"
+                                                 IsVisible="False"/>
                                 </HorizontalStackLayout>
                             </Frame>
                         </VerticalStackLayout>
@@ -80,9 +90,11 @@
 
                             <Frame CornerRadius="15"
                                    HeightRequest="45"
+                                   x:Name="passwordFrame"
                                    WidthRequest="300"
                                    HasShadow="True"
                                    BorderColor="Transparent"
+                                   BackgroundColor="{AppThemeBinding Dark=White, Light=White}"
                                    Padding="5"
                                    Margin="0,0,0,25">
 
@@ -93,19 +105,21 @@
                                            Margin="5"/>
                                     <Entry Placeholder="Your Password here"
                                            x:Name="passwordEntry"
-                                           HeightRequest="45"
                                            MaxLength="50"
+                                           WidthRequest="215"
                                            TextColor="Black"
+                                           BackgroundColor="{AppThemeBinding Dark=White, Light=White}"
                                            FontFamily="Roboto"
-                                           IsPassword="true"
+                                           IsPassword="True"
                                            Margin="5,0,0,0"
-                                           WidthRequest="215"/>
+                                           />
                                     <ImageButton Source="eye.png" 
+                                                 x:Name="passwordShowButton"
                                                  WidthRequest="24"
                                                  HeightRequest="24"
                                                  HorizontalOptions="End"
                                                  Clicked="SetPasswordToVisible"
-                                                 Margin="5"/>
+                                                 Margin="0"/>
                                 </HorizontalStackLayout>
                             </Frame>
                         </VerticalStackLayout>
