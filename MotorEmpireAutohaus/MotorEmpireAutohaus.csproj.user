@@ -11,10 +11,10 @@
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
   <ItemGroup>
-    <MauiXaml Update="LogIn.xaml">
+    <MauiXaml Update="View\Authentication\LogIn.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="SignUp.xaml">
+    <MauiXaml Update="View\Authentication\SignUp.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
   </ItemGroup>

@@ -2,7 +2,8 @@
 <Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MotorEmpireAutohaus"
-             x:Class="MotorEmpireAutohaus.App">
+             x:Class="MotorEmpireAutohaus.App"
+             xmlns:mct="Community.Toolkit.Maui.Core.Views">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

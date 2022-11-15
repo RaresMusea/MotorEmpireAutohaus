@@ -73,16 +73,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="LogIn.xaml.cs">
+	  <Compile Update="View\Authentication\LogIn.xaml.cs">
 	    <DependentUpon>LogIn.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="LogIn.xaml">
+	  <MauiXaml Update="View\Authentication\LogIn.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="SignUp.xaml">
+	  <MauiXaml Update="View\Authentication\SignUp.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

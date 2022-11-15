@@ -1,4 +1,7 @@
-﻿namespace MotorEmpireAutohaus;
+﻿
+
+namespace MotorEmpireAutohaus;
+
 
 public static class MauiProgram
 {

@@ -29,7 +29,6 @@ public partial class LogIn : ContentPage,IPlatformDependentStyling
 			WelcomeLabel.FontSize = 30;
 			QuestionLabel.FontSize = 20;
 			SignUpLabel.FontSize = 25;
-
         }
 
 		if (DeviceInfo.Platform == DevicePlatform.Android)

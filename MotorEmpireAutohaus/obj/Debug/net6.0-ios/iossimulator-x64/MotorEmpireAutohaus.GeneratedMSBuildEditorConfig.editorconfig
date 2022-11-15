@@ -22,12 +22,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = MotorEmpireAutohaus.AppShe
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MotorEmpireAutohaus/LogIn.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = MotorEmpireAutohaus.LogIn.xaml
-build_metadata.AdditionalFiles.TargetPath = LogIn.xaml
-build_metadata.AdditionalFiles.RelativePath = LogIn.xaml
-
 [C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MotorEmpireAutohaus/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MotorEmpireAutohaus.MainPage.xaml
@@ -46,8 +40,14 @@ build_metadata.AdditionalFiles.ManifestResourceName = MotorEmpireAutohaus.Resour
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MotorEmpireAutohaus/SignUp.xaml]
+[C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MotorEmpireAutohaus/View/Authentication/LogIn.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = MotorEmpireAutohaus.SignUp.xaml
-build_metadata.AdditionalFiles.TargetPath = SignUp.xaml
-build_metadata.AdditionalFiles.RelativePath = SignUp.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MotorEmpireAutohaus.View.Authentication.LogIn.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Authentication\LogIn.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Authentication\LogIn.xaml
+
+[C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MotorEmpireAutohaus/View/Authentication/SignUp.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MotorEmpireAutohaus.View.Authentication.SignUp.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Authentication\SignUp.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Authentication\SignUp.xaml

@@ -16,13 +16,16 @@
 
             <VerticalStackLayout HorizontalOptions="Center">
                 <Frame BackgroundColor="{AppThemeBinding Dark=#7B7C7C, Light=#dbdbdb}"
-                       WidthRequest="340"
-                       HeightRequest="505"
+                       x:Name="AuthContainer"
+                       MinimumWidthRequest="340"
+                       MaximumWidthRequest="2400"
+                       HeightRequest="725"
                        CornerRadius="50"
                        HorizontalOptions="Center">
                     <VerticalStackLayout>
                         <Label Text="Welcome!"
                            FontSize="Title"
+                           x:Name="WelcomeLabel"
                            FontFamily="Kollektif"
                            FontAttributes="Bold"
                            HorizontalTextAlignment="Center"/>
@@ -33,12 +36,53 @@
                                    HorizontalOptions="Center"
                                    TextColor="{AppThemeBinding Dark=#333652, Light=#3D8361}"/>
 
-                            <Label Text="to continue."
+                            <Label Text=" to continue."
                                    FontFamily="Kollektif"
                                    HorizontalOptions="Center"
                                    TextColor="{AppThemeBinding Light=Black, Dark=White}"
                                    FontSize="19"></Label>
                         </HorizontalStackLayout>
+
+
+                        <VerticalStackLayout HorizontalOptions="CenterAndExpand">
+                            <Label Text="Name" 
+                               HorizontalOptions="Start"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               Margin="10,0,0,10"/>
+
+                            <Frame CornerRadius="15"
+                                   HeightRequest="45"
+                                   WidthRequest="300"
+                                   HasShadow="True"
+                                   BorderColor="Transparent"
+                                   BackgroundColor="{AppThemeBinding Dark=White, Light=White}"
+                                   Padding="5"
+                                   Margin="0,0,0,25">
+
+                                <HorizontalStackLayout>
+                                    <Image Source="person.png"
+                                           WidthRequest="24"
+                                           HeightRequest="24"
+                                           Margin="5"/>
+
+                                    <Entry Placeholder="Your name here"
+                                           x:Name="NameEntry"
+                                           MaxLength="50"
+                                           TextColor="Black"
+                                           WidthRequest="215"
+                                           BackgroundColor="{AppThemeBinding Dark=White, Light=White}"
+                                           FontFamily="Roboto"
+                                           Margin="5,0,0,0"/>
+                                    <ImageButton Source="eye.png" 
+                                                 WidthRequest="24"
+                                                 HeightRequest="24"
+                                                 HorizontalOptions="End"
+                                                 Margin="5"
+                                                 IsVisible="False"/>
+                                </HorizontalStackLayout>
+                            </Frame>
+                        </VerticalStackLayout>
 
                         <VerticalStackLayout HorizontalOptions="CenterAndExpand">
                             <Label Text="Email" 
@@ -52,6 +96,7 @@
                                    WidthRequest="300"
                                    HasShadow="True"
                                    BorderColor="Transparent"
+                                   BackgroundColor="{AppThemeBinding Dark=White, Light=White}"
                                    Padding="5"
                                    Margin="0,0,0,25">
 
@@ -62,11 +107,19 @@
                                            Margin="5"/>
 
                                     <Entry Placeholder="Your email address here"
-                                           HeightRequest="45"
+                                           x:Name="emailEntry"
                                            MaxLength="50"
                                            TextColor="Black"
+                                           WidthRequest="215"
+                                           BackgroundColor="{AppThemeBinding Dark=White, Light=White}"
                                            FontFamily="Roboto"
                                            Margin="5,0,0,0"/>
+                                    <ImageButton Source="eye.png" 
+                                                 WidthRequest="24"
+                                                 HeightRequest="24"
+                                                 HorizontalOptions="End"
+                                                 Margin="5"
+                                                 IsVisible="False"/>
                                 </HorizontalStackLayout>
                             </Frame>
                         </VerticalStackLayout>
@@ -80,9 +133,11 @@
 
                             <Frame CornerRadius="15"
                                    HeightRequest="45"
+                                   x:Name="passwordFrame"
                                    WidthRequest="300"
                                    HasShadow="True"
                                    BorderColor="Transparent"
+                                   BackgroundColor="{AppThemeBinding Dark=White, Light=White}"
                                    Padding="5"
                                    Margin="0,0,0,25">
 
@@ -93,19 +148,65 @@
                                            Margin="5"/>
                                     <Entry Placeholder="Your Password here"
                                            x:Name="passwordEntry"
-                                           HeightRequest="45"
                                            MaxLength="50"
+                                           WidthRequest="215"
                                            TextColor="Black"
+                                           BackgroundColor="{AppThemeBinding Dark=White, Light=White}"
                                            FontFamily="Roboto"
-                                           IsPassword="true"
+                                           IsPassword="True"
                                            Margin="5,0,0,0"
-                                           WidthRequest="215"/>
+                                           />
                                     <ImageButton Source="eye.png" 
+                                                 x:Name="passwordShowButton"
                                                  WidthRequest="24"
                                                  HeightRequest="24"
                                                  HorizontalOptions="End"
                                                  Clicked="SetPasswordToVisible"
-                                                 Margin="5"/>
+                                                 Margin="0"/>
+                                </HorizontalStackLayout>
+                            </Frame>
+                        </VerticalStackLayout>
+
+                        <VerticalStackLayout HorizontalOptions="CenterAndExpand">
+                            <Label Text="Confirm Password" 
+                               HorizontalOptions="Start"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               Margin="10,0,0,10"/>
+
+                            <Frame CornerRadius="15"
+                                   HeightRequest="45"
+                                   x:Name="passwordConfirmationFrame"
+                                   WidthRequest="300"
+                                   HasShadow="True"
+                                   BorderColor="Transparent"
+                                   BackgroundColor="{AppThemeBinding Dark=White, Light=White}"
+                                   Padding="5"
+                                   Margin="0,0,0,25">
+
+                                <HorizontalStackLayout>
+                                    <Image Source="password.png"
+                                           WidthRequest="24"
+                                           HeightRequest="24"
+                                           Margin="5"/>
+                                    <Entry Placeholder="Confirm your Password here"
+                                           x:Name="passwordConfirmationEntry"
+                                           MaxLength="50"
+                                           WidthRequest="215"
+                                           TextColor="Black"
+                                           BackgroundColor="{AppThemeBinding Dark=White, Light=White}"
+                                           FontFamily="Roboto"
+                                           IsPassword="True"
+                                           Margin="5,0,0,0"
+                                           />
+                                    <ImageButton Source="eye.png" 
+                                                 x:Name="passwordShowButton2"
+                                                 WidthRequest="24"
+                                                 HeightRequest="24"
+                                                 HorizontalOptions="End"
+                                                 Clicked="SetPasswordToVisible"
+                                                 Margin="0"
+                                                 IsVisible="False"/>
                                 </HorizontalStackLayout>
                             </Frame>
                         </VerticalStackLayout>
@@ -116,13 +217,17 @@
                             <Label Text="Remember Me" 
                                    TextColor="{AppThemeBinding Dark=White, Light=Black}"
                                    FontSize="Small"
+                                   x:Name="RememberMeLabel"
                                    HorizontalOptions="StartAndExpand"
                                    VerticalTextAlignment="Center"
                                    HorizontalTextAlignment="Center"/>
 
                             <Label Text="Forgot Password"
                                    TextColor="{AppThemeBinding Dark=#333652, Light=#3D8361}"
+                                   x:Name="ForgotPasswordLabel"
+                                   FontAutoScalingEnabled="False"
                                    FontAttributes="Bold"
+                                   FontSize="Small"
                                    HorizontalOptions="End"
                                    VerticalTextAlignment="Center"
                                    HorizontalTextAlignment="End"
@@ -131,7 +236,7 @@
                         </HorizontalStackLayout>
 
                         <Button Margin="0,15,0,0"
-                                Text="Sign In"
+                                Text="Register"
                                 BackgroundColor="{AppThemeBinding Dark=#333652, Light=#1C6758}"
                                 TextColor="White"
                                 FontFamily="Kollektif"
@@ -143,12 +248,14 @@
 
                         <VerticalStackLayout HorizontalOptions="Center" Margin="25">
                             <Label Text="Have an account already?"
-                                   FontSize="Medium"
+                                   FontSize="Small"
+                                   x:Name="QuestionLabel"
                                    FontAttributes="Bold"
                                    FontFamily="Roboto"
                                    TextColor="{AppThemeBinding Dark=White, Light=Black}"/>
-                            <Label Text=" Sign In!"
+                            <Label Text=" Sign in!"
                                    FontSize="Large"
+                                   x:Name="SignUpLabel"
                                    FontAttributes="Bold"
                                    FontFamily="Roboto"
                                    TextColor="{AppThemeBinding Dark=#333652, Light=#1C6758}"
@@ -156,6 +263,7 @@
                             <VerticalStackLayout.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="NavigateToSignInPage"/>
                             </VerticalStackLayout.GestureRecognizers>
+
                         </VerticalStackLayout>
 
                     </VerticalStackLayout>
