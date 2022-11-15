@@ -16,6 +16,7 @@
 
             <VerticalStackLayout HorizontalOptions="Center">
                 <Frame BackgroundColor="{AppThemeBinding Dark=#7B7C7C, Light=#dbdbdb}"
+                       x:Name="AuthContainer"
                        MinimumWidthRequest="340"
                        MaximumWidthRequest="2400"
                        HeightRequest="505"
@@ -24,6 +25,7 @@
                     <VerticalStackLayout>
                         <Label Text="Welcome!"
                            FontSize="Title"
+                           x:Name="WelcomeLabel"
                            FontFamily="Kollektif"
                            FontAttributes="Bold"
                            HorizontalTextAlignment="Center"/>
@@ -34,7 +36,7 @@
                                    HorizontalOptions="Center"
                                    TextColor="{AppThemeBinding Dark=#333652, Light=#3D8361}"/>
 
-                            <Label Text="to continue."
+                            <Label Text=" to continue."
                                    FontFamily="Kollektif"
                                    HorizontalOptions="Center"
                                    TextColor="{AppThemeBinding Light=Black, Dark=White}"
@@ -130,13 +132,17 @@
                             <Label Text="Remember Me" 
                                    TextColor="{AppThemeBinding Dark=White, Light=Black}"
                                    FontSize="Small"
+                                   x:Name="RememberMeLabel"
                                    HorizontalOptions="StartAndExpand"
                                    VerticalTextAlignment="Center"
                                    HorizontalTextAlignment="Center"/>
 
                             <Label Text="Forgot Password"
                                    TextColor="{AppThemeBinding Dark=#333652, Light=#3D8361}"
+                                   x:Name="ForgotPasswordLabel"
+                                   FontAutoScalingEnabled="False"
                                    FontAttributes="Bold"
+                                   FontSize="Small"
                                    HorizontalOptions="End"
                                    VerticalTextAlignment="Center"
                                    HorizontalTextAlignment="End"
@@ -158,11 +164,13 @@
                         <VerticalStackLayout HorizontalOptions="Center" Margin="25">
                             <Label Text="Don't you have an account?"
                                    FontSize="Medium"
+                                   x:Name="QuestionLabel"
                                    FontAttributes="Bold"
                                    FontFamily="Roboto"
                                    TextColor="{AppThemeBinding Dark=White, Light=Black}"/>
                             <Label Text=" Sign Up!"
                                    FontSize="Large"
+                                   x:Name="SignUpLabel"
                                    FontAttributes="Bold"
                                    FontFamily="Roboto"
                                    TextColor="{AppThemeBinding Dark=#333652, Light=#1C6758}"

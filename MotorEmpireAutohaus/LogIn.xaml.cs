@@ -1,7 +1,9 @@
 using  Microsoft.Maui.Devices;
+using MotorEmpireAutohaus.Misc.Common;
+
 namespace MotorEmpireAutohaus;
 
-public partial class LogIn : ContentPage
+public partial class LogIn : ContentPage,IPlatformDependentStyling
 {
 	public LogIn()
 	{
@@ -10,7 +12,7 @@ public partial class LogIn : ContentPage
 	}
 
 
-	private void ApplySpecificStyleDependingOnPlatform()
+	public void ApplySpecificStyleDependingOnPlatform()
 	{
 		if (DeviceInfo.Platform == DevicePlatform.WinUI)
 		{
@@ -21,6 +23,13 @@ public partial class LogIn : ContentPage
 			emailEntry.WidthRequest = 250;
 			passwordEntry.WidthRequest = 225;
 			passwordFrame.WidthRequest = 300;
+			AuthContainer.Margin = new Thickness(0, 0, 0, 20);
+			RememberMeLabel.FontSize = 16;
+			ForgotPasswordLabel.FontSize = 16;
+			WelcomeLabel.FontSize = 30;
+			QuestionLabel.FontSize = 20;
+			SignUpLabel.FontSize = 25;
+
         }
 
 		if (DeviceInfo.Platform == DevicePlatform.Android)
@@ -29,11 +38,11 @@ public partial class LogIn : ContentPage
 			passwordEntry.HeightRequest = 45;
 			passwordEntry.WidthRequest = 225;
 			passwordFrame.WidthRequest = 300;
-			passwordShowButton.Margin = new Thickness(5);
+			passwordShowButton.Margin = new Thickness(-5);
         }
 		
 	}
- 
+
 	private void SetPasswordToVisible(object sender, EventArgs e)
 	{
         passwordEntry.IsPassword=!passwordEntry.IsPassword;
