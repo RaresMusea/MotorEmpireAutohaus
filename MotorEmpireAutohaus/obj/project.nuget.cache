@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "k6CAZUhd44eITP4RzGK4HwOHaJ6fMgD2AqC6AAzqSYyrpk/5I/4tRWDAHBUaReB3W9AMmBhwbiVm4BwOAja22w==",
+  "dgSpecHash": "YfR0EpLh+oXFmz64f1DpX2Bsek8/ZrWWIQXMaN2OaOl6je0bBtTKyS9vxb4/HdKzNXbVx8t3wg91Lyk2ovbsbA==",
   "success": true,
   "projectFilePath": "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\MotorEmpireAutohaus\\MotorEmpireAutohaus.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\rares\\.nuget\\packages\\communitytoolkit.maui\\2.0.0\\communitytoolkit.maui.2.0.0.nupkg.sha512",
+    "C:\\Users\\rares\\.nuget\\packages\\communitytoolkit.maui.core\\2.0.0\\communitytoolkit.maui.core.2.0.0.nupkg.sha512",
     "C:\\Users\\rares\\.nuget\\packages\\communitytoolkit.mvvm\\8.0.0\\communitytoolkit.mvvm.8.0.0.nupkg.sha512",
     "C:\\Users\\rares\\.nuget\\packages\\googlegson\\2.9.0.1\\googlegson.2.9.0.1.nupkg.sha512",
     "C:\\Users\\rares\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.1\\microsoft.extensions.configuration.6.0.1.nupkg.sha512",

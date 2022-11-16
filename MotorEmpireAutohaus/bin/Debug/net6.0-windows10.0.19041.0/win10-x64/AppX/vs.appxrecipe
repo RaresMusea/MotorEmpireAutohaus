@@ -29,25 +29,25 @@
     <AppXManifest Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-11-15T11:22:12.452</Modified>
+      <Modified>2022-11-16T12:16:35.491</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-11-15T11:09:14.804</Modified>
+      <Modified>2022-11-16T11:26:30.775</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\MotorEmpireAutohaus.runtimeconfig.json">
       <PackagePath>MotorEmpireAutohaus.runtimeconfig.json</PackagePath>
-      <Modified>2022-11-13T13:52:15.052</Modified>
+      <Modified>2022-11-16T05:20:04.195</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\MotorEmpireAutohaus.dll">
       <PackagePath>MotorEmpireAutohaus.dll</PackagePath>
-      <Modified>2022-11-15T11:22:11.365</Modified>
+      <Modified>2022-11-16T12:16:34.346</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>MotorEmpireAutohaus.exe</PackagePath>
-      <Modified>2022-11-15T11:22:11.372</Modified>
+      <Modified>2022-11-16T12:16:34.358</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.11\runtimes\win-x64\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -965,6 +965,14 @@
       <PackagePath>WinRT.Runtime.dll</PackagePath>
       <Modified>2022-08-17T03:26:26.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rares\.nuget\packages\communitytoolkit.maui\2.0.0\lib\net6.0-windows10.0.19041\CommunityToolkit.Maui.dll">
+      <PackagePath>CommunityToolkit.Maui.dll</PackagePath>
+      <Modified>2022-11-08T23:34:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rares\.nuget\packages\communitytoolkit.maui.core\2.0.0\lib\net6.0-windows10.0.19041\CommunityToolkit.Maui.Core.dll">
+      <PackagePath>CommunityToolkit.Maui.Core.dll</PackagePath>
+      <Modified>2022-11-08T23:34:42.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\.nuget\packages\communitytoolkit.mvvm\8.0.0\lib\net6.0\CommunityToolkit.Mvvm.dll">
       <PackagePath>CommunityToolkit.Mvvm.dll</PackagePath>
       <Modified>2022-08-03T23:09:22.000</Modified>
@@ -1071,7 +1079,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\MotorEmpireAutohaus.deps.json">
       <PackagePath>MotorEmpireAutohaus.deps.json</PackagePath>
-      <Modified>2022-11-15T11:22:12.330</Modified>
+      <Modified>2022-11-16T12:16:35.359</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\.nuget\packages\microsoft.maui.controls.ref.win\6.0.547\ref\net6.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>

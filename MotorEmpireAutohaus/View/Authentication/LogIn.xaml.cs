@@ -1,14 +1,27 @@
+
+using CommunityToolkit.Maui.Alerts;
+using CommunityToolkit.Maui.Core;
 using  Microsoft.Maui.Devices;
+using Microsoft.Maui.Graphics.Text;
 using MotorEmpireAutohaus.Misc.Common;
+using MotorEmpireAutohaus.Misc.Prebuilt_Components;
+using MotorEmpireAutohaus.Storage;
+using MySqlConnector;
+using System.Diagnostics;
+using System.Threading;
 
 namespace MotorEmpireAutohaus;
 
 public partial class LogIn : ContentPage,IPlatformDependentStyling
 {
+
+	DatabaseConfigurer dc;
 	public LogIn()
 	{
-		InitializeComponent();
-		ApplySpecificStyleDependingOnPlatform();
+       
+        InitializeComponent();
+        ApplySpecificStyleDependingOnPlatform();
+		Connect();
 	}
 
 
@@ -42,11 +55,19 @@ public partial class LogIn : ContentPage,IPlatformDependentStyling
 		
 	}
 
+	private void Connect()
+	{
+            dc = new DatabaseConfigurer();
+			dc.OpenConnection();
+    }
+
+
 	private void SetPasswordToVisible(object sender, EventArgs e)
 	{
         passwordEntry.IsPassword=!passwordEntry.IsPassword;
 
     }
+
 
 	private async void NavigateToSignUpPage(object sender, EventArgs e)
 	{

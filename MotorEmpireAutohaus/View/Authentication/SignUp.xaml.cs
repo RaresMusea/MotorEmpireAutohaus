@@ -8,6 +8,7 @@ public partial class SignUp : ContentPage, IPlatformDependentStyling
     {
         InitializeComponent();
         ApplySpecificStyleDependingOnPlatform();
+        Application.Current.MainPage.DisplayAlert("Da", "Da", "Da2");
     }
 
     private void SetPasswordToVisible(object sender, EventArgs e)

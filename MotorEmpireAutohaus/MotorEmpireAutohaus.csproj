@@ -68,6 +68,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="CommunityToolkit.Maui" Version="2.0.0" />
+	  <PackageReference Include="CommunityToolkit.Maui.Core" Version="2.0.0" />
 	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
 	  <PackageReference Include="MySqlConnector" Version="2.2.0" />
 	</ItemGroup>
@@ -88,6 +90,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Folder Include="Services\" />
+	  <Folder Include="View Model\" />
 	  <Folder Include="Resources\Images\Authentication\" />
 	</ItemGroup>
 

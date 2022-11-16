@@ -1,8 +1,6 @@
 ﻿using MotorEmpireAutohaus.Misc.Handlers;
 using Microsoft.Maui.Platform;
 using MotorEmpireAutohaus.Misc.Common;
-using Android.OS;
-using Android.Views;
 
 namespace MotorEmpireAutohaus;
 
