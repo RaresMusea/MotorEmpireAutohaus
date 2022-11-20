@@ -20,7 +20,7 @@ namespace MotorEmpireAutohaus.Storage
         public DatabaseConfigurer()
         {
             ConnectionOpen = false;
-            _connectionString = @"server=192.168.222.190;userid=root;password=password;database=motor_empire_autohaus_database";
+            _connectionString = @"server=34.116.147.48;userid=root;password=motorempireautohaus;database=motor-empire;SSL Mode=None";
             EstablishConnection();
 
         }
