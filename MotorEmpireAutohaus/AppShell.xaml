@@ -3,7 +3,9 @@
     x:Class="MotorEmpireAutohaus.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:view="clr-namespace:MotorEmpireAutohaus.View"
     xmlns:local="clr-namespace:MotorEmpireAutohaus"
+    xmlns:signupPage="clr-namespace:MotorEmpireAutohaus.View"
     Shell.FlyoutBehavior="Disabled"
     Shell.NavBarIsVisible="False">
 
@@ -17,6 +19,8 @@
         ContentTemplate="{DataTemplate local:SignUp}"
         Route="SignUp" />
 
-
-
+    <ShellContent
+        Title="asdasd"
+        ContentTemplate="{DataTemplate view:LandingPage}"
+        Route="LandingPage"/>
 </Shell>

@@ -1,14 +1,17 @@
 using MotorEmpireAutohaus.Misc.Common;
+using MotorEmpireAutohaus.View_Model.Account;
 
 namespace MotorEmpireAutohaus;
 
 public partial class SignUp : ContentPage, IPlatformDependentStyling
 {
-    public SignUp()
+    public SignUp(UserAccount viewModel)
     {
+        BindingContext = viewModel;
         InitializeComponent();
+        //Ensure the data binding in the constructor in order to aceess the view model properties directly from the XAML markup page.
+       
         ApplySpecificStyleDependingOnPlatform();
-        Application.Current.MainPage.DisplayAlert("Da", "Da", "Da2");
     }
 
     private void SetPasswordToVisible(object sender, EventArgs e)

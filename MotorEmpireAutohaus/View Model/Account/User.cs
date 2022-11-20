@@ -23,6 +23,8 @@ namespace MotorEmpireAutohaus.View_Model.Account
             this.password =Encrypter.EncryptPassword(password);
         }
 
+        public User() { }
+
         public abstract override bool IsEmpty();
     }
 }

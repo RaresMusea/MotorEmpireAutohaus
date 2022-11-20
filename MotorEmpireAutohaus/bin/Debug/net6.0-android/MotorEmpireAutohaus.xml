@@ -4,6 +4,24 @@
         <name>MotorEmpireAutohaus</name>
     </assembly>
     <members>
+        <member name="P:MotorEmpireAutohaus.View_Model.Account.User.Name">
+            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.Account.User.name"/>
+        </member>
+        <member name="P:MotorEmpireAutohaus.View_Model.Account.User.Password">
+            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.Account.User.password"/>
+        </member>
+        <member name="P:MotorEmpireAutohaus.View_Model.Account.UserAccount.EmailAddress">
+            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.Account.UserAccount.emailAddress"/>
+        </member>
+        <member name="P:MotorEmpireAutohaus.View_Model.Account.UserAccount.Username">
+            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.Account.UserAccount.username"/>
+        </member>
+        <member name="P:MotorEmpireAutohaus.View_Model.Account.UserAccount.PasswordConfirmation">
+            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.Account.UserAccount.passwordConfirmation"/>
+        </member>
+        <member name="P:MotorEmpireAutohaus.View_Model.Base.BaseViewModel.IsBusy">
+            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.Base.BaseViewModel.isBusy"/>
+        </member>
         <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
             <summary>
             Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color

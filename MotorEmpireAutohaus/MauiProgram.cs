@@ -1,5 +1,8 @@
 ﻿using MotorEmpireAutohaus.Storage;
 using CommunityToolkit.Maui;
+using MotorEmpireAutohaus.Services.Account_Services;
+using MotorEmpireAutohaus.View_Model.Account;
+using MotorEmpireAutohaus.View;
 
 namespace MotorEmpireAutohaus;
 public static class MauiProgram
@@ -15,6 +18,15 @@ public static class MauiProgram
             fonts.AddFont("Roboto-Regular.ttf", "Roboto");
             fonts.AddFont("Kollektif.ttf", "Kollektif");
         }).UseMauiCommunityToolkit();
+
+
+        builder.Services.AddSingleton<AccountService>();
+        builder.Services.AddSingleton<LandingPage>();
+        builder.Services.AddSingleton<UserAccount>();
+        builder.Services.AddSingleton<LogIn>();
+        builder.Services.AddSingleton<SignUp>();
+        
+
         return builder.Build();
     }
 }
