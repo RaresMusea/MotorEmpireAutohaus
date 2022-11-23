@@ -21,6 +21,6 @@
 
     <ShellContent
         Title="asdasd"
-        ContentTemplate="{DataTemplate view:LandingPage}"
-        Route="LandingPage"/>
+        ContentTemplate="{DataTemplate view:Feed}"
+        Route="Feed"/>
 </Shell>

@@ -10,7 +10,6 @@ public partial class SignUp : ContentPage, IPlatformDependentStyling
         BindingContext = viewModel;
         InitializeComponent();
         //Ensure the data binding in the constructor in order to aceess the view model properties directly from the XAML markup page.
-       
         ApplySpecificStyleDependingOnPlatform();
     }
 
@@ -18,7 +17,6 @@ public partial class SignUp : ContentPage, IPlatformDependentStyling
     {
         passwordEntry.IsPassword = !passwordEntry.IsPassword;
         passwordConfirmationEntry.IsPassword = passwordEntry.IsPassword;
-
     }
 
     public void ApplySpecificStyleDependingOnPlatform()
@@ -55,8 +53,8 @@ public partial class SignUp : ContentPage, IPlatformDependentStyling
         }
     }
 
-        private async void NavigateToSignInPage(object sender, EventArgs e)
+    private async void NavigateToSignInPage(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync("//LogIn");
+        await Shell.Current.GoToAsync("//LogIn",true);
     }
 }

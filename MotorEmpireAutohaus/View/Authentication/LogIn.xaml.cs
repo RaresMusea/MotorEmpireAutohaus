@@ -1,24 +1,30 @@
 
 using CommunityToolkit.Maui.Alerts;
 using CommunityToolkit.Maui.Core;
+using CommunityToolkit.Mvvm.Input;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;
 using  Microsoft.Maui.Devices;
 using Microsoft.Maui.Graphics.Text;
 using MotorEmpireAutohaus.Misc.Common;
 using MotorEmpireAutohaus.Misc.Prebuilt_Components;
 using MotorEmpireAutohaus.Storage;
+using MotorEmpireAutohaus.View_Model.Account;
 using MySqlConnector;
 using System.Diagnostics;
 using System.Threading;
 
 namespace MotorEmpireAutohaus;
 
-public partial class LogIn : ContentPage,IPlatformDependentStyling
+public partial class LogIn : ContentPage, IPlatformDependentStyling
 {
 
 	DatabaseConfigurer dc;
-	public LogIn()
+
+	public LogIn(UserAccount userAccount)
 	{
-       
+
+        BindingContext = userAccount;
         InitializeComponent();
         ApplySpecificStyleDependingOnPlatform();
 		Connect();
@@ -71,6 +77,7 @@ public partial class LogIn : ContentPage,IPlatformDependentStyling
 
 	private async void NavigateToSignUpPage(object sender, EventArgs e)
 	{
-		await Shell.Current.GoToAsync("//SignUp");
+		await Shell.Current.GoToAsync("//SignUp",true);
 	}
+
 }

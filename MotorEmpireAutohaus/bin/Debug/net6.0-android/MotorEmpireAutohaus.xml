@@ -19,8 +19,26 @@
         <member name="P:MotorEmpireAutohaus.View_Model.Account.UserAccount.PasswordConfirmation">
             <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.Account.UserAccount.passwordConfirmation"/>
         </member>
+        <member name="F:MotorEmpireAutohaus.View_Model.Account.UserAccount.loginCommand">
+            <summary>The backing field for <see cref="P:MotorEmpireAutohaus.View_Model.Account.UserAccount.LoginCommand"/>.</summary>
+        </member>
+        <member name="P:MotorEmpireAutohaus.View_Model.Account.UserAccount.LoginCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.View_Model.Account.UserAccount.Login"/>.</summary>
+        </member>
         <member name="P:MotorEmpireAutohaus.View_Model.Base.BaseViewModel.IsBusy">
             <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.Base.BaseViewModel.isBusy"/>
+        </member>
+        <member name="P:MotorEmpireAutohaus.View_Model.FeedViewModel.FileName">
+            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.FeedViewModel.fileName"/>
+        </member>
+        <member name="P:MotorEmpireAutohaus.View_Model.FeedViewModel.ImageUrl">
+            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.FeedViewModel.imageUrl"/>
+        </member>
+        <member name="F:MotorEmpireAutohaus.View_Model.FeedViewModel.updateFileToFirebaseCommand">
+            <summary>The backing field for <see cref="P:MotorEmpireAutohaus.View_Model.FeedViewModel.UpdateFileToFirebaseCommand"/>.</summary>
+        </member>
+        <member name="P:MotorEmpireAutohaus.View_Model.FeedViewModel.UpdateFileToFirebaseCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.View_Model.FeedViewModel.UpdateFileToFirebase"/>.</summary>
         </member>
         <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
             <summary>

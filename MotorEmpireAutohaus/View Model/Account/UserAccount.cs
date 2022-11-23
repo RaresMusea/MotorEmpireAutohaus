@@ -3,12 +3,19 @@ using MotorEmpireAutohaus.Services.Account_Services;
 using CommunityToolkit.Mvvm.Messaging;
 using System;
 using Microsoft.Toolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Input;
+using System.Net.Mail;
+using MotorEmpireAutohaus.Misc.Prebuilt_Components;
+using System.Reflection.Metadata.Ecma335;
+using MotorEmpireAutohaus.Misc;
+using MotorEmpireAutohaus.Misc.Common;
 
 namespace MotorEmpireAutohaus.View_Model.Account
 {
-    public partial class UserAccount:User
+    public partial class UserAccount : User
     {
-        private readonly AccountService accountService;
+        //private readonly AccountService accountService;
+        private readonly AuthValidation authValidation;
 
         [ObservableProperty]
         private string emailAddress;
@@ -20,33 +27,38 @@ namespace MotorEmpireAutohaus.View_Model.Account
         private string passwordConfirmation;
 
 
-        public UserAccount(string name, string emailAddress, string username,string password) : base(name, password)
+        public UserAccount(string name, string emailAddress, string username, string password) : base(name, password)
         {
             this.emailAddress = emailAddress;
             this.username = username;
         }
 
         //Dependency injection
-        public UserAccount(AccountService accountService) => this.accountService = accountService;
+        public UserAccount(AuthValidation authValidation)
+        {
+            //this.accountService = accountService;
+            this.authValidation = authValidation;
+
+        }
 
         public override bool Equals(object obj)
         {
-            if(!(obj is UserAccount)) return false;
-            
-            UserAccount castedProp=obj as UserAccount;
-            if(Username==castedProp.Username && EmailAddress==castedProp.EmailAddress)
+            if (!(obj is UserAccount)) return false;
+
+            UserAccount castedProp = obj as UserAccount;
+            if (Username == castedProp.Username && EmailAddress == castedProp.EmailAddress)
                 return true;
 
             return false;
-       
+
         }
 
-        public static bool operator == (UserAccount a, UserAccount b)
+        public static bool operator ==(UserAccount a, UserAccount b)
         {
             return a.Equals(b);
         }
 
-        public static bool operator != (UserAccount a, UserAccount b)
+        public static bool operator !=(UserAccount a, UserAccount b)
         {
             return !(a == b);
         }
@@ -58,14 +70,30 @@ namespace MotorEmpireAutohaus.View_Model.Account
 
         public override int GetHashCode()
         {
-            object o=new();
+            object o = new();
             return o.GetHashCode();
         }
 
-        [ICommand]
-        private void SignUp()
+
+        private bool ValidPassword()
         {
-             accountService.SignUp();
+            if (Password.Length == 0)
+            {
+                /*RenderErrorMessages("Password field cannot be empty!", "Retry");*/
+                return false;
+
+            }
+            return true;
         }
+
+        [RelayCommand]
+        public void Login()
+        {
+            if (authValidation.ValidateLogin(emailAddress,password) == true)
+            {
+                authValidation.RenderErrorMessages("Login Success!", "OK");
+            }
+        }
+
     }
 }

@@ -17,7 +17,7 @@
              ></Image>
 
             <VerticalStackLayout HorizontalOptions="Center">
-                <Frame BackgroundColor="{AppThemeBinding Dark=#7B7C7C, Light=#dbdbdb}"
+                <Frame BackgroundColor="{AppThemeBinding Dark=#414141, Light=#dbdbdb}"
                        x:Name="AuthContainer"
                        MinimumWidthRequest="340"
                        MaximumWidthRequest="2400"
@@ -36,7 +36,7 @@
                                    FontSize="20"
                                    FontFamily="Kollektif"
                                    HorizontalOptions="Center"
-                                   TextColor="{AppThemeBinding Dark=#333652, Light=#3D8361}"/>
+                                   TextColor="{AppThemeBinding Dark=Red, Light=#3D8361}"/>
 
                             <Label Text=" to continue."
                                    FontFamily="Kollektif"
@@ -47,7 +47,7 @@
 
 
                         <VerticalStackLayout HorizontalOptions="CenterAndExpand">
-                            <Label Text="Name" 
+                            <Label Text="{Binding Name}" 
                                HorizontalOptions="Start"
                                FontSize="16"
                                FontAttributes="Bold"
@@ -242,13 +242,15 @@
 
                         <Button Margin="0,15,0,0"
                                 Text="Register"
-                                BackgroundColor="{AppThemeBinding Dark=#333652, Light=#1C6758}"
+                                BackgroundColor="{AppThemeBinding Dark=Transparent, Light=#1C6758}"
                                 TextColor="White"
+                                BorderWidth="4"
+                                BorderColor="Red"
                                 FontFamily="Kollektif"
                                 FontSize="22"
                                 CornerRadius="15"
                                 FontAttributes="Bold"
-                                Command="{Binding SignUpCommand}">
+                                >
 
                         </Button>
 
@@ -264,14 +266,12 @@
                                    x:Name="SignUpLabel"
                                    FontAttributes="Bold"
                                    FontFamily="Roboto"
-                                   TextColor="{AppThemeBinding Dark=#333652, Light=#1C6758}"
+                                   TextColor="{AppThemeBinding Dark=Red, Light=#1C6758}"
                                    HorizontalOptions="Center"/>
                             <VerticalStackLayout.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="NavigateToSignInPage"/>
                             </VerticalStackLayout.GestureRecognizers>
-
                         </VerticalStackLayout>
-
                     </VerticalStackLayout>
                 </Frame>
             </VerticalStackLayout>
