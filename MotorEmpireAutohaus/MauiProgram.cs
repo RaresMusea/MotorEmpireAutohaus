@@ -33,6 +33,7 @@ public static class MauiProgram
         builder.Services.AddSingleton<UserAccount>();
         builder.Services.AddSingleton<AuthValidation>();
         builder.Services.AddSingleton<SignUp>();
+        builder.Services.AddSingleton<AccountService>();
 
         return builder.Build();
     }

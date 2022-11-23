@@ -30,7 +30,7 @@ namespace MotorEmpireAutohaus.Misc.Common
                 Colors.White,
                 Color.FromArgb("#AF0404"),
                 Color.FromArgb("#AF0404"),
-                15, 14, 0, 2500,
+                15, 14, 0, 8,
                 null
                 );
         };
@@ -46,7 +46,7 @@ namespace MotorEmpireAutohaus.Misc.Common
 
             if (DeviceInfo.Platform == DevicePlatform.WinUI)
             {
-                await Task.Run(() => displayDesktopAlert(message, buttonText));
+                displayDesktopAlert(message, buttonText);
             }
             else
             {
@@ -83,7 +83,7 @@ namespace MotorEmpireAutohaus.Misc.Common
         {
             if (!ValidateName(name).ValidationPassed)
             {
-                string formatted = "";
+                string formatted = string.Empty;
                 formatted = name.ToLower();
 
                 string[] tokens = formatted.Split(" ");
@@ -125,7 +125,7 @@ namespace MotorEmpireAutohaus.Misc.Common
                 return new AuthValidationResult(false, "The provided email address is invalid!");
             }
 
-            return new AuthValidationResult(true, "");
+            return new AuthValidationResult(true,trimmed.ToLower());
         }
 
         private delegate bool Util(OperationType choice, char charToVerify);
@@ -148,7 +148,7 @@ namespace MotorEmpireAutohaus.Misc.Common
                 }
                 case OperationType.SymbolCheck:
                 {
-                    return char.IsSymbol(charToVerify);
+                    return (charToVerify=='@' || charToVerify=='$' || charToVerify=='^'||charToVerify=='&'||charToVerify=='*'||charToVerify=='('||charToVerify==')');
                 }
 
             }
@@ -185,13 +185,23 @@ namespace MotorEmpireAutohaus.Misc.Common
             return new AuthValidationResult(false, "The password is invalid!");
         }
 
-        public bool ValidateLogin(string emailAddress, string password)
+        public bool ValidateLogin(ref string emailAddress, ref string password)
         {
             var emailValidation = IsEmailValid(emailAddress);
+            if (!emailValidation.ValidationPassed)
+            {
+                emailAddress = string.Empty;
+            }
+
             var passwordValidation = IsPassowrdValid(password);
+            if (!passwordValidation.ValidationPassed)
+            {
+                password= string.Empty;
+            }
 
             if (emailValidation.ValidationPassed == false)
             {
+                emailAddress = "";
                 RenderErrorMessages(emailValidation.Remark, "Retry");
                 return false;
             }
@@ -199,6 +209,7 @@ namespace MotorEmpireAutohaus.Misc.Common
             if (passwordValidation.ValidationPassed == false)
             {
                 RenderErrorMessages(passwordValidation.Remark, "Retry");
+                password = "";
                 return false;
             }
 

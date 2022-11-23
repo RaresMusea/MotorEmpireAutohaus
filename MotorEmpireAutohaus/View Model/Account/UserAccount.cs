@@ -14,7 +14,7 @@ namespace MotorEmpireAutohaus.View_Model.Account
 {
     public partial class UserAccount : User
     {
-        //private readonly AccountService accountService;
+        private readonly AccountService accountService;
         private readonly AuthValidation authValidation;
 
         [ObservableProperty]
@@ -34,11 +34,10 @@ namespace MotorEmpireAutohaus.View_Model.Account
         }
 
         //Dependency injection
-        public UserAccount(AuthValidation authValidation)
+        public UserAccount(AuthValidation authValidation, AccountService accountService)
         {
-            //this.accountService = accountService;
+            this.accountService = accountService;
             this.authValidation = authValidation;
-
         }
 
         public override bool Equals(object obj)
@@ -89,11 +88,34 @@ namespace MotorEmpireAutohaus.View_Model.Account
         [RelayCommand]
         public void Login()
         {
-            if (authValidation.ValidateLogin(emailAddress,password) == true)
+            if (authValidation.ValidateLogin(ref emailAddress,ref password) == true)
             {
+                EmailAddress = EmailAddress.ToLower();
                 authValidation.RenderErrorMessages("Login Success!", "OK");
+            }
+            else
+            {
+                EmailAddress = string.Empty;
+                Password = string.Empty;
             }
         }
 
+        [RelayCommand]
+        public void OnWrongEmailInputFocus()
+        {
+            if (!authValidation.IsEmailValid(EmailAddress).ValidationPassed)
+            {
+                EmailAddress = string.Empty;
+            }
+        }
+
+        [RelayCommand]
+        public void OnWrongPasswordInputFocus()
+        {
+            if (!authValidation.IsPassowrdValid(Password).ValidationPassed)
+            {
+                Password = string.Empty;
+            }
+        }
     }
 }
