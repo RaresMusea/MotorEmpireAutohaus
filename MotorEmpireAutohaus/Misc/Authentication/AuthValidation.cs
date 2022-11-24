@@ -19,7 +19,6 @@ namespace MotorEmpireAutohaus.Misc.Common
     public class AuthValidation : ISignUpValidator, ILogInValidator
     {
 
-
         bool ISignUpValidator.ArePasswordsMatching(string password, string matchingPassword)
         {
             return password == matchingPassword;
@@ -167,13 +166,13 @@ namespace MotorEmpireAutohaus.Misc.Common
             if (emailValidation.ValidationPassed == false)
             {
                 emailAddress = "";
-                CrossPlatformMessageRenderer.RenderMessages(emailValidation.Remark, "Retry");
+                CrossPlatformMessageRenderer.RenderMessages(emailValidation.Remark, "Retry",6);
                 return false;
             }
 
             if (passwordValidation.ValidationPassed == false)
             {
-                CrossPlatformMessageRenderer.RenderMessages(passwordValidation.Remark, "Retry");
+                CrossPlatformMessageRenderer.RenderMessages(passwordValidation.Remark, "Retry",6);
                 password = "";
                 return false;
             }

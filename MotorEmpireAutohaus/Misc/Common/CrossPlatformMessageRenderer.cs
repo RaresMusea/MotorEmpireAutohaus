@@ -14,7 +14,7 @@ namespace MotorEmpireAutohaus.Misc.Common
             await Application.Current.MainPage.DisplayAlert("Motor Empire Autohaus", message, actionButtonText);
         }
 
-        private static async void DisplayMobileSnackbar(string message, string actionButtonText)
+        public static async void DisplayMobileSnackbar(string message, string actionButtonText, int durationInSeconds)
         {
             await SnackbarComponent.GenerateSnackbar(
                   message,
@@ -25,12 +25,12 @@ namespace MotorEmpireAutohaus.Misc.Common
                   Colors.White,
                   Color.FromArgb("#AF0404"),
                   Color.FromArgb("#AF0404"),
-                  15, 14, 0, 8,
+                  15, 14, 0, durationInSeconds,
                   null
                    );
         }
 
-        public static async void RenderMessages(string message, string buttonText)
+        public static async void RenderMessages(string message, string buttonText, int duration)
         {
 
             if (DeviceInfo.Platform == DevicePlatform.WinUI)
@@ -39,7 +39,7 @@ namespace MotorEmpireAutohaus.Misc.Common
             }
             else
             {
-                await Task.Run(() => DisplayMobileSnackbar(message, buttonText));
+                await Task.Run(() => DisplayMobileSnackbar(message, buttonText, duration));
             }
         }
 

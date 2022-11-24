@@ -1,4 +1,5 @@
-﻿using MotorEmpireAutohaus.Misc.Encryption;
+﻿using MotorEmpireAutohaus.Misc.Common;
+using MotorEmpireAutohaus.Misc.Encryption;
 using MotorEmpireAutohaus.Storage;
 using MotorEmpireAutohaus.View_Model.Account;
 using MySqlConnector;
@@ -14,7 +15,7 @@ namespace MotorEmpireAutohaus.Services.Account_Services
     public class AccountService:IAuthenticate
     {
         private DatabaseConfigurer databaseConfig;
-        private static string tableReference = "user";
+        private static string tableReference = "User";
 
         public AccountService()
         {
@@ -33,17 +34,16 @@ namespace MotorEmpireAutohaus.Services.Account_Services
             return true; 
         }
 
-        public void Login(UserAccount user)
+        public bool Login(UserAccount user)
         {
-            user.Password = Encrypter.EncryptPassword(user.Password);
-            MySqlCommand command = new($"SELECT * FROM {tableReference} WHERE Email=@email and Password=@pass", databaseConfig.DatabaseConnection);
+            string pass = Encrypter.EncryptPassword(user.Password);
+            MySqlCommand command = new($"SELECT * FROM {tableReference} WHERE EmailAddress=@email and Password=@pass", databaseConfig.DatabaseConnection);
             command.Prepare();
 
             command.Parameters.AddWithValue("@email", user.EmailAddress);
-            command.Parameters.AddWithValue("@pass", user.Password);
+            command.Parameters.AddWithValue("@pass", pass);
 
             MySqlDataReader reader= command.ExecuteReader();
-
             
             List<UserAccount> accounts=new();
             while(reader.Read())
@@ -56,22 +56,24 @@ namespace MotorEmpireAutohaus.Services.Account_Services
                     string username = (string)reader.GetValue(4);
                     string password = (string)reader.GetValue(5);
                     string profileImageUrl = (string)reader.GetValue(7);
-                    UserAccount result = new UserAccount(uuid, name, emailAddress, username, password, profileImageUrl);
+                    UserAccount result = new(uuid, name, emailAddress, username, password, profileImageUrl);
                     accounts.Add(result);
                 }
             }
 
             if (accounts.Count == 0)
             {
-
+                CrossPlatformMessageRenderer.RenderMessages("The provided credentials do not match any existing account on our platform! Please try again!","Retry",4);
+                user.EmailAddress = "";
+                user.Password = "";
+                return false;
+            }
+            else
+            {
+                CrossPlatformMessageRenderer.DisplayMobileSnackbar($"Welcome back, {accounts.ElementAt(0).Name}! You are being redirected to the main application...","",5);
+                return true;
             }
 
-
-        }
-
-        bool IAuthenticate.Login(UserAccount user)
-        {
-            throw new NotImplementedException();
         }
 
         bool IAuthenticate.SignUp(UserAccount user)

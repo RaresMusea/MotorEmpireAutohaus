@@ -100,7 +100,10 @@ namespace MotorEmpireAutohaus.View_Model.Account
             if (authValidation.ValidateLogin(ref emailAddress,ref password) == true)
             {
                 EmailAddress = EmailAddress.ToLower();
-                authValidation.RenderErrorMessages("Login Success!", "OK");
+                if (accountService.Login(this))
+                {
+                    CrossPlatformMessageRenderer.RenderMessages("Login Success!", "OK",2);
+                }
             }
             else
             {
