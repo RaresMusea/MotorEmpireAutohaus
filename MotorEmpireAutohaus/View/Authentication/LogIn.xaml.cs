@@ -60,11 +60,6 @@ public partial class LogIn : ContentPage, IPlatformDependentStyling
 		
 	}
 
-	private void Connect()
-	{
-            dc = new DatabaseConfigurer();
-			dc.OpenConnection();
-    }
 
 
 	private void SetPasswordToVisible(object sender, EventArgs e)

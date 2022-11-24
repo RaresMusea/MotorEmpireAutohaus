@@ -35,6 +35,13 @@ namespace MotorEmpireAutohaus.View_Model.Account
             this.username = username;
         }
 
+        public UserAccount(string UUID, string name, string emailAddress, string username, string password,string profileImageURL) : base(UUID, name, password)
+        {
+            this.emailAddress = emailAddress;
+            this.username = username;
+            this.profileImageURL= profileImageURL;
+        }
+
         //Dependency injection
         public UserAccount(AuthValidation authValidation, AccountService accountService)
         {

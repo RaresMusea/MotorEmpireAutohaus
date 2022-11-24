@@ -14,6 +14,10 @@ namespace MotorEmpireAutohaus.View_Model.Base
         {
             UUID=Guid.NewGuid().ToString();
         }
+        public Entity(string UUID)
+        {
+            this.UUID = UUID;
+        }
 
         public abstract bool IsEmpty();
     }

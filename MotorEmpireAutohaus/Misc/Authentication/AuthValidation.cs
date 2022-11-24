@@ -19,41 +19,6 @@ namespace MotorEmpireAutohaus.Misc.Common
     public class AuthValidation : ISignUpValidator, ILogInValidator
     {
 
-        readonly Action<string, string> displayMobileSnackbar = async (message, actionButtonText) =>
-        {
-            await SnackbarComponent.GenerateSnackbar(
-                message,
-                actionButtonText,
-                Color.FromArgb("#dbdbdb"),
-                Color.FromArgb("#414141"),
-                Colors.Black,
-                Colors.White,
-                Color.FromArgb("#AF0404"),
-                Color.FromArgb("#AF0404"),
-                15, 14, 0, 8,
-                null
-                );
-        };
-
-        readonly Action<string, string> displayDesktopAlert = async (message, actionButton) =>
-        {
-            await Application.Current.MainPage.DisplayAlert("Motor Empire Autohaus Authentication", message, actionButton);
-        };
-
-
-        public async void RenderErrorMessages(string message, string buttonText)
-        {
-
-            if (DeviceInfo.Platform == DevicePlatform.WinUI)
-            {
-                displayDesktopAlert(message, buttonText);
-            }
-            else
-            {
-                await Task.Run(() => displayMobileSnackbar(message, buttonText));
-            }
-        }
-
 
         bool ISignUpValidator.ArePasswordsMatching(string password, string matchingPassword)
         {
@@ -202,13 +167,13 @@ namespace MotorEmpireAutohaus.Misc.Common
             if (emailValidation.ValidationPassed == false)
             {
                 emailAddress = "";
-                RenderErrorMessages(emailValidation.Remark, "Retry");
+                CrossPlatformMessageRenderer.RenderMessages(emailValidation.Remark, "Retry");
                 return false;
             }
 
             if (passwordValidation.ValidationPassed == false)
             {
-                RenderErrorMessages(passwordValidation.Remark, "Retry");
+                CrossPlatformMessageRenderer.RenderMessages(passwordValidation.Remark, "Retry");
                 password = "";
                 return false;
             }
