@@ -26,6 +26,8 @@ namespace MotorEmpireAutohaus.View_Model.Account
         [ObservableProperty]
         private string passwordConfirmation;
 
+        [ObservableProperty]
+        private string profileImageURL;
 
         public UserAccount(string name, string emailAddress, string username, string password) : base(name, password)
         {

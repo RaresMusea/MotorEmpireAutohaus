@@ -19,7 +19,6 @@ namespace MotorEmpireAutohaus;
 public partial class LogIn : ContentPage, IPlatformDependentStyling
 {
 
-	DatabaseConfigurer dc;
 
 	public LogIn(UserAccount userAccount)
 	{
@@ -27,7 +26,7 @@ public partial class LogIn : ContentPage, IPlatformDependentStyling
         BindingContext = userAccount;
         InitializeComponent();
         ApplySpecificStyleDependingOnPlatform();
-		Connect();
+		//Connect();
 	}
 
 

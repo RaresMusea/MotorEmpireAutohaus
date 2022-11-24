@@ -1,4 +1,5 @@
-﻿using MotorEmpireAutohaus.Misc.Prebuilt_Components;
+﻿using MotorEmpireAutohaus.Misc.Exceptions;
+using MotorEmpireAutohaus.Misc.Prebuilt_Components;
 using MySqlConnector;
 using System;
 using System.Collections.Generic;
@@ -49,20 +50,22 @@ namespace MotorEmpireAutohaus.Storage
                 try
                 {
                     DatabaseConnection?.Open();
-                    Debug.WriteLine("Connection successfull!");
-                    await SnackbarComponent.GenerateSnackbar("Connection with the database established!",
+                    Debug.WriteLine("Connection successful!");
+                    await SnackbarComponent.GenerateSnackbar("Connection successful!",
                                                              "Close",
-                                                              Color.FromArgb("#dbdbdbdb"),
+                                                              Color.FromArgb("#dbdbdb"),
+                                                              Color.FromArgb("#414141"),
                                                               Colors.Grey,
                                                               Colors.White,
-                                                              Colors.Black,
                                                               Colors.Green,
-                                                              Color.FromArgb("#333652"),
+                                                              Color.FromArgb("#252525"),
                                                               15,
                                                               14,
                                                               0,
-                                                              5,
+                                                              4,
                                                               null);
+
+
 
                     ConnectionOpen = true;
                 }
@@ -70,13 +73,13 @@ namespace MotorEmpireAutohaus.Storage
                 {
 
 
-                    Action errorHandler = async ()=>
+                    async void errorHandler()
                     {
-                       await DisplayErrorMessage("Motor Empire Autohaus-Internal Server Error", $"The application did not started correctly. In order to use the application properly, you need a connection with our server. Check your internet connection and restart the app, or try again.\n\n\nDetails:\n{mySqlEx.Message}", "Close app"); 
-                       Application.Current.Quit();
-                        
+                        await DatabaseConfigurer.DisplayErrorMessage("Motor Empire Autohaus-Internal Server Error", $"The application did not started correctly. In order to use the application properly, you need a connection with our server. Check your internet connection and restart the app, or try again.\n\n\nDetails:\n{mySqlEx.Message}", "Close app");
+                        Application.Current.Quit();
 
-                    };
+                    }
+
 
                     Debug.WriteLine($"Unable to establish connection with the database!\n {mySqlEx.Message}");
                     await SnackbarComponent.GenerateSnackbar("Error! Cannot establish a connection with the database!",
@@ -107,7 +110,7 @@ namespace MotorEmpireAutohaus.Storage
             }
         }
 
-        private async Task DisplayErrorMessage(string appTitle, string errorMsg, string optButton1)
+        private static async Task DisplayErrorMessage(string appTitle, string errorMsg, string optButton1)
         {
             await Application.Current.MainPage.DisplayAlert(appTitle, errorMsg, optButton1);
         }
