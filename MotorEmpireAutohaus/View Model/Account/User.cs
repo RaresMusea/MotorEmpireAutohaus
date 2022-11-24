@@ -23,6 +23,12 @@ namespace MotorEmpireAutohaus.View_Model.Account
             this.password =Encrypter.EncryptPassword(password);
         }
 
+        public User(string UUID, string name, string password) : base(UUID)
+        {
+            this.name = name;
+            this.password = password;
+        }
+
         public User() { }
 
         public abstract override bool IsEmpty();

@@ -26,11 +26,20 @@ namespace MotorEmpireAutohaus.View_Model.Account
         [ObservableProperty]
         private string passwordConfirmation;
 
+        [ObservableProperty]
+        private string profileImageURL;
 
         public UserAccount(string name, string emailAddress, string username, string password) : base(name, password)
         {
             this.emailAddress = emailAddress;
             this.username = username;
+        }
+
+        public UserAccount(string UUID, string name, string emailAddress, string username, string password,string profileImageURL) : base(UUID, name, password)
+        {
+            this.emailAddress = emailAddress;
+            this.username = username;
+            this.profileImageURL= profileImageURL;
         }
 
         //Dependency injection
@@ -91,7 +100,10 @@ namespace MotorEmpireAutohaus.View_Model.Account
             if (authValidation.ValidateLogin(ref emailAddress,ref password) == true)
             {
                 EmailAddress = EmailAddress.ToLower();
-                authValidation.RenderErrorMessages("Login Success!", "OK");
+                if (accountService.Login(this))
+                {
+                    CrossPlatformMessageRenderer.RenderMessages("Login Success!", "OK",2);
+                }
             }
             else
             {
