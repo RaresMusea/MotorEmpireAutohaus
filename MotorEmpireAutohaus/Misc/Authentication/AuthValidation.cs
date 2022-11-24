@@ -33,7 +33,7 @@ namespace MotorEmpireAutohaus.Misc.Common
 
             if (!name.Contains(" "))
             {
-                return new AuthValidationResult(false, "The Name field should contain both your first and last name, separated by a space");
+                return new AuthValidationResult(false, "The Name field should contain both your first and last name, separated by a space!");
             }
 
             if (name.Length < 5) {
@@ -180,9 +180,10 @@ namespace MotorEmpireAutohaus.Misc.Common
             return true;
         }
 
-        public bool ValidateSignUp()
+        public bool ValidateSignUp(ref string fullName)
         {
-            return true;
+            var nameValidation = ValidateName(fullName);
+            return false;
         }
 
         AuthValidationResult ISignUpValidator.IsNameValid(string name)

@@ -11,4 +11,9 @@ namespace MotorEmpireAutohaus.Misc.Exceptions
     {
         public DatabaseConnectionFailedException(string message):base(message) { }
     }
+
+    sealed class InvalidSignUpCredentialsException : Exception
+    {
+        public InvalidSignUpCredentialsException(string message):base(message) { }
+    }
 }

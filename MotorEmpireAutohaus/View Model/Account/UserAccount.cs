@@ -73,6 +73,11 @@ namespace MotorEmpireAutohaus.View_Model.Account
 
         public override bool IsEmpty()
         {
+            if (this == null)
+            {
+                return true;
+            }
+
             return (UUID == "" || Name == "" || EmailAddress == "" || Password == "" || Username == "");
         }
 
@@ -129,5 +134,6 @@ namespace MotorEmpireAutohaus.View_Model.Account
                 Password = string.Empty;
             }
         }
+
     }
 }
