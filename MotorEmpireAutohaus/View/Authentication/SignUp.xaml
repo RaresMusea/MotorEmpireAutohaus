@@ -250,6 +250,7 @@
                                 FontSize="22"
                                 CornerRadius="15"
                                 FontAttributes="Bold"
+                                Command="{Binding RegisterCommand}"
                                 >
 
                         </Button>

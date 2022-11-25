@@ -8,8 +8,8 @@ namespace MotorEmpireAutohaus.Misc.Common
 {
    public class AuthValidationResult
     {
-        public bool ValidationPassed { get; set; }
-        public string Remark { get; set; }
+        public bool ValidationPassed { get; private set; }
+        public string Remark { get; private set; }
 
         public AuthValidationResult(bool passed, string message)
         {

@@ -1054,6 +1054,9 @@
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\auth_light.scale-100.png">
       <PackagePath>auth_light.scale-100.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\defaultprofilepic.scale-100.png">
+      <PackagePath>defaultprofilepic.scale-100.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
     </AppxPackagedFile>

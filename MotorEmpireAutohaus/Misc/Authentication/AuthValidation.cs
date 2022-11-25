@@ -1,4 +1,5 @@
-﻿using MotorEmpireAutohaus.Misc.Prebuilt_Components;
+﻿using MotorEmpireAutohaus.Misc.Authentication;
+using MotorEmpireAutohaus.Misc.Prebuilt_Components;
 using MotorEmpireAutohaus.View_Model.Account;
 using System;
 using System.Collections.Generic;
@@ -16,10 +17,10 @@ namespace MotorEmpireAutohaus.Misc.Common
             SymbolCheck
     };
 
-    public class AuthValidation : ISignUpValidator, ILogInValidator
+    public class AuthValidation : IAuthValidator
     {
 
-        bool ISignUpValidator.ArePasswordsMatching(string password, string matchingPassword)
+        public bool ArePasswordsMatching(string password, string matchingPassword)
         {
             return password == matchingPassword;
         }
@@ -43,7 +44,7 @@ namespace MotorEmpireAutohaus.Misc.Common
             return new AuthValidationResult(true, "");
         }
 
-        string ISignUpValidator.FormatName(string name)
+        private string FormatName(string name)
         {
             if (!ValidateName(name).ValidationPassed)
             {
@@ -72,7 +73,7 @@ namespace MotorEmpireAutohaus.Misc.Common
             return name;
         }
 
-        public AuthValidationResult IsEmailValid(string email)
+        public AuthValidationResult ValidateEmailAddress(string email)
         {
             if (string.IsNullOrEmpty(email))
             {
@@ -130,7 +131,7 @@ namespace MotorEmpireAutohaus.Misc.Common
             return false;
         }
 
-        public AuthValidationResult IsPassowrdValid(string password)
+        public AuthValidationResult ValidatePassword(string password)
         {
             if (string.IsNullOrEmpty(password))
             {
@@ -149,15 +150,59 @@ namespace MotorEmpireAutohaus.Misc.Common
             return new AuthValidationResult(false, "The password is invalid!");
         }
 
+        public AuthValidationResult ValidatePasswords(string password, string passwordConfirmation)
+        {
+            if(string.IsNullOrEmpty(password) || string.IsNullOrEmpty(passwordConfirmation))
+            {
+                return new AuthValidationResult(false, "The Password fields cannot be empty!");
+            }
+            if(password.Length<8 || passwordConfirmation.Length < 8)
+            {
+                return new AuthValidationResult(false, "The password field should contain at least 8 characters, including:\n\tAt least one capital letter.\n\tAt least one lowercase letter.\n\tOne or more digits.\n\tOne ore more special characters/symbols[like %^&#@&()]");
+            }
+
+            if (!ArePasswordsMatching(password, passwordConfirmation))
+            {
+                return new AuthValidationResult(false, "The passwords do not match!");
+            }
+
+            if(ContainsSpecificChar(password,DelegateMethod,OperationType.LowercaseCheck) && ContainsSpecificChar(password,DelegateMethod,OperationType.UppercaseCheck) && ContainsSpecificChar(password,DelegateMethod,OperationType.SymbolCheck) && ContainsSpecificChar(password,DelegateMethod,OperationType.DigitCheck) && password.Length >= 8)
+            {
+                return new AuthValidationResult(true, "");
+            }
+
+            return new AuthValidationResult(false, "Invalid password provided!");
+        }
+
+        public AuthValidationResult ValidateUsername(string username)
+        {
+            if(string.IsNullOrEmpty(username))
+            {
+                return new AuthValidationResult(false, "The username field cannot be empty!");
+            }
+
+            if (username.Length < 4)
+            {
+                return new AuthValidationResult(false, "Your username should have at least 4 characters!");
+            }
+
+            if(username.Contains(' '))
+            {
+                return new AuthValidationResult(false, "Your username can't contain whitespaces!");
+            }
+
+            return new AuthValidationResult(true, "");
+        }
+
         public bool ValidateLogin(ref string emailAddress, ref string password)
         {
-            var emailValidation = IsEmailValid(emailAddress);
+            var emailValidation = ValidateEmailAddress(emailAddress);
             if (!emailValidation.ValidationPassed)
             {
                 emailAddress = string.Empty;
             }
 
-            var passwordValidation = IsPassowrdValid(password);
+            var passwordValidation = ValidateEmailAddress(password);
             if (!passwordValidation.ValidationPassed)
             {
                 password= string.Empty;
@@ -180,30 +225,44 @@ namespace MotorEmpireAutohaus.Misc.Common
             return true;
         }
 
-        public bool ValidateSignUp(ref string fullName)
-        {
-            var nameValidation = ValidateName(fullName);
-            return false;
+        public bool ValidateSignUp(UserAccount user){
+            var nameValidation = ValidateName(user.Name);
+            var usernameValidation = ValidateUsername(user.Username);
+            var emailValidation = ValidateEmailAddress(user.EmailAddress);
+            var passwordsValidation = ValidatePasswords(user.Password, user.PasswordConfirmation);
+
+            if (!nameValidation.ValidationPassed)
+            {
+                user.Name = string.Empty;
+                CrossPlatformMessageRenderer.RenderMessages(nameValidation.Remark, "Retry", 5);
+                return false;
+            }
+
+            if(!usernameValidation.ValidationPassed)
+            {
+                user.Username=string.Empty;
+                CrossPlatformMessageRenderer.RenderMessages(usernameValidation.Remark, "Retry", 5);
+                return false;
+            }
+
+            if (!emailValidation.ValidationPassed)
+            {
+                user.EmailAddress=string.Empty;
+                CrossPlatformMessageRenderer.RenderMessages(emailValidation.Remark, "Retry", 5);
+                return false;
+            }
+
+            if (!passwordsValidation.ValidationPassed)
+            {
+                user.Password=string.Empty;
+                CrossPlatformMessageRenderer.RenderMessages(passwordsValidation.Remark, "Retry", 8);
+                return false;
+            }
+
+            user.Name = FormatName(user.Name);
+            return true;
         }
 
-        AuthValidationResult ISignUpValidator.IsNameValid(string name)
-        {
-            throw new NotImplementedException();
-        }
 
-        AuthValidationResult ILogInValidator.ValidateLogin()
-        {
-            throw new NotImplementedException();
-        }
-
-        AuthValidationResult ILogInValidator.IsPassowrdValid()
-        {
-            throw new NotImplementedException();
-        }
-
-        AuthValidationResult ILogInValidator.IsEmailValid()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

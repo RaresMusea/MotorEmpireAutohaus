@@ -118,9 +118,22 @@ namespace MotorEmpireAutohaus.View_Model.Account
         }
 
         [RelayCommand]
+        public void Register()
+        {
+            if (authValidation.ValidateSignUp(this))
+            {
+                accountService.SignUp(this);
+            }
+            else
+            {
+                CrossPlatformMessageRenderer.RenderMessages("Cannot sign you up! Invalid credentials provided!", "Retry", 5);
+            }
+        }
+
+        [RelayCommand]
         public void OnWrongEmailInputFocus()
         {
-            if (!authValidation.IsEmailValid(EmailAddress).ValidationPassed)
+            if (!authValidation.ValidateEmailAddress(EmailAddress).ValidationPassed)
             {
                 EmailAddress = string.Empty;
             }
@@ -129,7 +142,7 @@ namespace MotorEmpireAutohaus.View_Model.Account
         [RelayCommand]
         public void OnWrongPasswordInputFocus()
         {
-            if (!authValidation.IsPassowrdValid(Password).ValidationPassed)
+            if (!authValidation.ValidatePassword(Password).ValidationPassed)
             {
                 Password = string.Empty;
             }

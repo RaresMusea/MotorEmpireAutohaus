@@ -102,6 +102,7 @@ namespace MotorEmpireAutohaus.Services.Account_Services
 
             try
             {
+                
                 string profileImgURL=PrepareDefaultProfilePicture($"/users/{userAccount.UUID}").Result;
                 userAccount.ProfileImageURL = profileImgURL;
                 MySqlCommand command = new($"INSERT INTO {tableReference} (UUID, Name, EmailAddress, Username,Password,ProfileImageURL)" +
@@ -144,6 +145,7 @@ namespace MotorEmpireAutohaus.Services.Account_Services
                 CrossPlatformMessageRenderer.RenderMessages($"{ex.Message}","Ok",7);
                 return null;
             }
+            CrossPlatformMessageRenderer.RenderMessages("Cannot sign you up because of an input mismatch. Verify the form and try again later.", "Ok", 10);
             return null;
         }
     }
