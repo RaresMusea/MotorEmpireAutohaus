@@ -19,7 +19,12 @@ namespace MotorEmpireAutohaus.Misc.Common
 
     public class AuthValidation : IAuthValidator
     {
-
+        /// <summary>
+        /// Checks if the password matches its password confirmation field
+        /// </summary>
+        /// <param name="password">password-The initial password</param>
+        /// <param name="matchingPassword">matchingPassword-The password confirmation</param>
+        /// <returns>True, if the password matches its confirmation, False otherwise</returns>
         public bool ArePasswordsMatching(string password, string matchingPassword)
         {
             return password == matchingPassword;
@@ -32,7 +37,7 @@ namespace MotorEmpireAutohaus.Misc.Common
                 return new AuthValidationResult(false, "Name cannot be empty!");
             }
 
-            if (!name.Contains(" "))
+            if (!name.Contains(' '))
             {
                 return new AuthValidationResult(false, "The Name field should contain both your first and last name, separated by a space!");
             }
@@ -48,8 +53,7 @@ namespace MotorEmpireAutohaus.Misc.Common
         {
             if (!ValidateName(name).ValidationPassed)
             {
-                string formatted = string.Empty;
-                formatted = name.ToLower();
+                string formatted = name.ToLower();
 
                 string[] tokens = formatted.Split(" ");
                 formatted = "";
@@ -80,17 +84,17 @@ namespace MotorEmpireAutohaus.Misc.Common
                 return new AuthValidationResult(false, "The email address cannot be empty!");
             }
 
-            string trimmed = email.Trim();
+            //string trimmed = email.Trim();
             try
             {
-                var mail = new MailAddress(trimmed);
+                var mail = new MailAddress(email);
             }
-            catch
+            catch (Exception e)
             {
-                return new AuthValidationResult(false, "The provided email address is invalid!");
+                return new AuthValidationResult(false, $"The provided email address is invalid! \n\n\n{e.Message}");
             }
 
-            return new AuthValidationResult(true,trimmed.ToLower());
+            return new AuthValidationResult(true,email.ToLower());
         }
 
         private delegate bool Util(OperationType choice, char charToVerify);
@@ -188,40 +192,29 @@ namespace MotorEmpireAutohaus.Misc.Common
 
             if(username.Contains(' '))
             {
-                return new AuthValidationResult(false, "Your username can't contain whitespaces!");
+                return new AuthValidationResult(false, "Your username cannot contain whitespaces!");
             }
 
             return new AuthValidationResult(true, "");
         }
 
-        public bool ValidateLogin(ref string emailAddress, ref string password)
+        public bool ValidateLogin(UserAccount u)
         {
-            var emailValidation = ValidateEmailAddress(emailAddress);
-            if (!emailValidation.ValidationPassed)
+            var emailValidation = ValidateEmailAddress(u.EmailAddress);
+            if (emailValidation.ValidationPassed==false)
             {
-                emailAddress = string.Empty;
-            }
-
-            var passwordValidation = ValidateEmailAddress(password);
-            if (!passwordValidation.ValidationPassed)
-            {
-                password= string.Empty;
-            }
-
-            if (emailValidation.ValidationPassed == false)
-            {
-                emailAddress = "";
-                CrossPlatformMessageRenderer.RenderMessages(emailValidation.Remark, "Retry",6);
+                u.EmailAddress = string.Empty;
+                CrossPlatformMessageRenderer.RenderMessages(emailValidation.Remark, "Retry", 6);
                 return false;
             }
 
-            if (passwordValidation.ValidationPassed == false)
+            var passwordValidation = ValidatePassword(u.Password);
+            if (passwordValidation.ValidationPassed==false)
             {
-                CrossPlatformMessageRenderer.RenderMessages(passwordValidation.Remark, "Retry",6);
-                password = "";
+                u.Password = string.Empty;
+                CrossPlatformMessageRenderer.RenderMessages(passwordValidation.Remark, "Retry", 6);
                 return false;
             }
-
             return true;
         }
 
@@ -262,7 +255,5 @@ namespace MotorEmpireAutohaus.Misc.Common
             user.Name = FormatName(user.Name);
             return true;
         }
-
-
     }
 }

@@ -87,22 +87,10 @@ namespace MotorEmpireAutohaus.View_Model.Account
             return o.GetHashCode();
         }
 
-
-        private bool ValidPassword()
-        {
-            if (Password.Length == 0)
-            {
-                /*RenderErrorMessages("Password field cannot be empty!", "Retry");*/
-                return false;
-
-            }
-            return true;
-        }
-
         [RelayCommand]
         public void Login()
         {
-            if (authValidation.ValidateLogin(ref emailAddress,ref password) == true)
+            if (authValidation.ValidateLogin(this))
             {
                 EmailAddress = EmailAddress.ToLower();
                 if (accountService.Login(this))
@@ -112,8 +100,8 @@ namespace MotorEmpireAutohaus.View_Model.Account
             }
             else
             {
-                EmailAddress = string.Empty;
-                Password = string.Empty;
+                /*EmailAddress = string.Empty;
+                Password = string.Empty;*/
             }
         }
 

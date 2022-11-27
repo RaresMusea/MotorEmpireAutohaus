@@ -18,7 +18,7 @@ namespace MotorEmpireAutohaus.Services.Account_Services
     public class AccountService : IAuthenticate, IStorable
     {
         private DatabaseConfigurer databaseConfig;
-        private static string tableReference = "User";
+        private static readonly string tableReference = "User";
 
         public AccountService()
         {
@@ -87,7 +87,7 @@ namespace MotorEmpireAutohaus.Services.Account_Services
 
         private async Task<string> PrepareDefaultProfilePicture(string firebasePath)
         {
-            FileResult file = new FileResult(@"\MotorEmpireAutohaus\Resources\Images\defaultprofilepic.png");
+            FileResult file = new(@"\MotorEmpireAutohaus\Resources\Images\defaultprofilepic.png");
             string res=await FirebaseCloudStorage.AddFileToFirebaseCloudStorageAsync(file, firebasePath);
             return res;
         }
@@ -122,7 +122,7 @@ namespace MotorEmpireAutohaus.Services.Account_Services
             }
             catch (MySqlException mySqlexc)
             {
-                CrossPlatformMessageRenderer.RenderMessages($"Cannot register! Make sure that your credentials were introduced correctly and try again!\n\n\nError details:{mySqlexc.Message}\n", "Retry now", 10);
+                CrossPlatformMessageRenderer.RenderMessages($"Cannot register your account! Make sure that your credentials were introduced correctly and try again!\n\n\nError details:{mySqlexc.Message}\n", "Retry now", 10);
                 return false;
             }
         }
