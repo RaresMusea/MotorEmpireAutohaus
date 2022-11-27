@@ -12,10 +12,14 @@
     <ShellContent
         Title="Empire"
         ContentTemplate="{DataTemplate local:LogIn}"
+        FlyoutIcon="False"
+        Shell.FlyoutBehavior="Disabled"
         Route="LogIn" />
 
     <ShellContent
         Title="Empire"
+        FlyoutIcon="False"
+        Shell.FlyoutBehavior="Disabled"
         ContentTemplate="{DataTemplate local:SignUp}"
         Route="SignUp" />
 
