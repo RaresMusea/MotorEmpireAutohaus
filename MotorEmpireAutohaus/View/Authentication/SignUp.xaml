@@ -21,7 +21,7 @@
                        x:Name="AuthContainer"
                        MinimumWidthRequest="340"
                        MaximumWidthRequest="2400"
-                       HeightRequest="740"
+                       HeightRequest="800"
                        CornerRadius="50"
                        HorizontalOptions="Center">
                     <VerticalStackLayout>
@@ -202,6 +202,7 @@
                                            FontFamily="Roboto"
                                            IsPassword="True"
                                            Margin="5,0,0,0"
+                                           Text="{Binding Password}"
                                            />
                                     <ImageButton Source="eye.png" 
                                                  x:Name="passwordShowButton"

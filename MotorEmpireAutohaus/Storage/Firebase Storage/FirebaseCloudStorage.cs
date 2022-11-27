@@ -14,7 +14,7 @@ namespace MotorEmpireAutohaus.Storage.Firebase_Storage
         public static async Task<string> AddFileToFirebaseCloudStorageAsync(FileResult file, string firebaseCloudPath)
         {
             var fileToUpload = await file.OpenReadAsync();
-            var firebase = await new FirebaseStorage(key).Child($"{firebaseCloudPath}/{file.FileName}").PutAsync(fileToUpload);
+            var firebase = await new FirebaseStorage("gs://motor-empire-autohaus.appspot.com").Child($"{firebaseCloudPath}/{file.FileName}").PutAsync(fileToUpload);
             return firebase;
         }
 

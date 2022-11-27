@@ -1,4 +1,5 @@
-﻿using MotorEmpireAutohaus.Misc.Common;
+﻿using Firebase.Storage;
+using MotorEmpireAutohaus.Misc.Common;
 using MotorEmpireAutohaus.Misc.Encryption;
 using MotorEmpireAutohaus.Misc.Exceptions;
 using MotorEmpireAutohaus.Storage;
@@ -12,6 +13,7 @@ using System.Linq;
 using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace MotorEmpireAutohaus.Services.Account_Services
 {
@@ -33,8 +35,7 @@ namespace MotorEmpireAutohaus.Services.Account_Services
 
         public bool SignUp(UserAccount user)
         {
-            Shell.Current.GoToAsync("//Feed", true);
-            return true;
+            return Save(user) != null;
         }
 
         public bool Login(UserAccount user)
@@ -58,7 +59,7 @@ namespace MotorEmpireAutohaus.Services.Account_Services
                     string emailAddress = (string)reader.GetValue(3);
                     string username = (string)reader.GetValue(4);
                     string password = (string)reader.GetValue(5);
-                    string profileImageUrl = (string)reader.GetValue(7);
+                    string profileImageUrl = (string)reader.GetValue(6);
                     UserAccount result = new(uuid, name, emailAddress, username, password, profileImageUrl);
                     accounts.Add(result);
                 }
@@ -74,20 +75,19 @@ namespace MotorEmpireAutohaus.Services.Account_Services
             else
             {
                 CrossPlatformMessageRenderer.DisplayMobileSnackbar($"Welcome back, {accounts.ElementAt(0).Name}! You are being redirected to the main application...", "", 5);
-                Shell.Current.GoToAsync("//Feed", true);
-                return true;
+                return true;  
             }
 
         }
 
         bool IAuthenticate.SignUp(UserAccount user)
         {
-            throw new NotImplementedException();
+            return Save(user) != null;
         }
 
         private async Task<string> PrepareDefaultProfilePicture(string firebasePath)
         {
-            FileResult file = new(@"\MotorEmpireAutohaus\Resources\Images\defaultprofilepic.png");
+            FileResult file = new(@"C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\Resources\Images\defaultprofilepic.png");
             string res=await FirebaseCloudStorage.AddFileToFirebaseCloudStorageAsync(file, firebasePath);
             return res;
         }
@@ -102,15 +102,21 @@ namespace MotorEmpireAutohaus.Services.Account_Services
 
             try
             {
+          
+                /* string profileImgURL=PrepareDefaultProfilePicture($"/users/{userAccount.UUID}").Result;
+                 userAccount.ProfileImageURL = profileImgURL;*/
                 
-                string profileImgURL=PrepareDefaultProfilePicture($"/users/{userAccount.UUID}").Result;
-                userAccount.ProfileImageURL = profileImgURL;
+                
+                /*var stream = File.Open("C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\MotorEmpireAutohaus\\Resources\\Images\\defaultprofilepic.png",FileMode.Open);
+                var firebase = new FirebaseStorage("gs://motor-empire-autohaus.appspot.com").Child($"/users/{userAccount.UUID}/defaultprofilepic").PutAsync(stream);*/
+                
+
                 MySqlCommand command = new($"INSERT INTO {tableReference} (UUID, Name, EmailAddress, Username,Password,ProfileImageURL)" +
-                    $"VALUES (@uuid, @name, @email, @username, @password, @imageURL", databaseConfig.DatabaseConnection);
+                    $"VALUES (@uuid, @name, @email, @username, @password, @imageURL)", databaseConfig.DatabaseConnection);
 
                 command.Prepare();
                 string[] keys = { "@uuid", "@name", "@email", "@username", "@password", "@imageURL" };
-                string[] values = { userAccount.UUID, userAccount.Name, userAccount.Username, Encrypter.EncryptPassword(userAccount.Password), profileImgURL };
+                string[] values = { userAccount.UUID, userAccount.Name, userAccount.EmailAddress, userAccount.Username, Encrypter.EncryptPassword(userAccount.Password), @"https://firebasestorage.googleapis.com/v0/b/motor-empire-autohaus.appspot.com/o/defaultprofilepic.png?alt=media&token=256db5c0-c612-42f7-bc4f-d6595a99da80" };
             
                 for(int i=0; i < keys.Length; i++)
                 {
@@ -127,7 +133,6 @@ namespace MotorEmpireAutohaus.Services.Account_Services
             }
         }
 
-
         public Entity Save(Entity e)
         {
             bool result;
@@ -137,6 +142,8 @@ namespace MotorEmpireAutohaus.Services.Account_Services
                 result = TrySave(e);
                 if (result)
                 {
+                    CrossPlatformMessageRenderer.RenderMessages($"Account created succesfully, {user.Name}!\nHappy searching and safe roads!\nYou will be automatically redirected to the login page once the register process ends.", "Okay", 8);
+                    
                     return user;
                 }
             }

@@ -12,6 +12,9 @@ namespace MotorEmpireAutohaus.View_Model
 {
     public partial class FeedViewModel:BaseViewModel
     {
+
+        public FeedViewModel() { }
+
         [ObservableProperty]
         string fileName;
 

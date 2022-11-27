@@ -88,53 +88,30 @@ namespace MotorEmpireAutohaus.View_Model.Account
         }
 
         [RelayCommand]
-        public void Login()
+        public async void Login()
         {
             if (authValidation.ValidateLogin(this))
             {
                 EmailAddress = EmailAddress.ToLower();
                 if (accountService.Login(this))
                 {
-                    CrossPlatformMessageRenderer.RenderMessages("Login Success!", "OK",2);
+                    //CrossPlatformMessageRenderer.RenderMessages("Login Success!", "OK",2);
+                    await Shell.Current.GoToAsync("//Feed", true);
                 }
-            }
-            else
-            {
-                /*EmailAddress = string.Empty;
-                Password = string.Empty;*/
             }
         }
 
         [RelayCommand]
-        public void Register()
+        public async void Register()
         {
             if (authValidation.ValidateSignUp(this))
             {
-                accountService.SignUp(this);
-            }
-            else
-            {
-                CrossPlatformMessageRenderer.RenderMessages("Cannot sign you up! Invalid credentials provided!", "Retry", 5);
-            }
-        }
-
-        [RelayCommand]
-        public void OnWrongEmailInputFocus()
-        {
-            if (!authValidation.ValidateEmailAddress(EmailAddress).ValidationPassed)
-            {
-                EmailAddress = string.Empty;
+                if (accountService.SignUp(this))
+                {
+                    await Shell.Current.GoToAsync("//LogIn", true);
+                }
             }
         }
-
-        [RelayCommand]
-        public void OnWrongPasswordInputFocus()
-        {
-            if (!authValidation.ValidatePassword(Password).ValidationPassed)
-            {
-                Password = string.Empty;
-            }
-        }
-
     }
 }
+

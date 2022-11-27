@@ -248,6 +248,7 @@ namespace MotorEmpireAutohaus.Misc.Common
             if (!passwordsValidation.ValidationPassed)
             {
                 user.Password=string.Empty;
+                user.PasswordConfirmation=string.Empty;
                 CrossPlatformMessageRenderer.RenderMessages(passwordsValidation.Remark, "Retry", 8);
                 return false;
             }
