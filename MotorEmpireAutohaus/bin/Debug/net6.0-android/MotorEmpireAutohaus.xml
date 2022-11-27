@@ -28,6 +28,12 @@
         <member name="P:MotorEmpireAutohaus.View_Model.Account.UserAccount.LoginCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.View_Model.Account.UserAccount.Login"/>.</summary>
         </member>
+        <member name="F:MotorEmpireAutohaus.View_Model.Account.UserAccount.registerCommand">
+            <summary>The backing field for <see cref="P:MotorEmpireAutohaus.View_Model.Account.UserAccount.RegisterCommand"/>.</summary>
+        </member>
+        <member name="P:MotorEmpireAutohaus.View_Model.Account.UserAccount.RegisterCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.View_Model.Account.UserAccount.Register"/>.</summary>
+        </member>
         <member name="F:MotorEmpireAutohaus.View_Model.Account.UserAccount.wrongEmailInputFocusCommand">
             <summary>The backing field for <see cref="P:MotorEmpireAutohaus.View_Model.Account.UserAccount.WrongEmailInputFocusCommand"/>.</summary>
         </member>

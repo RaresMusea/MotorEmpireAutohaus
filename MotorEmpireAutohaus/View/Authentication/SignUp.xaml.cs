@@ -26,10 +26,12 @@ public partial class SignUp : ContentPage, IPlatformDependentStyling
             AuthenticationLogo.HeightRequest = 320;
             AuthenticationLogo.WidthRequest = 500;
             NameEntry.HeightRequest = 25;
+            usernameEntry.HeightRequest = 25;
             emailEntry.HeightRequest = 25;
             passwordEntry.HeightRequest = 25;
             passwordConfirmationEntry.HeightRequest = 25;
             NameEntry.WidthRequest = 250;
+            usernameEntry.WidthRequest = 250;
             emailEntry.WidthRequest = 250;
             passwordEntry.WidthRequest = 225;
             passwordConfirmationEntry.WidthRequest = 300;
@@ -45,6 +47,7 @@ public partial class SignUp : ContentPage, IPlatformDependentStyling
         if (DeviceInfo.Platform == DevicePlatform.Android)
         {
             NameEntry.HeightRequest = 45;
+            usernameEntry.HeightRequest = 45;
             emailEntry.HeightRequest = 45;
             passwordEntry.HeightRequest = 45;
             passwordEntry.WidthRequest = 225;

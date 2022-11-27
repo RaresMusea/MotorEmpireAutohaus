@@ -21,7 +21,7 @@
                        x:Name="AuthContainer"
                        MinimumWidthRequest="340"
                        MaximumWidthRequest="2400"
-                       HeightRequest="725"
+                       HeightRequest="740"
                        CornerRadius="50"
                        HorizontalOptions="Center">
                     <VerticalStackLayout>
@@ -47,7 +47,7 @@
 
 
                         <VerticalStackLayout HorizontalOptions="CenterAndExpand">
-                            <Label Text="{Binding Name}" 
+                            <Label Text="Name" 
                                HorizontalOptions="Start"
                                FontSize="16"
                                FontAttributes="Bold"
@@ -86,6 +86,49 @@
                                 </HorizontalStackLayout>
                             </Frame>
                         </VerticalStackLayout>
+
+                        <VerticalStackLayout HorizontalOptions="CenterAndExpand">
+                            <Label Text="Username" 
+                               HorizontalOptions="Start"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               Margin="10,0,0,10"/>
+
+                            <Frame CornerRadius="15"
+                                   HeightRequest="45"
+                                   WidthRequest="300"
+                                   HasShadow="True"
+                                   BorderColor="Transparent"
+                                   BackgroundColor="{AppThemeBinding Dark=White, Light=White}"
+                                   Padding="5"
+                                   Margin="0,0,0,25">
+
+                                <HorizontalStackLayout>
+                                    <Image Source="tag.png"
+                                           WidthRequest="24"
+                                           HeightRequest="24"
+                                           Margin="5"/>
+
+                                    <Entry Placeholder="Your username here"
+                                           x:Name="usernameEntry"
+                                           MaxLength="50"
+                                           TextColor="Black"
+                                           WidthRequest="215"
+                                           BackgroundColor="{AppThemeBinding Dark=White, Light=White}"
+                                           FontFamily="Roboto"
+                                           Margin="5,0,0,0"
+                                           Text="{Binding Username}"/>
+                                    <ImageButton Source="eye.png" 
+                                                 WidthRequest="24"
+                                                 HeightRequest="24"
+                                                 HorizontalOptions="End"
+                                                 Margin="5"
+                                                 IsVisible="False"/>
+                                </HorizontalStackLayout>
+                            </Frame>
+                        </VerticalStackLayout>
+
+
 
                         <VerticalStackLayout HorizontalOptions="CenterAndExpand">
                             <Label Text="Email" 
@@ -228,7 +271,7 @@
                                    HorizontalTextAlignment="Center"/>
 
                             <Label Text="Forgot Password"
-                                   TextColor="{AppThemeBinding Dark=#333652, Light=#3D8361}"
+                                   TextColor="{AppThemeBinding Dark=#AF404, Light=#3D8361}"
                                    x:Name="ForgotPasswordLabel"
                                    FontAutoScalingEnabled="False"
                                    FontAttributes="Bold"
