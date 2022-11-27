@@ -8,7 +8,7 @@ namespace MotorEmpireAutohaus.View_Model.Base
 {
     public abstract partial class Entity:BaseViewModel
     {
-        protected string UUID { get; }
+        public string UUID { get; protected set; }
         
         public Entity() : base()
         {

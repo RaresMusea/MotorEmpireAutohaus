@@ -77,7 +77,7 @@
                                            FontFamily="Roboto"
                                            Margin="5,0,0,0"
                                            Text="{Binding EmailAddress}"
-                                            ReturnCommand="{Binding WrongEmailInputFocusCommand}"/>
+                                         />
                                     <ImageButton Source="eye.png" 
                                                  WidthRequest="24"
                                                  HeightRequest="24"
@@ -121,7 +121,7 @@
                                            IsPassword="True"
                                            Margin="5,0,0,0"
                                            Text="{Binding Password}"
-                                           ReturnCommand="{Binding WrongPasswordInputFocusCommand}"
+                                           
                                            />
                                     <ImageButton Source="eye.png" 
                                                  x:Name="passwordShowButton"

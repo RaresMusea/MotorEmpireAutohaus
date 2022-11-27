@@ -73,6 +73,11 @@ namespace MotorEmpireAutohaus.View_Model.Account
 
         public override bool IsEmpty()
         {
+            if (this == null)
+            {
+                return true;
+            }
+
             return (UUID == "" || Name == "" || EmailAddress == "" || Password == "" || Username == "");
         }
 
@@ -82,52 +87,31 @@ namespace MotorEmpireAutohaus.View_Model.Account
             return o.GetHashCode();
         }
 
-
-        private bool ValidPassword()
-        {
-            if (Password.Length == 0)
-            {
-                /*RenderErrorMessages("Password field cannot be empty!", "Retry");*/
-                return false;
-
-            }
-            return true;
-        }
-
         [RelayCommand]
-        public void Login()
+        public async void Login()
         {
-            if (authValidation.ValidateLogin(ref emailAddress,ref password) == true)
+            if (authValidation.ValidateLogin(this))
             {
                 EmailAddress = EmailAddress.ToLower();
                 if (accountService.Login(this))
                 {
-                    CrossPlatformMessageRenderer.RenderMessages("Login Success!", "OK",2);
+                    //CrossPlatformMessageRenderer.RenderMessages("Login Success!", "OK",2);
+                    await Shell.Current.GoToAsync("//Feed", true);
                 }
             }
-            else
-            {
-                EmailAddress = string.Empty;
-                Password = string.Empty;
-            }
         }
 
         [RelayCommand]
-        public void OnWrongEmailInputFocus()
+        public async void Register()
         {
-            if (!authValidation.IsEmailValid(EmailAddress).ValidationPassed)
+            if (authValidation.ValidateSignUp(this))
             {
-                EmailAddress = string.Empty;
-            }
-        }
-
-        [RelayCommand]
-        public void OnWrongPasswordInputFocus()
-        {
-            if (!authValidation.IsPassowrdValid(Password).ValidationPassed)
-            {
-                Password = string.Empty;
+                if (accountService.SignUp(this))
+                {
+                    await Shell.Current.GoToAsync("//LogIn", true);
+                }
             }
         }
     }
 }
+

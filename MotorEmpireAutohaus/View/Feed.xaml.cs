@@ -4,9 +4,8 @@ namespace MotorEmpireAutohaus.View;
 
 public partial class Feed : ContentPage
 {
-	public Feed(FeedViewModel feedViewModel) 
-	{ 
-		InitializeComponent();
-		BindingContext=feedViewModel;
+	public Feed() 
+	{
+        InitializeComponent();
 	}
 }

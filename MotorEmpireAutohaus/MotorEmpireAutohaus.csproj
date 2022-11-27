@@ -60,6 +60,7 @@
 	  <None Remove="Resources\Images\motorempire.jpg" />
 	  <None Remove="Resources\Images\name.png" />
 	  <None Remove="Resources\Images\password.png" />
+	  <None Remove="Resources\Images\tag.png" />
 	  <None Remove="Resources\Splash\logo.svg" />
 	</ItemGroup>
 

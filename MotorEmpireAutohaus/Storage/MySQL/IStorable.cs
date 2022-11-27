@@ -9,8 +9,8 @@ namespace MotorEmpireAutohaus.Storage
 {
     internal interface IStorable
     {
-        public Task<List<Entity>> RetrieveAll();
-/*        public void Save(Entity entity);
-        public Task<Entity> GetEntityByID(int id);*/
+        //public Task<List<Entity>> RetrieveAll();
+        public Entity Save(Entity entity);
+        //public Task<Entity> GetEntityByID(int id);*/
     }
 }
