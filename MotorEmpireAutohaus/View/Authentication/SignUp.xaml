@@ -23,7 +23,8 @@
                        MaximumWidthRequest="2400"
                        HeightRequest="800"
                        CornerRadius="50"
-                       HorizontalOptions="Center">
+                       HorizontalOptions="Center"
+                       Opacity="0">
                     <VerticalStackLayout>
                         <Label Text="Welcome!"
                            FontSize="Title"

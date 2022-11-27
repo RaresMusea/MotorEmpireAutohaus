@@ -20,6 +20,24 @@ public partial class LogIn : ContentPage, IPlatformDependentStyling
 {
 
 
+	protected override void OnAppearing()
+	{
+		base.OnAppearing();
+
+		if (this.AnimationIsRunning("TransitionAnimation"))
+		{
+			return;
+		}
+
+        Animation parentAnimation = new()
+        {
+            //{ 0, 0.5, new Animation(v => AuthenticationLogo.Opacity = v, 0, 1, Easing.CubicIn) },
+			{0.2,0.8,new Animation(v=>AuthContainer.Opacity=v,0,1,Easing.CubicIn) }
+        };
+
+        parentAnimation.Commit(this, "TransitionAnimation", 16, 2000, null, null);
+    }
+
 	public LogIn(UserAccount userAccount)
 	{
 

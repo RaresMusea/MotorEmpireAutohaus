@@ -5,6 +5,23 @@ namespace MotorEmpireAutohaus;
 
 public partial class SignUp : ContentPage, IPlatformDependentStyling
 {
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        if (this.AnimationIsRunning("TransitionAnimation"))
+        {
+            return;
+        }
+
+        Animation parentAnimation = new()
+        {
+            {0.2,0.8,new Animation(v=>AuthContainer.Opacity=v,0,1,Easing.CubicIn) }
+        };
+
+        parentAnimation.Commit(this, "TransitionAnimation", 16, 2000, null, null);
+    }
+
     public SignUp(UserAccount viewModel)
     {
         BindingContext = viewModel;
@@ -58,6 +75,7 @@ public partial class SignUp : ContentPage, IPlatformDependentStyling
 
     private async void NavigateToSignInPage(object sender, EventArgs e)
     {
+        await AuthContainer.FadeTo(0);
         await Shell.Current.GoToAsync("//LogIn",true);
     }
 }

@@ -65,6 +65,8 @@ namespace MotorEmpireAutohaus.Services.Account_Services
                 }
             }
 
+            reader.Close();
+
             if (accounts.Count == 0)
             {
                 CrossPlatformMessageRenderer.RenderMessages("The provided credentials do not match any existing account on our platform! Please try again!", "Retry", 4);

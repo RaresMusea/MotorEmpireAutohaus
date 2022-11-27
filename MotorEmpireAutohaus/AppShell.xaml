@@ -6,25 +6,34 @@
     xmlns:view="clr-namespace:MotorEmpireAutohaus.View"
     xmlns:local="clr-namespace:MotorEmpireAutohaus"
     xmlns:signupPage="clr-namespace:MotorEmpireAutohaus.View"
-    Shell.FlyoutBehavior="Disabled"
-    Shell.NavBarIsVisible="False">
+    Shell.NavBarIsVisible="False"
+    Shell.TabBarIsVisible="True">
 
     <ShellContent
-        Title="Empire"
+        Title=""
         ContentTemplate="{DataTemplate local:LogIn}"
         FlyoutIcon="False"
         Shell.FlyoutBehavior="Disabled"
+        FlyoutItemIsVisible="False"
         Route="LogIn" />
 
     <ShellContent
-        Title="Empire"
+        Title=""
         FlyoutIcon="False"
         Shell.FlyoutBehavior="Disabled"
+        FlyoutItemIsVisible="False"
         ContentTemplate="{DataTemplate local:SignUp}"
         Route="SignUp" />
 
-    <ShellContent
+    <!--<ShellContent
         Title="asdasd"
         ContentTemplate="{DataTemplate view:Feed}"
-        Route="Feed"/>
+        Route="Feed"/>-->
+
+    <TabBar Route="Feed"
+                FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Feed" ContentTemplate="{DataTemplate view:Feed}"></ShellContent>
+        <ShellContent Title="Main" ContentTemplate="{DataTemplate view:Upload}"></ShellContent>
+        <ShellContent Title="Search" ContentTemplate="{DataTemplate view:Search}"></ShellContent>
+    </TabBar>
 </Shell>

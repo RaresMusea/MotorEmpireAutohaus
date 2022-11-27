@@ -14,6 +14,7 @@
              Aspect="AspectFit"
                    WidthRequest="250"
                    HeightRequest="250"
+                   
              ></Image>
 
             <VerticalStackLayout HorizontalOptions="Center">
@@ -23,7 +24,8 @@
                        MaximumWidthRequest="2400"
                        HeightRequest="505"
                        CornerRadius="50"
-                       HorizontalOptions="Center">
+                       HorizontalOptions="Center"
+                       Opacity="0">
                     <VerticalStackLayout>
                         <Label Text="Welcome!"
                            FontSize="Title"

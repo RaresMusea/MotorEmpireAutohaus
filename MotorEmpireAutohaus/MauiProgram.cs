@@ -34,6 +34,9 @@ public static class MauiProgram
         builder.Services.AddSingleton<AuthValidation>();
         builder.Services.AddSingleton<SignUp>();
         builder.Services.AddSingleton<AccountService>();
+        builder.Services.AddSingleton<Search>();
+        builder.Services.AddSingleton<Upload>();
+        builder.Services.AddSingleton<Feed>();
 
         return builder.Build();
     }
