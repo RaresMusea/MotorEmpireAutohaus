@@ -1,52 +1,45 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using MotorEmpireAutohaus.Services.Account_Services;
-using CommunityToolkit.Mvvm.Messaging;
-using System;
-using Microsoft.Toolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Input;
-using System.Net.Mail;
-using MotorEmpireAutohaus.Misc.Prebuilt_Components;
-using System.Reflection.Metadata.Ecma335;
-using MotorEmpireAutohaus.Misc;
-using MotorEmpireAutohaus.Misc.Common;
+using MotorEmpireAutohaus.Misc.Authentication;
 
 namespace MotorEmpireAutohaus.View_Model.Account
 {
     public partial class UserAccount : User
     {
-        private readonly AccountService accountService;
-        private readonly AuthValidation authValidation;
+        private readonly AccountService _accountService;
+        private readonly AuthValidation _authValidation;
 
         [ObservableProperty]
-        private string emailAddress;
+        private string _emailAddress;
 
         [ObservableProperty]
-        private string username;
+        private string _username;
 
         [ObservableProperty]
-        private string passwordConfirmation;
+        private string _passwordConfirmation;
 
         [ObservableProperty]
-        private string profileImageURL;
+        private string _profileImageUrl;
 
         public UserAccount(string name, string emailAddress, string username, string password) : base(name, password)
         {
-            this.emailAddress = emailAddress;
-            this.username = username;
+            this._emailAddress = emailAddress;
+            this._username = username;
         }
 
         public UserAccount(string UUID, string name, string emailAddress, string username, string password,string profileImageURL) : base(UUID, name, password)
         {
-            this.emailAddress = emailAddress;
-            this.username = username;
-            this.profileImageURL= profileImageURL;
+            this._emailAddress = emailAddress;
+            this._username = username;
+            this._profileImageUrl= profileImageURL;
         }
 
         //Dependency injection
         public UserAccount(AuthValidation authValidation, AccountService accountService)
         {
-            this.accountService = accountService;
-            this.authValidation = authValidation;
+            this._accountService = accountService;
+            this._authValidation = authValidation;
         }
 
         public override bool Equals(object obj)
@@ -90,10 +83,10 @@ namespace MotorEmpireAutohaus.View_Model.Account
         [RelayCommand]
         public async void Login()
         {
-            if (authValidation.ValidateLogin(this))
+            if (_authValidation.ValidateLogin(this))
             {
                 EmailAddress = EmailAddress.ToLower();
-                if (accountService.Login(this))
+                if (_accountService.Login(this))
                 {
                     //CrossPlatformMessageRenderer.RenderMessages("Login Success!", "OK",2);
                     await Shell.Current.GoToAsync("//Feed", true);
@@ -104,9 +97,9 @@ namespace MotorEmpireAutohaus.View_Model.Account
         [RelayCommand]
         public async void Register()
         {
-            if (authValidation.ValidateSignUp(this))
+            if (_authValidation.ValidateSignUp(this))
             {
-                if (accountService.SignUp(this))
+                if (_accountService.SignUp(this))
                 {
                     await Shell.Current.GoToAsync("//LogIn", true);
                 }

@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MotorEmpireAutohaus.Misc.Handlers
+﻿namespace MotorEmpireAutohaus.Misc.Handlers
 {
-    public class BorderlessEntry:Entry
+    public class BorderlessEntry : Entry
     {
-
     }
 }

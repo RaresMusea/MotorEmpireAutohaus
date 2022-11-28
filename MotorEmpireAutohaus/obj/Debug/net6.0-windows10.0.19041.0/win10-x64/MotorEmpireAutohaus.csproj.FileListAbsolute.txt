@@ -400,3 +400,4 @@ C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Medii si instrumente de programar
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\clrcompression.dll
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\defaultprofilepic.scale-100.png
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\tag.scale-100.png
+C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\tractor.scale-100.png

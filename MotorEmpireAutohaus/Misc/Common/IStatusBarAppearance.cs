@@ -8,6 +8,6 @@ namespace MotorEmpireAutohaus.Misc.Common
 {
     public interface IStatusBarAppearance
     {
-        public void ConfigureBorderless();  //Android+ iOS
+        public void ConfigureBorderless(); //Android+ iOS
     }
 }

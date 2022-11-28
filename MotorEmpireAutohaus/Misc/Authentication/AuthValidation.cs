@@ -1,14 +1,8 @@
-﻿using MotorEmpireAutohaus.Misc.Authentication;
-using MotorEmpireAutohaus.Misc.Prebuilt_Components;
+﻿using System.Net.Mail;
+using MotorEmpireAutohaus.Misc.Common;
 using MotorEmpireAutohaus.View_Model.Account;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Mail;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace MotorEmpireAutohaus.Misc.Common
+namespace MotorEmpireAutohaus.Misc.Authentication
 {
     public enum OperationType{
             UppercaseCheck,
@@ -87,7 +81,7 @@ namespace MotorEmpireAutohaus.Misc.Common
             //string trimmed = email.Trim();
             try
             {
-                var mail = new MailAddress(email);
+                var unused = new MailAddress(email);
             }
             catch (Exception e)
             {

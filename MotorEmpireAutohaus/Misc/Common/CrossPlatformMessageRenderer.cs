@@ -1,9 +1,4 @@
 ﻿using MotorEmpireAutohaus.Misc.Prebuilt_Components;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MotorEmpireAutohaus.Misc.Common
 {
@@ -17,22 +12,21 @@ namespace MotorEmpireAutohaus.Misc.Common
         public static async void DisplayMobileSnackbar(string message, string actionButtonText, int durationInSeconds)
         {
             await SnackbarComponent.GenerateSnackbar(
-                  message,
-                  actionButtonText,
-                  Color.FromArgb("#dbdbdb"),
-                  Color.FromArgb("#414141"),
-                  Colors.Black,
-                  Colors.White,
-                  Color.FromArgb("#AF0404"),
-                  Color.FromArgb("#AF0404"),
-                  15, 14, 0, durationInSeconds,
-                  null
-                   );
+                message,
+                actionButtonText,
+                Color.FromArgb("#dbdbdb"),
+                Color.FromArgb("#414141"),
+                Colors.Black,
+                Colors.White,
+                Color.FromArgb("#AF0404"),
+                Color.FromArgb("#AF0404"),
+                15, 14, 0, durationInSeconds,
+                null
+            );
         }
 
         public static async void RenderMessages(string message, string buttonText, int duration)
         {
-
             if (DeviceInfo.Platform == DevicePlatform.WinUI)
             {
                 DisplayDesktopAlert(message, buttonText);
@@ -42,7 +36,5 @@ namespace MotorEmpireAutohaus.Misc.Common
                 await Task.Run(() => DisplayMobileSnackbar(message, buttonText, duration));
             }
         }
-
-
     }
 }

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MotorEmpireAutohaus.View_Model.Account;
 
-namespace MotorEmpireAutohaus.View_Model.Account
+namespace MotorEmpireAutohaus.Services.Account_Services
 {
     interface IAuthenticate
     {

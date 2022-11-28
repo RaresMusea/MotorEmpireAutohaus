@@ -1,7 +1,6 @@
 ﻿using CommunityToolkit.Maui.Alerts;
 using CommunityToolkit.Maui.Core;
-using System;
-using System.Collections.Generic;
+
 
 namespace MotorEmpireAutohaus.Misc.Prebuilt_Components
 {
@@ -12,13 +11,16 @@ namespace MotorEmpireAutohaus.Misc.Prebuilt_Components
             return (Application.Current.UserAppTheme == AppTheme.Dark);
         }
 
-        public static async Task GenerateSnackbar(string message, string actionButtonText, Color bgColorLight, Color bgColorDark, Color textColorLight, Color textColorDark, Color actionButtonColorLight, Color actionButtonColorDark, int cornerRadius, int fontSize, double spacing, int showTime, Action actOnPress)
+        public static async Task GenerateSnackbar(string message, string actionButtonText, Color bgColorLight,
+            Color bgColorDark, Color textColorLight, Color textColorDark, Color actionButtonColorLight,
+            Color actionButtonColorDark, int cornerRadius, int fontSize, double spacing, int showTime,
+            Action actOnPress)
         {
             CancellationTokenSource cancellationTokenSource = new();
             var options = new SnackbarOptions
             {
-                BackgroundColor=DarkThemeEnabled()?bgColorDark:bgColorLight,
-                TextColor = DarkThemeEnabled()?textColorDark:textColorLight,
+                BackgroundColor = DarkThemeEnabled() ? bgColorDark : bgColorLight,
+                TextColor = DarkThemeEnabled() ? textColorDark : textColorLight,
                 ActionButtonTextColor = DarkThemeEnabled() ? actionButtonColorDark : actionButtonColorLight,
                 CornerRadius = new CornerRadius(cornerRadius),
                 ActionButtonFont = Microsoft.Maui.Font.SystemFontOfSize(fontSize),
@@ -26,8 +28,9 @@ namespace MotorEmpireAutohaus.Misc.Prebuilt_Components
                 CharacterSpacing = spacing
             };
 
-            var snackbar = new Snackbar();
-            snackbar = (Snackbar)CommunityToolkit.Maui.Alerts.Snackbar.Make(message, actOnPress, actionButtonText, TimeSpan.FromSeconds(showTime), options);
+            Snackbar snackbar;
+            snackbar = (Snackbar)Snackbar.Make(message, actOnPress, actionButtonText,
+                TimeSpan.FromSeconds(showTime), options);
             await snackbar.Show(cancellationTokenSource.Token);
         }
     }

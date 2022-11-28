@@ -12,9 +12,7 @@ public partial class App : Application,IStatusBarAppearance
 		ConfigureBorderless();
 		MainPage = new AppShell();
 	}
-
-
-
+	
     public void ConfigureBorderless()
     {
         Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping(nameof(BorderlessEntry), (handler, view) =>

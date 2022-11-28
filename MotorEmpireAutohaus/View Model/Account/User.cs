@@ -1,31 +1,26 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using MotorEmpireAutohaus.Misc.Encryption;
 using MotorEmpireAutohaus.View_Model.Base;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MotorEmpireAutohaus.View_Model.Account
 {
     public abstract partial class User:Entity
     {
         [ObservableProperty]
-        string name;
+        string _name;
 
         [ObservableProperty]
         protected string password;
 
         public User(string name, string password) : base()
         {
-            this.name = name;
+            this._name = name;
             this.password =Encrypter.EncryptPassword(password);
         }
 
         public User(string UUID, string name, string password) : base(UUID)
         {
-            this.name = name;
+            this._name = name;
             this.password = password;
         }
 
