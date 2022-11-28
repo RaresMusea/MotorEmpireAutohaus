@@ -56,6 +56,11 @@ auth.scale-200.png
 auth.scale-400.png
 auth_light.scale-100.png
 authentication.scale-100.png
+car.scale-100.png
+car.scale-125.png
+car.scale-150.png
+car.scale-200.png
+car.scale-400.png
 defaultprofilepic.scale-100.png
 dotnet_bot.scale-100.png
 dotnet_bot.scale-125.png
@@ -64,6 +69,8 @@ dotnet_bot.scale-200.png
 dotnet_bot.scale-400.png
 email.scale-100.png
 eye.scale-100.png
+flyoutbanner.scale-100.png
+flyoutbannerlight.scale-100.png
 landing.scale-100.png
 landing.scale-125.png
 landing.scale-150.png
@@ -81,14 +88,4 @@ logoSplashScreen.scale-125.png
 logoSplashScreen.scale-150.png
 logoSplashScreen.scale-200.png
 logoSplashScreen.scale-400.png
-splashscreenSplashScreen.scale-100.png
-splashscreenSplashScreen.scale-125.png
-splashscreenSplashScreen.scale-150.png
-splashscreenSplashScreen.scale-200.png
-splashscreenSplashScreen.scale-400.png
-splashSplashScreen.scale-100.png
-splashSplashScreen.scale-125.png
-splashSplashScreen.scale-150.png
-splashSplashScreen.scale-200.png
-splashSplashScreen.scale-400.png
 AboutAssets.txt

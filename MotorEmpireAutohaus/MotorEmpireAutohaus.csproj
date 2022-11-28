@@ -53,8 +53,11 @@
 	  <None Remove="Resources\Images\auth.svg" />
 	  <None Remove="Resources\Images\authentication.png" />
 	  <None Remove="Resources\Images\auth_light.png" />
+	  <None Remove="Resources\Images\car.svg" />
 	  <None Remove="Resources\Images\email.png" />
 	  <None Remove="Resources\Images\eye.png" />
+	  <None Remove="Resources\Images\flyoutbanner.png" />
+	  <None Remove="Resources\Images\flyoutbannerlight.png" />
 	  <None Remove="Resources\Images\landing.svg" />
 	  <None Remove="Resources\Images\landingImage.jpg" />
 	  <None Remove="Resources\Images\motorempire.jpg" />
@@ -83,6 +86,9 @@
 	  <Compile Update="View\Authentication\LogIn.xaml.cs">
 	    <DependentUpon>LogIn.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="View\MotorEmpire.xaml.cs">
+	    <DependentUpon>MotorEmpire.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -92,7 +98,7 @@
 	  <MauiXaml Update="View\Authentication\SignUp.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\Feed.xaml">
+	  <MauiXaml Update="View\MotorEmpire.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\Search.xaml">
@@ -105,6 +111,7 @@
 
 	<ItemGroup>
 	  <Folder Include="Resources\Images\Authentication\" />
+	  <Folder Include="View Model\NewFolder\" />
 	</ItemGroup>
 
 </Project>

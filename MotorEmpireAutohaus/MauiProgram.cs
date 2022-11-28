@@ -37,7 +37,7 @@ public static class MauiProgram
         builder.Services.AddSingleton<AccountService>();
         builder.Services.AddSingleton<Search>();
         builder.Services.AddSingleton<Upload>();
-        builder.Services.AddSingleton<Feed>();
+        builder.Services.AddSingleton<MotorEmpire>();
 
         return builder.Build();
     }

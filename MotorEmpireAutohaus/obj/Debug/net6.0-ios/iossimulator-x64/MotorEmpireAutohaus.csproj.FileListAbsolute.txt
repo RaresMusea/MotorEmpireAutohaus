@@ -283,3 +283,9 @@ C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Medii si instrumente de programar
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net6.0-ios\iossimulator-x64\MotorEmpireAutohaus.pdb
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net6.0-ios\iossimulator-x64\MotorEmpireAutohaus.genruntimeconfig.cache
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net6.0-ios\iossimulator-x64\ref\MotorEmpireAutohaus.dll
+C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net6.0-ios\iossimulator-x64\build-signature\signature
+C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\r\Resources\defaultprofilepic.png
+C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\r\Resources\flyoutbanner.png
+C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\r\Resources\person.png
+C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\r\Resources\tag.png
+C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\r\Resources\tractor.png

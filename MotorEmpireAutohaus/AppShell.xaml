@@ -6,12 +6,12 @@
     xmlns:view="clr-namespace:MotorEmpireAutohaus.View"
     xmlns:local="clr-namespace:MotorEmpireAutohaus"
     xmlns:signupPage="clr-namespace:MotorEmpireAutohaus.View"
-    Shell.NavBarIsVisible="False"
-    Shell.TabBarIsVisible="True">
+    Shell.TabBarIsVisible="False">
 
     <ShellContent
         Title=""
         ContentTemplate="{DataTemplate local:LogIn}"
+        Shell.NavBarIsVisible="False"
         FlyoutIcon="False"
         Shell.FlyoutBehavior="Disabled"
         FlyoutItemIsVisible="False"
@@ -20,6 +20,7 @@
     <ShellContent
         Title=""
         FlyoutIcon="False"
+        Shell.NavBarIsVisible="False"
         Shell.FlyoutBehavior="Disabled"
         FlyoutItemIsVisible="False"
         ContentTemplate="{DataTemplate local:SignUp}"
@@ -30,10 +31,78 @@
         ContentTemplate="{DataTemplate view:Feed}"
         Route="Feed"/>-->
 
-    <TabBar Route="Feed"
-                FlyoutDisplayOptions="AsMultipleItems">
-        <ShellContent Title="Feed" ContentTemplate="{DataTemplate view:Feed}"></ShellContent>
-        <ShellContent Title="Main" ContentTemplate="{DataTemplate view:Upload}"></ShellContent>
-        <ShellContent Title="Search" ContentTemplate="{DataTemplate view:Search}"></ShellContent>
-    </TabBar>
+    <FlyoutItem Route="MotorEmpire"
+        FlyoutDisplayOptions="AsMultipleItems"
+                Shell.NavBarHasShadow="True"
+                Shell.NavBarIsVisible="True"
+                Shell.BackgroundColor="{AppThemeBinding Dark=Red, Light=#1C6758}"
+                x:Name="Flyout">
+        <ShellContent Title="Motor Empire Autohaus" ContentTemplate="{DataTemplate view:MotorEmpire}" x:Name="MotorEmpireTab" ></ShellContent>
+        <ShellContent Title="Main" ContentTemplate="{DataTemplate view:Upload}" x:Name="UploadTab"></ShellContent>
+        <ShellContent Title="Search" ContentTemplate="{DataTemplate view:Search}" x:Name="SearchTab"></ShellContent>
+    </FlyoutItem>
+    
+    
+
+    <Shell.FlyoutHeader>
+        <VerticalStackLayout>
+                <Image Source="{AppThemeBinding Dark=flyoutbanner.png, Light=flyoutbannerlight.png}"
+               Margin="0,0,0,50"/>
+                <HorizontalStackLayout HorizontalOptions="Center"
+                                   Margin="0,0,0,35"
+                                   >
+                    <Image Source="defaultprofilepic.png"
+                   WidthRequest="30"
+                   HeightRequest="30"
+                   VerticalOptions="Center"
+                   Margin="0,0,10,0"
+                   x:Name="FlyoutImageBanner"
+                   />
+
+                    <Label Text="Logged in as Rares Musea"
+                        VerticalOptions="Center"
+                        FontAttributes="Bold"
+                        FontSize="16"
+                       />
+                </HorizontalStackLayout>
+            <Button  WidthRequest="250"
+                     HeightRequest="45"
+                     HorizontalOptions="Center"
+                     Margin=" 0,0,0,35"
+                     Text="Sell now"
+                     FontFamily="Kollektif"
+                     FontAttributes="Bold"
+                     FontSize="20"
+                     BackgroundColor="{AppThemeBinding Dark=Red, Light=#1C6758}"
+                     TextColor="White"/>
+            
+            
+            
+            <Label Text="Menu"
+                   FontSize="Title"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,15"
+                   FontAttributes="Bold"
+                   />
+
+        </VerticalStackLayout>
+    </Shell.FlyoutHeader>
+
+    <Shell.FlyoutFooter>
+        <VerticalStackLayout>
+
+            <Button WidthRequest="210"
+                    Text="Sign out"
+                    FontAttributes="Bold"
+                    FontSize="18"
+                    FontFamily="Kollektif"
+                    Margin="0,0,0,20"
+                    HorizontalOptions="Center"
+                    BackgroundColor="{AppThemeBinding Light=Orange,Dark=#FF4D00}"
+                    TextColor="White"
+                    />
+
+        </VerticalStackLayout>
+    </Shell.FlyoutFooter>
+
 </Shell>

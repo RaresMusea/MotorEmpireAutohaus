@@ -89,7 +89,7 @@ namespace MotorEmpireAutohaus.View_Model.Account
                 if (_accountService.Login(this))
                 {
                     //CrossPlatformMessageRenderer.RenderMessages("Login Success!", "OK",2);
-                    await Shell.Current.GoToAsync("//Feed", true);
+                    await Shell.Current.GoToAsync("//MotorEmpire", true);
                 }
             }
         }
