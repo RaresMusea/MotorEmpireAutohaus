@@ -1,4 +1,7 @@
-﻿namespace MotorEmpireAutohaus;
+﻿using MotorEmpireAutohaus.View_Model;
+using MotorEmpireAutohaus.View_Model.Account;
+
+namespace MotorEmpireAutohaus;
 
 public partial class AppShell : Shell
 {
@@ -22,6 +25,15 @@ public partial class AppShell : Shell
         };
 
         parentAnimation.Commit(this, "TransitionAnimation", 16, 2000, null, null);
+    }
+
+    private async void SignOut(object o, EventArgs e)
+    {
+        bool answer = await DisplayAlert("Motor Empire Autohaus-SignOut", "Are you sure that you want to sign out?", "Yes", "No");
+        if (answer)
+        {
+            await Current.GoToAsync("//LogIn", true);
+        }
     }
 
 }

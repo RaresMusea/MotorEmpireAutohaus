@@ -1,9 +1,13 @@
-﻿using MotorEmpireAutohaus.View_Model.Base;
+﻿using CommunityToolkit.Mvvm.Input;
+using MotorEmpireAutohaus.View_Model.Base;
 
 namespace MotorEmpireAutohaus.View_Model
 {
     public partial class MotorEmpireViewModel:BaseViewModel
     {
+
+
+
 
     }
 }

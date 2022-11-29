@@ -158,5 +158,36 @@ namespace MotorEmpireAutohaus.Services.Account_Services
                 "Cannot sign you up because of an input mismatch. Verify the form and try again later.", "Ok", 10);
             return null;
         }
+
+
+        private void UpdateLastSeenFor(UserAccount user)
+        {
+            MySqlCommand command = new($"UPDATE {TableReference} SET LastSeen=NOW() WHERE Name=@name",_databaseConfig.DatabaseConnection);
+            command.Prepare();
+            command.Parameters.AddWithValue("@uuid", user.Name);
+            command.ExecuteNonQuery();
+        }
+
+        public bool SignOut(UserAccount user)
+        {
+            if(user is null)
+            {
+                CrossPlatformMessageRenderer.RenderMessages("Cannot sign out because of an internal server error! Try again!", "OK", 4);
+                return false;
+            }
+            else
+            {
+                try
+                {
+                    UpdateLastSeenFor(user);
+                    return true;
+                }
+                catch (MySqlException mySqlExc)
+                {
+                    CrossPlatformMessageRenderer.RenderMessages($"Cannot Sign you up!\n\n\n Details:{mySqlExc}", "Retry", 5);
+                    return false;
+                }
+            }
+        }
     }
 }

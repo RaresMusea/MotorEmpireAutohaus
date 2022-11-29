@@ -22,6 +22,8 @@ namespace MotorEmpireAutohaus.View_Model.Account
         [ObservableProperty]
         private string _profileImageUrl;
 
+        public UserAccount() { _accountService = new AccountService(); }
+
         public UserAccount(string name, string emailAddress, string username, string password) : base(name, password)
         {
             this._emailAddress = emailAddress;
@@ -104,6 +106,12 @@ namespace MotorEmpireAutohaus.View_Model.Account
                     await Shell.Current.GoToAsync("//LogIn", true);
                 }
             }
+        }
+
+        [RelayCommand]
+        public void SignOut()
+        {
+            _accountService.SignOut(this);
         }
     }
 }

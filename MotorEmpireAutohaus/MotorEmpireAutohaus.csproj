@@ -49,15 +49,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <AndroidResource Remove="View Model\NewFolder\**" />
-	  <Compile Remove="View Model\NewFolder\**" />
-	  <EmbeddedResource Remove="View Model\NewFolder\**" />
-	  <MauiCss Remove="View Model\NewFolder\**" />
-	  <MauiXaml Remove="View Model\NewFolder\**" />
-	  <None Remove="View Model\NewFolder\**" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <None Remove="Resources\Fonts\TTOctosquares.ttf" />
 	  <None Remove="Resources\Images\auth.png" />
 	  <None Remove="Resources\Images\auth.svg" />
