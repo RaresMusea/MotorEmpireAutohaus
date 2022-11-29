@@ -35,11 +35,11 @@
         FlyoutDisplayOptions="AsMultipleItems"
                 Shell.NavBarHasShadow="True"
                 Shell.NavBarIsVisible="True"
-                Shell.BackgroundColor="{AppThemeBinding Dark=Red, Light=#1C6758}"
+                Shell.BackgroundColor="{AppThemeBinding Dark=#414141, Light=#1C6758}"
                 x:Name="Flyout">
         <ShellContent Title="Motor Empire Autohaus" ContentTemplate="{DataTemplate view:MotorEmpire}" x:Name="MotorEmpireTab" ></ShellContent>
-        <ShellContent Title="Main" ContentTemplate="{DataTemplate view:Upload}" x:Name="UploadTab"></ShellContent>
-        <ShellContent Title="Search" ContentTemplate="{DataTemplate view:Search}" x:Name="SearchTab"></ShellContent>
+        <ShellContent Title="All Cars" ContentTemplate="{DataTemplate view:Search}" x:Name="SearchTab"></ShellContent>
+        <ShellContent Title="My account" ContentTemplate="{DataTemplate view:Account}" x:Name="AccountTab"></ShellContent>
     </FlyoutItem>
     
     
@@ -73,7 +73,7 @@
                      FontFamily="Kollektif"
                      FontAttributes="Bold"
                      FontSize="20"
-                     BackgroundColor="{AppThemeBinding Dark=Red, Light=#1C6758}"
+                     BackgroundColor="{AppThemeBinding Dark=#252525, Light=#1C6758}"
                      TextColor="White"/>
             
             

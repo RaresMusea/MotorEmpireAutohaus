@@ -57,6 +57,12 @@
         <member name="P:MotorEmpireAutohaus.View_Model.FeedViewModel.UpdateFileToFirebaseCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.View_Model.FeedViewModel.UpdateFileToFirebase"/>.</summary>
         </member>
+        <member name="P:MotorEmpireAutohaus.ViewModel.Vehicles.Category.Category.Type">
+            <inheritdoc cref="F:MotorEmpireAutohaus.ViewModel.Vehicles.Category.Category.type"/>
+        </member>
+        <member name="P:MotorEmpireAutohaus.ViewModel.Vehicles.Category.Category.Image">
+            <inheritdoc cref="F:MotorEmpireAutohaus.ViewModel.Vehicles.Category.Category.image"/>
+        </member>
         <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
             <summary>
             Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color

@@ -49,22 +49,43 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <AndroidResource Remove="View Model\NewFolder\**" />
+	  <Compile Remove="View Model\NewFolder\**" />
+	  <EmbeddedResource Remove="View Model\NewFolder\**" />
+	  <MauiCss Remove="View Model\NewFolder\**" />
+	  <MauiXaml Remove="View Model\NewFolder\**" />
+	  <None Remove="View Model\NewFolder\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Fonts\TTOctosquares.ttf" />
 	  <None Remove="Resources\Images\auth.png" />
 	  <None Remove="Resources\Images\auth.svg" />
 	  <None Remove="Resources\Images\authentication.png" />
 	  <None Remove="Resources\Images\auth_light.png" />
+	  <None Remove="Resources\Images\brakedisc.svg" />
 	  <None Remove="Resources\Images\car.svg" />
+	  <None Remove="Resources\Images\constructiontruck.svg" />
 	  <None Remove="Resources\Images\email.png" />
 	  <None Remove="Resources\Images\eye.png" />
 	  <None Remove="Resources\Images\flyoutbanner.png" />
 	  <None Remove="Resources\Images\flyoutbannerlight.png" />
+	  <None Remove="Resources\Images\gauges.jpg" />
+	  <None Remove="Resources\Images\jumbotron.gif" />
+	  <None Remove="Resources\Images\jumbotronblack.svg" />
+	  <None Remove="Resources\Images\jumbotronwhite.svg" />
 	  <None Remove="Resources\Images\landing.svg" />
 	  <None Remove="Resources\Images\landingImage.jpg" />
+	  <None Remove="Resources\Images\moto.png" />
 	  <None Remove="Resources\Images\motorempire.jpg" />
 	  <None Remove="Resources\Images\name.png" />
 	  <None Remove="Resources\Images\password.png" />
+	  <None Remove="Resources\Images\search.svg" />
 	  <None Remove="Resources\Images\tag.png" />
 	  <None Remove="Resources\Images\tractor.png" />
+	  <None Remove="Resources\Images\trailer.svg" />
+	  <None Remove="Resources\Images\truck.svg" />
+	  <None Remove="Resources\Images\van.png" />
 	  <None Remove="Resources\Splash\logo.svg" />
 	</ItemGroup>
 
@@ -89,6 +110,9 @@
 	  <Compile Update="View\MotorEmpire.xaml.cs">
 	    <DependentUpon>MotorEmpire.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="View\Account.xaml.cs">
+	    <DependentUpon>Account.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -104,14 +128,13 @@
 	  <MauiXaml Update="View\Search.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\Upload.xaml">
+	  <MauiXaml Update="View\Account.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
 
 	<ItemGroup>
 	  <Folder Include="Resources\Images\Authentication\" />
-	  <Folder Include="View Model\NewFolder\" />
 	</ItemGroup>
 
 </Project>

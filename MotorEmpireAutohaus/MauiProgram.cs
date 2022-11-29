@@ -20,6 +20,7 @@ public static class MauiProgram
             fonts.AddFont("riesling.ttf", "Riesling");
             fonts.AddFont("Roboto-Regular.ttf", "Roboto");
             fonts.AddFont("Kollektif.ttf", "Kollektif");
+            fonts.AddFont("TTOctosquares.ttf", "TTOctosquares");
         }).UseMauiCommunityToolkit();
 
 
@@ -36,7 +37,7 @@ public static class MauiProgram
         builder.Services.AddSingleton<SignUp>();
         builder.Services.AddSingleton<AccountService>();
         builder.Services.AddSingleton<Search>();
-        builder.Services.AddSingleton<Upload>();
+        builder.Services.AddSingleton<Account>();
         builder.Services.AddSingleton<MotorEmpire>();
 
         return builder.Build();
