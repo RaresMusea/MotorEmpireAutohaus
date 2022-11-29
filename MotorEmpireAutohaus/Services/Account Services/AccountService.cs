@@ -68,9 +68,10 @@ namespace MotorEmpireAutohaus.Services.Account_Services
             }
             else
             {
+                UpdateLastSeenFor(user);
+                user = accounts[0];
                 CrossPlatformMessageRenderer.DisplayMobileSnackbar(
-                    $"Welcome back, {accounts.ElementAt(0).Name}! You are being redirected to the main application...",
-                    "", 5);
+                    $"Welcome back, {accounts.ElementAt(0).Name}!","Close", 5);
                 return true;
             }
         }
@@ -162,32 +163,12 @@ namespace MotorEmpireAutohaus.Services.Account_Services
 
         private void UpdateLastSeenFor(UserAccount user)
         {
-            MySqlCommand command = new($"UPDATE {TableReference} SET LastSeen=NOW() WHERE Name=@name",_databaseConfig.DatabaseConnection);
+            MySqlCommand command = new($"UPDATE {TableReference} SET LastSeen=NOW() WHERE EmailAddress=@email",_databaseConfig.DatabaseConnection);
             command.Prepare();
-            command.Parameters.AddWithValue("@uuid", user.Name);
+            command.Parameters.AddWithValue("@email", user.EmailAddress);
             command.ExecuteNonQuery();
         }
 
-        public bool SignOut(UserAccount user)
-        {
-            if(user is null)
-            {
-                CrossPlatformMessageRenderer.RenderMessages("Cannot sign out because of an internal server error! Try again!", "OK", 4);
-                return false;
-            }
-            else
-            {
-                try
-                {
-                    UpdateLastSeenFor(user);
-                    return true;
-                }
-                catch (MySqlException mySqlExc)
-                {
-                    CrossPlatformMessageRenderer.RenderMessages($"Cannot Sign you up!\n\n\n Details:{mySqlExc}", "Retry", 5);
-                    return false;
-                }
-            }
-        }
+       
     }
 }

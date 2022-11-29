@@ -107,12 +107,6 @@ namespace MotorEmpireAutohaus.View_Model.Account
                 }
             }
         }
-
-        [RelayCommand]
-        public void SignOut()
-        {
-            _accountService.SignOut(this);
-        }
     }
 }
 

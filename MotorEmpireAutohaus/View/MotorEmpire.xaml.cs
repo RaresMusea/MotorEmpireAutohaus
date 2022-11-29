@@ -25,7 +25,7 @@ public partial class MotorEmpire: ContentPage
 
         if (!DesktopView.IsVisible)
         {
-            jumbotronImageAnimation.IsAnimationPlaying = false;
+            jumbotronImageAnimation.IsAnimationPlaying=true;
             Animation parentAnimation = new()
             {
             {0,0.3,new Animation(v=>jumbotronImageAnimation.Opacity=v,0,1,Easing.CubicIn) },

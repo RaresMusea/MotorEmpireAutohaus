@@ -42,6 +42,12 @@
         <member name="P:MotorEmpireAutohaus.View_Model.Account.UserAccount.RegisterCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.View_Model.Account.UserAccount.Register"/>.</summary>
         </member>
+        <member name="F:MotorEmpireAutohaus.View_Model.Account.UserAccount.signOutCommand">
+            <summary>The backing field for <see cref="P:MotorEmpireAutohaus.View_Model.Account.UserAccount.SignOutCommand"/>.</summary>
+        </member>
+        <member name="P:MotorEmpireAutohaus.View_Model.Account.UserAccount.SignOutCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.View_Model.Account.UserAccount.SignOut"/>.</summary>
+        </member>
         <member name="P:MotorEmpireAutohaus.View_Model.Base.BaseViewModel.IsBusy">
             <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.Base.BaseViewModel.isBusy"/>
         </member>
