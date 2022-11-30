@@ -4,8 +4,9 @@ namespace MotorEmpireAutohaus.View;
 
 public partial class MotorEmpire: ContentPage
 {
-    public MotorEmpire()
+    public MotorEmpire(MotorEmpireViewModel motorEmpireViewModel)
     {
+        BindingContext = motorEmpireViewModel;
         InitializeComponent();
         StyleDependingOnOS();
     }
@@ -55,19 +56,28 @@ public partial class MotorEmpire: ContentPage
         if (DeviceInfo.Platform == DevicePlatform.WinUI)
         {
             secondaryFrame.WidthRequest = 600;
+
+            carFilterRow1.Orientation = StackOrientation.Horizontal;
+            carFilterRow2.Orientation = StackOrientation.Horizontal;
+            carTypePicker.WidthRequest = 200;
+            manufacturerPicker.WidthRequest = 200;
+            modelPicker.WidthRequest = 200;
             mobileView.IsVisible = false;
             DesktopView.IsVisible = true;
         }
 
-        if (DeviceInfo.Platform == DevicePlatform.Android || DeviceInfo.Platform==DevicePlatform.Android)
+        if (DeviceInfo.Platform == DevicePlatform.Android || DeviceInfo.Platform==DevicePlatform.iOS)
         {
+            carFilterRow1.Orientation = StackOrientation.Vertical;
+            carFilterRow2.Orientation= StackOrientation.Vertical;
+            carTypeHorizontalStack.Margin = new Thickness(0,0,0,15);
             secondaryFrame.WidthRequest = 400;
         }
     }
 
     private void DisplayCarFilters(object o, EventArgs e)
     {
-        CarFilters.IsVisible = true;
+        //CarFilters.IsVisible = true;
     }
 
     private async void OnTextChangedEvent(object o, EventArgs e)
@@ -98,6 +108,11 @@ public partial class MotorEmpire: ContentPage
     {
         primaryFrame.IsVisible = true;
         await primaryFrame.FadeTo(1, 170, Easing.BounceIn);
+    }
+
+    private void EnableModelFiltering(object o, EventArgs e)
+    {
+        modelPicker.IsEnabled= true;        
     }
 
 }

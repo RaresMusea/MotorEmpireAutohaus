@@ -6,6 +6,7 @@ using MotorEmpireAutohaus.View_Model.Account;
 using MotorEmpireAutohaus.View;
 using MotorEmpireAutohaus.View_Model;
 using MotorEmpireAutohaus.Misc.Common;
+using MotorEmpireAutohaus.Services.Feed;
 
 namespace MotorEmpireAutohaus;
 public static class MauiProgram
@@ -39,6 +40,8 @@ public static class MauiProgram
         builder.Services.AddSingleton<Search>();
         builder.Services.AddSingleton<Account>();
         builder.Services.AddSingleton<MotorEmpire>();
+        builder.Services.AddSingleton<MotorEmpireViewModel>();
+        builder.Services.AddSingleton<FeedService>();
         builder.Services.AddSingleton<AppShell>();
 
         return builder.Build();

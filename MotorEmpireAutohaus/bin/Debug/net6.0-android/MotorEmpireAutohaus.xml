@@ -42,12 +42,6 @@
         <member name="P:MotorEmpireAutohaus.View_Model.Account.UserAccount.RegisterCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.View_Model.Account.UserAccount.Register"/>.</summary>
         </member>
-        <member name="F:MotorEmpireAutohaus.View_Model.Account.UserAccount.signOutCommand">
-            <summary>The backing field for <see cref="P:MotorEmpireAutohaus.View_Model.Account.UserAccount.SignOutCommand"/>.</summary>
-        </member>
-        <member name="P:MotorEmpireAutohaus.View_Model.Account.UserAccount.SignOutCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.View_Model.Account.UserAccount.SignOut"/>.</summary>
-        </member>
         <member name="P:MotorEmpireAutohaus.View_Model.Base.BaseViewModel.IsBusy">
             <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.Base.BaseViewModel.isBusy"/>
         </member>
@@ -62,6 +56,30 @@
         </member>
         <member name="P:MotorEmpireAutohaus.View_Model.FeedViewModel.UpdateFileToFirebaseCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.View_Model.FeedViewModel.UpdateFileToFirebase"/>.</summary>
+        </member>
+        <member name="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.CarBodyType">
+            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.carBodyType"/>
+        </member>
+        <member name="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.Manufacturers">
+            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.manufacturers"/>
+        </member>
+        <member name="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.Models">
+            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.models"/>
+        </member>
+        <member name="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.SelectedCarBodyType">
+            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.selectedCarBodyType"/>
+        </member>
+        <member name="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.SelectedManufacturer">
+            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.selectedManufacturer"/>
+        </member>
+        <member name="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.UserHasSelectedManufacturer">
+            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.userHasSelectedManufacturer"/>
+        </member>
+        <member name="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.SelectedModel">
+            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.selectedModel"/>
+        </member>
+        <member name="M:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.OnSelectedManufacturerChanging(System.String)">
+            <summary>Executes the logic for when <see cref="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.SelectedManufacturer"/> is changing.</summary>
         </member>
         <member name="P:MotorEmpireAutohaus.ViewModel.Vehicles.Category.Category.Type">
             <inheritdoc cref="F:MotorEmpireAutohaus.ViewModel.Vehicles.Category.Category.type"/>
