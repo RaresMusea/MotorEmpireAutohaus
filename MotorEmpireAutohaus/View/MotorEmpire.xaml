@@ -294,7 +294,7 @@
                                     ></Label>
                                     <Picker HorizontalTextAlignment="Center"
                                             x:Name="manufacturerPicker"
-                                        SelectedIndex="0"
+                                        SelectedIndex="{Binding SelectedManufacturerIndex}"
                                         BackgroundColor="{AppThemeBinding Dark=#252525, Light=#434242}"
                                         TextColor="White"
                                         FontAttributes="Bold"
@@ -321,6 +321,7 @@
                                         Margin="0,10,0,0"
                                         ItemsSource="{Binding Models}"
                                         SelectedItem="{Binding SelectedModel}"/>
+                                    <Label Text="{Binding SelectedManufacturer}"/>
                                 </VerticalStackLayout>
                             </StackLayout>
                         </VerticalStackLayout>

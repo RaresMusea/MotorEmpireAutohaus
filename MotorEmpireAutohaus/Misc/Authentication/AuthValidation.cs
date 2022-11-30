@@ -111,7 +111,7 @@ namespace MotorEmpireAutohaus.Misc.Authentication
                 }
                 case OperationType.SymbolCheck:
                 {
-                    return (charToVerify=='@' || charToVerify=='$' || charToVerify=='^'||charToVerify=='&'||charToVerify=='*'||charToVerify=='('||charToVerify==')');
+                    return (charToVerify=='@' || charToVerify=='$' || charToVerify=='^'||charToVerify=='&'||charToVerify=='*'||charToVerify=='('||charToVerify==')' || charToVerify=='_');
                 }
 
             }

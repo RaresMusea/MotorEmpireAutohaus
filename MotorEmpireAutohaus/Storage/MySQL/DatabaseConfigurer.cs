@@ -16,7 +16,7 @@ namespace MotorEmpireAutohaus.Storage.MySQL
         {
             ConnectionOpen = false;
             _connectionString =
-                @"server=34.116.147.48;userid=root;password=motorempireautohaus;database=motor-empire;SSL Mode=None";
+                @"server=192.168.100.34;userid=root;password=password;database=motor_empire_autohaus_database;SSL Mode=None;";
             EstablishConnection();
         }
 

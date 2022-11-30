@@ -10,7 +10,6 @@ namespace MotorEmpireAutohaus.View_Model
     {
         private readonly FeedService feedService;
 
-
         [ObservableProperty]
         private List<string> carBodyType;
 
@@ -27,11 +26,13 @@ namespace MotorEmpireAutohaus.View_Model
         private string selectedManufacturer="Abarth";
 
         [ObservableProperty]
+        private int selectedManufacturerIndex;
+
+        [ObservableProperty]
         private bool userHasSelectedManufacturer=false;
 
         [ObservableProperty]
         private string selectedModel;
-
 
 
         public MotorEmpireViewModel(FeedService feedService)
@@ -39,7 +40,7 @@ namespace MotorEmpireAutohaus.View_Model
             this.feedService = feedService;
             RetrieveCarBodyTypes();
             RetrieveAllManufacturers();
-            models = new();
+            models = feedService.GetAllModelsFromManufacturer(selectedManufacturer);
         }
 
         private void RetrieveCarBodyTypes()
@@ -63,7 +64,11 @@ namespace MotorEmpireAutohaus.View_Model
         partial void OnSelectedManufacturerChanged(string value)
         {
             Models = feedService.GetAllModelsFromManufacturer(selectedManufacturer);
-            
+        }
+
+        partial void OnSelectedManufacturerIndexChanged(int value)
+        {
+            Models = feedService.GetAllModelsFromManufacturer(manufacturers[value]);
         }
 
 

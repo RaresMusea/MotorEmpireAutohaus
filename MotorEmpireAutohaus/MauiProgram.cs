@@ -13,6 +13,7 @@ public static class MauiProgram
 {
     public static MauiApp CreateMauiApp()
     {
+
         var builder = MauiApp.CreateBuilder();
         builder.UseMauiApp<App>().ConfigureFonts(fonts =>
         {
@@ -25,11 +26,13 @@ public static class MauiProgram
         }).UseMauiCommunityToolkit();
 
 
+
         //builder.Services.AddSingleton<AccountService>();
-      /*  builder.Services.AddSingleton<UserAccount>();
-        builder.Services.AddSingleton<LogIn>();
-        builder.Services.AddSingleton<SignUp>();
-        builder.Services.AddSingleton<MainPage>()*/;
+        /*  builder.Services.AddSingleton<UserAccount>();
+          builder.Services.AddSingleton<LogIn>();
+          builder.Services.AddSingleton<SignUp>();
+          builder.Services.AddSingleton<MainPage>()*/
+        ;
         //builder.Services.AddSingleton<AuthValidation>();
 
         builder.Services.AddSingleton<LogIn>();
