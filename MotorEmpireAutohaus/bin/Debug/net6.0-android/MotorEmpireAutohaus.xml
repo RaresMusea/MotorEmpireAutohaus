@@ -75,17 +75,32 @@
         <member name="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.SelectedManufacturerIndex">
             <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.selectedManufacturerIndex"/>
         </member>
-        <member name="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.UserHasSelectedManufacturer">
-            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.userHasSelectedManufacturer"/>
+        <member name="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.ModelHasGenerations">
+            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.modelHasGenerations"/>
         </member>
         <member name="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.SelectedModel">
             <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.selectedModel"/>
+        </member>
+        <member name="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.SelectedModelIndex">
+            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.selectedModelIndex"/>
+        </member>
+        <member name="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.Generations">
+            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.generations"/>
+        </member>
+        <member name="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.SelectedGeneration">
+            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.selectedGeneration"/>
         </member>
         <member name="M:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.OnSelectedManufacturerChanged(System.String)">
             <summary>Executes the logic for when <see cref="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.SelectedManufacturer"/> just changed.</summary>
         </member>
         <member name="M:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.OnSelectedManufacturerIndexChanged(System.Int32)">
             <summary>Executes the logic for when <see cref="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.SelectedManufacturerIndex"/> just changed.</summary>
+        </member>
+        <member name="M:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.OnSelectedModelChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.SelectedModel"/> just changed.</summary>
+        </member>
+        <member name="M:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.OnSelectedModelIndexChanged(System.Int32)">
+            <summary>Executes the logic for when <see cref="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.SelectedModelIndex"/> just changed.</summary>
         </member>
         <member name="P:MotorEmpireAutohaus.ViewModel.Vehicles.Category.Category.Type">
             <inheritdoc cref="F:MotorEmpireAutohaus.ViewModel.Vehicles.Category.Category.type"/>

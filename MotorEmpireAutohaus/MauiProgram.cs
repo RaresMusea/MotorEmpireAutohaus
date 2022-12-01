@@ -44,7 +44,7 @@ public static class MauiProgram
         builder.Services.AddSingleton<Account>();
         builder.Services.AddSingleton<MotorEmpire>();
         builder.Services.AddSingleton<MotorEmpireViewModel>();
-        builder.Services.AddSingleton<FeedService>();
+        builder.Services.AddSingleton<CarFilterService>();
         builder.Services.AddSingleton<AppShell>();
 
         return builder.Build();

@@ -15,5 +15,11 @@ namespace MotorEmpireAutohaus.Services.Feed_Services.Filters
         public List<string> GetAllModelsFromManufacturer(string manufacturer);
 
         public List<string> GetManufacturers();
+
+        public int GetModelIdByName(string modelName);
+
+        public List<string> GetGenerationBasedOnModel(string modelName);
+
+
     }
 }

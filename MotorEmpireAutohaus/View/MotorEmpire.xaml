@@ -178,98 +178,104 @@
                            x:Name="secondaryFrame"
                         >
                         <VerticalStackLayout>
-                        <Frame CornerRadius="35" BackgroundColor="{AppThemeBinding Dark=#404040,Light=#EEF2E6}">
-                            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Always">
-                                <VerticalStackLayout>
-                                    <HorizontalStackLayout>
-                                        <VerticalStackLayout Margin="10" BackgroundColor="{AppThemeBinding Dark=#313131, Light=Grey}" Padding="10">
-                                            <Image Source="car.png"
+                            <Frame CornerRadius="35" BackgroundColor="{AppThemeBinding Dark=#404040,Light=#EEF2E6}">
+                                <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Always">
+                                    <VerticalStackLayout>
+                                        <HorizontalStackLayout>
+                                            <VerticalStackLayout Margin="10"
+                                                                 BackgroundColor="Transparent" 
+                                                                 Padding="10"
+                                                                 x:Name="toggleCarFilters"
+                                                                 >
+
+                                                <Image Source="car.png"
                                            WidthRequest="40"
                                            HeightRequest="40"/>
-                                            <Label Text="Cars"
+                                                <Label Text="Cars"
                                            HorizontalOptions="Center"
                                            FontAttributes="Bold"
                                 />
-                                            <VerticalStackLayout.GestureRecognizers>
-                                                <TapGestureRecognizer Tapped="DisplayCarFilters"></TapGestureRecognizer>
-                                            </VerticalStackLayout.GestureRecognizers>
-                                        </VerticalStackLayout>
-                                        <VerticalStackLayout Margin="10" Padding="10">
-                                            <Image Source="van.png"
+                                                <VerticalStackLayout.GestureRecognizers>
+                                                    <TapGestureRecognizer Tapped="DisplayCarFilters"></TapGestureRecognizer>
+                                                </VerticalStackLayout.GestureRecognizers>
+                                            </VerticalStackLayout>
+                                            <VerticalStackLayout Margin="10" Padding="10">
+                                                <Image Source="van.png"
                                            WidthRequest="40"
                                            HeightRequest="40"
                                            HorizontalOptions="Start"/>
-                                            <Label Text="Vans"
+                                                <Label Text="Vans"
                                            HorizontalOptions="Center"
                                 />
 
-                                        </VerticalStackLayout>
-                                        <VerticalStackLayout Margin="10" Padding="10">
-                                            <Image Source="truck.png"
+                                            </VerticalStackLayout>
+                                            <VerticalStackLayout Margin="10" Padding="10">
+                                                <Image Source="truck.png"
                                            WidthRequest="40"
                                            HeightRequest="40"
                                            HorizontalOptions="Center"/>
-                                            <Label Text="Trucks"
+                                                <Label Text="Trucks"
                                            HorizontalOptions="Center"
                                 />
 
-                                        </VerticalStackLayout>
-                                        <VerticalStackLayout Margin="10" Padding="10">
-                                            <Image Source="tractor.png"
+                                            </VerticalStackLayout>
+                                            <VerticalStackLayout Margin="10" Padding="10">
+                                                <Image Source="tractor.png"
                                            WidthRequest="40"
                                            HeightRequest="40"
                                            HorizontalOptions="Center"/>
-                                            <Label Text="Agro"
+                                                <Label Text="Agro"
                                            HorizontalOptions="Center"
                                 />
 
-                                        </VerticalStackLayout>
-                                        <VerticalStackLayout Margin="10" Padding="10">
-                                            <Image Source="constructiontruck.png"
+                                            </VerticalStackLayout>
+                                            <VerticalStackLayout Margin="10" Padding="10">
+                                                <Image Source="constructiontruck.png"
                                            WidthRequest="40"
                                            HeightRequest="40"
                                            HorizontalOptions="Center"/>
-                                            <Label Text="Building Vehicles"
+                                                <Label Text="Building Vehicles"
                                            HorizontalOptions="Center"
                                 />
 
-                                        </VerticalStackLayout>
-                                        <VerticalStackLayout Margin="10" Padding="10">
-                                            <Image Source="moto.png"
+                                            </VerticalStackLayout>
+                                            <VerticalStackLayout Margin="10" Padding="10">
+                                                <Image Source="moto.png"
                                            WidthRequest="40"
                                            HeightRequest="40"
                                            HorizontalOptions="Center"/>
-                                            <Label Text="Motorbikes"
+                                                <Label Text="Motorbikes"
                                            HorizontalOptions="Center"
                                 />
 
-                                        </VerticalStackLayout>
-                                        <VerticalStackLayout Margin="10" Padding="10">
-                                            <Image Source="trailer.png"
+                                            </VerticalStackLayout>
+                                            <VerticalStackLayout Margin="10" Padding="10">
+                                                <Image Source="trailer.png"
                                            WidthRequest="40"
                                            HeightRequest="40"
                                            HorizontalOptions="Center"/>
-                                            <Label Text="Trailers"
+                                                <Label Text="Trailers"
                                            HorizontalOptions="Center"
                                 />
 
-                                        </VerticalStackLayout>
-                                        <VerticalStackLayout Margin="10" Padding="10">
-                                            <Image Source="brakedisc.png"
+                                            </VerticalStackLayout>
+                                            <VerticalStackLayout Margin="10" Padding="10">
+                                                <Image Source="brakedisc.png"
                                            WidthRequest="40"
                                            HeightRequest="40"
                                            HorizontalOptions="Center"/>
-                                            <Label Text="Vehicle Parts"
+                                                <Label Text="Vehicle Parts"
                                            HorizontalOptions="Center"
                                 />
 
-                                        </VerticalStackLayout>
-                                    </HorizontalStackLayout>
-                                </VerticalStackLayout>
-                            </ScrollView>
-                        </Frame>
+                                            </VerticalStackLayout>
+                                        </HorizontalStackLayout>
+                                    </VerticalStackLayout>
+                                </ScrollView>
+                            </Frame>
+                            <VerticalStackLayout x:Name="carFiltersForm" IsVisible="False">
                             <StackLayout Margin="20" x:Name="carFilterRow1">
-                                <VerticalStackLayout Margin="0,0,120,0" x:Name="carTypeHorizontalStack">
+                                <VerticalStackLayout Margin="0,0,120,0" x:Name="verticalStack1">
                                     <Label Text="Body Type"
                                        FontSize="16"
                                        FontAttributes="Bold"
@@ -281,7 +287,8 @@
                                             BackgroundColor="{AppThemeBinding Dark=#252525, Light=#434242}"
                                             TextColor="White"
                                             FontAttributes="Bold"
-                                            FontFamily="Roboto"
+                                            FontFamily="Kollektif"
+                                            Title="Select a car body type"
                                             Margin="0,10,0,0"
                                             ItemsSource="{Binding CarBodyType}"
                                             SelectedItem="{Binding SelectedCarBodyType}"/>
@@ -298,32 +305,85 @@
                                         BackgroundColor="{AppThemeBinding Dark=#252525, Light=#434242}"
                                         TextColor="White"
                                         FontAttributes="Bold"
-                                        FontFamily="Roboto"
+                                        FontFamily="Kollektif"
                                         Margin="0,10,0,0"
+                                        Title="Select a manufacturer"
                                         ItemsSource="{Binding Manufacturers}"
                                         SelectedItem="{Binding SelectedManufacturer}"/>
                                 </VerticalStackLayout>
                             </StackLayout>
-                            <StackLayout Margin="20"  x:Name="carFilterRow2">
-                            <VerticalStackLayout>
-                                    <Label Text="Model"
+                                <StackLayout Margin="20"  x:Name="carFilterRow2">
+                                    <VerticalStackLayout Margin="0,0,120,0" x:Name="verticalStack2">
+                                        <Label Text="Model"
                                        FontSize="16"
                                        FontAttributes="Bold"
                                        FontFamily="Kollektif"
                                     ></Label>
-                                  
-                            <Picker HorizontalTextAlignment="Center"
+                                        <Picker HorizontalTextAlignment="Center"
                                             x:Name="modelPicker"
                                         BackgroundColor="{AppThemeBinding Dark=#252525, Light=#434242}"
                                         TextColor="White"
                                         FontAttributes="Bold"
-                                        FontFamily="Roboto"
+                                        FontFamily="Kollektif"
                                         Margin="0,10,0,0"
+                                        Title="Select a model"
+                                        SelectedIndex="{Binding SelectedModelIndex}"
                                         ItemsSource="{Binding Models}"
                                         SelectedItem="{Binding SelectedModel}"/>
-                                    <Label Text="{Binding SelectedManufacturer}"/>
+                                    </VerticalStackLayout>
+                                    <VerticalStackLayout>
+                                        <Label Text="Generation"
+                                       FontSize="16"
+                                       FontAttributes="Bold"
+                                       FontFamily="Kollektif"
+                                    ></Label>
+                                        <Picker HorizontalTextAlignment="Center"
+                                            x:Name="generationPicker"
+                                            Title="Select a generation"
+                                            BackgroundColor="{AppThemeBinding Dark=#252525, Light=#434242}"
+                                            TextColor="White"
+                                            FontAttributes="Bold"
+                                            FontFamily="Kollektif"
+                                            Margin="0,10,0,0"
+                                            IsEnabled="{Binding ModelHasGenerations}"
+                                            SelectedIndex="0"
+                                            ItemsSource="{Binding Generations}"
+                                            SelectedItem="{Binding SelectedGeneration}"/>
+                                    </VerticalStackLayout>
+                                </StackLayout>
+                                <VerticalStackLayout Margin="20" x:Name="carFilterRow3">
+                                    <Label Text="Price"
+                                       FontSize="16"
+                                       HorizontalTextAlignment="Start"
+                                       FontAttributes="Bold"
+                                       FontFamily="Kollektif"/>
+                                    <HorizontalStackLayout>
+                                    <Picker HorizontalTextAlignment="Center"
+                                            
+                                                x:Name="lowerPricePicker"
+                                                Title="From"
+                                                BackgroundColor="{AppThemeBinding Dark=#252525, Light=#434242}"
+                                                TextColor="White"
+                                                FontAttributes="Bold"
+                                                FontFamily="Kollektif"
+                                                Margin="0,10,8,0"
+                                                ItemsSource="{Binding LowerPriceBound}"
+                                                SelectedItem="{Binding SelectedLowerPriceBound}"
+                                                SelectedIndex="{Binding SelectedLowerPriceIndex}"/>
+                                        <Picker HorizontalTextAlignment="Center"
+                                                x:Name="upperPricePicker"
+                                                Title="To"
+                                                BackgroundColor="{AppThemeBinding Dark=#252525, Light=#434242}"
+                                                TextColor="White"
+                                                FontAttributes="Bold"
+                                                FontFamily="Kollektif"
+                                                Margin="0,10,0,0"
+                                                ItemsSource="{Binding UpperPriceBound}"
+                                                SelectedItem="{Binding SelectedUpperPriceBound}"/>
+
+                                    </HorizontalStackLayout>
                                 </VerticalStackLayout>
-                            </StackLayout>
+                            </VerticalStackLayout>
                         </VerticalStackLayout>
                     </Frame>
                 

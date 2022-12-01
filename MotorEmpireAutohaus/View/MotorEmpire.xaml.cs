@@ -62,6 +62,7 @@ public partial class MotorEmpire: ContentPage
             carTypePicker.WidthRequest = 200;
             manufacturerPicker.WidthRequest = 200;
             modelPicker.WidthRequest = 200;
+            generationPicker.WidthRequest = 200;
             mobileView.IsVisible = false;
             DesktopView.IsVisible = true;
         }
@@ -70,14 +71,29 @@ public partial class MotorEmpire: ContentPage
         {
             carFilterRow1.Orientation = StackOrientation.Vertical;
             carFilterRow2.Orientation= StackOrientation.Vertical;
-            carTypeHorizontalStack.Margin = new Thickness(0,0,0,15);
+            verticalStack1.Margin = new Thickness(0,0,0,15);
+            verticalStack2.Margin = new Thickness(0, 0, 0, 15);
             secondaryFrame.WidthRequest = 400;
         }
     }
 
     private void DisplayCarFilters(object o, EventArgs e)
     {
-        //CarFilters.IsVisible = true;
+        carFiltersForm.Opacity = 0;
+        //{AppThemeBinding Dark=#313131, Light=Grey}
+        if (Application.Current.RequestedTheme == AppTheme.Dark)
+        {
+            toggleCarFilters.BackgroundColor = Color.FromArgb("#313131");
+
+        }
+        if (Application.Current.RequestedTheme == AppTheme.Light)
+        {
+            toggleCarFilters.BackgroundColor = Colors.Grey;
+        }
+
+        carFiltersForm.IsVisible = true;
+        carFiltersForm.FadeTo(1, 200, Easing.CubicIn);
+        
     }
 
     private async void OnTextChangedEvent(object o, EventArgs e)

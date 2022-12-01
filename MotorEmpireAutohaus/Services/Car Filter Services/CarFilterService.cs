@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace MotorEmpireAutohaus.Services.Feed
 {
-    public class FeedService:ICarFilter
+    public class CarFilterService:ICarFilter
     {
         private DatabaseConfigurer _databaseConfigurer;
 
-        public FeedService()
+        public CarFilterService()
         {
             _databaseConfigurer= new DatabaseConfigurer();
             _databaseConfigurer.OpenConnection();
@@ -79,6 +79,41 @@ namespace MotorEmpireAutohaus.Services.Feed
             command.Prepare();
             command.Parameters.AddWithValue("@id", manufacturerId);
             MySqlDataReader reader=command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                result.Add(reader.GetString(0));
+            }
+
+            reader.Close();
+            return result;
+        }
+
+        public int GetModelIdByName(string modelName)
+        {
+            MySqlCommand command = new("SELECT ID FROM Model WHERE ModelName=@modelname",_databaseConfigurer.DatabaseConnection);
+            command.Prepare();
+            command.Parameters.AddWithValue("@modelname", modelName);
+            int id = -1;
+
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                id = reader.GetInt32(0);
+            }
+
+            reader.Close();
+            return id;
+        }
+
+        public List<string> GetGenerationBasedOnModel(string modelName)
+        {
+            int identifier = GetModelIdByName(modelName);
+            List<string> result = new();
+            MySqlCommand command = new("SELECT Generation FROM ModelGeneration WHERE ModelID=@identifier", _databaseConfigurer.DatabaseConnection);
+            command.Prepare();
+            command.Parameters.AddWithValue("@identifier", identifier);
+            MySqlDataReader reader = command.ExecuteReader();
 
             while (reader.Read())
             {
