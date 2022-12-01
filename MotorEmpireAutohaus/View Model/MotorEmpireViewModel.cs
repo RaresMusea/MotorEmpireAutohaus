@@ -9,7 +9,7 @@ using System.Text;
 
 namespace MotorEmpireAutohaus.View_Model
 {
-    public partial class MotorEmpireViewModel:BaseViewModel
+    public partial class MotorEmpireViewModel : BaseViewModel
     {
         private readonly CarFilterService carFilterService;
 
@@ -26,13 +26,13 @@ namespace MotorEmpireAutohaus.View_Model
         private string selectedCarBodyType;
 
         [ObservableProperty]
-        private string selectedManufacturer="Abarth";
+        private string selectedManufacturer = "Abarth";
 
         [ObservableProperty]
         private int selectedManufacturerIndex;
 
         [ObservableProperty]
-        private bool modelHasGenerations=false;
+        private bool modelHasGenerations = false;
 
         [ObservableProperty]
         private string selectedModel;
@@ -57,18 +57,32 @@ namespace MotorEmpireAutohaus.View_Model
         private List<int> upperPrice;
 
         [ObservableProperty]
-        private string selectedLowerPriceBound= "1 000 €";
+        private string selectedLowerPriceBound;
 
         [ObservableProperty]
         private int selectedLowerPriceIndex;
 
-        private int lowerBound;
+        private int lowerBound=1000;
 
         [ObservableProperty]
-        private string selectedUpperPriceBound= "1 500 €";
+        private string selectedUpperPriceBound;
 
-        private int upperBound;
+        [ObservableProperty]
+        private int selectedUpperPriceIndex;
 
+        private int upperBound=100000;
+
+        [ObservableProperty]
+        private List<int> lowerYear;
+
+        [ObservableProperty]
+        private int selectedLowerYear=2000;
+
+        [ObservableProperty]
+        private List<int> upperYear;
+
+        [ObservableProperty]
+        private int selectedUpperYear=2022;
 
 
 
@@ -84,15 +98,19 @@ namespace MotorEmpireAutohaus.View_Model
                 ModelHasGenerations = true;
             }
             InitializePriceBounds(FormatPrice);
+            LowerYear = InitializeYears(2021, 2000);
+            LowerYear = LowerYear.OrderBy(x => x).ToList();
+            UpperYear = InitializeYears(2022, 2001);
         }
 
-        private void InitializePriceBounds(Func<int,string>formatter)
+        private void InitializePriceBounds(Func<int, string> formatter)
         {
-            lowerPrice = new(){1000,1500,2000,2500,3000,3500,4000,4500,5000,5500,6000,6500,7000,7500,8000,8500,9000,9500,10000,15000,20000,25000,30000,35000,40000,45000,50000,55000,60000,65000,70000,75000,80000,85000,90000,95000};
-            upperPrice = new() { 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000, 95000 };
+            lowerPrice = new() { 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000, 95000 };
+            upperPrice = new() { 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000, 95000,100000};
+            upperPrice = upperPrice.OrderByDescending(i => i).ToList();
             lowerPriceBound = new();
             upperPriceBound = new();
-            lowerPrice.ForEach(price=>lowerPriceBound.Add(formatter(price)));
+            lowerPrice.ForEach(price => lowerPriceBound.Add(formatter(price)));
             upperPrice.ForEach(price => upperPriceBound.Add(formatter(price)));
         }
 
@@ -112,11 +130,26 @@ namespace MotorEmpireAutohaus.View_Model
             {
                 formatted.Append(casted[0]);
                 formatted.Append(casted[1]);
+                if (casted.Length == 6)
+                    formatted.Append(casted[2]);
                 formatted.Append(' ');
-                formatted.Append(casted.Substring(2));
+                formatted.Append(casted.Length==6?casted.Substring(3):casted.Substring(2));
             }
             formatted.Append($" {currency}");
             return formatted.ToString();
+        };
+
+        Func<int,int,List<int>> InitializeYears = (start,end) =>
+        {
+            List<int> result = new();
+
+            int current = start;
+            while(current>=end)
+            {
+                result.Add(current);
+                current--;
+            }
+            return result;
         };
 
         private void RetrieveCarBodyTypes()
@@ -169,28 +202,52 @@ namespace MotorEmpireAutohaus.View_Model
         }
 
 
-        partial void OnSelectedLowerPriceBoundChanged(string value)
+        Action<int, int, UpperLowerFilter> CompareValuesAndGenerateErrorsIfExisting = (lower, upper, option) =>
         {
-            lowerBound = lowerPrice[LowerPriceBound.IndexOf(value)];
+
+            if (lower > upper)
+            {
+                CrossPlatformMessageRenderer.RenderMessages($"The lower {option.ToString().ToLower()} bound cannot be greater than the upper one!", "Retry", 4);
+            }
+            if (lower == upper)
+            {
+                CrossPlatformMessageRenderer.RenderMessages($"The {option.ToString().ToLower()} bounds cannot be equal!", "Retry", 4);
+            }
+        };
+
+        partial void OnSelectedLowerPriceIndexChanged(int value)
+        {
+            lowerBound = lowerPrice[value];
+            CompareValuesAndGenerateErrorsIfExisting(lowerBound, upperBound, UpperLowerFilter.Price);
         }
 
-        partial void OnSelectedUpperPriceBoundChanged(string value)
+        partial void OnSelectedUpperPriceIndexChanged(int value)
         {
-            upperBound = upperPrice[UpperPriceBound.IndexOf(value)];
-            if (lowerBound > upperBound && upperBound != 0)
-            {
-                CrossPlatformMessageRenderer.RenderMessages("Cannot set a lower price bound that is greater than the upper price bound!", "Retry", 5);
-                SelectedLowerPriceBound = "1 000 €";
-                SelectedUpperPriceBound = "1 500 €";
-            }
-            if (lowerBound == upperBound && upperBound != 0)
-            {
-                CrossPlatformMessageRenderer.RenderMessages("The price bounds cannot be equal!", "Retry", 4);
-                SelectedLowerPriceBound = "1 000 €";
-                SelectedUpperPriceBound = "1 500 €";
-            }
+            upperBound = upperPrice[value];
+            CompareValuesAndGenerateErrorsIfExisting(lowerBound, upperBound, UpperLowerFilter.Price);
         }
 
 
+        /*        partial void OnSelectedUpperPriceBoundChanged(string value)
+                {
+                    upperBound = upperPrice[UpperPriceBound.IndexOf(value)];
+
+                }*/
+
+
+        partial void OnSelectedLowerYearChanged(int value)
+        {
+            CompareValuesAndGenerateErrorsIfExisting(SelectedLowerYear, SelectedUpperYear, UpperLowerFilter.Year);
+            SelectedLowerYear = 2021;
+            SelectedUpperYear = 2022;
+        }
+
+        partial void OnSelectedUpperYearChanged(int value)
+        {
+            CompareValuesAndGenerateErrorsIfExisting(SelectedLowerYear, SelectedUpperYear, UpperLowerFilter.Year);
+            SelectedLowerYear = 2021;
+            SelectedUpperYear = 2022;
+        }
     }
 }
+

@@ -73,6 +73,11 @@ public partial class MotorEmpire: ContentPage
             carFilterRow2.Orientation= StackOrientation.Vertical;
             verticalStack1.Margin = new Thickness(0,0,0,15);
             verticalStack2.Margin = new Thickness(0, 0, 0, 15);
+            upperPricePicker.Margin = new Thickness(0, 10, 30, 0);
+            lowerPricePicker.WidthRequest = 70;
+            upperPricePicker.WidthRequest= 70;
+            lowerYear.WidthRequest = 70;
+            upperYear.WidthRequest = 70;
             secondaryFrame.WidthRequest = 400;
         }
     }

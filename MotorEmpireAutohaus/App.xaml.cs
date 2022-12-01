@@ -44,4 +44,14 @@ public partial class App : Application,IStatusBarAppearance
         });
 
     }
+
+    protected override Window CreateWindow(IActivationState activationState)
+    {
+        var window= base.CreateWindow(activationState);
+        if(window is not null)
+        {
+            window.Title = "Motor Empire Autohaus";
+        }
+        return window;
+    }
 }
