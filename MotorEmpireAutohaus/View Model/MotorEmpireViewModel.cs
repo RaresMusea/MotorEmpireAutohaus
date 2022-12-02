@@ -17,7 +17,10 @@ namespace MotorEmpireAutohaus.View_Model
     public partial class MotorEmpireViewModel : BaseViewModel
     {
         [ObservableProperty]
+        [NotifyPropertyChangedFor (nameof(GreetingMessage))]
         private string name;
+
+        public string GreetingMessage => $"Hello, {name}"; 
 
         [ObservableProperty]
         private Car car;

@@ -42,6 +42,7 @@ public partial class MotorEmpire: ContentPage
             Animation parentAnimation = new()
             {
                 {0,0.4, new Animation(v=>jumbotronImage.Opacity=v,0,1,Easing.CubicIn)},
+               // {0.2,0.5,new Animation(v=>desktopGreeting.Opacity=v,0,1,Easing.CubicIn)},
                 {0.1,0.3, new Animation (v=>titleText.Opacity=v,0,1,Easing.CubicIn) },
                 {0.3,0.6, new Animation (v=>SearchFrame.Opacity=v,0,1,Easing.CubicIn) },
                 {0.2,0.8, new Animation (v=>primaryFrame.Opacity=v,0,1,Easing.CubicIn)},
@@ -148,4 +149,13 @@ public partial class MotorEmpire: ContentPage
         modelPicker.IsEnabled= true;        
     }
 
+    private async void CloseCarFilters(object o, EventArgs e)
+    {
+
+        await carFiltersForm.FadeTo(0, 150, Easing.CubicIn);
+        carFiltersForm.IsVisible = false;
+        await Task.Delay(1000);
+        await primaryFrame.FadeTo(0, 150, Easing.CubicIn);
+        primaryFrame.IsVisible = false;
+    }
 }

@@ -17,9 +17,16 @@
                            Aspect="AspectFill"
                                HeightRequest="800"
                                WidthRequest="1900"/>
+                        <Label AbsoluteLayout.LayoutBounds="575,100,700,250"
+                               Text="{Binding GreetingMessage}"
+                               FontAttributes="Bold"
+                               FontSize="36"
+                               FontFamily="Roboto"
+                               Margin="25"
+                               VerticalTextAlignment="Center"/>
                         <Label
                             
-            AbsoluteLayout.LayoutBounds="430,120,710,300"
+            AbsoluteLayout.LayoutBounds="445,120,710,300"
             Text="What would you like to search for today?"
             FontAttributes="Bold"
             HorizontalOptions="Start"
@@ -29,7 +36,7 @@
             VerticalOptions="Center"
              />
 
-                    <Frame x:Name="SearchFrame"
+                        <Frame x:Name="SearchFrame"
                    BackgroundColor="White"
                    WidthRequest="300"
                    AbsoluteLayout.LayoutBounds="100,360,830,100"
@@ -53,6 +60,16 @@
                            VerticalOptions="Center"/>
                         </HorizontalStackLayout>
                     </Frame>
+                        
+                        <Button AbsoluteLayout.LayoutBounds="100,510,1320,100"
+                                Text="Post an ad"
+                                WidthRequest="180"
+                                HeightRequest="60"
+                                BackgroundColor="{AppThemeBinding Dark=#273851, Light=#346751}"
+                                TextColor="White"
+                                FontFamily="Kollektif"
+                                FontSize="16"
+                                />
                         <Button AbsoluteLayout.LayoutBounds="100,430,1320,100"
                                 Text="Or View Categores"
                                 WidthRequest="200" 
@@ -478,6 +495,7 @@
                                             Margin="4"
                                             WidthRequest="130"
                                             FontFamily="Kollektif"
+                                            Clicked="CloseCarFilters"
                                             />
                                     <Label HorizontalOptions="Center" Text="{Binding Name }"/>
                                 </VerticalStackLayout>
