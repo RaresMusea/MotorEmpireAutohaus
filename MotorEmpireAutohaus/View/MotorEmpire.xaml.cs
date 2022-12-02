@@ -63,6 +63,13 @@ public partial class MotorEmpire: ContentPage
             manufacturerPicker.WidthRequest = 200;
             modelPicker.WidthRequest = 200;
             generationPicker.WidthRequest = 200;
+            lowerPricePicker.WidthRequest = 100;
+            upperPricePicker.WidthRequest = 100;
+            upperYear.WidthRequest = 100;
+            lowerYear.WidthRequest = 100;
+            upperMileagePicker.WidthRequest = 130;
+            lowerMileagePicker.WidthRequest = 130;
+            fuelTypePicker.WidthRequest = 200;
             mobileView.IsVisible = false;
             DesktopView.IsVisible = true;
         }

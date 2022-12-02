@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using MotorEmpireAutohaus.Misc.Common;
 using MotorEmpireAutohaus.Services.Feed;
 using MotorEmpireAutohaus.View_Model.Base;
@@ -103,14 +104,22 @@ namespace MotorEmpireAutohaus.View_Model
         [ObservableProperty]
         private string selectedMaxMileage;
 
-        private int lowerMileage;
-        private int upperMileage;
+        private int lowerMileage=500;
+        private int upperMileage=300000;
+
 
 
 
         public MotorEmpireViewModel(CarFilterService carFilterService)
         {
+            
             this.carFilterService = carFilterService;
+            InitializeProps();
+        }
+
+
+        private void InitializeProps()
+        {
             RetrieveCarBodyTypes();
             RetrieveAllManufacturers();
             models = carFilterService.GetAllModelsFromManufacturer(selectedManufacturer);
@@ -250,6 +259,7 @@ namespace MotorEmpireAutohaus.View_Model
         {
             Generations = carFilterService.GetGenerationBasedOnModel(value);
             ModelHasGenerations = Generations.Count != 0;
+         
         }
 
         partial void OnSelectedModelIndexChanged(int value)
@@ -276,6 +286,7 @@ namespace MotorEmpireAutohaus.View_Model
         {
             lowerBound = lowerPrice[value];
             CompareValuesAndGenerateErrorsIfExisting(lowerBound, upperBound, UpperLowerFilter.Price);
+            
         }
 
         partial void OnSelectedUpperPriceIndexChanged(int value)
@@ -295,16 +306,32 @@ namespace MotorEmpireAutohaus.View_Model
         partial void OnSelectedLowerYearChanged(int value)
         {
             CompareValuesAndGenerateErrorsIfExisting(SelectedLowerYear, SelectedUpperYear, UpperLowerFilter.Year);
-            SelectedLowerYear = 2021;
-            SelectedUpperYear = 2022;
+/*          SelectedLowerYear = 2021;
+            SelectedUpperYear = 2022;*/
+            
         }
 
         partial void OnSelectedUpperYearChanged(int value)
         {
             CompareValuesAndGenerateErrorsIfExisting(SelectedLowerYear, SelectedUpperYear, UpperLowerFilter.Year);
-            SelectedLowerYear = 2021;
-            SelectedUpperYear = 2022;
+            /*            SelectedLowerYear = 2021;
+                        SelectedUpperYear = 2022;*/
+            
         }
+
+        partial void OnSelectedMinMileageChanged(string value)
+        {
+            lowerMileage = minMileage[MinMileageBounds.IndexOf(value)];
+            CompareValuesAndGenerateErrorsIfExisting(lowerMileage, upperMileage, UpperLowerFilter.Mileage);
+        }
+
+        partial void OnSelectedMaxMileageChanged(string value)
+        {
+            upperMileage = maxMileage[MaxMileageBounds.IndexOf(value)];
+            CompareValuesAndGenerateErrorsIfExisting(lowerMileage, upperMileage, UpperLowerFilter.Mileage);
+        }
+
+        
     }
 }
 

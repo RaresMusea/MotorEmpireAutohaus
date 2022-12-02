@@ -162,6 +162,12 @@
         <member name="M:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.OnSelectedUpperYearChanged(System.Int32)">
             <summary>Executes the logic for when <see cref="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.SelectedUpperYear"/> just changed.</summary>
         </member>
+        <member name="M:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.OnSelectedMinMileageChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.SelectedMinMileage"/> just changed.</summary>
+        </member>
+        <member name="M:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.OnSelectedMaxMileageChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.SelectedMaxMileage"/> just changed.</summary>
+        </member>
         <member name="P:MotorEmpireAutohaus.ViewModel.Vehicles.Category.Category.Type">
             <inheritdoc cref="F:MotorEmpireAutohaus.ViewModel.Vehicles.Category.Category.type"/>
         </member>
