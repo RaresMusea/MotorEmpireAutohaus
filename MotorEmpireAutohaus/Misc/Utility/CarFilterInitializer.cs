@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MotorEmpireAutohaus.Misc.Utility
 {
-    public static class CarFilterInitializer
+    public static class CarFilterFormatter
     {
         public static readonly Func<int, string> FormatMileage = (mileage) =>
         {

@@ -2,15 +2,35 @@
 using CommunityToolkit.Mvvm.Input;
 using MotorEmpireAutohaus.Misc.Common;
 using MotorEmpireAutohaus.Misc.Utility;
+using MotorEmpireAutohaus.Model;
 using MotorEmpireAutohaus.Services.Feed;
+using MotorEmpireAutohaus.Test;
+using MotorEmpireAutohaus.View.Core;
+using MotorEmpireAutohaus.View_Model.Account;
 using MotorEmpireAutohaus.View_Model.Base;
 using System.Text;
 
 namespace MotorEmpireAutohaus.View_Model
 {
+    [QueryProperty (nameof(Name),nameof(Name))]
+    [QueryProperty (nameof(CarFilter),nameof(CarFilter))]
     public partial class MotorEmpireViewModel : BaseViewModel
     {
+        [ObservableProperty]
+        private string name;
+
+        [ObservableProperty]
+        private Car car;
+
+        [ObservableProperty]
+        private CarFilter carFilter;
+
+        [ObservableProperty]
+        private UserAccount userAccount;
+
         private readonly CarFilterService carFilterService;
+
+        private bool filtersWereApplied;
 
         [ObservableProperty]
         private List<string> carBodyType;
@@ -25,7 +45,7 @@ namespace MotorEmpireAutohaus.View_Model
         private string selectedCarBodyType;
 
         [ObservableProperty]
-        private string selectedManufacturer = "Abarth";
+        private string selectedManufacturer;
 
         [ObservableProperty]
         private int selectedManufacturerIndex;
@@ -108,16 +128,19 @@ namespace MotorEmpireAutohaus.View_Model
         private int lowerMileage=500;
         private int upperMileage=300000;
 
+        public MotorEmpireViewModel() { }
 
-        public MotorEmpireViewModel(CarFilterService carFilterService)
+        public MotorEmpireViewModel(CarFilterService carFilterService, UserAccount userAccount)
         {
             this.carFilterService = carFilterService;
             InitializeProps();
+            this.userAccount = userAccount;
         }
 
 
         private void InitializeProps()
         {
+            filtersWereApplied = false;
             RetrieveCarBodyTypes();
             RetrieveAllManufacturers();
             models = carFilterService.GetAllModelsFromManufacturer(selectedManufacturer);
@@ -126,10 +149,10 @@ namespace MotorEmpireAutohaus.View_Model
             {
                 ModelHasGenerations = true;
             }
-            InitializePriceBounds(CarFilterInitializer.FormatPrice);
-            LowerYear = CarFilterInitializer.InitializeYears(2021, 2000);
+            InitializePriceBounds(CarFilterFormatter.FormatPrice);
+            LowerYear = CarFilterFormatter.InitializeYears(2021, 2000);
             LowerYear = LowerYear.OrderBy(x => x).ToList();
-            UpperYear = CarFilterInitializer.InitializeYears(2022, 2001);
+            UpperYear = CarFilterFormatter.InitializeYears(2022, 2001);
             fuelTypes = new() { "Gasoline", "Gasoline + CNG", "Gasoline + LPG", "Diesel", "Electric", "Etanol", "Hybrid", "Hydrogen" };
             InitializeMileageBounds();
         }
@@ -155,8 +178,8 @@ namespace MotorEmpireAutohaus.View_Model
             minMileageBounds = new();
             maxMileageBounds = new();
 
-            minMileageBounds = (from m in minMileage select CarFilterInitializer.FormatMileage(m)).ToList();
-            maxMileageBounds = (from m in maxMileage select CarFilterInitializer.FormatMileage(m)).ToList();
+            minMileageBounds = (from m in minMileage select CarFilterFormatter.FormatMileage(m)).ToList();
+            maxMileageBounds = (from m in maxMileage select CarFilterFormatter.FormatMileage(m)).ToList();
         }
 
 
@@ -180,37 +203,42 @@ namespace MotorEmpireAutohaus.View_Model
         partial void OnSelectedManufacturerChanged(string value)
         {
             Models = carFilterService.GetAllModelsFromManufacturer(selectedManufacturer);
+            filtersWereApplied = true;
         }
 
         partial void OnSelectedManufacturerIndexChanged(int value)
         {
             Models = carFilterService.GetAllModelsFromManufacturer(manufacturers[value]);
+            filtersWereApplied = true;
         }
 
         partial void OnSelectedModelChanged(string value)
         {
             Generations = carFilterService.GetGenerationBasedOnModel(value);
             ModelHasGenerations = Generations.Count != 0;
-         
+            filtersWereApplied = true;
+
         }
 
         partial void OnSelectedModelIndexChanged(int value)
         {
             Generations = carFilterService.GetGenerationBasedOnModel(models[value]);
             ModelHasGenerations = Generations.Count != 0;
+            filtersWereApplied = true;
         }
 
         partial void OnSelectedLowerPriceIndexChanged(int value)
         {
             lowerBound = lowerPrice[value];
-            CarFilterInitializer.CompareValuesAndGenerateErrorsIfExisting(lowerBound, upperBound, UpperLowerFilter.Price);
-            
+            CarFilterFormatter.CompareValuesAndGenerateErrorsIfExisting(lowerBound, upperBound, UpperLowerFilter.Price);
+            filtersWereApplied = true;
         }
 
         partial void OnSelectedUpperPriceIndexChanged(int value)
         {
             upperBound = upperPrice[value];
-            CarFilterInitializer.CompareValuesAndGenerateErrorsIfExisting(lowerBound, upperBound, UpperLowerFilter.Price);
+            CarFilterFormatter.CompareValuesAndGenerateErrorsIfExisting(lowerBound, upperBound, UpperLowerFilter.Price);
+            filtersWereApplied = true;
         }
 
 
@@ -223,30 +251,77 @@ namespace MotorEmpireAutohaus.View_Model
 
         partial void OnSelectedLowerYearChanged(int value)
         {
-            CarFilterInitializer.CompareValuesAndGenerateErrorsIfExisting(SelectedLowerYear, SelectedUpperYear, UpperLowerFilter.Year);
-/*          SelectedLowerYear = 2021;
-            SelectedUpperYear = 2022;*/
-            
+            CarFilterFormatter.CompareValuesAndGenerateErrorsIfExisting(SelectedLowerYear, SelectedUpperYear, UpperLowerFilter.Year);
+            filtersWereApplied = true;
+            /*          SelectedLowerYear = 2021;
+                        SelectedUpperYear = 2022;*/
+
         }
 
         partial void OnSelectedUpperYearChanged(int value)
         {
-            CarFilterInitializer.CompareValuesAndGenerateErrorsIfExisting(SelectedLowerYear, SelectedUpperYear, UpperLowerFilter.Year);
+            CarFilterFormatter.CompareValuesAndGenerateErrorsIfExisting(SelectedLowerYear, SelectedUpperYear, UpperLowerFilter.Year);
             /*            SelectedLowerYear = 2021;
                         SelectedUpperYear = 2022;*/
-            
+            filtersWereApplied = true;
         }
 
         partial void OnSelectedMinMileageChanged(string value)
         {
             lowerMileage = minMileage[MinMileageBounds.IndexOf(value)];
-            CarFilterInitializer.CompareValuesAndGenerateErrorsIfExisting(lowerMileage, upperMileage, UpperLowerFilter.Mileage);
+            CarFilterFormatter.CompareValuesAndGenerateErrorsIfExisting(lowerMileage, upperMileage, UpperLowerFilter.Mileage);
+            filtersWereApplied = true;
         }
 
         partial void OnSelectedMaxMileageChanged(string value)
         {
             upperMileage = maxMileage[MaxMileageBounds.IndexOf(value)];
-            CarFilterInitializer.CompareValuesAndGenerateErrorsIfExisting(lowerMileage, upperMileage, UpperLowerFilter.Mileage);
+            CarFilterFormatter.CompareValuesAndGenerateErrorsIfExisting(lowerMileage, upperMileage, UpperLowerFilter.Mileage);
+            filtersWereApplied = true;
+        }
+
+        private CarFilter ApplyFilters()
+        {
+            if (filtersWereApplied)
+            {
+                CarFilter carFilter = new();
+                carFilter.Manufacturer = SelectedManufacturer;
+                carFilter.ModelName = SelectedModel;
+                carFilter.Generation= SelectedGeneration;
+                carFilter.FuelType = SelectedFuelType; 
+                carFilter.PriceRange=new(lowerBound,upperBound);
+
+                if (!CarFilterValidator.IsRangeValid(carFilter.PriceRange))
+                {
+                    CarFilterValidator.InvalidRangeSpecifier(UpperLowerFilter.Price, "1 000€ - 100 000 €");
+                    carFilter.PriceRange = new(1000, 100000);
+                }
+
+                carFilter.YearRange=new(selectedLowerYear, selectedUpperYear);
+                if (!CarFilterValidator.IsRangeValid(carFilter.YearRange))
+                {
+                    CarFilterValidator.InvalidRangeSpecifier(UpperLowerFilter.Year, "1999 - 2022");
+                    carFilter.YearRange = new(1999, 2022);
+                }
+
+                carFilter.MileageRange = new(lowerMileage, upperMileage);
+                if (!CarFilterValidator.IsRangeValid(carFilter.MileageRange))
+                {
+                    CarFilterValidator.InvalidRangeSpecifier(UpperLowerFilter.Mileage, "500 km - 300 000 km");
+                    carFilter.MileageRange = new(500, 300000);
+                }
+
+                return carFilter;
+
+            }
+            return null;
+        }
+
+        [RelayCommand]
+        public async void NavigateToFeed()
+        {
+            carFilter = ApplyFilters();
+            await Shell.Current.GoToAsync(nameof(Feed), true, new Dictionary<string, object> { ["CarFilter"] = carFilter });
         }
 
     }

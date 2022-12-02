@@ -1,4 +1,7 @@
-﻿using MotorEmpireAutohaus.View_Model;
+﻿using MotorEmpireAutohaus.Services.Feed;
+using MotorEmpireAutohaus.View;
+using MotorEmpireAutohaus.View.Core;
+using MotorEmpireAutohaus.View_Model;
 using MotorEmpireAutohaus.View_Model.Account;
 
 namespace MotorEmpireAutohaus;
@@ -8,6 +11,8 @@ public partial class AppShell : Shell
 	public AppShell()
 	{
 		InitializeComponent();
+        Routing.RegisterRoute(nameof(MotorEmpire),typeof(MotorEmpire));
+        Routing.RegisterRoute(nameof(Feed), typeof(Feed));
 	}
 
     protected override void OnAppearing()
@@ -35,5 +40,6 @@ public partial class AppShell : Shell
             await Current.GoToAsync("//LogIn", true);
         }
     }
+
 
 }

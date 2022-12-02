@@ -2,9 +2,11 @@
 using MotorEmpireAutohaus.Services.Account_Services;
 using CommunityToolkit.Mvvm.Input;
 using MotorEmpireAutohaus.Misc.Authentication;
+using MotorEmpireAutohaus.View;
 
 namespace MotorEmpireAutohaus.View_Model.Account
 {
+    [QueryProperty (nameof(Name),nameof(Name))]
     public partial class UserAccount : User
     {
         private readonly AccountService _accountService;
@@ -91,7 +93,8 @@ namespace MotorEmpireAutohaus.View_Model.Account
                 if (_accountService.Login(this))
                 {
                     //CrossPlatformMessageRenderer.RenderMessages("Login Success!", "OK",2);
-                    await Shell.Current.GoToAsync("//MotorEmpire", true);
+                    await Shell.Current.GoToAsync($"{nameof(MotorEmpire)}?Name={Name}",
+                                                  true);
                 }
             }
         }

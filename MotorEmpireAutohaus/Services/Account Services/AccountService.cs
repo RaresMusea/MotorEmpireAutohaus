@@ -69,7 +69,8 @@ namespace MotorEmpireAutohaus.Services.Account_Services
             else
             {
                 UpdateLastSeenFor(user);
-                user = accounts[0];
+                user.Name = accounts[0].Name;
+                user.ProfileImageUrl = accounts[0].ProfileImageUrl;
                 CrossPlatformMessageRenderer.DisplayMobileSnackbar(
                     $"Welcome back, {accounts.ElementAt(0).Name}!","Close", 5);
                 return true;

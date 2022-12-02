@@ -98,7 +98,7 @@
 	  <Compile Update="View\Authentication\LogIn.xaml.cs">
 	    <DependentUpon>LogIn.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="View\MotorEmpire.xaml.cs">
+	  <Compile Update="MotorEmpire.xaml.cs">
 	    <DependentUpon>MotorEmpire.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="View\Account.xaml.cs">
@@ -113,7 +113,13 @@
 	  <MauiXaml Update="View\Authentication\SignUp.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\MotorEmpire.xaml">
+	  <MauiXaml Update="MotorEmpire.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\Car.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\Core\Feed.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\Search.xaml">

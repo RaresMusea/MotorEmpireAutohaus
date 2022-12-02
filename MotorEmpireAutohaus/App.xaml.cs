@@ -2,6 +2,7 @@
 using Microsoft.Maui.Platform;
 using MotorEmpireAutohaus.Misc.Common;
 using MotorEmpireAutohaus.View_Model.Account;
+using MotorEmpireAutohaus.View_Model;
 
 namespace MotorEmpireAutohaus;
 
@@ -22,7 +23,6 @@ public partial class App : Application,IStatusBarAppearance
          }
     });
 #endif
-
 
         ConfigureBorderless();
 		MainPage = new AppShell();

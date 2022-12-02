@@ -5,9 +5,18 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:view="clr-namespace:MotorEmpireAutohaus.View"
     xmlns:local="clr-namespace:MotorEmpireAutohaus"
+    xmlns:core="clr-namespace:MotorEmpireAutohaus.View_Model"
+    xmlns:feed="clr-namespace:MotorEmpireAutohaus.View.Core"
     xmlns:signupPage="clr-namespace:MotorEmpireAutohaus.View"
-    Shell.TabBarIsVisible="False">
+    xmlns:viewmodel="clr-namespace:MotorEmpireAutohaus.View_Model"
+    x:DataType="viewmodel:MotorEmpireViewModel"
+    Shell.TabBarIsVisible="False"
+    NavigationPage.HasBackButton="False">
 
+    <Shell.BindingContext>
+        <core:MotorEmpireViewModel></core:MotorEmpireViewModel>
+    </Shell.BindingContext>
+    
     <ShellContent
         Title=""
         ContentTemplate="{DataTemplate local:LogIn}"
@@ -37,9 +46,10 @@
                 Shell.NavBarIsVisible="True"
                 Shell.BackgroundColor="{AppThemeBinding Dark=#414141, Light=#1C6758}"
                 x:Name="Flyout">
-        <ShellContent Title="Motor Empire Autohaus" ContentTemplate="{DataTemplate view:MotorEmpire}" x:Name="MotorEmpireTab" ></ShellContent>
-        <ShellContent Title="All Cars" ContentTemplate="{DataTemplate view:Search}" x:Name="SearchTab"></ShellContent>
+        <ShellContent Title="Motor Empire Autohaus" ContentTemplate="{DataTemplate view:MotorEmpire}" x:Name="MotorEmpireTab"></ShellContent>
+        <ShellContent Title="All Cars" ContentTemplate="{DataTemplate feed:Feed}" x:Name="SearchTab"></ShellContent>
         <ShellContent Title="My account" ContentTemplate="{DataTemplate view:Account}" x:Name="AccountTab"></ShellContent>
+        <ShellContent Title="Car" ContentTemplate="{DataTemplate view:Car}"></ShellContent>
     </FlyoutItem>
     
     
@@ -51,7 +61,7 @@
                 <HorizontalStackLayout HorizontalOptions="Center"
                                    Margin="0,0,0,35"
                                    >
-                    <Image Source="defaultprofilepic.png"
+                    <Image Source="{Binding UserAccount.ProfileImageUrl}"
                    WidthRequest="30"
                    HeightRequest="30"
                    VerticalOptions="Center"
@@ -59,7 +69,7 @@
                    x:Name="FlyoutImageBanner"
                    />
 
-                    <Label Text="Logged in as Rares Musea"
+                    <Label Text="{Binding Name}"
                         VerticalOptions="Center"
                         FontAttributes="Bold"
                         FontSize="16"

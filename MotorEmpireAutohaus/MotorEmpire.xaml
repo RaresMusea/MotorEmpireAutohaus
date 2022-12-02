@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:MotorEmpireAutohaus.View_Model"
+             x:DataType="viewmodel:MotorEmpireViewModel"
+             x:Class="MotorEmpireAutohaus.View.MotorEmpire"
+             Title="Motor Empire Autohaus"
+>
+    <ScrollView>
+    <VerticalStackLayout>
+            <Frame BackgroundColor="Transparent" x:Name="DesktopView" IsVisible="false">
+                <VerticalStackLayout>
+                    <AbsoluteLayout Margin="0">
+                        <Image Source="gauges.jpg"
+                               x:Name="jumbotronImage"
+                           Aspect="AspectFill"
+                               HeightRequest="800"
+                               WidthRequest="1900"/>
+                        <Label
+                            
+            AbsoluteLayout.LayoutBounds="430,120,710,300"
+            Text="What would you like to search for today?"
+            FontAttributes="Bold"
+            HorizontalOptions="Start"
+            FontSize="30"
+            x:Name="titleText"
+            Margin="25"
+            VerticalOptions="Center"
+             />
+
+                    <Frame x:Name="SearchFrame"
+                   BackgroundColor="White"
+                   WidthRequest="300"
+                   AbsoluteLayout.LayoutBounds="100,360,830,100"
+                   HeightRequest="40"
+                   HorizontalOptions="End"
+                   Margin="0,15,20,0"
+                   CornerRadius="15">
+                        <HorizontalStackLayout>
+                            <Entry Placeholder="Search query"
+                   TextColor="{AppThemeBinding Dark=Black, Light=Black}"
+                   FontAttributes="Bold"
+                   FontFamily="Roboto"
+                   FontSize="15"
+                   Margin="0"
+                   HeightRequest="30"
+                           WidthRequest="260"/>
+                            <Image Source="search.png"
+                           WidthRequest="24"
+                           HeightRequest="24"
+                           Margin="-10, 0, 0, 0"
+                           VerticalOptions="Center"/>
+                        </HorizontalStackLayout>
+                    </Frame>
+                        <Button AbsoluteLayout.LayoutBounds="100,430,1320,100"
+                                Text="Or View Categores"
+                                WidthRequest="200" 
+                                HeightRequest="60"
+                                BackgroundColor="{AppThemeBinding Dark=Red, Light=#1C6758}"
+                                TextColor="White"
+                                FontAttributes="Bold"
+                                FontFamily="Kollektif"
+                                FontSize="16"
+                                Clicked="ShowCategories"
+                                ></Button>
+                    </AbsoluteLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <VerticalStackLayout x:Name="mobileView" Margin="20">
+                <Image Source="{AppThemeBinding Dark=jumbotronblack.png, Light=jumbotronwhite.png}" x:Name="jumbotronImageAnimation" Aspect="AspectFit"></Image>
+                <Label Text="What would you like to search for today?"
+                           FontAttributes="Italic"
+                           HorizontalTextAlignment="Center"
+                           Margin="15"
+                           FontSize="30"
+                           FontFamily="TTOctosquares"/>
+                <!--<Frame x:Name="searchbar"
+                           BackgroundColor="White"
+                       HorizontalOptions="Center"
+                           WidthRequest="280"
+                           HeightRequest="40"
+                           Margin="0,15,0,20"
+                           CornerRadius="15">
+                    <HorizontalStackLayout>
+
+                        <Entry Placeholder="Hello helo ldsaad " WidthRequest="200" HeightRequest="20"></Entry>
+                    </HorizontalStackLayout>
+                </Frame>-->
+                <!--<Frame HeightRequest="40" CornerRadius="15" Margin="14">
+                    <HorizontalStackLayout>
+                <Entry BackgroundColor="{AppThemeBinding Dark=#414141,Light=#dbdbdb}"
+                       TextColor="{AppThemeBinding Dark=White, Light=Black}"
+                       Placeholder="Seach query"
+                       HeightRequest="40"
+                       WidthRequest="420"
+                       Margin="0,10,40,30"
+                       FontAttributes="Bold"
+                       FontFamily="Kollektif"
+                       HorizontalTextAlignment="Center">
+                </Entry>
+                    <Image Source="search.png" HeightRequest="24" WidthRequest="24" Margin="0"/>
+                    </HorizontalStackLayout>
+                </Frame>-->
+                <Frame Margin="10" CornerRadius="15" HeightRequest="40" Padding="0" x:Name="searchContainer" >
+                    <Entry BackgroundColor="{AppThemeBinding Dark=#414141, Light=#EEF2E6}"
+                       TextColor="{AppThemeBinding Dark=White, Light=Black}"
+                       x:Name="searchBarEntry" 
+                       Placeholder="Search query"
+                       PlaceholderColor="DarkGrey"
+                       HeightRequest="40"
+                       FontAttributes="Bold"
+                       FontFamily="Kollektif"
+                       HorizontalTextAlignment="Center"
+                       TextChanged="OnTextChangedEvent"
+                       />
+                </Frame>
+
+                <Button x:Name="searchButton"
+                        Margin="10"
+                        IsVisible="False"
+                        TextColor="White"
+                        Opacity="0"
+                        WidthRequest="200"
+                        Text="Search for Vehicles"
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        FontFamily="Kollektif"
+                        BackgroundColor="{AppThemeBinding Dark=Red, Light=#1C6758}"></Button>
+
+                <VerticalStackLayout x:Name="searchByCategory">
+                <Grid Margin="0,20,0,20" x:Name="selectionGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="20"></ColumnDefinition>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                <Border Stroke="{AppThemeBinding Dark=#dbdbdb, Light=Grey}"
+                        StrokeThickness="2" HeightRequest="5"/>
+                    <Label Grid.Column="1"
+                           Text="OR"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           FontFamily="Roboto"
+                           FontAttributes="Bold"/>
+                    <Border Stroke="{AppThemeBinding Dark=#dbdbdb, Light=Grey}"
+                         StrokeThickness="2" HeightRequest="5" Grid.Column="2"/>
+                </Grid>
+
+                    <Button BackgroundColor="{AppThemeBinding Dark=Red, Light=#1C6758}"
+                        x:Name="showCategoriesButton"
+                        WidthRequest="230"
+                        CornerRadius="15"
+                        FontSize="16"
+                        Text="Choose a specific category"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontFamily="Kollektif"
+                        Clicked="ShowCategories"/>
+
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+
+
+            <Frame CornerRadius="0"
+                   BackgroundColor="{AppThemeBinding Dark=#252525, Light=#dbdbdb}"
+                   x:Name="primaryFrame"
+                   IsVisible="False"
+                   Opacity="0"
+                   >
+                <VerticalStackLayout>
+                    <Frame CornerRadius="30"
+                           BackgroundColor="{AppThemeBinding Dark=#414141,Light=#EEF2E6}"
+                           x:Name="secondaryFrame"
+                        >
+                        <VerticalStackLayout>
+                            <Frame CornerRadius="35" BackgroundColor="{AppThemeBinding Dark=#404040,Light=#EEF2E6}">
+                                <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Always">
+                                    <VerticalStackLayout>
+                                        <HorizontalStackLayout>
+                                            <VerticalStackLayout Margin="10"
+                                                                 BackgroundColor="Transparent" 
+                                                                 Padding="10"
+                                                                 x:Name="toggleCarFilters"
+                                                                 >
+
+                                                <Image Source="car.png"
+                                           WidthRequest="40"
+                                           HeightRequest="40"/>
+                                                <Label Text="Cars"
+                                           HorizontalOptions="Center"
+                                           FontAttributes="Bold"
+                                />
+                                                <VerticalStackLayout.GestureRecognizers>
+                                                    <TapGestureRecognizer Tapped="DisplayCarFilters"></TapGestureRecognizer>
+                                                </VerticalStackLayout.GestureRecognizers>
+                                            </VerticalStackLayout>
+                                            <VerticalStackLayout Margin="10" Padding="10">
+                                                <Image Source="van.png"
+                                           WidthRequest="40"
+                                           HeightRequest="40"
+                                           HorizontalOptions="Start"/>
+                                                <Label Text="Vans"
+                                           HorizontalOptions="Center"
+                                />
+
+                                            </VerticalStackLayout>
+                                            <VerticalStackLayout Margin="10" Padding="10">
+                                                <Image Source="truck.png"
+                                           WidthRequest="40"
+                                           HeightRequest="40"
+                                           HorizontalOptions="Center"/>
+                                                <Label Text="Trucks"
+                                           HorizontalOptions="Center"
+                                />
+
+                                            </VerticalStackLayout>
+                                            <VerticalStackLayout Margin="10" Padding="10">
+                                                <Image Source="tractor.png"
+                                           WidthRequest="40"
+                                           HeightRequest="40"
+                                           HorizontalOptions="Center"/>
+                                                <Label Text="Agro"
+                                           HorizontalOptions="Center"
+                                />
+
+                                            </VerticalStackLayout>
+                                            <VerticalStackLayout Margin="10" Padding="10">
+                                                <Image Source="constructiontruck.png"
+                                           WidthRequest="40"
+                                           HeightRequest="40"
+                                           HorizontalOptions="Center"/>
+                                                <Label Text="Building Vehicles"
+                                           HorizontalOptions="Center"
+                                />
+
+                                            </VerticalStackLayout>
+                                            <VerticalStackLayout Margin="10" Padding="10">
+                                                <Image Source="moto.png"
+                                           WidthRequest="40"
+                                           HeightRequest="40"
+                                           HorizontalOptions="Center"/>
+                                                <Label Text="Motorbikes"
+                                           HorizontalOptions="Center"
+                                />
+
+                                            </VerticalStackLayout>
+                                            <VerticalStackLayout Margin="10" Padding="10">
+                                                <Image Source="trailer.png"
+                                           WidthRequest="40"
+                                           HeightRequest="40"
+                                           HorizontalOptions="Center"/>
+                                                <Label Text="Trailers"
+                                           HorizontalOptions="Center"
+                                />
+
+                                            </VerticalStackLayout>
+                                            <VerticalStackLayout Margin="10" Padding="10">
+                                                <Image Source="brakedisc.png"
+                                           WidthRequest="40"
+                                           HeightRequest="40"
+                                           HorizontalOptions="Center"/>
+                                                <Label Text="Vehicle Parts"
+                                           HorizontalOptions="Center"
+                                />
+
+                                            </VerticalStackLayout>
+                                        </HorizontalStackLayout>
+                                    </VerticalStackLayout>
+                                </ScrollView>
+                            </Frame>
+                            <VerticalStackLayout x:Name="carFiltersForm" IsVisible="False">
+                                <StackLayout Margin="20" x:Name="carFilterRow1">
+                                    <VerticalStackLayout Margin="0,0,120,0" x:Name="verticalStack1">
+                                        <Label Text="Body Type"
+                                       FontSize="16"
+                                       FontAttributes="Bold"
+                                       FontFamily="Kollektif"
+                                    ></Label>
+                                        <Picker HorizontalTextAlignment="Center"
+                                            x:Name="carTypePicker"
+                                            SelectedIndex="0"
+                                            BackgroundColor="{AppThemeBinding Dark=#252525, Light=#434242}"
+                                            TextColor="White"
+                                            FontAttributes="Bold"
+                                            FontFamily="Kollektif"
+                                            Title="Select a car body type"
+                                            Margin="0,10,0,0"
+                                            ItemsSource="{Binding CarBodyType}"
+                                            SelectedItem="{Binding SelectedCarBodyType}"/>
+                                    </VerticalStackLayout>
+                                    <VerticalStackLayout>
+                                        <Label Text="Manufacturer"
+                                       FontSize="16"
+                                       FontAttributes="Bold"
+                                       FontFamily="Kollektif"
+                                    ></Label>
+                                        <Picker HorizontalTextAlignment="Center"
+                                            x:Name="manufacturerPicker"
+                                        SelectedIndex="{Binding SelectedManufacturerIndex}"
+                                        BackgroundColor="{AppThemeBinding Dark=#252525, Light=#434242}"
+                                        TextColor="White"
+                                        FontAttributes="Bold"
+                                        FontFamily="Kollektif"
+                                        Margin="0,10,0,0"
+                                        Title="Select a manufacturer"
+                                        ItemsSource="{Binding Manufacturers}"
+                                        SelectedItem="{Binding SelectedManufacturer}"/>
+                                    </VerticalStackLayout>
+                                </StackLayout>
+                                <StackLayout Margin="20"  x:Name="carFilterRow2">
+                                    <VerticalStackLayout Margin="0,0,120,0" x:Name="verticalStack2">
+                                        <Label Text="Model"
+                                       FontSize="16"
+                                       FontAttributes="Bold"
+                                       FontFamily="Kollektif"
+                                    ></Label>
+                                        <Picker HorizontalTextAlignment="Center"
+                                            x:Name="modelPicker"
+                                        BackgroundColor="{AppThemeBinding Dark=#252525, Light=#434242}"
+                                        TextColor="White"
+                                        FontAttributes="Bold"
+                                        FontFamily="Kollektif"
+                                        Margin="0,10,0,0"
+                                        Title="Select a model"
+                                        SelectedIndex="{Binding SelectedModelIndex}"
+                                        ItemsSource="{Binding Models}"
+                                        SelectedItem="{Binding SelectedModel}"/>
+                                    </VerticalStackLayout>
+                                    <VerticalStackLayout>
+                                        <Label Text="Generation"
+                                       FontSize="16"
+                                       FontAttributes="Bold"
+                                       FontFamily="Kollektif"
+                                    ></Label>
+                                        <Picker HorizontalTextAlignment="Center"
+                                            x:Name="generationPicker"
+                                            Title="Select a generation"
+                                            BackgroundColor="{AppThemeBinding Dark=#252525, Light=#434242}"
+                                            TextColor="White"
+                                            FontAttributes="Bold"
+                                            FontFamily="Kollektif"
+                                            Margin="0,10,0,0"
+                                            IsEnabled="{Binding ModelHasGenerations}"
+                                            SelectedIndex="0"
+                                            ItemsSource="{Binding Generations}"
+                                            SelectedItem="{Binding SelectedGeneration}"/>
+                                    </VerticalStackLayout>
+                                </StackLayout>
+                                <VerticalStackLayout Margin="20" x:Name="carFilterRow3">
+                                    <HorizontalStackLayout HorizontalOptions="Start">
+                                        <Label Text="Price"
+                                       FontSize="16"
+                                       FontAttributes="Bold"
+                                       FontFamily="Kollektif"/>
+                                    </HorizontalStackLayout>
+                                    <HorizontalStackLayout HorizontalOptions="End" Margin="0,-20,0,0">
+                                        <Label Text="Year"
+                                           FontSize="16"
+                                           FontAttributes="Bold"
+                                           FontFamily="Kollektif"/>
+                                    </HorizontalStackLayout>
+                                    <HorizontalStackLayout>
+                                        <Picker HorizontalTextAlignment="Center"
+                                            
+                                                x:Name="lowerPricePicker"
+                                                Title="From"
+                                                BackgroundColor="{AppThemeBinding Dark=#252525, Light=#434242}"
+                                                TextColor="White"
+                                                FontAttributes="Bold"
+                                                FontFamily="Kollektif"
+                                                Margin="0,10,8,0"
+                                                ItemsSource="{Binding LowerPriceBound}"
+                                                SelectedItem="{Binding SelectedLowerPriceBound}"
+                                                SelectedIndex="{Binding SelectedLowerPriceIndex}"/>
+                                        <Picker HorizontalTextAlignment="Center"
+                                                x:Name="upperPricePicker"
+                                                Title="To"
+                                                BackgroundColor="{AppThemeBinding Dark=#252525, Light=#434242}"
+                                                TextColor="White"
+                                                FontAttributes="Bold"
+                                                FontFamily="Kollektif"
+                                                Margin="0,10,110,0"
+                                                ItemsSource="{Binding UpperPriceBound}"
+                                                SelectedItem="{Binding SelectedUpperPriceBound}"
+                                                SelectedIndex="{Binding SelectedUpperPriceIndex}"/>
+                                        <Picker HorizontalTextAlignment="Center"
+                                                x:Name="lowerYear"
+                                                Title="From"
+                                                BackgroundColor="{AppThemeBinding Dark=#252525,Light=#434242}"
+                                                TextColor="White"
+                                                FontAttributes="Bold"
+                                                FontFamily="Kollektif"
+                                                Margin="0,10,8,0"
+                                                SelectedIndex="0"
+                                                SelectedItem="{Binding SelectedLowerYear}"
+                                                ItemsSource="{Binding LowerYear}"/>
+
+                                        <Picker HorizontalTextAlignment="Center"
+                                                x:Name="upperYear"
+                                                Title="To"
+                                                BackgroundColor="{AppThemeBinding Dark=#252525, Light=#434242}"
+                                                TextColor="White"
+                                                FontAttributes="Bold"
+                                                FontFamily="Kollektif"
+                                                Margin="0,10,0,0"
+                                                SelectedIndex="0"
+                                                SelectedItem="{Binding SelectedUpperYear}"
+                                                ItemsSource="{Binding UpperYear}"/>
+                                    </HorizontalStackLayout>
+                                </VerticalStackLayout>
+                                <VerticalStackLayout x:Name="carFiltersRow4" Margin="20,0,0,0">
+                                    <HorizontalStackLayout>
+                                        <Label Text="Fuel Type"
+                                               FontSize="16"
+                                               Margin="0,0,400,0"
+                                               x:Name="fuelTypeLabel"
+                                               FontAttributes="Bold"
+                                               HorizontalTextAlignment="Start"
+                                               FontFamily="Kollektif"/>
+                                        <Label Text="Mileage"
+                                               FontSize="16"
+                                               FontAttributes="Bold"
+                                               FontFamily="Kollektif"/>
+                                    </HorizontalStackLayout>
+                                    <HorizontalStackLayout>
+                                        <Picker HorizontalTextAlignment="Center"
+                                                x:Name="fuelTypePicker"
+                                                Title="Select a fuel type"
+                                                BackgroundColor="{AppThemeBinding Dark=#252525, Light=#434242}"
+                                                TextColor="White"
+                                                FontAttributes="Bold"
+                                                FontFamily="Kollektif"
+                                                Margin="0,10,60,0"
+                                                SelectedIndex="0"
+                                                SelectedItem="{Binding SelectedFuelType}"
+                                                ItemsSource="{Binding FuelTypes}"/>
+                                        <Picker HorizontalTextAlignment="Center"
+                                                x:Name="lowerMileagePicker"
+                                                Title="Min mileage"
+                                                BackgroundColor="{AppThemeBinding Dark=#252525,Light=#434242}"
+                                                TextColor="White"
+                                                FontAttributes="Bold"
+                                                FontFamily="Kollektif"
+                                                Margin="0,10,10,0"
+                                                SelectedIndex="0"
+                                                SelectedItem="{Binding SelectedMinMileage}"
+                                                ItemsSource="{Binding MinMileageBounds}"/>
+                                        <Picker HorizontalTextAlignment="Center"
+                                                x:Name="upperMileagePicker"
+                                                Title="Max mileage"
+                                                BackgroundColor="{AppThemeBinding Dark=#252525, Light=#434242}"
+                                                TextColor="White"
+                                                FontAttributes="Bold"
+                                                FontFamily="Kollektif"
+                                                Margin="0,10,0,0"
+                                                SelectedIndex="0"
+                                                SelectedItem="{Binding SelectedMaxMileage}"
+                                                ItemsSource="{Binding MaxMileageBounds}"/>
+                                    </HorizontalStackLayout>
+                                    <Button HorizontalOptions="Center"
+                                            Text="Apply filters and display results"
+                                            BackgroundColor="{AppThemeBinding Dark=Red, Light=#1C6758}"
+                                            TextColor="White"
+                                            FontAttributes="Bold"
+                                            FontFamily="Kollektif"
+                                            Margin="0,30,0,5"
+                                            Command="{Binding NavigateToFeedCommand}"/>
+                                    <Button HorizontalOptions="Center"
+                                            Text="Close"
+                                            BackgroundColor="{AppThemeBinding Dark=#414141, Light=Orange}"
+                                            FontAttributes="Bold"
+                                            TextColor="White"
+                                            Margin="4"
+                                            WidthRequest="130"
+                                            FontFamily="Kollektif"
+                                            />
+                                    <Label HorizontalOptions="Center" Text="{Binding Name }"/>
+                                </VerticalStackLayout>
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Frame>
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

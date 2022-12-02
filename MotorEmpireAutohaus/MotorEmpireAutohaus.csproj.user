@@ -17,7 +17,13 @@
     <MauiXaml Update="View\Authentication\SignUp.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="View\MotorEmpire.xaml">
+    <MauiXaml Update="MotorEmpire.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="View\Car.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="View\Core\Feed.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="View\Search.xaml">
