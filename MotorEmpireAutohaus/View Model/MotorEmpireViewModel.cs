@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using MotorEmpireAutohaus.Misc.Common;
+using MotorEmpireAutohaus.Misc.Utility;
 using MotorEmpireAutohaus.Services.Feed;
 using MotorEmpireAutohaus.View_Model.Base;
 using System.Text;
@@ -108,11 +109,8 @@ namespace MotorEmpireAutohaus.View_Model
         private int upperMileage=300000;
 
 
-
-
         public MotorEmpireViewModel(CarFilterService carFilterService)
         {
-            
             this.carFilterService = carFilterService;
             InitializeProps();
         }
@@ -128,10 +126,10 @@ namespace MotorEmpireAutohaus.View_Model
             {
                 ModelHasGenerations = true;
             }
-            InitializePriceBounds(FormatPrice);
-            LowerYear = InitializeYears(2021, 2000);
+            InitializePriceBounds(CarFilterInitializer.FormatPrice);
+            LowerYear = CarFilterInitializer.InitializeYears(2021, 2000);
             LowerYear = LowerYear.OrderBy(x => x).ToList();
-            UpperYear = InitializeYears(2022, 2001);
+            UpperYear = CarFilterInitializer.InitializeYears(2022, 2001);
             fuelTypes = new() { "Gasoline", "Gasoline + CNG", "Gasoline + LPG", "Diesel", "Electric", "Etanol", "Hybrid", "Hydrogen" };
             InitializeMileageBounds();
         }
@@ -157,76 +155,10 @@ namespace MotorEmpireAutohaus.View_Model
             minMileageBounds = new();
             maxMileageBounds = new();
 
-            minMileageBounds = (from m in minMileage select FormatMileage(m)).ToList();
-            maxMileageBounds = (from m in maxMileage select FormatMileage(m)).ToList();
+            minMileageBounds = (from m in minMileage select CarFilterInitializer.FormatMileage(m)).ToList();
+            maxMileageBounds = (from m in maxMileage select CarFilterInitializer.FormatMileage(m)).ToList();
         }
 
-        readonly Func<int, string> FormatMileage = (mileage) => 
-        {
-            string unit = "km";
-            string cast = mileage.ToString();
-            string res = "";
-            if (cast.Length == 3)
-            {
-                res = $"{cast} {unit}";
-            }
-            else
-            {
-                res = $"{cast[0]}";
-                if (cast.Length == 4)
-                {
-                    res += $" {cast.Substring(1)} {unit}";
-                }
-                if (cast.Length == 5)
-                {
-                    res += $"{cast[1]} {cast.Substring(2)} {unit}";
-                }
-                if(cast.Length==6)
-                {
-                    res += $"{cast[1]}{cast[2]} {cast.Substring(3)} {unit} ";
-                }
-            }
-            return res;
-        };
-
-
-        readonly Func<int, string>  FormatPrice = (price) =>
-        {
-            string currency = "€";
-            string casted = price.ToString();
-
-            StringBuilder formatted = new StringBuilder();
-            if (casted.Length == 4)
-            {
-                formatted.Append(casted[0]);
-                formatted.Append(' ');
-                formatted.Append(casted.Substring(1));
-            }
-            else
-            {
-                formatted.Append(casted[0]);
-                formatted.Append(casted[1]);
-                if (casted.Length == 6)
-                    formatted.Append(casted[2]);
-                formatted.Append(' ');
-                formatted.Append(casted.Length==6?casted.Substring(3):casted.Substring(2));
-            }
-            formatted.Append($" {currency}");
-            return formatted.ToString();
-        };
-
-        readonly Func<int,int,List<int>> InitializeYears = (start,end) =>
-        {
-            List<int> result = new();
-
-            int current = start;
-            while(current>=end)
-            {
-                result.Add(current);
-                current--;
-            }
-            return result;
-        };
 
         private void RetrieveCarBodyTypes()
         {
@@ -268,31 +200,17 @@ namespace MotorEmpireAutohaus.View_Model
             ModelHasGenerations = Generations.Count != 0;
         }
 
-
-        readonly Action<int, int, UpperLowerFilter> CompareValuesAndGenerateErrorsIfExisting = (lower, upper, option) =>
-        {
-
-            if (lower > upper)
-            {
-                CrossPlatformMessageRenderer.RenderMessages($"The lower {option.ToString().ToLower()} bound cannot be greater than the upper one!", "Retry", 4);
-            }
-            if (lower == upper)
-            {
-                CrossPlatformMessageRenderer.RenderMessages($"The {option.ToString().ToLower()} bounds cannot be equal!", "Retry", 4);
-            }
-        };
-
         partial void OnSelectedLowerPriceIndexChanged(int value)
         {
             lowerBound = lowerPrice[value];
-            CompareValuesAndGenerateErrorsIfExisting(lowerBound, upperBound, UpperLowerFilter.Price);
+            CarFilterInitializer.CompareValuesAndGenerateErrorsIfExisting(lowerBound, upperBound, UpperLowerFilter.Price);
             
         }
 
         partial void OnSelectedUpperPriceIndexChanged(int value)
         {
             upperBound = upperPrice[value];
-            CompareValuesAndGenerateErrorsIfExisting(lowerBound, upperBound, UpperLowerFilter.Price);
+            CarFilterInitializer.CompareValuesAndGenerateErrorsIfExisting(lowerBound, upperBound, UpperLowerFilter.Price);
         }
 
 
@@ -305,7 +223,7 @@ namespace MotorEmpireAutohaus.View_Model
 
         partial void OnSelectedLowerYearChanged(int value)
         {
-            CompareValuesAndGenerateErrorsIfExisting(SelectedLowerYear, SelectedUpperYear, UpperLowerFilter.Year);
+            CarFilterInitializer.CompareValuesAndGenerateErrorsIfExisting(SelectedLowerYear, SelectedUpperYear, UpperLowerFilter.Year);
 /*          SelectedLowerYear = 2021;
             SelectedUpperYear = 2022;*/
             
@@ -313,7 +231,7 @@ namespace MotorEmpireAutohaus.View_Model
 
         partial void OnSelectedUpperYearChanged(int value)
         {
-            CompareValuesAndGenerateErrorsIfExisting(SelectedLowerYear, SelectedUpperYear, UpperLowerFilter.Year);
+            CarFilterInitializer.CompareValuesAndGenerateErrorsIfExisting(SelectedLowerYear, SelectedUpperYear, UpperLowerFilter.Year);
             /*            SelectedLowerYear = 2021;
                         SelectedUpperYear = 2022;*/
             
@@ -322,16 +240,15 @@ namespace MotorEmpireAutohaus.View_Model
         partial void OnSelectedMinMileageChanged(string value)
         {
             lowerMileage = minMileage[MinMileageBounds.IndexOf(value)];
-            CompareValuesAndGenerateErrorsIfExisting(lowerMileage, upperMileage, UpperLowerFilter.Mileage);
+            CarFilterInitializer.CompareValuesAndGenerateErrorsIfExisting(lowerMileage, upperMileage, UpperLowerFilter.Mileage);
         }
 
         partial void OnSelectedMaxMileageChanged(string value)
         {
             upperMileage = maxMileage[MaxMileageBounds.IndexOf(value)];
-            CompareValuesAndGenerateErrorsIfExisting(lowerMileage, upperMileage, UpperLowerFilter.Mileage);
+            CarFilterInitializer.CompareValuesAndGenerateErrorsIfExisting(lowerMileage, upperMileage, UpperLowerFilter.Mileage);
         }
 
-        
     }
 }
 

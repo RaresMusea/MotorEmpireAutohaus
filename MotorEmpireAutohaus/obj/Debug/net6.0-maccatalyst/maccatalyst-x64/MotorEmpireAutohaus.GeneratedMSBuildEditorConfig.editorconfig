@@ -58,11 +58,11 @@ build_metadata.AdditionalFiles.ManifestResourceName = MotorEmpireAutohaus.View.A
 build_metadata.AdditionalFiles.TargetPath = View\Authentication\SignUp.xaml
 build_metadata.AdditionalFiles.RelativePath = View\Authentication\SignUp.xaml
 
-[C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MotorEmpireAutohaus/View/MotorEmpire.xaml]
+[C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MotorEmpireAutohaus/View/Core/MotorEmpire.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = MotorEmpireAutohaus.View.MotorEmpire.xaml
-build_metadata.AdditionalFiles.TargetPath = View\MotorEmpire.xaml
-build_metadata.AdditionalFiles.RelativePath = View\MotorEmpire.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MotorEmpireAutohaus.View.Core.MotorEmpire.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Core\MotorEmpire.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Core\MotorEmpire.xaml
 
 [C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MotorEmpireAutohaus/View/Search.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
