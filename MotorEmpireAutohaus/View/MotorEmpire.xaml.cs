@@ -74,6 +74,11 @@ public partial class MotorEmpire: ContentPage
             verticalStack1.Margin = new Thickness(0,0,0,15);
             verticalStack2.Margin = new Thickness(0, 0, 0, 15);
             upperPricePicker.Margin = new Thickness(0, 10, 30, 0);
+            fuelTypeLabel.Margin = new Thickness(0, 0, 200, 0);
+            fuelTypePicker.Margin = new Thickness(0, 10, 50, 0);
+            fuelTypePicker.WidthRequest = 110;
+            lowerMileagePicker.WidthRequest = 80;
+            upperMileagePicker.WidthRequest = 80;
             lowerPricePicker.WidthRequest = 70;
             upperPricePicker.WidthRequest= 70;
             lowerYear.WidthRequest = 70;

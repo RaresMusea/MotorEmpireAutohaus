@@ -105,6 +105,9 @@
         <member name="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.SelectedUpperPriceBound">
             <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.selectedUpperPriceBound"/>
         </member>
+        <member name="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.SelectedUpperPriceIndex">
+            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.selectedUpperPriceIndex"/>
+        </member>
         <member name="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.LowerYear">
             <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.lowerYear"/>
         </member>
@@ -116,6 +119,24 @@
         </member>
         <member name="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.SelectedUpperYear">
             <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.selectedUpperYear"/>
+        </member>
+        <member name="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.FuelTypes">
+            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.fuelTypes"/>
+        </member>
+        <member name="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.SelectedFuelType">
+            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.selectedFuelType"/>
+        </member>
+        <member name="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.MinMileageBounds">
+            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.minMileageBounds"/>
+        </member>
+        <member name="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.SelectedMinMileage">
+            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.selectedMinMileage"/>
+        </member>
+        <member name="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.MaxMileageBounds">
+            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.maxMileageBounds"/>
+        </member>
+        <member name="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.SelectedMaxMileage">
+            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.selectedMaxMileage"/>
         </member>
         <member name="M:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.OnSelectedManufacturerChanged(System.String)">
             <summary>Executes the logic for when <see cref="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.SelectedManufacturer"/> just changed.</summary>
@@ -129,11 +150,14 @@
         <member name="M:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.OnSelectedModelIndexChanged(System.Int32)">
             <summary>Executes the logic for when <see cref="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.SelectedModelIndex"/> just changed.</summary>
         </member>
-        <member name="M:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.OnSelectedLowerPriceBoundChanged(System.String)">
-            <summary>Executes the logic for when <see cref="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.SelectedLowerPriceBound"/> just changed.</summary>
+        <member name="M:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.OnSelectedLowerPriceIndexChanged(System.Int32)">
+            <summary>Executes the logic for when <see cref="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.SelectedLowerPriceIndex"/> just changed.</summary>
         </member>
-        <member name="M:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.OnSelectedUpperPriceBoundChanged(System.String)">
-            <summary>Executes the logic for when <see cref="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.SelectedUpperPriceBound"/> just changed.</summary>
+        <member name="M:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.OnSelectedUpperPriceIndexChanged(System.Int32)">
+            <summary>Executes the logic for when <see cref="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.SelectedUpperPriceIndex"/> just changed.</summary>
+        </member>
+        <member name="M:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.OnSelectedLowerYearChanged(System.Int32)">
+            <summary>Executes the logic for when <see cref="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.SelectedLowerYear"/> just changed.</summary>
         </member>
         <member name="M:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.OnSelectedUpperYearChanged(System.Int32)">
             <summary>Executes the logic for when <see cref="P:MotorEmpireAutohaus.View_Model.MotorEmpireViewModel.SelectedUpperYear"/> just changed.</summary>

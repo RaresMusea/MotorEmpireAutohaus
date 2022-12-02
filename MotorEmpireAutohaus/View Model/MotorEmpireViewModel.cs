@@ -1,10 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
 using MotorEmpireAutohaus.Misc.Common;
 using MotorEmpireAutohaus.Services.Feed;
 using MotorEmpireAutohaus.View_Model.Base;
-using System.Collections.ObjectModel;
-using System.Reflection.Metadata.Ecma335;
 using System.Text;
 
 namespace MotorEmpireAutohaus.View_Model
@@ -84,6 +81,31 @@ namespace MotorEmpireAutohaus.View_Model
         [ObservableProperty]
         private int selectedUpperYear=2022;
 
+        [ObservableProperty]
+        private List<string> fuelTypes;
+
+        [ObservableProperty]
+        private string selectedFuelType;
+
+        private List<int> minMileage;
+
+        [ObservableProperty]
+        private List<string> minMileageBounds;
+
+        [ObservableProperty]
+        private string selectedMinMileage;
+
+        private List<int> maxMileage;
+
+        [ObservableProperty]
+        private List<string> maxMileageBounds;
+
+        [ObservableProperty]
+        private string selectedMaxMileage;
+
+        private int lowerMileage;
+        private int upperMileage;
+
 
 
         public MotorEmpireViewModel(CarFilterService carFilterService)
@@ -101,6 +123,8 @@ namespace MotorEmpireAutohaus.View_Model
             LowerYear = InitializeYears(2021, 2000);
             LowerYear = LowerYear.OrderBy(x => x).ToList();
             UpperYear = InitializeYears(2022, 2001);
+            fuelTypes = new() { "Gasoline", "Gasoline + CNG", "Gasoline + LPG", "Diesel", "Electric", "Etanol", "Hybrid", "Hydrogen" };
+            InitializeMileageBounds();
         }
 
         private void InitializePriceBounds(Func<int, string> formatter)
@@ -114,7 +138,50 @@ namespace MotorEmpireAutohaus.View_Model
             upperPrice.ForEach(price => upperPriceBound.Add(formatter(price)));
         }
 
-        Func<int, string> FormatPrice = (int price) =>
+        private void InitializeMileageBounds() 
+        {
+            minMileage = new() { 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000, 95000, 100000, 150000, 200000, 250000 };
+            maxMileage = new(minMileage);
+            maxMileage.Remove(500);
+            maxMileage.Add(300000);
+            maxMileage = maxMileage.OrderByDescending(mile => mile).ToList();
+            minMileageBounds = new();
+            maxMileageBounds = new();
+
+            minMileageBounds = (from m in minMileage select FormatMileage(m)).ToList();
+            maxMileageBounds = (from m in maxMileage select FormatMileage(m)).ToList();
+        }
+
+        readonly Func<int, string> FormatMileage = (mileage) => 
+        {
+            string unit = "km";
+            string cast = mileage.ToString();
+            string res = "";
+            if (cast.Length == 3)
+            {
+                res = $"{cast} {unit}";
+            }
+            else
+            {
+                res = $"{cast[0]}";
+                if (cast.Length == 4)
+                {
+                    res += $" {cast.Substring(1)} {unit}";
+                }
+                if (cast.Length == 5)
+                {
+                    res += $"{cast[1]} {cast.Substring(2)} {unit}";
+                }
+                if(cast.Length==6)
+                {
+                    res += $"{cast[1]}{cast[2]} {cast.Substring(3)} {unit} ";
+                }
+            }
+            return res;
+        };
+
+
+        readonly Func<int, string>  FormatPrice = (price) =>
         {
             string currency = "€";
             string casted = price.ToString();
@@ -139,7 +206,7 @@ namespace MotorEmpireAutohaus.View_Model
             return formatted.ToString();
         };
 
-        Func<int,int,List<int>> InitializeYears = (start,end) =>
+        readonly Func<int,int,List<int>> InitializeYears = (start,end) =>
         {
             List<int> result = new();
 
@@ -169,16 +236,6 @@ namespace MotorEmpireAutohaus.View_Model
             }
         }
 
-        Func<int, List<int>, List<int>> BuildUpperBoundPriceList = (index, list) =>
-        {
-            List<int> res = new();
-            for (int i = index; i < list.Count; i++)
-            {
-                res.Add(list[i] < 10000 ? list[i] + 500 : list[i] + 5000);
-            }
-            return res;
-        };
-
         partial void OnSelectedManufacturerChanged(string value)
         {
             Models = carFilterService.GetAllModelsFromManufacturer(selectedManufacturer);
@@ -192,17 +249,17 @@ namespace MotorEmpireAutohaus.View_Model
         partial void OnSelectedModelChanged(string value)
         {
             Generations = carFilterService.GetGenerationBasedOnModel(value);
-            ModelHasGenerations = Generations.Count != 0 ? true : false;
+            ModelHasGenerations = Generations.Count != 0;
         }
 
         partial void OnSelectedModelIndexChanged(int value)
         {
             Generations = carFilterService.GetGenerationBasedOnModel(models[value]);
-            ModelHasGenerations = Generations.Count != 0 ? true : false;
+            ModelHasGenerations = Generations.Count != 0;
         }
 
 
-        Action<int, int, UpperLowerFilter> CompareValuesAndGenerateErrorsIfExisting = (lower, upper, option) =>
+        readonly Action<int, int, UpperLowerFilter> CompareValuesAndGenerateErrorsIfExisting = (lower, upper, option) =>
         {
 
             if (lower > upper)
