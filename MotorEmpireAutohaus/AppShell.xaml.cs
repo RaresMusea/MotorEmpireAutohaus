@@ -1,5 +1,6 @@
 ﻿using MotorEmpireAutohaus.Services.Feed;
 using MotorEmpireAutohaus.View;
+using MotorEmpireAutohaus.View.App_Settings;
 using MotorEmpireAutohaus.View.Core;
 using MotorEmpireAutohaus.View_Model;
 using MotorEmpireAutohaus.View_Model.Account;
@@ -11,8 +12,9 @@ public partial class AppShell : Shell
 	public AppShell()
 	{
 		InitializeComponent();
-        Routing.RegisterRoute(nameof(MotorEmpire),typeof(MotorEmpire));
+        //Routing.RegisterRoute(nameof(MotorEmpire),typeof(MotorEmpire));
         Routing.RegisterRoute(nameof(Feed), typeof(Feed));
+        Routing.RegisterRoute(nameof(About), typeof(About));
 	}
 
     protected override void OnAppearing()

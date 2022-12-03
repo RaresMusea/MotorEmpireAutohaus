@@ -50,6 +50,10 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\TTOctosquares.ttf" />
+	  <None Remove="Resources\Images\aboutdark.svg" />
+	  <None Remove="Resources\Images\aboutlight.svg" />
+	  <None Remove="Resources\Images\appsettingsdark.svg" />
+	  <None Remove="Resources\Images\appsettingslight.svg" />
 	  <None Remove="Resources\Images\auth.png" />
 	  <None Remove="Resources\Images\auth.svg" />
 	  <None Remove="Resources\Images\authentication.png" />
@@ -107,6 +111,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="View\App Settings\About.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\App Settings\AppSettings.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

@@ -12,7 +12,8 @@
     xmlns:viewmodel="clr-namespace:MotorEmpireAutohaus.View_Model"
     x:DataType="viewmodel:MotorEmpireViewModel"
     Shell.TabBarIsVisible="False"
-    NavigationPage.HasBackButton="False">
+    NavigationPage.HasBackButton="False"
+>
 
     <Shell.BindingContext>
         <core:MotorEmpireViewModel></core:MotorEmpireViewModel>
@@ -36,10 +37,11 @@
         ContentTemplate="{DataTemplate local:SignUp}"
         Route="SignUp" />
 
-    <!--<ShellContent
-        Title="asdasd"
-        ContentTemplate="{DataTemplate view:Feed}"
-        Route="Feed"/>-->
+    <ShellContent
+        Title="About Application"
+        ContentTemplate="{DataTemplate appSettings:About}"
+        Route="About"
+        Shell.FlyoutItemIsVisible="False"/>
 
     <FlyoutItem Route="MotorEmpire"
         FlyoutDisplayOptions="AsMultipleItems"

@@ -19,6 +19,7 @@
                                WidthRequest="1900"/>
                         <Label AbsoluteLayout.LayoutBounds="575,100,700,250"
                                Text="{Binding GreetingMessage}"
+                               TextColor="White"
                                FontAttributes="Bold"
                                FontSize="36"
                                FontFamily="Roboto"
@@ -28,6 +29,7 @@
                             
             AbsoluteLayout.LayoutBounds="445,120,710,300"
             Text="What would you like to search for today?"
+            TextColor="White"
             FontAttributes="Bold"
             HorizontalOptions="Start"
             FontSize="30"
