@@ -15,7 +15,7 @@
                        x:Name="image"
                        Opacity="0"/>
                 <Frame BackgroundColor="{AppThemeBinding Dark=#414141, Light=#dbdbdb}"
-                       WidthRequest="{OnPlatform Android=400}"
+                       WidthRequest="{OnPlatform Android=360}"
                        CornerRadius="25"
                        x:Name="mainFrame"
                        Opacity="0">
@@ -31,7 +31,7 @@
                             <ColumnDefinition Width="100"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Label Grid.Row="0" Text="Dark Mode" FontFamily="Roboto" FontSize="16" HorizontalOptions="StartAndExpand" Margin="0" Padding="0"></Label>
-                        <Switch Grid.Row="0" Grid.Column="1" HorizontalOptions="End" IsToggled="{Binding IsDarkThemeEnabled}" Margin="0,-25,0,0" ThumbColor="{AppThemeBinding Dark=White, Light=Black}" OnColor="{AppThemeBinding Dark=Red, Light=Grey}" BackgroundColor="Transparent" Toggled="OnSwitchChanged" x:Name="darkThemeSwitch"/>
+                        <Switch x:Name="darkThemeSwitch" Grid.Row="0" Grid.Column="1" HorizontalOptions="End" IsToggled="{Binding IsDarkThemeEnabled}" Margin="0,-25,0,0" ThumbColor="{AppThemeBinding Dark=White, Light=Black}" OnColor="{AppThemeBinding Dark=Red, Light=Grey}" BackgroundColor="Transparent" Toggled="OnSwitchChanged"/>
                     </Grid>
                         <Button Text="About Motor Empire Autohaus"
                                 BackgroundColor="{AppThemeBinding Dark=Red, Light=#1C6758}"

@@ -6,9 +6,9 @@ public partial class AppSettings : ContentPage
 {
 	public AppSettings(AppSettingsViewModel appSettingsViewModel)
 	{
-		BindingContext = appSettingsViewModel;
 		InitializeComponent();
-	}
+        BindingContext = appSettingsViewModel;
+    }
 
     protected override void OnAppearing()
     {
@@ -37,11 +37,11 @@ public partial class AppSettings : ContentPage
 	{
 		if (darkThemeSwitch.IsToggled)
 		{
-			Application.Current.UserAppTheme = AppTheme.Light;
+			Application.Current.UserAppTheme = AppTheme.Dark;
         }
 		else
 		{
-			Application.Current.UserAppTheme=AppTheme.Dark;
+			Application.Current.UserAppTheme=AppTheme.Light;
 		}
 
     }

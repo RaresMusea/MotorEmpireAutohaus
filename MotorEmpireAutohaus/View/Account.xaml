@@ -6,10 +6,14 @@
              xmlns:viewmodel="clr-namespace:MotorEmpireAutohaus.View_Model.Account"
              x:DataType="viewmodel:UserAccountViewModel"
              Title="My Account">
-    <VerticalStackLayout>
-        <Label
-            Text="{Binding User.Name}"
-            VerticalOptions="Center"
-            HorizontalOptions="Center" />
+    <ScrollView>
+        <VerticalStackLayout>
+            <BoxView BackgroundColor="{AppThemeBinding Dark=Grey, Light=#1C6758}"
+                     Color="{AppThemeBinding Dark=Grey, Light=#1C6758}"
+                     HeightRequest="300"
+                     CornerRadius="25"
+>
+            </BoxView>
     </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

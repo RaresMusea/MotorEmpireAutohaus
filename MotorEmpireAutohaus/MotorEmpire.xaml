@@ -499,7 +499,6 @@
                                             FontFamily="Kollektif"
                                             Clicked="CloseCarFilters"
                                             />
-                                    <Label HorizontalOptions="Center" Text="{Binding Name }"/>
                                 </VerticalStackLayout>
                             </VerticalStackLayout>
                         </VerticalStackLayout>

@@ -152,10 +152,11 @@ public partial class MotorEmpire: ContentPage
     private async void CloseCarFilters(object o, EventArgs e)
     {
 
-        await carFiltersForm.FadeTo(0, 150, Easing.CubicIn);
+        toggleCarFilters.BackgroundColor = Colors.Transparent;
+        await carFiltersForm.FadeTo(0, 240, Easing.CubicIn);
         carFiltersForm.IsVisible = false;
-        await Task.Delay(1000);
-        await primaryFrame.FadeTo(0, 150, Easing.CubicIn);
+        await Task.Delay(600);
+        await primaryFrame.FadeTo(0, 250, Easing.CubicIn);
         primaryFrame.IsVisible = false;
     }
 }

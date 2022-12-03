@@ -1,4 +1,5 @@
-﻿using MotorEmpireAutohaus.Misc.Encryption;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using MotorEmpireAutohaus.Misc.Encryption;
 using MotorEmpireAutohaus.Models.Base;
 using System;
 using System.Collections.Generic;
@@ -8,9 +9,10 @@ using System.Threading.Tasks;
 
 namespace MotorEmpireAutohaus.Models
 {
-    public abstract class Account: Entity
+    public abstract partial class Account: Entity
     {
-        public string Name { get; set; }
+        [ObservableProperty]
+        private string name;
 
         public string Password { get; set; }
 

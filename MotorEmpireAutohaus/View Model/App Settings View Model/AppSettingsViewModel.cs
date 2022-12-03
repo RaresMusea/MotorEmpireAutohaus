@@ -13,9 +13,12 @@ namespace MotorEmpireAutohaus.View_Model.App_Settings_View_Model
     public partial class AppSettingsViewModel:BaseViewModel
     {
         [ObservableProperty]
-        private bool isDarkThemeEnabled= (Application.Current.UserAppTheme == AppTheme.Dark);
+        private bool isDarkThemeEnabled=true;
 
-        public AppSettingsViewModel(){}
+        public AppSettingsViewModel()
+        {
+            isDarkThemeEnabled = Application.Current.RequestedTheme == AppTheme.Dark;
+        }
 
         [RelayCommand]
         public async void GoToAboutPage()

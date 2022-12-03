@@ -67,6 +67,11 @@ namespace MotorEmpireAutohaus.View_Model.Account
             }
         }
 
+        partial void OnUserChanged(UserAccount value)
+        {
+            user = value;
+        }
+
         [RelayCommand]
         public async void Register()
         {

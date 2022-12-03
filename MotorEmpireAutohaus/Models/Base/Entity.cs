@@ -1,6 +1,8 @@
-﻿namespace MotorEmpireAutohaus.Models.Base
+﻿using MotorEmpireAutohaus.View_Model.Base;
+
+namespace MotorEmpireAutohaus.Models.Base
 {
-    public abstract class Entity
+    public abstract class Entity:BaseViewModel
     {
         public string UUID { get; protected set; }
 

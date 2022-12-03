@@ -3,8 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MotorEmpireAutohaus.View.App_Settings.About"
              Title="About">
-    <VerticalStackLayout>
-        <ScrollView>
+    <ScrollView>
+        <VerticalStackLayout>
+
             <VerticalStackLayout>
             <Image Source="{AppThemeBinding Dark=aboutdark.png, Light=aboutlight.png}"
                    HeightRequest="300"
@@ -13,7 +14,7 @@
                    x:Name="image"
                    Opacity="0"/>
             <Frame BackgroundColor="{AppThemeBinding Dark=#414141, Light=#dbdbdb}"
-                   WidthRequest="{OnPlatform Android=400}" 
+                   WidthRequest="{OnPlatform Android=380}" 
                    x:Name="mainFrame"
                    CornerRadius="25"
                    Opacity="0">
@@ -50,6 +51,7 @@
                     </VerticalStackLayout>
                 </Frame>
             </VerticalStackLayout>
-        </ScrollView>
+
     </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
