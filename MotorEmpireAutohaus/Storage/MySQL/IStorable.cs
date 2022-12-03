@@ -1,4 +1,4 @@
-﻿using MotorEmpireAutohaus.View_Model.Base;
+﻿using MotorEmpireAutohaus.Models.Base;
 
 namespace MotorEmpireAutohaus.Storage.MySQL
 {

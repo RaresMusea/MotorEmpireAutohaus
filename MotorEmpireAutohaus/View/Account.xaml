@@ -4,11 +4,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MotorEmpireAutohaus.View.Account"
              xmlns:viewmodel="clr-namespace:MotorEmpireAutohaus.View_Model.Account"
-             x:DataType="viewmodel:UserAccount"
+             x:DataType="viewmodel:UserAccountViewModel"
              Title="My Account">
     <VerticalStackLayout>
         <Label
-            Text="{Binding Name}"
+            Text="{Binding User.Name}"
             VerticalOptions="Center"
             HorizontalOptions="Center" />
     </VerticalStackLayout>

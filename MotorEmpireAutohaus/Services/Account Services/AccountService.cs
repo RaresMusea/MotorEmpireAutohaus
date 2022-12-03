@@ -6,6 +6,9 @@ using MotorEmpireAutohaus.View_Model.Account;
 using MotorEmpireAutohaus.View_Model.Base;
 using MySqlConnector;
 using MotorEmpireAutohaus.Storage.MySQL;
+using MotorEmpireAutohaus.Models.User_Account_Model;
+using MotorEmpireAutohaus.Models.Base;
+using MotorEmpireAutohaus.Misc.Prebuilt_Components;
 
 namespace MotorEmpireAutohaus.Services.Account_Services
 {
@@ -14,9 +17,11 @@ namespace MotorEmpireAutohaus.Services.Account_Services
         private DatabaseConfigurer _databaseConfig;
         private static readonly string TableReference = "User";
 
-        public AccountService()
+        public  AccountService()
         {
             Connect();
+            //Debug.WriteLine("Connection successful!");
+            CrossPlatformMessageRenderer.RenderMessages("Connected successfully!", "Close", 3);
         }
 
         private void Connect()
@@ -160,7 +165,6 @@ namespace MotorEmpireAutohaus.Services.Account_Services
                 "Cannot sign you up because of an input mismatch. Verify the form and try again later.", "Ok", 10);
             return null;
         }
-
 
         private void UpdateLastSeenFor(UserAccount user)
         {

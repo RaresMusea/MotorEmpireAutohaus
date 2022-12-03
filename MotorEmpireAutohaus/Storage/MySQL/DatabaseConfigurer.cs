@@ -44,7 +44,7 @@ namespace MotorEmpireAutohaus.Storage.MySQL
                 try
                 {
                     DatabaseConnection?.Open();
-                    Debug.WriteLine("Connection successful!");
+                   /* Debug.WriteLine("Connection successful!");
                     await SnackbarComponent.GenerateSnackbar("Connection successful!",
                         "Close",
                         Color.FromArgb("#dbdbdb"),
@@ -57,9 +57,7 @@ namespace MotorEmpireAutohaus.Storage.MySQL
                         14,
                         0,
                         4,
-                        null);
-
-
+                        null);*/
                     ConnectionOpen = true;
                 }
                 catch (MySqlException mySqlEx)

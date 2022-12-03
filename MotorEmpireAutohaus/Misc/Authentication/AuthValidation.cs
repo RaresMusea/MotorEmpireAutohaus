@@ -1,5 +1,6 @@
 ﻿using System.Net.Mail;
 using MotorEmpireAutohaus.Misc.Common;
+using MotorEmpireAutohaus.Models.User_Account_Model;
 using MotorEmpireAutohaus.View_Model.Account;
 
 namespace MotorEmpireAutohaus.Misc.Authentication

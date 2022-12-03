@@ -10,6 +10,7 @@ using MotorEmpireAutohaus.Services.Feed;
 using MotorEmpireAutohaus.View_Model.Shell_Navigation;
 using MotorEmpireAutohaus.View.Core;
 using MotorEmpireAutohaus.View_Model.Vehicles;
+using MotorEmpireAutohaus.Models.User_Account_Model;
 
 namespace MotorEmpireAutohaus;
 public static class MauiProgram
@@ -39,7 +40,7 @@ public static class MauiProgram
         //builder.Services.AddSingleton<AuthValidation>();
 
         builder.Services.AddSingleton<LogIn>();
-        builder.Services.AddSingleton<UserAccount>();
+        builder.Services.AddSingleton<UserAccountViewModel>();
         builder.Services.AddSingleton<AuthValidation>();
         builder.Services.AddSingleton<SignUp>();
         builder.Services.AddSingleton<AccountService>();
@@ -53,6 +54,7 @@ public static class MauiProgram
         builder.Services.AddSingleton<Account>();
         builder.Services.AddSingleton<Feed>();
         builder.Services.AddSingleton<SearchResultsViewModel>();
+        builder.Services.AddSingleton<UserAccount>();
 
         return builder.Build();
     }

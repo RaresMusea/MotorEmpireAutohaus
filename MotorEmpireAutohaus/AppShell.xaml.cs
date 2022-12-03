@@ -26,7 +26,7 @@ public partial class AppShell : Shell
 
         Animation parentAnimation = new()
         {
-            {0,0.8,new Animation(v=>FlyoutImageBanner.Opacity=v,0,1,Easing.BounceIn)}
+            //{0,0.8,new Animation(v=>FlyoutImageBanner.Opacity=v,0,1,Easing.BounceIn)}
         };
 
         parentAnimation.Commit(this, "TransitionAnimation", 16, 2000, null, null);

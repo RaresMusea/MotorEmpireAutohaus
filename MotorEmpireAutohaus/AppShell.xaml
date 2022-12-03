@@ -7,6 +7,7 @@
     xmlns:local="clr-namespace:MotorEmpireAutohaus"
     xmlns:core="clr-namespace:MotorEmpireAutohaus.View_Model"
     xmlns:feed="clr-namespace:MotorEmpireAutohaus.View.Core"
+    xmlns:appSettings="clr-namespace:MotorEmpireAutohaus.View.App_Settings"
     xmlns:signupPage="clr-namespace:MotorEmpireAutohaus.View"
     xmlns:viewmodel="clr-namespace:MotorEmpireAutohaus.View_Model"
     x:DataType="viewmodel:MotorEmpireViewModel"
@@ -49,7 +50,7 @@
         <ShellContent Title="Motor Empire Autohaus" ContentTemplate="{DataTemplate view:MotorEmpire}" x:Name="MotorEmpireTab"></ShellContent>
         <ShellContent Title="All Cars" ContentTemplate="{DataTemplate feed:Feed}" x:Name="SearchTab"></ShellContent>
         <ShellContent Title="My account" ContentTemplate="{DataTemplate view:Account}" x:Name="AccountTab"></ShellContent>
-        <ShellContent Title="Car" ContentTemplate="{DataTemplate view:Car}"></ShellContent>
+        <ShellContent Title="Settings" ContentTemplate="{DataTemplate appSettings:AppSettings}"></ShellContent>
     </FlyoutItem>
     
     
@@ -61,15 +62,15 @@
                 <HorizontalStackLayout HorizontalOptions="Center"
                                    Margin="0,0,0,35"
                                    >
-                    <Image Source="{Binding UserAccount.ProfileImageUrl}"
+                    <!--<Image Source="{Binding UserAccount.ProfileImageUrl}"
                    WidthRequest="30"
                    HeightRequest="30"
                    VerticalOptions="Center"
                    Margin="0,0,10,0"
                    x:Name="FlyoutImageBanner"
-                   />
+                   />-->
 
-                    <Label Text="{Binding Name}"
+                    <Label Text="MEA"
                         VerticalOptions="Center"
                         FontAttributes="Bold"
                         FontSize="16"

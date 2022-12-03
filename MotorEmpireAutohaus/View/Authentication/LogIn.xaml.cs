@@ -23,7 +23,7 @@ public partial class LogIn : ContentPage, IPlatformDependentStyling
         parentAnimation.Commit(this, "TransitionAnimation", 16, 2000);
     }
 
-    public LogIn(UserAccount userAccount)
+    public LogIn(UserAccountViewModel userAccount)
     {
         BindingContext = userAccount;
         InitializeComponent();

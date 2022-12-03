@@ -29,7 +29,7 @@ namespace MotorEmpireAutohaus.View_Model
         private CarFilter carFilter;
 
         [ObservableProperty]
-        private UserAccount userAccount;
+        private UserAccountViewModel userAccount;
 
         private readonly CarFilterService carFilterService;
 
@@ -133,7 +133,7 @@ namespace MotorEmpireAutohaus.View_Model
 
         public MotorEmpireViewModel() { }
 
-        public MotorEmpireViewModel(CarFilterService carFilterService, UserAccount userAccount)
+        public MotorEmpireViewModel(CarFilterService carFilterService, UserAccountViewModel userAccount)
         {
             this.carFilterService = carFilterService;
             InitializeProps();

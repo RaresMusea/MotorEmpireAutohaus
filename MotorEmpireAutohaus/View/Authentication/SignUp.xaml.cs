@@ -22,7 +22,7 @@ public partial class SignUp : ContentPage, IPlatformDependentStyling
         parentAnimation.Commit(this, "TransitionAnimation", 16, 2000, null, null);
     }
 
-    public SignUp(UserAccount viewModel)
+    public SignUp(UserAccountViewModel viewModel)
     {
         BindingContext = viewModel;
         InitializeComponent();

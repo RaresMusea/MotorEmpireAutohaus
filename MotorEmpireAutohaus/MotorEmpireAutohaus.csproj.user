@@ -11,6 +11,9 @@
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
   <ItemGroup>
+    <MauiXaml Update="View\App Settings\AppSettings.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="View\Authentication\LogIn.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

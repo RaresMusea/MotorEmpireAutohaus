@@ -3,7 +3,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodel="clr-namespace:MotorEmpireAutohaus.View_Model.Account"
-             x:DataType="viewmodel:UserAccount"
+             x:DataType="viewmodel:UserAccountViewModel"
              x:Class="MotorEmpireAutohaus.LogIn"
              Title="">
     <ScrollView>
@@ -79,7 +79,7 @@
                                            BackgroundColor="{AppThemeBinding Dark=White, Light=White}"
                                            FontFamily="Roboto"
                                            Margin="5,0,0,0"
-                                           Text="{Binding EmailAddress}" />
+                                           Text="{Binding User.EmailAddress}" />
                                     <ImageButton Source="eye.png"
                                                  WidthRequest="24"
                                                  HeightRequest="24"
@@ -122,7 +122,7 @@
                                            FontFamily="Roboto"
                                            IsPassword="True"
                                            Margin="5,0,0,0"
-                                           Text="{Binding Password}" />
+                                           Text="{Binding User.Password}" />
                                     <ImageButton Source="eye.png"
                                                  x:Name="passwordShowButton"
                                                  WidthRequest="24"

@@ -107,6 +107,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="View\App Settings\AppSettings.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\Authentication\LogIn.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -131,6 +134,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Folder Include="Models\Vehicle Models\Car\Car Model\" />
 	  <Folder Include="Resources\Images\Authentication\" />
 	</ItemGroup>
 
