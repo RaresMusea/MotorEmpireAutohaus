@@ -3,17 +3,36 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MotorEmpireAutohaus.View.Account"
-             xmlns:viewmodel="clr-namespace:MotorEmpireAutohaus.View_Model.Account"
+             xmlns:viewmodel="clr-namespace:MotorEmpireAutohaus.MVVM.View_Models.Account;assembly=MVVM"
              x:DataType="viewmodel:UserAccountViewModel"
              Title="My Account">
     <ScrollView>
         <VerticalStackLayout>
-            <BoxView BackgroundColor="{AppThemeBinding Dark=Grey, Light=#1C6758}"
-                     Color="{AppThemeBinding Dark=Grey, Light=#1C6758}"
-                     HeightRequest="300"
-                     CornerRadius="25"
->
-            </BoxView>
+            <Frame 
+                   BackgroundColor="{AppThemeBinding Dark=#414141, Light=#dbdbdb}"
+                   CornerRadius="25"
+                   Margin="0,20,0,0"
+                   >
+                <VerticalStackLayout>
+                    <Label Text="{Binding User.Name}" HorizontalOptions="Center" Margin="15"/>
+                    <Frame BorderColor="Black"
+                           CornerRadius="50"
+                           HeightRequest="90"
+                           WidthRequest="90"
+                           Margin="0,0,0,0"
+                           IsClippedToBounds="True"
+                           HorizontalOptions="Center">
+                        <Image Source="{Binding User.ProfileImageUrl}"
+                           Aspect="AspectFill"
+                           HorizontalOptions="Center"
+
+                           VerticalOptions="Center"
+                           Margin="-20"
+                           WidthRequest="90"
+                           HeightRequest="90"/>
+                    </Frame>
+                </VerticalStackLayout>
+            </Frame>
     </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

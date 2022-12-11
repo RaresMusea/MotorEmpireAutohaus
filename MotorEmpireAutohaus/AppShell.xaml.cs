@@ -3,7 +3,7 @@ using MotorEmpireAutohaus.View;
 using MotorEmpireAutohaus.View.App_Settings;
 using MotorEmpireAutohaus.View.Core;
 using MotorEmpireAutohaus.View_Model;
-using MotorEmpireAutohaus.View_Model.Account;
+using MotorEmpireAutohaus.MVVM.View_Models.Account;
 
 namespace MotorEmpireAutohaus;
 

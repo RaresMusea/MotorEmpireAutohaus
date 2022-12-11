@@ -1,5 +1,4 @@
-using MotorEmpireAutohaus.View_Model.App_Settings_View_Model;
-
+using MotorEmpireAutohaus.MVVM.View_Model.App_Settings;
 namespace MotorEmpireAutohaus.View.App_Settings;
 
 public partial class AppSettings : ContentPage

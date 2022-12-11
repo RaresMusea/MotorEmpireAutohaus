@@ -1,8 +1,8 @@
-﻿using MotorEmpireAutohaus.Misc.Handlers;
+﻿using MotorEmpireAutohaus.Tools.Handlers;
 using Microsoft.Maui.Platform;
-using MotorEmpireAutohaus.Misc.Common;
-using MotorEmpireAutohaus.View_Model.Account;
+using MotorEmpireAutohaus.MVVM.View_Models.Account;
 using MotorEmpireAutohaus.View_Model;
+using MotorEmpireAutohaus.Tools.Utility.StatusBarAppearance;
 
 namespace MotorEmpireAutohaus;
 

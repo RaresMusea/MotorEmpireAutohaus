@@ -1,4 +1,4 @@
-using MotorEmpireAutohaus.View_Model.Account;
+using MotorEmpireAutohaus.MVVM.View_Models.Account;
 
 namespace MotorEmpireAutohaus.View;
 

@@ -3,7 +3,7 @@ AreAnyAssembliesTrimmed=false
 				AOTCompiler=
 				AOTOutputDirectory=obj\Debug\net6.0-maccatalyst\maccatalyst-x64\nativelibraries/aot-output/
 				AppBundleManifestPath=bin\Debug\net6.0-maccatalyst\maccatalyst-x64\MotorEmpireAutohaus.app\Contents/Info.plist
-				CacheDirectory=C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net6.0-maccatalyst\maccatalyst-x64\linker-cache
+				CacheDirectory=C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net6.0-maccatalyst\maccatalyst-x64\linker-cache
 				
 				Debug=true
 				DeploymentTarget=
@@ -179,7 +179,7 @@ FrameworkAssembly=System.Private.CoreLib
 				Interpreter=all
 				IntermediateLinkDir=obj\Debug\net6.0-maccatalyst\maccatalyst-x64\linked\
 				InvariantGlobalization=false
-				ItemsDirectory=C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net6.0-maccatalyst\maccatalyst-x64\linker-items
+				ItemsDirectory=C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net6.0-maccatalyst\maccatalyst-x64\linker-items
 				IsAppExtension=false
 				IsSimulatorBuild=
 				LibMonoLinkMode=dylib

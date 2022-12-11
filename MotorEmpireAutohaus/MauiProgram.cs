@@ -1,18 +1,16 @@
-﻿using MotorEmpireAutohaus.Storage;
-using CommunityToolkit.Maui;
-using MotorEmpireAutohaus.Misc.Authentication;
+﻿using CommunityToolkit.Maui;
+using MotorEmpireAutohaus.MVVM.Services.Authentication;
 using MotorEmpireAutohaus.Services.Account_Services;
-using MotorEmpireAutohaus.View_Model.Account;
 using MotorEmpireAutohaus.View;
-using MotorEmpireAutohaus.View_Model;
-using MotorEmpireAutohaus.Misc.Common;
 using MotorEmpireAutohaus.Services.Feed;
 using MotorEmpireAutohaus.View_Model.Shell_Navigation;
 using MotorEmpireAutohaus.View.Core;
 using MotorEmpireAutohaus.View_Model.Vehicles;
-using MotorEmpireAutohaus.Models.User_Account_Model;
 using MotorEmpireAutohaus.View.App_Settings;
-using MotorEmpireAutohaus.View_Model.App_Settings_View_Model;
+using MotorEmpireAutohaus.MVVM.View_Models.Account;
+using MotorEmpireAutohaus.MVVM.View_Models.Core;
+using MotorEmpireAutohaus.MVVM.Models.User_Account_Model;
+using MotorEmpireAutohaus.MVVM.View_Model.App_Settings;
 
 namespace MotorEmpireAutohaus;
 public static class MauiProgram
@@ -40,23 +38,22 @@ public static class MauiProgram
           builder.Services.AddSingleton<MainPage>()*/
         ;
         //builder.Services.AddSingleton<AuthValidation>();
-
+        builder.Services.AddSingleton<MotorEmpireAutohaus.View.Account>();
+        builder.Services.AddSingleton<UserAccount>();
         builder.Services.AddSingleton<LogIn>();
         builder.Services.AddSingleton<UserAccountViewModel>();
         builder.Services.AddSingleton<AuthValidation>();
         builder.Services.AddSingleton<SignUp>();
         builder.Services.AddSingleton<AccountService>();
         builder.Services.AddSingleton<Search>();
-        builder.Services.AddSingleton<Account>();
         builder.Services.AddSingleton<MotorEmpire>();
         builder.Services.AddSingleton<MotorEmpireViewModel>();
         builder.Services.AddSingleton<CarFilterService>();
         builder.Services.AddSingleton<AppShell>();
         builder.Services.AddSingleton<ShellViewModel>();
-        builder.Services.AddSingleton<Account>();
         builder.Services.AddSingleton<Feed>();
         builder.Services.AddSingleton<SearchResultsViewModel>();
-        builder.Services.AddSingleton<UserAccount>();
+
         builder.Services.AddSingleton<AppSettings>();
         builder.Services.AddSingleton<AppSettingsViewModel>();
 

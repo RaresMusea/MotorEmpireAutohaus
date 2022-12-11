@@ -2,7 +2,7 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:viewmodel="clr-namespace:MotorEmpireAutohaus.View_Model"
+             xmlns:viewmodel="clr-namespace:MotorEmpireAutohaus.MVVM.View_Models.Core;assembly=MVVM"
              x:DataType="viewmodel:MotorEmpireViewModel"
              x:Class="MotorEmpireAutohaus.View.MotorEmpire"
              Title="Motor Empire Autohaus"
@@ -73,7 +73,7 @@
                                 FontSize="16"
                                 />
                         <Button AbsoluteLayout.LayoutBounds="100,430,1320,100"
-                                Text="Or View Categores"
+                                Text="Or view categories"
                                 WidthRequest="200" 
                                 HeightRequest="60"
                                 BackgroundColor="{AppThemeBinding Dark=Red, Light=#1C6758}"

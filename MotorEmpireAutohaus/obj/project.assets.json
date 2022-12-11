@@ -262,19 +262,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "compile": {
@@ -284,7 +271,7 @@
           "lib/MonoAndroid10/_._": {}
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -2549,6 +2536,49 @@
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
         }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
+        }
       }
     },
     "net6.0-android31.0/android-arm": {
@@ -2812,19 +2842,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "compile": {
@@ -2834,7 +2851,7 @@
           "lib/MonoAndroid10/_._": {}
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -5034,6 +5051,49 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
+        }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
         }
       }
     },
@@ -5298,19 +5358,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "compile": {
@@ -5320,7 +5367,7 @@
           "lib/MonoAndroid10/_._": {}
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -7520,6 +7567,49 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
+        }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
         }
       }
     },
@@ -7784,19 +7874,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "compile": {
@@ -7806,7 +7883,7 @@
           "lib/MonoAndroid10/_._": {}
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -10006,6 +10083,49 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
+        }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
         }
       }
     },
@@ -10270,19 +10390,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "compile": {
@@ -10292,7 +10399,7 @@
           "lib/MonoAndroid10/_._": {}
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -12492,6 +12599,49 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
+        }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
         }
       }
     },
@@ -12756,19 +12906,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "compile": {
@@ -12778,7 +12915,7 @@
           "lib/MonoAndroid10/_._": {}
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -14978,6 +15115,49 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
+        }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
         }
       }
     },
@@ -15242,19 +15422,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "compile": {
@@ -15264,7 +15431,7 @@
           "lib/MonoAndroid10/_._": {}
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -17465,6 +17632,49 @@
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
         }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
+        }
       }
     },
     "net6.0-android31.0/win10-x64": {
@@ -17728,19 +17938,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "compile": {
@@ -17750,7 +17947,7 @@
           "lib/MonoAndroid10/_._": {}
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -19950,6 +20147,49 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
+        }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
         }
       }
     },
@@ -20234,19 +20474,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -20260,7 +20487,7 @@
           }
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -21625,6 +21852,52 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
+        }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
         }
       }
     },
@@ -21909,19 +22182,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -21936,7 +22196,7 @@
           }
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -23607,6 +23867,52 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
+        }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
         }
       }
     },
@@ -23891,19 +24197,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -23918,7 +24211,7 @@
           }
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -25589,6 +25882,52 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
+        }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
         }
       }
     },
@@ -25873,19 +26212,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -25900,7 +26226,7 @@
           }
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -27571,6 +27897,52 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
+        }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
         }
       }
     },
@@ -27855,19 +28227,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -27882,7 +28241,7 @@
           }
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -29553,6 +29912,52 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
+        }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
         }
       }
     },
@@ -29837,19 +30242,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -29864,7 +30256,7 @@
           }
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -31535,6 +31927,52 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
+        }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
         }
       }
     },
@@ -31819,19 +32257,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -31846,7 +32271,7 @@
           }
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -33518,6 +33943,52 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
+        }
       }
     },
     "net6.0-ios16.0/win10-x64": {
@@ -33801,19 +34272,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -33828,7 +34286,7 @@
           }
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -35496,6 +35954,52 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
+        }
       }
     },
     "net6.0-maccatalyst15.4": {
@@ -35779,19 +36283,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -35805,7 +36296,7 @@
           }
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -37171,6 +37662,52 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
+        }
       }
     },
     "net6.0-maccatalyst15.4/android-arm": {
@@ -37454,19 +37991,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -37481,7 +38005,7 @@
           }
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -39152,6 +39676,52 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
+        }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
         }
       }
     },
@@ -39436,19 +40006,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -39463,7 +40020,7 @@
           }
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -41134,6 +41691,52 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
+        }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
         }
       }
     },
@@ -41418,19 +42021,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -41445,7 +42035,7 @@
           }
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -43116,6 +43706,52 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
+        }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
         }
       }
     },
@@ -43400,19 +44036,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -43427,7 +44050,7 @@
           }
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -45098,6 +45721,52 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
+        }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
         }
       }
     },
@@ -45382,19 +46051,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -45409,7 +46065,7 @@
           }
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -47080,6 +47736,52 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
+        }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
         }
       }
     },
@@ -47364,19 +48066,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -47391,7 +48080,7 @@
           }
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -49063,6 +49752,52 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
+        }
       }
     },
     "net6.0-maccatalyst15.4/win10-x64": {
@@ -49346,19 +50081,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -49373,7 +50095,7 @@
           }
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -51040,6 +51762,52 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
+        }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0",
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
         }
       }
     },
@@ -51368,19 +52136,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -51479,7 +52234,7 @@
           }
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -52837,6 +53592,49 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
+        }
       }
     },
     "net6.0-windows10.0.19041/android-arm": {
@@ -53150,19 +53948,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -53248,7 +54033,7 @@
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -54911,6 +55696,49 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
+        }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
         }
       }
     },
@@ -55225,19 +56053,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -55323,7 +56138,7 @@
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -56986,6 +57801,49 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
+        }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
         }
       }
     },
@@ -57300,19 +58158,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -57398,7 +58243,7 @@
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -59061,6 +59906,49 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
+        }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
         }
       }
     },
@@ -59375,19 +60263,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -59473,7 +60348,7 @@
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -61136,6 +62011,49 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
+        }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
         }
       }
     },
@@ -61450,19 +62368,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -61548,7 +62453,7 @@
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -63211,6 +64116,49 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
+        }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
         }
       }
     },
@@ -63525,19 +64473,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -63623,7 +64558,7 @@
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -65286,6 +66221,49 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
+        }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
         }
       }
     },
@@ -65603,19 +66581,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Toolkit.Mvvm/7.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -65704,7 +66669,7 @@
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
         }
       },
-      "MySqlConnector/2.2.0": {
+      "MySqlConnector/2.2.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {
@@ -67363,6 +68328,49 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
+        }
+      },
+      "MVVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.0.0",
+          "Storage": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MVVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVVM.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FirebaseStorage.net": "1.0.3",
+          "MySqlConnector": "2.2.2",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui.Core": "2.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
         }
       }
     }
@@ -67871,32 +68879,6 @@
         "microsoft.netcore.targets.1.1.0.nupkg.sha512",
         "microsoft.netcore.targets.nuspec",
         "runtime.json"
-      ]
-    },
-    "Microsoft.Toolkit.Mvvm/7.1.2": {
-      "sha512": "tUQn6ar9oP7kmYaZ6pWabxpQaqw95Bsf+GG7prEL0y5MV5F60z76lI/Ppps9zcTqwd7e5CrdZBcdfor9WuvohA==",
-      "type": "package",
-      "path": "microsoft.toolkit.mvvm/7.1.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "License.md",
-        "ThirdPartyNotices.txt",
-        "analyzers/dotnet/cs/Microsoft.Toolkit.Mvvm.SourceGenerators.dll",
-        "analyzers/dotnet/cs/Microsoft.Toolkit.Mvvm.SourceGenerators.pdb",
-        "analyzers/dotnet/cs/Microsoft.Toolkit.Mvvm.SourceGenerators.xml",
-        "lib/net5.0/Microsoft.Toolkit.Mvvm.dll",
-        "lib/net5.0/Microsoft.Toolkit.Mvvm.pdb",
-        "lib/net5.0/Microsoft.Toolkit.Mvvm.xml",
-        "lib/netstandard2.0/Microsoft.Toolkit.Mvvm.dll",
-        "lib/netstandard2.0/Microsoft.Toolkit.Mvvm.pdb",
-        "lib/netstandard2.0/Microsoft.Toolkit.Mvvm.xml",
-        "lib/netstandard2.1/Microsoft.Toolkit.Mvvm.dll",
-        "lib/netstandard2.1/Microsoft.Toolkit.Mvvm.pdb",
-        "lib/netstandard2.1/Microsoft.Toolkit.Mvvm.xml",
-        "microsoft.toolkit.mvvm.7.1.2.nupkg.sha512",
-        "microsoft.toolkit.mvvm.nuspec"
       ]
     },
     "Microsoft.Win32.Primitives/4.3.0": {
@@ -68688,10 +69670,10 @@
         "tools/x86/GenXbf.dll"
       ]
     },
-    "MySqlConnector/2.2.0": {
-      "sha512": "RjJlqd22Vtuii7voNV8oyqhekDTmiMUW4legga9bFaJaT+hbyKbwY4/99FZRWkNryVW1BUCZ7GR/N8qhy5155A==",
+    "MySqlConnector/2.2.2": {
+      "sha512": "rhy856Z1LrSblkC//OkvLIXBuiLhwlBAwDBrdHJEkIhu3eZRCQQg9sDNpt7eEVXtIFAMyEXkaky0bYpoGKps3g==",
       "type": "package",
-      "path": "mysqlconnector/2.2.0",
+      "path": "mysqlconnector/2.2.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -68711,7 +69693,7 @@
         "lib/netstandard2.1/MySqlConnector.dll",
         "lib/netstandard2.1/MySqlConnector.xml",
         "logo.png",
-        "mysqlconnector.2.2.0.nupkg.sha512",
+        "mysqlconnector.2.2.2.nupkg.sha512",
         "mysqlconnector.nuspec"
       ]
     },
@@ -74965,6 +75947,21 @@
         "xamarin.kotlinx.coroutines.core.jvm.1.6.0.1.nupkg.sha512",
         "xamarin.kotlinx.coroutines.core.jvm.nuspec"
       ]
+    },
+    "MVVM/1.0.0": {
+      "type": "project",
+      "path": "../MVVM/MVVM.csproj",
+      "msbuildProject": "../MVVM/MVVM.csproj"
+    },
+    "Storage/1.0.0": {
+      "type": "project",
+      "path": "../Storage/Storage.csproj",
+      "msbuildProject": "../Storage/Storage.csproj"
+    },
+    "Tools/1.0.0": {
+      "type": "project",
+      "path": "../Tools/Tools.csproj",
+      "msbuildProject": "../Tools/Tools.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -74973,47 +75970,55 @@
       "CommunityToolkit.Maui.Core >= 2.0.0",
       "CommunityToolkit.Mvvm >= 8.0.0",
       "FirebaseStorage.net >= 1.0.3",
+      "MVVM >= 1.0.0",
       "Microsoft.Maui.Dependencies >= 6.0.547",
       "Microsoft.Maui.Extensions >= 6.0.547",
-      "Microsoft.Toolkit.Mvvm >= 7.1.2",
-      "MySqlConnector >= 2.2.0",
-      "System.ObjectModel >= 4.3.0"
+      "MySqlConnector >= 2.2.2",
+      "Storage >= 1.0.0",
+      "System.ObjectModel >= 4.3.0",
+      "Tools >= 1.0.0"
     ],
     "net6.0-ios16.0": [
       "CommunityToolkit.Maui >= 2.0.0",
       "CommunityToolkit.Maui.Core >= 2.0.0",
       "CommunityToolkit.Mvvm >= 8.0.0",
       "FirebaseStorage.net >= 1.0.3",
+      "MVVM >= 1.0.0",
       "Microsoft.Maui.Dependencies >= 6.0.547",
       "Microsoft.Maui.Extensions >= 6.0.547",
-      "Microsoft.Toolkit.Mvvm >= 7.1.2",
-      "MySqlConnector >= 2.2.0",
+      "MySqlConnector >= 2.2.2",
+      "Storage >= 1.0.0",
       "System.ObjectModel >= 4.3.0",
-      "System.Runtime.InteropServices.NFloat.Internal >= 6.0.1"
+      "System.Runtime.InteropServices.NFloat.Internal >= 6.0.1",
+      "Tools >= 1.0.0"
     ],
     "net6.0-maccatalyst15.4": [
       "CommunityToolkit.Maui >= 2.0.0",
       "CommunityToolkit.Maui.Core >= 2.0.0",
       "CommunityToolkit.Mvvm >= 8.0.0",
       "FirebaseStorage.net >= 1.0.3",
+      "MVVM >= 1.0.0",
       "Microsoft.Maui.Dependencies >= 6.0.547",
       "Microsoft.Maui.Extensions >= 6.0.547",
-      "Microsoft.Toolkit.Mvvm >= 7.1.2",
-      "MySqlConnector >= 2.2.0",
+      "MySqlConnector >= 2.2.2",
+      "Storage >= 1.0.0",
       "System.ObjectModel >= 4.3.0",
-      "System.Runtime.InteropServices.NFloat.Internal >= 6.0.1"
+      "System.Runtime.InteropServices.NFloat.Internal >= 6.0.1",
+      "Tools >= 1.0.0"
     ],
     "net6.0-windows10.0.19041": [
       "CommunityToolkit.Maui >= 2.0.0",
       "CommunityToolkit.Maui.Core >= 2.0.0",
       "CommunityToolkit.Mvvm >= 8.0.0",
       "FirebaseStorage.net >= 1.0.3",
+      "MVVM >= 1.0.0",
       "Microsoft.Maui.Dependencies >= 6.0.547",
       "Microsoft.Maui.Extensions >= 6.0.547",
-      "Microsoft.Toolkit.Mvvm >= 7.1.2",
       "Microsoft.Windows.SDK.BuildTools >= 10.0.22000.194",
-      "MySqlConnector >= 2.2.0",
-      "System.ObjectModel >= 4.3.0"
+      "MySqlConnector >= 2.2.2",
+      "Storage >= 1.0.0",
+      "System.ObjectModel >= 4.3.0",
+      "Tools >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -75023,11 +76028,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\MotorEmpireAutohaus\\MotorEmpireAutohaus.csproj",
+      "projectUniqueName": "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\MotorEmpireAutohaus\\MotorEmpireAutohaus.csproj",
       "projectName": "MotorEmpireAutohaus",
-      "projectPath": "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\MotorEmpireAutohaus\\MotorEmpireAutohaus.csproj",
+      "projectPath": "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\MotorEmpireAutohaus\\MotorEmpireAutohaus.csproj",
       "packagesPath": "C:\\Users\\rares\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\MotorEmpireAutohaus\\obj\\",
+      "outputPath": "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\MotorEmpireAutohaus\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
@@ -75052,19 +76057,59 @@
       "frameworks": {
         "net6.0-android31.0": {
           "targetAlias": "net6.0-android",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\MVVM\\MVVM.csproj": {
+              "projectPath": "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\MVVM\\MVVM.csproj"
+            },
+            "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\Storage\\Storage.csproj": {
+              "projectPath": "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\Storage\\Storage.csproj"
+            },
+            "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\Tools\\Tools.csproj": {
+              "projectPath": "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\Tools\\Tools.csproj"
+            }
+          }
         },
         "net6.0-ios16.0": {
           "targetAlias": "net6.0-ios",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\MVVM\\MVVM.csproj": {
+              "projectPath": "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\MVVM\\MVVM.csproj"
+            },
+            "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\Storage\\Storage.csproj": {
+              "projectPath": "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\Storage\\Storage.csproj"
+            },
+            "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\Tools\\Tools.csproj": {
+              "projectPath": "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\Tools\\Tools.csproj"
+            }
+          }
         },
         "net6.0-maccatalyst15.4": {
           "targetAlias": "net6.0-maccatalyst",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\MVVM\\MVVM.csproj": {
+              "projectPath": "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\MVVM\\MVVM.csproj"
+            },
+            "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\Storage\\Storage.csproj": {
+              "projectPath": "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\Storage\\Storage.csproj"
+            },
+            "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\Tools\\Tools.csproj": {
+              "projectPath": "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\Tools\\Tools.csproj"
+            }
+          }
         },
         "net6.0-windows10.0.19041": {
           "targetAlias": "net6.0-windows10.0.19041.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\MVVM\\MVVM.csproj": {
+              "projectPath": "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\MVVM\\MVVM.csproj"
+            },
+            "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\Storage\\Storage.csproj": {
+              "projectPath": "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\Storage\\Storage.csproj"
+            },
+            "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\Tools\\Tools.csproj": {
+              "projectPath": "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\Tools\\Tools.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -75103,13 +76148,9 @@
             "version": "[6.0.547, )",
             "autoReferenced": true
           },
-          "Microsoft.Toolkit.Mvvm": {
-            "target": "Package",
-            "version": "[7.1.2, )"
-          },
           "MySqlConnector": {
             "target": "Package",
-            "version": "[2.2.0, )"
+            "version": "[2.2.2, )"
           },
           "System.ObjectModel": {
             "target": "Package",
@@ -75233,13 +76274,9 @@
             "version": "[6.0.547, )",
             "autoReferenced": true
           },
-          "Microsoft.Toolkit.Mvvm": {
-            "target": "Package",
-            "version": "[7.1.2, )"
-          },
           "MySqlConnector": {
             "target": "Package",
-            "version": "[2.2.0, )"
+            "version": "[2.2.2, )"
           },
           "System.ObjectModel": {
             "target": "Package",
@@ -75344,13 +76381,9 @@
             "version": "[6.0.547, )",
             "autoReferenced": true
           },
-          "Microsoft.Toolkit.Mvvm": {
-            "target": "Package",
-            "version": "[7.1.2, )"
-          },
           "MySqlConnector": {
             "target": "Package",
-            "version": "[2.2.0, )"
+            "version": "[2.2.2, )"
           },
           "System.ObjectModel": {
             "target": "Package",
@@ -75456,10 +76489,6 @@
             "version": "[6.0.547, )",
             "autoReferenced": true
           },
-          "Microsoft.Toolkit.Mvvm": {
-            "target": "Package",
-            "version": "[7.1.2, )"
-          },
           "Microsoft.Windows.SDK.BuildTools": {
             "suppressParent": "All",
             "target": "Package",
@@ -75468,7 +76497,7 @@
           },
           "MySqlConnector": {
             "target": "Package",
-            "version": "[2.2.0, )"
+            "version": "[2.2.2, )"
           },
           "System.ObjectModel": {
             "target": "Package",

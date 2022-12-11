@@ -5,19 +5,16 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:view="clr-namespace:MotorEmpireAutohaus.View"
     xmlns:local="clr-namespace:MotorEmpireAutohaus"
-    xmlns:core="clr-namespace:MotorEmpireAutohaus.View_Model"
+    xmlns:core="clr-namespace:MotorEmpireAutohaus.MVVM.View_Models.Core;assembly=MVVM"
     xmlns:feed="clr-namespace:MotorEmpireAutohaus.View.Core"
     xmlns:appSettings="clr-namespace:MotorEmpireAutohaus.View.App_Settings"
     xmlns:signupPage="clr-namespace:MotorEmpireAutohaus.View"
-    xmlns:viewmodel="clr-namespace:MotorEmpireAutohaus.View_Model"
+    xmlns:viewmodel="clr-namespace:MotorEmpireAutohaus.MVVM.View_Models.Core;assembly=MVVM"
     x:DataType="viewmodel:MotorEmpireViewModel"
     Shell.TabBarIsVisible="False"
     NavigationPage.HasBackButton="False"
 >
 
-    <Shell.BindingContext>
-        <core:MotorEmpireViewModel></core:MotorEmpireViewModel>
-    </Shell.BindingContext>
     
     <ShellContent
         Title=""

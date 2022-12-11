@@ -1,5 +1,5 @@
-using MotorEmpireAutohaus.Misc.Common;
-using MotorEmpireAutohaus.View_Model.Account;
+using MotorEmpireAutohaus.Tools.Utility;
+using MotorEmpireAutohaus.MVVM.View_Models.Account;
 
 namespace MotorEmpireAutohaus;
 
