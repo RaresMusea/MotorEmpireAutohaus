@@ -14,7 +14,8 @@
                    Margin="0,20,0,0"
                    >
                 <VerticalStackLayout>
-                    <Label Text="{Binding User.Name}" HorizontalOptions="Center" Margin="15"/>
+                    <Label Text="{Binding User.Name}" HorizontalOptions="Center" Margin="15" FontSize="Title" FontFamily="Kollektif" FontAttributes="Bold"/>
+                    <Label Text="{Binding User.Username}" HorizontalOptions="Center" Margin="10" FontSize="Subtitle" FontFamily="Kollektif" FontAttributes="Italic"/>
                     <Frame BorderColor="Black"
                            CornerRadius="50"
                            HeightRequest="90"
@@ -31,6 +32,22 @@
                            WidthRequest="90"
                            HeightRequest="90"/>
                     </Frame>
+                    <Button Text="Manage profile picture"
+                            Command="{Binding ToggleOptionsCommand}"
+                            WidthRequest="300"
+                            BackgroundColor="{AppThemeBinding Dark=Red, Light=#1C6758}"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            FontFamily="Kollektif"
+                            Margin="0,10,0,0"
+                            BorderColor="Transparent">
+                        <FlyoutBase.ContextFlyout>
+                            <MenuFlyout>
+                                <MenuFlyoutItem Text="Take a picture and set it as your profile picture" Command="{Binding TakePhotoAndUploadCommand}"/>
+                                <MenuFlyoutItem Text="Upload a picture from your device"/>
+                            </MenuFlyout>
+                        </FlyoutBase.ContextFlyout>
+                    </Button>
                 </VerticalStackLayout>
             </Frame>
     </VerticalStackLayout>

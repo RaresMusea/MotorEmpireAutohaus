@@ -4,12 +4,23 @@ using CommunityToolkit.Mvvm.Input;
 using MotorEmpireAutohaus.MVVM.Models.User_Account_Model;
 using MotorEmpireAutohaus.MVVM.Services.Authentication;
 using MotorEmpireAutohaus.MVVM.View_Models.Base;
+using System.Runtime.InteropServices;
+using System.Windows;
+using CommunityToolkit.Maui.Layouts;
+using MotorEmpireAutohaus.Tools.Utility.Messages;
 
 namespace MotorEmpireAutohaus.MVVM.View_Models.Account
 {
 
     public partial class UserAccountViewModel : BaseViewModel
     {
+        //Win32 API call
+        [DllImport("user32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
+        static extern void mouse_event(long dwFlags, long dx, long dy, long cButtons, long dwExtraInfo);
+
+        private const int MOUSEEVENTF_RIGHTDOWN = 0x08;
+        private const int MOUSEEVENTF_RIGHTUP = 0x10;
+
         private readonly AccountService _accountService;
         private readonly AuthValidation _authValidation;
         /*
@@ -71,6 +82,22 @@ namespace MotorEmpireAutohaus.MVVM.View_Models.Account
             user = value;
         }
 
+        private static async Task TakePhoto()
+        {
+            if (MediaPicker.Default.IsCaptureSupported)
+            {
+                FileResult photo = await MediaPicker.Default.CapturePhotoAsync();
+
+                if (photo is not null)
+                {
+                    string localFilePath = Path.Combine(FileSystem.CacheDirectory, photo.FileName);
+                    using Stream sourceItem = await photo.OpenReadAsync();
+                    using FileStream localFileStream = File.OpenWrite(localFilePath);
+                    await sourceItem.CopyToAsync(localFileStream);
+                }
+            }
+        }
+
         [RelayCommand]
         public async void Register()
         {
@@ -81,6 +108,31 @@ namespace MotorEmpireAutohaus.MVVM.View_Models.Account
                     await Shell.Current.GoToAsync("//LogIn", true);
                 }
             }
+        }
+
+        [RelayCommand]
+        public async void ToggleOptions()
+        {
+            if (DeviceInfo.Platform == DevicePlatform.WinUI)
+            {
+                mouse_event(MOUSEEVENTF_RIGHTDOWN | MOUSEEVENTF_RIGHTUP, 0, 0, 0, 0);
+            }
+            else
+            {
+                string action = await Application.Current.MainPage.DisplayActionSheet("Manage Profile Picture", "Cancel", null, "Upload a live photo", "Upload a photo from your device");
+                if(action=="Upload a live photo")
+                {
+                    await TakePhoto();
+                }
+            }
+        }
+
+
+
+        [RelayCommand]
+        public async void TakePhotoAndUpload()
+        {
+            await TakePhoto();  
         }
     }
 }
