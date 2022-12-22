@@ -22,7 +22,6 @@ public class MonoPackageManager_Resources {
 		"Microsoft.Extensions.Options.dll",
 		"Microsoft.Extensions.Primitives.dll",
 		"Microsoft.Maui.Graphics.dll",
-		"Microsoft.Toolkit.Mvvm.dll",
 		"MySqlConnector.dll",
 		"Newtonsoft.Json.dll",
 		"Xamarin.Android.Glide.dll",
@@ -106,6 +105,9 @@ public class MonoPackageManager_Resources {
 		"Xamarin.Kotlin.StdLib.Jdk8.dll",
 		"Xamarin.KotlinX.Coroutines.Android.dll",
 		"Xamarin.KotlinX.Coroutines.Core.Jvm.dll",
+		"MVVM.dll",
+		"Storage.dll",
+		"Tools.dll",
 	};
 	public static String[] Dependencies = new String[]{
 	};

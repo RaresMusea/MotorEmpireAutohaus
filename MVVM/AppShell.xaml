@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MotorEmpireAutohaus.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:view="clr-namespace:MotorEmpireAutohaus.View"
+    xmlns:local="clr-namespace:MotorEmpireAutohaus"
+    xmlns:core="clr-namespace:MotorEmpireAutohaus.MVVM.View_Models.Core;assembly=MVVM"
+    xmlns:feed="clr-namespace:MotorEmpireAutohaus.View.Core"
+    xmlns:appSettings="clr-namespace:MotorEmpireAutohaus.View.App_Settings"
+    xmlns:signupPage="clr-namespace:MotorEmpireAutohaus.View"
+    xmlns:viewmodel="clr-namespace:MotorEmpireAutohaus.MVVM.View_Models.Core;assembly=MVVM"
+    xmlns:motorempire="clr-namespace:MotorEmpireAutohaus.View"
+    x:DataType="viewmodel:MotorEmpireViewModel"
+    Shell.TabBarIsVisible="False"
+    NavigationPage.HasBackButton="False"
+>
+
+    
+    <ShellContent
+        Title=""
+        ContentTemplate="{DataTemplate local:LogIn}"
+        Shell.NavBarIsVisible="False"
+        FlyoutIcon="False"
+        Shell.FlyoutBehavior="Disabled"
+        FlyoutItemIsVisible="False"
+        Route="LogIn" />
+
+    <ShellContent
+        Title=""
+        FlyoutIcon="False"
+        Shell.NavBarIsVisible="False"
+        Shell.FlyoutBehavior="Disabled"
+        FlyoutItemIsVisible="False"
+        ContentTemplate="{DataTemplate local:SignUp}"
+        Route="SignUp" />
+
+    <ShellContent
+        Title="About Application"
+        ContentTemplate="{DataTemplate appSettings:About}"
+        Route="About"
+        Shell.FlyoutItemIsVisible="False"/>
+
+    <ShellContent
+        Title="Motor Empire Autohaus"
+        ContentTemplate="{DataTemplate motorempire:MotorEmpire}"
+        Route="MotorEmpire"
+        Shell.FlyoutItemIsVisible="False"/>
+
+    <FlyoutItem Route="MotorEmpire"
+        FlyoutDisplayOptions="AsMultipleItems"
+                Shell.NavBarHasShadow="True"
+                Shell.NavBarIsVisible="True"
+                Shell.BackgroundColor="{AppThemeBinding Dark=#414141, Light=#1C6758}"
+                x:Name="Flyout">
+        <ShellContent Title="Motor Empire Autohaus" ContentTemplate="{DataTemplate view:MotorEmpire}" x:Name="MotorEmpireTab"></ShellContent>
+        <ShellContent Title="All Cars" ContentTemplate="{DataTemplate feed:Feed}" x:Name="SearchTab"></ShellContent>
+        <ShellContent Title="My account" ContentTemplate="{DataTemplate view:Account}" x:Name="AccountTab"></ShellContent>
+        <ShellContent Title="Settings" ContentTemplate="{DataTemplate appSettings:AppSettings}"></ShellContent>
+    </FlyoutItem>
+    
+    
+
+    <Shell.FlyoutHeader>
+        <VerticalStackLayout>
+                <Image Source="{AppThemeBinding Dark=flyoutbanner.png, Light=flyoutbannerlight.png}"
+               Margin="0,0,0,50"/>
+                <HorizontalStackLayout HorizontalOptions="Center"
+                                   Margin="0,0,0,35"
+                                   >
+                    <!--<Image Source="{Binding UserAccount.ProfileImageUrl}"
+                   WidthRequest="30"
+                   HeightRequest="30"
+                   VerticalOptions="Center"
+                   Margin="0,0,10,0"
+                   x:Name="FlyoutImageBanner"
+                   />-->
+
+                    <Label Text="MEA"
+                        VerticalOptions="Center"
+                        FontAttributes="Bold"
+                        FontSize="16"
+                       />
+                </HorizontalStackLayout>
+            <Button  WidthRequest="250"
+                     HeightRequest="45"
+                     HorizontalOptions="Center"
+                     Margin=" 0,0,0,35"
+                     Text="Sell now"
+                     FontFamily="Kollektif"
+                     FontAttributes="Bold"
+                     FontSize="20"
+                     BackgroundColor="{AppThemeBinding Dark=#252525, Light=#1C6758}"
+                     TextColor="White"/>
+            
+            
+            
+            <Label Text="Menu"
+                   FontSize="Title"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,15"
+                   FontAttributes="Bold"
+                   />
+
+        </VerticalStackLayout>
+    </Shell.FlyoutHeader>
+
+    <Shell.FlyoutFooter>
+        <VerticalStackLayout>
+
+            <Button WidthRequest="210"
+                    Text="Sign out"
+                    FontAttributes="Bold"
+                    FontSize="18"
+                    FontFamily="Kollektif"
+                    Margin="0,0,0,20"
+                    HorizontalOptions="Center"
+                    BackgroundColor="{AppThemeBinding Light=Orange,Dark=#FF4D00}"
+                    TextColor="White"
+                    Clicked="SignOut"
+                    />
+
+        </VerticalStackLayout>
+    </Shell.FlyoutFooter>
+
+</Shell>

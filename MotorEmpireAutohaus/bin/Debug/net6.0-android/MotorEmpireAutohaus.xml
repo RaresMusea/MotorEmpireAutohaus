@@ -4,63 +4,6 @@
         <name>MotorEmpireAutohaus</name>
     </assembly>
     <members>
-        <member name="P:MotorEmpireAutohaus.View_Model.Account.User.Name">
-            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.Account.User.name"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.View_Model.Account.User.Password">
-            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.Account.User.password"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.View_Model.Account.UserAccount.EmailAddress">
-            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.Account.UserAccount.emailAddress"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.View_Model.Account.UserAccount.Username">
-            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.Account.UserAccount.username"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.View_Model.Account.UserAccount.PasswordConfirmation">
-            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.Account.UserAccount.passwordConfirmation"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.View_Model.Account.UserAccount.ProfileImageURL">
-            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.Account.UserAccount.profileImageURL"/>
-        </member>
-        <member name="F:MotorEmpireAutohaus.View_Model.Account.UserAccount.loginCommand">
-            <summary>The backing field for <see cref="P:MotorEmpireAutohaus.View_Model.Account.UserAccount.LoginCommand"/>.</summary>
-        </member>
-        <member name="P:MotorEmpireAutohaus.View_Model.Account.UserAccount.LoginCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.View_Model.Account.UserAccount.Login"/>.</summary>
-        </member>
-        <member name="F:MotorEmpireAutohaus.View_Model.Account.UserAccount.registerCommand">
-            <summary>The backing field for <see cref="P:MotorEmpireAutohaus.View_Model.Account.UserAccount.RegisterCommand"/>.</summary>
-        </member>
-        <member name="P:MotorEmpireAutohaus.View_Model.Account.UserAccount.RegisterCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.View_Model.Account.UserAccount.Register"/>.</summary>
-        </member>
-        <member name="F:MotorEmpireAutohaus.View_Model.Account.UserAccount.wrongEmailInputFocusCommand">
-            <summary>The backing field for <see cref="P:MotorEmpireAutohaus.View_Model.Account.UserAccount.WrongEmailInputFocusCommand"/>.</summary>
-        </member>
-        <member name="P:MotorEmpireAutohaus.View_Model.Account.UserAccount.WrongEmailInputFocusCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.View_Model.Account.UserAccount.OnWrongEmailInputFocus"/>.</summary>
-        </member>
-        <member name="F:MotorEmpireAutohaus.View_Model.Account.UserAccount.wrongPasswordInputFocusCommand">
-            <summary>The backing field for <see cref="P:MotorEmpireAutohaus.View_Model.Account.UserAccount.WrongPasswordInputFocusCommand"/>.</summary>
-        </member>
-        <member name="P:MotorEmpireAutohaus.View_Model.Account.UserAccount.WrongPasswordInputFocusCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.View_Model.Account.UserAccount.OnWrongPasswordInputFocus"/>.</summary>
-        </member>
-        <member name="P:MotorEmpireAutohaus.View_Model.Base.BaseViewModel.IsBusy">
-            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.Base.BaseViewModel.isBusy"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.View_Model.FeedViewModel.FileName">
-            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.FeedViewModel.fileName"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.View_Model.FeedViewModel.ImageUrl">
-            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.FeedViewModel.imageUrl"/>
-        </member>
-        <member name="F:MotorEmpireAutohaus.View_Model.FeedViewModel.updateFileToFirebaseCommand">
-            <summary>The backing field for <see cref="P:MotorEmpireAutohaus.View_Model.FeedViewModel.UpdateFileToFirebaseCommand"/>.</summary>
-        </member>
-        <member name="P:MotorEmpireAutohaus.View_Model.FeedViewModel.UpdateFileToFirebaseCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.View_Model.FeedViewModel.UpdateFileToFirebase"/>.</summary>
-        </member>
         <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
             <summary>
             Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color

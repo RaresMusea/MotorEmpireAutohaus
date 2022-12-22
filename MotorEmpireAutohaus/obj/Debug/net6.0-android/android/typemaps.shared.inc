@@ -42428,1263 +42428,1263 @@
 
 	.type	.L.java_type_name.8485, @object
 .L.java_type_name.8485:
-	.asciz	"crc64338477404e88479c/ColorChangeRevealDrawable"
-	.size	.L.java_type_name.8485, 48
+	.asciz	"crc642ee77d519d5b4c02/MainActivity"
+	.size	.L.java_type_name.8485, 35
 
 	.type	.L.java_type_name.8486, @object
 .L.java_type_name.8486:
-	.asciz	"crc64338477404e88479c/ControlsAccessibilityDelegate"
-	.size	.L.java_type_name.8486, 52
+	.asciz	"crc642ee77d519d5b4c02/MainApplication"
+	.size	.L.java_type_name.8486, 38
 
 	.type	.L.java_type_name.8487, @object
 .L.java_type_name.8487:
-	.asciz	"crc64338477404e88479c/DragAndDropGestureHandler"
+	.asciz	"crc64338477404e88479c/ColorChangeRevealDrawable"
 	.size	.L.java_type_name.8487, 48
 
 	.type	.L.java_type_name.8488, @object
 .L.java_type_name.8488:
-	.asciz	"crc64338477404e88479c/DragAndDropGestureHandler_CustomLocalStateData"
-	.size	.L.java_type_name.8488, 69
+	.asciz	"crc64338477404e88479c/ControlsAccessibilityDelegate"
+	.size	.L.java_type_name.8488, 52
 
 	.type	.L.java_type_name.8489, @object
 .L.java_type_name.8489:
-	.asciz	"crc64338477404e88479c/FormattedStringExtensions_FontSpan"
-	.size	.L.java_type_name.8489, 57
+	.asciz	"crc64338477404e88479c/DragAndDropGestureHandler"
+	.size	.L.java_type_name.8489, 48
 
 	.type	.L.java_type_name.8490, @object
 .L.java_type_name.8490:
-	.asciz	"crc64338477404e88479c/FormattedStringExtensions_LetterSpacingSpan"
-	.size	.L.java_type_name.8490, 66
+	.asciz	"crc64338477404e88479c/DragAndDropGestureHandler_CustomLocalStateData"
+	.size	.L.java_type_name.8490, 69
 
 	.type	.L.java_type_name.8491, @object
 .L.java_type_name.8491:
-	.asciz	"crc64338477404e88479c/FormattedStringExtensions_LineHeightSpan"
-	.size	.L.java_type_name.8491, 63
+	.asciz	"crc64338477404e88479c/FormattedStringExtensions_FontSpan"
+	.size	.L.java_type_name.8491, 57
 
 	.type	.L.java_type_name.8492, @object
 .L.java_type_name.8492:
-	.asciz	"crc64338477404e88479c/FragmentContainer"
-	.size	.L.java_type_name.8492, 40
+	.asciz	"crc64338477404e88479c/FormattedStringExtensions_LetterSpacingSpan"
+	.size	.L.java_type_name.8492, 66
 
 	.type	.L.java_type_name.8493, @object
 .L.java_type_name.8493:
-	.asciz	"crc64338477404e88479c/GenericAnimatorListener"
-	.size	.L.java_type_name.8493, 46
+	.asciz	"crc64338477404e88479c/FormattedStringExtensions_LineHeightSpan"
+	.size	.L.java_type_name.8493, 63
 
 	.type	.L.java_type_name.8494, @object
 .L.java_type_name.8494:
-	.asciz	"crc64338477404e88479c/GenericGlobalLayoutListener"
-	.size	.L.java_type_name.8494, 50
+	.asciz	"crc64338477404e88479c/FragmentContainer"
+	.size	.L.java_type_name.8494, 40
 
 	.type	.L.java_type_name.8495, @object
 .L.java_type_name.8495:
-	.asciz	"crc64338477404e88479c/GenericMenuClickListener"
-	.size	.L.java_type_name.8495, 47
+	.asciz	"crc64338477404e88479c/GenericAnimatorListener"
+	.size	.L.java_type_name.8495, 46
 
 	.type	.L.java_type_name.8496, @object
 .L.java_type_name.8496:
-	.asciz	"crc64338477404e88479c/GradientStrokeDrawable"
-	.size	.L.java_type_name.8496, 45
+	.asciz	"crc64338477404e88479c/GenericGlobalLayoutListener"
+	.size	.L.java_type_name.8496, 50
 
 	.type	.L.java_type_name.8497, @object
 .L.java_type_name.8497:
-	.asciz	"crc64338477404e88479c/GradientStrokeDrawable_GradientShaderFactory"
-	.size	.L.java_type_name.8497, 67
+	.asciz	"crc64338477404e88479c/GenericMenuClickListener"
+	.size	.L.java_type_name.8497, 47
 
 	.type	.L.java_type_name.8498, @object
 .L.java_type_name.8498:
-	.asciz	"crc64338477404e88479c/InnerGestureListener"
-	.size	.L.java_type_name.8498, 43
+	.asciz	"crc64338477404e88479c/GradientStrokeDrawable"
+	.size	.L.java_type_name.8498, 45
 
 	.type	.L.java_type_name.8499, @object
 .L.java_type_name.8499:
-	.asciz	"crc64338477404e88479c/InnerScaleListener"
-	.size	.L.java_type_name.8499, 41
+	.asciz	"crc64338477404e88479c/GradientStrokeDrawable_GradientShaderFactory"
+	.size	.L.java_type_name.8499, 67
 
 	.type	.L.java_type_name.8500, @object
 .L.java_type_name.8500:
-	.asciz	"crc64338477404e88479c/MauiViewPager"
-	.size	.L.java_type_name.8500, 36
+	.asciz	"crc64338477404e88479c/InnerGestureListener"
+	.size	.L.java_type_name.8500, 43
 
 	.type	.L.java_type_name.8501, @object
 .L.java_type_name.8501:
-	.asciz	"crc64338477404e88479c/ModalNavigationManager_ModalContainer"
-	.size	.L.java_type_name.8501, 60
+	.asciz	"crc64338477404e88479c/InnerScaleListener"
+	.size	.L.java_type_name.8501, 41
 
 	.type	.L.java_type_name.8502, @object
 .L.java_type_name.8502:
-	.asciz	"crc64338477404e88479c/ModalNavigationManager_ModalContainer_ModalFragment"
-	.size	.L.java_type_name.8502, 74
+	.asciz	"crc64338477404e88479c/MauiViewPager"
+	.size	.L.java_type_name.8502, 36
 
 	.type	.L.java_type_name.8503, @object
 .L.java_type_name.8503:
-	.asciz	"crc64338477404e88479c/MultiPageFragmentStateAdapter_1"
-	.size	.L.java_type_name.8503, 54
+	.asciz	"crc64338477404e88479c/ModalNavigationManager_ModalContainer"
+	.size	.L.java_type_name.8503, 60
 
 	.type	.L.java_type_name.8504, @object
 .L.java_type_name.8504:
-	.asciz	"crc64338477404e88479c/TapAndPanGestureDetector"
-	.size	.L.java_type_name.8504, 47
+	.asciz	"crc64338477404e88479c/ModalNavigationManager_ModalContainer_ModalFragment"
+	.size	.L.java_type_name.8504, 74
 
 	.type	.L.java_type_name.8505, @object
 .L.java_type_name.8505:
-	.asciz	"crc64338477404e88479c/ToolbarExtensions_ToolbarTitleIconImageView"
-	.size	.L.java_type_name.8505, 66
+	.asciz	"crc64338477404e88479c/MultiPageFragmentStateAdapter_1"
+	.size	.L.java_type_name.8505, 54
 
 	.type	.L.java_type_name.8506, @object
 .L.java_type_name.8506:
-	.asciz	"crc64396a3fe5f8138e3f/CustomTabsServiceConnectionImpl"
-	.size	.L.java_type_name.8506, 54
+	.asciz	"crc64338477404e88479c/TapAndPanGestureDetector"
+	.size	.L.java_type_name.8506, 47
 
 	.type	.L.java_type_name.8507, @object
 .L.java_type_name.8507:
-	.asciz	"crc64396a3fe5f8138e3f/KeepAliveService"
-	.size	.L.java_type_name.8507, 39
+	.asciz	"crc64338477404e88479c/ToolbarExtensions_ToolbarTitleIconImageView"
+	.size	.L.java_type_name.8507, 66
 
 	.type	.L.java_type_name.8508, @object
 .L.java_type_name.8508:
-	.asciz	"crc643f2b18b2570eaa5a/PlatformGraphicsView"
-	.size	.L.java_type_name.8508, 43
+	.asciz	"crc64396a3fe5f8138e3f/CustomTabsServiceConnectionImpl"
+	.size	.L.java_type_name.8508, 54
 
 	.type	.L.java_type_name.8509, @object
 .L.java_type_name.8509:
-	.asciz	"crc6452ffdc5b34af3a0f/AccessibilityDelegateCompatWrapper"
-	.size	.L.java_type_name.8509, 57
+	.asciz	"crc64396a3fe5f8138e3f/KeepAliveService"
+	.size	.L.java_type_name.8509, 39
 
 	.type	.L.java_type_name.8510, @object
 .L.java_type_name.8510:
-	.asciz	"crc6452ffdc5b34af3a0f/BorderDrawable"
-	.size	.L.java_type_name.8510, 37
+	.asciz	"crc643f2b18b2570eaa5a/PlatformGraphicsView"
+	.size	.L.java_type_name.8510, 43
 
 	.type	.L.java_type_name.8511, @object
 .L.java_type_name.8511:
-	.asciz	"crc6452ffdc5b34af3a0f/ContainerView"
-	.size	.L.java_type_name.8511, 36
+	.asciz	"crc6452ffdc5b34af3a0f/AccessibilityDelegateCompatWrapper"
+	.size	.L.java_type_name.8511, 57
 
 	.type	.L.java_type_name.8512, @object
 .L.java_type_name.8512:
-	.asciz	"crc6452ffdc5b34af3a0f/ContentViewGroup"
-	.size	.L.java_type_name.8512, 39
+	.asciz	"crc6452ffdc5b34af3a0f/BorderDrawable"
+	.size	.L.java_type_name.8512, 37
 
 	.type	.L.java_type_name.8513, @object
 .L.java_type_name.8513:
-	.asciz	"crc6452ffdc5b34af3a0f/LayoutViewGroup"
-	.size	.L.java_type_name.8513, 38
+	.asciz	"crc6452ffdc5b34af3a0f/ContainerView"
+	.size	.L.java_type_name.8513, 36
 
 	.type	.L.java_type_name.8514, @object
 .L.java_type_name.8514:
-	.asciz	"crc6452ffdc5b34af3a0f/LocalizedDigitsKeyListener"
-	.size	.L.java_type_name.8514, 49
+	.asciz	"crc6452ffdc5b34af3a0f/ContentViewGroup"
+	.size	.L.java_type_name.8514, 39
 
 	.type	.L.java_type_name.8515, @object
 .L.java_type_name.8515:
-	.asciz	"crc6452ffdc5b34af3a0f/MauiAccessibilityDelegateCompat"
-	.size	.L.java_type_name.8515, 54
+	.asciz	"crc6452ffdc5b34af3a0f/LayoutViewGroup"
+	.size	.L.java_type_name.8515, 38
 
 	.type	.L.java_type_name.8516, @object
 .L.java_type_name.8516:
-	.asciz	"crc6452ffdc5b34af3a0f/MauiAppCompatEditText"
-	.size	.L.java_type_name.8516, 44
+	.asciz	"crc6452ffdc5b34af3a0f/LocalizedDigitsKeyListener"
+	.size	.L.java_type_name.8516, 49
 
 	.type	.L.java_type_name.8517, @object
 .L.java_type_name.8517:
-	.asciz	"crc6452ffdc5b34af3a0f/MauiBoxView"
-	.size	.L.java_type_name.8517, 34
+	.asciz	"crc6452ffdc5b34af3a0f/MauiAccessibilityDelegateCompat"
+	.size	.L.java_type_name.8517, 54
 
 	.type	.L.java_type_name.8518, @object
 .L.java_type_name.8518:
-	.asciz	"crc6452ffdc5b34af3a0f/MauiDatePicker"
-	.size	.L.java_type_name.8518, 37
+	.asciz	"crc6452ffdc5b34af3a0f/MauiAppCompatEditText"
+	.size	.L.java_type_name.8518, 44
 
 	.type	.L.java_type_name.8519, @object
 .L.java_type_name.8519:
-	.asciz	"crc6452ffdc5b34af3a0f/MauiHorizontalScrollView"
-	.size	.L.java_type_name.8519, 47
+	.asciz	"crc6452ffdc5b34af3a0f/MauiBoxView"
+	.size	.L.java_type_name.8519, 34
 
 	.type	.L.java_type_name.8520, @object
 .L.java_type_name.8520:
-	.asciz	"crc6452ffdc5b34af3a0f/MauiMaterialButton"
-	.size	.L.java_type_name.8520, 41
+	.asciz	"crc6452ffdc5b34af3a0f/MauiDatePicker"
+	.size	.L.java_type_name.8520, 37
 
 	.type	.L.java_type_name.8521, @object
 .L.java_type_name.8521:
-	.asciz	"crc6452ffdc5b34af3a0f/MauiPageControl"
-	.size	.L.java_type_name.8521, 38
+	.asciz	"crc6452ffdc5b34af3a0f/MauiHorizontalScrollView"
+	.size	.L.java_type_name.8521, 47
 
 	.type	.L.java_type_name.8522, @object
 .L.java_type_name.8522:
-	.asciz	"crc6452ffdc5b34af3a0f/MauiPageControl_TEditClickListener"
-	.size	.L.java_type_name.8522, 57
+	.asciz	"crc6452ffdc5b34af3a0f/MauiMaterialButton"
+	.size	.L.java_type_name.8522, 41
 
 	.type	.L.java_type_name.8523, @object
 .L.java_type_name.8523:
-	.asciz	"crc6452ffdc5b34af3a0f/MauiPicker"
-	.size	.L.java_type_name.8523, 33
+	.asciz	"crc6452ffdc5b34af3a0f/MauiPageControl"
+	.size	.L.java_type_name.8523, 38
 
 	.type	.L.java_type_name.8524, @object
 .L.java_type_name.8524:
-	.asciz	"crc6452ffdc5b34af3a0f/MauiPickerBase"
-	.size	.L.java_type_name.8524, 37
+	.asciz	"crc6452ffdc5b34af3a0f/MauiPageControl_TEditClickListener"
+	.size	.L.java_type_name.8524, 57
 
 	.type	.L.java_type_name.8525, @object
 .L.java_type_name.8525:
-	.asciz	"crc6452ffdc5b34af3a0f/MauiScrollView"
-	.size	.L.java_type_name.8525, 37
+	.asciz	"crc6452ffdc5b34af3a0f/MauiPicker"
+	.size	.L.java_type_name.8525, 33
 
 	.type	.L.java_type_name.8526, @object
 .L.java_type_name.8526:
-	.asciz	"crc6452ffdc5b34af3a0f/MauiShapeView"
-	.size	.L.java_type_name.8526, 36
+	.asciz	"crc6452ffdc5b34af3a0f/MauiPickerBase"
+	.size	.L.java_type_name.8526, 37
 
 	.type	.L.java_type_name.8527, @object
 .L.java_type_name.8527:
-	.asciz	"crc6452ffdc5b34af3a0f/MauiStepper"
-	.size	.L.java_type_name.8527, 34
+	.asciz	"crc6452ffdc5b34af3a0f/MauiScrollView"
+	.size	.L.java_type_name.8527, 37
 
 	.type	.L.java_type_name.8528, @object
 .L.java_type_name.8528:
-	.asciz	"crc6452ffdc5b34af3a0f/MauiSwipeRefreshLayout"
-	.size	.L.java_type_name.8528, 45
+	.asciz	"crc6452ffdc5b34af3a0f/MauiShapeView"
+	.size	.L.java_type_name.8528, 36
 
 	.type	.L.java_type_name.8529, @object
 .L.java_type_name.8529:
-	.asciz	"crc6452ffdc5b34af3a0f/MauiSwipeView"
-	.size	.L.java_type_name.8529, 36
+	.asciz	"crc6452ffdc5b34af3a0f/MauiStepper"
+	.size	.L.java_type_name.8529, 34
 
 	.type	.L.java_type_name.8530, @object
 .L.java_type_name.8530:
-	.asciz	"crc6452ffdc5b34af3a0f/MauiTextView"
-	.size	.L.java_type_name.8530, 35
+	.asciz	"crc6452ffdc5b34af3a0f/MauiSwipeRefreshLayout"
+	.size	.L.java_type_name.8530, 45
 
 	.type	.L.java_type_name.8531, @object
 .L.java_type_name.8531:
-	.asciz	"crc6452ffdc5b34af3a0f/MauiTimePicker"
-	.size	.L.java_type_name.8531, 37
+	.asciz	"crc6452ffdc5b34af3a0f/MauiSwipeView"
+	.size	.L.java_type_name.8531, 36
 
 	.type	.L.java_type_name.8532, @object
 .L.java_type_name.8532:
-	.asciz	"crc6452ffdc5b34af3a0f/MauiWebChromeClient"
-	.size	.L.java_type_name.8532, 42
+	.asciz	"crc6452ffdc5b34af3a0f/MauiTextView"
+	.size	.L.java_type_name.8532, 35
 
 	.type	.L.java_type_name.8533, @object
 .L.java_type_name.8533:
-	.asciz	"crc6452ffdc5b34af3a0f/MauiWebView"
-	.size	.L.java_type_name.8533, 34
+	.asciz	"crc6452ffdc5b34af3a0f/MauiTimePicker"
+	.size	.L.java_type_name.8533, 37
 
 	.type	.L.java_type_name.8534, @object
 .L.java_type_name.8534:
-	.asciz	"crc6452ffdc5b34af3a0f/MauiWebViewClient"
-	.size	.L.java_type_name.8534, 40
+	.asciz	"crc6452ffdc5b34af3a0f/MauiWebChromeClient"
+	.size	.L.java_type_name.8534, 42
 
 	.type	.L.java_type_name.8535, @object
 .L.java_type_name.8535:
-	.asciz	"crc6452ffdc5b34af3a0f/NavigationViewFragment"
-	.size	.L.java_type_name.8535, 45
+	.asciz	"crc6452ffdc5b34af3a0f/MauiWebView"
+	.size	.L.java_type_name.8535, 34
 
 	.type	.L.java_type_name.8536, @object
 .L.java_type_name.8536:
-	.asciz	"crc6452ffdc5b34af3a0f/PlatformTouchGraphicsView"
-	.size	.L.java_type_name.8536, 48
+	.asciz	"crc6452ffdc5b34af3a0f/MauiWebViewClient"
+	.size	.L.java_type_name.8536, 40
 
 	.type	.L.java_type_name.8537, @object
 .L.java_type_name.8537:
-	.asciz	"crc6452ffdc5b34af3a0f/ScopedFragment"
-	.size	.L.java_type_name.8537, 37
+	.asciz	"crc6452ffdc5b34af3a0f/NavigationViewFragment"
+	.size	.L.java_type_name.8537, 45
 
 	.type	.L.java_type_name.8538, @object
 .L.java_type_name.8538:
-	.asciz	"crc6452ffdc5b34af3a0f/StackNavigationManager_Callbacks"
-	.size	.L.java_type_name.8538, 55
+	.asciz	"crc6452ffdc5b34af3a0f/PlatformTouchGraphicsView"
+	.size	.L.java_type_name.8538, 48
 
 	.type	.L.java_type_name.8539, @object
 .L.java_type_name.8539:
-	.asciz	"crc6452ffdc5b34af3a0f/StackNavigationManager_StackContext"
-	.size	.L.java_type_name.8539, 58
+	.asciz	"crc6452ffdc5b34af3a0f/ScopedFragment"
+	.size	.L.java_type_name.8539, 37
 
 	.type	.L.java_type_name.8540, @object
 .L.java_type_name.8540:
-	.asciz	"crc6452ffdc5b34af3a0f/StackNavigationManager_StackLayoutInflater"
-	.size	.L.java_type_name.8540, 65
+	.asciz	"crc6452ffdc5b34af3a0f/StackNavigationManager_Callbacks"
+	.size	.L.java_type_name.8540, 55
 
 	.type	.L.java_type_name.8541, @object
 .L.java_type_name.8541:
-	.asciz	"crc6452ffdc5b34af3a0f/StepperHandlerHolder"
-	.size	.L.java_type_name.8541, 43
+	.asciz	"crc6452ffdc5b34af3a0f/StackNavigationManager_StackContext"
+	.size	.L.java_type_name.8541, 58
 
 	.type	.L.java_type_name.8542, @object
 .L.java_type_name.8542:
-	.asciz	"crc6452ffdc5b34af3a0f/StepperHandlerManager_StepperListener"
-	.size	.L.java_type_name.8542, 60
+	.asciz	"crc6452ffdc5b34af3a0f/StackNavigationManager_StackLayoutInflater"
+	.size	.L.java_type_name.8542, 65
 
 	.type	.L.java_type_name.8543, @object
 .L.java_type_name.8543:
-	.asciz	"crc6452ffdc5b34af3a0f/SwipeViewPager"
-	.size	.L.java_type_name.8543, 37
+	.asciz	"crc6452ffdc5b34af3a0f/StepperHandlerHolder"
+	.size	.L.java_type_name.8543, 43
 
 	.type	.L.java_type_name.8544, @object
 .L.java_type_name.8544:
-	.asciz	"crc6452ffdc5b34af3a0f/ViewFragment"
-	.size	.L.java_type_name.8544, 35
+	.asciz	"crc6452ffdc5b34af3a0f/StepperHandlerManager_StepperListener"
+	.size	.L.java_type_name.8544, 60
 
 	.type	.L.java_type_name.8545, @object
 .L.java_type_name.8545:
-	.asciz	"crc6452ffdc5b34af3a0f/WebViewExtensions_JavascriptResult"
-	.size	.L.java_type_name.8545, 57
+	.asciz	"crc6452ffdc5b34af3a0f/SwipeViewPager"
+	.size	.L.java_type_name.8545, 37
 
 	.type	.L.java_type_name.8546, @object
 .L.java_type_name.8546:
-	.asciz	"crc6452ffdc5b34af3a0f/WrapperView"
-	.size	.L.java_type_name.8546, 34
+	.asciz	"crc6452ffdc5b34af3a0f/ViewFragment"
+	.size	.L.java_type_name.8546, 35
 
 	.type	.L.java_type_name.8547, @object
 .L.java_type_name.8547:
-	.asciz	"crc645d80431ce5f73f11/CarouselSpacingItemDecoration"
-	.size	.L.java_type_name.8547, 52
+	.asciz	"crc6452ffdc5b34af3a0f/WebViewExtensions_JavascriptResult"
+	.size	.L.java_type_name.8547, 57
 
 	.type	.L.java_type_name.8548, @object
 .L.java_type_name.8548:
-	.asciz	"crc645d80431ce5f73f11/CarouselViewAdapter_2"
-	.size	.L.java_type_name.8548, 44
+	.asciz	"crc6452ffdc5b34af3a0f/WrapperView"
+	.size	.L.java_type_name.8548, 34
 
 	.type	.L.java_type_name.8549, @object
 .L.java_type_name.8549:
-	.asciz	"crc645d80431ce5f73f11/CarouselViewOnScrollListener"
-	.size	.L.java_type_name.8549, 51
+	.asciz	"crc645d80431ce5f73f11/CarouselSpacingItemDecoration"
+	.size	.L.java_type_name.8549, 52
 
 	.type	.L.java_type_name.8550, @object
 .L.java_type_name.8550:
-	.asciz	"crc645d80431ce5f73f11/CarouselViewwOnGlobalLayoutListener"
-	.size	.L.java_type_name.8550, 58
+	.asciz	"crc645d80431ce5f73f11/CarouselViewAdapter_2"
+	.size	.L.java_type_name.8550, 44
 
 	.type	.L.java_type_name.8551, @object
 .L.java_type_name.8551:
-	.asciz	"crc645d80431ce5f73f11/CenterSnapHelper"
-	.size	.L.java_type_name.8551, 39
+	.asciz	"crc645d80431ce5f73f11/CarouselViewOnScrollListener"
+	.size	.L.java_type_name.8551, 51
 
 	.type	.L.java_type_name.8552, @object
 .L.java_type_name.8552:
-	.asciz	"crc645d80431ce5f73f11/DataChangeObserver"
-	.size	.L.java_type_name.8552, 41
+	.asciz	"crc645d80431ce5f73f11/CarouselViewwOnGlobalLayoutListener"
+	.size	.L.java_type_name.8552, 58
 
 	.type	.L.java_type_name.8553, @object
 .L.java_type_name.8553:
-	.asciz	"crc645d80431ce5f73f11/EdgeSnapHelper"
-	.size	.L.java_type_name.8553, 37
+	.asciz	"crc645d80431ce5f73f11/CenterSnapHelper"
+	.size	.L.java_type_name.8553, 39
 
 	.type	.L.java_type_name.8554, @object
 .L.java_type_name.8554:
-	.asciz	"crc645d80431ce5f73f11/EmptyViewAdapter"
-	.size	.L.java_type_name.8554, 39
+	.asciz	"crc645d80431ce5f73f11/DataChangeObserver"
+	.size	.L.java_type_name.8554, 41
 
 	.type	.L.java_type_name.8555, @object
 .L.java_type_name.8555:
-	.asciz	"crc645d80431ce5f73f11/EndSingleSnapHelper"
-	.size	.L.java_type_name.8555, 42
+	.asciz	"crc645d80431ce5f73f11/EdgeSnapHelper"
+	.size	.L.java_type_name.8555, 37
 
 	.type	.L.java_type_name.8556, @object
 .L.java_type_name.8556:
-	.asciz	"crc645d80431ce5f73f11/EndSnapHelper"
-	.size	.L.java_type_name.8556, 36
+	.asciz	"crc645d80431ce5f73f11/EmptyViewAdapter"
+	.size	.L.java_type_name.8556, 39
 
 	.type	.L.java_type_name.8557, @object
 .L.java_type_name.8557:
-	.asciz	"crc645d80431ce5f73f11/GridLayoutSpanSizeLookup"
-	.size	.L.java_type_name.8557, 47
+	.asciz	"crc645d80431ce5f73f11/EndSingleSnapHelper"
+	.size	.L.java_type_name.8557, 42
 
 	.type	.L.java_type_name.8558, @object
 .L.java_type_name.8558:
-	.asciz	"crc645d80431ce5f73f11/GroupableItemsViewAdapter_2"
-	.size	.L.java_type_name.8558, 50
+	.asciz	"crc645d80431ce5f73f11/EndSnapHelper"
+	.size	.L.java_type_name.8558, 36
 
 	.type	.L.java_type_name.8559, @object
 .L.java_type_name.8559:
-	.asciz	"crc645d80431ce5f73f11/ItemContentView"
-	.size	.L.java_type_name.8559, 38
+	.asciz	"crc645d80431ce5f73f11/GridLayoutSpanSizeLookup"
+	.size	.L.java_type_name.8559, 47
 
 	.type	.L.java_type_name.8560, @object
 .L.java_type_name.8560:
-	.asciz	"crc645d80431ce5f73f11/ItemsViewAdapter_2"
-	.size	.L.java_type_name.8560, 41
+	.asciz	"crc645d80431ce5f73f11/GroupableItemsViewAdapter_2"
+	.size	.L.java_type_name.8560, 50
 
 	.type	.L.java_type_name.8561, @object
 .L.java_type_name.8561:
-	.asciz	"crc645d80431ce5f73f11/MauiCarouselRecyclerView"
-	.size	.L.java_type_name.8561, 47
+	.asciz	"crc645d80431ce5f73f11/ItemContentView"
+	.size	.L.java_type_name.8561, 38
 
 	.type	.L.java_type_name.8562, @object
 .L.java_type_name.8562:
-	.asciz	"crc645d80431ce5f73f11/MauiRecyclerView_3"
+	.asciz	"crc645d80431ce5f73f11/ItemsViewAdapter_2"
 	.size	.L.java_type_name.8562, 41
 
 	.type	.L.java_type_name.8563, @object
 .L.java_type_name.8563:
-	.asciz	"crc645d80431ce5f73f11/NongreedySnapHelper"
-	.size	.L.java_type_name.8563, 42
+	.asciz	"crc645d80431ce5f73f11/MauiCarouselRecyclerView"
+	.size	.L.java_type_name.8563, 47
 
 	.type	.L.java_type_name.8564, @object
 .L.java_type_name.8564:
-	.asciz	"crc645d80431ce5f73f11/NongreedySnapHelper_InitialScrollListener"
-	.size	.L.java_type_name.8564, 64
+	.asciz	"crc645d80431ce5f73f11/MauiRecyclerView_3"
+	.size	.L.java_type_name.8564, 41
 
 	.type	.L.java_type_name.8565, @object
 .L.java_type_name.8565:
-	.asciz	"crc645d80431ce5f73f11/PositionalSmoothScroller"
-	.size	.L.java_type_name.8565, 47
+	.asciz	"crc645d80431ce5f73f11/NongreedySnapHelper"
+	.size	.L.java_type_name.8565, 42
 
 	.type	.L.java_type_name.8566, @object
 .L.java_type_name.8566:
-	.asciz	"crc645d80431ce5f73f11/RecyclerViewScrollListener_2"
-	.size	.L.java_type_name.8566, 51
+	.asciz	"crc645d80431ce5f73f11/NongreedySnapHelper_InitialScrollListener"
+	.size	.L.java_type_name.8566, 64
 
 	.type	.L.java_type_name.8567, @object
 .L.java_type_name.8567:
-	.asciz	"crc645d80431ce5f73f11/ReorderableItemsViewAdapter_2"
-	.size	.L.java_type_name.8567, 52
+	.asciz	"crc645d80431ce5f73f11/PositionalSmoothScroller"
+	.size	.L.java_type_name.8567, 47
 
 	.type	.L.java_type_name.8568, @object
 .L.java_type_name.8568:
-	.asciz	"crc645d80431ce5f73f11/ScrollHelper"
-	.size	.L.java_type_name.8568, 35
+	.asciz	"crc645d80431ce5f73f11/RecyclerViewScrollListener_2"
+	.size	.L.java_type_name.8568, 51
 
 	.type	.L.java_type_name.8569, @object
 .L.java_type_name.8569:
-	.asciz	"crc645d80431ce5f73f11/SelectableItemsViewAdapter_2"
-	.size	.L.java_type_name.8569, 51
+	.asciz	"crc645d80431ce5f73f11/ReorderableItemsViewAdapter_2"
+	.size	.L.java_type_name.8569, 52
 
 	.type	.L.java_type_name.8570, @object
 .L.java_type_name.8570:
-	.asciz	"crc645d80431ce5f73f11/SelectableViewHolder"
-	.size	.L.java_type_name.8570, 43
+	.asciz	"crc645d80431ce5f73f11/ScrollHelper"
+	.size	.L.java_type_name.8570, 35
 
 	.type	.L.java_type_name.8571, @object
 .L.java_type_name.8571:
-	.asciz	"crc645d80431ce5f73f11/SimpleItemTouchHelperCallback"
-	.size	.L.java_type_name.8571, 52
+	.asciz	"crc645d80431ce5f73f11/SelectableItemsViewAdapter_2"
+	.size	.L.java_type_name.8571, 51
 
 	.type	.L.java_type_name.8572, @object
 .L.java_type_name.8572:
-	.asciz	"crc645d80431ce5f73f11/SimpleViewHolder"
-	.size	.L.java_type_name.8572, 39
+	.asciz	"crc645d80431ce5f73f11/SelectableViewHolder"
+	.size	.L.java_type_name.8572, 43
 
 	.type	.L.java_type_name.8573, @object
 .L.java_type_name.8573:
-	.asciz	"crc645d80431ce5f73f11/SingleSnapHelper"
-	.size	.L.java_type_name.8573, 39
+	.asciz	"crc645d80431ce5f73f11/SimpleItemTouchHelperCallback"
+	.size	.L.java_type_name.8573, 52
 
 	.type	.L.java_type_name.8574, @object
 .L.java_type_name.8574:
-	.asciz	"crc645d80431ce5f73f11/SizedItemContentView"
-	.size	.L.java_type_name.8574, 43
+	.asciz	"crc645d80431ce5f73f11/SimpleViewHolder"
+	.size	.L.java_type_name.8574, 39
 
 	.type	.L.java_type_name.8575, @object
 .L.java_type_name.8575:
-	.asciz	"crc645d80431ce5f73f11/SpacingItemDecoration"
-	.size	.L.java_type_name.8575, 44
+	.asciz	"crc645d80431ce5f73f11/SingleSnapHelper"
+	.size	.L.java_type_name.8575, 39
 
 	.type	.L.java_type_name.8576, @object
 .L.java_type_name.8576:
-	.asciz	"crc645d80431ce5f73f11/StartSingleSnapHelper"
-	.size	.L.java_type_name.8576, 44
+	.asciz	"crc645d80431ce5f73f11/SizedItemContentView"
+	.size	.L.java_type_name.8576, 43
 
 	.type	.L.java_type_name.8577, @object
 .L.java_type_name.8577:
-	.asciz	"crc645d80431ce5f73f11/StartSnapHelper"
-	.size	.L.java_type_name.8577, 38
+	.asciz	"crc645d80431ce5f73f11/SpacingItemDecoration"
+	.size	.L.java_type_name.8577, 44
 
 	.type	.L.java_type_name.8578, @object
 .L.java_type_name.8578:
-	.asciz	"crc645d80431ce5f73f11/StructuredItemsViewAdapter_2"
-	.size	.L.java_type_name.8578, 51
+	.asciz	"crc645d80431ce5f73f11/StartSingleSnapHelper"
+	.size	.L.java_type_name.8578, 44
 
 	.type	.L.java_type_name.8579, @object
 .L.java_type_name.8579:
-	.asciz	"crc645d80431ce5f73f11/TemplatedItemViewHolder"
-	.size	.L.java_type_name.8579, 46
+	.asciz	"crc645d80431ce5f73f11/StartSnapHelper"
+	.size	.L.java_type_name.8579, 38
 
 	.type	.L.java_type_name.8580, @object
 .L.java_type_name.8580:
-	.asciz	"crc645d80431ce5f73f11/TextViewHolder"
-	.size	.L.java_type_name.8580, 37
+	.asciz	"crc645d80431ce5f73f11/StructuredItemsViewAdapter_2"
+	.size	.L.java_type_name.8580, 51
 
 	.type	.L.java_type_name.8581, @object
 .L.java_type_name.8581:
-	.asciz	"crc6468b6408a11370c2f/WebAuthenticatorCallbackActivity"
-	.size	.L.java_type_name.8581, 55
+	.asciz	"crc645d80431ce5f73f11/TemplatedItemViewHolder"
+	.size	.L.java_type_name.8581, 46
 
 	.type	.L.java_type_name.8582, @object
 .L.java_type_name.8582:
-	.asciz	"crc6468b6408a11370c2f/WebAuthenticatorIntermediateActivity"
-	.size	.L.java_type_name.8582, 59
+	.asciz	"crc645d80431ce5f73f11/TextViewHolder"
+	.size	.L.java_type_name.8582, 37
 
 	.type	.L.java_type_name.8583, @object
 .L.java_type_name.8583:
-	.asciz	"crc6477f0d89a9cfd64b1/AHorizontalScrollView"
-	.size	.L.java_type_name.8583, 44
+	.asciz	"crc6468b6408a11370c2f/WebAuthenticatorCallbackActivity"
+	.size	.L.java_type_name.8583, 55
 
 	.type	.L.java_type_name.8584, @object
 .L.java_type_name.8584:
-	.asciz	"crc6477f0d89a9cfd64b1/ActivityIndicatorRenderer"
-	.size	.L.java_type_name.8584, 48
+	.asciz	"crc6468b6408a11370c2f/WebAuthenticatorIntermediateActivity"
+	.size	.L.java_type_name.8584, 59
 
 	.type	.L.java_type_name.8585, @object
 .L.java_type_name.8585:
-	.asciz	"crc6477f0d89a9cfd64b1/BorderDrawable"
-	.size	.L.java_type_name.8585, 37
+	.asciz	"crc6477f0d89a9cfd64b1/AHorizontalScrollView"
+	.size	.L.java_type_name.8585, 44
 
 	.type	.L.java_type_name.8586, @object
 .L.java_type_name.8586:
-	.asciz	"crc6477f0d89a9cfd64b1/BoxRenderer"
-	.size	.L.java_type_name.8586, 34
+	.asciz	"crc6477f0d89a9cfd64b1/ActivityIndicatorRenderer"
+	.size	.L.java_type_name.8586, 48
 
 	.type	.L.java_type_name.8587, @object
 .L.java_type_name.8587:
-	.asciz	"crc6477f0d89a9cfd64b1/CarouselPageAdapter"
-	.size	.L.java_type_name.8587, 42
+	.asciz	"crc6477f0d89a9cfd64b1/BorderDrawable"
+	.size	.L.java_type_name.8587, 37
 
 	.type	.L.java_type_name.8588, @object
 .L.java_type_name.8588:
-	.asciz	"crc6477f0d89a9cfd64b1/CarouselSpacingItemDecoration"
-	.size	.L.java_type_name.8588, 52
+	.asciz	"crc6477f0d89a9cfd64b1/BoxRenderer"
+	.size	.L.java_type_name.8588, 34
 
 	.type	.L.java_type_name.8589, @object
 .L.java_type_name.8589:
-	.asciz	"crc6477f0d89a9cfd64b1/CarouselViewRenderer"
-	.size	.L.java_type_name.8589, 43
+	.asciz	"crc6477f0d89a9cfd64b1/CarouselPageAdapter"
+	.size	.L.java_type_name.8589, 42
 
 	.type	.L.java_type_name.8590, @object
 .L.java_type_name.8590:
-	.asciz	"crc6477f0d89a9cfd64b1/CarouselViewRenderer_CarouselViewOnScrollListener"
-	.size	.L.java_type_name.8590, 72
+	.asciz	"crc6477f0d89a9cfd64b1/CarouselSpacingItemDecoration"
+	.size	.L.java_type_name.8590, 52
 
 	.type	.L.java_type_name.8591, @object
 .L.java_type_name.8591:
-	.asciz	"crc6477f0d89a9cfd64b1/CarouselViewRenderer_CarouselViewwOnGlobalLayoutListener"
-	.size	.L.java_type_name.8591, 79
+	.asciz	"crc6477f0d89a9cfd64b1/CarouselViewRenderer"
+	.size	.L.java_type_name.8591, 43
 
 	.type	.L.java_type_name.8592, @object
 .L.java_type_name.8592:
-	.asciz	"crc6477f0d89a9cfd64b1/CellRenderer_RendererHolder"
-	.size	.L.java_type_name.8592, 50
+	.asciz	"crc6477f0d89a9cfd64b1/CarouselViewRenderer_CarouselViewOnScrollListener"
+	.size	.L.java_type_name.8592, 72
 
 	.type	.L.java_type_name.8593, @object
 .L.java_type_name.8593:
-	.asciz	"crc6477f0d89a9cfd64b1/CenterSnapHelper"
-	.size	.L.java_type_name.8593, 39
+	.asciz	"crc6477f0d89a9cfd64b1/CarouselViewRenderer_CarouselViewwOnGlobalLayoutListener"
+	.size	.L.java_type_name.8593, 79
 
 	.type	.L.java_type_name.8594, @object
 .L.java_type_name.8594:
-	.asciz	"crc6477f0d89a9cfd64b1/CheckBoxRenderer"
-	.size	.L.java_type_name.8594, 39
+	.asciz	"crc6477f0d89a9cfd64b1/CellRenderer_RendererHolder"
+	.size	.L.java_type_name.8594, 50
 
 	.type	.L.java_type_name.8595, @object
 .L.java_type_name.8595:
-	.asciz	"crc6477f0d89a9cfd64b1/CheckBoxRendererBase"
-	.size	.L.java_type_name.8595, 43
+	.asciz	"crc6477f0d89a9cfd64b1/CenterSnapHelper"
+	.size	.L.java_type_name.8595, 39
 
 	.type	.L.java_type_name.8596, @object
 .L.java_type_name.8596:
-	.asciz	"crc6477f0d89a9cfd64b1/CircularProgress"
+	.asciz	"crc6477f0d89a9cfd64b1/CheckBoxRenderer"
 	.size	.L.java_type_name.8596, 39
 
 	.type	.L.java_type_name.8597, @object
 .L.java_type_name.8597:
-	.asciz	"crc6477f0d89a9cfd64b1/CollectionViewRenderer"
-	.size	.L.java_type_name.8597, 45
+	.asciz	"crc6477f0d89a9cfd64b1/CheckBoxRendererBase"
+	.size	.L.java_type_name.8597, 43
 
 	.type	.L.java_type_name.8598, @object
 .L.java_type_name.8598:
-	.asciz	"crc6477f0d89a9cfd64b1/DataChangeObserver"
-	.size	.L.java_type_name.8598, 41
+	.asciz	"crc6477f0d89a9cfd64b1/CircularProgress"
+	.size	.L.java_type_name.8598, 39
 
 	.type	.L.java_type_name.8599, @object
 .L.java_type_name.8599:
-	.asciz	"crc6477f0d89a9cfd64b1/DatePickerRenderer"
-	.size	.L.java_type_name.8599, 41
+	.asciz	"crc6477f0d89a9cfd64b1/CollectionViewRenderer"
+	.size	.L.java_type_name.8599, 45
 
 	.type	.L.java_type_name.8600, @object
 .L.java_type_name.8600:
-	.asciz	"crc6477f0d89a9cfd64b1/DatePickerRendererBase_1"
-	.size	.L.java_type_name.8600, 47
+	.asciz	"crc6477f0d89a9cfd64b1/DataChangeObserver"
+	.size	.L.java_type_name.8600, 41
 
 	.type	.L.java_type_name.8601, @object
 .L.java_type_name.8601:
-	.asciz	"crc6477f0d89a9cfd64b1/DragAndDropGestureHandler"
-	.size	.L.java_type_name.8601, 48
+	.asciz	"crc6477f0d89a9cfd64b1/DatePickerRenderer"
+	.size	.L.java_type_name.8601, 41
 
 	.type	.L.java_type_name.8602, @object
 .L.java_type_name.8602:
-	.asciz	"crc6477f0d89a9cfd64b1/DragAndDropGestureHandler_CustomLocalStateData"
-	.size	.L.java_type_name.8602, 69
+	.asciz	"crc6477f0d89a9cfd64b1/DatePickerRendererBase_1"
+	.size	.L.java_type_name.8602, 47
 
 	.type	.L.java_type_name.8603, @object
 .L.java_type_name.8603:
-	.asciz	"crc6477f0d89a9cfd64b1/EdgeSnapHelper"
-	.size	.L.java_type_name.8603, 37
+	.asciz	"crc6477f0d89a9cfd64b1/DragAndDropGestureHandler"
+	.size	.L.java_type_name.8603, 48
 
 	.type	.L.java_type_name.8604, @object
 .L.java_type_name.8604:
-	.asciz	"crc6477f0d89a9cfd64b1/EditorRenderer"
-	.size	.L.java_type_name.8604, 37
+	.asciz	"crc6477f0d89a9cfd64b1/DragAndDropGestureHandler_CustomLocalStateData"
+	.size	.L.java_type_name.8604, 69
 
 	.type	.L.java_type_name.8605, @object
 .L.java_type_name.8605:
-	.asciz	"crc6477f0d89a9cfd64b1/EditorRendererBase_1"
-	.size	.L.java_type_name.8605, 43
+	.asciz	"crc6477f0d89a9cfd64b1/EdgeSnapHelper"
+	.size	.L.java_type_name.8605, 37
 
 	.type	.L.java_type_name.8606, @object
 .L.java_type_name.8606:
-	.asciz	"crc6477f0d89a9cfd64b1/EllipseRenderer"
-	.size	.L.java_type_name.8606, 38
+	.asciz	"crc6477f0d89a9cfd64b1/EditorRenderer"
+	.size	.L.java_type_name.8606, 37
 
 	.type	.L.java_type_name.8607, @object
 .L.java_type_name.8607:
-	.asciz	"crc6477f0d89a9cfd64b1/EllipseView"
-	.size	.L.java_type_name.8607, 34
+	.asciz	"crc6477f0d89a9cfd64b1/EditorRendererBase_1"
+	.size	.L.java_type_name.8607, 43
 
 	.type	.L.java_type_name.8608, @object
 .L.java_type_name.8608:
-	.asciz	"crc6477f0d89a9cfd64b1/EmptyViewAdapter"
-	.size	.L.java_type_name.8608, 39
+	.asciz	"crc6477f0d89a9cfd64b1/EllipseRenderer"
+	.size	.L.java_type_name.8608, 38
 
 	.type	.L.java_type_name.8609, @object
 .L.java_type_name.8609:
-	.asciz	"crc6477f0d89a9cfd64b1/EndSingleSnapHelper"
-	.size	.L.java_type_name.8609, 42
+	.asciz	"crc6477f0d89a9cfd64b1/EllipseView"
+	.size	.L.java_type_name.8609, 34
 
 	.type	.L.java_type_name.8610, @object
 .L.java_type_name.8610:
-	.asciz	"crc6477f0d89a9cfd64b1/EndSnapHelper"
-	.size	.L.java_type_name.8610, 36
+	.asciz	"crc6477f0d89a9cfd64b1/EmptyViewAdapter"
+	.size	.L.java_type_name.8610, 39
 
 	.type	.L.java_type_name.8611, @object
 .L.java_type_name.8611:
-	.asciz	"crc6477f0d89a9cfd64b1/EntryAccessibilityDelegate"
-	.size	.L.java_type_name.8611, 49
+	.asciz	"crc6477f0d89a9cfd64b1/EndSingleSnapHelper"
+	.size	.L.java_type_name.8611, 42
 
 	.type	.L.java_type_name.8612, @object
 .L.java_type_name.8612:
-	.asciz	"crc6477f0d89a9cfd64b1/EntryRenderer"
+	.asciz	"crc6477f0d89a9cfd64b1/EndSnapHelper"
 	.size	.L.java_type_name.8612, 36
 
 	.type	.L.java_type_name.8613, @object
 .L.java_type_name.8613:
-	.asciz	"crc6477f0d89a9cfd64b1/EntryRendererBase_1"
-	.size	.L.java_type_name.8613, 42
+	.asciz	"crc6477f0d89a9cfd64b1/EntryAccessibilityDelegate"
+	.size	.L.java_type_name.8613, 49
 
 	.type	.L.java_type_name.8614, @object
 .L.java_type_name.8614:
-	.asciz	"crc6477f0d89a9cfd64b1/FlyoutPageContainer"
-	.size	.L.java_type_name.8614, 42
+	.asciz	"crc6477f0d89a9cfd64b1/EntryRenderer"
+	.size	.L.java_type_name.8614, 36
 
 	.type	.L.java_type_name.8615, @object
 .L.java_type_name.8615:
-	.asciz	"crc6477f0d89a9cfd64b1/FlyoutPageRenderer"
-	.size	.L.java_type_name.8615, 41
+	.asciz	"crc6477f0d89a9cfd64b1/EntryRendererBase_1"
+	.size	.L.java_type_name.8615, 42
 
 	.type	.L.java_type_name.8616, @object
 .L.java_type_name.8616:
-	.asciz	"crc6477f0d89a9cfd64b1/FormsAnimationDrawable"
-	.size	.L.java_type_name.8616, 45
+	.asciz	"crc6477f0d89a9cfd64b1/FlyoutPageContainer"
+	.size	.L.java_type_name.8616, 42
 
 	.type	.L.java_type_name.8617, @object
 .L.java_type_name.8617:
-	.asciz	"crc6477f0d89a9cfd64b1/FormsAppCompatActivity"
-	.size	.L.java_type_name.8617, 45
+	.asciz	"crc6477f0d89a9cfd64b1/FlyoutPageRenderer"
+	.size	.L.java_type_name.8617, 41
 
 	.type	.L.java_type_name.8618, @object
 .L.java_type_name.8618:
-	.asciz	"crc6477f0d89a9cfd64b1/FormsEditText"
-	.size	.L.java_type_name.8618, 36
+	.asciz	"crc6477f0d89a9cfd64b1/FormsAnimationDrawable"
+	.size	.L.java_type_name.8618, 45
 
 	.type	.L.java_type_name.8619, @object
 .L.java_type_name.8619:
-	.asciz	"crc6477f0d89a9cfd64b1/FormsEditTextBase"
-	.size	.L.java_type_name.8619, 40
+	.asciz	"crc6477f0d89a9cfd64b1/FormsAppCompatActivity"
+	.size	.L.java_type_name.8619, 45
 
 	.type	.L.java_type_name.8620, @object
 .L.java_type_name.8620:
-	.asciz	"crc6477f0d89a9cfd64b1/FormsImageView"
-	.size	.L.java_type_name.8620, 37
+	.asciz	"crc6477f0d89a9cfd64b1/FormsEditText"
+	.size	.L.java_type_name.8620, 36
 
 	.type	.L.java_type_name.8621, @object
 .L.java_type_name.8621:
-	.asciz	"crc6477f0d89a9cfd64b1/FormsSeekBar"
-	.size	.L.java_type_name.8621, 35
+	.asciz	"crc6477f0d89a9cfd64b1/FormsEditTextBase"
+	.size	.L.java_type_name.8621, 40
 
 	.type	.L.java_type_name.8622, @object
 .L.java_type_name.8622:
-	.asciz	"crc6477f0d89a9cfd64b1/FormsTextView"
-	.size	.L.java_type_name.8622, 36
+	.asciz	"crc6477f0d89a9cfd64b1/FormsImageView"
+	.size	.L.java_type_name.8622, 37
 
 	.type	.L.java_type_name.8623, @object
 .L.java_type_name.8623:
-	.asciz	"crc6477f0d89a9cfd64b1/FormsVideoView"
-	.size	.L.java_type_name.8623, 37
+	.asciz	"crc6477f0d89a9cfd64b1/FormsSeekBar"
+	.size	.L.java_type_name.8623, 35
 
 	.type	.L.java_type_name.8624, @object
 .L.java_type_name.8624:
-	.asciz	"crc6477f0d89a9cfd64b1/FormsWebChromeClient"
-	.size	.L.java_type_name.8624, 43
+	.asciz	"crc6477f0d89a9cfd64b1/FormsTextView"
+	.size	.L.java_type_name.8624, 36
 
 	.type	.L.java_type_name.8625, @object
 .L.java_type_name.8625:
-	.asciz	"crc6477f0d89a9cfd64b1/FormsWebViewClient"
-	.size	.L.java_type_name.8625, 41
+	.asciz	"crc6477f0d89a9cfd64b1/FormsVideoView"
+	.size	.L.java_type_name.8625, 37
 
 	.type	.L.java_type_name.8626, @object
 .L.java_type_name.8626:
-	.asciz	"crc6477f0d89a9cfd64b1/GridLayoutSpanSizeLookup"
-	.size	.L.java_type_name.8626, 47
+	.asciz	"crc6477f0d89a9cfd64b1/FormsWebChromeClient"
+	.size	.L.java_type_name.8626, 43
 
 	.type	.L.java_type_name.8627, @object
 .L.java_type_name.8627:
-	.asciz	"crc6477f0d89a9cfd64b1/GroupableItemsViewAdapter_2"
-	.size	.L.java_type_name.8627, 50
+	.asciz	"crc6477f0d89a9cfd64b1/FormsWebViewClient"
+	.size	.L.java_type_name.8627, 41
 
 	.type	.L.java_type_name.8628, @object
 .L.java_type_name.8628:
-	.asciz	"crc6477f0d89a9cfd64b1/GroupableItemsViewRenderer_3"
-	.size	.L.java_type_name.8628, 51
+	.asciz	"crc6477f0d89a9cfd64b1/GridLayoutSpanSizeLookup"
+	.size	.L.java_type_name.8628, 47
 
 	.type	.L.java_type_name.8629, @object
 .L.java_type_name.8629:
-	.asciz	"crc6477f0d89a9cfd64b1/GroupedListViewAdapter"
-	.size	.L.java_type_name.8629, 45
+	.asciz	"crc6477f0d89a9cfd64b1/GroupableItemsViewAdapter_2"
+	.size	.L.java_type_name.8629, 50
 
 	.type	.L.java_type_name.8630, @object
 .L.java_type_name.8630:
-	.asciz	"crc6477f0d89a9cfd64b1/ImageButtonRenderer"
-	.size	.L.java_type_name.8630, 42
+	.asciz	"crc6477f0d89a9cfd64b1/GroupableItemsViewRenderer_3"
+	.size	.L.java_type_name.8630, 51
 
 	.type	.L.java_type_name.8631, @object
 .L.java_type_name.8631:
-	.asciz	"crc6477f0d89a9cfd64b1/ImageCache_CacheEntry"
-	.size	.L.java_type_name.8631, 44
+	.asciz	"crc6477f0d89a9cfd64b1/GroupedListViewAdapter"
+	.size	.L.java_type_name.8631, 45
 
 	.type	.L.java_type_name.8632, @object
 .L.java_type_name.8632:
-	.asciz	"crc6477f0d89a9cfd64b1/ImageCache_FormsLruCache"
-	.size	.L.java_type_name.8632, 47
+	.asciz	"crc6477f0d89a9cfd64b1/ImageButtonRenderer"
+	.size	.L.java_type_name.8632, 42
 
 	.type	.L.java_type_name.8633, @object
 .L.java_type_name.8633:
-	.asciz	"crc6477f0d89a9cfd64b1/ImageRenderer"
-	.size	.L.java_type_name.8633, 36
+	.asciz	"crc6477f0d89a9cfd64b1/ImageCache_CacheEntry"
+	.size	.L.java_type_name.8633, 44
 
 	.type	.L.java_type_name.8634, @object
 .L.java_type_name.8634:
-	.asciz	"crc6477f0d89a9cfd64b1/IndicatorViewRenderer"
-	.size	.L.java_type_name.8634, 44
+	.asciz	"crc6477f0d89a9cfd64b1/ImageCache_FormsLruCache"
+	.size	.L.java_type_name.8634, 47
 
 	.type	.L.java_type_name.8635, @object
 .L.java_type_name.8635:
-	.asciz	"crc6477f0d89a9cfd64b1/ItemContentView"
-	.size	.L.java_type_name.8635, 38
+	.asciz	"crc6477f0d89a9cfd64b1/ImageRenderer"
+	.size	.L.java_type_name.8635, 36
 
 	.type	.L.java_type_name.8636, @object
 .L.java_type_name.8636:
-	.asciz	"crc6477f0d89a9cfd64b1/ItemsViewAdapter_2"
-	.size	.L.java_type_name.8636, 41
+	.asciz	"crc6477f0d89a9cfd64b1/IndicatorViewRenderer"
+	.size	.L.java_type_name.8636, 44
 
 	.type	.L.java_type_name.8637, @object
 .L.java_type_name.8637:
-	.asciz	"crc6477f0d89a9cfd64b1/ItemsViewRenderer_3"
-	.size	.L.java_type_name.8637, 42
+	.asciz	"crc6477f0d89a9cfd64b1/ItemContentView"
+	.size	.L.java_type_name.8637, 38
 
 	.type	.L.java_type_name.8638, @object
 .L.java_type_name.8638:
-	.asciz	"crc6477f0d89a9cfd64b1/LabelRenderer"
-	.size	.L.java_type_name.8638, 36
+	.asciz	"crc6477f0d89a9cfd64b1/ItemsViewAdapter_2"
+	.size	.L.java_type_name.8638, 41
 
 	.type	.L.java_type_name.8639, @object
 .L.java_type_name.8639:
-	.asciz	"crc6477f0d89a9cfd64b1/LineRenderer"
-	.size	.L.java_type_name.8639, 35
+	.asciz	"crc6477f0d89a9cfd64b1/ItemsViewRenderer_3"
+	.size	.L.java_type_name.8639, 42
 
 	.type	.L.java_type_name.8640, @object
 .L.java_type_name.8640:
-	.asciz	"crc6477f0d89a9cfd64b1/LineView"
-	.size	.L.java_type_name.8640, 31
+	.asciz	"crc6477f0d89a9cfd64b1/LabelRenderer"
+	.size	.L.java_type_name.8640, 36
 
 	.type	.L.java_type_name.8641, @object
 .L.java_type_name.8641:
-	.asciz	"crc6477f0d89a9cfd64b1/ListViewAdapter"
-	.size	.L.java_type_name.8641, 38
+	.asciz	"crc6477f0d89a9cfd64b1/LineRenderer"
+	.size	.L.java_type_name.8641, 35
 
 	.type	.L.java_type_name.8642, @object
 .L.java_type_name.8642:
-	.asciz	"crc6477f0d89a9cfd64b1/ListViewRenderer"
-	.size	.L.java_type_name.8642, 39
+	.asciz	"crc6477f0d89a9cfd64b1/LineView"
+	.size	.L.java_type_name.8642, 31
 
 	.type	.L.java_type_name.8643, @object
 .L.java_type_name.8643:
-	.asciz	"crc6477f0d89a9cfd64b1/ListViewRenderer_Container"
-	.size	.L.java_type_name.8643, 49
+	.asciz	"crc6477f0d89a9cfd64b1/ListViewAdapter"
+	.size	.L.java_type_name.8643, 38
 
 	.type	.L.java_type_name.8644, @object
 .L.java_type_name.8644:
-	.asciz	"crc6477f0d89a9cfd64b1/ListViewRenderer_ListViewScrollDetector"
-	.size	.L.java_type_name.8644, 62
+	.asciz	"crc6477f0d89a9cfd64b1/ListViewRenderer"
+	.size	.L.java_type_name.8644, 39
 
 	.type	.L.java_type_name.8645, @object
 .L.java_type_name.8645:
-	.asciz	"crc6477f0d89a9cfd64b1/ListViewRenderer_SwipeRefreshLayoutWithFixedNestedScrolling"
-	.size	.L.java_type_name.8645, 82
+	.asciz	"crc6477f0d89a9cfd64b1/ListViewRenderer_Container"
+	.size	.L.java_type_name.8645, 49
 
 	.type	.L.java_type_name.8646, @object
 .L.java_type_name.8646:
-	.asciz	"crc6477f0d89a9cfd64b1/NativeViewWrapperRenderer"
-	.size	.L.java_type_name.8646, 48
+	.asciz	"crc6477f0d89a9cfd64b1/ListViewRenderer_ListViewScrollDetector"
+	.size	.L.java_type_name.8646, 62
 
 	.type	.L.java_type_name.8647, @object
 .L.java_type_name.8647:
-	.asciz	"crc6477f0d89a9cfd64b1/NongreedySnapHelper"
-	.size	.L.java_type_name.8647, 42
+	.asciz	"crc6477f0d89a9cfd64b1/ListViewRenderer_SwipeRefreshLayoutWithFixedNestedScrolling"
+	.size	.L.java_type_name.8647, 82
 
 	.type	.L.java_type_name.8648, @object
 .L.java_type_name.8648:
-	.asciz	"crc6477f0d89a9cfd64b1/NongreedySnapHelper_InitialScrollListener"
-	.size	.L.java_type_name.8648, 64
+	.asciz	"crc6477f0d89a9cfd64b1/NativeViewWrapperRenderer"
+	.size	.L.java_type_name.8648, 48
 
 	.type	.L.java_type_name.8649, @object
 .L.java_type_name.8649:
-	.asciz	"crc6477f0d89a9cfd64b1/ObjectJavaBox_1"
-	.size	.L.java_type_name.8649, 38
+	.asciz	"crc6477f0d89a9cfd64b1/NongreedySnapHelper"
+	.size	.L.java_type_name.8649, 42
 
 	.type	.L.java_type_name.8650, @object
 .L.java_type_name.8650:
-	.asciz	"crc6477f0d89a9cfd64b1/OpenGLViewRenderer"
-	.size	.L.java_type_name.8650, 41
+	.asciz	"crc6477f0d89a9cfd64b1/NongreedySnapHelper_InitialScrollListener"
+	.size	.L.java_type_name.8650, 64
 
 	.type	.L.java_type_name.8651, @object
 .L.java_type_name.8651:
-	.asciz	"crc6477f0d89a9cfd64b1/OpenGLViewRenderer_Renderer"
-	.size	.L.java_type_name.8651, 50
+	.asciz	"crc6477f0d89a9cfd64b1/ObjectJavaBox_1"
+	.size	.L.java_type_name.8651, 38
 
 	.type	.L.java_type_name.8652, @object
 .L.java_type_name.8652:
-	.asciz	"crc6477f0d89a9cfd64b1/PageContainer"
-	.size	.L.java_type_name.8652, 36
+	.asciz	"crc6477f0d89a9cfd64b1/OpenGLViewRenderer"
+	.size	.L.java_type_name.8652, 41
 
 	.type	.L.java_type_name.8653, @object
 .L.java_type_name.8653:
-	.asciz	"crc6477f0d89a9cfd64b1/PageExtensions_EmbeddedFragment"
-	.size	.L.java_type_name.8653, 54
+	.asciz	"crc6477f0d89a9cfd64b1/OpenGLViewRenderer_Renderer"
+	.size	.L.java_type_name.8653, 50
 
 	.type	.L.java_type_name.8654, @object
 .L.java_type_name.8654:
-	.asciz	"crc6477f0d89a9cfd64b1/PageExtensions_EmbeddedSupportFragment"
-	.size	.L.java_type_name.8654, 61
+	.asciz	"crc6477f0d89a9cfd64b1/PageContainer"
+	.size	.L.java_type_name.8654, 36
 
 	.type	.L.java_type_name.8655, @object
 .L.java_type_name.8655:
-	.asciz	"crc6477f0d89a9cfd64b1/PageRenderer"
-	.size	.L.java_type_name.8655, 35
+	.asciz	"crc6477f0d89a9cfd64b1/PageExtensions_EmbeddedFragment"
+	.size	.L.java_type_name.8655, 54
 
 	.type	.L.java_type_name.8656, @object
 .L.java_type_name.8656:
-	.asciz	"crc6477f0d89a9cfd64b1/PathRenderer"
-	.size	.L.java_type_name.8656, 35
+	.asciz	"crc6477f0d89a9cfd64b1/PageExtensions_EmbeddedSupportFragment"
+	.size	.L.java_type_name.8656, 61
 
 	.type	.L.java_type_name.8657, @object
 .L.java_type_name.8657:
-	.asciz	"crc6477f0d89a9cfd64b1/PathView"
-	.size	.L.java_type_name.8657, 31
+	.asciz	"crc6477f0d89a9cfd64b1/PageRenderer"
+	.size	.L.java_type_name.8657, 35
 
 	.type	.L.java_type_name.8658, @object
 .L.java_type_name.8658:
-	.asciz	"crc6477f0d89a9cfd64b1/PickerEditText"
-	.size	.L.java_type_name.8658, 37
+	.asciz	"crc6477f0d89a9cfd64b1/PathRenderer"
+	.size	.L.java_type_name.8658, 35
 
 	.type	.L.java_type_name.8659, @object
 .L.java_type_name.8659:
-	.asciz	"crc6477f0d89a9cfd64b1/PickerManager_PickerListener"
-	.size	.L.java_type_name.8659, 51
+	.asciz	"crc6477f0d89a9cfd64b1/PathView"
+	.size	.L.java_type_name.8659, 31
 
 	.type	.L.java_type_name.8660, @object
 .L.java_type_name.8660:
-	.asciz	"crc6477f0d89a9cfd64b1/PlatformRenderer"
-	.size	.L.java_type_name.8660, 39
+	.asciz	"crc6477f0d89a9cfd64b1/PickerEditText"
+	.size	.L.java_type_name.8660, 37
 
 	.type	.L.java_type_name.8661, @object
 .L.java_type_name.8661:
-	.asciz	"crc6477f0d89a9cfd64b1/Platform_DefaultRenderer"
-	.size	.L.java_type_name.8661, 47
+	.asciz	"crc6477f0d89a9cfd64b1/PickerManager_PickerListener"
+	.size	.L.java_type_name.8661, 51
 
 	.type	.L.java_type_name.8662, @object
 .L.java_type_name.8662:
-	.asciz	"crc6477f0d89a9cfd64b1/Platform_ModalContainer"
-	.size	.L.java_type_name.8662, 46
+	.asciz	"crc6477f0d89a9cfd64b1/PlatformRenderer"
+	.size	.L.java_type_name.8662, 39
 
 	.type	.L.java_type_name.8663, @object
 .L.java_type_name.8663:
-	.asciz	"crc6477f0d89a9cfd64b1/PolygonRenderer"
-	.size	.L.java_type_name.8663, 38
+	.asciz	"crc6477f0d89a9cfd64b1/Platform_DefaultRenderer"
+	.size	.L.java_type_name.8663, 47
 
 	.type	.L.java_type_name.8664, @object
 .L.java_type_name.8664:
-	.asciz	"crc6477f0d89a9cfd64b1/PolygonView"
-	.size	.L.java_type_name.8664, 34
+	.asciz	"crc6477f0d89a9cfd64b1/Platform_ModalContainer"
+	.size	.L.java_type_name.8664, 46
 
 	.type	.L.java_type_name.8665, @object
 .L.java_type_name.8665:
-	.asciz	"crc6477f0d89a9cfd64b1/PolylineRenderer"
-	.size	.L.java_type_name.8665, 39
+	.asciz	"crc6477f0d89a9cfd64b1/PolygonRenderer"
+	.size	.L.java_type_name.8665, 38
 
 	.type	.L.java_type_name.8666, @object
 .L.java_type_name.8666:
-	.asciz	"crc6477f0d89a9cfd64b1/PolylineView"
-	.size	.L.java_type_name.8666, 35
+	.asciz	"crc6477f0d89a9cfd64b1/PolygonView"
+	.size	.L.java_type_name.8666, 34
 
 	.type	.L.java_type_name.8667, @object
 .L.java_type_name.8667:
-	.asciz	"crc6477f0d89a9cfd64b1/PositionalSmoothScroller"
-	.size	.L.java_type_name.8667, 47
+	.asciz	"crc6477f0d89a9cfd64b1/PolylineRenderer"
+	.size	.L.java_type_name.8667, 39
 
 	.type	.L.java_type_name.8668, @object
 .L.java_type_name.8668:
-	.asciz	"crc6477f0d89a9cfd64b1/ProgressBarRenderer"
-	.size	.L.java_type_name.8668, 42
+	.asciz	"crc6477f0d89a9cfd64b1/PolylineView"
+	.size	.L.java_type_name.8668, 35
 
 	.type	.L.java_type_name.8669, @object
 .L.java_type_name.8669:
-	.asciz	"crc6477f0d89a9cfd64b1/RadioButtonRenderer"
-	.size	.L.java_type_name.8669, 42
+	.asciz	"crc6477f0d89a9cfd64b1/PositionalSmoothScroller"
+	.size	.L.java_type_name.8669, 47
 
 	.type	.L.java_type_name.8670, @object
 .L.java_type_name.8670:
-	.asciz	"crc6477f0d89a9cfd64b1/RectView"
-	.size	.L.java_type_name.8670, 31
+	.asciz	"crc6477f0d89a9cfd64b1/ProgressBarRenderer"
+	.size	.L.java_type_name.8670, 42
 
 	.type	.L.java_type_name.8671, @object
 .L.java_type_name.8671:
-	.asciz	"crc6477f0d89a9cfd64b1/RectangleRenderer"
-	.size	.L.java_type_name.8671, 40
+	.asciz	"crc6477f0d89a9cfd64b1/RadioButtonRenderer"
+	.size	.L.java_type_name.8671, 42
 
 	.type	.L.java_type_name.8672, @object
 .L.java_type_name.8672:
-	.asciz	"crc6477f0d89a9cfd64b1/RefreshViewRenderer"
-	.size	.L.java_type_name.8672, 42
+	.asciz	"crc6477f0d89a9cfd64b1/RectView"
+	.size	.L.java_type_name.8672, 31
 
 	.type	.L.java_type_name.8673, @object
 .L.java_type_name.8673:
-	.asciz	"crc6477f0d89a9cfd64b1/ScrollHelper"
-	.size	.L.java_type_name.8673, 35
+	.asciz	"crc6477f0d89a9cfd64b1/RectangleRenderer"
+	.size	.L.java_type_name.8673, 40
 
 	.type	.L.java_type_name.8674, @object
 .L.java_type_name.8674:
-	.asciz	"crc6477f0d89a9cfd64b1/ScrollViewContainer"
+	.asciz	"crc6477f0d89a9cfd64b1/RefreshViewRenderer"
 	.size	.L.java_type_name.8674, 42
 
 	.type	.L.java_type_name.8675, @object
 .L.java_type_name.8675:
-	.asciz	"crc6477f0d89a9cfd64b1/ScrollViewRenderer"
-	.size	.L.java_type_name.8675, 41
+	.asciz	"crc6477f0d89a9cfd64b1/ScrollHelper"
+	.size	.L.java_type_name.8675, 35
 
 	.type	.L.java_type_name.8676, @object
 .L.java_type_name.8676:
-	.asciz	"crc6477f0d89a9cfd64b1/SearchBarRenderer"
-	.size	.L.java_type_name.8676, 40
+	.asciz	"crc6477f0d89a9cfd64b1/ScrollViewContainer"
+	.size	.L.java_type_name.8676, 42
 
 	.type	.L.java_type_name.8677, @object
 .L.java_type_name.8677:
-	.asciz	"crc6477f0d89a9cfd64b1/SelectableItemsViewAdapter_2"
-	.size	.L.java_type_name.8677, 51
+	.asciz	"crc6477f0d89a9cfd64b1/ScrollViewRenderer"
+	.size	.L.java_type_name.8677, 41
 
 	.type	.L.java_type_name.8678, @object
 .L.java_type_name.8678:
-	.asciz	"crc6477f0d89a9cfd64b1/SelectableItemsViewRenderer_3"
-	.size	.L.java_type_name.8678, 52
+	.asciz	"crc6477f0d89a9cfd64b1/SearchBarRenderer"
+	.size	.L.java_type_name.8678, 40
 
 	.type	.L.java_type_name.8679, @object
 .L.java_type_name.8679:
-	.asciz	"crc6477f0d89a9cfd64b1/SelectableViewHolder"
-	.size	.L.java_type_name.8679, 43
+	.asciz	"crc6477f0d89a9cfd64b1/SelectableItemsViewAdapter_2"
+	.size	.L.java_type_name.8679, 51
 
 	.type	.L.java_type_name.8680, @object
 .L.java_type_name.8680:
-	.asciz	"crc6477f0d89a9cfd64b1/ShapeRenderer_2"
-	.size	.L.java_type_name.8680, 38
+	.asciz	"crc6477f0d89a9cfd64b1/SelectableItemsViewRenderer_3"
+	.size	.L.java_type_name.8680, 52
 
 	.type	.L.java_type_name.8681, @object
 .L.java_type_name.8681:
-	.asciz	"crc6477f0d89a9cfd64b1/ShapeView"
-	.size	.L.java_type_name.8681, 32
+	.asciz	"crc6477f0d89a9cfd64b1/SelectableViewHolder"
+	.size	.L.java_type_name.8681, 43
 
 	.type	.L.java_type_name.8682, @object
 .L.java_type_name.8682:
-	.asciz	"crc6477f0d89a9cfd64b1/SimpleViewHolder"
-	.size	.L.java_type_name.8682, 39
+	.asciz	"crc6477f0d89a9cfd64b1/ShapeRenderer_2"
+	.size	.L.java_type_name.8682, 38
 
 	.type	.L.java_type_name.8683, @object
 .L.java_type_name.8683:
-	.asciz	"crc6477f0d89a9cfd64b1/SingleSnapHelper"
-	.size	.L.java_type_name.8683, 39
+	.asciz	"crc6477f0d89a9cfd64b1/ShapeView"
+	.size	.L.java_type_name.8683, 32
 
 	.type	.L.java_type_name.8684, @object
 .L.java_type_name.8684:
-	.asciz	"crc6477f0d89a9cfd64b1/SizedItemContentView"
-	.size	.L.java_type_name.8684, 43
+	.asciz	"crc6477f0d89a9cfd64b1/SimpleViewHolder"
+	.size	.L.java_type_name.8684, 39
 
 	.type	.L.java_type_name.8685, @object
 .L.java_type_name.8685:
-	.asciz	"crc6477f0d89a9cfd64b1/SliderRenderer"
-	.size	.L.java_type_name.8685, 37
+	.asciz	"crc6477f0d89a9cfd64b1/SingleSnapHelper"
+	.size	.L.java_type_name.8685, 39
 
 	.type	.L.java_type_name.8686, @object
 .L.java_type_name.8686:
-	.asciz	"crc6477f0d89a9cfd64b1/SpacingItemDecoration"
-	.size	.L.java_type_name.8686, 44
+	.asciz	"crc6477f0d89a9cfd64b1/SizedItemContentView"
+	.size	.L.java_type_name.8686, 43
 
 	.type	.L.java_type_name.8687, @object
 .L.java_type_name.8687:
-	.asciz	"crc6477f0d89a9cfd64b1/StartSingleSnapHelper"
-	.size	.L.java_type_name.8687, 44
+	.asciz	"crc6477f0d89a9cfd64b1/SliderRenderer"
+	.size	.L.java_type_name.8687, 37
 
 	.type	.L.java_type_name.8688, @object
 .L.java_type_name.8688:
-	.asciz	"crc6477f0d89a9cfd64b1/StartSnapHelper"
-	.size	.L.java_type_name.8688, 38
+	.asciz	"crc6477f0d89a9cfd64b1/SpacingItemDecoration"
+	.size	.L.java_type_name.8688, 44
 
 	.type	.L.java_type_name.8689, @object
 .L.java_type_name.8689:
-	.asciz	"crc6477f0d89a9cfd64b1/StepperRenderer"
-	.size	.L.java_type_name.8689, 38
+	.asciz	"crc6477f0d89a9cfd64b1/StartSingleSnapHelper"
+	.size	.L.java_type_name.8689, 44
 
 	.type	.L.java_type_name.8690, @object
 .L.java_type_name.8690:
-	.asciz	"crc6477f0d89a9cfd64b1/StepperRendererManager_StepperListener"
-	.size	.L.java_type_name.8690, 61
+	.asciz	"crc6477f0d89a9cfd64b1/StartSnapHelper"
+	.size	.L.java_type_name.8690, 38
 
 	.type	.L.java_type_name.8691, @object
 .L.java_type_name.8691:
-	.asciz	"crc6477f0d89a9cfd64b1/StructuredItemsViewAdapter_2"
-	.size	.L.java_type_name.8691, 51
+	.asciz	"crc6477f0d89a9cfd64b1/StepperRenderer"
+	.size	.L.java_type_name.8691, 38
 
 	.type	.L.java_type_name.8692, @object
 .L.java_type_name.8692:
-	.asciz	"crc6477f0d89a9cfd64b1/StructuredItemsViewRenderer_3"
-	.size	.L.java_type_name.8692, 52
+	.asciz	"crc6477f0d89a9cfd64b1/StepperRendererManager_StepperListener"
+	.size	.L.java_type_name.8692, 61
 
 	.type	.L.java_type_name.8693, @object
 .L.java_type_name.8693:
-	.asciz	"crc6477f0d89a9cfd64b1/SwipeViewRenderer"
-	.size	.L.java_type_name.8693, 40
+	.asciz	"crc6477f0d89a9cfd64b1/StructuredItemsViewAdapter_2"
+	.size	.L.java_type_name.8693, 51
 
 	.type	.L.java_type_name.8694, @object
 .L.java_type_name.8694:
-	.asciz	"crc6477f0d89a9cfd64b1/TableViewModelRenderer"
-	.size	.L.java_type_name.8694, 45
+	.asciz	"crc6477f0d89a9cfd64b1/StructuredItemsViewRenderer_3"
+	.size	.L.java_type_name.8694, 52
 
 	.type	.L.java_type_name.8695, @object
 .L.java_type_name.8695:
-	.asciz	"crc6477f0d89a9cfd64b1/TableViewRenderer"
+	.asciz	"crc6477f0d89a9cfd64b1/SwipeViewRenderer"
 	.size	.L.java_type_name.8695, 40
 
 	.type	.L.java_type_name.8696, @object
 .L.java_type_name.8696:
-	.asciz	"crc6477f0d89a9cfd64b1/TemplatedItemViewHolder"
-	.size	.L.java_type_name.8696, 46
+	.asciz	"crc6477f0d89a9cfd64b1/TableViewModelRenderer"
+	.size	.L.java_type_name.8696, 45
 
 	.type	.L.java_type_name.8697, @object
 .L.java_type_name.8697:
-	.asciz	"crc6477f0d89a9cfd64b1/TextCellRenderer_TextCellView"
-	.size	.L.java_type_name.8697, 52
+	.asciz	"crc6477f0d89a9cfd64b1/TableViewRenderer"
+	.size	.L.java_type_name.8697, 40
 
 	.type	.L.java_type_name.8698, @object
 .L.java_type_name.8698:
-	.asciz	"crc6477f0d89a9cfd64b1/TextViewHolder"
-	.size	.L.java_type_name.8698, 37
+	.asciz	"crc6477f0d89a9cfd64b1/TemplatedItemViewHolder"
+	.size	.L.java_type_name.8698, 46
 
 	.type	.L.java_type_name.8699, @object
 .L.java_type_name.8699:
-	.asciz	"crc6477f0d89a9cfd64b1/TimePickerRenderer"
-	.size	.L.java_type_name.8699, 41
+	.asciz	"crc6477f0d89a9cfd64b1/TextCellRenderer_TextCellView"
+	.size	.L.java_type_name.8699, 52
 
 	.type	.L.java_type_name.8700, @object
 .L.java_type_name.8700:
-	.asciz	"crc6477f0d89a9cfd64b1/TimePickerRendererBase_1"
-	.size	.L.java_type_name.8700, 47
+	.asciz	"crc6477f0d89a9cfd64b1/TextViewHolder"
+	.size	.L.java_type_name.8700, 37
 
 	.type	.L.java_type_name.8701, @object
 .L.java_type_name.8701:
-	.asciz	"crc6477f0d89a9cfd64b1/ViewCellRenderer_ViewCellContainer"
-	.size	.L.java_type_name.8701, 57
+	.asciz	"crc6477f0d89a9cfd64b1/TimePickerRenderer"
+	.size	.L.java_type_name.8701, 41
 
 	.type	.L.java_type_name.8702, @object
 .L.java_type_name.8702:
-	.asciz	"crc6477f0d89a9cfd64b1/ViewCellRenderer_ViewCellContainer_LongPressGestureListener"
-	.size	.L.java_type_name.8702, 82
+	.asciz	"crc6477f0d89a9cfd64b1/TimePickerRendererBase_1"
+	.size	.L.java_type_name.8702, 47
 
 	.type	.L.java_type_name.8703, @object
 .L.java_type_name.8703:
-	.asciz	"crc6477f0d89a9cfd64b1/ViewCellRenderer_ViewCellContainer_TapGestureListener"
-	.size	.L.java_type_name.8703, 76
+	.asciz	"crc6477f0d89a9cfd64b1/ViewCellRenderer_ViewCellContainer"
+	.size	.L.java_type_name.8703, 57
 
 	.type	.L.java_type_name.8704, @object
 .L.java_type_name.8704:
-	.asciz	"crc6477f0d89a9cfd64b1/ViewRenderer"
-	.size	.L.java_type_name.8704, 35
+	.asciz	"crc6477f0d89a9cfd64b1/ViewCellRenderer_ViewCellContainer_LongPressGestureListener"
+	.size	.L.java_type_name.8704, 82
 
 	.type	.L.java_type_name.8705, @object
 .L.java_type_name.8705:
-	.asciz	"crc6477f0d89a9cfd64b1/ViewRenderer_2"
-	.size	.L.java_type_name.8705, 37
+	.asciz	"crc6477f0d89a9cfd64b1/ViewCellRenderer_ViewCellContainer_TapGestureListener"
+	.size	.L.java_type_name.8705, 76
 
 	.type	.L.java_type_name.8706, @object
 .L.java_type_name.8706:
-	.asciz	"crc6477f0d89a9cfd64b1/VisualElementRenderer_1"
-	.size	.L.java_type_name.8706, 46
+	.asciz	"crc6477f0d89a9cfd64b1/ViewRenderer"
+	.size	.L.java_type_name.8706, 35
 
 	.type	.L.java_type_name.8707, @object
 .L.java_type_name.8707:
-	.asciz	"crc6477f0d89a9cfd64b1/VisualElementTracker_AttachTracker"
-	.size	.L.java_type_name.8707, 57
+	.asciz	"crc6477f0d89a9cfd64b1/ViewRenderer_2"
+	.size	.L.java_type_name.8707, 37
 
 	.type	.L.java_type_name.8708, @object
 .L.java_type_name.8708:
-	.asciz	"crc6477f0d89a9cfd64b1/WebViewRenderer"
-	.size	.L.java_type_name.8708, 38
+	.asciz	"crc6477f0d89a9cfd64b1/VisualElementRenderer_1"
+	.size	.L.java_type_name.8708, 46
 
 	.type	.L.java_type_name.8709, @object
 .L.java_type_name.8709:
-	.asciz	"crc6477f0d89a9cfd64b1/WebViewRenderer_JavascriptResult"
-	.size	.L.java_type_name.8709, 55
+	.asciz	"crc6477f0d89a9cfd64b1/VisualElementTracker_AttachTracker"
+	.size	.L.java_type_name.8709, 57
 
 	.type	.L.java_type_name.8710, @object
 .L.java_type_name.8710:
-	.asciz	"crc6488302ad6e9e4df1a/ImageLoaderCallback"
-	.size	.L.java_type_name.8710, 42
+	.asciz	"crc6477f0d89a9cfd64b1/WebViewRenderer"
+	.size	.L.java_type_name.8710, 38
 
 	.type	.L.java_type_name.8711, @object
 .L.java_type_name.8711:
-	.asciz	"crc6488302ad6e9e4df1a/ImageLoaderCallbackBase_1"
-	.size	.L.java_type_name.8711, 48
+	.asciz	"crc6477f0d89a9cfd64b1/WebViewRenderer_JavascriptResult"
+	.size	.L.java_type_name.8711, 55
 
 	.type	.L.java_type_name.8712, @object
 .L.java_type_name.8712:
-	.asciz	"crc6488302ad6e9e4df1a/ImageLoaderResultCallback"
-	.size	.L.java_type_name.8712, 48
+	.asciz	"crc6488302ad6e9e4df1a/ImageLoaderCallback"
+	.size	.L.java_type_name.8712, 42
 
 	.type	.L.java_type_name.8713, @object
 .L.java_type_name.8713:
-	.asciz	"crc6488302ad6e9e4df1a/MauiAppCompatActivity"
-	.size	.L.java_type_name.8713, 44
+	.asciz	"crc6488302ad6e9e4df1a/ImageLoaderCallbackBase_1"
+	.size	.L.java_type_name.8713, 48
 
 	.type	.L.java_type_name.8714, @object
 .L.java_type_name.8714:
-	.asciz	"crc6488302ad6e9e4df1a/MauiApplication"
-	.size	.L.java_type_name.8714, 38
+	.asciz	"crc6488302ad6e9e4df1a/ImageLoaderResultCallback"
+	.size	.L.java_type_name.8714, 48
 
 	.type	.L.java_type_name.8715, @object
 .L.java_type_name.8715:
-	.asciz	"crc6488302ad6e9e4df1a/MauiApplication_ActivityLifecycleCallbacks"
-	.size	.L.java_type_name.8715, 65
+	.asciz	"crc6488302ad6e9e4df1a/MauiAppCompatActivity"
+	.size	.L.java_type_name.8715, 44
 
 	.type	.L.java_type_name.8716, @object
 .L.java_type_name.8716:
-	.asciz	"crc648afdc667cfb0dccb/ButtonRenderer"
-	.size	.L.java_type_name.8716, 37
+	.asciz	"crc6488302ad6e9e4df1a/MauiApplication"
+	.size	.L.java_type_name.8716, 38
 
 	.type	.L.java_type_name.8717, @object
 .L.java_type_name.8717:
-	.asciz	"crc648afdc667cfb0dccb/CarouselPageRenderer"
-	.size	.L.java_type_name.8717, 43
+	.asciz	"crc6488302ad6e9e4df1a/MauiApplication_ActivityLifecycleCallbacks"
+	.size	.L.java_type_name.8717, 65
 
 	.type	.L.java_type_name.8718, @object
 .L.java_type_name.8718:
-	.asciz	"crc648afdc667cfb0dccb/FormsFragmentPagerAdapter_1"
-	.size	.L.java_type_name.8718, 50
+	.asciz	"crc648afdc667cfb0dccb/ButtonRenderer"
+	.size	.L.java_type_name.8718, 37
 
 	.type	.L.java_type_name.8719, @object
 .L.java_type_name.8719:
-	.asciz	"crc648afdc667cfb0dccb/FormsViewPager"
-	.size	.L.java_type_name.8719, 37
+	.asciz	"crc648afdc667cfb0dccb/CarouselPageRenderer"
+	.size	.L.java_type_name.8719, 43
 
 	.type	.L.java_type_name.8720, @object
 .L.java_type_name.8720:
-	.asciz	"crc648afdc667cfb0dccb/FragmentContainer"
-	.size	.L.java_type_name.8720, 40
+	.asciz	"crc648afdc667cfb0dccb/FormsFragmentPagerAdapter_1"
+	.size	.L.java_type_name.8720, 50
 
 	.type	.L.java_type_name.8721, @object
 .L.java_type_name.8721:
-	.asciz	"crc648afdc667cfb0dccb/FrameRenderer"
-	.size	.L.java_type_name.8721, 36
+	.asciz	"crc648afdc667cfb0dccb/FormsViewPager"
+	.size	.L.java_type_name.8721, 37
 
 	.type	.L.java_type_name.8722, @object
 .L.java_type_name.8722:
-	.asciz	"crc648afdc667cfb0dccb/NavigationPageRenderer"
-	.size	.L.java_type_name.8722, 45
+	.asciz	"crc648afdc667cfb0dccb/FragmentContainer"
+	.size	.L.java_type_name.8722, 40
 
 	.type	.L.java_type_name.8723, @object
 .L.java_type_name.8723:
-	.asciz	"crc648afdc667cfb0dccb/NavigationPageRenderer_ClickListener"
-	.size	.L.java_type_name.8723, 59
+	.asciz	"crc648afdc667cfb0dccb/FrameRenderer"
+	.size	.L.java_type_name.8723, 36
 
 	.type	.L.java_type_name.8724, @object
 .L.java_type_name.8724:
-	.asciz	"crc648afdc667cfb0dccb/NavigationPageRenderer_Container"
-	.size	.L.java_type_name.8724, 55
+	.asciz	"crc648afdc667cfb0dccb/NavigationPageRenderer"
+	.size	.L.java_type_name.8724, 45
 
 	.type	.L.java_type_name.8725, @object
 .L.java_type_name.8725:
-	.asciz	"crc648afdc667cfb0dccb/NavigationPageRenderer_DrawerMultiplexedListener"
-	.size	.L.java_type_name.8725, 71
+	.asciz	"crc648afdc667cfb0dccb/NavigationPageRenderer_ClickListener"
+	.size	.L.java_type_name.8725, 59
 
 	.type	.L.java_type_name.8726, @object
 .L.java_type_name.8726:
-	.asciz	"crc648afdc667cfb0dccb/PickerRenderer"
-	.size	.L.java_type_name.8726, 37
+	.asciz	"crc648afdc667cfb0dccb/NavigationPageRenderer_Container"
+	.size	.L.java_type_name.8726, 55
 
 	.type	.L.java_type_name.8727, @object
 .L.java_type_name.8727:
-	.asciz	"crc648afdc667cfb0dccb/PickerRendererBase_1"
-	.size	.L.java_type_name.8727, 43
+	.asciz	"crc648afdc667cfb0dccb/NavigationPageRenderer_DrawerMultiplexedListener"
+	.size	.L.java_type_name.8727, 71
 
 	.type	.L.java_type_name.8728, @object
 .L.java_type_name.8728:
-	.asciz	"crc648afdc667cfb0dccb/SwitchRenderer"
+	.asciz	"crc648afdc667cfb0dccb/PickerRenderer"
 	.size	.L.java_type_name.8728, 37
 
 	.type	.L.java_type_name.8729, @object
 .L.java_type_name.8729:
-	.asciz	"crc648afdc667cfb0dccb/TabbedPageRenderer"
-	.size	.L.java_type_name.8729, 41
+	.asciz	"crc648afdc667cfb0dccb/PickerRendererBase_1"
+	.size	.L.java_type_name.8729, 43
 
 	.type	.L.java_type_name.8730, @object
 .L.java_type_name.8730:
-	.asciz	"crc648afdc667cfb0dccb/ViewRenderer_2"
+	.asciz	"crc648afdc667cfb0dccb/SwitchRenderer"
 	.size	.L.java_type_name.8730, 37
 
 	.type	.L.java_type_name.8731, @object
 .L.java_type_name.8731:
-	.asciz	"crc648fc34c62be8fbbff/Snackbar_SnackbarCallback"
-	.size	.L.java_type_name.8731, 48
+	.asciz	"crc648afdc667cfb0dccb/TabbedPageRenderer"
+	.size	.L.java_type_name.8731, 41
 
 	.type	.L.java_type_name.8732, @object
 .L.java_type_name.8732:
-	.asciz	"crc6493855b22b6fa0721/TextToSpeechInternalImplementation"
-	.size	.L.java_type_name.8732, 57
+	.asciz	"crc648afdc667cfb0dccb/ViewRenderer_2"
+	.size	.L.java_type_name.8732, 37
 
 	.type	.L.java_type_name.8733, @object
 .L.java_type_name.8733:
-	.asciz	"crc649ff77a65592e7d55/TabbedPageManager_Listeners"
-	.size	.L.java_type_name.8733, 50
+	.asciz	"crc648fc34c62be8fbbff/Snackbar_SnackbarCallback"
+	.size	.L.java_type_name.8733, 48
 
 	.type	.L.java_type_name.8734, @object
 .L.java_type_name.8734:
-	.asciz	"crc649ff77a65592e7d55/TabbedPageManager_TempView"
-	.size	.L.java_type_name.8734, 49
+	.asciz	"crc6493855b22b6fa0721/TextToSpeechInternalImplementation"
+	.size	.L.java_type_name.8734, 57
 
 	.type	.L.java_type_name.8735, @object
 .L.java_type_name.8735:
-	.asciz	"crc64a244d499efb64c88/MainActivity"
-	.size	.L.java_type_name.8735, 35
+	.asciz	"crc649ff77a65592e7d55/TabbedPageManager_Listeners"
+	.size	.L.java_type_name.8735, 50
 
 	.type	.L.java_type_name.8736, @object
 .L.java_type_name.8736:
-	.asciz	"crc64a244d499efb64c88/MainApplication"
-	.size	.L.java_type_name.8736, 38
+	.asciz	"crc649ff77a65592e7d55/TabbedPageManager_TempView"
+	.size	.L.java_type_name.8736, 49
 
 	.type	.L.java_type_name.8737, @object
 .L.java_type_name.8737:
@@ -118207,13 +118207,13 @@
 
 	.type	.L.managed_type_name.11125, @object
 .L.managed_type_name.11125:
-	.asciz	"MotorEmpireAutohaus.MainActivity, MotorEmpireAutohaus"
-	.size	.L.managed_type_name.11125, 54
+	.asciz	"MotorEmpireAutohaus.Platforms.Android.MainActivity, MotorEmpireAutohaus"
+	.size	.L.managed_type_name.11125, 72
 
 	.type	.L.managed_type_name.11126, @object
 .L.managed_type_name.11126:
-	.asciz	"MotorEmpireAutohaus.MainApplication, MotorEmpireAutohaus"
-	.size	.L.managed_type_name.11126, 57
+	.asciz	"MotorEmpireAutohaus.Platforms.Android.MainApplication, MotorEmpireAutohaus"
+	.size	.L.managed_type_name.11126, 75
 
 	.type	.L.managed_type_name.11127, @object
 .L.managed_type_name.11127:

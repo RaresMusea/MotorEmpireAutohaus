@@ -1,0 +1,71 @@
+is_global = true
+build_property.TargetFramework = net7.0-android
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MVVM
+build_property.ProjectDir = C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\
+
+[C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Modul 1/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MVVM/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MVVM.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Modul 1/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MVVM/MotorEmpire.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MVVM.MotorEmpire.xaml
+build_metadata.AdditionalFiles.TargetPath = MotorEmpire.xaml
+build_metadata.AdditionalFiles.RelativePath = MotorEmpire.xaml
+
+[C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Modul 1/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MVVM/View/Account Management/Account.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MVVM.View.Account_Management.Account.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Account Management\Account.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Account Management\Account.xaml
+
+[C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Modul 1/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MVVM/View/App Settings/About.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MVVM.View.App_Settings.About.xaml
+build_metadata.AdditionalFiles.TargetPath = View\App Settings\About.xaml
+build_metadata.AdditionalFiles.RelativePath = View\App Settings\About.xaml
+
+[C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Modul 1/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MVVM/View/App Settings/AppSettings.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MVVM.View.App_Settings.AppSettings.xaml
+build_metadata.AdditionalFiles.TargetPath = View\App Settings\AppSettings.xaml
+build_metadata.AdditionalFiles.RelativePath = View\App Settings\AppSettings.xaml
+
+[C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Modul 1/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MVVM/View/Authentication/LogIn.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MVVM.View.Authentication.LogIn.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Authentication\LogIn.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Authentication\LogIn.xaml
+
+[C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Modul 1/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MVVM/View/Authentication/SignUp.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MVVM.View.Authentication.SignUp.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Authentication\SignUp.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Authentication\SignUp.xaml
+
+[C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Modul 1/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MVVM/View/Car.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MVVM.View.Car.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Car.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Car.xaml
+
+[C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Modul 1/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MVVM/View/Core/Feed.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MVVM.View.Core.Feed.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Core\Feed.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Core\Feed.xaml
+
+[C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Modul 1/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MVVM/View/Search.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MVVM.View.Search.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Search.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Search.xaml
