@@ -51,7 +51,7 @@
               }
             }
           },
-          "net7.0-ios16.0": {
+          "net7.0-ios16.1": {
             "targetAlias": "net7.0-ios",
             "projectReferences": {
               "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\Tools\\Tools.csproj": {
@@ -59,7 +59,7 @@
               }
             }
           },
-          "net7.0-maccatalyst15.4": {
+          "net7.0-maccatalyst16.1": {
             "targetAlias": "net7.0-maccatalyst",
             "projectReferences": {
               "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\Tools\\Tools.csproj": {
@@ -117,7 +117,7 @@
             "Microsoft.Maui.Graphics": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.49, )",
+              "version": "[7.0.52, )",
               "autoReferenced": true
             },
             "MySqlConnector": {
@@ -150,7 +150,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         },
         "net7.0-android33.0": {
           "targetAlias": "net7.0-android",
@@ -186,7 +186,7 @@
             "Microsoft.Maui.Graphics": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.49, )",
+              "version": "[7.0.52, )",
               "autoReferenced": true
             },
             "MySqlConnector": {
@@ -202,43 +202,43 @@
             "Xamarin.AndroidX.Browser": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[1.4.0.2, )",
+              "version": "[1.4.0.3, )",
               "autoReferenced": true
             },
             "Xamarin.AndroidX.Legacy.Support.V4": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[1.0.0.14, )",
+              "version": "[1.0.0.15, )",
               "autoReferenced": true
             },
             "Xamarin.AndroidX.Lifecycle.LiveData": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.5.1, )",
+              "version": "[2.5.1.1, )",
               "autoReferenced": true
             },
             "Xamarin.AndroidX.Navigation.Common": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.5.2, )",
+              "version": "[2.5.2.1, )",
               "autoReferenced": true
             },
             "Xamarin.AndroidX.Navigation.Fragment": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.5.2, )",
+              "version": "[2.5.2.1, )",
               "autoReferenced": true
             },
             "Xamarin.AndroidX.Navigation.Runtime": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.5.2, )",
+              "version": "[2.5.2.1, )",
               "autoReferenced": true
             },
             "Xamarin.AndroidX.Navigation.UI": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.5.2, )",
+              "version": "[2.5.2.1, )",
               "autoReferenced": true
             },
             "Xamarin.AndroidX.Security.SecurityCrypto": {
@@ -250,13 +250,13 @@
             "Xamarin.Google.Android.Material": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[1.6.1.1, )",
+              "version": "[1.7.0, )",
               "autoReferenced": true
             },
             "Xamarin.Google.Crypto.Tink.Android": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[1.7.0, )",
+              "version": "[1.7.0.1, )",
               "autoReferenced": true
             }
           },
@@ -288,9 +288,9 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         },
-        "net7.0-ios16.0": {
+        "net7.0-ios16.1": {
           "targetAlias": "net7.0-ios",
           "dependencies": {
             "FirebaseStorage.net": {
@@ -324,7 +324,7 @@
             "Microsoft.Maui.Graphics": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.49, )",
+              "version": "[7.0.52, )",
               "autoReferenced": true
             },
             "MySqlConnector": {
@@ -360,9 +360,9 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         },
-        "net7.0-maccatalyst15.4": {
+        "net7.0-maccatalyst16.1": {
           "targetAlias": "net7.0-maccatalyst",
           "dependencies": {
             "FirebaseStorage.net": {
@@ -396,7 +396,7 @@
             "Microsoft.Maui.Graphics": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.49, )",
+              "version": "[7.0.52, )",
               "autoReferenced": true
             },
             "MySqlConnector": {
@@ -433,7 +433,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         },
         "net7.0-windows10.0.19041": {
           "targetAlias": "net7.0-windows10.0.19041.0",
@@ -469,25 +469,25 @@
             "Microsoft.Maui.Graphics": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.49, )",
+              "version": "[7.0.52, )",
               "autoReferenced": true
             },
             "Microsoft.Maui.Graphics.Win2D.WinUI.Desktop": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.49, )",
+              "version": "[7.0.52, )",
               "autoReferenced": true
             },
             "Microsoft.Windows.SDK.BuildTools": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[10.0.22621.1, )",
+              "version": "[10.0.22621.755, )",
               "autoReferenced": true
             },
             "Microsoft.WindowsAppSDK": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[1.1.5, )",
+              "version": "[1.2.221109.1, )",
               "autoReferenced": true
             },
             "MySqlConnector": {
@@ -509,7 +509,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.Windows.SDK.NET.Ref",
-              "version": "[10.0.19041.27, 10.0.19041.27]"
+              "version": "[10.0.19041.28, 10.0.19041.28]"
             }
           ],
           "frameworkReferences": {
@@ -529,7 +529,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -572,11 +572,11 @@
             "targetAlias": "net7.0-android",
             "projectReferences": {}
           },
-          "net7.0-ios16.0": {
+          "net7.0-ios16.1": {
             "targetAlias": "net7.0-ios",
             "projectReferences": {}
           },
-          "net7.0-maccatalyst15.4": {
+          "net7.0-maccatalyst16.1": {
             "targetAlias": "net7.0-maccatalyst",
             "projectReferences": {}
           },
@@ -630,7 +630,7 @@
             "Microsoft.Maui.Graphics": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.49, )",
+              "version": "[7.0.52, )",
               "autoReferenced": true
             }
           },
@@ -659,7 +659,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         },
         "net7.0-android33.0": {
           "targetAlias": "net7.0-android",
@@ -699,7 +699,7 @@
             "Microsoft.Maui.Graphics": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.49, )",
+              "version": "[7.0.52, )",
               "autoReferenced": true
             },
             "Xamarin.Android.Glide": {
@@ -711,43 +711,43 @@
             "Xamarin.AndroidX.Browser": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[1.4.0.2, )",
+              "version": "[1.4.0.3, )",
               "autoReferenced": true
             },
             "Xamarin.AndroidX.Legacy.Support.V4": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[1.0.0.14, )",
+              "version": "[1.0.0.15, )",
               "autoReferenced": true
             },
             "Xamarin.AndroidX.Lifecycle.LiveData": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.5.1, )",
+              "version": "[2.5.1.1, )",
               "autoReferenced": true
             },
             "Xamarin.AndroidX.Navigation.Common": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.5.2, )",
+              "version": "[2.5.2.1, )",
               "autoReferenced": true
             },
             "Xamarin.AndroidX.Navigation.Fragment": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.5.2, )",
+              "version": "[2.5.2.1, )",
               "autoReferenced": true
             },
             "Xamarin.AndroidX.Navigation.Runtime": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.5.2, )",
+              "version": "[2.5.2.1, )",
               "autoReferenced": true
             },
             "Xamarin.AndroidX.Navigation.UI": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.5.2, )",
+              "version": "[2.5.2.1, )",
               "autoReferenced": true
             },
             "Xamarin.AndroidX.Security.SecurityCrypto": {
@@ -759,13 +759,13 @@
             "Xamarin.Google.Android.Material": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[1.6.1.1, )",
+              "version": "[1.7.0, )",
               "autoReferenced": true
             },
             "Xamarin.Google.Crypto.Tink.Android": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[1.7.0, )",
+              "version": "[1.7.0.1, )",
               "autoReferenced": true
             }
           },
@@ -797,9 +797,9 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         },
-        "net7.0-ios16.0": {
+        "net7.0-ios16.1": {
           "targetAlias": "net7.0-ios",
           "dependencies": {
             "CommunityToolkit.Maui": {
@@ -837,7 +837,7 @@
             "Microsoft.Maui.Graphics": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.49, )",
+              "version": "[7.0.52, )",
               "autoReferenced": true
             }
           },
@@ -869,9 +869,9 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         },
-        "net7.0-maccatalyst15.4": {
+        "net7.0-maccatalyst16.1": {
           "targetAlias": "net7.0-maccatalyst",
           "dependencies": {
             "CommunityToolkit.Maui": {
@@ -909,7 +909,7 @@
             "Microsoft.Maui.Graphics": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.49, )",
+              "version": "[7.0.52, )",
               "autoReferenced": true
             }
           },
@@ -942,7 +942,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         },
         "net7.0-windows10.0.19041": {
           "targetAlias": "net7.0-windows10.0.19041.0",
@@ -982,25 +982,25 @@
             "Microsoft.Maui.Graphics": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.49, )",
+              "version": "[7.0.52, )",
               "autoReferenced": true
             },
             "Microsoft.Maui.Graphics.Win2D.WinUI.Desktop": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.49, )",
+              "version": "[7.0.52, )",
               "autoReferenced": true
             },
             "Microsoft.Windows.SDK.BuildTools": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[10.0.22621.1, )",
+              "version": "[10.0.22621.755, )",
               "autoReferenced": true
             },
             "Microsoft.WindowsAppSDK": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[1.1.5, )",
+              "version": "[1.2.221109.1, )",
               "autoReferenced": true
             }
           },
@@ -1018,7 +1018,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.Windows.SDK.NET.Ref",
-              "version": "[10.0.19041.27, 10.0.19041.27]"
+              "version": "[10.0.19041.28, 10.0.19041.28]"
             }
           ],
           "frameworkReferences": {
@@ -1038,7 +1038,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -8,10 +8,13 @@ using System.Runtime.InteropServices;
 using System.Windows;
 using CommunityToolkit.Maui.Layouts;
 using MotorEmpireAutohaus.Tools.Utility.Messages;
+using System.ComponentModel;
+using MotorEmpireAutohaus.MVVM.Models.Base;
 
 namespace MotorEmpireAutohaus.MVVM.View_Models.Account
 {
 
+    [QueryProperty (nameof(UserAccount), nameof(UserAccount))]
     public partial class UserAccountViewModel : BaseViewModel
     {
         //Win32 API call
@@ -39,6 +42,14 @@ namespace MotorEmpireAutohaus.MVVM.View_Models.Account
         [ObservableProperty]
         private UserAccount user;
 
+        private UserAccount userCopy;
+
+        [ObservableProperty]
+        private bool isEditable=false;
+
+        [ObservableProperty]
+        private string editButtonText="Edit account information";
+
         public UserAccountViewModel() { _accountService = new AccountService(); }
 
 /*        public UserAccountViewModel(string name, string emailAddress, string username, string password) : base(name, password)
@@ -60,7 +71,11 @@ namespace MotorEmpireAutohaus.MVVM.View_Models.Account
             _accountService = accountService;
             _authValidation = authValidation;
             this.user= user;
+            userCopy = new UserAccount();
+            isEditable = false;            
         }
+
+
 
         [RelayCommand]
         public async void Login()
@@ -80,6 +95,8 @@ namespace MotorEmpireAutohaus.MVVM.View_Models.Account
         partial void OnUserChanged(UserAccount value)
         {
             user = value;
+            userCopy = (UserAccount)_accountService.RetrieveByUuid(this.user.UUID);
+            userCopy.Password = this.user.Password;
         }
 
         private static async Task TakePhoto()
@@ -96,6 +113,19 @@ namespace MotorEmpireAutohaus.MVVM.View_Models.Account
                     await sourceItem.CopyToAsync(localFileStream);
                 }
             }
+        }
+
+        private bool CheckForIdenticalCredentialsAtUpdate()
+        {
+            UserAccount databaseEntry = (UserAccount) _accountService.RetrieveByUuid(user.UUID);
+
+            if (!(user.Username!=databaseEntry.Username || user.Name!=databaseEntry.Name || user.EmailAddress!=databaseEntry.EmailAddress))
+            {
+                CrossPlatformMessageRenderer.RenderMessages("Cannot modify your account details since your new credentials are identical to the old ones. Try modifying your current details by adding new credentials and then try again.", "Okay", 5);
+                return true;
+            }
+
+            return false;
         }
 
         [RelayCommand]
@@ -134,6 +164,49 @@ namespace MotorEmpireAutohaus.MVVM.View_Models.Account
         {
             await TakePhoto();  
         }
+
+        [RelayCommand]
+        public async void EditButtonTextClicked()
+        {
+            IsEditable = !IsEditable;
+            if (!IsEditable)
+            {
+                if (!CheckForIdenticalCredentialsAtUpdate())
+                {
+                    if (_authValidation.ValidateNewCredentialsBeforeUpdate(user))
+                    {
+                        bool answerIsPositive = await Application.Current.MainPage.DisplayAlert("Motor Empire Autohaus-Update account information",
+                            "Are you sure that you want to modify your account information?\nYour old credentials will be permanently lost!\nYou will also need to use the new credentials on your further authentications within the app.\n Continue?",
+                            "Proceed to account info update",
+                            "Cancel");
+
+                        if (answerIsPositive)
+                        {
+                            user = (UserAccount)_accountService.Update(user);
+                            CrossPlatformMessageRenderer.RenderMessages($"Update successfull, {user.Name}!\n You'll be automatically redirected to the main page of the application...", "Allright", 4);
+                            await Shell.Current.GoToAsync("../MotorEmpire", true, new Dictionary<string, object>
+                            {
+                                { "UserAccount",user }
+                            });
+                        }
+                    }
+                }
+            }
+        }
+
+        [RelayCommand]
+        public void RevertEditChanges()
+        {
+            string currentPassword = user.Password;
+            UserAccount oldUser=(UserAccount) _accountService.RetrieveByUuid(user.UUID);
+            user.Name = oldUser.Name;
+            user.EmailAddress=oldUser.EmailAddress;
+            user.Username= oldUser.Username;
+            user.UUID=oldUser.UUID;
+            user.ProfileImageUrl=oldUser.ProfileImageUrl;
+            user.Password = currentPassword;
+        }
+
     }
 }
 

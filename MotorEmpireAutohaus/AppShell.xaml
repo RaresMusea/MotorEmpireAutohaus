@@ -10,6 +10,7 @@
     xmlns:appSettings="clr-namespace:MotorEmpireAutohaus.View.App_Settings"
     xmlns:signupPage="clr-namespace:MotorEmpireAutohaus.View"
     xmlns:viewmodel="clr-namespace:MotorEmpireAutohaus.MVVM.View_Models.Core;assembly=MVVM"
+    xmlns:motorempire="clr-namespace:MotorEmpireAutohaus.View"
     x:DataType="viewmodel:MotorEmpireViewModel"
     Shell.TabBarIsVisible="False"
     NavigationPage.HasBackButton="False"
@@ -38,6 +39,12 @@
         Title="About Application"
         ContentTemplate="{DataTemplate appSettings:About}"
         Route="About"
+        Shell.FlyoutItemIsVisible="False"/>
+
+    <ShellContent
+        Title="Motor Empire Autohaus"
+        ContentTemplate="{DataTemplate motorempire:MotorEmpire}"
+        Route="MotorEmpire"
         Shell.FlyoutItemIsVisible="False"/>
 
     <FlyoutItem Route="MotorEmpire"

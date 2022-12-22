@@ -5,10 +5,11 @@ using MotorEmpireAutohaus.Tools.Utility.CarFilterAndValidator;
 using MotorEmpireAutohaus.MVVM.View_Models.Base;
 using MotorEmpireAutohaus.MVVM.Models.Vehicle_Models.Car.Car_Filter_Model;
 using MotorEmpireAutohaus.MVVM.View_Models.Account;
+using MotorEmpireAutohaus.MVVM.Models.User_Account_Model;
 
 namespace MotorEmpireAutohaus.MVVM.View_Models.Core;
 
-[QueryProperty (nameof(Name),nameof(Name))]
+[QueryProperty (nameof(UserAccount),nameof(UserAccount))]
 [QueryProperty (nameof(CarFilter),nameof(CarFilter))]
 public partial class MotorEmpireViewModel : BaseViewModel
 {
@@ -16,14 +17,14 @@ public partial class MotorEmpireViewModel : BaseViewModel
     [NotifyPropertyChangedFor (nameof(GreetingMessage))]
     private string name;
 
-    public string GreetingMessage => $"Hello, {name}"; 
+    public string GreetingMessage => $"Hello, {userAccount.Name}"; 
 
 
     [ObservableProperty]
     private CarFilter carFilter;
 
     [ObservableProperty]
-    private UserAccountViewModel userAccount;
+    private UserAccount userAccount;
 
     private readonly CarFilterService carFilterService;
 
@@ -127,7 +128,7 @@ public partial class MotorEmpireViewModel : BaseViewModel
 
     public MotorEmpireViewModel() { }
 
-    public MotorEmpireViewModel(CarFilterService carFilterService, UserAccountViewModel userAccount)
+    public MotorEmpireViewModel(CarFilterService carFilterService, UserAccount userAccount)
     {
         this.carFilterService = carFilterService;
         InitializeProps();

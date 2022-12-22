@@ -251,5 +251,31 @@ namespace MotorEmpireAutohaus.MVVM.Services.Authentication
             user.Name = FormatName(user.Name);
             return true;
         }
+
+        public bool ValidateNewCredentialsBeforeUpdate(UserAccount user)
+        {
+            var emailValidation = ValidateEmailAddress(user.EmailAddress);
+            var nameValidation=ValidateName(user.Name);
+            var usernameValidation=ValidateUsername(user.Username);
+
+            if (!nameValidation.ValidationPassed)
+            {
+                CrossPlatformMessageRenderer.RenderMessages(nameValidation.Remark, "Retry", 5);
+                return false;
+            }
+
+            if (!usernameValidation.ValidationPassed)
+            {
+                CrossPlatformMessageRenderer.RenderMessages(usernameValidation.Remark, "Retry", 5);
+            }
+
+            if (!emailValidation.ValidationPassed)
+            {
+                CrossPlatformMessageRenderer.RenderMessages(emailValidation.Remark, "Retry", 5);
+                return false;
+            }
+
+            return true;
+        }
     }
 }

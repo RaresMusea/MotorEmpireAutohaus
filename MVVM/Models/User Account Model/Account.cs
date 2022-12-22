@@ -27,6 +27,7 @@ namespace MotorEmpireAutohaus.MVVM.Models.User_Account_Model
 
         public Account() { }
 
+
         public abstract override bool IsEmpty();
     }
 }

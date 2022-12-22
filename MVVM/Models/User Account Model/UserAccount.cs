@@ -35,6 +35,7 @@ namespace MotorEmpireAutohaus.MVVM.Models.User_Account_Model
             ProfileImageUrl = profileImageURL;
         }
 
+
         public override bool Equals(object obj)
         {
             if (obj is not UserAccount) return false;

@@ -4,7 +4,7 @@ namespace MotorEmpireAutohaus.MVVM.Models.Base
 {
     public abstract class Entity:BaseViewModel
     {
-        public string UUID { get; protected set; }
+        public string UUID { get;  set; }
 
         public Entity()
         {

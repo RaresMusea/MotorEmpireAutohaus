@@ -6,6 +6,7 @@ using MotorEmpireAutohaus.Tools.Utility.Messages;
 using MotorEmpireAutohaus.MVVM.Services.Interfaces;
 using MotorEmpireAutohaus.MVVM.Models.User_Account_Model;
 using MotorEmpireAutohaus.MVVM.Models.Base;
+using System.Data;
 
 namespace MotorEmpireAutohaus.Services.Account_Services
 {
@@ -75,6 +76,7 @@ namespace MotorEmpireAutohaus.Services.Account_Services
                 user.EmailAddress = accounts[0].EmailAddress;
                 user.Username = accounts[0].Username;
                 user.ProfileImageUrl = accounts[0].ProfileImageUrl;
+                user.UUID = accounts[0].UUID;
                 CrossPlatformMessageRenderer.DisplayMobileSnackbar(
                     $"Welcome back, {accounts.ElementAt(0).Name}!","Close", 5);
                 return true;
@@ -173,6 +175,56 @@ namespace MotorEmpireAutohaus.Services.Account_Services
             command.ExecuteNonQuery();
         }
 
-       
+
+        public Entity RetrieveByUuid(string uuid)
+        {
+            MySqlCommand command = new MySqlCommand($"SELECT * FROM {TableReference} WHERE UUID=@uuid", _databaseConfig.DatabaseConnection);
+            command.Prepare();
+            command.Parameters.AddWithValue("@uuid", uuid);
+
+            MySqlDataReader reader = command.ExecuteReader();
+
+            Entity returnValue=null;
+
+            while (reader.Read())
+            {
+                string unique = reader.GetString(1);
+                string name=reader.GetString(2);
+                string email=reader.GetString(3);
+                string username=reader.GetString(4);
+                string password=reader.GetString(5);
+                string profileImage=reader.GetString(6);
+                returnValue = new UserAccount(unique, name, email, username, password, profileImage);
+            }
+            reader.Close();
+            return returnValue;
+        }
+
+        public void UpdateAccountBindings(UserAccount oldUser, UserAccount newUser)
+        {
+            oldUser.Name= newUser.Name;
+            oldUser.Password = newUser.Password;
+            oldUser.Username=newUser.Username;
+            oldUser.EmailAddress=newUser.EmailAddress;
+            oldUser.UUID = newUser.UUID;
+            oldUser.ProfileImageUrl=newUser.ProfileImageUrl;
+        }
+
+        public Entity Update(Entity entity)
+        {
+            UserAccount user = (UserAccount)entity;
+            MySqlCommand command = new($"UPDATE {TableReference} SET Name=@name, Username=@username, EmailAddress=@email WHERE UUID=@uuid", _databaseConfig.DatabaseConnection);
+            command.Prepare();
+            command.Parameters.AddWithValue("@name", user.Name);
+            command.Parameters.AddWithValue("@username", user.Username);
+            command.Parameters.AddWithValue("@email", user.EmailAddress);
+            command.Parameters.AddWithValue("@uuid", user.UUID);
+            command.ExecuteNonQuery();
+
+            entity= (UserAccount)RetrieveByUuid(user.UUID);
+            
+            return entity;
+        }
+
     }
 }
