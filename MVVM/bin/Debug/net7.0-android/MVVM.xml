@@ -111,6 +111,12 @@
         <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.RemovePhoneNumberCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.RemovePhoneNumber"/>.</summary>
         </member>
+        <member name="F:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.deleteAccountCommand">
+            <summary>The backing field for <see cref="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.DeleteAccountCommand"/>.</summary>
+        </member>
+        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.DeleteAccountCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.DeleteAccount"/>.</summary>
+        </member>
         <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Base.BaseViewModel.IsBusy">
             <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Base.BaseViewModel.isBusy"/>
         </member>

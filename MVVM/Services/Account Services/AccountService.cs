@@ -346,5 +346,25 @@ namespace MotorEmpireAutohaus.Services.Account_Services
             CrossPlatformMessageRenderer.RenderMessages("Successfully removed your phone number!", "OK", 3);
             return true;
         }
+
+        public bool Delete(Entity entity)
+        {
+            MySqlCommand command = new($"DELETE FROM {TableReference} WHERE UUID=@uuid", _databaseConfig.DatabaseConnection);
+            command.Prepare();
+            command.Parameters.AddWithValue("@uuid", entity.UUID);
+            try
+            {
+                command.ExecuteNonQuery();
+            }
+            catch (MySqlException exc) 
+            {
+                CrossPlatformMessageRenderer.RenderMessages($"The deletion could not be accomplished due to an unexpected error. Please try again later.\n" +
+                    $"More details: {exc.Message}", "Retry", 5);
+                return false;
+            }
+
+            CrossPlatformMessageRenderer.RenderMessages($"Account deleted successfully!\n You are being redirected to the Sign Up page...", "OK", 4);
+            return true;         
+        }
     }
 }

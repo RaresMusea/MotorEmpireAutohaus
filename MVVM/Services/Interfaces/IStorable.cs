@@ -12,5 +12,7 @@ public interface IStorable
 
     public Entity Update(Entity entity);
 
+    public bool Delete(Entity entity);
+
     //public Task<Entity> GetEntityByID(int id);*/
 }

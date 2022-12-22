@@ -22,11 +22,11 @@ build_metadata.AdditionalFiles.ManifestResourceName = MVVM.MotorEmpire.xaml
 build_metadata.AdditionalFiles.TargetPath = MotorEmpire.xaml
 build_metadata.AdditionalFiles.RelativePath = MotorEmpire.xaml
 
-[C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Modul 1/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MVVM/View/Account.xaml]
+[C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Modul 1/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MVVM/View/Account Management/Account.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = MVVM.View.Account.xaml
-build_metadata.AdditionalFiles.TargetPath = View\Account.xaml
-build_metadata.AdditionalFiles.RelativePath = View\Account.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MVVM.View.Account_Management.Account.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Account Management\Account.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Account Management\Account.xaml
 
 [C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Modul 1/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MVVM/View/App Settings/About.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

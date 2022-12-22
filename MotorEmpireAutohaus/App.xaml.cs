@@ -33,7 +33,7 @@ public partial class App : Application,IStatusBarAppearance
             {
                 //Android:
 #if __ANDROID__
-                handler.PlatformView.SetBackgroundColor(Colors.Transparent.ToPlatform());
+                //handler.PlatformView.SetBackgroundColor(Colors.Transparent.ToPlatform());
 #elif __IOS__
 				handler.PlatformView.BorderStyle = UIKit.UITextBorderStyle.None;
 #endif

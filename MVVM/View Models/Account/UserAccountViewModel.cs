@@ -305,6 +305,26 @@ namespace MotorEmpireAutohaus.MVVM.View_Models.Account
             }
         }
 
+        [RelayCommand]
+        public async void DeleteAccount()
+        {
+            bool answerIsPositive = await Application.Current.MainPage.DisplayAlert("Motor Empire Autohaus-Delete account",
+                           "Are you sure that you want to delete your account?\n" +
+                           "This action is irreversible!\nYou won't be able to recover your data after this step and all of your posts and informations shared within the app will be permanently erased.\n" +
+                           "Continue?",
+                           "Yes, delete my account",
+                           "No, I want to keep my account");
+
+            if (answerIsPositive)
+            {
+                if (_accountService.Delete(user))
+                {
+                    user = null;
+                    await Shell.Current.GoToAsync("//SignUp", true);
+                }
+            }
+        }
+
     }
 }
 

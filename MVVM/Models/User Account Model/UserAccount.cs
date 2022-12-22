@@ -68,6 +68,11 @@ namespace MotorEmpireAutohaus.MVVM.Models.User_Account_Model
             return !(a == b);
         }
 
+        public static explicit operator UserAccount(string v)
+        {
+            throw new NotImplementedException();
+        }
+
         public override bool IsEmpty()
         {
             if (this is null)

@@ -8,7 +8,7 @@
     <MauiXaml Update="MotorEmpire.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="View\Account.xaml">
+    <MauiXaml Update="View\Account Management\Account.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="View\App Settings\About.xaml">
