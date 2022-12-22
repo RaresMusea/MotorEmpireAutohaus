@@ -5,11 +5,9 @@ using MotorEmpireAutohaus.MVVM.Models.User_Account_Model;
 using MotorEmpireAutohaus.MVVM.Services.Authentication;
 using MotorEmpireAutohaus.MVVM.View_Models.Base;
 using System.Runtime.InteropServices;
-using System.Windows;
-using CommunityToolkit.Maui.Layouts;
 using MotorEmpireAutohaus.Tools.Utility.Messages;
-using System.ComponentModel;
-using MotorEmpireAutohaus.MVVM.Models.Base;
+using MotorEmpireAutohaus.Tools.Encryption;
+using Tools.Utility.Parsers;
 
 namespace MotorEmpireAutohaus.MVVM.View_Models.Account
 {
@@ -50,6 +48,17 @@ namespace MotorEmpireAutohaus.MVVM.View_Models.Account
         [ObservableProperty]
         private string editButtonText="Edit account information";
 
+        [ObservableProperty]
+        private bool addedPhoneNumber;
+
+        [ObservableProperty]
+        private bool addPhoneNumberVisible;
+
+        [ObservableProperty]
+        private bool removePhoneNumberVisible;
+
+
+
         public UserAccountViewModel() { _accountService = new AccountService(); }
 
 /*        public UserAccountViewModel(string name, string emailAddress, string username, string password) : base(name, password)
@@ -70,11 +79,21 @@ namespace MotorEmpireAutohaus.MVVM.View_Models.Account
         {
             _accountService = accountService;
             _authValidation = authValidation;
+            user.UUID = _accountService.GetUuidByEmail(user.EmailAddress);
             this.user= user;
             userCopy = new UserAccount();
-            isEditable = false;            
+            isEditable = false;
+            AddedPhoneNumber = !_accountService.HasPhoneNumber(user.UUID);
+            AddPhoneNumberVisible = ! _accountService.HasPhoneNumber(user.UUID);
+            removePhoneNumberVisible = _accountService.HasPhoneNumber(user.UUID);
         }
 
+
+        partial void OnAddPhoneNumberVisibleChanged(bool value)
+        {
+            AddPhoneNumberVisible = value;
+            RemovePhoneNumberVisible = !value;
+        }
 
 
         [RelayCommand]
@@ -184,10 +203,7 @@ namespace MotorEmpireAutohaus.MVVM.View_Models.Account
                         {
                             user = (UserAccount)_accountService.Update(user);
                             CrossPlatformMessageRenderer.RenderMessages($"Update successfull, {user.Name}!\n You'll be automatically redirected to the main page of the application...", "Allright", 4);
-                            await Shell.Current.GoToAsync("../MotorEmpire", true, new Dictionary<string, object>
-                            {
-                                { "UserAccount",user }
-                            });
+                            await Shell.Current.GoToAsync($"//MotorEmpire?Name={user.Name}", true);
                         }
                     }
                 }
@@ -205,6 +221,88 @@ namespace MotorEmpireAutohaus.MVVM.View_Models.Account
             user.UUID=oldUser.UUID;
             user.ProfileImageUrl=oldUser.ProfileImageUrl;
             user.Password = currentPassword;
+        }
+
+        [RelayCommand]
+        public async void ChangePassword()
+        {
+            bool answerIsPositive = await Application.Current.MainPage.DisplayAlert("Motor Empire Autohaus-Password Change",
+                           "Changing password will edit the credentials used for authentication.\nContinue?",
+                           "Change my password",
+                           "Cancel");
+            
+            if(answerIsPositive)
+            {
+                string oldPassword = await Application.Current.MainPage.DisplayPromptAsync("Password Change", "Before changing the password, type your most recent password here.\n This will help us verify that you are the owner of this account.\n");
+                if(Encrypter.EncryptPassword(oldPassword)==_accountService.RetrievePasswordByUuid(user.UUID))
+                {
+                    string newPassword = "";
+
+                    do
+                    {
+                        newPassword = await Application.Current.MainPage.DisplayPromptAsync("Password Change", "Type your new password here:\n");
+                        var passwordValidation=_authValidation.ValidatePassword(newPassword);
+                        if (!passwordValidation.ValidationPassed)
+                        {
+                            CrossPlatformMessageRenderer.RenderMessages(passwordValidation.Remark,"Retry",5);
+                        }
+                    }
+                    while (!_authValidation.ValidatePassword(newPassword).ValidationPassed);
+
+                    _accountService.UpdatePasswordForUser(user, newPassword);
+                    CrossPlatformMessageRenderer.RenderMessages("Password changed successfully!", "Ok", 5);
+
+                }
+            }
+        }
+
+
+
+        [RelayCommand]
+        public async void AddPhoneNumber()
+        {
+            bool answerIsPositive = await Application.Current.MainPage.DisplayAlert("Motor Empire Autohaus-Provide a phone number",
+               "Adding your phone number will help other users find and get in touch with you more easilly.\nWe care for your privacy, so we assure you that your number will only be used within this application.\nDo you want to add your number? You can remove it anytime.",
+               "Add my phone number",
+               "I'll add it later on");
+
+            if (answerIsPositive)
+            {
+                string phoneNumber = await Application.Current.MainPage.DisplayPromptAsync("Add a phone number", "Type your phone number here:\n","OK","Cancel",null,15,Keyboard.Numeric,"+40 (Change the prefix according to your country)");
+                
+                if(!PhoneNumberValidator.IsPhoneNumberValid(phoneNumber))
+                {
+                    CrossPlatformMessageRenderer.RenderMessages("The provided phone number is invalid!\nPlease try again!", "Retry", 5);
+                    return;
+                }
+
+                if (_accountService.SetPhoneNumber(user.UUID, phoneNumber))
+                {
+                    AddPhoneNumberVisible = false;
+                    removePhoneNumberVisible = true;
+                    user.PhoneNumber = phoneNumber;
+                }
+
+            }
+        }
+
+        [RelayCommand]
+        public async void RemovePhoneNumber()
+        {
+            bool answerIsPositive = await Application.Current.MainPage.DisplayAlert("Motor Empire Autohaus-Remove the provided phone number",
+               "Remove the phone number linked to your account?\nYou can add it back anytime.",
+               "Yes, I want to remove my phone number associated with this acccount",
+               "No");
+
+            if(answerIsPositive) 
+            {
+                if (_accountService.RemovePhoneNumber(user.UUID))
+                {
+                    AddPhoneNumberVisible = true;
+                    removePhoneNumberVisible = false;
+                    user.PhoneNumber= "";
+                }
+            }
         }
 
     }

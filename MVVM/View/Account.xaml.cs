@@ -28,7 +28,7 @@ public partial class Account : ContentPage
 
     private async void EditAccountButtonClicked(object sender, EventArgs e)
     {
-        Entry[] entriesList = { editableNameEntry, editableUsernameEntry, editableEmailEntry };
+        Entry[] entriesList = { editableNameEntry, editableUsernameEntry, editableEmailEntry, editablePhoneNumberEntry };
 
 
         if(editAccountButton.Text=="Edit account information")
@@ -36,6 +36,7 @@ public partial class Account : ContentPage
             editAccountButton.Text = "Save changes";
             editableUsernameEntry.IsEnabled = true;
             editableNameEntry.IsEnabled = true;
+            editablePhoneNumberEntry.IsEnabled = true;
 
             revertEditChanges.IsVisible = true;
             await revertEditChanges.FadeTo(1,180,Easing.CubicIn); 
@@ -44,9 +45,23 @@ public partial class Account : ContentPage
         editAccountButton.Text = "Edit account information";
         editableUsernameEntry.IsEnabled = false;
         editableNameEntry.IsEnabled = false;
+        editablePhoneNumberEntry.IsEnabled = false;
 
         await revertEditChanges.FadeTo(0, 170, Easing.CubicInOut);
         revertEditChanges.IsVisible = false;
+    }
+
+    private async void RemovePhoneNumberButtonHandler(object sender, EventArgs e)
+    {
+/*        if(removePhoneNumberButton.IsVisible)
+        {
+            phoneNumberFrame.IsVisible = true;
+            await phoneNumberFrame.FadeTo(1, 200, Easing.CubicIn);
+            return;
+        }
+
+        await phoneNumberFrame.FadeTo(0, 200, Easing.CubicOut);
+        phoneNumberFrame.IsVisible = false;*/
     }
 
 }

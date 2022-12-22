@@ -11,6 +11,7 @@ namespace MotorEmpireAutohaus.MVVM.View_Models.Core;
 
 [QueryProperty (nameof(UserAccount),nameof(UserAccount))]
 [QueryProperty (nameof(CarFilter),nameof(CarFilter))]
+[QueryProperty (nameof(Name),nameof(Name))]
 public partial class MotorEmpireViewModel : BaseViewModel
 {
     [ObservableProperty]
@@ -21,6 +22,7 @@ public partial class MotorEmpireViewModel : BaseViewModel
 
 
     [ObservableProperty]
+    [NotifyPropertyChangedFor (nameof(GreetingMessage))]
     private CarFilter carFilter;
 
     [ObservableProperty]

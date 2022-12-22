@@ -84,3 +84,4 @@ C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de p
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-android\stamp\_CleanIntermediateIfNeeded.stamp
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-android\stamp\_ConvertResourcesCases.stamp
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-android\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-android\XamlC.stamp

@@ -1,7 +1,4 @@
 ﻿using MotorEmpireAutohaus.Tools.Handlers;
-using Microsoft.Maui.Platform;
-using MotorEmpireAutohaus.MVVM.View_Models.Account;
-using MotorEmpireAutohaus.View_Model;
 using MotorEmpireAutohaus.Tools.Utility.StatusBarAppearance;
 
 namespace MotorEmpireAutohaus;

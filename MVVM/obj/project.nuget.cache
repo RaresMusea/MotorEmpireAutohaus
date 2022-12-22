@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "hNfgSe7ff10WfjzoGmIRLHizP2goeDDoG0Nx049x+3gLvr60wWDSD+CiHKQRXGG2HrfzR+uywoSW2b5o8jMZ5g==",
+  "dgSpecHash": "erb/TFPtkaPZcoAumob1r0BU8KTFbzc9ullPh9iTR7/iDyocw6hJVYaj/o+p6/YDfW5WDhUyleBvRwu+bKM6tA==",
   "success": true,
   "projectFilePath": "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\MVVM\\MVVM.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\rares\\.nuget\\packages\\communitytoolkit.maui\\2.0.0\\communitytoolkit.maui.2.0.0.nupkg.sha512",
+    "C:\\Users\\rares\\.nuget\\packages\\communitytoolkit.maui\\3.1.0\\communitytoolkit.maui.3.1.0.nupkg.sha512",
     "C:\\Users\\rares\\.nuget\\packages\\communitytoolkit.maui.core\\3.1.0\\communitytoolkit.maui.core.3.1.0.nupkg.sha512",
+    "C:\\Users\\rares\\.nuget\\packages\\communitytoolkit.maui.markup\\2.1.0\\communitytoolkit.maui.markup.2.1.0.nupkg.sha512",
     "C:\\Users\\rares\\.nuget\\packages\\communitytoolkit.mvvm\\8.0.0\\communitytoolkit.mvvm.8.0.0.nupkg.sha512",
     "C:\\Users\\rares\\.nuget\\packages\\firebasestorage.net\\1.0.3\\firebasestorage.net.1.0.3.nupkg.sha512",
     "C:\\Users\\rares\\.nuget\\packages\\googlegson\\2.9.1.1\\googlegson.2.9.1.1.nupkg.sha512",
@@ -81,7 +82,6 @@
     "C:\\Users\\rares\\.nuget\\packages\\system.runtime.extensions\\4.3.0\\system.runtime.extensions.4.3.0.nupkg.sha512",
     "C:\\Users\\rares\\.nuget\\packages\\system.runtime.handles\\4.3.0\\system.runtime.handles.4.3.0.nupkg.sha512",
     "C:\\Users\\rares\\.nuget\\packages\\system.runtime.interopservices\\4.3.0\\system.runtime.interopservices.4.3.0.nupkg.sha512",
-    "C:\\Users\\rares\\.nuget\\packages\\system.runtime.interopservices.nfloat.internal\\6.0.1\\system.runtime.interopservices.nfloat.internal.6.0.1.nupkg.sha512",
     "C:\\Users\\rares\\.nuget\\packages\\system.runtime.interopservices.runtimeinformation\\4.3.0\\system.runtime.interopservices.runtimeinformation.4.3.0.nupkg.sha512",
     "C:\\Users\\rares\\.nuget\\packages\\system.runtime.numerics\\4.3.0\\system.runtime.numerics.4.3.0.nupkg.sha512",
     "C:\\Users\\rares\\.nuget\\packages\\system.runtime.serialization.primitives\\4.1.1\\system.runtime.serialization.primitives.4.1.1.nupkg.sha512",

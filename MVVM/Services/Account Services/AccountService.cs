@@ -7,15 +7,16 @@ using MotorEmpireAutohaus.MVVM.Services.Interfaces;
 using MotorEmpireAutohaus.MVVM.Models.User_Account_Model;
 using MotorEmpireAutohaus.MVVM.Models.Base;
 using System.Data;
+using Storage.MySQL;
 
 namespace MotorEmpireAutohaus.Services.Account_Services
 {
-    public class AccountService : IAuthenticate,IStorable
+    public class AccountService : IAuthenticate, IStorable
     {
         private DatabaseConfigurer _databaseConfig;
         private static readonly string TableReference = "User";
 
-        public  AccountService()
+        public AccountService()
         {
             Connect();
             //Debug.WriteLine("Connection successful!");
@@ -54,7 +55,17 @@ namespace MotorEmpireAutohaus.Services.Account_Services
                 string username = (string)reader.GetValue(4);
                 string password = (string)reader.GetValue(5);
                 string profileImageUrl = (string)reader.GetValue(6);
-                UserAccount result = new(uuid, name, emailAddress, username, password, profileImageUrl);
+                string phoneNumber = reader.GetValue(7) == DBNull.Value ? null : (string)reader.GetValue(7);
+
+                UserAccount result = null;
+                if (phoneNumber is not null)
+                {
+                    result = new(uuid, name, emailAddress, username, password, profileImageUrl,phoneNumber);
+                }
+                else
+                {
+                    result = new(uuid, name, emailAddress, username, password, profileImageUrl);
+                }
                 accounts.Add(result);
             }
 
@@ -77,8 +88,9 @@ namespace MotorEmpireAutohaus.Services.Account_Services
                 user.Username = accounts[0].Username;
                 user.ProfileImageUrl = accounts[0].ProfileImageUrl;
                 user.UUID = accounts[0].UUID;
+                user.PhoneNumber = accounts[0].PhoneNumber??"";
                 CrossPlatformMessageRenderer.DisplayMobileSnackbar(
-                    $"Welcome back, {accounts.ElementAt(0).Name}!","Close", 5);
+                    $"Welcome back, {accounts.ElementAt(0).Name}!", "Close", 5);
                 return true;
             }
         }
@@ -120,7 +132,7 @@ namespace MotorEmpireAutohaus.Services.Account_Services
                     Encrypter.EncryptPassword(userAccount.Password),
                     @"https://firebasestorage.googleapis.com/v0/b/motor-empire-autohaus.appspot.com/o/defaultprofilepic.png?alt=media&token=256db5c0-c612-42f7-bc4f-d6595a99da80"
                 };
-                userAccount.ProfileImageUrl=
+                userAccount.ProfileImageUrl =
                     @"https://firebasestorage.googleapis.com/v0/b/motor-empire-autohaus.appspot.com/o/defaultprofilepic.png?alt=media&token=256db5c0-c612-42f7-bc4f-d6595a99da80";
 
                 for (int i = 0; i < keys.Length; i++)
@@ -169,7 +181,7 @@ namespace MotorEmpireAutohaus.Services.Account_Services
 
         private void UpdateLastSeenFor(UserAccount user)
         {
-            MySqlCommand command = new($"UPDATE {TableReference} SET LastSeen=NOW() WHERE EmailAddress=@email",_databaseConfig.DatabaseConnection);
+            MySqlCommand command = new($"UPDATE {TableReference} SET LastSeen=NOW() WHERE EmailAddress=@email", _databaseConfig.DatabaseConnection);
             command.Prepare();
             command.Parameters.AddWithValue("@email", user.EmailAddress);
             command.ExecuteNonQuery();
@@ -184,30 +196,45 @@ namespace MotorEmpireAutohaus.Services.Account_Services
 
             MySqlDataReader reader = command.ExecuteReader();
 
-            Entity returnValue=null;
+            Entity returnValue = null;
 
             while (reader.Read())
             {
                 string unique = reader.GetString(1);
-                string name=reader.GetString(2);
-                string email=reader.GetString(3);
-                string username=reader.GetString(4);
-                string password=reader.GetString(5);
-                string profileImage=reader.GetString(6);
-                returnValue = new UserAccount(unique, name, email, username, password, profileImage);
+                string name = reader.GetString(2);
+                string email = reader.GetString(3);
+                string username = reader.GetString(4);
+                string password = reader.GetString(5);
+                string profileImage = reader.GetString(6);
+                string phoneNumber = reader.GetString(7);
+                if (phoneNumber is not null)
+                {
+                    returnValue = new UserAccount(unique, name, email, username, password, profileImage, phoneNumber);
+                }
+                else
+                {
+                    returnValue = new UserAccount(unique, name, email, username, password, profileImage);
+                }
             }
             reader.Close();
             return returnValue;
         }
 
-        public void UpdateAccountBindings(UserAccount oldUser, UserAccount newUser)
+        public string GetUuidByEmail(string emailAddress)
         {
-            oldUser.Name= newUser.Name;
-            oldUser.Password = newUser.Password;
-            oldUser.Username=newUser.Username;
-            oldUser.EmailAddress=newUser.EmailAddress;
-            oldUser.UUID = newUser.UUID;
-            oldUser.ProfileImageUrl=newUser.ProfileImageUrl;
+            MySqlCommand command = new($"SELECT UUID FROM {TableReference} WHERE EmailAddress=@email", _databaseConfig.DatabaseConnection);
+            command.Prepare();
+            command.Parameters.AddWithValue("@email", emailAddress);
+            MySqlDataReader reader = command.ExecuteReader();
+
+            string uuid = "";
+            while (reader.Read())
+            {
+                uuid= reader.GetString(0);
+            }
+
+            reader.Close();
+            return uuid;
         }
 
         public Entity Update(Entity entity)
@@ -221,10 +248,103 @@ namespace MotorEmpireAutohaus.Services.Account_Services
             command.Parameters.AddWithValue("@uuid", user.UUID);
             command.ExecuteNonQuery();
 
-            entity= (UserAccount)RetrieveByUuid(user.UUID);
-            
+            entity = (UserAccount)RetrieveByUuid(user.UUID);
+
             return entity;
         }
 
+        public string RetrievePasswordByUuid(string uuid)
+        {
+            MySqlCommand command = new($"SELECT password FROM {TableReference} WHERE UUID=@uuid", _databaseConfig.DatabaseConnection);
+            command.Prepare();
+            command.Parameters.AddWithValue("@uuid", uuid);
+
+            MySqlDataReader reader = command.ExecuteReader();
+            string password = "";
+            while (reader.Read())
+            {
+                password = reader.GetString(0);
+            }
+
+            reader.Close();
+            return password;
+        }
+
+        public void UpdatePasswordForUser(UserAccount userAccount, string newPassword)
+        {
+            MySqlCommand command = new($"UPDATE {TableReference} SET Password=@pass WHERE UUID=@uuid", _databaseConfig.DatabaseConnection);
+            command.Prepare();
+            command.Parameters.AddWithValue("@pass", Encrypter.EncryptPassword(newPassword));
+            command.Parameters.AddWithValue("@uuid", userAccount.UUID);
+            command.ExecuteNonQuery();
+
+            userAccount.Password = newPassword;
+        }
+
+        public string RetrievePhoneNumberForUser(string uuid)
+        {
+            MySqlCommand command = new($"SELECT PhoneNumber FROM {TableReference} WHERE UUID=@uuid", _databaseConfig.DatabaseConnection);
+            command.Prepare();
+            command.Parameters.AddWithValue("@uuid", uuid);
+
+            MySqlDataReader reader = command.ExecuteReader();
+
+            string phoneNumber = null;
+            while (reader.Read())
+            {
+                phoneNumber = reader.GetString(0);
+            }
+
+            reader.Close();
+            return phoneNumber;
+        }
+
+        public bool HasPhoneNumber(string uuid)
+        {
+            return RetrievePhoneNumberForUser(uuid) != null;
+        }
+
+        public bool SetPhoneNumber(string uuid, string phoneNumber)
+        {
+            MySqlCommand command = new MySqlCommand($"UPDATE {TableReference} SET PhoneNumber=@number WHERE UUID=@uuid", _databaseConfig.DatabaseConnection);
+            command.Prepare();
+            command.Parameters.AddWithValue("@number", phoneNumber);
+            command.Parameters.AddWithValue("@uuid", uuid);
+
+            try
+            {
+                command.ExecuteNonQuery();
+            }
+            catch (MySqlException exc)
+            {
+                CrossPlatformMessageRenderer.RenderMessages($"Cannot add phone number due to un unexpected error!\nMore details: {exc.Message}", "Retry", 4);
+                return false;
+            }
+
+            CrossPlatformMessageRenderer.RenderMessages($"Added phone number successfully!", "OK", 3);
+
+            return true;
+        }
+
+        public bool RemovePhoneNumber(string uuid)
+        {
+            MySqlCommand command = new ($"UPDATE {TableReference} SET PhoneNumber=null WHERE UUID=@uuid", _databaseConfig.DatabaseConnection);
+            command.Prepare();
+            command.Parameters.AddWithValue("@uuid", uuid);
+
+            try
+            {
+                command.ExecuteNonQuery();
+            }
+            catch (MySqlException exc) {
+                CrossPlatformMessageRenderer.RenderMessages($"An unexpected error occurred while attempting to remove your phone" +
+                    $" number. Please try again later.\nMore details:\n{exc.Message}", "Retry",5);
+                
+                return false;
+            }
+
+            CrossPlatformMessageRenderer.RenderMessages("Successfully removed your phone number!", "OK", 3);
+            return true;
+        }
     }
 }

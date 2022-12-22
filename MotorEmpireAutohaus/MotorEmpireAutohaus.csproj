@@ -98,48 +98,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="View\Authentication\LogIn.xaml.cs">
-	    <DependentUpon>LogIn.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="MotorEmpire.xaml.cs">
-	    <DependentUpon>MotorEmpire.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="View\Account.xaml.cs">
-	    <DependentUpon>Account.xaml</DependentUpon>
-	  </Compile>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <MauiXaml Update="View\App Settings\About.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="View\App Settings\AppSettings.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="View\Authentication\LogIn.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="View\Authentication\SignUp.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="MotorEmpire.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="View\Car.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="View\Core\Feed.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="View\Search.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="View\Account.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	</ItemGroup>
-
-	<ItemGroup>
 	  <Folder Include="Resources\Images\Authentication\" />
 	</ItemGroup>
 

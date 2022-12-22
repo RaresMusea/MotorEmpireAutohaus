@@ -21,6 +21,9 @@ namespace MotorEmpireAutohaus.MVVM.Models.User_Account_Model
         [ObservableProperty]
         private string passwordConfirmation;
 
+        [ObservableProperty]
+        private string phoneNumber;
+
         public UserAccount() { }
 
         public UserAccount(string name, string emailAddress, string username, string password): base(name,password)
@@ -28,6 +31,7 @@ namespace MotorEmpireAutohaus.MVVM.Models.User_Account_Model
             EmailAddress = emailAddress;
             Username = username;
         }
+
         public UserAccount(string UUID, string name, string emailAddress, string username, string password, string profileImageURL) : base(UUID, name, password)
         {
             EmailAddress = emailAddress;
@@ -35,6 +39,13 @@ namespace MotorEmpireAutohaus.MVVM.Models.User_Account_Model
             ProfileImageUrl = profileImageURL;
         }
 
+        public UserAccount(string UUID,string name, string emailAddress, string username, string password, string profileImageURL, string phoneNumber) : base(UUID, name, password)
+        {
+            EmailAddress = emailAddress;
+            Username = username;
+            ProfileImageUrl = profileImageURL;
+            PhoneNumber = phoneNumber;
+        }
 
         public override bool Equals(object obj)
         {

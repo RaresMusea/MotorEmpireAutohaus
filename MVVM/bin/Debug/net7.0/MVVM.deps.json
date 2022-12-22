@@ -8,6 +8,9 @@
     ".NETCoreApp,Version=v7.0": {
       "MVVM/1.0.0": {
         "dependencies": {
+          "CommunityToolkit.Maui": "3.1.0",
+          "CommunityToolkit.Maui.Core": "3.1.0",
+          "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
           "Microsoft.Extensions.Configuration": "7.0.0",
           "Microsoft.Extensions.DependencyInjection": "7.0.0",
@@ -55,12 +58,12 @@
           }
         }
       },
-      "CommunityToolkit.Maui/2.0.0": {
+      "CommunityToolkit.Maui/3.1.0": {
         "dependencies": {
           "CommunityToolkit.Maui.Core": "3.1.0"
         },
         "runtime": {
-          "lib/net6.0/CommunityToolkit.Maui.dll": {
+          "lib/net7.0/CommunityToolkit.Maui.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -69,6 +72,14 @@
       "CommunityToolkit.Maui.Core/3.1.0": {
         "runtime": {
           "lib/net7.0/CommunityToolkit.Maui.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Markup/2.1.0": {
+        "runtime": {
+          "lib/net7.0/CommunityToolkit.Maui.Markup.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -949,7 +960,7 @@
       },
       "Tools/1.0.0": {
         "dependencies": {
-          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Maui": "3.1.0",
           "CommunityToolkit.Maui.Core": "3.1.0"
         },
         "runtime": {
@@ -979,12 +990,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "CommunityToolkit.Maui/2.0.0": {
+    "CommunityToolkit.Maui/3.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-imxE+wbX0Ss0rM1z1Jh/W2giVqm6E+FEcgcz0j0Sgh99rTzi39PGaw03RNUgxHXBVbjn+tMX5skvo6uo8N+r8Q==",
-      "path": "communitytoolkit.maui/2.0.0",
-      "hashPath": "communitytoolkit.maui.2.0.0.nupkg.sha512"
+      "sha512": "sha512-C5jJU9k+aqo05Bwv3yFLTv5FdWqOOL97qY/EmlRjPDzgWx9LOhZCLhJu+5eiNITuhGkSGEFrK1lt/yxAimkInA==",
+      "path": "communitytoolkit.maui/3.1.0",
+      "hashPath": "communitytoolkit.maui.3.1.0.nupkg.sha512"
     },
     "CommunityToolkit.Maui.Core/3.1.0": {
       "type": "package",
@@ -992,6 +1003,13 @@
       "sha512": "sha512-tSPn+ix6wemEx/jwleS4sVlrLrck3C9zILeiquPxAXNlCFGIZ0Pn74vGXaSdXblbrAA7WuJeHIbQX0rp22k6Bg==",
       "path": "communitytoolkit.maui.core/3.1.0",
       "hashPath": "communitytoolkit.maui.core.3.1.0.nupkg.sha512"
+    },
+    "CommunityToolkit.Maui.Markup/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Z9MYcsMoXD4LY0hJBgVN3wEaWWeCZbrfka3IZ5FhcMQ5RysnZ+iWukXCha0ZWvxdSUH/9zMp/F86cvk9/q4Sew==",
+      "path": "communitytoolkit.maui.markup/2.1.0",
+      "hashPath": "communitytoolkit.maui.markup.2.1.0.nupkg.sha512"
     },
     "CommunityToolkit.Mvvm/8.0.0": {
       "type": "package",

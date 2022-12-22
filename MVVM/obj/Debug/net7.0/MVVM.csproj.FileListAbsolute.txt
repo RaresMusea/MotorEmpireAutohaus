@@ -15,3 +15,4 @@ C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de p
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0\refint\MVVM.dll
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0\MVVM.pdb
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0\ref\MVVM.dll
+C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0\XamlC.stamp

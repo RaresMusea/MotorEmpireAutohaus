@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "qymIU/vyduRMz37GaUEf98gcHD1DxVs1hrevhrXCslVJcbpDQ2EuE5nqf5yturTjov1QxL/UBi94OA1W1i+CKg==",
+  "dgSpecHash": "K+A+uBE0zelSmKciYzB7gJyAYaGrmMoux9J36mcvbkp+W5tiVcZUZDJvdayFKrk+/X1uLiXa34Yx9MjPUkcerw==",
   "success": true,
   "projectFilePath": "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\MotorEmpireAutohaus\\MotorEmpireAutohaus.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rares\\.nuget\\packages\\communitytoolkit.maui\\3.1.0\\communitytoolkit.maui.3.1.0.nupkg.sha512",
     "C:\\Users\\rares\\.nuget\\packages\\communitytoolkit.maui.core\\3.1.0\\communitytoolkit.maui.core.3.1.0.nupkg.sha512",
+    "C:\\Users\\rares\\.nuget\\packages\\communitytoolkit.maui.markup\\2.1.0\\communitytoolkit.maui.markup.2.1.0.nupkg.sha512",
     "C:\\Users\\rares\\.nuget\\packages\\communitytoolkit.mvvm\\8.0.0\\communitytoolkit.mvvm.8.0.0.nupkg.sha512",
     "C:\\Users\\rares\\.nuget\\packages\\firebasestorage.net\\1.0.3\\firebasestorage.net.1.0.3.nupkg.sha512",
     "C:\\Users\\rares\\.nuget\\packages\\googlegson\\2.9.1.1\\googlegson.2.9.1.1.nupkg.sha512",
