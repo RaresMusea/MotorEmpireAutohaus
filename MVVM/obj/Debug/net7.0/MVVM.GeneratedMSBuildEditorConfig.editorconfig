@@ -16,12 +16,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = MVVM.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Modul 1/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MVVM/MotorEmpire.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = MVVM.MotorEmpire.xaml
-build_metadata.AdditionalFiles.TargetPath = MotorEmpire.xaml
-build_metadata.AdditionalFiles.RelativePath = MotorEmpire.xaml
-
 [C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Modul 1/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MVVM/View/Account Management/Account.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MVVM.View.Account_Management.Account.xaml
@@ -63,6 +57,18 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MVVM.View.Core.Feed.xaml
 build_metadata.AdditionalFiles.TargetPath = View\Core\Feed.xaml
 build_metadata.AdditionalFiles.RelativePath = View\Core\Feed.xaml
+
+[C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Modul 1/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MVVM/View/Landing/MotorEmpire.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MVVM.View.Landing.MotorEmpire.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Landing\MotorEmpire.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Landing\MotorEmpire.xaml
+
+[C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Modul 1/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MVVM/View/Post Upload/UploadPost.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MVVM.View.Post_Upload.UploadPost.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Post Upload\UploadPost.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Post Upload\UploadPost.xaml
 
 [C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Modul 1/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MVVM/View/Search.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
