@@ -7,6 +7,8 @@ public partial class LogIn : ContentPage, IPlatformDependentStyling
 {
     protected override void OnAppearing()
     {
+        AuthContainer.Opacity = 0;
+
         base.OnAppearing();
 
         if (this.AnimationIsRunning("TransitionAnimation"))

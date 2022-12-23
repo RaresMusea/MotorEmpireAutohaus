@@ -7,6 +7,10 @@
              x:Class="MotorEmpireAutohaus.View.MotorEmpire"
              Title="Motor Empire Autohaus"
 >
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="False" IsEnabled="False" />
+    </Shell.BackButtonBehavior>
+    
     <ScrollView>
     <VerticalStackLayout>
             <Frame BackgroundColor="Transparent" x:Name="DesktopView" IsVisible="false">

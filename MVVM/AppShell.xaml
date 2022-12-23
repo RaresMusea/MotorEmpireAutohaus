@@ -13,7 +13,7 @@
     xmlns:motorempire="clr-namespace:MotorEmpireAutohaus.View"
     x:DataType="viewmodel:MotorEmpireViewModel"
     Shell.TabBarIsVisible="False"
-    NavigationPage.HasBackButton="False"
+    NavigationPage.HasBackButton="True"
 >
 
     

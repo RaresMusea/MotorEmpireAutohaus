@@ -8,6 +8,8 @@ using System.Runtime.InteropServices;
 using MotorEmpireAutohaus.Tools.Utility.Messages;
 using MotorEmpireAutohaus.Tools.Encryption;
 using Tools.Utility.Parsers;
+using MotorEmpireAutohaus.Storage.Firebase_Storage;
+using MotorEmpireAutohaus.View;
 
 namespace MotorEmpireAutohaus.MVVM.View_Models.Account
 {
@@ -24,18 +26,6 @@ namespace MotorEmpireAutohaus.MVVM.View_Models.Account
 
         private readonly AccountService _accountService;
         private readonly AuthValidation _authValidation;
-        /*
-                [ObservableProperty]
-                private string _emailAddress;
-
-                [ObservableProperty]
-                private string _username;
-
-                [ObservableProperty]
-                private string _passwordConfirmation;
-
-                [ObservableProperty]
-                private string _profileImageUrl;*/
 
         [ObservableProperty]
         private UserAccount user;
@@ -88,7 +78,6 @@ namespace MotorEmpireAutohaus.MVVM.View_Models.Account
             removePhoneNumberVisible = _accountService.HasPhoneNumber(user.UUID);
         }
 
-
         partial void OnAddPhoneNumberVisibleChanged(bool value)
         {
             AddPhoneNumberVisible = value;
@@ -105,7 +94,7 @@ namespace MotorEmpireAutohaus.MVVM.View_Models.Account
                 if (_accountService.Login(user))
                 {
                     //CrossPlatformMessageRenderer.RenderMessages("Login Success!", "OK",2);
-                    await Shell.Current.GoToAsync($"//MotorEmpire?Name={user.Name}",
+                    await Shell.Current.GoToAsync($"{nameof(MotorEmpire)}?Name={user.Name}",
                                                   true);
                 }
             }
@@ -118,7 +107,7 @@ namespace MotorEmpireAutohaus.MVVM.View_Models.Account
             userCopy.Password = this.user.Password;
         }
 
-        private static async Task TakePhoto()
+        private static async Task<FileResult> TakePhoto()
         {
             if (MediaPicker.Default.IsCaptureSupported)
             {
@@ -126,12 +115,26 @@ namespace MotorEmpireAutohaus.MVVM.View_Models.Account
 
                 if (photo is not null)
                 {
-                    string localFilePath = Path.Combine(FileSystem.CacheDirectory, photo.FileName);
-                    using Stream sourceItem = await photo.OpenReadAsync();
-                    using FileStream localFileStream = File.OpenWrite(localFilePath);
-                    await sourceItem.CopyToAsync(localFileStream);
+                    return photo;
                 }
+
+                CrossPlatformMessageRenderer.RenderMessages("Your device does not support instant capture!\nIn order to use this feature, you'll need a device which supports instant photo/video capture!", "OK", 5);
+                return null;
             }
+
+            return null;
+        }
+
+        private static async Task<FileResult> PickPhoto()
+        {
+            FileResult photo = await MediaPicker.PickPhotoAsync();
+            if(photo is not null)
+            {
+                return photo;
+            }
+
+            CrossPlatformMessageRenderer.RenderMessages("An error occured while attempting to acess a resource which was recently accessed.\nPlease try again!", "Retry", 5);
+            return null;
         }
 
         private bool CheckForIdenticalCredentialsAtUpdate()
@@ -171,7 +174,11 @@ namespace MotorEmpireAutohaus.MVVM.View_Models.Account
                 string action = await Application.Current.MainPage.DisplayActionSheet("Manage Profile Picture", "Cancel", null, "Upload a live photo", "Upload a photo from your device");
                 if(action=="Upload a live photo")
                 {
-                    await TakePhoto();
+                    await TakePhotoAndUpload();
+                }
+                else
+                {
+                    await PickPhotoAndUpload();
                 }
             }
         }
@@ -179,9 +186,43 @@ namespace MotorEmpireAutohaus.MVVM.View_Models.Account
 
 
         [RelayCommand]
-        public async void TakePhotoAndUpload()
+        public async Task TakePhotoAndUpload()
         {
-            await TakePhoto();  
+            FileResult photo= await TakePhoto(); 
+            if (photo is not null)
+            {
+                string path = $"Images/ProfilePictures/{user.UUID}";
+                string urlToPicture = await FirebaseCloudStorage.AddFileToFirebaseCloudStorageAsync(photo, path);
+
+                if(urlToPicture is not null)
+                {
+                    _accountService.UpdateProfilePictureForUser(user.UUID, urlToPicture);
+                    user.ProfileImageUrl = urlToPicture;
+                    return;
+                }
+            }
+            CrossPlatformMessageRenderer.RenderMessages("An error occurred while trying to manipulate the photo you've just took. Retry to take the picture and try again!", "Retry", 4);
+        }
+
+        [RelayCommand]
+        public async Task PickPhotoAndUpload()
+        {
+            FileResult photo=await PickPhoto();
+
+            if(photo is not null)
+            {
+                string path = $"Images/ProfilePictues/{user.UUID}";
+                string urlToPicture = await FirebaseCloudStorage.AddFileToFirebaseCloudStorageAsync(photo, path);
+
+                if(urlToPicture is not null)
+                {
+                    _accountService.UpdateProfilePictureForUser(user.UUID, urlToPicture);
+                    user.ProfileImageUrl= urlToPicture;
+                    return;
+                }
+            }
+
+            CrossPlatformMessageRenderer.RenderMessages("An error occurred while attempting to manipulate the picture you've just chosen. Try to pick the profile picture again!", "Retry", 4);
         }
 
         [RelayCommand]

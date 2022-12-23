@@ -8,7 +8,7 @@ namespace MotorEmpireAutohaus.MVVM.Models.Base
 
         public Entity()
         {
-            UUID = Guid.NewGuid().ToString();
+            GenerateUUID();
         }
 
         public Entity(string UUID)
@@ -17,5 +17,10 @@ namespace MotorEmpireAutohaus.MVVM.Models.Base
         }
 
         public abstract bool IsEmpty();
+
+        public void GenerateUUID()
+        {
+            UUID = Guid.NewGuid().ToString();
+        }
     }
 }

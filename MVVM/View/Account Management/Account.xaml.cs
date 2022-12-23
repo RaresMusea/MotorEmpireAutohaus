@@ -11,7 +11,27 @@ public partial class Account : ContentPage
         BindingContext = usr;
         InitializeComponent();
     }
-    
+
+    protected override void OnAppearing()
+    {
+        mainFrame.Opacity= 0;
+        mainStack.Opacity = 0;
+
+        base.OnAppearing();
+        if (this.AnimationIsRunning("AppearingAnimation"))
+        {
+            return;
+        }
+
+        Animation appearingAnimation = new Animation()
+        {
+            {0,0.4,new Animation(v=>mainFrame.Opacity=v,0,1,Easing.CubicIn) },
+            {0.4,0.8,new Animation(v=>mainStack.Opacity=v,0,1,Easing.CubicIn)},
+        };
+
+        appearingAnimation.Commit(this, "TransitionAnimation", 16, 2000, null, null);
+    }
+
     private async void ToggleAccountDetails(object sender, EventArgs e)
     {
         HorizontalStackLayout[] horizontalStackLayouts = {editStack1,editStack2,editStack3,phoneNumberFrame};
