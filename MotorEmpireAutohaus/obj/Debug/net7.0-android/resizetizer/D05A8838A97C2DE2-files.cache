@@ -14,6 +14,8 @@ obj\Debug\net7.0-android\resizetizer\r\drawable\motorempire.jpg
 obj\Debug\net7.0-android\resizetizer\r\drawable\name.png
 obj\Debug\net7.0-android\resizetizer\r\drawable\password.png
 obj\Debug\net7.0-android\resizetizer\r\drawable\person.png
+obj\Debug\net7.0-android\resizetizer\r\drawable\postuploaddark.png
+obj\Debug\net7.0-android\resizetizer\r\drawable\postuploadlight.png
 obj\Debug\net7.0-android\resizetizer\r\drawable\tag.png
 obj\Debug\net7.0-android\resizetizer\r\drawable\tractor.png
 obj\Debug\net7.0-android\resizetizer\r\drawable\van.png

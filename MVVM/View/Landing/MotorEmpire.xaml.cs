@@ -81,17 +81,17 @@ public partial class MotorEmpire: ContentPage
             carFilterRow2.Orientation= StackOrientation.Vertical;
             verticalStack1.Margin = new Thickness(0,0,0,15);
             verticalStack2.Margin = new Thickness(0, 0, 0, 15);
-            upperPricePicker.Margin = new Thickness(0, 10, 30, 0);
-            fuelTypeLabel.Margin = new Thickness(0, 0, 200, 0);
-            fuelTypePicker.Margin = new Thickness(0, 10, 50, 0);
-            fuelTypePicker.WidthRequest = 110;
-            lowerMileagePicker.WidthRequest = 80;
-            upperMileagePicker.WidthRequest = 80;
+            upperPricePicker.Margin = new Thickness(0, 10, 15, 0);
+            fuelTypeLabel.Margin = new Thickness(0, 0, 190, 0);
+            fuelTypePicker.Margin = new Thickness(0, 10, 15, 0);
+            fuelTypePicker.WidthRequest = 115;
+            lowerMileagePicker.WidthRequest = 85;
+            upperMileagePicker.WidthRequest = 85;
             lowerPricePicker.WidthRequest = 70;
             upperPricePicker.WidthRequest= 70;
             lowerYear.WidthRequest = 70;
             upperYear.WidthRequest = 70;
-            secondaryFrame.WidthRequest = 400;
+            secondaryFrame.WidthRequest = 420;
         }
     }
 
