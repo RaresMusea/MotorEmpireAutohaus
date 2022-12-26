@@ -297,6 +297,9 @@
         <member name="P:MVVM.Models.Post_Model.CarPost.Car">
             <inheritdoc cref="F:MVVM.Models.Post_Model.CarPost.car"/>
         </member>
+        <member name="P:MVVM.Models.PostPicture.Picture">
+            <inheritdoc cref="F:MVVM.Models.PostPicture.picture"/>
+        </member>
         <member name="P:MVVM.Models.Vehicle_Models.Car.Car_Model.Car.ChassisType">
             <inheritdoc cref="F:MVVM.Models.Vehicle_Models.Car.Car_Model.Car.chassisType"/>
         </member>
@@ -384,6 +387,42 @@
         <member name="P:MVVM.View_Models.Post.CarPostViewModel.SelectedFuelType">
             <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.selectedFuelType"/>
         </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.Mileage">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.mileage"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.EngineCapacity">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.engineCapacity"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.EnginePower">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.enginePower"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.Torque">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.torque"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.TransmissionTypes">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.transmissionTypes"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.SelectedTransmissionType">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.selectedTransmissionType"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.GearboxConfigurations">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.gearboxConfigurations"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.SelectedGearboxConfiguration">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.selectedGearboxConfiguration"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.CarDetailsFormVisible">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.carDetailsFormVisible"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.PictureUploadVisible">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.pictureUploadVisible"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.PostPictures">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.postPictures"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.CarouselVisible">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.carouselVisible"/>
+        </member>
         <member name="M:MVVM.View_Models.Post.CarPostViewModel.OnSelectedVehicleTypeChanged(System.String)">
             <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Post.CarPostViewModel.SelectedVehicleType"/> just changed.</summary>
         </member>
@@ -405,8 +444,50 @@
         <member name="M:MVVM.View_Models.Post.CarPostViewModel.OnSelectedGenerationChanged(System.String)">
             <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Post.CarPostViewModel.SelectedGeneration"/> just changed.</summary>
         </member>
+        <member name="M:MVVM.View_Models.Post.CarPostViewModel.OnYearChanged(System.Nullable{System.Int32})">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Post.CarPostViewModel.Year"/> just changed.</summary>
+        </member>
         <member name="M:MVVM.View_Models.Post.CarPostViewModel.OnSelectedFuelTypeChanged(System.String)">
             <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Post.CarPostViewModel.SelectedFuelType"/> just changed.</summary>
+        </member>
+        <member name="M:MVVM.View_Models.Post.CarPostViewModel.OnMileageChanged(System.Nullable{System.Int32})">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Post.CarPostViewModel.Mileage"/> just changed.</summary>
+        </member>
+        <member name="M:MVVM.View_Models.Post.CarPostViewModel.OnEngineCapacityChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Post.CarPostViewModel.EngineCapacity"/> just changed.</summary>
+        </member>
+        <member name="M:MVVM.View_Models.Post.CarPostViewModel.OnEnginePowerChanged(System.Nullable{System.Int32})">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Post.CarPostViewModel.EnginePower"/> just changed.</summary>
+        </member>
+        <member name="M:MVVM.View_Models.Post.CarPostViewModel.OnTorqueChanged(System.Nullable{System.Int32})">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Post.CarPostViewModel.Torque"/> just changed.</summary>
+        </member>
+        <member name="M:MVVM.View_Models.Post.CarPostViewModel.OnSelectedTransmissionTypeChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Post.CarPostViewModel.SelectedTransmissionType"/> just changed.</summary>
+        </member>
+        <member name="M:MVVM.View_Models.Post.CarPostViewModel.OnSelectedGearboxConfigurationChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Post.CarPostViewModel.SelectedGearboxConfiguration"/> just changed.</summary>
+        </member>
+        <member name="M:MVVM.View_Models.Post.CarPostViewModel.OnPostPicturesChanged(System.Collections.ObjectModel.ObservableCollection{MVVM.Models.PostPicture})">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Post.CarPostViewModel.PostPictures"/> just changed.</summary>
+        </member>
+        <member name="F:MVVM.View_Models.Post.CarPostViewModel.switchUploadFormWithPictureUploadCommand">
+            <summary>The backing field for <see cref="P:MVVM.View_Models.Post.CarPostViewModel.SwitchUploadFormWithPictureUploadCommand"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.SwitchUploadFormWithPictureUploadCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.Post.CarPostViewModel.SwitchUploadFormWithPictureUpload"/>.</summary>
+        </member>
+        <member name="F:MVVM.View_Models.Post.CarPostViewModel.uploadCarPostPicturesCommand">
+            <summary>The backing field for <see cref="P:MVVM.View_Models.Post.CarPostViewModel.UploadCarPostPicturesCommand"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.UploadCarPostPicturesCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.Post.CarPostViewModel.UploadCarPostPictures"/>.</summary>
+        </member>
+        <member name="F:MVVM.View_Models.Post.CarPostViewModel.deletePicturesAndGoBackCommand">
+            <summary>The backing field for <see cref="P:MVVM.View_Models.Post.CarPostViewModel.DeletePicturesAndGoBackCommand"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.DeletePicturesAndGoBackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.Post.CarPostViewModel.DeletePicturesAndGoBack"/>.</summary>
         </member>
         <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
             <summary>

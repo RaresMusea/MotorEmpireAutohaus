@@ -53,5 +53,21 @@ namespace MVVM.Services.Car_Post_Services
             return carFilterService.GetGenerationBasedOnModel(model);
         }
 
+        public List<string> RetrieveTransmissionTypes()
+        {
+            List<string> result = new();
+            MySqlCommand command = new("SELECT Type FROM TransmissionType", IConnectableDataSource.databaseConfigurer.DatabaseConnection);
+            command.Prepare();
+
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                result.Add(reader.GetString(0));
+            }
+
+            reader.Close();
+            return result;
+        }
+
     }
 }
