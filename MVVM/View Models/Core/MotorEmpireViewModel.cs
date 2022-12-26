@@ -154,7 +154,7 @@ public partial class MotorEmpireViewModel : BaseViewModel
         LowerYear = CarFilterFormatter.InitializeYears(2021, 2000);
         LowerYear = LowerYear.OrderBy(x => x).ToList();
         UpperYear = CarFilterFormatter.InitializeYears(2022, 2001);
-        fuelTypes = new() { "Gasoline", "Gasoline + CNG", "Gasoline + LPG", "Diesel", "Electric", "Etanol", "Hybrid", "Hydrogen" };
+        fuelTypes = new() { "Gasoline", "Gasoline + CNG", "Gasoline + LPG", "Diesel", "Electric", "Ethanol", "Hybrid", "Hydrogen" };
         InitializeMileageBounds();
     }
 

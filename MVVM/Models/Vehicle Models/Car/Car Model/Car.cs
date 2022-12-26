@@ -6,6 +6,9 @@ namespace MVVM.Models.Vehicle_Models.Car.Car_Model
     public partial class Car: Vehicle
     {
         [ObservableProperty]
+        private string chassisType;
+
+        [ObservableProperty]
         private int mileage;
 
         [ObservableProperty]
@@ -24,11 +27,12 @@ namespace MVVM.Models.Vehicle_Models.Car.Car_Model
         private string gears;
 
         
-        public Car(string vehicleType, string manufacturer, string model, string generation,
-            int year, string fuelType, int price, int mileage, string engineCapacity, 
+        public Car(string vehicleType, string chassisType, string manufacturer, string model, string generation,
+            int year, string fuelType, int mileage, string engineCapacity, 
             int horsepower, int torque, string transmission, string gears):base(vehicleType,manufacturer,model,generation,
                 year,fuelType)
         {
+            ChassisType= chassisType;
             Mileage = mileage;
             EngineCapacity = engineCapacity;
             Horsepower = horsepower;
@@ -36,6 +40,8 @@ namespace MVVM.Models.Vehicle_Models.Car.Car_Model
             Transmission = transmission;
             Gears = gears;
         }
+
+        public Car() { }
 
         public override bool IsEmpty()
         {

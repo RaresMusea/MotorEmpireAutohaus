@@ -297,6 +297,9 @@
         <member name="P:MVVM.Models.Post_Model.CarPost.Car">
             <inheritdoc cref="F:MVVM.Models.Post_Model.CarPost.car"/>
         </member>
+        <member name="P:MVVM.Models.Vehicle_Models.Car.Car_Model.Car.ChassisType">
+            <inheritdoc cref="F:MVVM.Models.Vehicle_Models.Car.Car_Model.Car.chassisType"/>
+        </member>
         <member name="P:MVVM.Models.Vehicle_Models.Car.Car_Model.Car.Mileage">
             <inheritdoc cref="F:MVVM.Models.Vehicle_Models.Car.Car_Model.Car.mileage"/>
         </member>
@@ -335,6 +338,75 @@
         </member>
         <member name="P:MVVM.View_Models.Post.CarPostViewModel.Post">
             <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.post"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.VehicleTypes">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.vehicleTypes"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.SelectedVehicleType">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.selectedVehicleType"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.ChassisTypes">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.chassisTypes"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.SelectedChassisType">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.selectedChassisType"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.Manufacturers">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.manufacturers"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.SelectedManufacturer">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.selectedManufacturer"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.SelectedManufacturerIndex">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.selectedManufacturerIndex"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.Models">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.models"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.SelectedModel">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.selectedModel"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.SelectedModelIndex">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.selectedModelIndex"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.Generations">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.generations"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.SelectedGeneration">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.selectedGeneration"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.Year">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.year"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.FuelTypes">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.fuelTypes"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.SelectedFuelType">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.selectedFuelType"/>
+        </member>
+        <member name="M:MVVM.View_Models.Post.CarPostViewModel.OnSelectedVehicleTypeChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Post.CarPostViewModel.SelectedVehicleType"/> just changed.</summary>
+        </member>
+        <member name="M:MVVM.View_Models.Post.CarPostViewModel.OnSelectedChassisTypeChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Post.CarPostViewModel.SelectedChassisType"/> just changed.</summary>
+        </member>
+        <member name="M:MVVM.View_Models.Post.CarPostViewModel.OnSelectedManufacturerChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Post.CarPostViewModel.SelectedManufacturer"/> just changed.</summary>
+        </member>
+        <member name="M:MVVM.View_Models.Post.CarPostViewModel.OnSelectedManufacturerIndexChanged(System.Int32)">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Post.CarPostViewModel.SelectedManufacturerIndex"/> just changed.</summary>
+        </member>
+        <member name="M:MVVM.View_Models.Post.CarPostViewModel.OnSelectedModelChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Post.CarPostViewModel.SelectedModel"/> just changed.</summary>
+        </member>
+        <member name="M:MVVM.View_Models.Post.CarPostViewModel.OnSelectedModelIndexChanged(System.Int32)">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Post.CarPostViewModel.SelectedModelIndex"/> just changed.</summary>
+        </member>
+        <member name="M:MVVM.View_Models.Post.CarPostViewModel.OnSelectedGenerationChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Post.CarPostViewModel.SelectedGeneration"/> just changed.</summary>
+        </member>
+        <member name="M:MVVM.View_Models.Post.CarPostViewModel.OnSelectedFuelTypeChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Post.CarPostViewModel.SelectedFuelType"/> just changed.</summary>
         </member>
         <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
             <summary>
