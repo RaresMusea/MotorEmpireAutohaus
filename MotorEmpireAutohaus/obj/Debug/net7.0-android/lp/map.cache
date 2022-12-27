@@ -163,3 +163,5 @@ GoogleGson.aar
 Xamarin.Google.Crypto.Tink.Android.aar
 Storage.dll
 Storage.aar
+Tools.dll
+Tools.aar
