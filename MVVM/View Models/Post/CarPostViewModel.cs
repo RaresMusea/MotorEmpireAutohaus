@@ -126,6 +126,9 @@ namespace MVVM.View_Models.Post
         private ObservableCollection<PostPicture> postPictures = new();
 
         [ObservableProperty]
+        private bool postPicturesCollectionNotEmpty = false;
+
+        [ObservableProperty]
         private bool carouselVisible;
 
         private string firebaseUrlToFile;
@@ -268,6 +271,7 @@ namespace MVVM.View_Models.Post
             {
                 firebaseUrlToFile=await FirebaseCloudStorage.AddFileToFirebaseCloudStorageAsync(photo, path);
                 PostPictures.Add(new PostPicture(firebaseUrlToFile));
+                PostPicturesCollectionNotEmpty = true;
                 CarouselVisible = true;
             });
         }
@@ -286,6 +290,7 @@ namespace MVVM.View_Models.Post
             finally
             {
                 PostPictures.Clear();
+                PostPicturesCollectionNotEmpty = false;
                 CarouselVisible = false;
                 PictureUploadVisible = false;
                 CarDetailsFormVisible = true;

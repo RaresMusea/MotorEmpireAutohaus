@@ -476,11 +476,12 @@
                                 </CarouselView.ItemTemplate>
                             </CarouselView>
                             <IndicatorView x:Name="indicatorView"
+                                           IsVisible="{Binding PostPicturesCollectionNotEmpty}"
                                            HorizontalOptions="Center"
                                            IndicatorColor="{AppThemeBinding Dark=#dbdbdb, Light=#414141}"
                                            SelectedIndicatorColor="{AppThemeBinding Dark=Red,Light=#1C6758}"
                                            MaximumVisible="6"
-                                           Margin="0,0,0,20"/>
+                                           Margin="0,10,0,20"/>
                         </VerticalStackLayout>
                             <VerticalStackLayout IsVisible="{OnPlatform Android=False, iOS=False,WinUI=True}" Margin="0,30,0,0">
                                 <ListView ItemsSource="{Binding PostPictures}">
@@ -526,7 +527,7 @@
                 </VerticalStackLayout>
                     <VerticalStackLayout IsVisible="{Binding DescriptionFormVisible}">
                         <Label Text="Here's the part when you have to be as creative as you can! You are the only one able to promote your vehicle. So try your best!"
-                               HorizontalOptions="Center"
+                               HorizontalOptions="Start"
                                Margin="0,10,0,20"
                                FontFamily="Kollektif"
                                FontSize="20"

@@ -438,6 +438,9 @@
         <member name="P:MVVM.View_Models.Post.CarPostViewModel.PostPictures">
             <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.postPictures"/>
         </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.PostPicturesCollectionNotEmpty">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.postPicturesCollectionNotEmpty"/>
+        </member>
         <member name="P:MVVM.View_Models.Post.CarPostViewModel.CarouselVisible">
             <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.carouselVisible"/>
         </member>
