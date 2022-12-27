@@ -329,9 +329,14 @@ namespace MVVM.View_Models.Post
         }
 
         [RelayCommand]
-        public void UploadCarPost()
+        public async void UploadCarPost()
         {
-
+            if(carService.Save(post.Car) is not null)
+            {
+                CrossPlatformMessageRenderer.RenderMessages("Successfully added new car !", "Good", 3);
+                CleanUp();
+                await Shell.Current.GoToAsync("//MotorEmpire",true);
+            }
         }
 
         
@@ -354,18 +359,39 @@ namespace MVVM.View_Models.Post
 
         partial void OnSelectedManufacturerIndexChanged(int value)
         {
-            Models = carPostService.RetrieveAllModelsFromManufacturer(manufacturers[value]);
+            try
+            {
+                Models = carPostService.RetrieveAllModelsFromManufacturer(manufacturers[value]);
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                return;
+            }
         }
 
         partial void OnSelectedModelChanged(string value)
         {
-            post.Car.Model=value;
-            Generations = carPostService.RetrieveGenerationsForModel(value);
+            try 
+            {
+                post.Car.Model = value;
+                Generations = carPostService.RetrieveGenerationsForModel(value);
+            } 
+            catch (ArgumentOutOfRangeException)
+            {
+                Generations = null;
+            }
         }
 
         partial void OnSelectedModelIndexChanged(int value)
         {
-            Generations = carPostService.RetrieveGenerationsForModel(models[value]);
+            try
+            {
+                Generations = carPostService.RetrieveGenerationsForModel(models[value]);
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                Generations = null;
+            }
         }
 
         partial void OnSelectedGenerationChanged(string value)
@@ -380,12 +406,26 @@ namespace MVVM.View_Models.Post
 
         partial void OnYearChanged(int? value)
         {
-            post.Car.Year = (int)value;
+            try
+            {
+                post.Car.Year = (int)value;
+            }
+            catch (InvalidOperationException)
+            {
+                return;
+            }
         }
 
         partial void OnMileageChanged(int? value)
         {
-            post.Car.Mileage= (int)value;
+            try
+            {
+                post.Car.Mileage = (int)value;
+            }
+            catch (InvalidOperationException)
+            {
+                return;
+            }
         }
 
         partial void OnEngineCapacityChanged(string value)
@@ -395,12 +435,26 @@ namespace MVVM.View_Models.Post
 
         partial void OnEnginePowerChanged(int? value)
         {
-            post.Car.Horsepower = (int)value;
+            try
+            {
+                post.Car.Horsepower = (int)value;
+            }
+            catch (InvalidOperationException)
+            {
+                return;
+            }
         }
 
         partial void OnTorqueChanged(int? value)
         {
-            post.Car.Torque= (int)value;
+            try
+            {
+                post.Car.Torque = (int)value;
+            }
+            catch (InvalidOperationException)
+            {
+                return;
+            }
         }
 
         partial void OnSelectedTransmissionTypeChanged(string value)
@@ -429,6 +483,36 @@ namespace MVVM.View_Models.Post
             PictureUploadVisible = value;
             CarDetailsFormVisible= !value;
         }*/
+
+        private void CleanUp()
+        {
+            Post.Car = new();
+            EquipmentFormVisible = false;
+            DescriptionFormVisible = false;
+            CarDetailsFormVisible = true;
+            PictureUploadVisible = false;
+            SelectedChassisType = null;
+            SelectedFuelType = null;
+            SelectedGearboxConfiguration = null;
+            SelectedGeneration = null;
+            SelectedModel = null;
+            SelectedModelIndex = -1;
+            SelectedManufacturer = null;
+            SelectedManufacturerIndex = -1;
+            SelectedTransmissionType = null;
+            SelectedVehicleType = null;
+            Year = null;
+            Mileage = null;
+            EngineCapacity = null;
+            EnginePower = null;
+            Torque = null;
+            PostPictures = new();
+            CarouselVisible = false;
+            Post = new();
+            Post.Car = new();
+            Post.UUID = Post.Car.UUID;
+
+        }
 
     }
 }

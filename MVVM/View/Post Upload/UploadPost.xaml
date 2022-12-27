@@ -798,7 +798,8 @@
                                 TextColor="White"
                                 Opacity="0"
                                 BackgroundColor="Red"
-                                Command="{Binding UploadCarPostCommand}"/>
+                                Command="{Binding UploadCarPostCommand}"
+                                Clicked="RefreshTheUI"/>
 
                         <Button Text="Back to post description"
                                 FontAttributes="Bold"

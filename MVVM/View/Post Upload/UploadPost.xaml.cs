@@ -40,7 +40,15 @@ public partial class UploadPost : ContentPage
 
     }
 
-	private void StyleDependingOnOperatingSystem()
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
+
+        GC.Collect();
+        GC.WaitForPendingFinalizers();
+    }
+
+    private void StyleDependingOnOperatingSystem()
 	{
 		if(DeviceInfo.Platform==DevicePlatform.Android || DeviceInfo.Platform==DevicePlatform.iOS)
 		{
@@ -280,5 +288,150 @@ public partial class UploadPost : ContentPage
 
         finishEditingEquipmentButton.IsVisible = true;
         await finishEditingEquipmentButton.FadeTo(1, 200, Easing.CubicIn);
+    }
+
+    private async Task RefreshTheDescriptionFrame()
+    {
+        if (!descriptionDirectiveLabel.IsVisible)
+        {
+            descriptionDirectiveLabel.IsVisible = true;
+            await descriptionDirectiveLabel.FadeTo(1, 200, Easing.CubicIn);
+        }
+
+        if (descriptionFormSuccessMessage.IsVisible)
+        {
+            await descriptionFormSuccessMessage.FadeTo(0,200,Easing.CubicOut);
+            descriptionFormSuccessMessage.IsVisible = false;
+        }
+
+        if (descriptionLabel.IsVisible)
+        {
+            await descriptionLabel.FadeTo(0, 200, Easing.CubicOut);
+            descriptionLabel.IsVisible = false;
+        }
+
+        if (descriptionText.IsVisible)
+        {
+            await descriptionText.FadeTo(0, 200, Easing.CubicOut);
+            descriptionText.IsVisible = false;
+        }
+
+        if (!descriptionEditor.IsVisible)
+        {
+            descriptionEditor.IsVisible = true;
+            await descriptionEditor.FadeTo(1, 200, Easing.CubicIn);
+        }
+
+        if (!finishEditingDescriptionButton.IsVisible)
+        {
+            finishEditingDescriptionButton.IsVisible = true;
+            await finishEditingDescriptionButton.FadeTo(1,200,Easing.CubicIn);
+        }
+
+        if (descriptionPreviewButton.IsVisible)
+        {
+            await descriptionPreviewButton.FadeTo(0, 200, Easing.CubicOut);
+            descriptionPreviewButton.IsVisible = false;
+        }
+
+        if (hideDescriptionPreviewButton.IsVisible)
+        {
+            await hideDescriptionPreviewButton.FadeTo(0, 200, Easing.CubicOut);
+            hideDescriptionPreviewButton.IsVisible = false;
+        }
+
+        if (editTheDescriptionAgainButton.IsVisible)
+        {
+            await editTheDescriptionAgainButton.FadeTo(0, 200, Easing.CubicOut);
+            editTheDescriptionAgainButton.IsVisible = false;
+        }
+
+        if (descriptionFormNextButton.IsVisible)
+        {
+            await descriptionFormNextButton.FadeTo(0, 200, Easing.CubicOut);
+            descriptionFormNextButton.IsVisible = false;
+        }
+
+        if (backToPictureUploadButton.IsVisible)
+        {
+            await backToPictureUploadButton.FadeTo(0, 200, Easing.CubicOut);
+            backToPictureUploadButton.IsVisible = false;
+        }
+    }
+
+    private async Task RefreshTheEquipmentFrame()
+    {
+        if (!equipmentFormDirective.IsVisible)
+        {
+            equipmentFormDirective.IsVisible = true;
+            await equipmentFormDirective.FadeTo(1, 200, Easing.CubicIn);
+        }
+
+        if (equipmentMessageSuccess.IsVisible)
+        {
+            await equipmentMessageSuccess.FadeTo(0, 200, Easing.CubicOut);
+            equipmentMessageSuccess.IsVisible = false;
+        }
+
+        if (equipmentPreviewLabel.IsVisible)
+        {
+            await equipmentPreviewLabel.FadeTo(0, 200, Easing.CubicOut);
+            equipmentPreviewLabel.IsVisible = false;
+        }
+
+        if (equipmentText.IsVisible)
+        {
+            await equipmentText.FadeTo(0, 200, Easing.CubicOut);
+            equipmentText.IsVisible = false;
+        }
+
+        if (!equipmentsEditor.IsVisible)
+        {
+            equipmentsEditor.IsVisible = true;
+            await equipmentsEditor.FadeTo(1, 200, Easing.CubicIn);
+        }
+
+        if (!finishEditingEquipmentButton.IsVisible)
+        {
+            finishEditingEquipmentButton.IsVisible = true;
+            await finishEditingEquipmentButton.FadeTo(1, 200, Easing.CubicIn);
+        }
+
+        if (equipmentPreviewButton.IsVisible)
+        {
+            await equipmentPreviewButton.FadeTo(0, 200, Easing.CubicOut);
+            equipmentPreviewButton.IsVisible = false;
+            equipmentPreviewButton.IsVisible = false;
+        }
+
+        if (hideEquipmentPreviewButton.IsVisible)
+        {
+            await hideEquipmentPreviewButton.FadeTo(0, 200, Easing.CubicOut);
+            hideEquipmentPreviewButton.IsVisible = false;
+        }
+
+        if (editTheEquipmentListAgainButton.IsVisible)
+        {
+            await editTheEquipmentListAgainButton.FadeTo(0, 200, Easing.CubicOut);
+            editTheEquipmentListAgainButton.IsVisible = false;
+        }
+
+        if (uploadPost.IsVisible)
+        {
+            await uploadPost.FadeTo(0, 200, Easing.CubicOut);
+            uploadPost.IsVisible = false;
+        }
+
+        if (backToPostDescriptionButton.IsVisible)
+        {
+            await backToPostDescriptionButton.FadeTo(0, 200, Easing.CubicOut);
+            backToPostDescriptionButton.IsVisible = false;
+        }
+    }
+
+    private async void RefreshTheUI(object sender, EventArgs e)
+    {
+        await RefreshTheDescriptionFrame();
+        await RefreshTheEquipmentFrame();
     }
 }
