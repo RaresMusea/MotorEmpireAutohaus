@@ -11,27 +11,27 @@
             <Frame 
                    BackgroundColor="{AppThemeBinding Dark=#414141, Light=#dbdbdb}"
                    CornerRadius="25"
-                   Margin="0,20,0,0"
+                   Margin="0,40,0,0"
+                   x:Name="mainFrame"
+                   Opacity="0"
                    >
-                <VerticalStackLayout>
+                <VerticalStackLayout x:Name="mainStack" Opacity="0">
                     <Label Text="{Binding User.Name}" HorizontalOptions="Center" Margin="15" FontSize="Title" FontFamily="Kollektif" FontAttributes="Bold"/>
                     <Label Text="{Binding User.Username}" HorizontalOptions="Center" Margin="10" FontSize="Subtitle" FontFamily="Kollektif" FontAttributes="Italic"/>
-                    <Frame BorderColor="Black"
-                           CornerRadius="50"
-                           HeightRequest="90"
-                           WidthRequest="90"
-                           Margin="0,0,0,0"
-                           IsClippedToBounds="True"
-                           HorizontalOptions="Center">
+                    <Border Stroke="{AppThemeBinding Light=Grey, Dark=#dbdbdb}"
+                            StrokeThickness="2"
+                            BackgroundColor="{AppThemeBinding Light=Grey, Dark=#dbdbdb}"
+                            StrokeShape="RoundRectangle 50"
+                            WidthRequest="90"
+                            HeightRequest="90">
                         <Image Source="{Binding User.ProfileImageUrl}"
                            Aspect="AspectFill"
                            HorizontalOptions="Center"
-
                            VerticalOptions="Center"
-                           Margin="-20"
+                           Margin="0"
                            WidthRequest="90"
                            HeightRequest="90"/>
-                    </Frame>
+                    </Border>
                     <Button Text="Manage profile picture"
                             Command="{Binding ToggleOptionsCommand}"
                             WidthRequest="300"
@@ -44,7 +44,7 @@
                         <FlyoutBase.ContextFlyout>
                             <MenuFlyout>
                                 <MenuFlyoutItem Text="Take a picture and set it as your profile picture" Command="{Binding TakePhotoAndUploadCommand}"/>
-                                <MenuFlyoutItem Text="Upload a picture from your device"/>
+                                <MenuFlyoutItem Text="Upload a picture from your device" Command="{Binding PickPhotoAndUploadCommand}"/>
                             </MenuFlyout>
                         </FlyoutBase.ContextFlyout>
                     </Button>

@@ -8,6 +8,8 @@ public partial class SignUp : ContentPage, IPlatformDependentStyling
 
     protected override void OnAppearing()
     {
+        AuthContainer.Opacity = 0;
+
         base.OnAppearing();
         if (this.AnimationIsRunning("TransitionAnimation"))
         {

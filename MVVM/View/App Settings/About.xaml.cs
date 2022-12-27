@@ -15,6 +15,9 @@ public partial class About : ContentPage
 
 	private void GenerateOpeningAnimation()
 	{
+        image.Opacity = 0;
+        mainFrame.Opacity = 0;
+
         if (this.AnimationIsRunning("TransitionAnimation"))
         {
             return;

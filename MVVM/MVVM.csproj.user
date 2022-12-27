@@ -5,7 +5,7 @@
     <MauiXaml Update="AppShell.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="MotorEmpire.xaml">
+    <MauiXaml Update="View\Landing\MotorEmpire.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="View\Account Management\Account.xaml">
@@ -27,6 +27,9 @@
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="View\Core\Feed.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="View\Post Upload\UploadPost.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="View\Search.xaml">

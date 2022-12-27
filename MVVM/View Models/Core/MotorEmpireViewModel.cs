@@ -6,6 +6,7 @@ using MotorEmpireAutohaus.MVVM.View_Models.Base;
 using MotorEmpireAutohaus.MVVM.Models.Vehicle_Models.Car.Car_Filter_Model;
 using MotorEmpireAutohaus.MVVM.View_Models.Account;
 using MotorEmpireAutohaus.MVVM.Models.User_Account_Model;
+using MVVM.View.Post_Upload;
 
 namespace MotorEmpireAutohaus.MVVM.View_Models.Core;
 
@@ -153,7 +154,7 @@ public partial class MotorEmpireViewModel : BaseViewModel
         LowerYear = CarFilterFormatter.InitializeYears(2021, 2000);
         LowerYear = LowerYear.OrderBy(x => x).ToList();
         UpperYear = CarFilterFormatter.InitializeYears(2022, 2001);
-        fuelTypes = new() { "Gasoline", "Gasoline + CNG", "Gasoline + LPG", "Diesel", "Electric", "Etanol", "Hybrid", "Hydrogen" };
+        fuelTypes = new() { "Gasoline", "Gasoline + CNG", "Gasoline + LPG", "Diesel", "Electric", "Ethanol", "Hybrid", "Hydrogen" };
         InitializeMileageBounds();
     }
 
@@ -322,6 +323,13 @@ public partial class MotorEmpireViewModel : BaseViewModel
     {
         carFilter = ApplyFilters();
         await Shell.Current.GoToAsync(nameof(MotorEmpireAutohaus.Services.Feed), true, new Dictionary<string, object> { ["CarFilter"] = carFilter });
+    }
+
+
+    [RelayCommand]
+    public async void NavigateToPostUpload()
+    {
+        await Shell.Current.GoToAsync($"{nameof(UploadPost)}?Name", true, new Dictionary<string, object> { ["UserAccount"] = userAccount });
     }
 
 }

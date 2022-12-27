@@ -103,6 +103,11 @@ namespace MotorEmpireAutohaus.Services.Account_Services
         private bool TrySave(Entity e)
         {
             UserAccount userAccount = (UserAccount)e;
+            if (userAccount.UUID == "")
+            {
+                userAccount.GenerateUUID();
+            }
+
             if (e.IsEmpty())
             {
                 throw new InvalidSignUpCredentialsException(
@@ -218,6 +223,27 @@ namespace MotorEmpireAutohaus.Services.Account_Services
             }
             reader.Close();
             return returnValue;
+        }
+
+        public void UpdateProfilePictureForUser(string uuid, string pathToImage)
+        {
+            MySqlCommand command = new($"UPDATE {TableReference} SET ProfileImageURL=@image WHERE UUID=@uuid", _databaseConfig.DatabaseConnection);
+            command.Prepare();
+            command.Parameters.AddWithValue("@image", pathToImage);
+            command.Parameters.AddWithValue("@uuid", uuid);
+
+            try
+            {
+                command.ExecuteNonQuery();
+            }
+            catch (MySqlException exc)
+            {
+                CrossPlatformMessageRenderer.RenderMessages($"Unable to update your profile picture due to an unexpected error." +
+                    $" Please try again!\nMore details: {exc.Message}", "OK", 4);
+                return;
+            }
+
+            CrossPlatformMessageRenderer.RenderMessages("Successfully updated your profile picture!", "OK", 3);
         }
 
         public string GetUuidByEmail(string emailAddress)

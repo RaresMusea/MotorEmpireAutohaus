@@ -11,6 +11,11 @@ using MotorEmpireAutohaus.MVVM.View_Models.Account;
 using MotorEmpireAutohaus.MVVM.View_Models.Core;
 using MotorEmpireAutohaus.MVVM.Models.User_Account_Model;
 using MotorEmpireAutohaus.MVVM.View_Model.App_Settings;
+using MVVM.View.Post_Upload;
+using MVVM.Services.Car_Entity_Services;
+using MVVM.Services.Car_Post_Services;
+using MVVM.Models.Post_Model;
+using MVVM.View_Models.Post;
 
 namespace MotorEmpireAutohaus;
 public static class MauiProgram
@@ -56,6 +61,12 @@ public static class MauiProgram
 
         builder.Services.AddSingleton<AppSettings>();
         builder.Services.AddSingleton<AppSettingsViewModel>();
+
+        builder.Services.AddSingleton<UploadPost>();
+        builder.Services.AddSingleton<CarService>();
+        builder.Services.AddSingleton<CarPostService>();
+        builder.Services.AddSingleton<CarPost>();
+        builder.Services.AddSingleton<CarPostViewModel>();
 
         return builder.Build();
     }

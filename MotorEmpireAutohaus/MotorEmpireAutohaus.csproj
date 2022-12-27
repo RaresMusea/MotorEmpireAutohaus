@@ -75,6 +75,8 @@
 	  <None Remove="Resources\Images\motorempire.jpg" />
 	  <None Remove="Resources\Images\name.png" />
 	  <None Remove="Resources\Images\password.png" />
+	  <None Remove="Resources\Images\postuploaddark.png" />
+	  <None Remove="Resources\Images\postuploadlight.png" />
 	  <None Remove="Resources\Images\search.svg" />
 	  <None Remove="Resources\Images\tag.png" />
 	  <None Remove="Resources\Images\tractor.png" />
