@@ -365,18 +365,14 @@
                                 />
                         </Grid>
 
-                        <Label Grid.Column="0"
-                               Grid.Row="20"
-                               Text="Gearbox (Number of gears)"
+                        <Label Text="Gearbox (Number of gears)"
                                HorizontalOptions="Center"
                                FontFamily="Kollektif"
                                Margin="0,25,5,0"
                                FontAttributes="Bold"
                                />
 
-                        <Picker Grid.Row="22"
-                                Grid.Column="2"
-                                Title="Pick a gearbox configuration"
+                        <Picker Title="Pick a gearbox configuration"
                                 FontFamily="Kollektif"
                                 x:Name="gearboxPicker"
                                 Margin="0,5,0,0"
@@ -391,12 +387,33 @@
                                 HorizontalTextAlignment="Center"
                                 />
 
+                        <Label Text="Price (€)"
+                               HorizontalOptions="Center"
+                               FontFamily="Kollektif"
+                               Margin="0,25,5,0"
+                               FontAttributes="Bold"
+                               />
+
+                        <Entry  Placeholder="Vehicle price (€)"
+                                FontFamily="Kollektif"
+                                Margin="0,5,0,0"
+                                WidthRequest="200"
+                                MaximumWidthRequest="200"
+                                HorizontalOptions="Center"
+                                BackgroundColor="{AppThemeBinding Dark=#414141, Light=#dbdbdb}"
+                                TextColor="{AppThemeBinding Dark=White, Light=Black}"
+                                Text="{Binding Post.Price}"
+                                MaxLength="7"
+                                Keyboard="Numeric"
+                                ReturnType="Done"
+                                HorizontalTextAlignment="Center"
+                                />
+                        
                         <Button Text="Next Step: Add some pictures"
                                 WidthRequest="320"
                                 Margin="0,20,0,0"
                                 BorderColor="Transparent"
                                 FontFamily="Kollektif"
-                                Clicked="AnimateTransitionToPicturesUpload"
                                 FontAttributes="Bold"
                                 TextColor="White"
                                 BackgroundColor="{AppThemeBinding Dark=Red, Light=#1C6758}"
@@ -404,19 +421,12 @@
                                 Command="{Binding SwitchUploadFormWithPictureUploadCommand}"/>
                         
                     </VerticalStackLayout>
-                
+
                     <VerticalStackLayout IsVisible="{Binding PictureUploadVisible}" x:Name="uploadPicturesLayout">
-                        <Label Text="Sell your vehicle"
-                       FontSize="{OnPlatform Android=20, iOS=20, WinUI=24}"
-                       TextColor="{AppThemeBinding Dark=Red, Light=#1C6758}"
-                       HorizontalOptions="Center"
-                       Margin="15"
-                       FontFamily="Kollektif"
-                       FontAttributes="Bold"/>
                         <VerticalStackLayout>
                             <Label Text="You can't sell a car without letting the potential buyer see it. Upload some photos of your car to make the sale-buying process more efficient!"
                        FontSize="16"
-                       Margin="0,10,0,45"
+                       Margin="0,5,0,45"
                        HorizontalOptions="Center"
                        HorizontalTextAlignment="Center"
                        FontAttributes="Bold"
@@ -437,17 +447,17 @@
                                        FontSize="18"
                                        FontAttributes="Bold"
                                        HorizontalTextAlignment="Center"
-                                       Margin="25"
+                                       Margin="0,15,0,0"
                                        IsVisible="{Binding CarouselVisible}"></Label>
                             
                             <VerticalStackLayout IsVisible="{OnPlatform Android=True,iOS=True, WinUI=False}">
-                            <CarouselView ItemsSource="{Binding PostPictures}" Margin="0,20,0,0" HorizontalOptions="Center" IndicatorView="indicatorView">
+                            <CarouselView ItemsSource="{Binding PostPictures}" Margin="0,0,0,0" HorizontalOptions="Center" IndicatorView="indicatorView">
                                 <CarouselView.ItemTemplate>
                                     <DataTemplate x:DataType="model:PostPicture">
-                                        <StackLayout HeightRequest="400">
+                                        <StackLayout HeightRequest="300">
                                             <Frame HasShadow="True"
                                                    BorderColor="DarkGray"
-                                                   CornerRadius="5"
+                                                   CornerRadius="15"
                                                    HeightRequest="{OnPlatform WinUI=500, Android=300, iOS=300}"
                                                    HorizontalOptions="Center"
                                                    VerticalOptions="CenterAndExpand"
@@ -455,8 +465,8 @@
                                                 <StackLayout>
                                                     <Image Source="{Binding Picture}"
                                                            Aspect="AspectFill"
-                                                           HeightRequest="{OnPlatform Android=300, iOS=300, WinUI=500}"
-                                                           WidthRequest="{OnPlatform Android=300, iOS=300,WinUI=700}"
+                                                           HeightRequest="{OnPlatform Android=300, iOS=300, WinUI=400}"
+                                                           WidthRequest="{OnPlatform Android=300, iOS=300,WinUI=400}"
                                                            HorizontalOptions="Center"
                                                            VerticalOptions="CenterAndExpand"/>
                                                 </StackLayout>
@@ -466,9 +476,11 @@
                                 </CarouselView.ItemTemplate>
                             </CarouselView>
                             <IndicatorView x:Name="indicatorView"
+                                           HorizontalOptions="Center"
                                            IndicatorColor="{AppThemeBinding Dark=#dbdbdb, Light=#414141}"
                                            SelectedIndicatorColor="{AppThemeBinding Dark=Red,Light=#1C6758}"
-                                           MaximumVisible="6"/>
+                                           MaximumVisible="6"
+                                           Margin="0,0,0,20"/>
                         </VerticalStackLayout>
                             <VerticalStackLayout IsVisible="{OnPlatform Android=False, iOS=False,WinUI=True}" Margin="0,30,0,0">
                                 <ListView ItemsSource="{Binding PostPictures}">
@@ -477,7 +489,10 @@
                                             <ViewCell>
                                                 <Image Source="{Binding Picture}"
                                                        x:Name="carImage"
-                                                       Aspect="AspectFill"/>
+                                                       Aspect="AspectFill"
+                                                       Margin="0,20,0,20"
+                                                       WidthRequest="500"
+                                                       HeightRequest="300"/>
                                             </ViewCell>        
                                     </DataTemplate>
 
@@ -485,9 +500,9 @@
 
                                 </ListView>
                             </VerticalStackLayout>
-                            <Button Text="Upload the post"
+                            <Button Text="Next: Description and Price"
                                     WidthRequest="300"
-                                    Margin="0,5,0,0"
+                                    Margin="0,0,0,0"
                                     BackgroundColor="{AppThemeBinding Dark=Red, Light=#1C6758}"
                                     FontFamily="Kollektif"
                                     IsVisible="{Binding CarouselVisible}"
@@ -495,9 +510,10 @@
                                     BorderColor="Transparent"
                                     FontAttributes="Bold"
                                     HorizontalOptions="Center"
-                                    Command="{Binding}"/>
-                            <Button Text="Delete those picture and get back to vehicle details form"
-                                    WidthRequest="470"
+                                    Command="{Binding NavigateToDescriptionCommand}"/>
+                            <Button Text="Back to car details"
+                                    WidthRequest="440"
+                                    Margin="0,10,0,0"
                                     BackgroundColor="{AppThemeBinding Dark=#C69749, Light=#ECB365}"
                                     BorderColor="Transparent"
                                     FontAttributes="Bold"
@@ -508,6 +524,295 @@
                                     Clicked="GoBack"/>
                         </VerticalStackLayout>
                 </VerticalStackLayout>
+                    <VerticalStackLayout IsVisible="{Binding DescriptionFormVisible}">
+                        <Label Text="Here's the part when you have to be as creative as you can! You are the only one able to promote your vehicle. So try your best!"
+                               HorizontalOptions="Center"
+                               Margin="0,10,0,20"
+                               FontFamily="Kollektif"
+                               FontSize="20"
+                               FontAttributes="Bold"/>
+                        
+                        <Label Text="Please provide a description for your vehicle. The desription can have at most 6000 characters."
+                               FontFamily="Kollektif"
+                               x:Name="descriptionDirectiveLabel"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               Padding="5"
+                               Margin="5,20,0,0"></Label>
+
+                        <Label Text="The description was saved successfully! What do you want to do now?"
+                               FontSize="18"
+                               FontFamily="Kollekfitf"
+                               IsVisible="False"
+                               Opacity="0"
+                               FontAttributes="Bold"
+                               x:Name="descriptionFormSuccessMessage"/>
+
+                        <Label Text="Your post has now the following description: "
+                               FontSize="20"
+                               FontFamily="Kollektif"
+                               FontAttributes="Bold"
+                               x:Name="descriptionLabel"
+                               IsVisible="False"
+                               Opacity="0"
+                               Margin="15,25,0,0"/>
+                        
+                        <Label Text="{Binding Post.Description}"
+                               FontSize="18"
+                               FontFamily="Kollektif"
+                               HorizontalOptions="Center"
+                               IsVisible="False"
+                               Margin="0,15,20,0"
+                               Opacity="0"
+                               x:Name="descriptionText"
+                               />
+                        <Grid Margin="0,20">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="5*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Editor FontAttributes="Bold"
+                                x:Name="descriptionEditor"
+                                BackgroundColor="{AppThemeBinding Dark=#6b6b6b, Light=#dbdbdb}"
+                                Placeholder="Type a description for your car here"
+                                FontFamily="Kollektif"
+                                FontSize="18"
+                                PlaceholderColor="{AppThemeBinding Dark=White, Light=Grey}"
+                                TextColor="{AppThemeBinding Dark=White, Light=Black}"
+                                MaxLength="6000"
+                                HeightRequest="400"
+                                Margin="5,0,0,0"
+                                Text="{Binding Post.Description}"
+                                />
+                        </Grid>
+                        <Button Text="Finish editing the vehicle description"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Center"
+                                x:Name="finishEditingDescriptionButton"
+                                BorderColor="Transparent"
+                                WidthRequest="320"
+                                Margin="10"
+                                BackgroundColor="{AppThemeBinding Dark=#50577A,Light=#4E9F3D}"
+                                FontFamily="Kollektif"
+                                Clicked="FinishEditingVehicleDescription"
+                                TextColor="White"/>
+                        
+                        <Button Text="Preview description"
+                                FontAttributes="Bold"
+                                TextColor="White"
+                                HorizontalOptions="Center"
+                                WidthRequest="280"
+                                Margin="10"
+                                BackgroundColor="{AppThemeBinding Dark=#03506F, Light=#3B5249}"
+                                BorderColor="Transparent"
+                                x:Name="descriptionPreviewButton"
+                                IsVisible="False"
+                                Opacity="0"
+                                Clicked="DisplayDescriptionPreview"/>
+
+                        <Button Text="Hide the description preview"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Center"
+                                WidthRequest="290"
+                                BackgroundColor="{AppThemeBinding Dark=#151965, Light=#6B778D}"
+                                IsVisible="False"
+                                Margin="10"
+                                TextColor="White"
+                                Opacity="0"
+                                BorderColor="Transparent"
+                                x:Name="hideDescriptionPreviewButton"
+                                FontFamily="Kollektif"
+                                Clicked="HideTheDescriptionPreview"/>
+
+                        <Button Text="Edit the description"
+                                FontAttributes="Bold"
+                                FontFamily="Kollektif"
+                                WidthRequest="290"
+                                BackgroundColor="{AppThemeBinding Dark=#D65A31, Light=#FF5722}"
+                                IsVisible="False"
+                                Opacity="0"
+                                HorizontalOptions="Center"
+                                BorderColor="Transparent"
+                                TextColor="White"
+                                Margin="10"
+                                x:Name="editTheDescriptionAgainButton"
+                                Clicked="BackToDescriptionEditor"/>
+
+                        <Button Text="Next: Vehicle Equipment"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Center"
+                                FontFamily="Kollektif"
+                                x:Name="descriptionFormNextButton"
+                                Margin="10"
+                                IsVisible="False"
+                                WidthRequest="290"
+                                BorderColor="Transparent"
+                                TextColor="White"
+                                Opacity="0"
+                                BackgroundColor="Red"
+                                Command="{Binding GoToVehicleEquipmentCommand}"/>
+
+                        <Button Text="Back to picture upload"
+                                FontAttributes="Bold"
+                                WidthRequest="290"
+                                TextColor="White"
+                                BorderColor="Transparent"
+                                BackgroundColor="{AppThemeBinding Dark=#212121, Light=#3A6351}"
+                                IsVisible="False"
+                                HorizontalOptions="Center"
+                                FontFamily="Kollektif"
+                                Margin="10"
+                                x:Name="backToPictureUploadButton"
+                                Opacity="0"
+                                Command="{Binding BackToPictureUploadCommand}"/>
+                        
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout IsVisible="{Binding EquipmentFormVisible}">
+                        <Label Text="The buyer may want to know what equipments are available on this car. You should add this in your post too!"
+                               HorizontalOptions="Center"
+                               Margin="0,10,0,20"
+                               FontFamily="Kollektif"
+                               FontSize="20"
+                               x:Name="equipmentFormIntroText"
+                               FontAttributes="Bold"/>
+
+                        <Label Text="Specify the general equipments that your car has. Don't forget to separate the content with newlines!"
+                               Margin="10,0,0,0"
+                               FontFamily="Kollektif"
+                               FontSize="18"
+                               x:Name="equipmentFormDirective"
+                               FontAttributes="Bold"/>
+
+                        <Label Text="The vehicle equipment configuration that you provided was saved successfully! What do you want to do next?"
+                               Margin="10,0,0,0"
+                               FontFamily="Kollektif"
+                               FontSize="18"
+                               IsVisible="False"
+                               Opacity="0"
+                               x:Name="equipmentMessageSuccess"
+                               FontAttributes="Bold"/>
+
+                        <Label Text="You specified the following level of equipment for your vehicle: "
+                               FontSize="20"
+                               FontFamily="Kollektif"
+                               FontAttributes="Bold"
+                               x:Name="equipmentPreviewLabel"
+                               IsVisible="False"
+                               Opacity="0"
+                               Margin="15,25,0,0"/>
+
+                        <Label Text="{Binding Post.CarEquipment}"
+                               FontSize="18"
+                               FontFamily="Kollektif"
+                               IsVisible="False"
+                               Margin="25,25,20,0"
+                               Opacity="0"
+                               x:Name="equipmentText"
+                               />
+
+                        <Grid Margin="0,20">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="5*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Editor FontAttributes="Bold"
+                                x:Name="equipmentsEditor"
+                                BackgroundColor="{AppThemeBinding Dark=#6b6b6b, Light=#dbdbdb}"
+                                Placeholder="Specify the level of equipment of your car here"
+                                FontFamily="Kollektif"
+                                FontSize="18"
+                                PlaceholderColor="{AppThemeBinding Dark=White, Light=Grey}"
+                                TextColor="{AppThemeBinding Dark=White, Light=Black}"
+                                MaxLength="6000"
+                                HeightRequest="400"
+                                Margin="5,0,0,0"
+                                Text="{Binding Post.CarEquipment}"
+                                />
+                        </Grid>
+
+                        <Button Text="Finish editing the equipment description"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Center"
+                                x:Name="finishEditingEquipmentButton"
+                                BorderColor="Transparent"
+                                Margin="10"
+                                WidthRequest="320"
+                                BackgroundColor="{AppThemeBinding Dark=#50577A,Light=#4E9F3D}"
+                                FontFamily="Kollektif"
+                                Clicked="FinishEditingEquipmentDescription"
+                                TextColor="White"/>
+
+                        <Button Text="Preview vehicle equipment"
+                                FontAttributes="Bold"
+                                TextColor="White"
+                                HorizontalOptions="Center"
+                                WidthRequest="280"
+                                BackgroundColor="{AppThemeBinding Dark=#03506F, Light=#3B5249}"
+                                BorderColor="Transparent"
+                                x:Name="equipmentPreviewButton"
+                                IsVisible="False"
+                                Opacity="0"
+                                Clicked="DisplayEquipmentPreview"/>
+
+                        <Button Text="Hide the equipments preview"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Center"
+                                WidthRequest="290"
+                                BackgroundColor="{AppThemeBinding Dark=#151965, Light=#6B778D}"
+                                IsVisible="False"
+                                Margin="10"
+                                Opacity="0"
+                                TextColor="White"
+                                x:Name="hideEquipmentPreviewButton"
+                                FontFamily="Kollektif"
+                                Clicked="HideTheVehicleEquipmentPreview"/>
+
+                        <Button Text="Edit the equipment list"
+                                FontAttributes="Bold"
+                                FontFamily="Kollektif"
+                                WidthRequest="290"
+                                BackgroundColor="{AppThemeBinding Dark=#D65A31, Light=#FF5722}"
+                                IsVisible="False"
+                                Opacity="0"
+                                TextColor="White"
+                                HorizontalOptions="Center"
+                                Margin="10"
+                                x:Name="editTheEquipmentListAgainButton"
+                                Clicked="BackToEquipmentEditor"/>
+
+                        <Button Text="Process your post request"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Center"
+                                FontFamily="Kollektif"
+                                x:Name="uploadPost"
+                                Margin="10"
+                                IsVisible="False"
+                                WidthRequest="290"
+                                BorderColor="Transparent"
+                                TextColor="White"
+                                Opacity="0"
+                                BackgroundColor="Red"
+                                Command="{Binding UploadCarPostCommand}"/>
+
+                        <Button Text="Back to post description"
+                                FontAttributes="Bold"
+                                WidthRequest="290"
+                                TextColor="White"
+                                BorderColor="Transparent"
+                                BackgroundColor="{AppThemeBinding Dark=#212121, Light=#3A6351}"
+                                IsVisible="False"
+                                HorizontalOptions="Center"
+                                FontFamily="Kollektif"
+                                Margin="10"
+                                x:Name="backToPostDescriptionButton"
+                                Opacity="0"
+                                Command="{Binding BackToPostDescriptionCommand}"/>
+                    </VerticalStackLayout>
                 </VerticalStackLayout>
         </Frame>
     </VerticalStackLayout>

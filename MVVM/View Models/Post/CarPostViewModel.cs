@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Firebase.Storage;
 using MotorEmpireAutohaus.MVVM.Models.User_Account_Model;
 using MotorEmpireAutohaus.MVVM.View_Models.Base;
 using MotorEmpireAutohaus.Services.Feed;
@@ -116,10 +117,21 @@ namespace MVVM.View_Models.Post
         private bool pictureUploadVisible = false;
 
         [ObservableProperty]
+        private bool descriptionFormVisible = false;
+
+        [ObservableProperty]
+        private bool equipmentFormVisible = false;
+
+        [ObservableProperty]
         private ObservableCollection<PostPicture> postPictures = new();
 
         [ObservableProperty]
         private bool carouselVisible;
+
+        private string firebaseUrlToFile;
+
+        [ObservableProperty]
+        private string vehicleEquipmentRaw;
 
         public CarPostViewModel(CarService carService, CarPostService carPostService, CarPost post, UserAccount userAccount)
         {
@@ -237,8 +249,8 @@ namespace MVVM.View_Models.Post
             VehiclePostUploadValidationResult result = VehiclePostValidator.AreCarDetailsValid(post.Car);
             if (result.ValidationPassed)
             {
-                carDetailsFormVisible = false;
-                pictureUploadVisible = true;
+                CarDetailsFormVisible = false;
+                PictureUploadVisible = true;
             }
             else
             {
@@ -254,8 +266,8 @@ namespace MVVM.View_Models.Post
 
             photos.ForEach(async photo =>
             {
-                string urlToFile=await FirebaseCloudStorage.AddFileToFirebaseCloudStorageAsync(photo, path);
-                PostPictures.Add(new PostPicture(urlToFile));
+                firebaseUrlToFile=await FirebaseCloudStorage.AddFileToFirebaseCloudStorageAsync(photo, path);
+                PostPictures.Add(new PostPicture(firebaseUrlToFile));
                 CarouselVisible = true;
             });
         }
@@ -263,9 +275,61 @@ namespace MVVM.View_Models.Post
         [RelayCommand]
         public void DeletePicturesAndGoBack()
         {
-            PostPictures.Clear();
-            CarouselVisible = false;
+            try
+            {
+                //await FirebaseCloudStorage.DeleteFirebaseDataFromAsync($"{post.Car.UUID}"); 
+            }
+            catch(Exception ex)
+            {
+                CrossPlatformMessageRenderer.RenderMessages(ex.Message, "Retry", 4);
+            }
+            finally
+            {
+                PostPictures.Clear();
+                CarouselVisible = false;
+                PictureUploadVisible = false;
+                CarDetailsFormVisible = true;
+            }
         }
+
+        [RelayCommand]
+        public void NavigateToDescription()
+        {
+            DescriptionFormVisible = true;
+            PictureUploadVisible = false;
+            CarDetailsFormVisible = false;
+        }
+
+        [RelayCommand]
+        public void GoToVehicleEquipment()
+        {
+            EquipmentFormVisible = true;
+            DescriptionFormVisible = false;
+            CarDetailsFormVisible = false;
+            PictureUploadVisible = false;
+        }
+
+        [RelayCommand]
+        public void BackToPictureUpload()
+        {
+            DescriptionFormVisible = false;
+            PictureUploadVisible = true;
+        }
+
+        [RelayCommand]
+        public void BackToPostDescription()
+        {
+            DescriptionFormVisible=true;
+            EquipmentFormVisible = false;
+        }
+
+        [RelayCommand]
+        public void UploadCarPost()
+        {
+
+        }
+
+        
 
         partial void OnSelectedVehicleTypeChanged(string value)
         {
@@ -348,6 +412,19 @@ namespace MVVM.View_Models.Post
         {
             carouselVisible = true;
         }
+
+        /*partial void OnCarDetailsFormVisibleChanged(bool value)
+        {
+            CarDetailsFormVisible = value;
+            PictureUploadVisible = !value;
+        }
+
+        partial void OnPictureUploadVisibleChanged(bool value)
+        {
+            PictureUploadVisible = value;
+            CarDetailsFormVisible= !value;
+        }*/
+
     }
 }
 

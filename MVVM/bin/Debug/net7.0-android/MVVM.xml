@@ -297,6 +297,15 @@
         <member name="P:MVVM.Models.Post_Model.CarPost.Car">
             <inheritdoc cref="F:MVVM.Models.Post_Model.CarPost.car"/>
         </member>
+        <member name="P:MVVM.Models.Post_Model.CarPost.Description">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarPost.description"/>
+        </member>
+        <member name="P:MVVM.Models.Post_Model.CarPost.CarEquipment">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarPost.carEquipment"/>
+        </member>
+        <member name="P:MVVM.Models.Post_Model.CarPost.Price">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarPost.price"/>
+        </member>
         <member name="P:MVVM.Models.PostPicture.Picture">
             <inheritdoc cref="F:MVVM.Models.PostPicture.picture"/>
         </member>
@@ -320,6 +329,9 @@
         </member>
         <member name="P:MVVM.Models.Vehicle_Models.Car.Car_Model.Car.Gears">
             <inheritdoc cref="F:MVVM.Models.Vehicle_Models.Car.Car_Model.Car.gears"/>
+        </member>
+        <member name="P:MVVM.Models.Vehicle_Models.Car.Car_Model.Car.CarEquipment">
+            <inheritdoc cref="F:MVVM.Models.Vehicle_Models.Car.Car_Model.Car.carEquipment"/>
         </member>
         <member name="P:MVVM.Models.Vehicle_Models.Vehicle_Model.Vehicle.VehicleType">
             <inheritdoc cref="F:MVVM.Models.Vehicle_Models.Vehicle_Model.Vehicle.vehicleType"/>
@@ -417,11 +429,20 @@
         <member name="P:MVVM.View_Models.Post.CarPostViewModel.PictureUploadVisible">
             <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.pictureUploadVisible"/>
         </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.DescriptionFormVisible">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.descriptionFormVisible"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.EquipmentFormVisible">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.equipmentFormVisible"/>
+        </member>
         <member name="P:MVVM.View_Models.Post.CarPostViewModel.PostPictures">
             <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.postPictures"/>
         </member>
         <member name="P:MVVM.View_Models.Post.CarPostViewModel.CarouselVisible">
             <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.carouselVisible"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.VehicleEquipmentRaw">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.vehicleEquipmentRaw"/>
         </member>
         <member name="M:MVVM.View_Models.Post.CarPostViewModel.OnSelectedVehicleTypeChanged(System.String)">
             <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Post.CarPostViewModel.SelectedVehicleType"/> just changed.</summary>
@@ -488,6 +509,36 @@
         </member>
         <member name="P:MVVM.View_Models.Post.CarPostViewModel.DeletePicturesAndGoBackCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.Post.CarPostViewModel.DeletePicturesAndGoBack"/>.</summary>
+        </member>
+        <member name="F:MVVM.View_Models.Post.CarPostViewModel.navigateToDescriptionCommand">
+            <summary>The backing field for <see cref="P:MVVM.View_Models.Post.CarPostViewModel.NavigateToDescriptionCommand"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.NavigateToDescriptionCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.Post.CarPostViewModel.NavigateToDescription"/>.</summary>
+        </member>
+        <member name="F:MVVM.View_Models.Post.CarPostViewModel.goToVehicleEquipmentCommand">
+            <summary>The backing field for <see cref="P:MVVM.View_Models.Post.CarPostViewModel.GoToVehicleEquipmentCommand"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.GoToVehicleEquipmentCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.Post.CarPostViewModel.GoToVehicleEquipment"/>.</summary>
+        </member>
+        <member name="F:MVVM.View_Models.Post.CarPostViewModel.backToPictureUploadCommand">
+            <summary>The backing field for <see cref="P:MVVM.View_Models.Post.CarPostViewModel.BackToPictureUploadCommand"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.BackToPictureUploadCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.Post.CarPostViewModel.BackToPictureUpload"/>.</summary>
+        </member>
+        <member name="F:MVVM.View_Models.Post.CarPostViewModel.backToPostDescriptionCommand">
+            <summary>The backing field for <see cref="P:MVVM.View_Models.Post.CarPostViewModel.BackToPostDescriptionCommand"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.BackToPostDescriptionCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.Post.CarPostViewModel.BackToPostDescription"/>.</summary>
+        </member>
+        <member name="F:MVVM.View_Models.Post.CarPostViewModel.uploadCarPostCommand">
+            <summary>The backing field for <see cref="P:MVVM.View_Models.Post.CarPostViewModel.UploadCarPostCommand"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.UploadCarPostCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.Post.CarPostViewModel.UploadCarPost"/>.</summary>
         </member>
         <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
             <summary>

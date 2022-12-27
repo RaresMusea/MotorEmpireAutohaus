@@ -2,13 +2,6 @@
 using MotorEmpireAutohaus.MVVM.Models.Base;
 using MotorEmpireAutohaus.MVVM.Models.User_Account_Model;
 using MVVM.Models.Vehicle_Models.Car.Car_Model;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Diagnostics.Contracts;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MVVM.Models.Post_Model
 {
@@ -20,6 +13,15 @@ namespace MVVM.Models.Post_Model
         [ObservableProperty]
         Car car;
 
+        [ObservableProperty]
+        string description;
+
+        [ObservableProperty]
+        string carEquipment;
+
+        [ObservableProperty]
+        int? price;
+
         public new void GenerateUUID()
         {
             UUID = car.UUID;
@@ -27,7 +29,7 @@ namespace MVVM.Models.Post_Model
 
         public override bool IsEmpty()
         {
-            return owner.IsEmpty() || car.IsEmpty() || string.IsNullOrEmpty(car.UUID);
+            return owner.IsEmpty() || car.IsEmpty() || string.IsNullOrEmpty(car.UUID) || string.IsNullOrEmpty(description) || string.IsNullOrEmpty(carEquipment) || price==0;
         }
 
     }

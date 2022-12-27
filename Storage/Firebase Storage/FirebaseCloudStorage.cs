@@ -1,4 +1,5 @@
 ﻿using Firebase.Storage;
+using MotorEmpireAutohaus.Tools.Utility.Messages;
 
 namespace MotorEmpireAutohaus.Storage.Firebase_Storage
 {
@@ -20,6 +21,19 @@ namespace MotorEmpireAutohaus.Storage.Firebase_Storage
             var reference = storage.Child(path);
             string link = await reference.GetDownloadUrlAsync();
             return link;
+        }
+
+        public static async Task DeleteFirebaseDataFromAsync(string path)
+        {
+            //gs://motor-empire-autohaus.appspot.com/Images/VehiclePosts/Cars
+            //FirebaseStorage storage = new FirebaseStorage($"{path}");
+            /*var reference = storage.Child(storage.StorageBucket);*/
+            //CrossPlatformMessageRenderer.RenderMessages(storage.StorageBucket);
+
+            //gs://motor-empire-autohaus.appspot.com/Images/VehiclePosts/Cars/38c71df8-5ce7-427a-bb36-1d068a5cb238
+            var storage = new FirebaseStorage($"motor-empire-autohaus.appspot.com/Images/VehiclePosts/Cars/{path}");
+            var reference = storage.Child("");
+            await reference.DeleteAsync();
         }
     }
 }
