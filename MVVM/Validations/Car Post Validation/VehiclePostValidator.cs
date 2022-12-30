@@ -6,6 +6,8 @@ namespace MVVM.Validations.Car_Post_Validation
 {
     public static class VehiclePostValidator
     {
+        static readonly int currentYear=2022;
+
         public static bool ProductionYearIsValid(int providedYear, string providedGeneration=null)
         {
             if(providedGeneration is null)
@@ -36,7 +38,17 @@ namespace MVVM.Validations.Car_Post_Validation
         {
             try {
                 int productionYearStart = int.Parse(generation.Substring(generation.IndexOf('[') + 1, 4));
-                int productionYearEnd = int.Parse(generation.Substring(generation.IndexOf('-') + 1, 5));
+                int productionYearEnd = 0;
+
+                if (generation.Substring(generation.IndexOf('-') + 1) == " Present]")
+                {
+                    productionYearEnd = currentYear;
+                }
+                else
+                {
+                   productionYearEnd = int.Parse(generation.Substring(generation.IndexOf('-') + 1, 5)); 
+                }
+
                 return new Tuple<int,int>(productionYearStart, productionYearEnd);
             }
             catch(ArgumentException)

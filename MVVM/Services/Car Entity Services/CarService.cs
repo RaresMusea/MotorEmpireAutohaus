@@ -2,6 +2,7 @@
 using MotorEmpireAutohaus.MVVM.Models.Base;
 using MotorEmpireAutohaus.MVVM.Services.Interfaces;
 using MotorEmpireAutohaus.Storage.MySQL;
+using MVVM.Exceptions;
 using MVVM.Models.Vehicle_Models.Car.Car_Model;
 using MVVM.Services.Interfaces;
 using MySqlConnector;
@@ -14,7 +15,7 @@ namespace MVVM.Services.Car_Entity_Services
 
         public CarService()
         {
-            IConnectableDataSource.Connenct();
+            IConnectableDataSource.Connect();
         
         }
 
@@ -124,9 +125,10 @@ namespace MVVM.Services.Car_Entity_Services
             {
                 command.ExecuteNonQuery();
             }
-            catch (MySqlException)
+            catch (MySqlException mySqlExc)
             {
-                return null;
+                throw new UploadFailedException($"Cannot upload your car post due to an unexpected error!\n" +
+                    $"More details:\n{mySqlExc.Message} ");
             }
 
             return car;
@@ -136,6 +138,24 @@ namespace MVVM.Services.Car_Entity_Services
         public Entity Update(Entity entity)
         {
             throw new NotImplementedException();
+        }
+
+        public int retrieveCarIdentifierByUuid(string uuid)
+        {
+            MySqlCommand command = new MySqlCommand($"SELECT id FROM {TableReference} WHERE UUID = @uuid",
+                IConnectableDataSource.databaseConfigurer.DatabaseConnection);
+            command.Prepare();
+            command.Parameters.AddWithValue("@uuid", uuid);
+
+            MySqlDataReader reader = command.ExecuteReader();
+            int id=-1;
+            while (reader.Read())
+            {
+                id = reader.GetInt32(0);
+            }
+
+            reader.Close();
+            return id;
         }
 
     }

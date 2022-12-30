@@ -11,7 +11,7 @@ namespace MVVM.Services.Interfaces
     {
         static readonly DatabaseConfigurer databaseConfigurer= new DatabaseConfigurer();
 
-        static void Connenct()
+        static void Connect()
         {
             databaseConfigurer.OpenConnection();
         }

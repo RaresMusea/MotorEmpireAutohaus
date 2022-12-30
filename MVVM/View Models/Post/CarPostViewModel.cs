@@ -6,6 +6,7 @@ using MotorEmpireAutohaus.MVVM.View_Models.Base;
 using MotorEmpireAutohaus.Services.Feed;
 using MotorEmpireAutohaus.Storage.Firebase_Storage;
 using MotorEmpireAutohaus.Tools.Utility.Messages;
+using MVVM.Exceptions;
 using MVVM.Models;
 using MVVM.Models.Post_Model;
 using MVVM.Services.Car_Entity_Services;
@@ -123,7 +124,7 @@ namespace MVVM.View_Models.Post
         private bool equipmentFormVisible = false;
 
         [ObservableProperty]
-        private ObservableCollection<PostPicture> postPictures = new();
+        private ObservableCollection<PostPicture> postPicturesObservable = new();
 
         [ObservableProperty]
         private bool postPicturesCollectionNotEmpty = false;
@@ -270,10 +271,12 @@ namespace MVVM.View_Models.Post
             photos.ForEach(async photo =>
             {
                 firebaseUrlToFile=await FirebaseCloudStorage.AddFileToFirebaseCloudStorageAsync(photo, path);
-                PostPictures.Add(new PostPicture(firebaseUrlToFile));
+                PostPicturesObservable.Add(new PostPicture(firebaseUrlToFile));
                 PostPicturesCollectionNotEmpty = true;
                 CarouselVisible = true;
             });
+
+            Post.PostPictures = PostPicturesObservable.ToList();
         }
 
         [RelayCommand]
@@ -289,7 +292,7 @@ namespace MVVM.View_Models.Post
             }
             finally
             {
-                PostPictures.Clear();
+                PostPicturesObservable.Clear();
                 PostPicturesCollectionNotEmpty = false;
                 CarouselVisible = false;
                 PictureUploadVisible = false;
@@ -333,9 +336,21 @@ namespace MVVM.View_Models.Post
         {
             if(carService.Save(post.Car) is not null)
             {
-                CrossPlatformMessageRenderer.RenderMessages("Successfully added new car !", "Good", 3);
-                CleanUp();
-                await Shell.Current.GoToAsync("//MotorEmpire",true);
+                try
+                {
+                    carPostService.UploadCarPost(Post, carService.retrieveCarIdentifierByUuid(post.Car.UUID));
+                    CrossPlatformMessageRenderer.RenderMessages("Successfully added a new car !", "Good", 3);
+                    
+                }
+                catch (UploadFailedException uploadFailedExc)
+                {
+                    CrossPlatformMessageRenderer.RenderMessages(uploadFailedExc.Message, "OK", 4);
+                }
+                finally
+                {
+                    CleanUp();
+                    await Shell.Current.GoToAsync("//MotorEmpire", true);
+                }
             }
         }
 
@@ -467,22 +482,10 @@ namespace MVVM.View_Models.Post
             post.Car.Gears = value;
         }
 
-        partial void OnPostPicturesChanged(ObservableCollection<PostPicture> value)
+        partial void OnPostPicturesObservableChanged(ObservableCollection<PostPicture> value)
         {
             carouselVisible = true;
         }
-
-        /*partial void OnCarDetailsFormVisibleChanged(bool value)
-        {
-            CarDetailsFormVisible = value;
-            PictureUploadVisible = !value;
-        }
-
-        partial void OnPictureUploadVisibleChanged(bool value)
-        {
-            PictureUploadVisible = value;
-            CarDetailsFormVisible= !value;
-        }*/
 
         private void CleanUp()
         {
@@ -506,14 +509,19 @@ namespace MVVM.View_Models.Post
             EngineCapacity = null;
             EnginePower = null;
             Torque = null;
-            PostPictures = new();
+            PostPicturesObservable = new();
             CarouselVisible = false;
-            Post = new();
-            Post.Car = new();
+
+            Post = new()
+            {
+                PostPictures = new(),
+                Car = new(),
+                Owner=owner,
+            };
+
             Post.UUID = Post.Car.UUID;
 
         }
-
     }
 }
 

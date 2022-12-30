@@ -306,6 +306,12 @@
         <member name="P:MVVM.Models.Post_Model.CarPost.Price">
             <inheritdoc cref="F:MVVM.Models.Post_Model.CarPost.price"/>
         </member>
+        <member name="P:MVVM.Models.Post_Model.CarPost.PostPictures">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarPost.postPictures"/>
+        </member>
+        <member name="P:MVVM.Models.Post_Model.CarPost.DateTimeAdded">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarPost.dateTimeAdded"/>
+        </member>
         <member name="P:MVVM.Models.PostPicture.Picture">
             <inheritdoc cref="F:MVVM.Models.PostPicture.picture"/>
         </member>
@@ -435,8 +441,8 @@
         <member name="P:MVVM.View_Models.Post.CarPostViewModel.EquipmentFormVisible">
             <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.equipmentFormVisible"/>
         </member>
-        <member name="P:MVVM.View_Models.Post.CarPostViewModel.PostPictures">
-            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.postPictures"/>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.PostPicturesObservable">
+            <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.postPicturesObservable"/>
         </member>
         <member name="P:MVVM.View_Models.Post.CarPostViewModel.PostPicturesCollectionNotEmpty">
             <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.postPicturesCollectionNotEmpty"/>
@@ -492,8 +498,8 @@
         <member name="M:MVVM.View_Models.Post.CarPostViewModel.OnSelectedGearboxConfigurationChanged(System.String)">
             <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Post.CarPostViewModel.SelectedGearboxConfiguration"/> just changed.</summary>
         </member>
-        <member name="M:MVVM.View_Models.Post.CarPostViewModel.OnPostPicturesChanged(System.Collections.ObjectModel.ObservableCollection{MVVM.Models.PostPicture})">
-            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Post.CarPostViewModel.PostPictures"/> just changed.</summary>
+        <member name="M:MVVM.View_Models.Post.CarPostViewModel.OnPostPicturesObservableChanged(System.Collections.ObjectModel.ObservableCollection{MVVM.Models.PostPicture})">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Post.CarPostViewModel.PostPicturesObservable"/> just changed.</summary>
         </member>
         <member name="F:MVVM.View_Models.Post.CarPostViewModel.switchUploadFormWithPictureUploadCommand">
             <summary>The backing field for <see cref="P:MVVM.View_Models.Post.CarPostViewModel.SwitchUploadFormWithPictureUploadCommand"/>.</summary>

@@ -8,25 +8,20 @@ using MotorEmpireAutohaus.MVVM.Models.User_Account_Model;
 using MotorEmpireAutohaus.MVVM.Models.Base;
 using System.Data;
 using Storage.MySQL;
+using MVVM.Services.Interfaces;
 
 namespace MotorEmpireAutohaus.Services.Account_Services
 {
-    public class AccountService : IAuthenticate, IStorable
+    public class AccountService : IAuthenticate, IStorable, IConnectableDataSource
     {
         private DatabaseConfigurer _databaseConfig;
         private static readonly string TableReference = "User";
 
         public AccountService()
         {
-            Connect();
+            IConnectableDataSource.Connect();
             //Debug.WriteLine("Connection successful!");
             CrossPlatformMessageRenderer.RenderMessages("Connected successfully!", "Close", 3);
-        }
-
-        private void Connect()
-        {
-            _databaseConfig = new DatabaseConfigurer();
-            _databaseConfig.OpenConnection();
         }
 
         public bool SignUp(UserAccount user)
@@ -38,7 +33,7 @@ namespace MotorEmpireAutohaus.Services.Account_Services
         {
             string pass = Encrypter.EncryptPassword(user.Password);
             MySqlCommand command = new($"SELECT * FROM {TableReference} WHERE EmailAddress=@email and Password=@pass",
-                _databaseConfig.DatabaseConnection);
+                IConnectableDataSource.databaseConfigurer.DatabaseConnection);
             command.Prepare();
 
             command.Parameters.AddWithValue("@email", user.EmailAddress);
@@ -127,7 +122,7 @@ namespace MotorEmpireAutohaus.Services.Account_Services
                 MySqlCommand command = new(
                     $"INSERT INTO {TableReference} (UUID, Name, EmailAddress, Username,Password,ProfileImageURL)" +
                     $"VALUES (@uuid, @name, @email, @username, @password, @imageURL)",
-                    _databaseConfig.DatabaseConnection);
+                    IConnectableDataSource.databaseConfigurer.DatabaseConnection);
 
                 command.Prepare();
                 string[] keys = { "@uuid", "@name", "@email", "@username", "@password", "@imageURL" };
@@ -186,7 +181,7 @@ namespace MotorEmpireAutohaus.Services.Account_Services
 
         private void UpdateLastSeenFor(UserAccount user)
         {
-            MySqlCommand command = new($"UPDATE {TableReference} SET LastSeen=NOW() WHERE EmailAddress=@email", _databaseConfig.DatabaseConnection);
+            MySqlCommand command = new($"UPDATE {TableReference} SET LastSeen=NOW() WHERE EmailAddress=@email", IConnectableDataSource.databaseConfigurer.DatabaseConnection);
             command.Prepare();
             command.Parameters.AddWithValue("@email", user.EmailAddress);
             command.ExecuteNonQuery();
@@ -195,7 +190,7 @@ namespace MotorEmpireAutohaus.Services.Account_Services
 
         public Entity RetrieveByUuid(string uuid)
         {
-            MySqlCommand command = new MySqlCommand($"SELECT * FROM {TableReference} WHERE UUID=@uuid", _databaseConfig.DatabaseConnection);
+            MySqlCommand command = new MySqlCommand($"SELECT * FROM {TableReference} WHERE UUID=@uuid", IConnectableDataSource.databaseConfigurer.DatabaseConnection);
             command.Prepare();
             command.Parameters.AddWithValue("@uuid", uuid);
 
@@ -227,7 +222,7 @@ namespace MotorEmpireAutohaus.Services.Account_Services
 
         public void UpdateProfilePictureForUser(string uuid, string pathToImage)
         {
-            MySqlCommand command = new($"UPDATE {TableReference} SET ProfileImageURL=@image WHERE UUID=@uuid", _databaseConfig.DatabaseConnection);
+            MySqlCommand command = new($"UPDATE {TableReference} SET ProfileImageURL=@image WHERE UUID=@uuid", IConnectableDataSource.databaseConfigurer.DatabaseConnection);
             command.Prepare();
             command.Parameters.AddWithValue("@image", pathToImage);
             command.Parameters.AddWithValue("@uuid", uuid);
@@ -248,7 +243,7 @@ namespace MotorEmpireAutohaus.Services.Account_Services
 
         public string GetUuidByEmail(string emailAddress)
         {
-            MySqlCommand command = new($"SELECT UUID FROM {TableReference} WHERE EmailAddress=@email", _databaseConfig.DatabaseConnection);
+            MySqlCommand command = new($"SELECT UUID FROM {TableReference} WHERE EmailAddress=@email", IConnectableDataSource.databaseConfigurer.DatabaseConnection);
             command.Prepare();
             command.Parameters.AddWithValue("@email", emailAddress);
             MySqlDataReader reader = command.ExecuteReader();
@@ -263,10 +258,29 @@ namespace MotorEmpireAutohaus.Services.Account_Services
             return uuid;
         }
 
+        public int RetrieveIdForUserUuid(string uuid)
+        {
+            MySqlCommand command = new($"SELECT ID FROM {TableReference} WHERE UUID = @uuid",
+                IConnectableDataSource.databaseConfigurer.DatabaseConnection);
+            command.Prepare();
+            command.Parameters.AddWithValue("@uuid", uuid);
+
+            MySqlDataReader reader = command.ExecuteReader();
+            int id = -1;
+
+            while (reader.Read())
+            {
+                id = reader.GetInt32(0);
+            }
+
+            reader.Close();
+            return id;
+        }
+
         public Entity Update(Entity entity)
         {
             UserAccount user = (UserAccount)entity;
-            MySqlCommand command = new($"UPDATE {TableReference} SET Name=@name, Username=@username, EmailAddress=@email WHERE UUID=@uuid", _databaseConfig.DatabaseConnection);
+            MySqlCommand command = new($"UPDATE {TableReference} SET Name=@name, Username=@username, EmailAddress=@email WHERE UUID=@uuid", IConnectableDataSource.databaseConfigurer.DatabaseConnection);
             command.Prepare();
             command.Parameters.AddWithValue("@name", user.Name);
             command.Parameters.AddWithValue("@username", user.Username);
@@ -281,7 +295,7 @@ namespace MotorEmpireAutohaus.Services.Account_Services
 
         public string RetrievePasswordByUuid(string uuid)
         {
-            MySqlCommand command = new($"SELECT password FROM {TableReference} WHERE UUID=@uuid", _databaseConfig.DatabaseConnection);
+            MySqlCommand command = new($"SELECT password FROM {TableReference} WHERE UUID=@uuid", IConnectableDataSource.databaseConfigurer.DatabaseConnection);
             command.Prepare();
             command.Parameters.AddWithValue("@uuid", uuid);
 
@@ -298,7 +312,7 @@ namespace MotorEmpireAutohaus.Services.Account_Services
 
         public void UpdatePasswordForUser(UserAccount userAccount, string newPassword)
         {
-            MySqlCommand command = new($"UPDATE {TableReference} SET Password=@pass WHERE UUID=@uuid", _databaseConfig.DatabaseConnection);
+            MySqlCommand command = new($"UPDATE {TableReference} SET Password=@pass WHERE UUID=@uuid", IConnectableDataSource.databaseConfigurer.DatabaseConnection);
             command.Prepare();
             command.Parameters.AddWithValue("@pass", Encrypter.EncryptPassword(newPassword));
             command.Parameters.AddWithValue("@uuid", userAccount.UUID);
@@ -309,7 +323,7 @@ namespace MotorEmpireAutohaus.Services.Account_Services
 
         public string RetrievePhoneNumberForUser(string uuid)
         {
-            MySqlCommand command = new($"SELECT PhoneNumber FROM {TableReference} WHERE UUID=@uuid", _databaseConfig.DatabaseConnection);
+            MySqlCommand command = new($"SELECT PhoneNumber FROM {TableReference} WHERE UUID=@uuid", IConnectableDataSource.databaseConfigurer.DatabaseConnection);
             command.Prepare();
             command.Parameters.AddWithValue("@uuid", uuid);
 
@@ -332,7 +346,7 @@ namespace MotorEmpireAutohaus.Services.Account_Services
 
         public bool SetPhoneNumber(string uuid, string phoneNumber)
         {
-            MySqlCommand command = new MySqlCommand($"UPDATE {TableReference} SET PhoneNumber=@number WHERE UUID=@uuid", _databaseConfig.DatabaseConnection);
+            MySqlCommand command = new MySqlCommand($"UPDATE {TableReference} SET PhoneNumber=@number WHERE UUID=@uuid", IConnectableDataSource.databaseConfigurer.DatabaseConnection);
             command.Prepare();
             command.Parameters.AddWithValue("@number", phoneNumber);
             command.Parameters.AddWithValue("@uuid", uuid);
@@ -354,7 +368,7 @@ namespace MotorEmpireAutohaus.Services.Account_Services
 
         public bool RemovePhoneNumber(string uuid)
         {
-            MySqlCommand command = new ($"UPDATE {TableReference} SET PhoneNumber=null WHERE UUID=@uuid", _databaseConfig.DatabaseConnection);
+            MySqlCommand command = new ($"UPDATE {TableReference} SET PhoneNumber=null WHERE UUID=@uuid", IConnectableDataSource.databaseConfigurer.DatabaseConnection);
             command.Prepare();
             command.Parameters.AddWithValue("@uuid", uuid);
 
@@ -375,7 +389,7 @@ namespace MotorEmpireAutohaus.Services.Account_Services
 
         public bool Delete(Entity entity)
         {
-            MySqlCommand command = new($"DELETE FROM {TableReference} WHERE UUID=@uuid", _databaseConfig.DatabaseConnection);
+            MySqlCommand command = new($"DELETE FROM {TableReference} WHERE UUID=@uuid", IConnectableDataSource.databaseConfigurer.DatabaseConnection);
             command.Prepare();
             command.Parameters.AddWithValue("@uuid", entity.UUID);
             try
