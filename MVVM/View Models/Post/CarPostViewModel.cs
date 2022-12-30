@@ -268,13 +268,21 @@ namespace MVVM.View_Models.Post
             List<FileResult> photos = await PickCarPostPictures();
             string path = $"Images/VehiclePosts/{selectedVehicleType}/{post.Car.UUID}";
 
-            photos.ForEach(async photo =>
+            /*photos.ForEach(async photo =>
             {
                 firebaseUrlToFile=await FirebaseCloudStorage.AddFileToFirebaseCloudStorageAsync(photo, path);
                 PostPicturesObservable.Add(new PostPicture(firebaseUrlToFile));
                 PostPicturesCollectionNotEmpty = true;
                 CarouselVisible = true;
-            });
+            });*/
+
+            foreach(FileResult photo in photos)
+            {
+                firebaseUrlToFile = await FirebaseCloudStorage.AddFileToFirebaseCloudStorageAsync(photo, path);
+                PostPicturesObservable.Add(new PostPicture(firebaseUrlToFile));
+                PostPicturesCollectionNotEmpty = true;
+                CarouselVisible = true;
+            }
 
             Post.PostPictures = PostPicturesObservable.ToList();
         }

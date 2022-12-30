@@ -16,6 +16,10 @@ using MVVM.Services.Car_Entity_Services;
 using MVVM.Services.Car_Post_Services;
 using MVVM.Models.Post_Model;
 using MVVM.View_Models.Post;
+using MVVM.View.Post_Feed;
+using MVVM.View_Models.Post_Feed;
+using MVVM.Services;
+using MotorEmpireAutohaus.MVVM.Models.Vehicle_Models.Car.Car_Filter_Model;
 
 namespace MotorEmpireAutohaus;
 public static class MauiProgram
@@ -54,6 +58,7 @@ public static class MauiProgram
         builder.Services.AddSingleton<MotorEmpire>();
         builder.Services.AddSingleton<MotorEmpireViewModel>();
         builder.Services.AddSingleton<CarFilterService>();
+
         builder.Services.AddSingleton<AppShell>();
         builder.Services.AddSingleton<ShellViewModel>();
         builder.Services.AddSingleton<Feed>();
@@ -67,6 +72,11 @@ public static class MauiProgram
         builder.Services.AddSingleton<CarPostService>();
         builder.Services.AddSingleton<CarPost>();
         builder.Services.AddSingleton<CarPostViewModel>();
+
+        builder.Services.AddSingleton<CarFilter>();
+        builder.Services.AddSingleton<PostFeed>();
+        builder.Services.AddSingleton<PostFeedViewModel>();
+        builder.Services.AddSingleton<PostFeedService>();
 
         return builder.Build();
     }

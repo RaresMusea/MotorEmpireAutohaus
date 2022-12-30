@@ -406,5 +406,26 @@ namespace MotorEmpireAutohaus.Services.Account_Services
             CrossPlatformMessageRenderer.RenderMessages($"Account deleted successfully!\n You are being redirected to the Sign Up page...", "OK", 4);
             return true;         
         }
+
+        public UserAccount GetUserById(int id)
+        {
+            MySqlCommand command = new($"SELECT UUID FROM {TableReference} WHERE ID=@id",
+                IConnectableDataSource.databaseConfigurer.DatabaseConnection);
+
+            command.Prepare();
+            command.Parameters.AddWithValue("@id", id);
+
+            MySqlDataReader reader = command.ExecuteReader();
+            string uuid="";
+            while (reader.Read())
+            {
+                uuid = reader.GetString(1);
+            }
+
+            return string.IsNullOrEmpty(uuid) ? null : (UserAccount)RetrieveByUuid(uuid);
+
+        }
+
+
     }
 }

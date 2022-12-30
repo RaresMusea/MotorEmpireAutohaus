@@ -158,5 +158,43 @@ namespace MVVM.Services.Car_Entity_Services
             return id;
         }
 
+        public List<Car> RetrieveAllCars()
+        {
+            List<Car> list = new List<Car>();
+            MySqlCommand command = new MySqlCommand($"SELECT * FROM {TableReference}",
+                IConnectableDataSource.databaseConfigurer.DatabaseConnection);
+
+            command.Prepare();
+            MySqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string UUID = reader.GetString(1);
+                string chassisType = reader.GetString(2);
+                string vehicleType = reader.GetString(3);
+                string manufacturer = reader.GetString(4);
+                string model = reader.GetString(5);
+                string generation = reader.GetString(6);
+                int year = reader.GetInt32(7);
+                string fuelType = reader.GetString(8);
+                int mileage = reader.GetInt32(9);
+                string engineCapacity = reader.GetString(10);
+                int horsepower = reader.GetInt32(11);
+                int torque = reader.GetInt32(12);
+                string transmission = reader.GetString(13);
+                string gears = reader.GetString(14);
+
+                Car car = new Car(vehicleType, chassisType, manufacturer, model, generation, year, fuelType, mileage,
+                    engineCapacity, horsepower, torque, transmission, gears);
+                car.UUID = UUID;
+
+                list.Add(car);
+            }
+
+            reader.Close();
+
+            return list.Count !=0 ? list : null;
+        }
+
     }
 }

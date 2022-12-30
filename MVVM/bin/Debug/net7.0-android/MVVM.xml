@@ -25,6 +25,27 @@
         <member name="P:MotorEmpireAutohaus.MVVM.Models.User_Account_Model.UserAccount.PhoneNumber">
             <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.Models.User_Account_Model.UserAccount.phoneNumber"/>
         </member>
+        <member name="P:MotorEmpireAutohaus.MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.Manufacturer">
+            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.manufacturer"/>
+        </member>
+        <member name="P:MotorEmpireAutohaus.MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.ModelName">
+            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.modelName"/>
+        </member>
+        <member name="P:MotorEmpireAutohaus.MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.Generation">
+            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.generation"/>
+        </member>
+        <member name="P:MotorEmpireAutohaus.MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.PriceRange">
+            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.priceRange"/>
+        </member>
+        <member name="P:MotorEmpireAutohaus.MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.YearRange">
+            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.yearRange"/>
+        </member>
+        <member name="P:MotorEmpireAutohaus.MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.MileageRange">
+            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.mileageRange"/>
+        </member>
+        <member name="P:MotorEmpireAutohaus.MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.FuelType">
+            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.fuelType"/>
+        </member>
         <member name="M:MotorEmpireAutohaus.MVVM.Services.Authentication.AuthValidation.ArePasswordsMatching(System.String,System.String)">
             <summary>
             Checks if the password matches its password confirmation field
@@ -129,11 +150,14 @@
         <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.Name">
             <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.name"/>
         </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.CarFilter">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.carFilter"/>
+        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.Filter">
+            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.filter"/>
         </member>
         <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.UserAccount">
             <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.userAccount"/>
+        </member>
+        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.SearchQueryText">
+            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.searchQueryText"/>
         </member>
         <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.CarBodyType">
             <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.carBodyType"/>
@@ -336,9 +360,6 @@
         <member name="P:MVVM.Models.Vehicle_Models.Car.Car_Model.Car.Gears">
             <inheritdoc cref="F:MVVM.Models.Vehicle_Models.Car.Car_Model.Car.gears"/>
         </member>
-        <member name="P:MVVM.Models.Vehicle_Models.Car.Car_Model.Car.CarEquipment">
-            <inheritdoc cref="F:MVVM.Models.Vehicle_Models.Car.Car_Model.Car.carEquipment"/>
-        </member>
         <member name="P:MVVM.Models.Vehicle_Models.Vehicle_Model.Vehicle.VehicleType">
             <inheritdoc cref="F:MVVM.Models.Vehicle_Models.Vehicle_Model.Vehicle.vehicleType"/>
         </member>
@@ -356,6 +377,15 @@
         </member>
         <member name="P:MVVM.Models.Vehicle_Models.Vehicle_Model.Vehicle.FuelType">
             <inheritdoc cref="F:MVVM.Models.Vehicle_Models.Vehicle_Model.Vehicle.fuelType"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post_Feed.PostFeedViewModel.SearchQueryText">
+            <inheritdoc cref="F:MVVM.View_Models.Post_Feed.PostFeedViewModel.searchQueryText"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post_Feed.PostFeedViewModel.Message">
+            <inheritdoc cref="F:MVVM.View_Models.Post_Feed.PostFeedViewModel.message"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post_Feed.PostFeedViewModel.Posts">
+            <inheritdoc cref="F:MVVM.View_Models.Post_Feed.PostFeedViewModel.posts"/>
         </member>
         <member name="P:MVVM.View_Models.Post.CarPostViewModel.Post">
             <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.post"/>

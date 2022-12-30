@@ -7,11 +7,13 @@ using MotorEmpireAutohaus.MVVM.Models.Vehicle_Models.Car.Car_Filter_Model;
 using MotorEmpireAutohaus.MVVM.View_Models.Account;
 using MotorEmpireAutohaus.MVVM.Models.User_Account_Model;
 using MVVM.View.Post_Upload;
+using MVVM.View.Post_Feed;
 
 namespace MotorEmpireAutohaus.MVVM.View_Models.Core;
 
 [QueryProperty (nameof(UserAccount),nameof(UserAccount))]
 [QueryProperty (nameof(CarFilter),nameof(CarFilter))]
+[QueryProperty (nameof(SearchQueryText),nameof(SearchQueryText))]
 [QueryProperty (nameof(Name),nameof(Name))]
 public partial class MotorEmpireViewModel : BaseViewModel
 {
@@ -23,13 +25,16 @@ public partial class MotorEmpireViewModel : BaseViewModel
 
 
     [ObservableProperty]
-    [NotifyPropertyChangedFor (nameof(GreetingMessage))]
-    private CarFilter carFilter;
+    //[NotifyPropertyChangedFor (nameof(GreetingMessage))]
+    private CarFilter filter;
 
     [ObservableProperty]
     private UserAccount userAccount;
 
     private readonly CarFilterService carFilterService;
+
+    [ObservableProperty]
+    private string searchQueryText;
 
     private bool filtersWereApplied;
 
@@ -131,9 +136,11 @@ public partial class MotorEmpireViewModel : BaseViewModel
 
     public MotorEmpireViewModel() { }
 
-    public MotorEmpireViewModel(CarFilterService carFilterService, UserAccount userAccount)
+    public MotorEmpireViewModel(CarFilterService carFilterService, UserAccount userAccount, CarFilter carFilter)
     {
+        //filter = new();
         this.carFilterService = carFilterService;
+        filter = carFilter;
         InitializeProps();
         this.userAccount = userAccount;
     }
@@ -281,48 +288,46 @@ public partial class MotorEmpireViewModel : BaseViewModel
         filtersWereApplied = true;
     }
 
-    private CarFilter ApplyFilters()
+    private void ApplyFilters()
     {
         if (filtersWereApplied)
         {
-            CarFilter carFilter = new();
-            carFilter.Manufacturer = SelectedManufacturer;
-            carFilter.ModelName = SelectedModel;
-            carFilter.Generation= SelectedGeneration;
-            carFilter.FuelType = SelectedFuelType; 
-            carFilter.PriceRange=new(lowerBound,upperBound);
+            //Filter = new();
+            Filter.Manufacturer = SelectedManufacturer;
+            Filter.ModelName = SelectedModel;
+            Filter.Generation= SelectedGeneration;
+            Filter.FuelType = SelectedFuelType; 
+            Filter.PriceRange=new(lowerBound,upperBound);
 
-            if (!CarFilterValidator.IsRangeValid(carFilter.PriceRange))
+            if (!CarFilterValidator.IsRangeValid(Filter.PriceRange))
             {
                 CarFilterValidator.InvalidRangeSpecifier(UpperLowerFilter.Price, "1 000€ - 100 000 €");
-                carFilter.PriceRange = new(1000, 100000);
+                Filter.PriceRange = new(1000, 100000);
             }
 
-            carFilter.YearRange=new(selectedLowerYear, selectedUpperYear);
-            if (!CarFilterValidator.IsRangeValid(carFilter.YearRange))
+            Filter.YearRange=new(selectedLowerYear, selectedUpperYear);
+            if (!CarFilterValidator.IsRangeValid(Filter.YearRange))
             {
                 CarFilterValidator.InvalidRangeSpecifier(UpperLowerFilter.Year, "1999 - 2022");
-                carFilter.YearRange = new(1999, 2022);
+                Filter.YearRange = new(1999, 2022);
             }
 
-            carFilter.MileageRange = new(lowerMileage, upperMileage);
-            if (!CarFilterValidator.IsRangeValid(carFilter.MileageRange))
+            Filter.MileageRange = new(lowerMileage, upperMileage);
+            if (!CarFilterValidator.IsRangeValid(Filter.MileageRange))
             {
                 CarFilterValidator.InvalidRangeSpecifier(UpperLowerFilter.Mileage, "500 km - 300 000 km");
-                carFilter.MileageRange = new(500, 300000);
+                Filter.MileageRange = new(500, 300000);
             }
-
-            return carFilter;
-
         }
-        return null;
+        
     }
 
     [RelayCommand]
     public async void NavigateToFeed()
     {
-        carFilter = ApplyFilters();
-        await Shell.Current.GoToAsync(nameof(MotorEmpireAutohaus.Services.Feed), true, new Dictionary<string, object> { ["CarFilter"] = carFilter });
+        ApplyFilters();
+        await Shell.Current.GoToAsync($"{nameof(PostFeed)}?SearchQueryText={SearchQueryText}", true, new Dictionary<string, object> { ["CarFilter"] = filter});
+        SearchQueryText = "";
     }
 
 

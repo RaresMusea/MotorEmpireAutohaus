@@ -8,7 +8,7 @@ public partial class UploadPost : ContentPage
 {
 	private readonly CarPostService carPostService;
 
-	public UploadPost(CarPostViewModel carPost, CarPostService carPostService)
+	public UploadPost(CarPostViewModel carPost)
 	{
 		BindingContext=carPost;
 		InitializeComponent();

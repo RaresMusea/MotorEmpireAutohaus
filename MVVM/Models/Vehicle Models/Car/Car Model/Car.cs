@@ -25,9 +25,6 @@ namespace MVVM.Models.Vehicle_Models.Car.Car_Model
 
         [ObservableProperty]
         private string gears;
-
-        [ObservableProperty]
-        private List<string> carEquipment;
         
         public Car(string vehicleType, string chassisType, string manufacturer, string model, string generation,
             int year, string fuelType, int mileage, string engineCapacity, 

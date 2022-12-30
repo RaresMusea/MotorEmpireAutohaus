@@ -1,4 +1,5 @@
-﻿using MotorEmpireAutohaus.Services.Account_Services;
+﻿using MotorEmpireAutohaus.MVVM.Models.User_Account_Model;
+using MotorEmpireAutohaus.Services.Account_Services;
 using MotorEmpireAutohaus.Services.Feed;
 using MotorEmpireAutohaus.Tools.Utility.Messages;
 using MVVM.Exceptions;
@@ -17,12 +18,14 @@ namespace MVVM.Services.Car_Post_Services
         private static readonly string PostPicturesTableReference = "PostPictures";
         private readonly CarFilterService carFilterService;
         private readonly AccountService accountService;
+        private readonly CarService carService;
 
         public CarPostService(CarFilterService carFilter, AccountService accountService, CarService carService)
         {
             IConnectableDataSource.Connect();
             carFilterService = carFilter;
             this.accountService = accountService;
+            this.carService = carService;
         }
 
         public List<string> RetrieveAllVehicleTypes()
@@ -124,11 +127,64 @@ namespace MVVM.Services.Car_Post_Services
                 IConnectableDataSource.databaseConfigurer.DatabaseConnection);
 
             command.Prepare();
-            command.Parameters.AddWithValue("@post", postUuid);
+            command.Parameters.AddWithValue("@post", carService.retrieveCarIdentifierByUuid(postUuid));
             command.Parameters.AddWithValue("@imageurl", pictureRef.Picture);
 
             command.ExecuteNonQuery();
         }
 
+        private List<PostPicture> RetrieveCarPostPictures(string carPostUUID)
+        {
+            List<PostPicture> postPictures = new();
+            MySqlCommand command = new MySqlCommand($"SELECT ImageURL FROM {PostPicturesTableReference} WHERE Post = @uuid ",
+                IConnectableDataSource.databaseConfigurer.DatabaseConnection);
+
+            command.Prepare();
+            command.Parameters.AddWithValue("@uuid", carPostUUID);
+
+            MySqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string url = reader.GetString(1);
+                postPictures.Add(new PostPicture(url));
+            }
+
+            reader.Close();
+            return postPictures.Count != 0 ? postPictures : null;
+
+        }
+
+        public List<CarPost> RetrieveAllPosts()
+        {
+            List<CarPost> posts = new();
+
+            MySqlCommand command = new($"SELECT * FROM {TableReference}",
+                IConnectableDataSource.databaseConfigurer.DatabaseConnection);
+            command.Prepare();
+
+            MySqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string UUID = reader.GetString(1);
+                UserAccount owner = accountService.GetUserById(reader.GetInt32(2));
+                string description = reader.GetString(4);
+                string carEquipment = reader.GetString(5);
+                int price = reader.GetInt32(6);
+                string dateTimeAdded = reader.GetString(7);
+
+                CarPost carPost = new(owner, description, carEquipment, price,
+                    RetrieveCarPostPictures(UUID), dateTimeAdded);
+                carPost.UUID = UUID;
+
+                posts.Add(carPost);
+            }
+
+            reader.Close();
+            
+            return posts.Count != 0 ? posts : null;
+
+        }
     }
 }

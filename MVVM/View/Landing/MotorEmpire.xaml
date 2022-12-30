@@ -55,6 +55,7 @@
                         <HorizontalStackLayout>
                             <Entry Placeholder="Search query"
                    TextColor="{AppThemeBinding Dark=Black, Light=Black}"
+                   Text="{Binding SearchQueryText}"
                    FontAttributes="Bold"
                    FontFamily="Roboto"
                    FontSize="15"
@@ -132,6 +133,7 @@
                 <Frame Margin="10" CornerRadius="15" HeightRequest="40" Padding="0" x:Name="searchContainer" >
                     <Entry BackgroundColor="{AppThemeBinding Dark=#414141, Light=#EEF2E6}"
                        TextColor="{AppThemeBinding Dark=White, Light=Black}"
+                       Text="{Binding SearchQueryText}"
                        x:Name="searchBarEntry" 
                        Placeholder="Search query"
                        PlaceholderColor="DarkGrey"

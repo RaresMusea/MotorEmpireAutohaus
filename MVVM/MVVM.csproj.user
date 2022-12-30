@@ -29,6 +29,9 @@
     <MauiXaml Update="View\Core\Feed.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="View\Post Feed\PostFeed.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="View\Post Upload\UploadPost.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

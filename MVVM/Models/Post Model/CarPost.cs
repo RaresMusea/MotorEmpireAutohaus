@@ -29,6 +29,20 @@ namespace MVVM.Models.Post_Model
         [ObservableProperty]
         string dateTimeAdded;
 
+        public CarPost(UserAccount owner, string description, string carEquipment, int?price, 
+            List<PostPicture> postPictures, string dateTimeAdded)
+        {
+            this.owner = owner;
+            this.description = description;
+            this.carEquipment = carEquipment;
+            this.price = price;
+            this.postPictures = postPictures;
+            this.dateTimeAdded = dateTimeAdded;
+        }
+
+        public CarPost() { }
+
+
         public new void GenerateUUID()
         {
             UUID = car.UUID;
