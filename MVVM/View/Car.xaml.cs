@@ -1,4 +1,4 @@
-namespace MotorEmpireAutohaus.View;
+namespace MVVM.View;
 
 public partial class Car : ContentPage
 {

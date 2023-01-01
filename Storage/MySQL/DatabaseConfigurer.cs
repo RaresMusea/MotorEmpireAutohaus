@@ -1,12 +1,12 @@
 ﻿using System.Diagnostics;
-using MotorEmpireAutohaus.Tools.Prebuilt_Components;
 using MySqlConnector;
+using Tools.Prebuilt_Components;
 
-namespace MotorEmpireAutohaus.Storage.MySQL
+namespace Storage.MySQL
 {
     public class DatabaseConfigurer : IDataSource
     {
-        private readonly string _connectionString;
+        private readonly string connectionString;
 
         private bool ConnectionOpen { get; set; }
 
@@ -15,7 +15,7 @@ namespace MotorEmpireAutohaus.Storage.MySQL
         public DatabaseConfigurer()
         {
             ConnectionOpen = false;
-            _connectionString =
+            connectionString =
                 @"server=192.168.100.34;userid=root;password=password;database=motor_empire_autohaus_database;SSL Mode=None;";
             EstablishConnection();
         }
@@ -24,11 +24,11 @@ namespace MotorEmpireAutohaus.Storage.MySQL
         {
             try
             {
-                DatabaseConnection = new MySqlConnection(_connectionString);
+                DatabaseConnection = new MySqlConnection(connectionString);
             }
             catch (MySqlException ex)
             {
-                bool choice = await Application.Current.MainPage.DisplayAlert("Motor Empire Authohaus",
+                bool choice = await Application.Current!.MainPage!.DisplayAlert("Motor Empire Authohaus",
                     "An error occured. Please try again later", "Error Details", "Ok");
                 if (choice)
                 {
@@ -67,7 +67,7 @@ namespace MotorEmpireAutohaus.Storage.MySQL
                         await DisplayErrorMessage("Motor Empire Autohaus-Internal Server Error",
                             $"The application did not started correctly. In order to use the application properly, you need a connection with our server. Check your internet connection and restart the app, or try again.\n\n\nDetails:\n{mySqlEx.Message}",
                             "Close app");
-                        Application.Current.Quit();
+                        Application.Current!.Quit();
                     }
 
 
@@ -100,7 +100,7 @@ namespace MotorEmpireAutohaus.Storage.MySQL
 
         private static async Task DisplayErrorMessage(string appTitle, string errorMsg, string optButton1)
         {
-            await Application.Current.MainPage.DisplayAlert(appTitle, errorMsg, optButton1);
+            await Application.Current!.MainPage!.DisplayAlert(appTitle, errorMsg, optButton1);
         }
     }
 }

@@ -2,22 +2,23 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MotorEmpireAutohaus.View.Account"
-             xmlns:viewmodel="clr-namespace:MotorEmpireAutohaus.MVVM.View_Models.Account;assembly=MVVM"
-             x:DataType="viewmodel:UserAccountViewModel"
+             x:Class="MVVM.View.Account_Management.Account"
+             xmlns:account="using:MVVM.View_Models.Account"
+             x:DataType="account:UserAccountViewModel"
              Title="My Account">
     <ScrollView>
         <VerticalStackLayout>
-            <Frame 
-                   BackgroundColor="{AppThemeBinding Dark=#414141, Light=#dbdbdb}"
-                   CornerRadius="25"
-                   Margin="0,40,0,0"
-                   x:Name="mainFrame"
-                   Opacity="0"
-                   >
-                <VerticalStackLayout x:Name="mainStack" Opacity="0">
-                    <Label Text="{Binding User.Name}" HorizontalOptions="Center" Margin="15" FontSize="Title" FontFamily="Kollektif" FontAttributes="Bold"/>
-                    <Label Text="{Binding User.Username}" HorizontalOptions="Center" Margin="10" FontSize="Subtitle" FontFamily="Kollektif" FontAttributes="Italic"/>
+            <Frame
+                BackgroundColor="{AppThemeBinding Dark=#414141, Light=#dbdbdb}"
+                CornerRadius="25"
+                Margin="0,40,0,0"
+                x:Name="MainFrame"
+                Opacity="0">
+                <VerticalStackLayout x:Name="MainStack" Opacity="0">
+                    <Label Text="{Binding User.Name}" HorizontalOptions="Center" Margin="15" FontSize="Title"
+                           FontFamily="Kollektif" FontAttributes="Bold" />
+                    <Label Text="{Binding User.Username}" HorizontalOptions="Center" Margin="10" FontSize="Subtitle"
+                           FontFamily="Kollektif" FontAttributes="Italic" />
                     <Border Stroke="{AppThemeBinding Light=Grey, Dark=#dbdbdb}"
                             StrokeThickness="2"
                             BackgroundColor="{AppThemeBinding Light=Grey, Dark=#dbdbdb}"
@@ -25,12 +26,12 @@
                             WidthRequest="90"
                             HeightRequest="90">
                         <Image Source="{Binding User.ProfileImageUrl}"
-                           Aspect="AspectFill"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center"
-                           Margin="0"
-                           WidthRequest="90"
-                           HeightRequest="90"/>
+                               Aspect="AspectFill"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               Margin="0"
+                               WidthRequest="90"
+                               HeightRequest="90" />
                     </Border>
                     <Button Text="Manage profile picture"
                             Command="{Binding ToggleOptionsCommand}"
@@ -43,23 +44,26 @@
                             BorderColor="Transparent">
                         <FlyoutBase.ContextFlyout>
                             <MenuFlyout>
-                                <MenuFlyoutItem Text="Take a picture and set it as your profile picture" Command="{Binding TakePhotoAndUploadCommand}"/>
-                                <MenuFlyoutItem Text="Upload a picture from your device" Command="{Binding PickPhotoAndUploadCommand}"/>
+                                <MenuFlyoutItem Text="Take a picture and set it as your profile picture"
+                                                Command="{Binding TakePhotoAndUploadCommand}" />
+                                <MenuFlyoutItem Text="Upload a picture from your device"
+                                                Command="{Binding PickPhotoAndUploadCommand}" />
                             </MenuFlyout>
                         </FlyoutBase.ContextFlyout>
                     </Button>
                     <Button Text="Mangae your account details"
                             BackgroundColor="{AppThemeBinding Dark=#334756, Light=#ECB365}"
                             WidthRequest="250"
-                            x:Name="toggleAccountDetailsButton"
+                            x:Name="ToggleAccountDetailsButton"
                             TextColor="White"
                             Clicked="ToggleAccountDetails"
                             FontAttributes="Bold"
                             FontFamily="Kollektif"
                             Margin="0,10,0,0"
-                            BorderColor="Transparent"></Button>
+                            BorderColor="Transparent">
+                    </Button>
                     <Frame CornerRadius="15"
-                           x:Name="showAccountDetailsFrame"
+                           x:Name="ShowAccountDetailsFrame"
                            IsVisible="False"
                            Margin="0,20,0,0"
                            BackgroundColor="{AppThemeBinding Dark=#414141, Light=#dbdbdb}"
@@ -69,106 +73,109 @@
                                    HorizontalOptions="Center"
                                    FontSize="Title"
                                    FontAttributes="Bold"
-                                   FontFamily="Roboto"></Label>
-                            <HorizontalStackLayout HorizontalOptions="Center" Margin="0,20,0,0" x:Name="editStack1">
+                                   FontFamily="Roboto">
+                            </Label>
+                            <HorizontalStackLayout HorizontalOptions="Center" Margin="0,20,0,0" x:Name="EditStack1">
                                 <Label Text="Name"
                                        HorizontalOptions="Center"
                                        VerticalOptions="Center"
                                        FontAttributes="Bold"
                                        FontFamily="Roboto"
                                        Margin="0,0,15,0"
-                                       FontSize="16"></Label>
+                                       FontSize="16">
+                                </Label>
                                 <Entry Text="{Binding User.Name}"
                                        IsEnabled="{Binding IsEditable}"
                                        BackgroundColor="{AppThemeBinding Dark=#414141, Light=#dbdbdb}"
                                        TextColor="{AppThemeBinding Dark=White, Light=Black}"
                                        HorizontalTextAlignment="Center"
-                                       x:Name="editableNameEntry"
+                                       x:Name="EditableNameEntry"
                                        FontFamily="Roboto"
-                                       FontAttributes="Bold"
-                                       />
+                                       FontAttributes="Bold" />
                             </HorizontalStackLayout>
-                            <HorizontalStackLayout HorizontalOptions="Center" Margin="0,20,0,0" x:Name="editStack2">
+                            <HorizontalStackLayout HorizontalOptions="Center" Margin="0,20,0,0" x:Name="EditStack2">
                                 <Label Text="Username"
                                        HorizontalOptions="Center"
                                        VerticalOptions="Center"
                                        FontAttributes="Bold"
                                        FontFamily="Roboto"
                                        Margin="0,0,15,0"
-                                       FontSize="16"></Label>
+                                       FontSize="16">
+                                </Label>
                                 <Entry Text="{Binding User.Username}"
                                        IsEnabled="{Binding IsEditable}"
-                                       x:Name="editableUsernameEntry"
+                                       x:Name="EditableUsernameEntry"
                                        BackgroundColor="{AppThemeBinding Dark=#414141, Light=#dbdbdb}"
                                        TextColor="{AppThemeBinding Dark=White, Light=Black}"
                                        HorizontalTextAlignment="Center"
                                        FontFamily="Roboto"
-                                       FontAttributes="Bold"
-                                       />
+                                       FontAttributes="Bold" />
                             </HorizontalStackLayout>
-                            <HorizontalStackLayout HorizontalOptions="Center" Margin="0,20,0,0" x:Name="editStack3">
+                            <HorizontalStackLayout HorizontalOptions="Center" Margin="0,20,0,0" x:Name="EditStack3">
                                 <Label Text="Email Address"
                                        HorizontalOptions="Center"
                                        VerticalOptions="Center"
                                        FontAttributes="Bold"
                                        FontFamily="Roboto"
                                        Margin="0,0,15,0"
-                                       FontSize="16"></Label>
+                                       FontSize="16">
+                                </Label>
                                 <Entry Text="{Binding User.EmailAddress}"
                                        IsEnabled="{Binding IsEditable}"
-                                       x:Name="editableEmailEntry"
+                                       x:Name="EditableEmailEntry"
                                        BackgroundColor="{AppThemeBinding Dark=#414141, Light=#dbdbdb}"
                                        TextColor="{AppThemeBinding Dark=White, Light=Black}"
                                        HorizontalTextAlignment="Center"
                                        FontFamily="Roboto"
-                                       FontAttributes="Bold"
-                                       />
+                                       FontAttributes="Bold" />
                             </HorizontalStackLayout>
 
-                            <HorizontalStackLayout HorizontalOptions="Center" Margin="0,20,0,0" x:Name="phoneNumberFrame" IsVisible="{Binding RemovePhoneNumberVisible}">
+                            <HorizontalStackLayout HorizontalOptions="Center" Margin="0,20,0,0"
+                                                   x:Name="PhoneNumberFrame"
+                                                   IsVisible="{Binding RemovePhoneNumberVisible}">
                                 <Label Text="Phone Number"
                                        HorizontalOptions="Center"
                                        VerticalOptions="Center"
                                        FontAttributes="Bold"
                                        FontFamily="Roboto"
                                        Margin="0,0,15,0"
-                                       FontSize="16"></Label>
+                                       FontSize="16">
+                                </Label>
                                 <Entry Text="{Binding User.PhoneNumber}"
                                        IsEnabled="{Binding IsEditable}"
-                                       x:Name="editablePhoneNumberEntry"
+                                       x:Name="EditablePhoneNumberEntry"
                                        BackgroundColor="{AppThemeBinding Dark=#414141, Light=#dbdbdb}"
                                        TextColor="{AppThemeBinding Dark=White, Light=Black}"
                                        HorizontalTextAlignment="Center"
                                        FontFamily="Roboto"
-                                       FontAttributes="Bold"
-                                       />
+                                       FontAttributes="Bold" />
                             </HorizontalStackLayout>
 
                             <Button Text="{Binding EditButtonText}"
                                     BackgroundColor="{AppThemeBinding Dark=#30475E,Light=#6B778D}"
                                     TextColor="White"
-                                        WidthRequest="300"
-                                        FontAttributes="Bold"
-                                        FontFamily="Roboto"
-                                        x:Name="editAccountButton"
-                                        Margin="20"
-                                        BorderColor="Transparent"
-                                        HorizontalOptions="Center"
-                                        Clicked="EditAccountButtonClicked"
-                                        Command="{Binding EditButtonTextClickedCommand}"/>
+                                    WidthRequest="300"
+                                    FontAttributes="Bold"
+                                    FontFamily="Roboto"
+                                    x:Name="EditAccountButton"
+                                    Margin="20"
+                                    BorderColor="Transparent"
+                                    HorizontalOptions="Center"
+                                    Clicked="EditAccountButtonClicked"
+                                    Command="{Binding EditButtonTextClickedCommand}" />
                             <Button Text="Revert changes"
                                     BackgroundColor="{AppThemeBinding Dark=#022C43, Light=#D49B54}"
                                     TextColor="White"
                                     IsVisible="False"
                                     Opacity="0"
-                                    x:Name="revertEditChanges"
+                                    x:Name="RevertEditChanges"
                                     WidthRequest="270"
                                     FontAttributes="Bold"
                                     FontFamily="Roboto"
                                     Margin="0"
                                     BorderColor="Transparent"
                                     HorizontalOptions="Center"
-                                    Command="{Binding RevertEditChangesCommand}"/>
+                                    Command="{Binding RevertEditChangesCommand}" />
                             <Button Text="Change Password"
                                     BackgroundColor="{AppThemeBinding Dark=#FF4301,Light=#3E3636}"
                                     TextColor="White"
@@ -176,17 +183,16 @@
                                     FontAttributes="Bold"
                                     FontFamily="Roboto"
                                     HorizontalOptions="Center"
-                                    Command="{Binding ChangePasswordCommand}"/>
+                                    Command="{Binding ChangePasswordCommand}" />
                             <Button Text="Remove Phone Number"
                                     IsVisible="{Binding RemovePhoneNumberVisible}"
-                                    x:Name="removePhoneNumberButton"
                                     HorizontalOptions="Center"
                                     BackgroundColor="{AppThemeBinding Dark=#C69749, Light=#ECB365}"
                                     TextColor="White"
                                     Margin="0,10,0,0"
                                     FontFamily="Roboto"
                                     FontAttributes="Bold"
-                                    Command="{Binding RemovePhoneNumberCommand}"/>
+                                    Command="{Binding RemovePhoneNumberCommand}" />
                             <Button Text="Add a phone number"
                                     IsVisible="{Binding AddPhoneNumberVisible}"
                                     BackgroundColor="{AppThemeBinding Dark=#D72323,Light=#055E68}"
@@ -195,7 +201,7 @@
                                     Margin="0,10,0,0"
                                     TextColor="White"
                                     HorizontalOptions="Center"
-                                    Command="{Binding AddPhoneNumberCommand}"/>
+                                    Command="{Binding AddPhoneNumberCommand}" />
                             <Button Text="Delete my account"
                                     Margin="0,10,0,0"
                                     HorizontalOptions="Center"
@@ -204,12 +210,12 @@
                                     TextColor="White"
                                     BackgroundColor="{AppThemeBinding Dark=#88304E, Light=#2A2438}"
                                     Command="{Binding DeleteAccountCommand}">
-                                
+
                             </Button>
                         </VerticalStackLayout>
                     </Frame>
                 </VerticalStackLayout>
             </Frame>
-    </VerticalStackLayout>
+        </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

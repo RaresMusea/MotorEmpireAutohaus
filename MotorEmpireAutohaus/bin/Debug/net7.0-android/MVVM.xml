@@ -4,292 +4,38 @@
         <name>MVVM</name>
     </assembly>
     <members>
-        <member name="P:MotorEmpireAutohaus.MVVM.Models.User_Account_Model.Account.Name">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.Models.User_Account_Model.Account.name"/>
+        <member name="P:MVVM.Models.Post_Model.CarDetails.ManufacturerBinding">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarDetails.manufacturerBinding"/>
         </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.Models.User_Account_Model.Account.Password">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.Models.User_Account_Model.Account.password"/>
+        <member name="P:MVVM.Models.Post_Model.CarDetails.ModelBinding">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarDetails.modelBinding"/>
         </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.Models.User_Account_Model.UserAccount.EmailAddress">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.Models.User_Account_Model.UserAccount.emailAddress"/>
+        <member name="P:MVVM.Models.Post_Model.CarDetails.GenerationBinding">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarDetails.generationBinding"/>
         </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.Models.User_Account_Model.UserAccount.Username">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.Models.User_Account_Model.UserAccount.username"/>
+        <member name="P:MVVM.Models.Post_Model.CarDetails.HasGeneration">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarDetails.hasGeneration"/>
         </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.Models.User_Account_Model.UserAccount.ProfileImageUrl">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.Models.User_Account_Model.UserAccount.profileImageUrl"/>
+        <member name="P:MVVM.Models.Post_Model.CarDetails.YearBinding">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarDetails.yearBinding"/>
         </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.Models.User_Account_Model.UserAccount.PasswordConfirmation">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.Models.User_Account_Model.UserAccount.passwordConfirmation"/>
+        <member name="P:MVVM.Models.Post_Model.CarDetails.FuelTypeBinding">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarDetails.fuelTypeBinding"/>
         </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.Models.User_Account_Model.UserAccount.PhoneNumber">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.Models.User_Account_Model.UserAccount.phoneNumber"/>
+        <member name="P:MVVM.Models.Post_Model.CarDetails.EngineCapacityBinding">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarDetails.engineCapacityBinding"/>
         </member>
-        <member name="M:MotorEmpireAutohaus.MVVM.Services.Authentication.AuthValidation.ArePasswordsMatching(System.String,System.String)">
-            <summary>
-            Checks if the password matches its password confirmation field
-            </summary>
-            <param name="password">password-The initial password</param>
-            <param name="matchingPassword">matchingPassword-The password confirmation</param>
-            <returns>True, if the password matches its confirmation, False otherwise</returns>
+        <member name="P:MVVM.Models.Post_Model.CarDetails.HorsepowerBinding">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarDetails.horsepowerBinding"/>
         </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.User">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.user"/>
+        <member name="P:MVVM.Models.Post_Model.CarDetails.MileageBinding">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarDetails.mileageBinding"/>
         </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.IsEditable">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.isEditable"/>
+        <member name="P:MVVM.Models.Post_Model.CarDetails.PriceBinding">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarDetails.priceBinding"/>
         </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.EditButtonText">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.editButtonText"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.AddedPhoneNumber">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.addedPhoneNumber"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.AddPhoneNumberVisible">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.addPhoneNumberVisible"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.RemovePhoneNumberVisible">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.removePhoneNumberVisible"/>
-        </member>
-        <member name="M:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.OnUserChanged(MotorEmpireAutohaus.MVVM.Models.User_Account_Model.UserAccount)">
-            <summary>Executes the logic for when <see cref="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.User"/> just changed.</summary>
-        </member>
-        <member name="M:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.OnAddPhoneNumberVisibleChanged(System.Boolean)">
-            <summary>Executes the logic for when <see cref="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.AddPhoneNumberVisible"/> just changed.</summary>
-        </member>
-        <member name="F:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.loginCommand">
-            <summary>The backing field for <see cref="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.LoginCommand"/>.</summary>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.LoginCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.Login"/>.</summary>
-        </member>
-        <member name="F:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.registerCommand">
-            <summary>The backing field for <see cref="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.RegisterCommand"/>.</summary>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.RegisterCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.Register"/>.</summary>
-        </member>
-        <member name="F:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.toggleOptionsCommand">
-            <summary>The backing field for <see cref="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.ToggleOptionsCommand"/>.</summary>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.ToggleOptionsCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.ToggleOptions"/>.</summary>
-        </member>
-        <member name="F:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.takePhotoAndUploadCommand">
-            <summary>The backing field for <see cref="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.TakePhotoAndUploadCommand"/>.</summary>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.TakePhotoAndUploadCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.TakePhotoAndUpload"/>.</summary>
-        </member>
-        <member name="F:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.pickPhotoAndUploadCommand">
-            <summary>The backing field for <see cref="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.PickPhotoAndUploadCommand"/>.</summary>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.PickPhotoAndUploadCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.PickPhotoAndUpload"/>.</summary>
-        </member>
-        <member name="F:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.editButtonTextClickedCommand">
-            <summary>The backing field for <see cref="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.EditButtonTextClickedCommand"/>.</summary>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.EditButtonTextClickedCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.EditButtonTextClicked"/>.</summary>
-        </member>
-        <member name="F:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.revertEditChangesCommand">
-            <summary>The backing field for <see cref="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.RevertEditChangesCommand"/>.</summary>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.RevertEditChangesCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.RevertEditChanges"/>.</summary>
-        </member>
-        <member name="F:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.changePasswordCommand">
-            <summary>The backing field for <see cref="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.ChangePasswordCommand"/>.</summary>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.ChangePasswordCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.ChangePassword"/>.</summary>
-        </member>
-        <member name="F:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.addPhoneNumberCommand">
-            <summary>The backing field for <see cref="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.AddPhoneNumberCommand"/>.</summary>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.AddPhoneNumberCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.AddPhoneNumber"/>.</summary>
-        </member>
-        <member name="F:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.removePhoneNumberCommand">
-            <summary>The backing field for <see cref="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.RemovePhoneNumberCommand"/>.</summary>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.RemovePhoneNumberCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.RemovePhoneNumber"/>.</summary>
-        </member>
-        <member name="F:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.deleteAccountCommand">
-            <summary>The backing field for <see cref="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.DeleteAccountCommand"/>.</summary>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.DeleteAccountCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.MVVM.View_Models.Account.UserAccountViewModel.DeleteAccount"/>.</summary>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Base.BaseViewModel.IsBusy">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Base.BaseViewModel.isBusy"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.Name">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.name"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.CarFilter">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.carFilter"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.UserAccount">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.userAccount"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.CarBodyType">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.carBodyType"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.Manufacturers">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.manufacturers"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.Models">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.models"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.SelectedCarBodyType">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.selectedCarBodyType"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.SelectedManufacturer">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.selectedManufacturer"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.SelectedManufacturerIndex">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.selectedManufacturerIndex"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.ModelHasGenerations">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.modelHasGenerations"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.SelectedModel">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.selectedModel"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.SelectedModelIndex">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.selectedModelIndex"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.Generations">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.generations"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.SelectedGeneration">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.selectedGeneration"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.LowerPriceBound">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.lowerPriceBound"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.UpperPriceBound">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.upperPriceBound"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.SelectedLowerPriceBound">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.selectedLowerPriceBound"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.SelectedLowerPriceIndex">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.selectedLowerPriceIndex"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.SelectedUpperPriceBound">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.selectedUpperPriceBound"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.SelectedUpperPriceIndex">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.selectedUpperPriceIndex"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.LowerYear">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.lowerYear"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.SelectedLowerYear">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.selectedLowerYear"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.UpperYear">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.upperYear"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.SelectedUpperYear">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.selectedUpperYear"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.FuelTypes">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.fuelTypes"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.SelectedFuelType">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.selectedFuelType"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.MinMileageBounds">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.minMileageBounds"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.SelectedMinMileage">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.selectedMinMileage"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.MaxMileageBounds">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.maxMileageBounds"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.SelectedMaxMileage">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.selectedMaxMileage"/>
-        </member>
-        <member name="M:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.OnSelectedManufacturerChanged(System.String)">
-            <summary>Executes the logic for when <see cref="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.SelectedManufacturer"/> just changed.</summary>
-        </member>
-        <member name="M:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.OnSelectedManufacturerIndexChanged(System.Int32)">
-            <summary>Executes the logic for when <see cref="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.SelectedManufacturerIndex"/> just changed.</summary>
-        </member>
-        <member name="M:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.OnSelectedModelChanged(System.String)">
-            <summary>Executes the logic for when <see cref="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.SelectedModel"/> just changed.</summary>
-        </member>
-        <member name="M:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.OnSelectedModelIndexChanged(System.Int32)">
-            <summary>Executes the logic for when <see cref="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.SelectedModelIndex"/> just changed.</summary>
-        </member>
-        <member name="M:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.OnSelectedLowerPriceIndexChanged(System.Int32)">
-            <summary>Executes the logic for when <see cref="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.SelectedLowerPriceIndex"/> just changed.</summary>
-        </member>
-        <member name="M:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.OnSelectedUpperPriceIndexChanged(System.Int32)">
-            <summary>Executes the logic for when <see cref="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.SelectedUpperPriceIndex"/> just changed.</summary>
-        </member>
-        <member name="M:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.OnSelectedLowerYearChanged(System.Int32)">
-            <summary>Executes the logic for when <see cref="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.SelectedLowerYear"/> just changed.</summary>
-        </member>
-        <member name="M:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.OnSelectedUpperYearChanged(System.Int32)">
-            <summary>Executes the logic for when <see cref="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.SelectedUpperYear"/> just changed.</summary>
-        </member>
-        <member name="M:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.OnSelectedMinMileageChanged(System.String)">
-            <summary>Executes the logic for when <see cref="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.SelectedMinMileage"/> just changed.</summary>
-        </member>
-        <member name="M:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.OnSelectedMaxMileageChanged(System.String)">
-            <summary>Executes the logic for when <see cref="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.SelectedMaxMileage"/> just changed.</summary>
-        </member>
-        <member name="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.navigateToFeedCommand">
-            <summary>The backing field for <see cref="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.NavigateToFeedCommand"/>.</summary>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.NavigateToFeedCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.NavigateToFeed"/>.</summary>
-        </member>
-        <member name="F:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.navigateToPostUploadCommand">
-            <summary>The backing field for <see cref="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.NavigateToPostUploadCommand"/>.</summary>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.NavigateToPostUploadCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.MVVM.View_Models.Core.MotorEmpireViewModel.NavigateToPostUpload"/>.</summary>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Model.App_Settings.AppSettingsViewModel.IsDarkThemeEnabled">
-            <inheritdoc cref="F:MotorEmpireAutohaus.MVVM.View_Model.App_Settings.AppSettingsViewModel.isDarkThemeEnabled"/>
-        </member>
-        <member name="F:MotorEmpireAutohaus.MVVM.View_Model.App_Settings.AppSettingsViewModel.goToAboutPageCommand">
-            <summary>The backing field for <see cref="P:MotorEmpireAutohaus.MVVM.View_Model.App_Settings.AppSettingsViewModel.GoToAboutPageCommand"/>.</summary>
-        </member>
-        <member name="P:MotorEmpireAutohaus.MVVM.View_Model.App_Settings.AppSettingsViewModel.GoToAboutPageCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.MVVM.View_Model.App_Settings.AppSettingsViewModel.GoToAboutPage"/>.</summary>
-        </member>
-        <member name="P:MotorEmpireAutohaus.View_Model.FeedViewModel.FileName">
-            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.FeedViewModel._fileName"/>
-        </member>
-        <member name="P:MotorEmpireAutohaus.View_Model.FeedViewModel.ImageUrl">
-            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.FeedViewModel.imageUrl"/>
-        </member>
-        <member name="F:MotorEmpireAutohaus.View_Model.FeedViewModel.updateFileToFirebaseCommand">
-            <summary>The backing field for <see cref="P:MotorEmpireAutohaus.View_Model.FeedViewModel.UpdateFileToFirebaseCommand"/>.</summary>
-        </member>
-        <member name="P:MotorEmpireAutohaus.View_Model.FeedViewModel.UpdateFileToFirebaseCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.View_Model.FeedViewModel.UpdateFileToFirebase"/>.</summary>
-        </member>
-        <member name="P:MotorEmpireAutohaus.View_Model.Shell_Navigation.ShellViewModel.UserAccount">
-            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.Shell_Navigation.ShellViewModel.userAccount"/>
-        </member>
-        <member name="F:MotorEmpireAutohaus.View_Model.Shell_Navigation.ShellViewModel.goToAccountSettingsCommand">
-            <summary>The backing field for <see cref="P:MotorEmpireAutohaus.View_Model.Shell_Navigation.ShellViewModel.GoToAccountSettingsCommand"/>.</summary>
-        </member>
-        <member name="P:MotorEmpireAutohaus.View_Model.Shell_Navigation.ShellViewModel.GoToAccountSettingsCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MotorEmpireAutohaus.View_Model.Shell_Navigation.ShellViewModel.GoToAccountSettings"/>.</summary>
-        </member>
-        <member name="P:MotorEmpireAutohaus.View_Model.Vehicles.SearchResultsViewModel.CarFilter">
-            <inheritdoc cref="F:MotorEmpireAutohaus.View_Model.Vehicles.SearchResultsViewModel.carFilter"/>
+        <member name="P:MVVM.Models.Post_Model.CarDetails.HasTorque">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarDetails.hasTorque"/>
         </member>
         <member name="P:MVVM.Models.Post_Model.CarPost.Owner">
             <inheritdoc cref="F:MVVM.Models.Post_Model.CarPost.owner"/>
@@ -300,8 +46,14 @@
         <member name="P:MVVM.Models.Post_Model.CarPost.Description">
             <inheritdoc cref="F:MVVM.Models.Post_Model.CarPost.description"/>
         </member>
+        <member name="P:MVVM.Models.Post_Model.CarPost.HeadingTitle">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarPost.headingTitle"/>
+        </member>
         <member name="P:MVVM.Models.Post_Model.CarPost.CarEquipment">
             <inheritdoc cref="F:MVVM.Models.Post_Model.CarPost.carEquipment"/>
+        </member>
+        <member name="P:MVVM.Models.Post_Model.CarPost.CarSpecsOverview">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarPost.carSpecsOverview"/>
         </member>
         <member name="P:MVVM.Models.Post_Model.CarPost.Price">
             <inheritdoc cref="F:MVVM.Models.Post_Model.CarPost.price"/>
@@ -309,11 +61,62 @@
         <member name="P:MVVM.Models.Post_Model.CarPost.PostPictures">
             <inheritdoc cref="F:MVVM.Models.Post_Model.CarPost.postPictures"/>
         </member>
+        <member name="P:MVVM.Models.Post_Model.CarPost.MainPostPicture">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarPost.mainPostPicture"/>
+        </member>
         <member name="P:MVVM.Models.Post_Model.CarPost.DateTimeAdded">
             <inheritdoc cref="F:MVVM.Models.Post_Model.CarPost.dateTimeAdded"/>
         </member>
+        <member name="P:MVVM.Models.Post_Model.CarPost.CarDetails">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarPost.carDetails"/>
+        </member>
+        <member name="M:MVVM.Models.Post_Model.CarPost.OnCarChanged(MVVM.Models.Vehicle_Models.Car.Car_Model.Car)">
+            <summary>Executes the logic for when <see cref="P:MVVM.Models.Post_Model.CarPost.Car"/> just changed.</summary>
+        </member>
         <member name="P:MVVM.Models.PostPicture.Picture">
             <inheritdoc cref="F:MVVM.Models.PostPicture.picture"/>
+        </member>
+        <member name="P:MVVM.Models.User_Account_Model.Account.Name">
+            <inheritdoc cref="F:MVVM.Models.User_Account_Model.Account.name"/>
+        </member>
+        <member name="P:MVVM.Models.User_Account_Model.Account.Password">
+            <inheritdoc cref="F:MVVM.Models.User_Account_Model.Account.password"/>
+        </member>
+        <member name="P:MVVM.Models.User_Account_Model.UserAccount.EmailAddress">
+            <inheritdoc cref="F:MVVM.Models.User_Account_Model.UserAccount.emailAddress"/>
+        </member>
+        <member name="P:MVVM.Models.User_Account_Model.UserAccount.Username">
+            <inheritdoc cref="F:MVVM.Models.User_Account_Model.UserAccount.username"/>
+        </member>
+        <member name="P:MVVM.Models.User_Account_Model.UserAccount.ProfileImageUrl">
+            <inheritdoc cref="F:MVVM.Models.User_Account_Model.UserAccount.profileImageUrl"/>
+        </member>
+        <member name="P:MVVM.Models.User_Account_Model.UserAccount.PasswordConfirmation">
+            <inheritdoc cref="F:MVVM.Models.User_Account_Model.UserAccount.passwordConfirmation"/>
+        </member>
+        <member name="P:MVVM.Models.User_Account_Model.UserAccount.PhoneNumber">
+            <inheritdoc cref="F:MVVM.Models.User_Account_Model.UserAccount.phoneNumber"/>
+        </member>
+        <member name="P:MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.Manufacturer">
+            <inheritdoc cref="F:MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.manufacturer"/>
+        </member>
+        <member name="P:MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.ModelName">
+            <inheritdoc cref="F:MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.modelName"/>
+        </member>
+        <member name="P:MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.Generation">
+            <inheritdoc cref="F:MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.generation"/>
+        </member>
+        <member name="P:MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.PriceRange">
+            <inheritdoc cref="F:MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.priceRange"/>
+        </member>
+        <member name="P:MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.YearRange">
+            <inheritdoc cref="F:MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.yearRange"/>
+        </member>
+        <member name="P:MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.MileageRange">
+            <inheritdoc cref="F:MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.mileageRange"/>
+        </member>
+        <member name="P:MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.FuelType">
+            <inheritdoc cref="F:MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.fuelType"/>
         </member>
         <member name="P:MVVM.Models.Vehicle_Models.Car.Car_Model.Car.ChassisType">
             <inheritdoc cref="F:MVVM.Models.Vehicle_Models.Car.Car_Model.Car.chassisType"/>
@@ -336,9 +139,6 @@
         <member name="P:MVVM.Models.Vehicle_Models.Car.Car_Model.Car.Gears">
             <inheritdoc cref="F:MVVM.Models.Vehicle_Models.Car.Car_Model.Car.gears"/>
         </member>
-        <member name="P:MVVM.Models.Vehicle_Models.Car.Car_Model.Car.CarEquipment">
-            <inheritdoc cref="F:MVVM.Models.Vehicle_Models.Car.Car_Model.Car.carEquipment"/>
-        </member>
         <member name="P:MVVM.Models.Vehicle_Models.Vehicle_Model.Vehicle.VehicleType">
             <inheritdoc cref="F:MVVM.Models.Vehicle_Models.Vehicle_Model.Vehicle.vehicleType"/>
         </member>
@@ -357,8 +157,283 @@
         <member name="P:MVVM.Models.Vehicle_Models.Vehicle_Model.Vehicle.FuelType">
             <inheritdoc cref="F:MVVM.Models.Vehicle_Models.Vehicle_Model.Vehicle.fuelType"/>
         </member>
-        <member name="P:MVVM.View_Models.Post_Feed.PostFeedViewModel.Filter">
-            <inheritdoc cref="F:MVVM.View_Models.Post_Feed.PostFeedViewModel.filter"/>
+        <member name="M:MVVM.Services.Authentication.AuthValidation.ArePasswordsMatching(System.String,System.String)">
+            <summary>
+            Checks if the password matches its password confirmation field
+            </summary>
+            <param name="password">password-The initial password</param>
+            <param name="matchingPassword">matchingPassword-The password confirmation</param>
+            <returns>True, if the password matches its confirmation, False otherwise</returns>
+        </member>
+        <member name="P:MVVM.View_Models.Account.UserAccountViewModel.User">
+            <inheritdoc cref="F:MVVM.View_Models.Account.UserAccountViewModel.user"/>
+        </member>
+        <member name="P:MVVM.View_Models.Account.UserAccountViewModel.IsEditable">
+            <inheritdoc cref="F:MVVM.View_Models.Account.UserAccountViewModel.isEditable"/>
+        </member>
+        <member name="P:MVVM.View_Models.Account.UserAccountViewModel.EditButtonText">
+            <inheritdoc cref="F:MVVM.View_Models.Account.UserAccountViewModel.editButtonText"/>
+        </member>
+        <member name="P:MVVM.View_Models.Account.UserAccountViewModel.AddedPhoneNumber">
+            <inheritdoc cref="F:MVVM.View_Models.Account.UserAccountViewModel.addedPhoneNumber"/>
+        </member>
+        <member name="P:MVVM.View_Models.Account.UserAccountViewModel.AddPhoneNumberVisible">
+            <inheritdoc cref="F:MVVM.View_Models.Account.UserAccountViewModel.addPhoneNumberVisible"/>
+        </member>
+        <member name="P:MVVM.View_Models.Account.UserAccountViewModel.RemovePhoneNumberVisible">
+            <inheritdoc cref="F:MVVM.View_Models.Account.UserAccountViewModel.removePhoneNumberVisible"/>
+        </member>
+        <member name="M:MVVM.View_Models.Account.UserAccountViewModel.OnUserChanged(MVVM.Models.User_Account_Model.UserAccount)">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Account.UserAccountViewModel.User"/> just changed.</summary>
+        </member>
+        <member name="M:MVVM.View_Models.Account.UserAccountViewModel.OnAddPhoneNumberVisibleChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Account.UserAccountViewModel.AddPhoneNumberVisible"/> just changed.</summary>
+        </member>
+        <member name="F:MVVM.View_Models.Account.UserAccountViewModel.loginCommand">
+            <summary>The backing field for <see cref="P:MVVM.View_Models.Account.UserAccountViewModel.LoginCommand"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Account.UserAccountViewModel.LoginCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.Account.UserAccountViewModel.Login"/>.</summary>
+        </member>
+        <member name="F:MVVM.View_Models.Account.UserAccountViewModel.registerCommand">
+            <summary>The backing field for <see cref="P:MVVM.View_Models.Account.UserAccountViewModel.RegisterCommand"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Account.UserAccountViewModel.RegisterCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.Account.UserAccountViewModel.Register"/>.</summary>
+        </member>
+        <member name="F:MVVM.View_Models.Account.UserAccountViewModel.toggleOptionsCommand">
+            <summary>The backing field for <see cref="P:MVVM.View_Models.Account.UserAccountViewModel.ToggleOptionsCommand"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Account.UserAccountViewModel.ToggleOptionsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.Account.UserAccountViewModel.ToggleOptions"/>.</summary>
+        </member>
+        <member name="F:MVVM.View_Models.Account.UserAccountViewModel.takePhotoAndUploadCommand">
+            <summary>The backing field for <see cref="P:MVVM.View_Models.Account.UserAccountViewModel.TakePhotoAndUploadCommand"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Account.UserAccountViewModel.TakePhotoAndUploadCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.Account.UserAccountViewModel.TakePhotoAndUpload"/>.</summary>
+        </member>
+        <member name="F:MVVM.View_Models.Account.UserAccountViewModel.pickPhotoAndUploadCommand">
+            <summary>The backing field for <see cref="P:MVVM.View_Models.Account.UserAccountViewModel.PickPhotoAndUploadCommand"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Account.UserAccountViewModel.PickPhotoAndUploadCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.Account.UserAccountViewModel.PickPhotoAndUpload"/>.</summary>
+        </member>
+        <member name="F:MVVM.View_Models.Account.UserAccountViewModel.editButtonTextClickedCommand">
+            <summary>The backing field for <see cref="P:MVVM.View_Models.Account.UserAccountViewModel.EditButtonTextClickedCommand"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Account.UserAccountViewModel.EditButtonTextClickedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.Account.UserAccountViewModel.EditButtonTextClicked"/>.</summary>
+        </member>
+        <member name="F:MVVM.View_Models.Account.UserAccountViewModel.revertEditChangesCommand">
+            <summary>The backing field for <see cref="P:MVVM.View_Models.Account.UserAccountViewModel.RevertEditChangesCommand"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Account.UserAccountViewModel.RevertEditChangesCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.Account.UserAccountViewModel.RevertEditChanges"/>.</summary>
+        </member>
+        <member name="F:MVVM.View_Models.Account.UserAccountViewModel.changePasswordCommand">
+            <summary>The backing field for <see cref="P:MVVM.View_Models.Account.UserAccountViewModel.ChangePasswordCommand"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Account.UserAccountViewModel.ChangePasswordCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.Account.UserAccountViewModel.ChangePassword"/>.</summary>
+        </member>
+        <member name="F:MVVM.View_Models.Account.UserAccountViewModel.addPhoneNumberCommand">
+            <summary>The backing field for <see cref="P:MVVM.View_Models.Account.UserAccountViewModel.AddPhoneNumberCommand"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Account.UserAccountViewModel.AddPhoneNumberCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.Account.UserAccountViewModel.AddPhoneNumber"/>.</summary>
+        </member>
+        <member name="F:MVVM.View_Models.Account.UserAccountViewModel.removePhoneNumberCommand">
+            <summary>The backing field for <see cref="P:MVVM.View_Models.Account.UserAccountViewModel.RemovePhoneNumberCommand"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Account.UserAccountViewModel.RemovePhoneNumberCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.Account.UserAccountViewModel.RemovePhoneNumber"/>.</summary>
+        </member>
+        <member name="F:MVVM.View_Models.Account.UserAccountViewModel.deleteAccountCommand">
+            <summary>The backing field for <see cref="P:MVVM.View_Models.Account.UserAccountViewModel.DeleteAccountCommand"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Account.UserAccountViewModel.DeleteAccountCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.Account.UserAccountViewModel.DeleteAccount"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.App_Settings.AppSettingsViewModel.IsDarkThemeEnabled">
+            <inheritdoc cref="F:MVVM.View_Models.App_Settings.AppSettingsViewModel.isDarkThemeEnabled"/>
+        </member>
+        <member name="F:MVVM.View_Models.App_Settings.AppSettingsViewModel.goToAboutPageCommand">
+            <summary>The backing field for <see cref="P:MVVM.View_Models.App_Settings.AppSettingsViewModel.GoToAboutPageCommand"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.App_Settings.AppSettingsViewModel.GoToAboutPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.App_Settings.AppSettingsViewModel.GoToAboutPage"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Base.BaseViewModel.IsBusy">
+            <inheritdoc cref="F:MVVM.View_Models.Base.BaseViewModel.isBusy"/>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.Name">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.name"/>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.Filter">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.filter"/>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.UserAccount">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.userAccount"/>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.SearchQueryText">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.searchQueryText"/>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.CarBodyType">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.carBodyType"/>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.Manufacturers">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.manufacturers"/>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.Models">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.models"/>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.SelectedCarBodyType">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.selectedCarBodyType"/>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.SelectedManufacturer">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.selectedManufacturer"/>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.SelectedManufacturerIndex">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.selectedManufacturerIndex"/>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.ModelHasGenerations">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.modelHasGenerations"/>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.SelectedModel">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.selectedModel"/>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.SelectedModelIndex">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.selectedModelIndex"/>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.Generations">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.generations"/>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.SelectedGeneration">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.selectedGeneration"/>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.LowerPriceBound">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.lowerPriceBound"/>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.UpperPriceBound">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.upperPriceBound"/>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.SelectedLowerPriceBound">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.selectedLowerPriceBound"/>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.SelectedLowerPriceIndex">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.selectedLowerPriceIndex"/>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.SelectedUpperPriceBound">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.selectedUpperPriceBound"/>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.SelectedUpperPriceIndex">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.selectedUpperPriceIndex"/>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.LowerYear">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.lowerYear"/>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.SelectedLowerYear">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.selectedLowerYear"/>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.UpperYear">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.upperYear"/>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.SelectedUpperYear">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.selectedUpperYear"/>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.FuelTypes">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.fuelTypes"/>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.SelectedFuelType">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.selectedFuelType"/>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.MinMileageBounds">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.minMileageBounds"/>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.SelectedMinMileage">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.selectedMinMileage"/>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.MaxMileageBounds">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.maxMileageBounds"/>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.SelectedMaxMileage">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.selectedMaxMileage"/>
+        </member>
+        <member name="M:MVVM.View_Models.Core.MotorEmpireViewModel.OnSelectedManufacturerChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Core.MotorEmpireViewModel.SelectedManufacturer"/> just changed.</summary>
+        </member>
+        <member name="M:MVVM.View_Models.Core.MotorEmpireViewModel.OnSelectedManufacturerIndexChanged(System.Int32)">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Core.MotorEmpireViewModel.SelectedManufacturerIndex"/> just changed.</summary>
+        </member>
+        <member name="M:MVVM.View_Models.Core.MotorEmpireViewModel.OnSelectedModelChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Core.MotorEmpireViewModel.SelectedModel"/> just changed.</summary>
+        </member>
+        <member name="M:MVVM.View_Models.Core.MotorEmpireViewModel.OnSelectedModelIndexChanged(System.Int32)">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Core.MotorEmpireViewModel.SelectedModelIndex"/> just changed.</summary>
+        </member>
+        <member name="M:MVVM.View_Models.Core.MotorEmpireViewModel.OnSelectedLowerPriceIndexChanged(System.Int32)">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Core.MotorEmpireViewModel.SelectedLowerPriceIndex"/> just changed.</summary>
+        </member>
+        <member name="M:MVVM.View_Models.Core.MotorEmpireViewModel.OnSelectedUpperPriceIndexChanged(System.Int32)">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Core.MotorEmpireViewModel.SelectedUpperPriceIndex"/> just changed.</summary>
+        </member>
+        <member name="M:MVVM.View_Models.Core.MotorEmpireViewModel.OnSelectedLowerYearChanged(System.Int32)">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Core.MotorEmpireViewModel.SelectedLowerYear"/> just changed.</summary>
+        </member>
+        <member name="M:MVVM.View_Models.Core.MotorEmpireViewModel.OnSelectedUpperYearChanged(System.Int32)">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Core.MotorEmpireViewModel.SelectedUpperYear"/> just changed.</summary>
+        </member>
+        <member name="M:MVVM.View_Models.Core.MotorEmpireViewModel.OnSelectedMinMileageChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Core.MotorEmpireViewModel.SelectedMinMileage"/> just changed.</summary>
+        </member>
+        <member name="M:MVVM.View_Models.Core.MotorEmpireViewModel.OnSelectedMaxMileageChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Core.MotorEmpireViewModel.SelectedMaxMileage"/> just changed.</summary>
+        </member>
+        <member name="F:MVVM.View_Models.Core.MotorEmpireViewModel.navigateToFeedCommand">
+            <summary>The backing field for <see cref="P:MVVM.View_Models.Core.MotorEmpireViewModel.NavigateToFeedCommand"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.NavigateToFeedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.Core.MotorEmpireViewModel.NavigateToFeed"/>.</summary>
+        </member>
+        <member name="F:MVVM.View_Models.Core.MotorEmpireViewModel.navigateToPostUploadCommand">
+            <summary>The backing field for <see cref="P:MVVM.View_Models.Core.MotorEmpireViewModel.NavigateToPostUploadCommand"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.NavigateToPostUploadCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.Core.MotorEmpireViewModel.NavigateToPostUpload"/>.</summary>
+        </member>
+        <member name="F:MVVM.View_Models.Core.MotorEmpireViewModel.searchButtonPressedCommand">
+            <summary>The backing field for <see cref="P:MVVM.View_Models.Core.MotorEmpireViewModel.SearchButtonPressedCommand"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.SearchButtonPressedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.Core.MotorEmpireViewModel.OnSearchButtonPressed"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.FeedViewModel.FileName">
+            <inheritdoc cref="F:MVVM.View_Models.FeedViewModel.fileName"/>
+        </member>
+        <member name="P:MVVM.View_Models.FeedViewModel.ImageUrl">
+            <inheritdoc cref="F:MVVM.View_Models.FeedViewModel.imageUrl"/>
+        </member>
+        <member name="F:MVVM.View_Models.FeedViewModel.updateFileToFirebaseCommand">
+            <summary>The backing field for <see cref="P:MVVM.View_Models.FeedViewModel.UpdateFileToFirebaseCommand"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.FeedViewModel.UpdateFileToFirebaseCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.FeedViewModel.UpdateFileToFirebase"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Post_Feed.PostFeedViewModel.SearchQueryText">
+            <inheritdoc cref="F:MVVM.View_Models.Post_Feed.PostFeedViewModel.searchQueryText"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post_Feed.PostFeedViewModel.Message">
+            <inheritdoc cref="F:MVVM.View_Models.Post_Feed.PostFeedViewModel.message"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post_Feed.PostFeedViewModel.Posts">
+            <inheritdoc cref="F:MVVM.View_Models.Post_Feed.PostFeedViewModel.posts"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post_Feed.PostFeedViewModel.PostsCount">
+            <inheritdoc cref="F:MVVM.View_Models.Post_Feed.PostFeedViewModel.postsCount"/>
+        </member>
+        <member name="M:MVVM.View_Models.Post_Feed.PostFeedViewModel.OnSearchQueryTextChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Post_Feed.PostFeedViewModel.SearchQueryText"/> just changed.</summary>
         </member>
         <member name="P:MVVM.View_Models.Post.CarPostViewModel.Post">
             <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.post"/>
@@ -551,6 +626,18 @@
         </member>
         <member name="P:MVVM.View_Models.Post.CarPostViewModel.UploadCarPostCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.Post.CarPostViewModel.UploadCarPost"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Shell_Navigation.ShellViewModel.UserAccount">
+            <inheritdoc cref="F:MVVM.View_Models.Shell_Navigation.ShellViewModel.userAccount"/>
+        </member>
+        <member name="F:MVVM.View_Models.Shell_Navigation.ShellViewModel.goToAccountSettingsCommand">
+            <summary>The backing field for <see cref="P:MVVM.View_Models.Shell_Navigation.ShellViewModel.GoToAccountSettingsCommand"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Shell_Navigation.ShellViewModel.GoToAccountSettingsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.Shell_Navigation.ShellViewModel.GoToAccountSettings"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Vehicles.SearchResultsViewModel.CarFilter">
+            <inheritdoc cref="F:MVVM.View_Models.Vehicles.SearchResultsViewModel.carFilter"/>
         </member>
         <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
             <summary>

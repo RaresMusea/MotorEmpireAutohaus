@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MotorEmpireAutohaus.Tools.Utility.CarFilterAndValidator
+﻿namespace Tools.Utility.CarFilterAndValidator
 {
     public enum UpperLowerFilter
     {
@@ -12,5 +6,4 @@ namespace MotorEmpireAutohaus.Tools.Utility.CarFilterAndValidator
         Mileage,
         Price
     }
-
 }

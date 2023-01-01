@@ -1,56 +1,65 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using MotorEmpireAutohaus.MVVM.Models.Base;
-using MotorEmpireAutohaus.MVVM.Models.User_Account_Model;
 using MVVM.Models.Vehicle_Models.Car.Car_Model;
 using System.Globalization;
+using MVVM.Models.Base;
+using UserAccount = MVVM.Models.User_Account_Model.UserAccount;
+using CommunityToolkit.Mvvm.Input;
+using Tools.Utility.CarFilterAndValidator;
 
 namespace MVVM.Models.Post_Model
 {
-    public partial class CarPost:Entity
+    public partial class CarPost : Entity
     {
-        [ObservableProperty]
-        UserAccount owner;
+        [ObservableProperty] private UserAccount owner;
 
-        [ObservableProperty]
-        Car car;
+        [ObservableProperty] private Car car;
 
-        [ObservableProperty]
-        string description;
+        [ObservableProperty] private string description;
 
-        [ObservableProperty]
-        string carEquipment;
+        [ObservableProperty] private string headingTitle;
 
-        [ObservableProperty]
-        int? price;
+        [ObservableProperty] private string carEquipment;
 
-        [ObservableProperty]
-        List<PostPicture> postPictures = new();
+        [ObservableProperty] private string carSpecsOverview;
 
-        [ObservableProperty]
-        string dateTimeAdded;
+        [ObservableProperty] private int? price;
 
-        public CarPost(UserAccount owner, string description, string carEquipment, int?price, 
+        [ObservableProperty] private List<PostPicture> postPictures = new();
+
+        [ObservableProperty] private PostPicture mainPostPicture;
+
+        [ObservableProperty] private string dateTimeAdded;
+
+        [ObservableProperty] private CarDetails carDetails;
+
+        public CarPost(UserAccount owner, string description, string carEquipment, int? price,
             List<PostPicture> postPictures, string dateTimeAdded)
         {
+            carDetails = new();
             this.owner = owner;
             this.description = description;
+            HeadingTitle = description.Split("\r")[0];
             this.carEquipment = carEquipment;
             this.price = price;
             this.postPictures = postPictures;
             this.dateTimeAdded = dateTimeAdded;
+           
         }
 
-        public CarPost() { }
-
-
-        public new void GenerateUUID()
+        public CarPost()
         {
-            UUID = car.UUID;
+        }
+
+
+        public new void GenerateUuid()
+        {
+            Uuid = car.Uuid;
         }
 
         public override bool IsEmpty()
         {
-            return owner.IsEmpty() || car.IsEmpty() || string.IsNullOrEmpty(car.UUID) || string.IsNullOrEmpty(description) || string.IsNullOrEmpty(carEquipment) || price==0;
+            return owner.IsEmpty() || car.IsEmpty() || string.IsNullOrEmpty(car.Uuid) ||
+                   string.IsNullOrEmpty(description) || string.IsNullOrEmpty(carEquipment) || price == 0;
         }
 
         public void SetDateTimeAdded()
@@ -60,8 +69,51 @@ namespace MVVM.Models.Post_Model
 
             string[] tokens = stringDateTime.Split(" ");
 
-            DateTimeAdded=$"Added on {tokens[0]} at {tokens[1]}";
+            DateTimeAdded = $"Added on {tokens[0]} at {tokens[1]}";
         }
 
+        [RelayCommand]
+        private void NextPicture()
+        {
+            MainPostPicture = postPictures.IndexOf(mainPostPicture) + 1 == postPictures.Count ? postPictures[0] : postPictures[postPictures.IndexOf(MainPostPicture) + 1];
+        }
+
+        [RelayCommand]
+        private void PreviousPicture()
+        {
+            MainPostPicture = postPictures.IndexOf(mainPostPicture) - 1 < 0 ? postPictures[postPictures.Count - 1] : postPictures[postPictures.IndexOf(MainPostPicture) - 1];
+        }
+
+        partial void OnCarChanged(Car value)
+        {
+            CarDetails = new();
+            if (!value.IsEmpty())
+            {
+                CarSpecsOverview = $"• {value.Year}" +
+                    $" • {CarFilterFormatter.FormatMileage(value.Mileage)}" +
+                    $" • {value.EngineCapacity.Replace("cmc", "cm3")}" +
+                    $" • {value.Horsepower} hp" +
+                    $" • {value.FuelType} •";
+
+                carDetails.UploadInformation = $"Uploaded by {Owner.Name} ({Owner.Username})";
+
+                carDetails.ModelBinding = $"Model: {value.Model}";
+                carDetails.ManufacturerBinding = $"Manufacturer: {value.Manufacturer}";
+                carDetails.YearBinding = "Year: " + value.Year.ToString();
+                carDetails.FuelTypeBinding = $"Fuel Type: {value.FuelType}";
+                carDetails.EngineCapacityBinding = $"Cylindric capacity: {value.EngineCapacity.Replace("cmc", "cm3")}";
+                carDetails.HorsepowerBinding = $"Engine power (horsepower): {value.Horsepower.ToString()} hp";
+                carDetails.MileageBinding = $"Mileage: {value.Mileage.ToString()} km";
+                carDetails.PriceBinding = $"Price: {Price.ToString()} €";
+
+
+
+                if (value.Generation is not null)
+                {
+                    carDetails.GenerationBinding = $"Generation: {value.Generation}";
+                    carDetails.HasGeneration = true;
+                }
+            }
+        }
     }
 }

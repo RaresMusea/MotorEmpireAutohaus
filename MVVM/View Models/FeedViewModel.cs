@@ -1,19 +1,19 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Firebase.Storage;
-using MotorEmpireAutohaus.MVVM.View_Models.Base;
+using BaseViewModel = MVVM.View_Models.Base.BaseViewModel;
 
 
-namespace MotorEmpireAutohaus.View_Model
+namespace MVVM.View_Models
 {
     public partial class FeedViewModel : BaseViewModel
     {
-        [ObservableProperty] string _fileName;
+        [ObservableProperty] private string fileName;
 
-        [ObservableProperty] string imageUrl;
+        [ObservableProperty] private string imageUrl;
 
         [RelayCommand]
-        public async void UpdateFileToFirebase()
+        private async void UpdateFileToFirebase()
         {
             var fileResult = await FilePicker.PickAsync();
             if (fileResult != null)

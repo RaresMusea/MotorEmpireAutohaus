@@ -1,14 +1,13 @@
 ﻿using CommunityToolkit.Maui.Alerts;
 using CommunityToolkit.Maui.Core;
 
-
-namespace MotorEmpireAutohaus.Tools.Prebuilt_Components
+namespace Tools.Prebuilt_Components
 {
     public static class SnackbarComponent
     {
-        static bool DarkThemeEnabled()
+        private static bool DarkThemeEnabled()
         {
-            return (Application.Current.UserAppTheme == AppTheme.Dark);
+            return (Application.Current!.UserAppTheme == AppTheme.Dark);
         }
 
         public static async Task GenerateSnackbar(string message, string actionButtonText, Color bgColorLight,
@@ -28,8 +27,7 @@ namespace MotorEmpireAutohaus.Tools.Prebuilt_Components
                 CharacterSpacing = spacing
             };
 
-            Snackbar snackbar;
-            snackbar = (Snackbar)Snackbar.Make(message, actOnPress, actionButtonText,
+            var snackbar = (Snackbar)Snackbar.Make(message, actOnPress, actionButtonText,
                 TimeSpan.FromSeconds(showTime), options);
             await snackbar.Show(cancellationTokenSource.Token);
         }

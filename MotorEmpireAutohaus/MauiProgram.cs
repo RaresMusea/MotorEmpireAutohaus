@@ -1,25 +1,29 @@
 ﻿using CommunityToolkit.Maui;
-using MotorEmpireAutohaus.MVVM.Services.Authentication;
-using MotorEmpireAutohaus.Services.Account_Services;
-using MotorEmpireAutohaus.View;
-using MotorEmpireAutohaus.Services.Feed;
-using MotorEmpireAutohaus.View_Model.Shell_Navigation;
-using MotorEmpireAutohaus.View.Core;
-using MotorEmpireAutohaus.View_Model.Vehicles;
-using MotorEmpireAutohaus.View.App_Settings;
-using MotorEmpireAutohaus.MVVM.View_Models.Account;
-using MotorEmpireAutohaus.MVVM.View_Models.Core;
-using MotorEmpireAutohaus.MVVM.Models.User_Account_Model;
-using MotorEmpireAutohaus.MVVM.View_Model.App_Settings;
+using MVVM;
 using MVVM.View.Post_Upload;
 using MVVM.Services.Car_Entity_Services;
 using MVVM.Services.Car_Post_Services;
 using MVVM.Models.Post_Model;
+using MVVM.Models.User_Account_Model;
+using MVVM.Models.Vehicle_Models.Car.Car_Filter_Model;
 using MVVM.View_Models.Post;
 using MVVM.View.Post_Feed;
 using MVVM.View_Models.Post_Feed;
 using MVVM.Services;
-using MotorEmpireAutohaus.MVVM.Models.Vehicle_Models.Car.Car_Filter_Model;
+using MVVM.Services.Account_Services;
+using MVVM.Services.Authentication;
+using MVVM.Services.Car_Filter_Services;
+using MVVM.View;
+using MVVM.View_Models.Account;
+using MVVM.View_Models.App_Settings;
+using MVVM.View_Models.Core;
+using MVVM.View_Models.Shell_Navigation;
+using MVVM.View_Models.Vehicles;
+using MVVM.View.App_Settings;
+using MVVM.View.Authentication;
+using MVVM.View.Core;
+using MVVM.View.Landing;
+using Account = MVVM.View.Account_Management.Account;
 
 namespace MotorEmpireAutohaus;
 public static class MauiProgram
@@ -45,9 +49,8 @@ public static class MauiProgram
           builder.Services.AddSingleton<LogIn>();
           builder.Services.AddSingleton<SignUp>();
           builder.Services.AddSingleton<MainPage>()*/
-        ;
         //builder.Services.AddSingleton<AuthValidation>();
-        builder.Services.AddSingleton<MotorEmpireAutohaus.View.Account>();
+        builder.Services.AddSingleton<Account>();
         builder.Services.AddSingleton<UserAccount>();
         builder.Services.AddSingleton<LogIn>();
         builder.Services.AddSingleton<UserAccountViewModel>();

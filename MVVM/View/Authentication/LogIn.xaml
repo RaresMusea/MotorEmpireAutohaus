@@ -2,9 +2,9 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:viewmodel="clr-namespace:MotorEmpireAutohaus.MVVM.View_Models.Account;assembly=MVVM"
-             x:DataType="viewmodel:UserAccountViewModel"
-             x:Class="MotorEmpireAutohaus.LogIn"
+             xmlns:account="using:MVVM.View_Models.Account"
+             x:DataType="account:UserAccountViewModel"
+             x:Class="MVVM.View.Authentication.LogIn"
              Title="">
     <ScrollView>
         <VerticalStackLayout>
@@ -51,7 +51,6 @@
                         <VerticalStackLayout HorizontalOptions="CenterAndExpand">
                             <Label Text="Email"
                                    HorizontalOptions="Start"
-                                   x:Name="emailLabel"
                                    FontSize="16"
                                    FontAttributes="Bold"
                                    Margin="10,0,0,10" />
@@ -72,7 +71,7 @@
                                            Margin="5" />
 
                                     <Entry Placeholder="Your email address here"
-                                           x:Name="emailEntry"
+                                           x:Name="EmailEntry"
                                            MaxLength="50"
                                            TextColor="Black"
                                            WidthRequest="215"
@@ -92,7 +91,6 @@
 
                         <VerticalStackLayout HorizontalOptions="CenterAndExpand">
                             <Label Text="Password"
-                                   x:Name="passwordLabel"
                                    HorizontalOptions="Start"
                                    FontSize="16"
                                    FontAttributes="Bold"
@@ -100,7 +98,7 @@
 
                             <Frame CornerRadius="15"
                                    HeightRequest="45"
-                                   x:Name="passwordFrame"
+                                   x:Name="PasswordFrame"
                                    WidthRequest="300"
                                    HasShadow="True"
                                    BorderColor="Transparent"
@@ -114,7 +112,7 @@
                                            HeightRequest="24"
                                            Margin="5" />
                                     <Entry Placeholder="Your Password here"
-                                           x:Name="passwordEntry"
+                                           x:Name="PasswordEntry"
                                            MaxLength="50"
                                            WidthRequest="215"
                                            TextColor="Black"
@@ -124,7 +122,7 @@
                                            Margin="5,0,0,0"
                                            Text="{Binding User.Password}" />
                                     <ImageButton Source="eye.png"
-                                                 x:Name="passwordShowButton"
+                                                 x:Name="PasswordShowButton"
                                                  WidthRequest="24"
                                                  HeightRequest="24"
                                                  HorizontalOptions="End"

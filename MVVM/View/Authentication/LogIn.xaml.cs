@@ -1,7 +1,7 @@
-using MotorEmpireAutohaus.Tools.Utility;
-using MotorEmpireAutohaus.MVVM.View_Models.Account;
+using Tools.Utility.PlatformDependentStyling;
+using UserAccountViewModel = MVVM.View_Models.Account.UserAccountViewModel;
 
-namespace MotorEmpireAutohaus;
+namespace MVVM.View.Authentication;
 
 public partial class LogIn : ContentPage, IPlatformDependentStyling
 {
@@ -39,11 +39,11 @@ public partial class LogIn : ContentPage, IPlatformDependentStyling
         {
             AuthenticationLogo.HeightRequest = 320;
             AuthenticationLogo.WidthRequest = 500;
-            emailEntry.HeightRequest = 25;
-            passwordEntry.HeightRequest = 25;
-            emailEntry.WidthRequest = 250;
-            passwordEntry.WidthRequest = 225;
-            passwordFrame.WidthRequest = 300;
+            EmailEntry.HeightRequest = 25;
+            PasswordEntry.HeightRequest = 25;
+            EmailEntry.WidthRequest = 250;
+            PasswordEntry.WidthRequest = 225;
+            PasswordFrame.WidthRequest = 300;
             AuthContainer.Margin = new Thickness(0, 0, 0, 20);
             RememberMeLabel.FontSize = 16;
             ForgotPasswordLabel.FontSize = 16;
@@ -54,18 +54,18 @@ public partial class LogIn : ContentPage, IPlatformDependentStyling
 
         if (DeviceInfo.Platform == DevicePlatform.Android)
         {
-            emailEntry.HeightRequest = 45;
-            passwordEntry.HeightRequest = 45;
-            passwordEntry.WidthRequest = 225;
-            passwordFrame.WidthRequest = 300;
-            passwordShowButton.Margin = new Thickness(-5);
+            EmailEntry.HeightRequest = 45;
+            PasswordEntry.HeightRequest = 45;
+            PasswordEntry.WidthRequest = 225;
+            PasswordFrame.WidthRequest = 300;
+            PasswordShowButton.Margin = new Thickness(-5);
         }
     }
 
 
     private void SetPasswordToVisible(object sender, EventArgs e)
     {
-        passwordEntry.IsPassword = !passwordEntry.IsPassword;
+        PasswordEntry.IsPassword = !PasswordEntry.IsPassword;
     }
 
 

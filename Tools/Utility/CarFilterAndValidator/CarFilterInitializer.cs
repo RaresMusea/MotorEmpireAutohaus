@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MotorEmpireAutohaus.Tools.Utility.Messages;
+﻿using System.Text;
+using Tools.Utility.Messages;
 
-namespace MotorEmpireAutohaus.Tools.Utility.CarFilterAndValidator
+namespace Tools.Utility.CarFilterAndValidator
 {
     public static class CarFilterFormatter
     {
@@ -13,7 +9,7 @@ namespace MotorEmpireAutohaus.Tools.Utility.CarFilterAndValidator
         {
             string unit = "km";
             string cast = mileage.ToString();
-            string res = "";
+            string res;
             if (cast.Length == 3)
             {
                 res = $"{cast} {unit}";
@@ -25,15 +21,18 @@ namespace MotorEmpireAutohaus.Tools.Utility.CarFilterAndValidator
                 {
                     res += $" {cast.Substring(1)} {unit}";
                 }
+
                 if (cast.Length == 5)
                 {
                     res += $"{cast[1]} {cast.Substring(2)} {unit}";
                 }
+
                 if (cast.Length == 6)
                 {
                     res += $"{cast[1]}{cast[2]} {cast.Substring(3)} {unit} ";
                 }
             }
+
             return res;
         };
 
@@ -58,6 +57,7 @@ namespace MotorEmpireAutohaus.Tools.Utility.CarFilterAndValidator
                 formatted.Append(' ');
                 formatted.Append(casted.Length == 6 ? casted.Substring(3) : casted.Substring(2));
             }
+
             formatted.Append($" {currency}");
             return formatted.ToString();
         };
@@ -73,23 +73,26 @@ namespace MotorEmpireAutohaus.Tools.Utility.CarFilterAndValidator
                 result.Add(current);
                 current--;
             }
+
             return result;
         };
 
 
-        public static readonly Action<int, int, UpperLowerFilter> CompareValuesAndGenerateErrorsIfExisting = (lower, upper, option) =>
-        {
-
-            if (lower > upper)
+        public static readonly Action<int, int, UpperLowerFilter> CompareValuesAndGenerateErrorsIfExisting =
+            (lower, upper, option) =>
             {
-                CrossPlatformMessageRenderer.RenderMessages($"The lower {option.ToString().ToLower()} bound cannot be greater than the upper one!", "Retry", 4);
-            }
-            if (lower == upper)
-            {
-                CrossPlatformMessageRenderer.RenderMessages($"The {option.ToString().ToLower()} bounds cannot be equal!", "Retry", 4);
-            }
-        };
+                if (lower > upper)
+                {
+                    CrossPlatformMessageRenderer.RenderMessages(
+                        $"The lower {option.ToString().ToLower()} bound cannot be greater than the upper one!", "Retry",
+                        4);
+                }
 
-
+                if (lower == upper)
+                {
+                    CrossPlatformMessageRenderer.RenderMessages(
+                        $"The {option.ToString().ToLower()} bounds cannot be equal!", "Retry", 4);
+                }
+            };
     }
 }

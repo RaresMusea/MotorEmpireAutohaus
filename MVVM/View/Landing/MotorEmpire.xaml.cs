@@ -1,8 +1,8 @@
-using MotorEmpireAutohaus.MVVM.View_Models.Core;
+using MotorEmpireViewModel = MVVM.View_Models.Core.MotorEmpireViewModel;
 
-namespace MotorEmpireAutohaus.View;
+namespace MVVM.View.Landing;
 
-public partial class MotorEmpire: ContentPage
+public partial class MotorEmpire : ContentPage
 {
     public MotorEmpire(MotorEmpireViewModel motorEmpireViewModel)
     {
@@ -13,11 +13,11 @@ public partial class MotorEmpire: ContentPage
 
     protected override void OnAppearing()
     {
-        searchByCategory.Opacity = 0;
-        secondaryFrame.Opacity = 0;
-        titleText.Opacity = 0;
-        mobileView.Opacity = 0;
-        jumbotronImageAnimation.Opacity = 0;
+        SearchByCategory.Opacity = 0;
+        SecondaryFrame.Opacity = 0;
+        TitleText.Opacity = 0;
+        MobileView.Opacity = 0;
+        JumbotronImageAnimation.Opacity = 0;
         base.OnAppearing();
         if (this.AnimationIsRunning("TransitionAnimation"))
         {
@@ -26,29 +26,29 @@ public partial class MotorEmpire: ContentPage
 
         if (!DesktopView.IsVisible)
         {
-            jumbotronImageAnimation.IsAnimationPlaying=true;
+            JumbotronImageAnimation.IsAnimationPlaying = true;
             Animation parentAnimation = new()
             {
-            {0,0.3,new Animation(v=>jumbotronImageAnimation.Opacity=v,0,1,Easing.CubicIn) },
-            {0.3,0.5,new Animation(v=>mobileView.Opacity=v,0,1,Easing.CubicIn)},
-            {0.5,1, new Animation(v=>searchByCategory.Opacity=v,0,1,Easing.CubicIn)}
+                { 0, 0.3, new Animation(v => JumbotronImageAnimation.Opacity = v, 0, 1, Easing.CubicIn) },
+                { 0.3, 0.5, new Animation(v => MobileView.Opacity = v, 0, 1, Easing.CubicIn) },
+                { 0.5, 1, new Animation(v => SearchByCategory.Opacity = v, 0, 1, Easing.CubicIn) }
             };
 
-            parentAnimation.Commit(this, "TransitionAnimation", 16, 2000, null, null);
+            parentAnimation.Commit(this, "TransitionAnimation", 16, 2000);
         }
         else
         {
-            jumbotronImage.Opacity = 0;
+            JumbotronImage.Opacity = 0;
             Animation parentAnimation = new()
             {
-                {0,0.4, new Animation(v=>jumbotronImage.Opacity=v,0,1,Easing.CubicIn)},
-               // {0.2,0.5,new Animation(v=>desktopGreeting.Opacity=v,0,1,Easing.CubicIn)},
-                {0.1,0.3, new Animation (v=>titleText.Opacity=v,0,1,Easing.CubicIn) },
-                {0.3,0.6, new Animation (v=>SearchFrame.Opacity=v,0,1,Easing.CubicIn) },
-                {0.2,0.8, new Animation (v=>primaryFrame.Opacity=v,0,1,Easing.CubicIn)},
-                {0.4,1,new Animation(v=>secondaryFrame.Opacity=v,0,1,Easing.CubicIn)}
+                { 0, 0.4, new Animation(v => JumbotronImage.Opacity = v, 0, 1, Easing.CubicIn) },
+                // {0.2,0.5,new Animation(v=>desktopGreeting.Opacity=v,0,1,Easing.CubicIn)},
+                { 0.1, 0.3, new Animation(v => TitleText.Opacity = v, 0, 1, Easing.CubicIn) },
+                { 0.3, 0.6, new Animation(v => SearchFrame.Opacity = v, 0, 1, Easing.CubicIn) },
+                { 0.2, 0.8, new Animation(v => PrimaryFrame.Opacity = v, 0, 1, Easing.CubicIn) },
+                { 0.4, 1, new Animation(v => SecondaryFrame.Opacity = v, 0, 1, Easing.CubicIn) }
             };
-            parentAnimation.Commit(this,"TransitionAnimation",16,2000);
+            parentAnimation.Commit(this, "TransitionAnimation", 16, 2000);
         }
     }
 
@@ -56,107 +56,100 @@ public partial class MotorEmpire: ContentPage
     {
         if (DeviceInfo.Platform == DevicePlatform.WinUI)
         {
-            secondaryFrame.WidthRequest = 600;
+            SecondaryFrame.WidthRequest = 600;
 
-            carFilterRow1.Orientation = StackOrientation.Horizontal;
-            carFilterRow2.Orientation = StackOrientation.Horizontal;
-            carTypePicker.WidthRequest = 200;
-            manufacturerPicker.WidthRequest = 200;
-            modelPicker.WidthRequest = 200;
-            generationPicker.WidthRequest = 200;
-            lowerPricePicker.WidthRequest = 100;
-            upperPricePicker.WidthRequest = 100;
-            upperYear.WidthRequest = 100;
-            lowerYear.WidthRequest = 100;
-            upperMileagePicker.WidthRequest = 130;
-            lowerMileagePicker.WidthRequest = 130;
-            fuelTypePicker.WidthRequest = 200;
-            mobileView.IsVisible = false;
+            CarFilterRow1.Orientation = StackOrientation.Horizontal;
+            CarFilterRow2.Orientation = StackOrientation.Horizontal;
+            CarTypePicker.WidthRequest = 200;
+            ManufacturerPicker.WidthRequest = 200;
+            ModelPicker.WidthRequest = 200;
+            GenerationPicker.WidthRequest = 200;
+            LowerPricePicker.WidthRequest = 100;
+            UpperPricePicker.WidthRequest = 100;
+            UpperYear.WidthRequest = 100;
+            LowerYear.WidthRequest = 100;
+            UpperMileagePicker.WidthRequest = 130;
+            LowerMileagePicker.WidthRequest = 130;
+            FuelTypePicker.WidthRequest = 200;
+            MobileView.IsVisible = false;
             DesktopView.IsVisible = true;
         }
 
-        if (DeviceInfo.Platform == DevicePlatform.Android || DeviceInfo.Platform==DevicePlatform.iOS)
+        if (DeviceInfo.Platform == DevicePlatform.Android || DeviceInfo.Platform == DevicePlatform.iOS)
         {
-            carFilterRow1.Orientation = StackOrientation.Vertical;
-            carFilterRow2.Orientation= StackOrientation.Vertical;
-            verticalStack1.Margin = new Thickness(0,0,0,15);
-            verticalStack2.Margin = new Thickness(0, 0, 0, 15);
-            upperPricePicker.Margin = new Thickness(0, 10, 15, 0);
-            fuelTypeLabel.Margin = new Thickness(0, 0, 190, 0);
-            fuelTypePicker.Margin = new Thickness(0, 10, 15, 0);
-            fuelTypePicker.WidthRequest = 115;
-            lowerMileagePicker.WidthRequest = 85;
-            upperMileagePicker.WidthRequest = 85;
-            lowerPricePicker.WidthRequest = 70;
-            upperPricePicker.WidthRequest= 70;
-            lowerYear.WidthRequest = 70;
-            upperYear.WidthRequest = 70;
-            secondaryFrame.WidthRequest = 420;
+            CarFilterRow1.Orientation = StackOrientation.Vertical;
+            CarFilterRow2.Orientation = StackOrientation.Vertical;
+            VerticalStack1.Margin = new Thickness(0, 0, 0, 15);
+            VerticalStack2.Margin = new Thickness(0, 0, 0, 15);
+            UpperPricePicker.Margin = new Thickness(0, 10, 15, 0);
+            FuelTypeLabel.Margin = new Thickness(0, 0, 190, 0);
+            FuelTypePicker.Margin = new Thickness(0, 10, 15, 0);
+            FuelTypePicker.WidthRequest = 115;
+            LowerMileagePicker.WidthRequest = 85;
+            UpperMileagePicker.WidthRequest = 85;
+            LowerPricePicker.WidthRequest = 70;
+            UpperPricePicker.WidthRequest = 70;
+            LowerYear.WidthRequest = 70;
+            UpperYear.WidthRequest = 70;
+            SecondaryFrame.WidthRequest = 420;
         }
     }
 
     private void DisplayCarFilters(object o, EventArgs e)
     {
-        carFiltersForm.Opacity = 0;
+        CarFiltersForm.Opacity = 0;
         //{AppThemeBinding Dark=#313131, Light=Grey}
-        if (Application.Current.RequestedTheme == AppTheme.Dark)
+        if (Application.Current!.RequestedTheme == AppTheme.Dark)
         {
-            toggleCarFilters.BackgroundColor = Color.FromArgb("#313131");
-
+            ToggleCarFilters.BackgroundColor = Color.FromArgb("#313131");
         }
+
         if (Application.Current.RequestedTheme == AppTheme.Light)
         {
-            toggleCarFilters.BackgroundColor = Colors.Grey;
+            ToggleCarFilters.BackgroundColor = Colors.Grey;
         }
 
-        carFiltersForm.IsVisible = true;
-        carFiltersForm.FadeTo(1, 200, Easing.CubicIn);
-        
+        CarFiltersForm.IsVisible = true;
+        CarFiltersForm.FadeTo(1, 200, Easing.CubicIn);
     }
 
     private async void OnTextChangedEvent(object o, EventArgs e)
     {
-        if (searchBarEntry.Text.Length == 0)
+        if (SearchBarEntry.Text.Length == 0)
         {
-            await searchButton.FadeTo(0, 150, Easing.CubicIn);
-            searchButton.IsVisible = false;
-            await searchByCategory.FadeTo(1,150,Easing.CubicIn);
-            searchByCategory.IsVisible = true;
+            await SearchButton.FadeTo(0, 150, Easing.CubicIn);
+            SearchButton.IsVisible = false;
+            await SearchByCategory.FadeTo(1, 150, Easing.CubicIn);
+            SearchByCategory.IsVisible = true;
         }
         else
         {
-            if (primaryFrame.IsVisible)
+            if (PrimaryFrame.IsVisible)
             {
-                await primaryFrame.FadeTo(0, 150, Easing.CubicInOut);
-                primaryFrame.IsVisible = false;
+                await PrimaryFrame.FadeTo(0, 150, Easing.CubicInOut);
+                PrimaryFrame.IsVisible = false;
             }
 
-            await searchByCategory.FadeTo(0, 150, Easing.CubicIn);
-            searchByCategory.IsVisible = false;
-            searchButton.IsVisible = true;
-            await searchButton.FadeTo(1, 150, Easing.CubicIn);
+            await SearchByCategory.FadeTo(0, 150, Easing.CubicIn);
+            SearchByCategory.IsVisible = false;
+            SearchButton.IsVisible = true;
+            await SearchButton.FadeTo(1, 150, Easing.CubicIn);
         }
     }
 
     private async void ShowCategories(object o, EventArgs e)
     {
-        primaryFrame.IsVisible = true;
-        await primaryFrame.FadeTo(1, 170, Easing.BounceIn);
-    }
-
-    private void EnableModelFiltering(object o, EventArgs e)
-    {
-        modelPicker.IsEnabled= true;        
+        PrimaryFrame.IsVisible = true;
+        await PrimaryFrame.FadeTo(1, 170, Easing.BounceIn);
     }
 
     private async void CloseCarFilters(object o, EventArgs e)
     {
-
-        toggleCarFilters.BackgroundColor = Colors.Transparent;
-        await carFiltersForm.FadeTo(0, 240, Easing.CubicIn);
-        carFiltersForm.IsVisible = false;
+        ToggleCarFilters.BackgroundColor = Colors.Transparent;
+        await CarFiltersForm.FadeTo(0, 240, Easing.CubicIn);
+        CarFiltersForm.IsVisible = false;
         await Task.Delay(600);
-        await primaryFrame.FadeTo(0, 250, Easing.CubicIn);
-        primaryFrame.IsVisible = false;
+        await PrimaryFrame.FadeTo(0, 250, Easing.CubicIn);
+        PrimaryFrame.IsVisible = false;
     }
 }

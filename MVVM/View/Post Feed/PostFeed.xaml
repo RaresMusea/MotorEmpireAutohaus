@@ -1,7 +1,10 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodel="clr-namespace:MVVM.View_Models.Post_Feed"
+             xmlns:model="clr-namespace:MVVM.Models.Post_Model"
+             xmlns:pictures="clr-namespace:MVVM.Models"
              x:DataType="viewmodel:PostFeedViewModel"
              x:Class="MVVM.View.Post_Feed.PostFeed"
              Title="Post Feed">
@@ -12,28 +15,243 @@
                 <Image Source="{AppThemeBinding Dark=postfeeddark.png, Light=postfeedlight.png}"
                        WidthRequest="{OnPlatform WinUI=1600}"
                        HeightRequest="{OnPlatform WinUI=900}"
-                       x:Name="bannerImage"/>
-                <Label Text="{Binding SearchQueryText}"
-                       x:Name="introductionLabel"
-                       HorizontalOptions="Center" 
+                       x:Name="BannerImage" />
+                <Label Text="{Binding Message}"
+                       x:Name="IntroductionLabel"
+                       HorizontalOptions="Center"
                        FontAttributes="Bold"
                        FontFamily="Kollektif"
                        FontSize="{OnPlatform Android=25, iOS=25, WinUI=36}"
-                       Margin="25"
-                       ></Label>
-                <Frame BackgroundColor="#676767"
-                   Margin="40,0,40,0"
-                       x:Name="mainFrame"
+                       Margin="25">
+                </Label>
+
+                <Frame BackgroundColor="#414141"
+                       Margin="40,0,40,0"
+                       x:Name="MainFrame"
                        CornerRadius="20"
-                       Padding="30,0,0,30"
-                   HeightRequest="400">
+                       Padding="30,0,30,30">
                     <VerticalStackLayout>
-                        <Frame BackgroundColor="#414141" Margin="20" WidthRequest="400">
-                            <Label Text="Noroc"></Label></Frame>
+
+                        <Label Text="{Binding PostsCount}"
+                               Margin="10,20,0,30"
+                               FontFamily="Kollektif"
+                               FontAttributes="Bold"
+                               TextColor="{AppThemeBinding Dark=White,Light=Black}"
+                               />
+                        <!--<Grid ColumnDefinitions="*"
+                              ColumnSpacing="10"
+                              RowDefinitions="Auto"
+                              RowSpacing="15">-->
+
+                        <CollectionView ItemsSource="{Binding Posts}">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate x:DataType="model:CarPost">
+                                    <Frame BackgroundColor="#676767"
+                                               Margin="10,20,10,0"
+                                               CornerRadius="15"
+                                               Padding="20,10,20,20"
+                                               BorderColor="Transparent"
+                                               HasShadow="True">
+
+                                        <!--<VerticalStackLayout>
+                                            <Grid ColumnDefinitions="*,*"
+                                                  RowDefinitions="4*"
+                                                  ColumnSpacing="10"
+                                                  RowSpacing="10">
+                                                <Image Source="{Binding MainPostPicture.Picture}"/>
+                                                <VerticalStackLayout Grid.Column="1">
+                                                    <Label Text="{Binding HeadingTitle}"
+                                                       HorizontalOptions="Center"
+                                                       FontSize="25"
+                                                       Margin="0,15,0,0"
+                                                       FontAutoScalingEnabled="True"
+                                                       FontFamily="Kollektif"
+                                                       FontAttributes="Bold"
+                                                       TextColor="{AppThemeBinding Dark=White, Light=Black}"
+                                                    />
+
+                                                    <Label Text="{Binding CarDetails.ManufacturerBinding}"
+                                                           HorizontalOptions="Start"
+                                                           FontSize="20"
+                                                           FontFamily="Roboto"
+                                                           FontAutoScalingEnabled="True"
+                                                           FontAttributes="Bold"
+                                                           TextColor="{AppThemeBinding Dark=White, Light=Black}"
+                                                           Margin="25,40,0,0"
+                                                    />
+
+                                                    <Label Text="{Binding CarDetails.ModelBinding}"
+                                                           HorizontalOptions="Start"
+                                                           FontSize="20"
+                                                           FontFamily="Roboto"
+                                                           FontAutoScalingEnabled="True"
+                                                           FontAttributes="Bold"
+                                                           TextColor="{AppThemeBinding Dark=White, Light=Black}"
+                                                           Margin="25,20,0,0"
+                                                    />
+
+                                                    <Label Text="{Binding CarDetails.GenerationBinding}"
+                                                           IsVisible="{Binding CarDetails.HasGeneration}"
+                                                           HorizontalOptions="Start"
+                                                           FontSize="20"
+                                                           FontAutoScalingEnabled="True"
+                                                           FontFamily="Roboto"
+                                                           FontAttributes="Bold"
+                                                           TextColor="{AppThemeBinding Dark=White, Light=Black}"
+                                                           Margin="25,20,0,0"
+                                                    />
+
+                                                    <Label Text="{Binding CarDetails.YearBinding}"
+                                                           HorizontalOptions="Start"
+                                                           FontSize="20"
+                                                           FontAutoScalingEnabled="True"
+                                                           FontFamily="Roboto"
+                                                           FontAttributes="Bold"
+                                                           TextColor="{AppThemeBinding Dark=White, Light=Black}"
+                                                           Margin="25,20,0,0"
+                                                    />
+
+                                                    <Label Text="{Binding CarDetails.FuelTypeBinding}"
+                                                           HorizontalOptions="Start"
+                                                           FontSize="20"
+                                                           FontFamily="Roboto"
+                                                           FontAttributes="Bold"
+                                                           TextColor="{AppThemeBinding Dark=White, Light=Black}"
+                                                           Margin="25,20,0,0"
+                                                    />
+
+                                                    <Label Text="{Binding CarDetails.EngineCapacityBinding}"
+                                                           HorizontalOptions="Start"
+                                                           FontSize="20"
+                                                           FontFamily="Roboto"
+                                                           FontAttributes="Bold"
+                                                           TextColor="{AppThemeBinding Dark=White, Light=Black}"
+                                                           Margin="25,20,0,0"
+                                                    />
+
+                                                    <Label Text="{Binding CarDetails.HorsepowerBinding}"
+                                                           HorizontalOptions="Start"
+                                                           FontSize="20"
+                                                           FontFamily="Roboto"
+                                                           FontAttributes="Bold"
+                                                           TextColor="{AppThemeBinding Dark=White, Light=Black}"
+                                                           Margin="25,20,0,0"
+                                                    />
+
+                                                    <Label Text="{Binding CarDetails.MileageBinding}"
+                                                           HorizontalOptions="Start"
+                                                           FontSize="20"
+                                                           FontFamily="Roboto"
+                                                           FontAttributes="Bold"
+                                                           TextColor="{AppThemeBinding Dark=White, Light=Black}"
+                                                           Margin="25,20,0,0"
+                                                    />
+
+                                                    <Label Text="{Binding CarDetails.PriceBinding}"
+                                                           HorizontalOptions="Center"
+                                                           FontSize="25"
+                                                           FontAttributes="Bold"
+                                                           FontFamily="Kollektif"
+                                                           TextColor="{AppThemeBinding Dark=Red, Light=#1C6758}"
+                                                           Margin="0,20,0,20"
+                                                    />
+
+
+                                                </VerticalStackLayout>
+                                            </Grid>
+                                        </VerticalStackLayout>-->
+
+                                        <VerticalStackLayout>
+                                            <Grid ColumnDefinitions="*,*"
+                                                  RowDefinitions="*,40"
+                                                  ColumnSpacing="10"
+                                                  RowSpacing="10">
+
+                                                <Image Source="{Binding MainPostPicture.Picture}"
+                                                       Margin="0,20,0,10"/>
+                                                <HorizontalStackLayout Grid.Row="1" Margin="0,0,0,0" HorizontalOptions="Center">
+                                                    <Grid ColumnDefinitions="*,*"
+                                                          RowDefinitions="40"
+                                                          HorizontalOptions="Center"
+                                                          ColumnSpacing="10"
+                                                        >
+                                                        
+                                                        <Button Text="Previous photo"
+                                                                TextColor="White"
+                                                                BorderColor="Transparent"
+                                                                BackgroundColor="{AppThemeBinding Dark=Red,Light=#1C6758}"
+                                                            FontFamily="Kollektif"
+                                                            WidthRequest="150"
+                                                            FontSize="18"
+                                                            FontAttributes="Bold"
+                                                            Command="{Binding PreviousPictureCommand}"/>
+                                                        <Button Grid.Column="2"
+                                                           TextColor="White"
+                                                                BorderColor="Transparent"
+                                                                BackgroundColor="{AppThemeBinding Dark=Red,Light=#1C6758}"
+                                                                Text="Next photo" 
+                                                                WidthRequest="150"
+                                                                FontFamily="Kollektif"
+                                                                FontSize="18"
+                                                                FontAttributes="Bold"
+                                                                Command="{Binding NextPictureCommand}"/>
+                                                    </Grid>
+                                                </HorizontalStackLayout>
+                                                
+                                                <VerticalStackLayout Grid.Column="1">
+                                                    <Label Text="{Binding HeadingTitle}"
+                                                           FontFamily="Kollektif"
+                                                           FontSize="25"
+                                                           Margin="0,20,0,0"
+                                                           FontAttributes="Bold"
+                                                           HorizontalOptions="Center"/>
+                                                    <Label Text="{Binding CarSpecsOverview}"
+                                                           FontFamily="Kollektif"
+                                                           FontSize="18"
+                                                           Margin="0,20,0,0"
+                                                           HorizontalOptions="Center"
+                                                            />
+
+                                                    <HorizontalStackLayout Margin="0,40,0,15">
+                                                        <Image Source="watch.png"
+                                                               WidthRequest="25"
+                                                               HeightRequest="25"
+                                                               Margin="20,0,20,0"/>
+                                                        <Label Text="{Binding DateTimeAdded}"
+                                                               FontFamily="Kollektif"
+                                                               FontSize="18"
+                                                               HorizontalOptions="Start"
+                                                               VerticalOptions="Center"/>
+                                                    </HorizontalStackLayout>
+                                                    <HorizontalStackLayout>
+                                                        <Image Source="{Binding Owner.ProfileImageUrl}"
+                                                           WidthRequest="25"
+                                                           HeightRequest="25"
+                                                           Margin="20,0,20,0"/>
+                                                        <Label Text="{Binding CarDetails.UploadInformation}"
+                                                           FontFamily="Kollektif"
+                                                           FontSize="18"
+                                                           Margin="0,0,0,0"
+                                                           HorizontalOptions="Start"
+                                                           VerticalOptions="Center"/>
+                                                    </HorizontalStackLayout>
+                                                </VerticalStackLayout>
+
+                                            </Grid>
+
+                                        </VerticalStackLayout>
+                                        
+                                        
+                                    </Frame>
+                                </DataTemplate>
+
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+
                     </VerticalStackLayout>
                 </Frame>
             </VerticalStackLayout>
 
-    </VerticalStackLayout>
+        </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

@@ -1,27 +1,26 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using MotorEmpireAutohaus.Services.Feed;
-using MotorEmpireAutohaus.Tools.Utility.CarFilterAndValidator;
-using MotorEmpireAutohaus.MVVM.View_Models.Base;
-using MotorEmpireAutohaus.MVVM.Models.Vehicle_Models.Car.Car_Filter_Model;
-using MotorEmpireAutohaus.MVVM.View_Models.Account;
-using MotorEmpireAutohaus.MVVM.Models.User_Account_Model;
-using MVVM.View.Post_Upload;
+using MVVM.Services.Car_Filter_Services;
 using MVVM.View.Post_Feed;
+using MVVM.View.Post_Upload;
+using Tools.Utility.CarFilterAndValidator;
+using BaseViewModel = MVVM.View_Models.Base.BaseViewModel;
+using CarFilter = MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter;
+using UserAccount = MVVM.Models.User_Account_Model.UserAccount;
 
-namespace MotorEmpireAutohaus.MVVM.View_Models.Core;
+namespace MVVM.View_Models.Core;
 
-[QueryProperty (nameof(UserAccount),nameof(UserAccount))]
-[QueryProperty (nameof(CarFilter),nameof(CarFilter))]
-[QueryProperty (nameof(SearchQueryText),nameof(SearchQueryText))]
-[QueryProperty (nameof(Name),nameof(Name))]
+[QueryProperty (nameof(MVVM.Models.User_Account_Model.UserAccount), nameof(MVVM.Models.User_Account_Model.UserAccount))]
+[QueryProperty (nameof(CarFilter), nameof(CarFilter))]
+[QueryProperty (nameof(SearchQueryText), nameof(SearchQueryText))]
+[QueryProperty (nameof(Name), nameof(Name))]
+[QueryProperty (nameof(UpdateNeeded), nameof(UpdateNeeded))]
 public partial class MotorEmpireViewModel : BaseViewModel
 {
-    [ObservableProperty]
-    [NotifyPropertyChangedFor (nameof(GreetingMessage))]
+    [ObservableProperty] [NotifyPropertyChangedFor(nameof(GreetingMessage))]
     private string name;
 
-    public string GreetingMessage => $"Hello, {userAccount.Name}"; 
+    public string GreetingMessage => $"Hello, {userAccount.Name}";
 
 
     [ObservableProperty]
@@ -29,112 +28,88 @@ public partial class MotorEmpireViewModel : BaseViewModel
     private CarFilter filter;
 
     [ObservableProperty]
-    private UserAccount userAccount;
+    private bool updateNeeded;
+
+    [ObservableProperty] private UserAccount userAccount;
 
     private readonly CarFilterService carFilterService;
 
-    [ObservableProperty]
-    private string searchQueryText;
+    [ObservableProperty] private string searchQueryText;
 
     private bool filtersWereApplied;
 
-    [ObservableProperty]
-    private List<string> carBodyType;
+    [ObservableProperty] private List<string> carBodyType;
 
-    [ObservableProperty]
-    private List<string> manufacturers;
+    [ObservableProperty] private List<string> manufacturers;
 
-    [ObservableProperty]
-    private List<string> models;
+    [ObservableProperty] private List<string> models;
 
-    [ObservableProperty]
-    private string selectedCarBodyType;
+    [ObservableProperty] private string selectedCarBodyType;
 
-    [ObservableProperty]
-    private string selectedManufacturer;
+    [ObservableProperty] private string selectedManufacturer;
 
-    [ObservableProperty]
-    private int selectedManufacturerIndex;
+    [ObservableProperty] private int selectedManufacturerIndex;
 
-    [ObservableProperty]
-    private bool modelHasGenerations = false;
+    [ObservableProperty] private bool modelHasGenerations;
 
-    [ObservableProperty]
-    private string selectedModel;
+    [ObservableProperty] private string selectedModel;
 
-    [ObservableProperty]
-    private int selectedModelIndex;
+    [ObservableProperty] private int selectedModelIndex;
 
-    [ObservableProperty]
-    private List<string> generations;
+    [ObservableProperty] private List<string> generations;
 
-    [ObservableProperty]
-    private string selectedGeneration;
+    [ObservableProperty] private string selectedGeneration;
 
-    [ObservableProperty]
-    private List<string> lowerPriceBound;
+    [ObservableProperty] private List<string> lowerPriceBound;
 
     private List<int> lowerPrice;
 
-    [ObservableProperty]
-    private List<string> upperPriceBound;
+    [ObservableProperty] private List<string> upperPriceBound;
 
     private List<int> upperPrice;
 
-    [ObservableProperty]
-    private string selectedLowerPriceBound;
+    [ObservableProperty] private string selectedLowerPriceBound;
 
-    [ObservableProperty]
-    private int selectedLowerPriceIndex;
+    [ObservableProperty] private int selectedLowerPriceIndex;
 
-    private int lowerBound=1000;
+    private int lowerBound = 1000;
 
-    [ObservableProperty]
-    private string selectedUpperPriceBound;
+    [ObservableProperty] private string selectedUpperPriceBound;
 
-    [ObservableProperty]
-    private int selectedUpperPriceIndex;
+    [ObservableProperty] private int selectedUpperPriceIndex;
 
-    private int upperBound=100000;
+    private int upperBound = 100000;
 
-    [ObservableProperty]
-    private List<int> lowerYear;
+    [ObservableProperty] private List<int> lowerYear;
 
-    [ObservableProperty]
-    private int selectedLowerYear=2000;
+    [ObservableProperty] private int selectedLowerYear = 2000;
 
-    [ObservableProperty]
-    private List<int> upperYear;
+    [ObservableProperty] private List<int> upperYear;
 
-    [ObservableProperty]
-    private int selectedUpperYear=2022;
+    [ObservableProperty] private int selectedUpperYear = 2022;
 
-    [ObservableProperty]
-    private List<string> fuelTypes;
+    [ObservableProperty] private List<string> fuelTypes;
 
-    [ObservableProperty]
-    private string selectedFuelType;
+    [ObservableProperty] private string selectedFuelType;
 
     private List<int> minMileage;
 
-    [ObservableProperty]
-    private List<string> minMileageBounds;
+    [ObservableProperty] private List<string> minMileageBounds;
 
-    [ObservableProperty]
-    private string selectedMinMileage;
+    [ObservableProperty] private string selectedMinMileage;
 
     private List<int> maxMileage;
 
-    [ObservableProperty]
-    private List<string> maxMileageBounds;
+    [ObservableProperty] private List<string> maxMileageBounds;
 
-    [ObservableProperty]
-    private string selectedMaxMileage;
+    [ObservableProperty] private string selectedMaxMileage;
 
-    private int lowerMileage=500;
-    private int upperMileage=300000;
+    private int lowerMileage = 500;
+    private int upperMileage = 300000;
 
-    public MotorEmpireViewModel() { }
+    public MotorEmpireViewModel()
+    {
+    }
 
     public MotorEmpireViewModel(CarFilterService carFilterService, UserAccount userAccount, CarFilter carFilter)
     {
@@ -157,18 +132,30 @@ public partial class MotorEmpireViewModel : BaseViewModel
         {
             ModelHasGenerations = true;
         }
+
         InitializePriceBounds(CarFilterFormatter.FormatPrice);
         LowerYear = CarFilterFormatter.InitializeYears(2021, 2000);
         LowerYear = LowerYear.OrderBy(x => x).ToList();
         UpperYear = CarFilterFormatter.InitializeYears(2022, 2001);
-        fuelTypes = new() { "Gasoline", "Gasoline + CNG", "Gasoline + LPG", "Diesel", "Electric", "Ethanol", "Hybrid", "Hydrogen" };
+        fuelTypes = new()
+            { "Gasoline", "Gasoline + CNG", "Gasoline + LPG", "Diesel", "Electric", "Ethanol", "Hybrid", "Hydrogen" };
         InitializeMileageBounds();
     }
 
     private void InitializePriceBounds(Func<int, string> formatter)
     {
-        lowerPrice = new() { 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000, 95000 };
-        upperPrice = new() { 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000, 95000,100000};
+        lowerPrice = new()
+        {
+            1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500,
+            10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000,
+            85000, 90000, 95000
+        };
+        upperPrice = new()
+        {
+            1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000,
+            15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000,
+            90000, 95000, 100000
+        };
         upperPrice = upperPrice.OrderByDescending(i => i).ToList();
         lowerPriceBound = new();
         upperPriceBound = new();
@@ -176,9 +163,14 @@ public partial class MotorEmpireViewModel : BaseViewModel
         upperPrice.ForEach(price => upperPriceBound.Add(formatter(price)));
     }
 
-    private void InitializeMileageBounds() 
+    private void InitializeMileageBounds()
     {
-        minMileage = new() { 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000, 95000, 100000, 150000, 200000, 250000 };
+        minMileage = new()
+        {
+            500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000,
+            9500, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000,
+            80000, 85000, 90000, 95000, 100000, 150000, 200000, 250000
+        };
         maxMileage = new(minMileage);
         maxMileage.Remove(500);
         maxMileage.Add(300000);
@@ -198,12 +190,13 @@ public partial class MotorEmpireViewModel : BaseViewModel
 
     private void RetrieveAllManufacturers()
     {
-        manufacturers=carFilterService.GetManufacturers();
+        manufacturers = carFilterService.GetManufacturers();
     }
 
     public void RetrieveAllModelsFromManufacturer()
     {
-        if(selectedManufacturer is not null) {
+        if (selectedManufacturer is not null)
+        {
             models = carFilterService.GetAllModelsFromManufacturer(selectedManufacturer);
         }
     }
@@ -225,7 +218,6 @@ public partial class MotorEmpireViewModel : BaseViewModel
         Generations = carFilterService.GetGenerationBasedOnModel(value);
         ModelHasGenerations = Generations.Count != 0;
         filtersWereApplied = true;
-
     }
 
     partial void OnSelectedModelIndexChanged(int value)
@@ -259,16 +251,17 @@ public partial class MotorEmpireViewModel : BaseViewModel
 
     partial void OnSelectedLowerYearChanged(int value)
     {
-        CarFilterFormatter.CompareValuesAndGenerateErrorsIfExisting(SelectedLowerYear, SelectedUpperYear, UpperLowerFilter.Year);
+        CarFilterFormatter.CompareValuesAndGenerateErrorsIfExisting(SelectedLowerYear, SelectedUpperYear,
+            UpperLowerFilter.Year);
         filtersWereApplied = true;
         /*          SelectedLowerYear = 2021;
                     SelectedUpperYear = 2022;*/
-
     }
 
     partial void OnSelectedUpperYearChanged(int value)
     {
-        CarFilterFormatter.CompareValuesAndGenerateErrorsIfExisting(SelectedLowerYear, SelectedUpperYear, UpperLowerFilter.Year);
+        CarFilterFormatter.CompareValuesAndGenerateErrorsIfExisting(SelectedLowerYear, SelectedUpperYear,
+            UpperLowerFilter.Year);
         /*            SelectedLowerYear = 2021;
                     SelectedUpperYear = 2022;*/
         filtersWereApplied = true;
@@ -277,14 +270,16 @@ public partial class MotorEmpireViewModel : BaseViewModel
     partial void OnSelectedMinMileageChanged(string value)
     {
         lowerMileage = minMileage[MinMileageBounds.IndexOf(value)];
-        CarFilterFormatter.CompareValuesAndGenerateErrorsIfExisting(lowerMileage, upperMileage, UpperLowerFilter.Mileage);
+        CarFilterFormatter.CompareValuesAndGenerateErrorsIfExisting(lowerMileage, upperMileage,
+            UpperLowerFilter.Mileage);
         filtersWereApplied = true;
     }
 
     partial void OnSelectedMaxMileageChanged(string value)
     {
         upperMileage = maxMileage[MaxMileageBounds.IndexOf(value)];
-        CarFilterFormatter.CompareValuesAndGenerateErrorsIfExisting(lowerMileage, upperMileage, UpperLowerFilter.Mileage);
+        CarFilterFormatter.CompareValuesAndGenerateErrorsIfExisting(lowerMileage, upperMileage,
+            UpperLowerFilter.Mileage);
         filtersWereApplied = true;
     }
 
@@ -295,9 +290,9 @@ public partial class MotorEmpireViewModel : BaseViewModel
             //Filter = new();
             Filter.Manufacturer = SelectedManufacturer;
             Filter.ModelName = SelectedModel;
-            Filter.Generation= SelectedGeneration;
-            Filter.FuelType = SelectedFuelType; 
-            Filter.PriceRange=new(lowerBound,upperBound);
+            Filter.Generation = SelectedGeneration;
+            Filter.FuelType = SelectedFuelType;
+            Filter.PriceRange = new(lowerBound, upperBound);
 
             if (!CarFilterValidator.IsRangeValid(Filter.PriceRange))
             {
@@ -305,7 +300,7 @@ public partial class MotorEmpireViewModel : BaseViewModel
                 Filter.PriceRange = new(1000, 100000);
             }
 
-            Filter.YearRange=new(selectedLowerYear, selectedUpperYear);
+            Filter.YearRange = new(selectedLowerYear, selectedUpperYear);
             if (!CarFilterValidator.IsRangeValid(Filter.YearRange))
             {
                 CarFilterValidator.InvalidRangeSpecifier(UpperLowerFilter.Year, "1999 - 2022");
@@ -319,23 +314,35 @@ public partial class MotorEmpireViewModel : BaseViewModel
                 Filter.MileageRange = new(500, 300000);
             }
         }
-        
     }
 
     [RelayCommand]
-    public async void NavigateToFeed()
+    private async void NavigateToFeed()
     {
         ApplyFilters();
-        await Shell.Current.GoToAsync($"{nameof(PostFeed)}?SearchQueryText={SearchQueryText}", true, new Dictionary<string, object> { ["CarFilter"] = filter});
+        await Shell.Current.GoToAsync($"{nameof(PostFeed)}?SearchQueryText={SearchQueryText}", true,
+            new Dictionary<string, object> { ["CarFilter"] = filter });
         SearchQueryText = "";
     }
 
 
     [RelayCommand]
-    public async void NavigateToPostUpload()
+    private async void NavigateToPostUpload()
     {
-        await Shell.Current.GoToAsync($"{nameof(UploadPost)}?Name", true, new Dictionary<string, object> { ["UserAccount"] = userAccount });
+        await Shell.Current.GoToAsync($"{nameof(UploadPost)}?Name", true,
+            new Dictionary<string, object> { ["UserAccount"] = userAccount });
+    }
+
+    [RelayCommand]
+    private async void OnSearchButtonPressed()
+    {
+        ApplyFilters();
+        UpdateNeeded = true;
+        await Shell.Current.GoToAsync($"{nameof(PostFeed)}?SearchQueryText={SearchQueryText}", true,
+            new Dictionary<string, object> { ["CarFilter"] = filter,
+                ["UpdateNeeded"]=UpdateNeeded,
+            });
+        SearchQueryText = "";
     }
 
 }
-

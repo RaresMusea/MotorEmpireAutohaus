@@ -1,21 +1,19 @@
-﻿using MotorEmpireAutohaus.MVVM.Models.User_Account_Model;
-using MotorEmpireAutohaus.Services.Account_Services;
-using MotorEmpireAutohaus.Services.Feed;
-using MotorEmpireAutohaus.Tools.Utility.Messages;
-using MVVM.Exceptions;
+﻿using MVVM.Exceptions;
 using MVVM.Models;
 using MVVM.Models.Post_Model;
+using MVVM.Services.Account_Services;
 using MVVM.Services.Car_Entity_Services;
+using MVVM.Services.Car_Filter_Services;
 using MVVM.Services.Interfaces;
 using MySqlConnector;
+using UserAccount = MVVM.Models.User_Account_Model.UserAccount;
 
 namespace MVVM.Services.Car_Post_Services
 {
-    public class CarPostService:IConnectableDataSource
+    public class CarPostService : IConnectableDataSource
     {
-
-        private static readonly string TableReference = "CarPost";
-        private static readonly string PostPicturesTableReference = "PostPictures";
+        private const string TableReference = "CarPost";
+        private const string PostPicturesTableReference = "PostPictures";
         private readonly CarFilterService carFilterService;
         private readonly AccountService accountService;
         private readonly CarService carService;
@@ -30,8 +28,9 @@ namespace MVVM.Services.Car_Post_Services
 
         public List<string> RetrieveAllVehicleTypes()
         {
-            List<string> result=new();
-            MySqlCommand command = new("SELECT Type FROM VehicleType",IConnectableDataSource.databaseConfigurer.DatabaseConnection);
+            List<string> result = new();
+            MySqlCommand command = new("SELECT Type FROM VehicleType",
+                IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
             command.Prepare();
 
             MySqlDataReader reader = command.ExecuteReader();
@@ -59,7 +58,7 @@ namespace MVVM.Services.Car_Post_Services
             return carFilterService.GetAllModelsFromManufacturer(manufacturer);
         }
 
-        public List<string>RetrieveGenerationsForModel(string model)
+        public List<string> RetrieveGenerationsForModel(string model)
         {
             return carFilterService.GetGenerationBasedOnModel(model);
         }
@@ -67,7 +66,8 @@ namespace MVVM.Services.Car_Post_Services
         public List<string> RetrieveTransmissionTypes()
         {
             List<string> result = new();
-            MySqlCommand command = new("SELECT Type FROM TransmissionType", IConnectableDataSource.databaseConfigurer.DatabaseConnection);
+            MySqlCommand command = new("SELECT Type FROM TransmissionType",
+                IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
             command.Prepare();
 
             MySqlDataReader reader = command.ExecuteReader();
@@ -83,13 +83,13 @@ namespace MVVM.Services.Car_Post_Services
         public void UploadCarPost(CarPost post, int carIdentifier)
         {
             MySqlCommand command = new MySqlCommand($"INSERT INTO {TableReference} (" +
-                $"UUID, Owner, Car, Description, CarEquipment, Price, DateTimeAdded) VALUES " +
-                $"(@uuid, @owner, @car, @description, @carequipment, @price, @datetimeadded)",
-                IConnectableDataSource.databaseConfigurer.DatabaseConnection);
+                                                    $"UUID, Owner, Car, Description, CarEquipment, Price, DateTimeAdded) VALUES " +
+                                                    $"(@uuid, @owner, @car, @description, @carequipment, @price, @datetimeadded)",
+                IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
 
             command.Prepare();
-            command.Parameters.AddWithValue("@uuid", post.Car.UUID);
-            command.Parameters.AddWithValue("@owner",accountService.RetrieveIdForUserUuid(post.Owner.UUID));
+            command.Parameters.AddWithValue("@uuid", post.Car.Uuid);
+            command.Parameters.AddWithValue("@owner", accountService.RetrieveIdForUserUuid(post.Owner.Uuid));
             command.Parameters.AddWithValue("@car", carIdentifier);
             command.Parameters.AddWithValue("@description", post.Description);
             command.Parameters.AddWithValue("@carequipment", post.CarEquipment);
@@ -98,93 +98,100 @@ namespace MVVM.Services.Car_Post_Services
             post.SetDateTimeAdded();
             command.Parameters.AddWithValue("@datetimeadded", post.DateTimeAdded);
 
-            
 
             try
             {
                 command.ExecuteNonQuery();
 
-                post.PostPictures.ForEach(picture=>
-                {
-                    UploadCarPostPicture(post.Car.UUID, picture);
-                });
-
+                post.PostPictures.ForEach(picture => { UploadCarPostPicture(post.Car.Uuid, picture); });
             }
 
             catch (MySqlException mySqlExc)
             {
                 throw new UploadFailedException($"Cannot upload your car post due to an unexpected error!\n" +
-                    $"More details:\n{mySqlExc.Message} ");
+                                                $"More details:\n{mySqlExc.Message} ");
             }
-        
         }
 
         private void UploadCarPostPicture(string postUuid, PostPicture pictureRef)
         {
             MySqlCommand command = new($"INSERT INTO {PostPicturesTableReference} " +
-                $"(Post, ImageURL) VALUES" +
-                $"(@post, @imageurl)",
-                IConnectableDataSource.databaseConfigurer.DatabaseConnection);
+                                       $"(Post, ImageURL) VALUES" +
+                                       $"(@post, @imageurl)",
+                IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
 
             command.Prepare();
-            command.Parameters.AddWithValue("@post", carService.retrieveCarIdentifierByUuid(postUuid));
+            command.Parameters.AddWithValue("@post", carService.RetrieveCarIdentifierByUuid(postUuid));
             command.Parameters.AddWithValue("@imageurl", pictureRef.Picture);
 
             command.ExecuteNonQuery();
         }
 
-        private List<PostPicture> RetrieveCarPostPictures(string carPostUUID)
+        public List<PostPicture> RetrieveCarPostPictures(string carPostUuid)
         {
             List<PostPicture> postPictures = new();
-            MySqlCommand command = new MySqlCommand($"SELECT ImageURL FROM {PostPicturesTableReference} WHERE Post = @uuid ",
-                IConnectableDataSource.databaseConfigurer.DatabaseConnection);
+            MySqlCommand command = new MySqlCommand(
+                $"SELECT ImageURL FROM {PostPicturesTableReference} WHERE Post = @uuid ",
+                IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
 
             command.Prepare();
-            command.Parameters.AddWithValue("@uuid", carPostUUID);
+            command.Parameters.AddWithValue("@uuid", carService.RetrieveCarIdentifierByUuid(carPostUuid));
 
             MySqlDataReader reader = command.ExecuteReader();
 
             while (reader.Read())
             {
-                string url = reader.GetString(1);
+                string url = reader.GetString(0);
                 postPictures.Add(new PostPicture(url));
             }
 
             reader.Close();
             return postPictures.Count != 0 ? postPictures : null;
-
         }
 
         public List<CarPost> RetrieveAllPosts()
         {
             List<CarPost> posts = new();
+            List<int> ownersId = new();
 
             MySqlCommand command = new($"SELECT * FROM {TableReference}",
-                IConnectableDataSource.databaseConfigurer.DatabaseConnection);
+                IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
             command.Prepare();
 
             MySqlDataReader reader = command.ExecuteReader();
 
             while (reader.Read())
             {
-                string UUID = reader.GetString(1);
-                UserAccount owner = accountService.GetUserById(reader.GetInt32(2));
+                string uuid = reader.GetString(1);
+                ownersId.Add(reader.GetInt32(2));
                 string description = reader.GetString(4);
                 string carEquipment = reader.GetString(5);
                 int price = reader.GetInt32(6);
                 string dateTimeAdded = reader.GetString(7);
-
-                CarPost carPost = new(owner, description, carEquipment, price,
-                    RetrieveCarPostPictures(UUID), dateTimeAdded);
-                carPost.UUID = UUID;
+             
+                CarPost carPost = new(null, description, carEquipment, price,
+                    null, dateTimeAdded)
+                {
+                    Uuid = uuid
+                };
 
                 posts.Add(carPost);
             }
 
             reader.Close();
-            
-            return posts.Count != 0 ? posts : null;
 
+            if (ownersId.Count != 0)
+            {
+                for (int i = 0; i < ownersId.Count; i++)
+                {
+                    posts[i].Owner = accountService.GetUserById(ownersId[i]);
+                }
+
+                return posts;
+
+            }
+
+            return null;
         }
     }
 }

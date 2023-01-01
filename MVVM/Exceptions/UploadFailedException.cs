@@ -1,14 +1,9 @@
-﻿using MySqlConnector;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MVVM.Exceptions
+﻿namespace MVVM.Exceptions
 {
-    public class UploadFailedException:Exception
+    public class UploadFailedException : Exception
     {
-        public UploadFailedException(string message):base(message) { }
+        public UploadFailedException(string message) : base(message)
+        {
+        }
     }
 }

@@ -1,8 +1,5 @@
-﻿
-using MotorEmpireAutohaus.MVVM.Models.Base;
-using MotorEmpireAutohaus.MVVM.Services.Interfaces;
-using MotorEmpireAutohaus.Storage.MySQL;
-using MVVM.Exceptions;
+﻿using MVVM.Exceptions;
+using MVVM.Models.Base;
 using MVVM.Models.Vehicle_Models.Car.Car_Model;
 using MVVM.Services.Interfaces;
 using MySqlConnector;
@@ -23,7 +20,7 @@ namespace MVVM.Services.Car_Entity_Services
         public List<string> GetAllFuelTypes()
         {
             List<string> result = new();
-            MySqlCommand  command = new("SELECT FuelType FROM FuelTypes", IConnectableDataSource.databaseConfigurer.DatabaseConnection);
+            MySqlCommand  command = new("SELECT FuelType FROM FuelTypes", IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
             command.Prepare();
 
             MySqlDataReader reader = command.ExecuteReader();
@@ -39,9 +36,9 @@ namespace MVVM.Services.Car_Entity_Services
 
         public bool Delete(Entity entity)
         {
-            MySqlCommand command = new MySqlCommand($"DELETE FROM {TableReference} WHERE UUID=@identifier", IConnectableDataSource.databaseConfigurer.DatabaseConnection);
+            MySqlCommand command = new MySqlCommand($"DELETE FROM {TableReference} WHERE UUID=@identifier", IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
             command.Prepare();
-            command.Parameters.AddWithValue("@identifier", entity.UUID);
+            command.Parameters.AddWithValue("@identifier", entity.Uuid);
 
             try
             {
@@ -58,7 +55,7 @@ namespace MVVM.Services.Car_Entity_Services
 
         public Entity RetrieveByUuid(string uuid)
         {
-            MySqlCommand command = new($"SELECT * FROM {TableReference} WHERE UUID=@uuid", IConnectableDataSource.databaseConfigurer.DatabaseConnection);
+            MySqlCommand command = new($"SELECT * FROM {TableReference} WHERE UUID=@uuid", IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
             command.Prepare();
             command.Parameters.AddWithValue("@uuid", uuid);
 
@@ -83,7 +80,7 @@ namespace MVVM.Services.Car_Entity_Services
                 responseEntity.Gears = reader.GetString(14);
             }
 
-            responseEntity.UUID = uuid;
+            responseEntity.Uuid = uuid;
             return responseEntity;
 
         }
@@ -95,9 +92,9 @@ namespace MVVM.Services.Car_Entity_Services
                                                     $"Generation, Year, FuelType, Mileage, EngineCapacity, Horsepower," +
                                                     $" Torque, Transmission, Gears) VALUES (@uuid, @chassis, @vehicleType, @manufacturer, @model," +
                                                     $" @generation, @year, @fuelType, @mileage, @engineCapacity, @horsepower, @torque, " +
-                                                    $"@transmission, @gears)", IConnectableDataSource.databaseConfigurer.DatabaseConnection);
+                                                    $"@transmission, @gears)", IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
             command.Prepare();
-            command.Parameters.AddWithValue("@uuid", car.UUID);
+            command.Parameters.AddWithValue("@uuid", car.Uuid);
             command.Parameters.AddWithValue("@chassis", car.ChassisType);
             command.Parameters.AddWithValue("@vehicleType", car.VehicleType);
             command.Parameters.AddWithValue("@manufacturer", car.Manufacturer);
@@ -140,10 +137,10 @@ namespace MVVM.Services.Car_Entity_Services
             throw new NotImplementedException();
         }
 
-        public int retrieveCarIdentifierByUuid(string uuid)
+        public int RetrieveCarIdentifierByUuid(string uuid)
         {
             MySqlCommand command = new MySqlCommand($"SELECT id FROM {TableReference} WHERE UUID = @uuid",
-                IConnectableDataSource.databaseConfigurer.DatabaseConnection);
+                IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
             command.Prepare();
             command.Parameters.AddWithValue("@uuid", uuid);
 
@@ -162,31 +159,33 @@ namespace MVVM.Services.Car_Entity_Services
         {
             List<Car> list = new List<Car>();
             MySqlCommand command = new MySqlCommand($"SELECT * FROM {TableReference}",
-                IConnectableDataSource.databaseConfigurer.DatabaseConnection);
+                IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
 
             command.Prepare();
             MySqlDataReader reader = command.ExecuteReader();
 
             while (reader.Read())
             {
-                string UUID = reader.GetString(1);
+                string uuid = reader.GetString(1);
                 string chassisType = reader.GetString(2);
                 string vehicleType = reader.GetString(3);
                 string manufacturer = reader.GetString(4);
                 string model = reader.GetString(5);
-                string generation = reader.GetString(6);
+                string generation = reader.IsDBNull(6)?null:reader.GetString(6);
                 int year = reader.GetInt32(7);
                 string fuelType = reader.GetString(8);
                 int mileage = reader.GetInt32(9);
                 string engineCapacity = reader.GetString(10);
                 int horsepower = reader.GetInt32(11);
-                int torque = reader.GetInt32(12);
+                int torque = reader.IsDBNull(12)?0:reader.GetInt32(12);
                 string transmission = reader.GetString(13);
                 string gears = reader.GetString(14);
 
                 Car car = new Car(vehicleType, chassisType, manufacturer, model, generation, year, fuelType, mileage,
-                    engineCapacity, horsepower, torque, transmission, gears);
-                car.UUID = UUID;
+                    engineCapacity, horsepower, (int)torque!, transmission, gears)
+                {
+                    Uuid = uuid
+                };
 
                 list.Add(car);
             }

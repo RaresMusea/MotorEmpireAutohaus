@@ -33,6 +33,8 @@ namespace MVVM.Services
             for(int i=0;i<carPosts.Count;i++)
             {
                 carPosts[i].Car = cars[i];
+                carPosts[i].PostPictures = postService.RetrieveCarPostPictures(carPosts[i].Car.Uuid);
+                carPosts[i].MainPostPicture = carPosts[i].PostPictures.ElementAt(0);
             }
 
             return carPosts;

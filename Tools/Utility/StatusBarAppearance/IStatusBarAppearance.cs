@@ -1,5 +1,4 @@
-﻿
-namespace MotorEmpireAutohaus.Tools.Utility.StatusBarAppearance
+﻿namespace Tools.Utility.StatusBarAppearance
 {
     public interface IStatusBarAppearance
     {

@@ -1,9 +1,8 @@
-﻿using MotorEmpireAutohaus.MVVM.Models.User_Account_Model;
-using MotorEmpireAutohaus.MVVM.View_Models.Account;
+﻿using UserAccount = MVVM.Models.User_Account_Model.UserAccount;
 
-namespace MotorEmpireAutohaus.MVVM.Services.Interfaces
+namespace MVVM.Services.Interfaces
 {
-    interface IAuthenticate
+    public interface IAuthenticate
     {
         public bool Login(UserAccount user);
 
