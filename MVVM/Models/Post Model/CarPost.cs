@@ -28,12 +28,14 @@ namespace MVVM.Models.Post_Model
 
         [ObservableProperty] private PostPicture mainPostPicture;
 
+        [ObservableProperty] private int views;
+
         [ObservableProperty] private string dateTimeAdded;
 
         [ObservableProperty] private CarDetails carDetails;
 
         public CarPost(UserAccount owner, string description, string carEquipment, int? price,
-            List<PostPicture> postPictures, string dateTimeAdded)
+            List<PostPicture> postPictures, int views, string dateTimeAdded)
         {
             carDetails = new();
             this.owner = owner;
@@ -42,6 +44,7 @@ namespace MVVM.Models.Post_Model
             this.carEquipment = carEquipment;
             this.price = price;
             this.postPictures = postPictures;
+            this.views = views;
             this.dateTimeAdded = dateTimeAdded;
            
         }
@@ -96,7 +99,7 @@ namespace MVVM.Models.Post_Model
                     $" • {value.FuelType} •";
 
                 carDetails.UploadInformation = $"Uploaded by {Owner.Name} ({Owner.Username})";
-
+                carDetails.ViewedBy = $"{Views} views";
                 carDetails.ModelBinding = $"Model: {value.Model}";
                 carDetails.ManufacturerBinding = $"Manufacturer: {value.Manufacturer}";
                 carDetails.YearBinding = "Year: " + value.Year.ToString();
@@ -104,7 +107,7 @@ namespace MVVM.Models.Post_Model
                 carDetails.EngineCapacityBinding = $"Cylindric capacity: {value.EngineCapacity.Replace("cmc", "cm3")}";
                 carDetails.HorsepowerBinding = $"Engine power (horsepower): {value.Horsepower.ToString()} hp";
                 carDetails.MileageBinding = $"Mileage: {value.Mileage.ToString()} km";
-                carDetails.PriceBinding = $"Price: {Price.ToString()} €";
+                carDetails.PriceBinding = $"{CarFilterFormatter.FormatPrice((int)Price)}";
 
 
 

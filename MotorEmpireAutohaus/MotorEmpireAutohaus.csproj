@@ -63,6 +63,8 @@
 	  <None Remove="Resources\Images\constructiontruck.svg" />
 	  <None Remove="Resources\Images\email.png" />
 	  <None Remove="Resources\Images\eye.png" />
+	  <None Remove="Resources\Images\eyeglassesdark.svg" />
+	  <None Remove="Resources\Images\eyeglasseslight.svg" />
 	  <None Remove="Resources\Images\flyoutbanner.png" />
 	  <None Remove="Resources\Images\flyoutbannerlight.png" />
 	  <None Remove="Resources\Images\gauges.jpg" />

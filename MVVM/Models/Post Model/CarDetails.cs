@@ -42,5 +42,8 @@ namespace MVVM.Models.Post_Model
         [ObservableProperty]
         private string uploadInformation;
 
+        [ObservableProperty]
+        private string viewedBy;
+
     }
 }

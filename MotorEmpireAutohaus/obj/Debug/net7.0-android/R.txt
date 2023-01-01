@@ -2737,6 +2737,7 @@ int drawable tractor 0x7f0700f5
 int drawable trailer 0x7f0700f6
 int drawable truck 0x7f0700f7
 int drawable van 0x7f0700f8
+int drawable watch 0x7f0700f9
 int id ALT 0x7f080000
 int id BOTTOM_END 0x7f080001
 int id BOTTOM_START 0x7f080002

@@ -28,7 +28,9 @@ namespace MVVM.View_Models.Post_Feed
 
         [ObservableProperty] ObservableCollection<CarPost> posts;
 
-        [ObservableProperty] int postsCount;
+        [ObservableProperty] private int postsCount;
+
+        [ObservableProperty] private string postsCountMessage;
 
         public PostFeedViewModel(PostFeedService postFeedService, CarFilter carFilter)
         {
@@ -53,19 +55,42 @@ namespace MVVM.View_Models.Post_Feed
 
             if (!string.IsNullOrEmpty(searchQueryText))
             {
-                Message = $"Showing results for {SearchQueryText}";
+                Message = $"Showing results for `{SearchQueryText}`";
             }
         }
 
         private void PopulateObservableCollection()
         {
-            carPosts = postFeedService.RetrieveAllPosts();
-            carPosts.Reverse();
+            
+                carPosts = postFeedService.RetrieveAllPosts();
+                carPosts.Reverse();
+
+            if (!string.IsNullOrEmpty(searchQueryText))
+            {
+                GenerateResultsDependingOnSearchQuery();
+            }
+
             carPosts.ForEach(posts.Add);
+
+
         }
+
+        private void GenerateResultsDependingOnSearchQuery()
+        {
+            IEnumerable<CarPost> queryResult = from post in carPosts
+                                               where post.Description.Contains(searchQueryText)
+                                               select post;
+
+            carPosts=queryResult.ToList();
+            PostsCount = carPosts.Count;
+
+                       
+        }
+
 
         private void RefreshPosts()
         {
+            //SearchQueryText = "";
             posts.Clear();
             PopulateObservableCollection();
         }
@@ -83,6 +108,29 @@ namespace MVVM.View_Models.Post_Feed
             if (value)
             {
                 RefreshPosts();
+                UpdateNeeded = false;
+            }
+        }
+
+        partial void OnPostsCountChanged(int value)
+        {
+            if (!string.IsNullOrEmpty(SearchQueryText))
+            {
+                string dynamicText = "results";
+
+                if (value == 1)
+                {
+                    dynamicText = "result";
+                }
+
+                PostsCountMessage = $"Based on your search, we found {value} {dynamicText}";
+
+                if (value == 0 || carPosts.Count==0)
+                {
+                    PostsCountMessage = $"No results found.";
+                }
+
+                
             }
         }
 

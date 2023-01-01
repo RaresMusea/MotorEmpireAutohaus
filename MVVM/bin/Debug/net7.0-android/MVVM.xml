@@ -40,6 +40,9 @@
         <member name="P:MVVM.Models.Post_Model.CarDetails.UploadInformation">
             <inheritdoc cref="F:MVVM.Models.Post_Model.CarDetails.uploadInformation"/>
         </member>
+        <member name="P:MVVM.Models.Post_Model.CarDetails.ViewedBy">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarDetails.viewedBy"/>
+        </member>
         <member name="P:MVVM.Models.Post_Model.CarPost.Owner">
             <inheritdoc cref="F:MVVM.Models.Post_Model.CarPost.owner"/>
         </member>
@@ -66,6 +69,9 @@
         </member>
         <member name="P:MVVM.Models.Post_Model.CarPost.MainPostPicture">
             <inheritdoc cref="F:MVVM.Models.Post_Model.CarPost.mainPostPicture"/>
+        </member>
+        <member name="P:MVVM.Models.Post_Model.CarPost.Views">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarPost.views"/>
         </member>
         <member name="P:MVVM.Models.Post_Model.CarPost.DateTimeAdded">
             <inheritdoc cref="F:MVVM.Models.Post_Model.CarPost.dateTimeAdded"/>
@@ -453,11 +459,17 @@
         <member name="P:MVVM.View_Models.Post_Feed.PostFeedViewModel.PostsCount">
             <inheritdoc cref="F:MVVM.View_Models.Post_Feed.PostFeedViewModel.postsCount"/>
         </member>
+        <member name="P:MVVM.View_Models.Post_Feed.PostFeedViewModel.PostsCountMessage">
+            <inheritdoc cref="F:MVVM.View_Models.Post_Feed.PostFeedViewModel.postsCountMessage"/>
+        </member>
         <member name="M:MVVM.View_Models.Post_Feed.PostFeedViewModel.OnUpdateNeededChanged(System.Boolean)">
             <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Post_Feed.PostFeedViewModel.UpdateNeeded"/> just changed.</summary>
         </member>
         <member name="M:MVVM.View_Models.Post_Feed.PostFeedViewModel.OnSearchQueryTextChanged(System.String)">
             <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Post_Feed.PostFeedViewModel.SearchQueryText"/> just changed.</summary>
+        </member>
+        <member name="M:MVVM.View_Models.Post_Feed.PostFeedViewModel.OnPostsCountChanged(System.Int32)">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Post_Feed.PostFeedViewModel.PostsCount"/> just changed.</summary>
         </member>
         <member name="P:MVVM.View_Models.Post.CarPostViewModel.Post">
             <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.post"/>

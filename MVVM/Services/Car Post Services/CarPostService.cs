@@ -167,10 +167,11 @@ namespace MVVM.Services.Car_Post_Services
                 string description = reader.GetString(4);
                 string carEquipment = reader.GetString(5);
                 int price = reader.GetInt32(6);
-                string dateTimeAdded = reader.GetString(7);
+                int views = reader.GetInt32(7);
+                string dateTimeAdded = reader.GetString(8);
              
                 CarPost carPost = new(null, description, carEquipment, price,
-                    null, dateTimeAdded)
+                    null, views, dateTimeAdded)
                 {
                     Uuid = uuid
                 };
