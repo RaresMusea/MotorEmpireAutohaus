@@ -1,6 +1,7 @@
 ﻿using MotorEmpireAutohaus.View.App_Settings;
 using MVVM.View.Account_Management;
 using MVVM.View.Landing;
+using MVVM.View.Post_Details;
 using MVVM.View.Post_Feed;
 using MVVM.View.Post_Upload;
 
@@ -17,6 +18,7 @@ public partial class AppShell : Shell
         Routing.RegisterRoute(nameof(About), typeof(About));
         Routing.RegisterRoute(nameof(UploadPost), typeof(UploadPost));
         Routing.RegisterRoute(nameof(PostFeed), typeof(PostFeed));
+        Routing.RegisterRoute(nameof(PostDetails), typeof(PostDetails));
     }
 
     protected override void OnAppearing()

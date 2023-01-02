@@ -34,6 +34,8 @@ public partial class MotorEmpireViewModel : BaseViewModel
 
     [ObservableProperty] private UserAccount userAccount;
 
+    [ObservableProperty] private string loggedInUser;
+
     private readonly CarFilterService carFilterService;
 
     [ObservableProperty] private string searchQueryText;
@@ -122,6 +124,7 @@ public partial class MotorEmpireViewModel : BaseViewModel
         filter = carFilter;
         InitializeProps();
         this.userAccount = userAccount;
+        LoggedInUser = userAccount.Uuid;
     }
 
 
@@ -415,7 +418,8 @@ public partial class MotorEmpireViewModel : BaseViewModel
         UpdateNeeded = true;
         await Shell.Current.GoToAsync($"{nameof(PostFeed)}?SearchQueryText={SearchQueryText}", true,
             new Dictionary<string, object> { ["CarFilter"] = filter,
-                ["UpdateNeeded"]=UpdateNeeded,});
+                ["UpdateNeeded"]=UpdateNeeded,
+            });
 
         SearchQueryText = "";
         ResetSelections();

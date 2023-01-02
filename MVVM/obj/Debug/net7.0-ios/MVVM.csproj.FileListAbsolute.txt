@@ -1,9 +1,3 @@
-C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\bin\Debug\net7.0-ios\MVVM.dll
-C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\bin\Debug\net7.0-ios\MVVM.pdb
-C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\bin\Debug\net7.0-ios\Storage.dll
-C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\bin\Debug\net7.0-ios\Tools.dll
-C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\bin\Debug\net7.0-ios\Storage.pdb
-C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\bin\Debug\net7.0-ios\Tools.pdb
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-ios\actool\_PartialAppManifest.items
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-ios\actool\_BundleResourceWithLogicalName.items
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-ios\actool\_ProcessedImageAssetsPath.items
@@ -17,9 +11,15 @@ C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de p
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-ios\MVVM.AssemblyInfoInputs.cache
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-ios\MVVM.AssemblyInfo.cs
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-ios\MVVM.csproj.CoreCompileInputs.cache
-C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-ios\XamlC.stamp
-C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-ios\MVVM.csproj.CopyComplete
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-ios\MVVM.dll
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-ios\refint\MVVM.dll
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-ios\MVVM.pdb
+C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\bin\Debug\net7.0-ios\MVVM.dll
+C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\bin\Debug\net7.0-ios\MVVM.pdb
+C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\bin\Debug\net7.0-ios\Storage.dll
+C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\bin\Debug\net7.0-ios\Tools.dll
+C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\bin\Debug\net7.0-ios\Storage.pdb
+C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\bin\Debug\net7.0-ios\Tools.pdb
+C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-ios\XamlC.stamp
+C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-ios\MVVM.csproj.CopyComplete
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-ios\ref\MVVM.dll

@@ -4,45 +4,6 @@
         <name>MVVM</name>
     </assembly>
     <members>
-        <member name="P:MVVM.Models.Post_Model.CarDetails.ManufacturerBinding">
-            <inheritdoc cref="F:MVVM.Models.Post_Model.CarDetails.manufacturerBinding"/>
-        </member>
-        <member name="P:MVVM.Models.Post_Model.CarDetails.ModelBinding">
-            <inheritdoc cref="F:MVVM.Models.Post_Model.CarDetails.modelBinding"/>
-        </member>
-        <member name="P:MVVM.Models.Post_Model.CarDetails.GenerationBinding">
-            <inheritdoc cref="F:MVVM.Models.Post_Model.CarDetails.generationBinding"/>
-        </member>
-        <member name="P:MVVM.Models.Post_Model.CarDetails.HasGeneration">
-            <inheritdoc cref="F:MVVM.Models.Post_Model.CarDetails.hasGeneration"/>
-        </member>
-        <member name="P:MVVM.Models.Post_Model.CarDetails.YearBinding">
-            <inheritdoc cref="F:MVVM.Models.Post_Model.CarDetails.yearBinding"/>
-        </member>
-        <member name="P:MVVM.Models.Post_Model.CarDetails.FuelTypeBinding">
-            <inheritdoc cref="F:MVVM.Models.Post_Model.CarDetails.fuelTypeBinding"/>
-        </member>
-        <member name="P:MVVM.Models.Post_Model.CarDetails.EngineCapacityBinding">
-            <inheritdoc cref="F:MVVM.Models.Post_Model.CarDetails.engineCapacityBinding"/>
-        </member>
-        <member name="P:MVVM.Models.Post_Model.CarDetails.HorsepowerBinding">
-            <inheritdoc cref="F:MVVM.Models.Post_Model.CarDetails.horsepowerBinding"/>
-        </member>
-        <member name="P:MVVM.Models.Post_Model.CarDetails.MileageBinding">
-            <inheritdoc cref="F:MVVM.Models.Post_Model.CarDetails.mileageBinding"/>
-        </member>
-        <member name="P:MVVM.Models.Post_Model.CarDetails.PriceBinding">
-            <inheritdoc cref="F:MVVM.Models.Post_Model.CarDetails.priceBinding"/>
-        </member>
-        <member name="P:MVVM.Models.Post_Model.CarDetails.HasTorque">
-            <inheritdoc cref="F:MVVM.Models.Post_Model.CarDetails.hasTorque"/>
-        </member>
-        <member name="P:MVVM.Models.Post_Model.CarDetails.UploadInformation">
-            <inheritdoc cref="F:MVVM.Models.Post_Model.CarDetails.uploadInformation"/>
-        </member>
-        <member name="P:MVVM.Models.Post_Model.CarDetails.ViewedBy">
-            <inheritdoc cref="F:MVVM.Models.Post_Model.CarDetails.viewedBy"/>
-        </member>
         <member name="P:MVVM.Models.Post_Model.CarPost.Owner">
             <inheritdoc cref="F:MVVM.Models.Post_Model.CarPost.owner"/>
         </member>
@@ -76,8 +37,8 @@
         <member name="P:MVVM.Models.Post_Model.CarPost.DateTimeAdded">
             <inheritdoc cref="F:MVVM.Models.Post_Model.CarPost.dateTimeAdded"/>
         </member>
-        <member name="P:MVVM.Models.Post_Model.CarPost.CarDetails">
-            <inheritdoc cref="F:MVVM.Models.Post_Model.CarPost.carDetails"/>
+        <member name="P:MVVM.Models.Post_Model.CarPost.CarSpecs">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarPost.carSpecs"/>
         </member>
         <member name="M:MVVM.Models.Post_Model.CarPost.OnCarChanged(MVVM.Models.Vehicle_Models.Car.Car_Model.Car)">
             <summary>Executes the logic for when <see cref="P:MVVM.Models.Post_Model.CarPost.Car"/> just changed.</summary>
@@ -93,6 +54,51 @@
         </member>
         <member name="P:MVVM.Models.Post_Model.CarPost.PreviousPictureCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.Models.Post_Model.CarPost.PreviousPicture"/>.</summary>
+        </member>
+        <member name="F:MVVM.Models.Post_Model.CarPost.navigateToDetailsCommand">
+            <summary>The backing field for <see cref="P:MVVM.Models.Post_Model.CarPost.NavigateToDetailsCommand"/>.</summary>
+        </member>
+        <member name="P:MVVM.Models.Post_Model.CarPost.NavigateToDetailsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MVVM.Models.Post_Model.CarPost.NavigateToDetails"/>.</summary>
+        </member>
+        <member name="P:MVVM.Models.Post_Model.CarSpecs.ManufacturerBinding">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarSpecs.manufacturerBinding"/>
+        </member>
+        <member name="P:MVVM.Models.Post_Model.CarSpecs.ModelBinding">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarSpecs.modelBinding"/>
+        </member>
+        <member name="P:MVVM.Models.Post_Model.CarSpecs.GenerationBinding">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarSpecs.generationBinding"/>
+        </member>
+        <member name="P:MVVM.Models.Post_Model.CarSpecs.HasGeneration">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarSpecs.hasGeneration"/>
+        </member>
+        <member name="P:MVVM.Models.Post_Model.CarSpecs.YearBinding">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarSpecs.yearBinding"/>
+        </member>
+        <member name="P:MVVM.Models.Post_Model.CarSpecs.FuelTypeBinding">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarSpecs.fuelTypeBinding"/>
+        </member>
+        <member name="P:MVVM.Models.Post_Model.CarSpecs.EngineCapacityBinding">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarSpecs.engineCapacityBinding"/>
+        </member>
+        <member name="P:MVVM.Models.Post_Model.CarSpecs.HorsepowerBinding">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarSpecs.horsepowerBinding"/>
+        </member>
+        <member name="P:MVVM.Models.Post_Model.CarSpecs.MileageBinding">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarSpecs.mileageBinding"/>
+        </member>
+        <member name="P:MVVM.Models.Post_Model.CarSpecs.PriceBinding">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarSpecs.priceBinding"/>
+        </member>
+        <member name="P:MVVM.Models.Post_Model.CarSpecs.HasTorque">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarSpecs.hasTorque"/>
+        </member>
+        <member name="P:MVVM.Models.Post_Model.CarSpecs.UploadInformation">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarSpecs.uploadInformation"/>
+        </member>
+        <member name="P:MVVM.Models.Post_Model.CarSpecs.ViewedBy">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarSpecs.viewedBy"/>
         </member>
         <member name="P:MVVM.Models.PostPicture.Picture">
             <inheritdoc cref="F:MVVM.Models.PostPicture.picture"/>
@@ -303,6 +309,9 @@
         <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.UserAccount">
             <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.userAccount"/>
         </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.LoggedInUser">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.loggedInUser"/>
+        </member>
         <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.SearchQueryText">
             <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.searchQueryText"/>
         </member>
@@ -470,6 +479,9 @@
         </member>
         <member name="P:MVVM.View_Models.Post_Feed.PostFeedViewModel.PostsCountMessage">
             <inheritdoc cref="F:MVVM.View_Models.Post_Feed.PostFeedViewModel.postsCountMessage"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post_Feed.PostFeedViewModel.LoggedInUser">
+            <inheritdoc cref="F:MVVM.View_Models.Post_Feed.PostFeedViewModel.loggedInUser"/>
         </member>
         <member name="M:MVVM.View_Models.Post_Feed.PostFeedViewModel.OnUpdateNeededChanged(System.Boolean)">
             <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Post_Feed.PostFeedViewModel.UpdateNeeded"/> just changed.</summary>
@@ -671,6 +683,12 @@
         </member>
         <member name="P:MVVM.View_Models.Post.CarPostViewModel.UploadCarPostCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.Post.CarPostViewModel.UploadCarPost"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Post.PostDetailsViewModel.CarPost">
+            <inheritdoc cref="F:MVVM.View_Models.Post.PostDetailsViewModel.carPost"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post.PostDetailsViewModel.UserIsOwner">
+            <inheritdoc cref="F:MVVM.View_Models.Post.PostDetailsViewModel.userIsOwner"/>
         </member>
         <member name="P:MVVM.View_Models.Shell_Navigation.ShellViewModel.UserAccount">
             <inheritdoc cref="F:MVVM.View_Models.Shell_Navigation.ShellViewModel.userAccount"/>

@@ -5,9 +5,11 @@ using MVVM.Models.Base;
 using UserAccount = MVVM.Models.User_Account_Model.UserAccount;
 using CommunityToolkit.Mvvm.Input;
 using Tools.Utility.CarFilterAndValidator;
+using MVVM.View.Post_Details;
 
 namespace MVVM.Models.Post_Model
 {
+    [QueryProperty (nameof(UserAccount),nameof(UserAccount))]
     public partial class CarPost : Entity
     {
         [ObservableProperty] private UserAccount owner;
@@ -32,12 +34,12 @@ namespace MVVM.Models.Post_Model
 
         [ObservableProperty] private string dateTimeAdded;
 
-        [ObservableProperty] private CarDetails carDetails;
+        [ObservableProperty] private CarSpecs carSpecs;
 
         public CarPost(UserAccount owner, string description, string carEquipment, int? price,
             List<PostPicture> postPictures, int views, string dateTimeAdded)
         {
-            carDetails = new();
+            carSpecs = new();
             this.owner = owner;
             this.description = description;
             HeadingTitle = description.Split("\r")[0];
@@ -87,9 +89,20 @@ namespace MVVM.Models.Post_Model
             MainPostPicture = postPictures.IndexOf(mainPostPicture) - 1 < 0 ? postPictures[postPictures.Count - 1] : postPictures[postPictures.IndexOf(MainPostPicture) - 1];
         }
 
+        [RelayCommand]
+        private async Task NavigateToDetails()
+        {
+            await Shell.Current.GoToAsync($"{nameof(PostDetails)}", true,
+                 new Dictionary<string, object>
+                 {
+                     ["CarPost"] = this,
+                     ["UserAccount"] = Owner,
+                 }) ;
+        }
+
         partial void OnCarChanged(Car value)
         {
-            CarDetails = new();
+            CarSpecs = new();
             if (!value.IsEmpty())
             {
                 CarSpecsOverview = $"• {value.Year}" +
@@ -98,23 +111,30 @@ namespace MVVM.Models.Post_Model
                     $" • {value.Horsepower} hp" +
                     $" • {value.FuelType} •";
 
-                carDetails.UploadInformation = $"Uploaded by {Owner.Name} ({Owner.Username})";
-                carDetails.ViewedBy = $"{Views} views";
-                carDetails.ModelBinding = $"Model: {value.Model}";
-                carDetails.ManufacturerBinding = $"Manufacturer: {value.Manufacturer}";
-                carDetails.YearBinding = "Year: " + value.Year.ToString();
-                carDetails.FuelTypeBinding = $"Fuel Type: {value.FuelType}";
-                carDetails.EngineCapacityBinding = $"Cylindric capacity: {value.EngineCapacity.Replace("cmc", "cm3")}";
-                carDetails.HorsepowerBinding = $"Engine power (horsepower): {value.Horsepower.ToString()} hp";
-                carDetails.MileageBinding = $"Mileage: {value.Mileage.ToString()} km";
-                carDetails.PriceBinding = $"{CarFilterFormatter.FormatPrice((int)Price)}";
+                if (DeviceInfo.Platform == DevicePlatform.WinUI || DeviceInfo.Platform==DevicePlatform.MacCatalyst )
+                {
+                    carSpecs.UploadInformation = $"Uploaded by {Owner.Name} ({Owner.Username})";
+                }
+                else
+                {
+                    carSpecs.UploadInformation = $"Uploaded by {Owner.Name}";
+                }
 
+                carSpecs.ViewedBy = $"{Views} views";
+                carSpecs.ModelBinding = $"Model: {value.Model}";
+                carSpecs.ManufacturerBinding = $"Manufacturer: {value.Manufacturer}";
+                carSpecs.YearBinding = "Year: " + value.Year.ToString();
+                carSpecs.FuelTypeBinding = $"Fuel Type: {value.FuelType}";
+                carSpecs.EngineCapacityBinding = $"Cylindric capacity: {value.EngineCapacity.Replace("cmc", "cm3")}";
+                carSpecs.HorsepowerBinding = $"Engine power (horsepower): {value.Horsepower.ToString()} hp";
+                carSpecs.MileageBinding = $"Mileage: {value.Mileage.ToString()} km";
+                carSpecs.PriceBinding = $"{CarFilterFormatter.FormatPrice((int)Price)}";
 
 
                 if (value.Generation is not null)
                 {
-                    carDetails.GenerationBinding = $"Generation: {value.Generation}";
-                    carDetails.HasGeneration = true;
+                    carSpecs.GenerationBinding = $"Generation: {value.Generation}";
+                    carSpecs.HasGeneration = true;
                 }
             }
         }

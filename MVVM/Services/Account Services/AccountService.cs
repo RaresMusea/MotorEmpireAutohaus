@@ -3,6 +3,7 @@ using MVVM.Services.Interfaces;
 using MySqlConnector;
 using Storage.Exceptions;
 using Tools.Encryption;
+using Tools.Handlers;
 using Tools.Utility.Messages;
 using UserAccount = MVVM.Models.User_Account_Model.UserAccount;
 
@@ -82,6 +83,8 @@ namespace MVVM.Services.Account_Services
                 user.PhoneNumber = accounts[0].PhoneNumber;
                 CrossPlatformMessageRenderer.DisplayMobileSnackbar(
                     $"Welcome back, {accounts.ElementAt(0).Name}!", "Close", 5);
+
+                Logger.CurrentlyLoggedInUuid = user.Uuid;
                 return true;
             }
         }

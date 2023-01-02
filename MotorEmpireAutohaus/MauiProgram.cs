@@ -24,6 +24,7 @@ using MVVM.View.Authentication;
 using MVVM.View.Core;
 using MVVM.View.Landing;
 using Account = MVVM.View.Account_Management.Account;
+using MVVM.View.Post_Details;
 
 namespace MotorEmpireAutohaus;
 public static class MauiProgram
@@ -80,6 +81,9 @@ public static class MauiProgram
         builder.Services.AddSingleton<PostFeed>();
         builder.Services.AddSingleton<PostFeedViewModel>();
         builder.Services.AddSingleton<PostFeedService>();
+
+        builder.Services.AddSingleton<PostDetails>();
+        builder.Services.AddSingleton<PostDetailsViewModel>();
 
         return builder.Build();
     }

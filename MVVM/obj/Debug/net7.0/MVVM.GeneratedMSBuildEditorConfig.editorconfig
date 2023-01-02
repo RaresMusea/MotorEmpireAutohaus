@@ -64,6 +64,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = MVVM.View.Landing.MotorEmp
 build_metadata.AdditionalFiles.TargetPath = View\Landing\MotorEmpire.xaml
 build_metadata.AdditionalFiles.RelativePath = View\Landing\MotorEmpire.xaml
 
+[C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Modul 1/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MVVM/View/Post Details/PostDetails.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MVVM.View.Post_Details.PostDetails.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Post Details\PostDetails.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Post Details\PostDetails.xaml
+
 [C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Modul 1/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MVVM/View/Post Feed/PostFeed.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MVVM.View.Post_Feed.PostFeed.xaml

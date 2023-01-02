@@ -41,7 +41,8 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\search.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\tractor.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\trailer.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\truck.png
-obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\watch.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\watchdark.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\watchlight.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\aboutdark.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\aboutlight.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\appsettingsdark.png
@@ -63,7 +64,8 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\search.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\tractor.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\trailer.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\truck.png
-obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\watch.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\watchdark.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\watchlight.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\aboutdark.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\aboutlight.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\appsettingsdark.png
@@ -85,7 +87,8 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\search.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\tractor.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\trailer.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\truck.png
-obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\watch.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\watchdark.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\watchlight.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\aboutdark.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\aboutlight.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\appsettingsdark.png
@@ -107,7 +110,8 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\search.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\tractor.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\trailer.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\truck.png
-obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\watch.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\watchdark.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\watchlight.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\aboutdark.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\aboutlight.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\appsettingsdark.png
@@ -129,7 +133,8 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\search.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\tractor.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\trailer.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\truck.png
-obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\watch.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\watchdark.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\watchlight.png
 obj\Debug\net7.0-android\resizetizer\r\mipmap-anydpi-v26\appicon.xml
 obj\Debug\net7.0-android\resizetizer\r\mipmap-anydpi-v26\appicon_round.xml
 obj\Debug\net7.0-android\resizetizer\r\mipmap-hdpi\appicon.png
