@@ -5,6 +5,8 @@ namespace MVVM.Models.Vehicle_Models.Car.Car_Filter_Model;
 
 public partial class CarFilter : BaseViewModel
 {
+    [ObservableProperty] private string chassisType;
+
     [ObservableProperty] private string manufacturer;
 
     [ObservableProperty] private string modelName;
@@ -21,7 +23,7 @@ public partial class CarFilter : BaseViewModel
 
     public bool IsEmpty()
     {
-        return string.IsNullOrEmpty(manufacturer) && string.IsNullOrEmpty(modelName) && priceRange != null
-               && mileageRange != null && string.IsNullOrEmpty(fuelType);
+        return string.IsNullOrEmpty(manufacturer) && string.IsNullOrEmpty(modelName) && priceRange == null
+               && mileageRange == null && string.IsNullOrEmpty(fuelType) && string.IsNullOrEmpty(chassisType);
     }
 }

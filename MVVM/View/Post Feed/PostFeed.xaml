@@ -24,7 +24,7 @@
                        Margin="25">
                 </Label>
 
-                <Frame BackgroundColor="#414141"
+                <Frame BackgroundColor="{AppThemeBinding Dark=#414141, Light=#dbdbdb}"
                        Margin="40,0,40,0"
                        x:Name="MainFrame"
                        CornerRadius="20"
@@ -46,7 +46,7 @@
                         <CollectionView ItemsSource="{Binding Posts}">
                             <CollectionView.ItemTemplate>
                                 <DataTemplate x:DataType="model:CarPost">
-                                    <Frame BackgroundColor="#676767"
+                                    <Frame BackgroundColor="{AppThemeBinding Dark=#676767, Light=#FAF7F0}"
                                            Margin="10,20,10,0"
                                            CornerRadius="15"
                                            Padding="10,10,10,20"
@@ -215,7 +215,7 @@
                                                            HorizontalOptions="Center" />
 
                                                     <HorizontalStackLayout Margin="0,60,0,15">
-                                                        <Image Source="watch.png"
+                                                        <Image Source="{AppThemeBinding Dark=watchdark.png, Light=watchlight.png}"
                                                                WidthRequest="25"
                                                                HeightRequest="25"
                                                                Margin="20,0,20,0" />

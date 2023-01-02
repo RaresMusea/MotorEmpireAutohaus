@@ -29,6 +29,8 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\brakedisc.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\car.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\constructiontruck.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\dotnet_bot.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\eyeglassesdark.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\eyeglasseslight.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\jumbotronblack.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\jumbotronwhite.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\landing.png
@@ -49,6 +51,8 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\brakedisc.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\car.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\constructiontruck.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\dotnet_bot.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\eyeglassesdark.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\eyeglasseslight.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\jumbotronblack.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\jumbotronwhite.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\landing.png
@@ -69,6 +73,8 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\brakedisc.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\car.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\constructiontruck.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\dotnet_bot.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\eyeglassesdark.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\eyeglasseslight.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\jumbotronblack.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\jumbotronwhite.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\landing.png
@@ -89,6 +95,8 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\brakedisc.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\car.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\constructiontruck.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\dotnet_bot.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\eyeglassesdark.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\eyeglasseslight.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\jumbotronblack.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\jumbotronwhite.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\landing.png
@@ -109,6 +117,8 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\brakedisc.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\car.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\constructiontruck.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\dotnet_bot.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\eyeglassesdark.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\eyeglasseslight.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\jumbotronblack.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\jumbotronwhite.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\landing.png

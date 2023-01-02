@@ -118,6 +118,9 @@
         <member name="P:MVVM.Models.User_Account_Model.UserAccount.PhoneNumber">
             <inheritdoc cref="F:MVVM.Models.User_Account_Model.UserAccount.phoneNumber"/>
         </member>
+        <member name="P:MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.ChassisType">
+            <inheritdoc cref="F:MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.chassisType"/>
+        </member>
         <member name="P:MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.Manufacturer">
             <inheritdoc cref="F:MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter.manufacturer"/>
         </member>
@@ -383,6 +386,9 @@
         </member>
         <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.SelectedMaxMileage">
             <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.selectedMaxMileage"/>
+        </member>
+        <member name="M:MVVM.View_Models.Core.MotorEmpireViewModel.OnSelectedCarBodyTypeChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Core.MotorEmpireViewModel.SelectedCarBodyType"/> just changed.</summary>
         </member>
         <member name="M:MVVM.View_Models.Core.MotorEmpireViewModel.OnSelectedManufacturerChanged(System.String)">
             <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Core.MotorEmpireViewModel.SelectedManufacturer"/> just changed.</summary>

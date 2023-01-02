@@ -390,8 +390,7 @@
                     <VerticalStackLayout IsVisible="{Binding PictureUploadVisible}" x:Name="UploadPicturesLayout">
                         <VerticalStackLayout>
                             <Label
-                                Text="You can't sell a car without letting the potential buyer see it. Upload some photos of your car to make the sale-buying process more efficient!
-                                   Don't forget that the first selected picture will be the cover of your uploaded post!"
+                                Text="You can't sell a car without letting the potential buyer see it. Upload some photos of your car to make the sale-buying process more efficient!"
                                 FontSize="16"
                                 Margin="0,5,0,45"
                                 HorizontalOptions="Center"
@@ -503,7 +502,7 @@
                             FontAttributes="Bold" />
 
                         <Label
-                            Text="Please provide a description for your vehicle. The desription can have at most 6000 characters."
+                            Text="Please provide a description for your vehicle. The desription can have at most 6000 characters. The first line on your description will be the title of your post."
                             FontFamily="Kollektif"
                             x:Name="DescriptionDirectiveLabel"
                             FontSize="18"

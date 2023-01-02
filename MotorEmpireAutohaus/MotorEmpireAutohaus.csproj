@@ -88,7 +88,8 @@
 	  <None Remove="Resources\Images\trailer.svg" />
 	  <None Remove="Resources\Images\truck.svg" />
 	  <None Remove="Resources\Images\van.png" />
-	  <None Remove="Resources\Images\watch.svg" />
+	  <None Remove="Resources\Images\watchdark.svg" />
+	  <None Remove="Resources\Images\watchlight.svg" />
 	  <None Remove="Resources\Splash\logo.svg" />
 	</ItemGroup>
 

@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using MVVM.Services.Car_Filter_Services;
 using MVVM.View.Post_Feed;
 using MVVM.View.Post_Upload;
+using System.Diagnostics;
 using Tools.Utility.CarFilterAndValidator;
 using BaseViewModel = MVVM.View_Models.Base.BaseViewModel;
 using CarFilter = MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter;
@@ -86,7 +87,7 @@ public partial class MotorEmpireViewModel : BaseViewModel
 
     [ObservableProperty] private List<int> upperYear;
 
-    [ObservableProperty] private int selectedUpperYear = 2022;
+    [ObservableProperty] private int selectedUpperYear = 2023;
 
     [ObservableProperty] private List<string> fuelTypes;
 
@@ -134,9 +135,9 @@ public partial class MotorEmpireViewModel : BaseViewModel
         }
 
         InitializePriceBounds(CarFilterFormatter.FormatPrice);
-        LowerYear = CarFilterFormatter.InitializeYears(2021, 2000);
+        LowerYear = CarFilterFormatter.InitializeYears(2022, 2000);
         LowerYear = LowerYear.OrderBy(x => x).ToList();
-        UpperYear = CarFilterFormatter.InitializeYears(2022, 2001);
+        UpperYear = CarFilterFormatter.InitializeYears(2023, 2001);
         fuelTypes = new()
             { "Gasoline", "Gasoline + CNG", "Gasoline + LPG", "Diesel", "Electric", "Ethanol", "Hybrid", "Hydrogen" };
         InitializeMileageBounds();
@@ -201,6 +202,30 @@ public partial class MotorEmpireViewModel : BaseViewModel
         }
     }
 
+    private void ResetSelections()
+    {
+        Filter = null;
+        SelectedCarBodyType = null;
+        SelectedManufacturer = null;
+        SelectedModel = null;
+        SelectedLowerPriceBound = null;
+        SelectedUpperPriceBound = null;
+        SelectedFuelType = null;
+        SelectedLowerYear = 2000;
+        SelectedUpperYear = 2023;
+        SelectedGeneration = null;
+        ModelHasGenerations = false;
+        SelectedMinMileage = null;
+        SelectedMaxMileage = null;
+
+        
+    }
+
+    partial void OnSelectedCarBodyTypeChanged(string value)
+    {
+        filtersWereApplied = true;
+    }
+
     partial void OnSelectedManufacturerChanged(string value)
     {
         Models = carFilterService.GetAllModelsFromManufacturer(selectedManufacturer);
@@ -209,8 +234,16 @@ public partial class MotorEmpireViewModel : BaseViewModel
 
     partial void OnSelectedManufacturerIndexChanged(int value)
     {
-        Models = carFilterService.GetAllModelsFromManufacturer(manufacturers[value]);
-        filtersWereApplied = true;
+        try
+        {
+            Models = carFilterService.GetAllModelsFromManufacturer(manufacturers[value]);
+            filtersWereApplied = true;
+        }
+        catch (ArgumentOutOfRangeException ex)
+        {
+            Debugger.Log(1, "Exception Thrown", $"Argument Out Of Range\nDetails:{ex.Message}");
+            filtersWereApplied = false;
+        }
     }
 
     partial void OnSelectedModelChanged(string value)
@@ -222,23 +255,47 @@ public partial class MotorEmpireViewModel : BaseViewModel
 
     partial void OnSelectedModelIndexChanged(int value)
     {
-        Generations = carFilterService.GetGenerationBasedOnModel(models[value]);
-        ModelHasGenerations = Generations.Count != 0;
-        filtersWereApplied = true;
+        try
+        {
+            Generations = carFilterService.GetGenerationBasedOnModel(models[value]);
+            ModelHasGenerations = Generations.Count != 0;
+            filtersWereApplied = true;
+        }
+        catch (ArgumentOutOfRangeException ex) 
+        {
+            Debugger.Log(1, "Exception Thrown", $"Argument Out Of Range\nDetails:{ex.Message}");
+            filtersWereApplied = false;
+        }
     }
 
     partial void OnSelectedLowerPriceIndexChanged(int value)
     {
-        lowerBound = lowerPrice[value];
-        CarFilterFormatter.CompareValuesAndGenerateErrorsIfExisting(lowerBound, upperBound, UpperLowerFilter.Price);
-        filtersWereApplied = true;
+        try
+        {
+            lowerBound = lowerPrice[value];
+            CarFilterFormatter.CompareValuesAndGenerateErrorsIfExisting(lowerBound, upperBound, UpperLowerFilter.Price);
+            filtersWereApplied = true;
+        }
+        catch(ArgumentOutOfRangeException ex)
+        {
+            Debugger.Log(1, "Exception Thrown", $"Argument Out Of Range\nDetails:{ex.Message}");
+            filtersWereApplied = false;
+        }
     }
 
     partial void OnSelectedUpperPriceIndexChanged(int value)
     {
-        upperBound = upperPrice[value];
-        CarFilterFormatter.CompareValuesAndGenerateErrorsIfExisting(lowerBound, upperBound, UpperLowerFilter.Price);
-        filtersWereApplied = true;
+        try
+        {
+            upperBound = upperPrice[value];
+            CarFilterFormatter.CompareValuesAndGenerateErrorsIfExisting(lowerBound, upperBound, UpperLowerFilter.Price);
+            filtersWereApplied = true;
+        }
+        catch(ArgumentOutOfRangeException ex)
+        {
+            Debugger.Log(1, "Exception Thrown", $"Argument Out Of Range\nDetails:{ex.Message}");
+            filtersWereApplied = false;
+        }
     }
 
 
@@ -287,7 +344,8 @@ public partial class MotorEmpireViewModel : BaseViewModel
     {
         if (filtersWereApplied)
         {
-            //Filter = new();
+            Filter = new();
+            Filter.ChassisType = selectedCarBodyType;
             Filter.Manufacturer = SelectedManufacturer;
             Filter.ModelName = SelectedModel;
             Filter.Generation = SelectedGeneration;
@@ -320,9 +378,12 @@ public partial class MotorEmpireViewModel : BaseViewModel
     private async void NavigateToFeed()
     {
         ApplyFilters();
+        UpdateNeeded = true;
         await Shell.Current.GoToAsync($"{nameof(PostFeed)}?SearchQueryText={SearchQueryText}", true,
             new Dictionary<string, object> { ["CarFilter"] = filter });
+
         SearchQueryText = "";
+        ResetSelections();
     }
 
 
@@ -342,7 +403,9 @@ public partial class MotorEmpireViewModel : BaseViewModel
             new Dictionary<string, object> { ["CarFilter"] = filter,
                 ["UpdateNeeded"]=UpdateNeeded,
             });
+
         SearchQueryText = "";
+        ResetSelections();
     }
 
 }

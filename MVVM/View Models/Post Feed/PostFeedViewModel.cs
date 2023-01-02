@@ -4,6 +4,7 @@ using MVVM.Models;
 using MVVM.Models.Post_Model;
 using MVVM.Services;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using BaseViewModel = MVVM.View_Models.Base.BaseViewModel;
 using CarFilter = MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter;
 
@@ -53,6 +54,11 @@ namespace MVVM.View_Models.Post_Feed
                 Message = "There are no posts available for the moment";
             }
 
+            if(!carFilter.IsEmpty())
+            {
+                Message = "Filtered search enabled. Showing filtered results";
+            }
+
             if (!string.IsNullOrEmpty(searchQueryText))
             {
                 Message = $"Showing results for `{SearchQueryText}`";
@@ -70,8 +76,23 @@ namespace MVVM.View_Models.Post_Feed
                 GenerateResultsDependingOnSearchQuery();
             }
 
-            carPosts.ForEach(posts.Add);
+            if (!carFilter.IsEmpty())
+            {
+                    ApplyBodyTypeFilters();
+                    ApplyManufacturerFilter();
+                    ApplyModelFilter();
+                    ApplyGenerationFilter();
 
+
+            }
+
+            carPosts.ForEach(posts.Add);
+            PostsCount = carPosts.Count;
+
+            if (posts.Count==0)
+            {
+                PostsCountMessage = $"No results found.";
+            }
 
         }
 
@@ -82,9 +103,55 @@ namespace MVVM.View_Models.Post_Feed
                                                select post;
 
             carPosts=queryResult.ToList();
-            PostsCount = carPosts.Count;
 
-                       
+        }
+
+        private void ApplyBodyTypeFilters()
+        {
+            if (!string.IsNullOrEmpty(carFilter.ChassisType)) 
+            {
+                IEnumerable<CarPost> queryResult = from post in carPosts
+                                                   where post.Car.ChassisType.Equals(carFilter.ChassisType)
+                                                   select post;
+
+                carPosts=queryResult.ToList();
+            }
+        }
+
+        private void ApplyManufacturerFilter()
+        {
+            if(!string.IsNullOrEmpty(carFilter.Manufacturer))
+            {
+                IEnumerable<CarPost> queryResult = from post in carPosts
+                                                   where post.Car.Manufacturer.Equals(carFilter.Manufacturer)
+                                                   select post;
+
+                carPosts=queryResult.ToList();
+            }
+        }
+
+        private void ApplyModelFilter()
+        {
+            if (!string.IsNullOrEmpty(carFilter.ModelName))
+            {
+                IEnumerable<CarPost>queryResult = from post in carPosts
+                                                  where post.Car.Model.Equals(carFilter.ModelName)
+                                                  select post;
+
+                carPosts=queryResult.ToList();
+            }
+        }
+
+        private void ApplyGenerationFilter()
+        {
+            if (!string.IsNullOrEmpty(carFilter.Generation))
+            {
+                IEnumerable<CarPost> queryResult = from post in carPosts
+                                                   where post.Car.Generation.Equals(carFilter.Generation)
+                                                   select post;
+
+                carPosts = queryResult.ToList();
+            }
         }
 
 
@@ -114,24 +181,15 @@ namespace MVVM.View_Models.Post_Feed
 
         partial void OnPostsCountChanged(int value)
         {
+            string dynamicText = value == 1 ? "result" : "results";
+
             if (!string.IsNullOrEmpty(SearchQueryText))
             {
-                string dynamicText = "results";
-
-                if (value == 1)
-                {
-                    dynamicText = "result";
-                }
-
                 PostsCountMessage = $"Based on your search, we found {value} {dynamicText}";
-
-                if (value == 0 || carPosts.Count==0)
-                {
-                    PostsCountMessage = $"No results found.";
-                }
-
-                
             }
+
+
+            PostsCountMessage = $"Found {value} {dynamicText}";
         }
 
 
