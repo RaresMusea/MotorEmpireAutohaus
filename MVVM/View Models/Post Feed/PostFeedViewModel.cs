@@ -78,12 +78,14 @@ namespace MVVM.View_Models.Post_Feed
 
             if (!carFilter.IsEmpty())
             {
-                    ApplyBodyTypeFilters();
-                    ApplyManufacturerFilter();
-                    ApplyModelFilter();
-                    ApplyGenerationFilter();
-
-
+                ApplyBodyTypeFilters();
+                ApplyManufacturerFilter();
+                ApplyModelFilter();
+                ApplyGenerationFilter();
+                ApplyPriceFilter();
+                ApplyYearRangeFilter();
+                ApplyFuelTypeFilter();
+                ApplyMileageFilter();
             }
 
             carPosts.ForEach(posts.Add);
@@ -130,6 +132,7 @@ namespace MVVM.View_Models.Post_Feed
             }
         }
 
+
         private void ApplyModelFilter()
         {
             if (!string.IsNullOrEmpty(carFilter.ModelName))
@@ -154,6 +157,55 @@ namespace MVVM.View_Models.Post_Feed
             }
         }
 
+        private void ApplyYearRangeFilter()
+        {
+            if(carFilter.YearRange is not null)
+            {
+                IEnumerable<CarPost> queryResult = from post in carPosts
+                                                   where post.Car.Year >= carFilter.YearRange.Item1 && 
+                                                   post.Car.Year <= carFilter.YearRange.Item2
+                                                   select post;
+
+                carPosts = queryResult.ToList();
+            }
+        }
+
+        private void ApplyPriceFilter()
+        {
+            if(carFilter.PriceRange is not null)
+            {
+                IEnumerable<CarPost> queryResult = from post in carPosts
+                                                   where post.Price >= carFilter.PriceRange.Item1 &&
+                                                   post.Price <= carFilter.PriceRange.Item2
+                                                   select post;
+
+                carPosts = queryResult.ToList();
+            }
+        }
+
+        private void ApplyFuelTypeFilter()
+        {
+            if (!string.IsNullOrEmpty(carFilter.FuelType))
+            {
+                IEnumerable<CarPost> queryResult = from post in carPosts
+                                                   where post.Car.FuelType.Equals(carFilter.FuelType)
+                                                   select post;
+
+                carPosts = queryResult.ToList();
+            }
+        }
+
+        private void ApplyMileageFilter()
+        {
+            if(carFilter.MileageRange is not null)
+            {
+                IEnumerable<CarPost> queryResult = from post in carPosts
+                                                   where post.Car.Mileage >= carFilter.MileageRange.Item1 && post.Car.Mileage <= carFilter.MileageRange.Item2
+                                                   select post;
+
+                carPosts = queryResult.ToList();
+            }
+        }
 
         private void RefreshPosts()
         {

@@ -195,17 +195,30 @@ namespace MVVM.View_Models.Post
         }
 
         [RelayCommand]
-        private void SwitchUploadFormWithPictureUpload()
+        private async void SwitchUploadFormWithPictureUpload()
         {
-            VehiclePostUploadValidationResult result = VehiclePostValidator.AreCarDetailsValid(post.Car);
-            if (result.ValidationPassed)
+            VehiclePostUploadValidationResult carDetails = VehiclePostValidator.AreCarDetailsValid(post.Car);
+            VehiclePostUploadValidationResult priceRange = VehiclePostValidator.IsPriceValid(post.Price);
+
+            if (carDetails.ValidationPassed && priceRange.ValidationPassed)
             {
                 CarDetailsFormVisible = false;
                 PictureUploadVisible = true;
             }
             else
             {
-                CrossPlatformMessageRenderer.RenderMessages(result.Remark, "Retry", 10);
+                string message = carDetails.Remark +
+                         "\n\nCannot go further with your car selling request because one ore more fields were mismatched!\nPlease retry" +
+                         " completing the form by paying more attention to the fields that were reset!\n"
+                         + priceRange.Remark;
+
+                if (DeviceInfo.Platform == DevicePlatform.WinUI)
+                {
+                    CrossPlatformMessageRenderer.RenderMessages(message, "Retry", 10);
+                    return;
+                }
+
+                await Application.Current.MainPage.DisplayAlert("Motor Empire Autogaus - Upload failed", message, "Retry");
             }
         }
 

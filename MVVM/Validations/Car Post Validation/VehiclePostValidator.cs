@@ -46,6 +46,7 @@ namespace MVVM.Validations.Car_Post_Validation
                 CrossPlatformMessageRenderer.RenderMessages(
                     "The year you have provided is not valid because it doesn't match the generation year bounds!",
                     "Retry", 6);
+
                 return null;
             }
         }
@@ -74,6 +75,12 @@ namespace MVVM.Validations.Car_Post_Validation
             {
                 remark.Append(
                     "The provided production year does not match the period when that vehicle was produced!\n");
+            }
+
+            var validYear = IsYearValid(car.Year);
+            if (!validYear.ValidationPassed)
+            {
+                remark.Append(validYear.Remark+'\n');
             }
 
             if (string.IsNullOrEmpty(car.FuelType))
@@ -116,9 +123,34 @@ namespace MVVM.Validations.Car_Post_Validation
                 return new VehiclePostUploadValidationResult(true, remark.ToString());
             }
 
-            remark.Append(
-                "\n\nCannot go further with your car selling request because one ore more fields were mismatched!\nPlease retry completing the form by paying more attention to the fields that were reset!\n");
+            
             return new VehiclePostUploadValidationResult(false, remark.ToString());
         }
+
+        public static VehiclePostUploadValidationResult IsPriceValid(int? price)
+        {
+            if(price is null)
+            {
+                return new VehiclePostUploadValidationResult(false, "The price field cannot be empty!");
+            }
+
+            if (price < 1000 || price>250000)
+            {
+                return new VehiclePostUploadValidationResult(false, "The price cannot be lower than 1 000 € and greater than 250 000 € !");
+            }
+
+            return new VehiclePostUploadValidationResult(true, "");
+        }
+
+        private static VehiclePostUploadValidationResult IsYearValid(int year)
+        {
+            if(year<1950 || year > 2023)
+            {
+                return new VehiclePostUploadValidationResult(false, "The car you want to sell should be produced between 1950 and 2023!");
+            }
+
+            return new VehiclePostUploadValidationResult(true, "");
+        }
+
     }
 }

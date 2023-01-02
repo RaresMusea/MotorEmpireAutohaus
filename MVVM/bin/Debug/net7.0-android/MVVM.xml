@@ -387,6 +387,9 @@
         <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.SelectedMaxMileage">
             <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.selectedMaxMileage"/>
         </member>
+        <member name="P:MVVM.View_Models.Core.MotorEmpireViewModel.SearchBarEnabled">
+            <inheritdoc cref="F:MVVM.View_Models.Core.MotorEmpireViewModel.searchBarEnabled"/>
+        </member>
         <member name="M:MVVM.View_Models.Core.MotorEmpireViewModel.OnSelectedCarBodyTypeChanged(System.String)">
             <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Core.MotorEmpireViewModel.SelectedCarBodyType"/> just changed.</summary>
         </member>

@@ -5,6 +5,7 @@ using MVVM.View.Post_Feed;
 using MVVM.View.Post_Upload;
 using System.Diagnostics;
 using Tools.Utility.CarFilterAndValidator;
+using Tools.Utility.Messages;
 using BaseViewModel = MVVM.View_Models.Base.BaseViewModel;
 using CarFilter = MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter;
 using UserAccount = MVVM.Models.User_Account_Model.UserAccount;
@@ -83,7 +84,7 @@ public partial class MotorEmpireViewModel : BaseViewModel
 
     [ObservableProperty] private List<int> lowerYear;
 
-    [ObservableProperty] private int selectedLowerYear = 2000;
+    [ObservableProperty] private int selectedLowerYear = 1950;
 
     [ObservableProperty] private List<int> upperYear;
 
@@ -105,6 +106,8 @@ public partial class MotorEmpireViewModel : BaseViewModel
 
     [ObservableProperty] private string selectedMaxMileage;
 
+    [ObservableProperty] private bool searchBarEnabled;
+
     private int lowerMileage = 500;
     private int upperMileage = 300000;
 
@@ -124,6 +127,7 @@ public partial class MotorEmpireViewModel : BaseViewModel
 
     private void InitializeProps()
     {
+        SearchBarEnabled = true;
         filtersWereApplied = false;
         RetrieveCarBodyTypes();
         RetrieveAllManufacturers();
@@ -135,9 +139,9 @@ public partial class MotorEmpireViewModel : BaseViewModel
         }
 
         InitializePriceBounds(CarFilterFormatter.FormatPrice);
-        LowerYear = CarFilterFormatter.InitializeYears(2022, 2000);
+        LowerYear = CarFilterFormatter.InitializeYears(2022, 1950);
         LowerYear = LowerYear.OrderBy(x => x).ToList();
-        UpperYear = CarFilterFormatter.InitializeYears(2023, 2001);
+        UpperYear = CarFilterFormatter.InitializeYears(2023, 1971);
         fuelTypes = new()
             { "Gasoline", "Gasoline + CNG", "Gasoline + LPG", "Diesel", "Electric", "Ethanol", "Hybrid", "Hydrogen" };
         InitializeMileageBounds();
@@ -149,13 +153,13 @@ public partial class MotorEmpireViewModel : BaseViewModel
         {
             1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500,
             10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000,
-            85000, 90000, 95000
+            85000, 90000, 95000, 100000, 150000, 200000, 250000, 300000,350000
         };
         upperPrice = new()
         {
             1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000,
             15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000,
-            90000, 95000, 100000
+            90000, 95000, 100000, 150000, 200000, 250000, 300000,350000,400000
         };
         upperPrice = upperPrice.OrderByDescending(i => i).ToList();
         lowerPriceBound = new();
@@ -202,23 +206,36 @@ public partial class MotorEmpireViewModel : BaseViewModel
         }
     }
 
+    private void ResetFilter()
+    {
+        Filter.ChassisType = null;
+        Filter.Manufacturer = null;
+        Filter.YearRange = null;
+        Filter.PriceRange = null;
+        Filter.MileageRange= null;
+        Filter.FuelType = null;
+        Filter.Generation = null;
+        Filter.ModelName = null;
+    }
+
     private void ResetSelections()
     {
-        Filter = null;
+        ResetFilter();
         SelectedCarBodyType = null;
         SelectedManufacturer = null;
         SelectedModel = null;
         SelectedLowerPriceBound = null;
         SelectedUpperPriceBound = null;
         SelectedFuelType = null;
-        SelectedLowerYear = 2000;
+        SelectedLowerYear = 1950;
         SelectedUpperYear = 2023;
         SelectedGeneration = null;
         ModelHasGenerations = false;
         SelectedMinMileage = null;
         SelectedMaxMileage = null;
 
-        
+        UpdateNeeded = false;
+
     }
 
     partial void OnSelectedCarBodyTypeChanged(string value)
@@ -326,25 +343,42 @@ public partial class MotorEmpireViewModel : BaseViewModel
 
     partial void OnSelectedMinMileageChanged(string value)
     {
-        lowerMileage = minMileage[MinMileageBounds.IndexOf(value)];
-        CarFilterFormatter.CompareValuesAndGenerateErrorsIfExisting(lowerMileage, upperMileage,
-            UpperLowerFilter.Mileage);
-        filtersWereApplied = true;
+        try
+        {
+            lowerMileage = minMileage[MinMileageBounds.IndexOf(value)];
+            CarFilterFormatter.CompareValuesAndGenerateErrorsIfExisting(lowerMileage, upperMileage,
+                UpperLowerFilter.Mileage);
+            filtersWereApplied = true;
+
+        }
+        catch (ArgumentOutOfRangeException ex)
+        {
+            Debugger.Log(1, "Exception Thrown", $"Argument Out Of Range\nDetails:{ex.Message}");
+            filtersWereApplied = false;
+        }
     }
 
     partial void OnSelectedMaxMileageChanged(string value)
     {
-        upperMileage = maxMileage[MaxMileageBounds.IndexOf(value)];
-        CarFilterFormatter.CompareValuesAndGenerateErrorsIfExisting(lowerMileage, upperMileage,
-            UpperLowerFilter.Mileage);
-        filtersWereApplied = true;
+        try
+        {
+            upperMileage = maxMileage[MaxMileageBounds.IndexOf(value)];
+            CarFilterFormatter.CompareValuesAndGenerateErrorsIfExisting(lowerMileage, upperMileage,
+                UpperLowerFilter.Mileage);
+            filtersWereApplied = true;
+        }
+        catch (ArgumentOutOfRangeException ex)
+        {
+            Debugger.Log(1, "Exception Thrown", $"Argument Out Of Range\nDetails:{ex.Message}");
+            filtersWereApplied = false;
+        }
     }
 
     private void ApplyFilters()
     {
         if (filtersWereApplied)
         {
-            Filter = new();
+            //Filter = new();
             Filter.ChassisType = selectedCarBodyType;
             Filter.Manufacturer = SelectedManufacturer;
             Filter.ModelName = SelectedModel;
@@ -380,7 +414,8 @@ public partial class MotorEmpireViewModel : BaseViewModel
         ApplyFilters();
         UpdateNeeded = true;
         await Shell.Current.GoToAsync($"{nameof(PostFeed)}?SearchQueryText={SearchQueryText}", true,
-            new Dictionary<string, object> { ["CarFilter"] = filter });
+            new Dictionary<string, object> { ["CarFilter"] = filter,
+                ["UpdateNeeded"]=UpdateNeeded,});
 
         SearchQueryText = "";
         ResetSelections();
@@ -397,15 +432,24 @@ public partial class MotorEmpireViewModel : BaseViewModel
     [RelayCommand]
     private async void OnSearchButtonPressed()
     {
-        ApplyFilters();
-        UpdateNeeded = true;
-        await Shell.Current.GoToAsync($"{nameof(PostFeed)}?SearchQueryText={SearchQueryText}", true,
-            new Dictionary<string, object> { ["CarFilter"] = filter,
-                ["UpdateNeeded"]=UpdateNeeded,
-            });
+        if (!string.IsNullOrEmpty(SearchQueryText))
+        {
+            ApplyFilters();
+            UpdateNeeded = true;
+            await Shell.Current.GoToAsync($"{nameof(PostFeed)}?SearchQueryText={SearchQueryText}", true,
+                new Dictionary<string, object>
+                {
+                    ["CarFilter"] = filter,
+                    ["UpdateNeeded"] = UpdateNeeded,
+                });
 
-        SearchQueryText = "";
-        ResetSelections();
+            SearchQueryText = "";
+            ResetSelections();
+            UpdateNeeded = false;
+            return;
+        }
+
+        CrossPlatformMessageRenderer.RenderMessages("The search bar cannot be empty!", "Retry", 4);
     }
 
 }
