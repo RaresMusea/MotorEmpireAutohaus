@@ -60,6 +60,10 @@
 	  <None Remove="Resources\Images\auth_light.png" />
 	  <None Remove="Resources\Images\brakedisc.svg" />
 	  <None Remove="Resources\Images\car.svg" />
+	  <None Remove="Resources\Images\caretdowndark.svg" />
+	  <None Remove="Resources\Images\caretdownlight.svg" />
+	  <None Remove="Resources\Images\caretupdark.svg" />
+	  <None Remove="Resources\Images\caretuplight.svg" />
 	  <None Remove="Resources\Images\constructiontruck.svg" />
 	  <None Remove="Resources\Images\email.png" />
 	  <None Remove="Resources\Images\eye.png" />

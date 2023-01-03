@@ -40,6 +40,9 @@
         <member name="P:MVVM.Models.Post_Model.CarPost.CarSpecs">
             <inheritdoc cref="F:MVVM.Models.Post_Model.CarPost.carSpecs"/>
         </member>
+        <member name="P:MVVM.Models.Post_Model.CarPost.Post">
+            <inheritdoc cref="F:MVVM.Models.Post_Model.CarPost.post"/>
+        </member>
         <member name="M:MVVM.Models.Post_Model.CarPost.OnCarChanged(MVVM.Models.Vehicle_Models.Car.Car_Model.Car)">
             <summary>Executes the logic for when <see cref="P:MVVM.Models.Post_Model.CarPost.Car"/> just changed.</summary>
         </member>
@@ -59,7 +62,7 @@
             <summary>The backing field for <see cref="P:MVVM.Models.Post_Model.CarPost.NavigateToDetailsCommand"/>.</summary>
         </member>
         <member name="P:MVVM.Models.Post_Model.CarPost.NavigateToDetailsCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MVVM.Models.Post_Model.CarPost.NavigateToDetails"/>.</summary>
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.Models.Post_Model.CarPost.NavigateToDetails"/>.</summary>
         </member>
         <member name="P:MVVM.Models.Post_Model.CarSpecs.ManufacturerBinding">
             <inheritdoc cref="F:MVVM.Models.Post_Model.CarSpecs.manufacturerBinding"/>
@@ -492,6 +495,12 @@
         <member name="M:MVVM.View_Models.Post_Feed.PostFeedViewModel.OnPostsCountChanged(System.Int32)">
             <summary>Executes the logic for when <see cref="P:MVVM.View_Models.Post_Feed.PostFeedViewModel.PostsCount"/> just changed.</summary>
         </member>
+        <member name="F:MVVM.View_Models.Post_Feed.PostFeedViewModel.goToDetailsPageCommand">
+            <summary>The backing field for <see cref="P:MVVM.View_Models.Post_Feed.PostFeedViewModel.GoToDetailsPageCommand"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Post_Feed.PostFeedViewModel.GoToDetailsPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MVVM.View_Models.Post_Feed.PostFeedViewModel.GoToDetailsPage(MVVM.Models.Post_Model.CarPost)"/>.</summary>
+        </member>
         <member name="P:MVVM.View_Models.Post.CarPostViewModel.Post">
             <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.post"/>
         </member>
@@ -642,6 +651,12 @@
         <member name="P:MVVM.View_Models.Post.CarPostViewModel.SwitchUploadFormWithPictureUploadCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.Post.CarPostViewModel.SwitchUploadFormWithPictureUpload"/>.</summary>
         </member>
+        <member name="F:MVVM.View_Models.Post.CarPostViewModel.goToDetailsCommand">
+            <summary>The backing field for <see cref="P:MVVM.View_Models.Post.CarPostViewModel.GoToDetailsCommand"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Post.CarPostViewModel.GoToDetailsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MVVM.View_Models.Post.CarPostViewModel.GoToDetails(MVVM.Models.Post_Model.CarPost)"/>.</summary>
+        </member>
         <member name="F:MVVM.View_Models.Post.CarPostViewModel.uploadCarPostPicturesCommand">
             <summary>The backing field for <see cref="P:MVVM.View_Models.Post.CarPostViewModel.UploadCarPostPicturesCommand"/>.</summary>
         </member>
@@ -684,8 +699,8 @@
         <member name="P:MVVM.View_Models.Post.CarPostViewModel.UploadCarPostCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.Post.CarPostViewModel.UploadCarPost"/>.</summary>
         </member>
-        <member name="P:MVVM.View_Models.Post.PostDetailsViewModel.CarPost">
-            <inheritdoc cref="F:MVVM.View_Models.Post.PostDetailsViewModel.carPost"/>
+        <member name="P:MVVM.View_Models.Post.PostDetailsViewModel.Post">
+            <inheritdoc cref="F:MVVM.View_Models.Post.PostDetailsViewModel.post"/>
         </member>
         <member name="P:MVVM.View_Models.Post.PostDetailsViewModel.UserIsOwner">
             <inheritdoc cref="F:MVVM.View_Models.Post.PostDetailsViewModel.userIsOwner"/>

@@ -24,7 +24,10 @@ using MVVM.View.Authentication;
 using MVVM.View.Core;
 using MVVM.View.Landing;
 using Account = MVVM.View.Account_Management.Account;
-using MVVM.View.Post_Details;
+using MVVM.Models;
+using MVVM.View.Post_Info;
+using MVVM.View_Models.Post_Info;
+using MVVM.Models.Vehicle_Models.Car.Car_Model;
 
 namespace MotorEmpireAutohaus;
 public static class MauiProgram
@@ -74,7 +77,6 @@ public static class MauiProgram
         builder.Services.AddSingleton<UploadPost>();
         builder.Services.AddSingleton<CarService>();
         builder.Services.AddSingleton<CarPostService>();
-        builder.Services.AddSingleton<CarPost>();
         builder.Services.AddSingleton<CarPostViewModel>();
 
         builder.Services.AddSingleton<CarFilter>();
@@ -82,8 +84,13 @@ public static class MauiProgram
         builder.Services.AddSingleton<PostFeedViewModel>();
         builder.Services.AddSingleton<PostFeedService>();
 
-        builder.Services.AddSingleton<PostDetails>();
-        builder.Services.AddSingleton<PostDetailsViewModel>();
+        builder.Services.AddSingleton<CarPost>();
+        builder.Services.AddSingleton<PostPicture>();
+        builder.Services.AddSingleton<CarSpecs>();
+
+        builder.Services.AddTransient<PostInfo>();
+        builder.Services.AddSingleton<MVVM.Models.Vehicle_Models.Car.Car_Model.Car>();
+        builder.Services.AddTransient<PostInfoViewModel>();
 
         return builder.Build();
     }

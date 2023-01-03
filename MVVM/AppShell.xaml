@@ -9,6 +9,7 @@
     xmlns:accountManagement="using:MVVM.View.Account_Management"
     xmlns:authentication="using:MVVM.View.Authentication"
     xmlns:landing="using:MVVM.View.Landing"
+    xmlns:postInfo="clr-namespace:MVVM.View_Models.Post_Info"
     xmlns:core1="clr-namespace:MVVM.View_Models.Core"
     xmlns:appSettings1="clr-namespace:MVVM.View.App_Settings"
     x:DataType="core1:MotorEmpireViewModel"
@@ -53,11 +54,17 @@
         Route="PostFeed"
         Shell.FlyoutItemIsVisible="False"/>
 
+    <ShellContent Title="Details"
+                  ContentTemplate="{DataTemplate postInfo:PostInfoViewModel}"
+                  Route="PostInfoViewModel"
+                  Shell.FlyoutItemIsVisible="False"
+                  />
+
     <FlyoutItem Route="MotorEmpire"
         FlyoutDisplayOptions="AsMultipleItems"
                 Shell.NavBarHasShadow="True"
                 Shell.NavBarIsVisible="True"
-                Shell.BackgroundColor="{AppThemeBinding Dark=#414141, Light=#1C6758}"
+                Shell.BackgroundColor="{AppThemeBinding Dark=Black, Light=#1C6758}"
                 x:Name="Flyout">
         <ShellContent Title="Motor Empire Autohaus" ContentTemplate="{DataTemplate landing:MotorEmpire}" x:Name="MotorEmpireTab"></ShellContent>
         <ShellContent Title="All Cars" ContentTemplate="{DataTemplate allCars:PostFeed}" x:Name="SearchTab"></ShellContent>

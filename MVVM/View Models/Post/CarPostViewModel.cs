@@ -120,6 +120,7 @@ namespace MVVM.View_Models.Post
                 "5 + 1",
                 "6 + 1",
                 "7 + 1",
+                "8 + 1",
             };
             carouselVisible = false;
         }
@@ -220,6 +221,15 @@ namespace MVVM.View_Models.Post
 
                 await Application.Current.MainPage.DisplayAlert("Motor Empire Autogaus - Upload failed", message, "Retry");
             }
+        }
+
+        [RelayCommand]
+        public async Task GoToDetails(CarPost post)
+        {
+            await Shell.Current.GoToAsync($"",true,
+                new Dictionary<string, object> {
+                    { "CarPost", Post },
+            });
         }
 
         [RelayCommand]

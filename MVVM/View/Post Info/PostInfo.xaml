@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:MVVM.View_Models.Post_Info"
+             xmlns:post="clr-namespace:MVVM.Models.Post_Model"
+             x:DataType="viewmodel:PostInfoViewModel"
+             x:Class="MVVM.View.Post_Info.PostInfo"
+             xmlns:pictures="clr-namespace:MVVM.Models"
+             Title="{Binding Post.HeadingTitle}">
+    <ScrollView>
+    <VerticalStackLayout x:Name="DesktopView">
+            <Frame BackgroundColor="{AppThemeBinding Dark=#676767, Light=#dbdbdb}"
+               HasShadow="True"
+               CornerRadius="25"
+               Margin="20,20,20,0"
+            >
+                <VerticalStackLayout>
+                    <Image Source="{Binding Post.MainPostPicture.Picture}"
+                           HeightRequest="650"/>
+                    <HorizontalStackLayout HorizontalOptions="Center">
+                        <Button Text="Previous photo"
+                                BackgroundColor="{AppThemeBinding Dark=#50577A,Light=#4E9F3D}"
+                                TextColor="White"
+                                BorderColor="Transparent"
+                                FontFamily="Kollektif"
+                                FontAttributes="Bold"
+                                Margin="0,0,20,0"
+                                Command="{Binding Post.PreviousPictureCommand}"/>
+                        <Button Text="Next Photo"
+                                Command="{Binding Post.NextPictureCommand}"
+                                BackgroundColor="{AppThemeBinding Dark=#50577A,Light=#4E9F3D}"
+                                TextColor="White"
+                                BorderColor="Transparent"
+                                FontFamily="Kollektif"
+                                FontAttributes="Bold"/>
+                    </HorizontalStackLayout>
+                    <VerticalStackLayout>
+                    <HorizontalStackLayout Margin="0,30,0,30" HorizontalOptions="Center" x:Name="DetailsHandler">
+                        <Label Text="Details "
+                           FontFamily="Kollektif"
+                           FontSize="28"
+                           Margin="0,0,10,0"
+                           VerticalOptions="Center"
+                           FontAttributes="Bold"/>
+                        <Image Source="{AppThemeBinding Dark=caretdowndark.png, Light=caretdownlight.png}"
+                               WidthRequest="30"
+                               x:Name="DetailsCaretImage"
+                               HeightRequest="30"
+                               VerticalOptions="Center"
+                        />
+                        
+                    </HorizontalStackLayout>
+                    <Label Text="{Binding Post.CarSpecs.DescriptionBinding}"
+                           FontFamily="Roboto"
+                            x:Name="DetailsText"
+                           IsVisible="False"
+                           Opacity="0"
+                           FontSize="18"
+                           ></Label>
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="DetailsCaretTapHandler"></TapGestureRecognizer>
+                    </VerticalStackLayout.GestureRecognizers>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout>
+                        <HorizontalStackLayout Margin="0,30,0,30" HorizontalOptions="Center" x:Name="SpecsHandler">
+                            <Label Text="Technical Specs"
+                           FontFamily="Kollektif"
+                           FontSize="28"
+                           Margin="0,0,10,0"
+                           VerticalOptions="Center"
+                           FontAttributes="Bold"/>
+                            <Image Source="{AppThemeBinding Dark=caretdowndark.png, Light=caretdownlight.png}"
+                               WidthRequest="30"
+                               x:Name="SpecsCaretImage"
+                               HeightRequest="30"
+                               VerticalOptions="Center"
+                        />
+
+                        </HorizontalStackLayout>
+                        <VerticalStackLayout x:Name="SpecsText"
+                                             IsVisible="False"
+                                             Opacity="0">
+                            <Label Text="{Binding Post.CarSpecs.ManufacturerBinding}"
+                                   FontFamily="Roboto"
+                                   HorizontalOptions="Center"
+                                   FontSize="18"
+                                   Margin="0,0,0,5"/>
+                            <Label Text="{Binding Post.CarSpecs.ModelBinding}"
+                                   FontFamily="Roboto"
+                                   HorizontalOptions="Center"
+                                   FontSize="18"
+                                   Margin="0,0,0,5"/>
+                            <Label Text="{Binding Post.CarSpecs.GenerationBinding}"
+                                   FontFamily="Roboto"
+                                   IsVisible="{Binding Post.CarSpecs.HasGeneration}"
+                                   HorizontalOptions="Center"
+                                   FontSize="18"
+                                   Margin="0,0,0,5"/>
+                            <Label Text="{Binding Post.CarSpecs.YearBinding}"
+                                   FontFamily="Roboto"
+                                   HorizontalOptions="Center"
+                                   FontSize="18"
+                                   Margin="0,0,0,5"/>
+                            <Label Text="{Binding Post.CarSpecs.FuelTypeBinding}"
+                                   FontFamily="Roboto"
+                                   HorizontalOptions="Center"
+                                   FontSize="18"
+                                   Margin="0,0,0,5"/>
+                            <Label Text="{Binding Post.CarSpecs.MileageBinding}"
+                                   FontFamily="Roboto"
+                                   HorizontalOptions="Center"
+                                   FontSize="18"
+                                   Margin="0,0,0,5"/>
+                            <Label Text="{Binding Post.CarSpecs.EngineCapacityBinding}"
+                                   FontFamily="Roboto"
+                                   HorizontalOptions="Center"
+                                   FontSize="18"
+                                   Margin="0,0,0,5"/>
+                            <Label Text="{Binding Post.CarSpecs.HorsepowerBinding}"
+                                   FontFamily="Roboto"
+                                   HorizontalOptions="Center"
+                                   FontSize="18"
+                                   Margin="0,0,0,5"/>
+                            <Label Text="{Binding Post.CarSpecs.TorqueBinding}"
+                                   FontFamily="Roboto"
+                                   IsVisible="{Binding Post.CarSpecs.HasTorque}"
+                                   HorizontalOptions="Center"
+                                   FontSize="18"
+                                   Margin="0,0,0,5"/>
+                            <Label Text="{Binding Post.CarSpecs.TransmissionBinding}"
+                                   FontFamily="Roboto"
+                                   HorizontalOptions="Center"
+                                   FontSize="18"
+                                   Margin="0,0,0,5"/>
+                        </VerticalStackLayout>
+                        <VerticalStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="SpecsCaretTapHandler"></TapGestureRecognizer>
+                        </VerticalStackLayout.GestureRecognizers>
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

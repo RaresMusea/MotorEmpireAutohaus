@@ -2,7 +2,11 @@
 using CommunityToolkit.Mvvm.Input;
 using MVVM.Models;
 using MVVM.Models.Post_Model;
+using MVVM.Models.Vehicle_Models.Car.Car_Model;
 using MVVM.Services;
+using MVVM.View;
+using MVVM.View.Post_Info;
+using MVVM.View_Models.Post_Info;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using BaseViewModel = MVVM.View_Models.Base.BaseViewModel;
@@ -11,6 +15,8 @@ using CarFilter = MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter;
 namespace MVVM.View_Models.Post_Feed
 {
     [QueryProperty(nameof(CarFilter), nameof(CarFilter))]
+    [QueryProperty(nameof(Models.Vehicle_Models.Car.Car_Model.Car), nameof(Models.Vehicle_Models.Car.Car_Model.Car))]
+    /*[QueryProperty(nameof(CarPost), nameof(CarPost))]*/
     [QueryProperty(nameof(SearchQueryText), nameof(SearchQueryText))]
     [QueryProperty (nameof(UpdateNeeded),nameof(UpdateNeeded))]
     [QueryProperty (nameof(LoggedInUser),nameof(LoggedInUser))]
@@ -34,7 +40,8 @@ namespace MVVM.View_Models.Post_Feed
 
         [ObservableProperty] private string postsCountMessage;
 
-        [ObservableProperty] private string loggedInUser;
+        [ObservableProperty] private string loggedInUser="marian";
+
 
         public PostFeedViewModel(PostFeedService postFeedService, CarFilter carFilter)
         {
@@ -245,6 +252,13 @@ namespace MVVM.View_Models.Post_Feed
 
 
             PostsCountMessage = $"Found {value} {dynamicText}";
+        }
+
+        [RelayCommand]
+        public async void GoToDetailsPage(CarPost carPostArg)
+        {
+            SelectedCarPost.Selected=carPostArg;
+            await Shell.Current.GoToAsync($"{nameof(PostInfo)}", true);
         }
 
 

@@ -45,5 +45,17 @@ namespace MVVM.Models.Post_Model
         [ObservableProperty]
         private string viewedBy;
 
+        [ObservableProperty]
+        private string descriptionBinding;
+
+        [ObservableProperty]
+        private string technicalSpecsBinding;
+
+        [ObservableProperty]
+        private string torqueBinding;
+
+        [ObservableProperty]
+        private string transmissionBinding;
+             
     }
 }

@@ -4,6 +4,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodel="clr-namespace:MVVM.View_Models.Post_Feed"
              xmlns:model="clr-namespace:MVVM.Models.Post_Model"
+             xmlns:carpost="clr-namespace:MVVM.View_Models.Post"
              xmlns:pictures="clr-namespace:MVVM.Models"
              x:DataType="viewmodel:PostFeedViewModel"
              x:Class="MVVM.View.Post_Feed.PostFeed"
@@ -163,6 +164,8 @@
                                                             FontAttributes="Bold"
                                                             TextColor="White"
                                                             BorderColor="Transparent"
+                                                            CommandParameter="{Binding .}"
+                                                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:PostFeedViewModel}}, Path=GoToDetailsPageCommand}"
                                                             FontFamily="Kollektif"/>
                                                     <Button Text="Add to Favorites list"
                                                             HorizontalOptions="Center"
@@ -206,9 +209,7 @@
                                            Padding="10,10,10,20"
                                            BorderColor="Transparent"
                                            HasShadow="True"
-                                           MinimumHeightRequest="700"
-                                           HeightRequest="700"
-                                           MaximumHeightRequest="900">
+                                           HeightRequest="580">
                                         <VerticalStackLayout>
                                             <Label Text="{Binding HeadingTitle}"
                                                    FontFamily="Kollektif"
@@ -257,7 +258,7 @@
                                                 <Image Source="{AppThemeBinding Dark=watchdark.png, Light=watchlight.png}"
                                                                WidthRequest="25"
                                                                HeightRequest="25"
-                                                               Margin="0,0,10,0" />
+                                                               Margin="0,0,5,0" />
                                                 <Label Text="{Binding DateTimeAdded}"
                                                                FontFamily="Kollektif"
                                                                FontSize="18"
@@ -279,7 +280,7 @@
                                                 <Label Text="{Binding CarSpecs.UploadInformation}"
                                                                FontFamily="Kollektif"
                                                                FontSize="18"
-                                                               Margin="10,0,0,0"
+                                                               Margin="5,0,0,0"
                                                                HorizontalOptions="Start"
                                                                VerticalOptions="Center" />
                                             </HorizontalStackLayout>
@@ -292,15 +293,25 @@
                                                 <Label Text="{Binding CarSpecs.ViewedBy}"
                                                                FontFamily="Kollektif"
                                                                FontSize="18"
-                                                               Margin="20,0,0,0"
+                                                               Margin="5,0,0,0"
                                                                HorizontalOptions="Start"
                                                                VerticalOptions="Center"
                                                         />
                                             </HorizontalStackLayout>
-                                            
+
+                                            <Button Text="Add to Favorites list"
+                                                    HorizontalOptions="Center"
+                                                    BackgroundColor="{AppThemeBinding Dark=#151965, Light=#6B778D}"
+                                                    FontFamily="Kollektif"
+                                                    FontAttributes="Bold"
+                                                    TextColor="White"
+                                                    Margin="0,25,0,15"/>
+
                                         </VerticalStackLayout>
                                         <Frame.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding NavigateToDetailsCommand}"/>
+                                            <TapGestureRecognizer 
+                                                CommandParameter="{Binding .}"
+                                                Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:PostFeedViewModel}}, Path=GoToDetailsPageCommand}"/>
                                         </Frame.GestureRecognizers>
                                         </Frame>
                                 </DataTemplate>
@@ -310,13 +321,7 @@
                 </Frame>
             </VerticalStackLayout>
 
-            <Button Text="Add to Favorites list"
-                                                            HorizontalOptions="Center"
-                                                            BackgroundColor="{AppThemeBinding Dark=#151965, Light=#6B778D}"
-                                                            FontFamily="Kollektif"
-                                                            FontAttributes="Bold"
-                                                            TextColor="White"
-                                                            Margin="0,15,0,15"/>
+            
 
         </VerticalStackLayout>
     </ScrollView>

@@ -92,10 +92,10 @@
 	  <MauiXaml Update="View\Core\Feed.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\Post Details\PostDetails.xaml">
+	  <MauiXaml Update="View\Post Feed\PostFeed.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\Post Feed\PostFeed.xaml">
+	  <MauiXaml Update="View\Post Info\PostInfo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\Post Upload\UploadPost.xaml">

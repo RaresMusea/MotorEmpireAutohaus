@@ -5,11 +5,12 @@ using MVVM.Models.Base;
 using UserAccount = MVVM.Models.User_Account_Model.UserAccount;
 using CommunityToolkit.Mvvm.Input;
 using Tools.Utility.CarFilterAndValidator;
-using MVVM.View.Post_Details;
+using MVVM.View.Post_Info;
 
 namespace MVVM.Models.Post_Model
 {
     [QueryProperty (nameof(UserAccount),nameof(UserAccount))]
+    [QueryProperty (nameof(Car),nameof(Car))]
     public partial class CarPost : Entity
     {
         [ObservableProperty] private UserAccount owner;
@@ -35,6 +36,8 @@ namespace MVVM.Models.Post_Model
         [ObservableProperty] private string dateTimeAdded;
 
         [ObservableProperty] private CarSpecs carSpecs;
+
+        [ObservableProperty] private CarPost post;
 
         public CarPost(UserAccount owner, string description, string carEquipment, int? price,
             List<PostPicture> postPictures, int views, string dateTimeAdded)
@@ -89,16 +92,6 @@ namespace MVVM.Models.Post_Model
             MainPostPicture = postPictures.IndexOf(mainPostPicture) - 1 < 0 ? postPictures[postPictures.Count - 1] : postPictures[postPictures.IndexOf(MainPostPicture) - 1];
         }
 
-        [RelayCommand]
-        private async Task NavigateToDetails()
-        {
-            await Shell.Current.GoToAsync($"{nameof(PostDetails)}", true,
-                 new Dictionary<string, object>
-                 {
-                     ["CarPost"] = this,
-                     ["UserAccount"] = Owner,
-                 }) ;
-        }
 
         partial void OnCarChanged(Car value)
         {
@@ -111,7 +104,7 @@ namespace MVVM.Models.Post_Model
                     $" • {value.Horsepower} hp" +
                     $" • {value.FuelType} •";
 
-                if (DeviceInfo.Platform == DevicePlatform.WinUI || DeviceInfo.Platform==DevicePlatform.MacCatalyst )
+                if (DeviceInfo.Platform == DevicePlatform.WinUI || DeviceInfo.Platform == DevicePlatform.MacCatalyst)
                 {
                     carSpecs.UploadInformation = $"Uploaded by {Owner.Name} ({Owner.Username})";
                 }
@@ -127,8 +120,10 @@ namespace MVVM.Models.Post_Model
                 carSpecs.FuelTypeBinding = $"Fuel Type: {value.FuelType}";
                 carSpecs.EngineCapacityBinding = $"Cylindric capacity: {value.EngineCapacity.Replace("cmc", "cm3")}";
                 carSpecs.HorsepowerBinding = $"Engine power (horsepower): {value.Horsepower.ToString()} hp";
-                carSpecs.MileageBinding = $"Mileage: {value.Mileage.ToString()} km";
+                carSpecs.MileageBinding = $"Mileage: {CarFilterFormatter.FormatMileage(value.Mileage)}";
                 carSpecs.PriceBinding = $"{CarFilterFormatter.FormatPrice((int)Price)}";
+
+                carSpecs.DescriptionBinding = description.Replace(headingTitle, "");
 
 
                 if (value.Generation is not null)
@@ -136,6 +131,16 @@ namespace MVVM.Models.Post_Model
                     carSpecs.GenerationBinding = $"Generation: {value.Generation}";
                     carSpecs.HasGeneration = true;
                 }
+
+
+                if (car.Torque != 0)
+                {
+                    carSpecs.HasTorque = true;
+                    carSpecs.TorqueBinding = $"Torque: {Car.Torque} Nm";
+                }
+
+                carSpecs.TransmissionBinding = $"Transmission: {car.Gears} speed {car.Transmission} gearbox";
+
             }
         }
     }
