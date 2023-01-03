@@ -137,6 +137,35 @@
                             <TapGestureRecognizer Tapped="SpecsCaretTapHandler"></TapGestureRecognizer>
                         </VerticalStackLayout.GestureRecognizers>
                     </VerticalStackLayout>
+                    <VerticalStackLayout>
+                        <HorizontalStackLayout Margin="0,30,0,30" HorizontalOptions="Center" x:Name="EquipmentHandler">
+                            <Label Text="Equipment"
+                           FontFamily="Kollektif"
+                           FontSize="28"
+                           Margin="0,0,10,0"
+                           VerticalOptions="Center"
+                           FontAttributes="Bold"/>
+                            <Image Source="{AppThemeBinding Dark=caretdowndark.png, Light=caretdownlight.png}"
+                               WidthRequest="30"
+                               x:Name="EquipmentCaretImage"
+                               HeightRequest="30"
+                               VerticalOptions="Center"
+                        />
+
+                        </HorizontalStackLayout>
+                        <Label Text="{Binding Post.CarEquipment}"
+                           FontFamily="Roboto"
+                            x:Name="EquipmentText"
+                           IsVisible="False"
+                           Opacity="0"
+                           FontSize="18"
+                           ></Label>
+                        <VerticalStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="EquipmentCaretTapHandler"></TapGestureRecognizer>
+                        </VerticalStackLayout.GestureRecognizers>
+                    </VerticalStackLayout>
+                    <Border Stroke="{AppThemeBinding Dark=#dbdbdb, Light=Grey}"
+                                StrokeThickness="2" HeightRequest="5" />
                 </VerticalStackLayout>
             </Frame>
         </VerticalStackLayout>

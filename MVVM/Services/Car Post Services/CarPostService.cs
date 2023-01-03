@@ -194,5 +194,15 @@ namespace MVVM.Services.Car_Post_Services
 
             return null;
         }
+
+        public void IncreaseViewsForPost(string postUuid)
+        {
+            MySqlCommand command = new($"UPDATE {TableReference} SET Views=Views+1 WHERE UUID=@uuid",
+                IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
+
+            command.Prepare();
+            command.Parameters.AddWithValue("@uuid", postUuid);
+            command.ExecuteNonQuery();
+        }
     }
 }

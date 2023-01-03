@@ -113,7 +113,7 @@ namespace MVVM.Models.Post_Model
                     carSpecs.UploadInformation = $"Uploaded by {Owner.Name}";
                 }
 
-                carSpecs.ViewedBy = $"{Views} views";
+                carSpecs.ViewedBy =  $"{Views}" + (Views == 1 ? " view": " views");
                 carSpecs.ModelBinding = $"Model: {value.Model}";
                 carSpecs.ManufacturerBinding = $"Manufacturer: {value.Manufacturer}";
                 carSpecs.YearBinding = "Year: " + value.Year.ToString();

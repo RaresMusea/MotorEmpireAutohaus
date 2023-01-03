@@ -50,4 +50,19 @@ public partial class PostInfo : ContentPage
         await SpecsCaretImage.RotateTo(360, 200, Easing.CubicIn);
 
     }
+
+	private async void EquipmentCaretTapHandler(object sender, EventArgs e)
+	{
+        if (!EquipmentText.IsVisible)
+        {
+            await EquipmentCaretImage.RotateTo(180, 200, Easing.CubicIn);
+            EquipmentText.IsVisible = true;
+            await EquipmentText.FadeTo(1, 200, Easing.CubicIn);
+            return;
+        }
+
+        await EquipmentText.FadeTo(0, 200, Easing.CubicOut);
+        EquipmentText.IsVisible = false;
+        await EquipmentCaretImage.RotateTo(360, 200, Easing.CubicIn);
+    }
 }

@@ -40,6 +40,9 @@ namespace MVVM.Services
             return carPosts;
         }
 
-
+        public void UpdateViewsForPost(string uuid)
+        {
+            postService.IncreaseViewsForPost(uuid);
+        }
     }
 }

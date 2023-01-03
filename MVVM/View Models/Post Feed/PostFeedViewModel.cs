@@ -258,6 +258,7 @@ namespace MVVM.View_Models.Post_Feed
         public async void GoToDetailsPage(CarPost carPostArg)
         {
             SelectedCarPost.Selected=carPostArg;
+            postFeedService.UpdateViewsForPost(carPostArg.Uuid);
             await Shell.Current.GoToAsync($"{nameof(PostInfo)}", true);
         }
 
