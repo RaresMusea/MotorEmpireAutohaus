@@ -513,6 +513,33 @@
         <member name="P:MVVM.View_Models.Post_Info.PostInfoViewModel.LoggedInUser">
             <inheritdoc cref="F:MVVM.View_Models.Post_Info.PostInfoViewModel.loggedInUser"/>
         </member>
+        <member name="P:MVVM.View_Models.Post_Info.PostInfoViewModel.ContactViaEmail">
+            <inheritdoc cref="F:MVVM.View_Models.Post_Info.PostInfoViewModel.contactViaEmail"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post_Info.PostInfoViewModel.ContactViaPhone">
+            <inheritdoc cref="F:MVVM.View_Models.Post_Info.PostInfoViewModel.contactViaPhone"/>
+        </member>
+        <member name="P:MVVM.View_Models.Post_Info.PostInfoViewModel.IsOwner">
+            <inheritdoc cref="F:MVVM.View_Models.Post_Info.PostInfoViewModel.isOwner"/>
+        </member>
+        <member name="F:MVVM.View_Models.Post_Info.PostInfoViewModel.toggleContactOptionsCommand">
+            <summary>The backing field for <see cref="P:MVVM.View_Models.Post_Info.PostInfoViewModel.ToggleContactOptionsCommand"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Post_Info.PostInfoViewModel.ToggleContactOptionsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.Post_Info.PostInfoViewModel.ToggleContactOptions"/>.</summary>
+        </member>
+        <member name="F:MVVM.View_Models.Post_Info.PostInfoViewModel.sendEmailToOwnerCommand">
+            <summary>The backing field for <see cref="P:MVVM.View_Models.Post_Info.PostInfoViewModel.SendEmailToOwnerCommand"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Post_Info.PostInfoViewModel.SendEmailToOwnerCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.Post_Info.PostInfoViewModel.SendEmailToOwner"/>.</summary>
+        </member>
+        <member name="F:MVVM.View_Models.Post_Info.PostInfoViewModel.dialOwnerCommand">
+            <summary>The backing field for <see cref="P:MVVM.View_Models.Post_Info.PostInfoViewModel.DialOwnerCommand"/>.</summary>
+        </member>
+        <member name="P:MVVM.View_Models.Post_Info.PostInfoViewModel.DialOwnerCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MVVM.View_Models.Post_Info.PostInfoViewModel.DialOwner"/>.</summary>
+        </member>
         <member name="P:MVVM.View_Models.Post.CarPostViewModel.Post">
             <inheritdoc cref="F:MVVM.View_Models.Post.CarPostViewModel.post"/>
         </member>

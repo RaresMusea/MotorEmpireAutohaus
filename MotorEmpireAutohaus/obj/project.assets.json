@@ -340,6 +340,19 @@
           }
         }
       },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "compile": {
@@ -2518,6 +2531,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -2896,6 +2910,19 @@
           }
         }
       },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "compile": {
@@ -5010,6 +5037,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -5388,6 +5416,19 @@
           }
         }
       },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "compile": {
@@ -7502,6 +7543,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -7880,6 +7922,19 @@
           }
         }
       },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "compile": {
@@ -9994,6 +10049,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -10372,6 +10428,19 @@
           }
         }
       },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "compile": {
@@ -12486,6 +12555,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -12864,6 +12934,19 @@
           }
         }
       },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "compile": {
@@ -14978,6 +15061,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -15356,6 +15440,19 @@
           }
         }
       },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "compile": {
@@ -17470,6 +17567,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -17844,6 +17942,19 @@
         },
         "runtime": {
           "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
             "related": ".xml"
           }
         }
@@ -19962,6 +20073,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -20389,6 +20501,19 @@
         },
         "runtime": {
           "lib/netstandard1.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
             "related": ".xml"
           }
         }
@@ -21646,6 +21771,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -22078,6 +22204,19 @@
           }
         }
       },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.any.System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -23637,6 +23776,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -24069,6 +24209,19 @@
           }
         }
       },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.any.System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -25628,6 +25781,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -26060,6 +26214,19 @@
           }
         }
       },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.any.System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -27619,6 +27786,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -28051,6 +28219,19 @@
           }
         }
       },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.any.System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -29610,6 +29791,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -30042,6 +30224,19 @@
           }
         }
       },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.any.System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -31601,6 +31796,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -32033,6 +32229,19 @@
           }
         }
       },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.any.System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -33592,6 +33801,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -34020,6 +34230,19 @@
         },
         "runtime": {
           "lib/netstandard1.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
             "related": ".xml"
           }
         }
@@ -35579,6 +35802,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -36006,6 +36230,19 @@
         },
         "runtime": {
           "lib/netstandard1.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
             "related": ".xml"
           }
         }
@@ -37263,6 +37500,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -37695,6 +37933,19 @@
           }
         }
       },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.any.System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -39254,6 +39505,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -39686,6 +39938,19 @@
           }
         }
       },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.any.System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -41245,6 +41510,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -41677,6 +41943,19 @@
           }
         }
       },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.any.System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -43236,6 +43515,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -43668,6 +43948,19 @@
           }
         }
       },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.any.System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -45227,6 +45520,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -45659,6 +45953,19 @@
           }
         }
       },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.any.System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -47218,6 +47525,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -47650,6 +47958,19 @@
           }
         }
       },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.any.System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -49209,6 +49530,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -49637,6 +49959,19 @@
         },
         "runtime": {
           "lib/netstandard1.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
             "related": ".xml"
           }
         }
@@ -51196,6 +51531,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -51765,6 +52101,19 @@
           }
         }
       },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
@@ -53018,6 +53367,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -53560,6 +53910,19 @@
           }
         }
       },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.any.System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -55119,6 +55482,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -55661,6 +56025,19 @@
           }
         }
       },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.any.System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -57220,6 +57597,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -57762,6 +58140,19 @@
           }
         }
       },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.any.System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -59321,6 +59712,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -59863,6 +60255,19 @@
           }
         }
       },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.any.System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -61422,6 +61827,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -61964,6 +62370,19 @@
           }
         }
       },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.any.System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -63523,6 +63942,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -64065,6 +64485,19 @@
           }
         }
       },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.any.System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -65624,6 +66057,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -66168,6 +66602,19 @@
         },
         "runtime": {
           "lib/netstandard1.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "RestSharp/108.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
             "related": ".xml"
           }
         }
@@ -67727,6 +68174,7 @@
           "CommunityToolkit.Maui.Core": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
           "CommunityToolkit.Mvvm": "8.0.0",
+          "RestSharp": "108.0.3",
           "Storage": "1.0.0"
         },
         "compile": {
@@ -69273,6 +69721,24 @@
         "newtonsoft.json.9.0.1.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "tools/install.ps1"
+      ]
+    },
+    "RestSharp/108.0.3": {
+      "sha512": "phq1AkVhqVXHZxvWDV4fJEJKCR5OHNFUGx2Ix8o5EFShS6654oZhth4X2RWvaU/W7UexIswW0T+lTirxfLU2Ow==",
+      "type": "package",
+      "path": "restsharp/108.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net5.0/RestSharp.dll",
+        "lib/net5.0/RestSharp.xml",
+        "lib/net6.0/RestSharp.dll",
+        "lib/net6.0/RestSharp.xml",
+        "lib/netstandard2.0/RestSharp.dll",
+        "lib/netstandard2.0/RestSharp.xml",
+        "restsharp.108.0.3.nupkg.sha512",
+        "restsharp.nuspec",
+        "restsharp.png"
       ]
     },
     "runtime.any.System.Collections/4.3.0": {

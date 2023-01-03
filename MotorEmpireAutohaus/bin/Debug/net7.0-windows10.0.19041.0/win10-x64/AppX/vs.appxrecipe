@@ -29,7 +29,7 @@
     <AppXManifest Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-01-03T21:19:12.790</Modified>
+      <Modified>2023-01-03T23:05:26.775</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -39,27 +39,27 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\MotorEmpireAutohaus.runtimeconfig.json">
       <PackagePath>MotorEmpireAutohaus.runtimeconfig.json</PackagePath>
-      <Modified>2023-01-02T14:05:07.814</Modified>
+      <Modified>2023-01-03T22:53:20.212</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\MotorEmpireAutohaus.dll">
       <PackagePath>MotorEmpireAutohaus.dll</PackagePath>
-      <Modified>2023-01-03T21:14:28.019</Modified>
+      <Modified>2023-01-03T22:53:18.751</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\bin\Debug\net7.0-windows10.0.19041.0\MVVM.dll">
       <PackagePath>MVVM.dll</PackagePath>
-      <Modified>2023-01-03T21:19:10.088</Modified>
+      <Modified>2023-01-03T23:05:22.509</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\Storage\bin\Debug\net7.0-windows10.0.19041.0\Storage.dll">
       <PackagePath>Storage.dll</PackagePath>
-      <Modified>2023-01-02T14:48:02.833</Modified>
+      <Modified>2023-01-03T22:23:36.627</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\Tools\bin\Debug\net7.0-windows10.0.19041.0\Tools.dll">
       <PackagePath>Tools.dll</PackagePath>
-      <Modified>2023-01-03T10:28:11.570</Modified>
+      <Modified>2023-01-03T22:23:35.035</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>MotorEmpireAutohaus.exe</PackagePath>
-      <Modified>2023-01-03T21:14:28.040</Modified>
+      <Modified>2023-01-03T22:53:18.777</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.1\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -945,6 +945,10 @@
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
       <Modified>2016-06-13T23:06:14.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rares\.nuget\packages\restsharp\108.0.3\lib\net6.0\RestSharp.dll">
+      <PackagePath>RestSharp.dll</PackagePath>
+      <Modified>2022-11-19T16:12:36.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\.nuget\packages\microsoft.graphics.win2d\1.0.4\runtimes\win10-x64\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
       <Modified>2022-10-04T20:41:34.000</Modified>
@@ -959,7 +963,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\MotorEmpireAutohaus.deps.json">
       <PackagePath>MotorEmpireAutohaus.deps.json</PackagePath>
-      <Modified>2023-01-03T21:19:12.494</Modified>
+      <Modified>2023-01-03T23:05:26.511</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.Maui.Controls.Ref.win\7.0.52\ref\net7.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>

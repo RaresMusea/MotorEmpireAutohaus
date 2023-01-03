@@ -166,6 +166,26 @@
                     </VerticalStackLayout>
                     <Border Stroke="{AppThemeBinding Dark=#dbdbdb, Light=Grey}"
                                 StrokeThickness="2" HeightRequest="5" />
+                    <Button Text="Contact Owner"
+                            FontFamily="Kollektif"
+                            TextColor="White"
+                            IsVisible="{Binding IsNotOwner}"
+                            Margin="0,20,0,20"
+                            HorizontalOptions="Center"
+                            FontAttributes="Bold"
+                            WidthRequest="320"
+                            BorderColor="Transparent"
+                            BackgroundColor="{AppThemeBinding Dark=#03506F, Light=#3B5249}"
+                            Command="{Binding ToggleContactOptionsCommand}">
+                        <FlyoutBase.ContextFlyout>
+                        <MenuFlyout >
+                            <MenuFlyoutItem Text="{Binding ContactViaEmail}"
+                                            Command="{Binding SendEmailToOwnerCommand}"/>
+                            <MenuFlyoutItem Text="{Binding ContactViaPhone}"
+                                            Command="{Binding DialOwnerCommand}"/>
+                        </MenuFlyout>
+                        </FlyoutBase.ContextFlyout>
+                    </Button>
                 </VerticalStackLayout>
             </Frame>
         </VerticalStackLayout>

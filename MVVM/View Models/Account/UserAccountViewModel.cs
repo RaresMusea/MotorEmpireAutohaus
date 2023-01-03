@@ -5,6 +5,7 @@ using MVVM.Services.Account_Services;
 using MVVM.Services.Authentication;
 using Storage.Firebase_Storage;
 using Tools.Encryption;
+using Tools.Handlers;
 using Tools.Utility.Messages;
 using Tools.Utility.Parsers;
 using BaseViewModel = MVVM.View_Models.Base.BaseViewModel;
@@ -15,13 +16,7 @@ namespace MVVM.View_Models.Account
     [QueryProperty(nameof(UserAccount), nameof(UserAccount))]
     public partial class UserAccountViewModel : BaseViewModel
     {
-        //Win32 API call
-        [DllImport("user32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
-        private static extern void mouse_event(long dwFlags, long dx, long dy, long cButtons, long dwExtraInfo);
-
-        private const int MouseeventRightDown = 0x08;
-        private const int MouseeventRightUp = 0x10;
-
+        
         private readonly AccountService accountService;
         private readonly AuthValidation authValidation;
 
@@ -168,7 +163,8 @@ namespace MVVM.View_Models.Account
         {
             if (DeviceInfo.Platform == DevicePlatform.WinUI)
             {
-                mouse_event(MouseeventRightDown | MouseeventRightUp, 0, 0, 0, 0);
+                MouseHandler.mouse_event(MouseHandler.MouseeventRightDown | MouseHandler.MouseeventRightUp,
+                    0, 0, 0, 0);
             }
             else
             {

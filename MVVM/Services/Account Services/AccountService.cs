@@ -85,6 +85,8 @@ namespace MVVM.Services.Account_Services
                     $"Welcome back, {accounts.ElementAt(0).Name}!", "Close", 5);
 
                 Logger.CurrentlyLoggedInUuid = user.Uuid;
+                Logger.CurrentlyLoggedInEmail = user.EmailAddress;
+                Logger.CurrentlyLoggedInName = user.Name;
                 return true;
             }
         }

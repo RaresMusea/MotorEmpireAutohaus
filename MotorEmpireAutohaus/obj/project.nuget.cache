@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "K+A+uBE0zelSmKciYzB7gJyAYaGrmMoux9J36mcvbkp+W5tiVcZUZDJvdayFKrk+/X1uLiXa34Yx9MjPUkcerw==",
+  "dgSpecHash": "GMsMhRMpofcXdjAOjddPdD4hsFX1yz2g+k7DfBERqVCmvmiCmP3mSx56aHEddKCrcsB7/qgh9Y7B8tEM473D3w==",
   "success": true,
   "projectFilePath": "C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Modul 1\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\MotorEmpireAutohaus\\MotorEmpireAutohaus.csproj",
   "expectedPackageFiles": [
@@ -30,6 +30,7 @@
     "C:\\Users\\rares\\.nuget\\packages\\mysqlconnector\\2.2.2\\mysqlconnector.2.2.2.nupkg.sha512",
     "C:\\Users\\rares\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\rares\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
+    "C:\\Users\\rares\\.nuget\\packages\\restsharp\\108.0.3\\restsharp.108.0.3.nupkg.sha512",
     "C:\\Users\\rares\\.nuget\\packages\\runtime.any.system.collections\\4.3.0\\runtime.any.system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\rares\\.nuget\\packages\\runtime.any.system.diagnostics.tools\\4.3.0\\runtime.any.system.diagnostics.tools.4.3.0.nupkg.sha512",
     "C:\\Users\\rares\\.nuget\\packages\\runtime.any.system.diagnostics.tracing\\4.3.0\\runtime.any.system.diagnostics.tracing.4.3.0.nupkg.sha512",

@@ -672,6 +672,10 @@
               "target": "Package",
               "version": "[7.0.52, )",
               "autoReferenced": true
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[108.0.3, )"
             }
           },
           "imports": [
@@ -749,6 +753,10 @@
               "target": "Package",
               "version": "[7.0.52, )",
               "autoReferenced": true
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[108.0.3, )"
             },
             "Xamarin.Android.Glide": {
               "suppressParent": "All",
@@ -895,6 +903,10 @@
               "target": "Package",
               "version": "[7.0.52, )",
               "autoReferenced": true
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[108.0.3, )"
             }
           },
           "imports": [
@@ -975,6 +987,10 @@
               "target": "Package",
               "version": "[7.0.52, )",
               "autoReferenced": true
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[108.0.3, )"
             }
           },
           "imports": [
@@ -1074,6 +1090,10 @@
               "target": "Package",
               "version": "[1.2.221109.1, )",
               "autoReferenced": true
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[108.0.3, )"
             }
           },
           "imports": [
