@@ -266,6 +266,7 @@ namespace MVVM.View_Models.Post_Feed
             PostsCountMessage = $"Found {value} {dynamicText}";
         }
 
+
         [RelayCommand]
         public async void GoToDetailsPage(CarPost carPostArg)
         {

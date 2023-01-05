@@ -12,6 +12,7 @@ using System.Net.Mail;
 using Tools.Handlers;
 using Tools.Utility.Messages;
 using EASendMail;
+using MVVM.View.Post_Feed;
 
 namespace MVVM.View_Models.Post_Info
 {
@@ -43,6 +44,9 @@ namespace MVVM.View_Models.Post_Info
 
         public bool IsNotOwner => !isOwner;
 
+        [ObservableProperty]
+        private string favoritesText;
+
         public PostInfoViewModel(CarPostService postService)
         {
             this.postService = postService;
@@ -50,6 +54,7 @@ namespace MVVM.View_Models.Post_Info
             contactViaEmail = ContactOwnerText + "email";
             contactViaPhone = ContactOwnerText + "phone number";
             isOwner = Logger.CurrentlyLoggedInUuid.Equals(post.Owner.Uuid);
+            favoritesText = post.AddedToFavoritesByCurrentUser ? "Remove from favorites" : "Add to favorites";
 
         }
 
@@ -75,6 +80,32 @@ namespace MVVM.View_Models.Post_Info
                     await SendEmailToOwner();
                 }
             }
+        }
+
+        private void AddPostToFavorites()
+        {
+            if (postService.AddToFavorites(post.Uuid, Logger.CurrentlyLoggedInUuid))
+            {
+                CrossPlatformMessageRenderer.RenderMessages("Succesfully added this post to your favorites list!", "Ok", 4);
+                FavoritesText = "Remove from favorites";
+                return;
+            }
+
+            CrossPlatformMessageRenderer.RenderMessages("Could not process your request due to an unexpected error!", "Retry", 4);
+        }
+
+        private void RemovePostFromFavorites()
+        {
+            if (postService.RemoveFromFavorites(post.Uuid))
+            {
+                CrossPlatformMessageRenderer.RenderMessages("Sucessfully removed post from your favorites list!", "Ok", 4);
+                FavoritesText = "Add to favorites";
+                return;
+            }
+
+            CrossPlatformMessageRenderer.RenderMessages("Cannot remove post from your favorites list due to an unexpected error! " +
+                "Please try again later.", "Ok", 4);
+
         }
 
         [RelayCommand]
@@ -194,16 +225,40 @@ namespace MVVM.View_Models.Post_Info
         }
 
         [RelayCommand]
-        private Task AddPostToFavorites()
+        private void AddOrRemoveFavoritePost()
         {
-            if(postService.AddToFavorites(post.Uuid, Logger.CurrentlyLoggedInUuid))
+
+            if (FavoritesText == "Add to favorites")
             {
-                CrossPlatformMessageRenderer.RenderMessages("Succesfully added this post to your favorites list!", "Ok", 4);
-                return null;
+                AddPostToFavorites();
+                return;
             }
 
-            CrossPlatformMessageRenderer.RenderMessages("Could not process your request due to an unexpected error!", "Retry", 4);
-            return null;
+            RemovePostFromFavorites();
+        }
+
+        [RelayCommand]
+        private async void DeletePost()
+        {
+            bool answerIsPositive = await Application.Current!.MainPage!.DisplayAlert(
+                "Motor Empire Autohaus - Delete post",
+                "Are you sure that you want to delete this post?\nAll the provided information about this ad will be permanently lost!\n",
+                "Proceed to post deletion",
+                "Cancel");
+
+            if (!answerIsPositive) return;
+
+            if (postService.DeletePost(post))
+            {
+                CrossPlatformMessageRenderer.RenderMessages(
+                    $"Post deleted succesfully.\n You'll be automatically redirected to the main page of the application...",
+                    "Alright", 4);
+                await Shell.Current.GoToAsync($"{nameof(PostFeed)}",
+                    true, new Dictionary<string, object>
+                    {
+                        {"UpdateNeeded",true },
+                    });
+            }
         }
 
     }

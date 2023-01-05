@@ -6,6 +6,8 @@ using MVVM.Services.Car_Entity_Services;
 using MVVM.Services.Car_Filter_Services;
 using MVVM.Services.Interfaces;
 using MySqlConnector;
+using Storage.MySQL;
+using Tools.Handlers;
 using UserAccount = MVVM.Models.User_Account_Model.UserAccount;
 
 namespace MVVM.Services.Car_Post_Services
@@ -127,6 +129,27 @@ namespace MVVM.Services.Car_Post_Services
             command.ExecuteNonQuery();
         }
 
+        private bool DeleteAssociatedPicturesForCarPost(string postUuid)
+        {
+
+            MySqlCommand command = new($"DELETE FROM {PostPicturesTableReference} WHERE Post=@carid",
+                IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
+
+            command.Prepare();
+            command.Parameters.AddWithValue("@carid", carService.RetrieveCarIdentifierByUuid(postUuid));
+
+            try
+            {
+                command.ExecuteNonQuery();
+            }
+            catch (MySqlException)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
         public List<PostPicture> RetrieveCarPostPictures(string carPostUuid)
         {
             List<PostPicture> postPictures = new();
@@ -244,6 +267,53 @@ namespace MVVM.Services.Car_Post_Services
 
             reader.Close();
             return result != 0;
+        }
+        
+        public bool DeletePost(CarPost carPost)
+        {
+            if (WasPostAddedToFavoritesBy(carPost.Uuid, Logger.CurrentlyLoggedInUuid))
+            {
+                bool added = RemoveFromFavorites(carPost.Uuid);
+            }
+
+            /*return carService.Delete(carPost.Car);*/
+            MySqlCommand command = new($"DELETE FROM {TableReference} WHERE UUID=@uuid",
+                IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
+
+            command.Prepare();
+            command.Parameters.AddWithValue("@uuid", carPost.Uuid);
+            
+            try
+            {
+                command.ExecuteNonQuery();
+            }
+            catch (MySqlException) 
+            {
+                return false;
+            }
+
+            return true && DeleteAssociatedPicturesForCarPost(carPost.Uuid) && carService.Delete(carPost.Car);
+        }
+
+        public bool RemoveFromFavorites(string postUuid)
+        {
+            MySqlCommand command = new("DELETE FROM FavoritePosts WHERE PostUUID=@uuid",
+                IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
+
+            command.Prepare();
+            command.Parameters.AddWithValue("@uuid", postUuid);
+
+            try 
+            {
+                command.ExecuteNonQuery();
+            }
+            catch (MySqlException)
+            {
+                return false;
+            }
+
+            return true;
+
         }
     }
 }

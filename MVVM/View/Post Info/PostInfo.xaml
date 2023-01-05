@@ -218,6 +218,26 @@
                         </MenuFlyout>
                         </FlyoutBase.ContextFlyout>
                     </Button>
+
+                    <Button Text="{Binding FavoritesText}"
+                            BorderColor="Transparent"
+                            BackgroundColor="{AppThemeBinding Dark=#D65A31, Light=#FF5722}"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            FontFamily="Kollektif"
+                            HorizontalOptions="Center"
+                            Margin="0,10,0,10"
+                            Command="{Binding AddOrRemoveFavoritePostCommand}"/>
+
+                    <Button Text="Delete Post"
+                            IsVisible="{Binding IsOwner}"
+                            BorderColor="Transparent"
+                            TextColor="White"
+                            BackgroundColor="{AppThemeBinding Dark=#03506F, Light=#3B5249}"
+                            FontFamily="Kollektif"
+                            FontAttributes="Bold"
+                            HorizontalOptions="Center"
+                            Command="{Binding DeletePostCommand}"/>
                 </VerticalStackLayout>
             </Frame>
         </VerticalStackLayout>

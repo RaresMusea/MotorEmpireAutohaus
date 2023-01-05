@@ -160,20 +160,13 @@
 
                                                     <Button Text="View more"
                                                             HorizontalOptions="Center"
-                                                            BackgroundColor="{AppThemeBinding Dark=Red, Light=#1C6758}"
+                                                            BackgroundColor="{AppThemeBinding Dark=#151965, Light=#6B778D}"
                                                             FontAttributes="Bold"
                                                             TextColor="White"
                                                             BorderColor="Transparent"
                                                             CommandParameter="{Binding .}"
                                                             Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:PostFeedViewModel}}, Path=GoToDetailsPageCommand}"
                                                             FontFamily="Kollektif"/>
-                                                    <Button Text="Add to Favorites list"
-                                                            HorizontalOptions="Center"
-                                                            BackgroundColor="{AppThemeBinding Dark=#151965, Light=#6B778D}"
-                                                            FontFamily="Kollektif"
-                                                            FontAttributes="Bold"
-                                                            TextColor="White"
-                                                            Margin="0,15,0,15"/>
                                                 </VerticalStackLayout>
                                             </Grid>
                                         </VerticalStackLayout>
@@ -298,14 +291,6 @@
                                                                VerticalOptions="Center"
                                                         />
                                             </HorizontalStackLayout>
-
-                                            <Button Text="Add to Favorites list"
-                                                    HorizontalOptions="Center"
-                                                    BackgroundColor="{AppThemeBinding Dark=#151965, Light=#6B778D}"
-                                                    FontFamily="Kollektif"
-                                                    FontAttributes="Bold"
-                                                    TextColor="White"
-                                                    Margin="0,25,0,15"/>
 
                                         </VerticalStackLayout>
                                         <Frame.GestureRecognizers>
