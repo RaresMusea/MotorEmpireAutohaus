@@ -155,18 +155,11 @@
                         WidthRequest="200"
                         Text="Search for Vehicles"
                         FontAttributes="Bold"
+                        Command="{Binding SearchButtonPressedCommand}"
                         FontSize="16"
                         FontFamily="Kollektif"
                         BackgroundColor="{AppThemeBinding Dark=Red, Light=#1C6758}">
                 </Button>
-                <Button Text="Post an ad"
-                        WidthRequest="200"
-                        BackgroundColor="{AppThemeBinding Dark=#273851, Light=#346751}"
-                        TextColor="White"
-                        FontFamily="Kollektif"
-                        FontAttributes="Bold"
-                        FontSize="16"
-                        Command="{Binding NavigateToPostUploadCommand}" />
 
                 <VerticalStackLayout x:Name="SearchByCategory">
                     <Grid Margin="0,20,0,20">
@@ -190,10 +183,30 @@
                                 StrokeThickness="2" HeightRequest="5" Grid.Column="2" />
                     </Grid>
 
+                    <Button Text="View all vehicles"
+                            WidthRequest="220"
+                            Margin="0,0,0,20"
+                            CornerRadius="15"
+                            BackgroundColor="{AppThemeBinding Dark=#D65A31, Light=#FF5722}"
+                            BorderColor="Transparent"
+                            FontAttributes="Bold"
+                            FontFamily="Kollektif"
+                            TextColor="White"
+                            Command="{Binding ViewAllVehiclesCommand}"/>
+
+                    <Button Text="Post an ad"
+                        WidthRequest="200"
+                        BackgroundColor="{AppThemeBinding Dark=#273851, Light=#346751}"
+                        TextColor="White"
+                        Margin="0,0,0,20"
+                        CornerRadius="15"
+                        FontFamily="Kollektif"
+                        FontAttributes="Bold"
+                        Command="{Binding NavigateToPostUploadCommand}" />
+
                     <Button BackgroundColor="{AppThemeBinding Dark=Red, Light=#1C6758}"
                             WidthRequest="230"
                             CornerRadius="15"
-                            FontSize="16"
                             Text="Choose a specific category"
                             TextColor="White"
                             FontAttributes="Bold"

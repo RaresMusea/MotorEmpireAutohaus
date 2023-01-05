@@ -9,21 +9,22 @@
              Shell.PresentationMode="{OnPlatform Android=ModalAnimated}"
              Title="{Binding Post.HeadingTitle}">
     <ScrollView>
-    <VerticalStackLayout x:Name="DesktopView">
-            <Frame BackgroundColor="{AppThemeBinding Dark=#676767, Light=#dbdbdb}"
+        <VerticalStackLayout>
+            <VerticalStackLayout x:Name="DesktopView" IsVisible="{OnPlatform WinUI=True, Android=False, iOS=False, MacCatalyst=True}">
+                <Frame BackgroundColor="{AppThemeBinding Dark=#676767, Light=#dbdbdb}"
                HasShadow="True"
                CornerRadius="25"
-               Margin="20,20,20,0"
+               Margin="40,20,40,20"
             >
-                <VerticalStackLayout Margin="0,0,0,0">
-                    <Label Text="Gallery"
+                    <VerticalStackLayout Margin="0,0,0,0">
+                        <Label Text="Gallery"
                            FontFamily="Kollektif"
                            FontSize="28"
                            Margin="0,10,0,20"
                            HorizontalOptions="Center"
                            FontAttributes="Bold"/>
-                    <HorizontalStackLayout HorizontalOptions="Center" Margin="0,0,0,20">
-                        <Button Text="Previous" 
+                        <HorizontalStackLayout HorizontalOptions="Center" Margin="0,0,0,20">
+                            <Button Text="Previous" 
                                 VerticalOptions="Center"
                                 HorizontalOptions="Start"
                                 BackgroundColor="{AppThemeBinding Dark=#50577A,Light=#4E9F3D}"
@@ -34,12 +35,12 @@
                                 FontAttributes="Bold"
                                 Margin="0,0,20,0"
                                 Command="{Binding Post.PreviousPictureCommand}"/>
-                        
-                        <Image Source="{Binding Post.MainPostPicture.Picture}"
+
+                            <Image Source="{Binding Post.MainPostPicture.Picture}"
                                HeightRequest="620"
                                HorizontalOptions="Center"/>
-                        
-                        <Button Text="Next"
+
+                            <Button Text="Next"
                                 VerticalOptions="Center"
                                 HorizontalOptions="End"
                                 Command="{Binding Post.NextPictureCommand}"
@@ -50,155 +51,157 @@
                                 Margin="20,0,0,0"
                                 FontFamily="Kollektif"
                                 FontAttributes="Bold"/>
-                        
-                    </HorizontalStackLayout>
 
-                    <!--<HorizontalStackLayout HorizontalOptions="Center" Margin="0,20,0,20">
-                        <Button Text="Previous photo"
-                                />
-                        <Button Text="Next Photo"
-                                Command="{Binding Post.NextPictureCommand}"
-                                BackgroundColor="{AppThemeBinding Dark=#50577A,Light=#4E9F3D}"
-                                TextColor="White"
-                                BorderColor="Transparent"
-                                FontFamily="Kollektif"
-                                FontAttributes="Bold"/>
-                    </HorizontalStackLayout>-->
-                    <VerticalStackLayout>
-                        <Border Stroke="{AppThemeBinding Dark=#dbdbdb, Light=Grey}"
+                        </HorizontalStackLayout>
+                        
+                        <VerticalStackLayout>
+                            <Border Stroke="{AppThemeBinding Dark=#dbdbdb, Light=Grey}"
                                 StrokeThickness="2" HeightRequest="5" />
-                        <HorizontalStackLayout Margin="0,30,0,30" HorizontalOptions="Center" x:Name="DetailsHandler">
-                        <Label Text="Details "
+                            <HorizontalStackLayout Margin="0,30,0,30" HorizontalOptions="Center" x:Name="DetailsHandler">
+                                <Label Text="Details "
                            FontFamily="Kollektif"
                            FontSize="28"
                            Margin="0,0,10,0"
                            VerticalOptions="Center"
                            FontAttributes="Bold"/>
-                        <Image Source="{AppThemeBinding Dark=caretdowndark.png, Light=caretdownlight.png}"
+                                <Image Source="{AppThemeBinding Dark=caretdowndark.png, Light=caretdownlight.png}"
                                WidthRequest="30"
                                x:Name="DetailsCaretImage"
                                HeightRequest="30"
                                VerticalOptions="Center"
                         />
-                        
-                    </HorizontalStackLayout>
-                    <Label Text="{Binding Post.CarSpecs.DescriptionBinding}"
+
+                            </HorizontalStackLayout>
+                            <Label Text="{Binding Post.CarSpecs.DescriptionBinding}"
                            FontFamily="Roboto"
                             x:Name="DetailsText"
                            IsVisible="False"
                            Opacity="0"
                            FontSize="18"
                            ></Label>
-                    <VerticalStackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="DetailsCaretTapHandler"></TapGestureRecognizer>
-                    </VerticalStackLayout.GestureRecognizers>
-                    </VerticalStackLayout>
-                    <VerticalStackLayout>
-                        <HorizontalStackLayout Margin="0,30,0,30" HorizontalOptions="Center" x:Name="SpecsHandler">
-                            <Label Text="Technical Specs"
+                            <VerticalStackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="DetailsCaretTapHandler"></TapGestureRecognizer>
+                            </VerticalStackLayout.GestureRecognizers>
+                        </VerticalStackLayout>
+                        <VerticalStackLayout>
+                            <HorizontalStackLayout Margin="0,30,0,30" HorizontalOptions="Center" x:Name="SpecsHandler">
+                                <Label Text="Technical Specs"
                            FontFamily="Kollektif"
                            FontSize="28"
                            Margin="0,0,10,0"
                            VerticalOptions="Center"
                            FontAttributes="Bold"/>
-                            <Image Source="{AppThemeBinding Dark=caretdowndark.png, Light=caretdownlight.png}"
+                                <Image Source="{AppThemeBinding Dark=caretdowndark.png, Light=caretdownlight.png}"
                                WidthRequest="30"
                                x:Name="SpecsCaretImage"
                                HeightRequest="30"
                                VerticalOptions="Center"
                         />
 
-                        </HorizontalStackLayout>
-                        <VerticalStackLayout x:Name="SpecsText"
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout x:Name="SpecsText"
                                              IsVisible="False"
                                              Opacity="0">
-                            <Label Text="{Binding Post.CarSpecs.ManufacturerBinding}"
+                                <Label Text="{Binding Post.CarSpecs.ManufacturerBinding}"
                                    FontFamily="Roboto"
                                    HorizontalOptions="Center"
                                    FontSize="18"
                                    Margin="0,0,0,5"/>
-                            <Label Text="{Binding Post.CarSpecs.ModelBinding}"
+                                <Label Text="{Binding Post.CarSpecs.ModelBinding}"
                                    FontFamily="Roboto"
                                    HorizontalOptions="Center"
                                    FontSize="18"
                                    Margin="0,0,0,5"/>
-                            <Label Text="{Binding Post.CarSpecs.GenerationBinding}"
+                                <Label Text="{Binding Post.CarSpecs.GenerationBinding}"
                                    FontFamily="Roboto"
                                    IsVisible="{Binding Post.CarSpecs.HasGeneration}"
                                    HorizontalOptions="Center"
                                    FontSize="18"
                                    Margin="0,0,0,5"/>
-                            <Label Text="{Binding Post.CarSpecs.YearBinding}"
+                                <Label Text="{Binding Post.CarSpecs.YearBinding}"
                                    FontFamily="Roboto"
                                    HorizontalOptions="Center"
                                    FontSize="18"
                                    Margin="0,0,0,5"/>
-                            <Label Text="{Binding Post.CarSpecs.FuelTypeBinding}"
+                                <Label Text="{Binding Post.CarSpecs.FuelTypeBinding}"
                                    FontFamily="Roboto"
                                    HorizontalOptions="Center"
                                    FontSize="18"
                                    Margin="0,0,0,5"/>
-                            <Label Text="{Binding Post.CarSpecs.MileageBinding}"
+                                <Label Text="{Binding Post.CarSpecs.MileageBinding}"
                                    FontFamily="Roboto"
                                    HorizontalOptions="Center"
                                    FontSize="18"
                                    Margin="0,0,0,5"/>
-                            <Label Text="{Binding Post.CarSpecs.EngineCapacityBinding}"
+                                <Label Text="{Binding Post.CarSpecs.EngineCapacityBinding}"
                                    FontFamily="Roboto"
                                    HorizontalOptions="Center"
                                    FontSize="18"
                                    Margin="0,0,0,5"/>
-                            <Label Text="{Binding Post.CarSpecs.HorsepowerBinding}"
+                                <Label Text="{Binding Post.CarSpecs.HorsepowerBinding}"
                                    FontFamily="Roboto"
                                    HorizontalOptions="Center"
                                    FontSize="18"
                                    Margin="0,0,0,5"/>
-                            <Label Text="{Binding Post.CarSpecs.TorqueBinding}"
+                                <Label Text="{Binding Post.CarSpecs.TorqueBinding}"
                                    FontFamily="Roboto"
                                    IsVisible="{Binding Post.CarSpecs.HasTorque}"
                                    HorizontalOptions="Center"
                                    FontSize="18"
                                    Margin="0,0,0,5"/>
-                            <Label Text="{Binding Post.CarSpecs.TransmissionBinding}"
+                                <Label Text="{Binding Post.CarSpecs.TransmissionBinding}"
                                    FontFamily="Roboto"
                                    HorizontalOptions="Center"
                                    FontSize="18"
                                    Margin="0,0,0,5"/>
+                            </VerticalStackLayout>
+                            <VerticalStackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="SpecsCaretTapHandler"></TapGestureRecognizer>
+                            </VerticalStackLayout.GestureRecognizers>
                         </VerticalStackLayout>
-                        <VerticalStackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="SpecsCaretTapHandler"></TapGestureRecognizer>
-                        </VerticalStackLayout.GestureRecognizers>
-                    </VerticalStackLayout>
-                    <VerticalStackLayout Margin="0,0,0,20">
-                        <HorizontalStackLayout Margin="0,30,0,30" HorizontalOptions="Center" x:Name="EquipmentHandler">
-                            <Label Text="Equipment"
+                        <VerticalStackLayout Margin="0,0,0,20">
+                            <HorizontalStackLayout Margin="0,30,0,30" HorizontalOptions="Center" x:Name="EquipmentHandler">
+                                <Label Text="Equipment"
                            FontFamily="Kollektif"
                            FontSize="28"
                            Margin="0,0,10,0"
                            VerticalOptions="Center"
                            FontAttributes="Bold"/>
-                            <Image Source="{AppThemeBinding Dark=caretdowndark.png, Light=caretdownlight.png}"
+                                <Image Source="{AppThemeBinding Dark=caretdowndark.png, Light=caretdownlight.png}"
                                WidthRequest="30"
                                x:Name="EquipmentCaretImage"
                                HeightRequest="30"
                                VerticalOptions="Center"
                         />
 
-                        </HorizontalStackLayout>
-                        <Label Text="{Binding Post.CarEquipment}"
+                            </HorizontalStackLayout>
+                            <Label Text="{Binding Post.CarEquipment}"
                            FontFamily="Roboto"
                             x:Name="EquipmentText"
                            IsVisible="False"
                            Opacity="0"
                            FontSize="18"
                            ></Label>
-                        <VerticalStackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="EquipmentCaretTapHandler"></TapGestureRecognizer>
-                        </VerticalStackLayout.GestureRecognizers>
-                    </VerticalStackLayout>
-                    <Border Stroke="{AppThemeBinding Dark=#dbdbdb, Light=Grey}"
-                                StrokeThickness="2" HeightRequest="5" />
-                    <Button Text="Contact Owner"
+                            <VerticalStackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="EquipmentCaretTapHandler"></TapGestureRecognizer>
+                            </VerticalStackLayout.GestureRecognizers>
+                        </VerticalStackLayout>
+                        <HorizontalStackLayout HorizontalOptions="Center" Margin="0,30,0,30">
+                            <Label Text="Price: "
+                                   FontFamily="Kollektif"
+                                   FontSize="25"
+                                   FontAttributes="Bold"
+                                   TextColor="{AppThemeBinding Dark=Red, Light=#1C6758}"/>
+
+
+                            <Label Text="{Binding Post.CarSpecs.PriceBinding}"
+                                                               FontFamily="Kollektif"
+                                                               FontSize="25"
+                                                               FontAttributes="Bold"
+                                                               TextColor="{AppThemeBinding Dark=Red, Light=#1C6758}"/>
+                        </HorizontalStackLayout>
+
+                        <Button Text="Contact Owner"
                             FontFamily="Kollektif"
                             TextColor="White"
                             IsVisible="{Binding IsNotOwner}"
@@ -209,17 +212,17 @@
                             BorderColor="Transparent"
                             BackgroundColor="{AppThemeBinding Dark=#03506F, Light=#3B5249}"
                             Command="{Binding ToggleContactOptionsCommand}">
-                        <FlyoutBase.ContextFlyout>
-                        <MenuFlyout >
-                            <MenuFlyoutItem Text="{Binding ContactViaEmail}"
+                            <FlyoutBase.ContextFlyout>
+                                <MenuFlyout >
+                                    <MenuFlyoutItem Text="{Binding ContactViaEmail}"
                                             Command="{Binding SendEmailToOwnerCommand}"/>
-                            <MenuFlyoutItem Text="{Binding ContactViaPhone}"
+                                    <MenuFlyoutItem Text="{Binding ContactViaPhone}"
                                             Command="{Binding DialOwnerCommand}"/>
-                        </MenuFlyout>
-                        </FlyoutBase.ContextFlyout>
-                    </Button>
+                                </MenuFlyout>
+                            </FlyoutBase.ContextFlyout>
+                        </Button>
 
-                    <Button Text="{Binding FavoritesText}"
+                        <Button Text="{Binding FavoritesText}"
                             BorderColor="Transparent"
                             BackgroundColor="{AppThemeBinding Dark=#D65A31, Light=#FF5722}"
                             TextColor="White"
@@ -229,7 +232,7 @@
                             Margin="0,10,0,10"
                             Command="{Binding AddOrRemoveFavoritePostCommand}"/>
 
-                    <Button Text="Delete Post"
+                        <Button Text="Delete Post"
                             IsVisible="{Binding IsOwner}"
                             BorderColor="Transparent"
                             TextColor="White"
@@ -238,8 +241,363 @@
                             FontAttributes="Bold"
                             HorizontalOptions="Center"
                             Command="{Binding DeletePostCommand}"/>
-                </VerticalStackLayout>
-            </Frame>
+
+                        <Grid Margin="0,30,0,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <HorizontalStackLayout Margin="0,0,0,0" HorizontalOptions="Center">
+                                <Image Source="{AppThemeBinding Dark=watchdark.png, Light=watchlight.png}"
+                                                               WidthRequest="25"
+                                                               HeightRequest="25"
+                                                               Margin="0,0,10,0" />
+                                <Label Text="{Binding Post.DateTimeAdded}"
+                                                               FontFamily="Kollektif"
+                                                               FontSize="18"
+                                                               HorizontalOptions="Start"
+                                                               VerticalOptions="Center" />
+
+                            </HorizontalStackLayout>
+
+                            <HorizontalStackLayout Margin="0,0,0,0" Grid.Column="1" HorizontalOptions="Center">
+                                <Border Stroke="{AppThemeBinding Light=Grey, Dark=#dbdbdb}"
+                                                                StrokeThickness="1"
+                                                                BackgroundColor="{AppThemeBinding Light=Grey, Dark=#dbdbdb}"
+                                                                StrokeShape="RoundRectangle 50"
+                                                                WidthRequest="25"
+                                                                HeightRequest="25">
+                                    <Image Source="{Binding Post.Owner.ProfileImageUrl}"
+                                                                   WidthRequest="25"
+                                                                   Aspect="Fill"
+                                                                   HeightRequest="25"/>
+                                </Border>
+                                <Label Text="{Binding Post.CarSpecs.UploadInformation}"
+                                                               FontFamily="Kollektif"
+                                                               FontSize="18"
+                                                               Margin="10,0,0,0"
+                                                               HorizontalOptions="Start"
+                                                               VerticalOptions="Center" />
+                            </HorizontalStackLayout>
+
+
+                            <HorizontalStackLayout Margin="0,0,0,0" HorizontalOptions="Center" Grid.Column="2">
+                                <Image Source="{AppThemeBinding Dark=eyeglassesdark.png, Light=eyeglasseslight.png}"
+                                                               WidthRequest="25"
+                                                               HeightRequest="25"
+                                                        />
+
+                                <Label Text="{Binding Post.CarSpecs.ViewedBy}"
+                                                               FontFamily="Kollektif"
+                                                               FontSize="18"
+                                                               Margin="10,0,0,0"
+                                                               HorizontalOptions="Start"
+                                                               VerticalOptions="Center"
+                                                        />
+                            </HorizontalStackLayout>
+                        </Grid>
+                    </VerticalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout x:Name="MobileView"
+                             IsVisible="{OnPlatform Android=True, iOS=True, WinUI=False, MacCatalyst=False}">
+
+                <Frame BackgroundColor="{AppThemeBinding Dark=#676767, Light=#dbdbdb}">
+                    <VerticalStackLayout Margin="0,30,0,30">
+                        <Label Text="{Binding Post.HeadingTitle}"
+                           FontFamily="Kollektif"
+                           FontSize="20"
+                           Margin="0,0,0,20"
+                           HorizontalTextAlignment="Center"
+                           HorizontalOptions="Center"
+                           FontAttributes="Bold"/>
+                            <Label Text="Gallery"
+                           FontFamily="Kollektif"
+                           FontSize="18"
+                           Margin="0,10,0,20"
+                           HorizontalOptions="Center"
+                           FontAttributes="Bold"/>
+
+                        <CarouselView ItemsSource="{Binding Post.PostPictures}"
+                                                          IndicatorView="indicatorView" Margin="0,10,10,0">
+                            <CarouselView.ItemTemplate>
+                                <DataTemplate x:DataType="pictures:PostPicture">
+                                    <StackLayout>
+                                        <Frame HasShadow="True"
+                                                       BorderColor="DarkGray"
+                                                       BackgroundColor="{AppThemeBinding Dark=#676767, Light=#dbdbdb}"
+                                                       CornerRadius="15"
+                                                       Padding="0,5,0,5"
+                                                        HeightRequest="200">
+                                            <StackLayout>
+                                                <Image Source="{Binding Picture}"
+                                                               Aspect="AspectFit"
+                                                               Margin="3"
+                                                               VerticalOptions="CenterAndExpand"/>
+                                            </StackLayout>
+                                        </Frame>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </CarouselView.ItemTemplate>
+                        </CarouselView>
+                        <IndicatorView  x:Name="indicatorView"
+                                                            HorizontalOptions="Center"
+                                                           IndicatorColor="{AppThemeBinding Dark=#dbdbdb, Light=#414141}"
+                                                           SelectedIndicatorColor="{AppThemeBinding Dark=Red,Light=#1C6758}"
+                                                           MaximumVisible="6"
+                                                           Margin="0,10,0,20" />
+
+                        <VerticalStackLayout>
+                            <Border Stroke="{AppThemeBinding Dark=#dbdbdb, Light=Grey}"
+                                StrokeThickness="2" HeightRequest="5" />
+                            <VerticalStackLayout>
+                                <HorizontalStackLayout Margin="0,30,0,30" HorizontalOptions="Center" x:Name="DetailsHandlerMobile">
+                                    <Label Text="Details "
+                           FontFamily="Kollektif"
+                           FontSize="18"
+                           Margin="0,0,10,0"
+                           VerticalOptions="Center"
+                           FontAttributes="Bold"/>
+                                    <Image Source="{AppThemeBinding Dark=caretdowndark.png, Light=caretdownlight.png}"
+                               WidthRequest="18"
+                               x:Name="DetailsCaretImageMobile"
+                               HeightRequest="18"
+                               VerticalOptions="Center"
+                        />
+
+                                </HorizontalStackLayout>
+                                <Label Text="{Binding Post.CarSpecs.DescriptionBinding}"
+                           FontFamily="Roboto"
+                            x:Name="DetailsTextMobile"
+                           IsVisible="False"
+                           Opacity="0"
+                           FontSize="16"
+                           ></Label>
+                                <VerticalStackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="DetailsCaretTapHandler"></TapGestureRecognizer>
+                                </VerticalStackLayout.GestureRecognizers>
+                            </VerticalStackLayout>
+
+                            <VerticalStackLayout>
+
+                                <HorizontalStackLayout Margin="0,30,0,30" HorizontalOptions="Center" x:Name="SpecsHandlerMobile">
+                                    <Label Text="Technical Specs"
+                           FontFamily="Kollektif"
+                           FontSize="18"
+                           Margin="0,0,10,0"
+                           VerticalOptions="Center"
+                           FontAttributes="Bold"/>
+                                    <Image Source="{AppThemeBinding Dark=caretdowndark.png, Light=caretdownlight.png}"
+                               WidthRequest="18"
+                               x:Name="SpecsCaretImageMobile"
+                               HeightRequest="18"
+                               VerticalOptions="Center"
+                        />
+
+                                </HorizontalStackLayout>
+                                <VerticalStackLayout x:Name="SpecsTextMobile"
+                                             IsVisible="False"
+                                             Opacity="0">
+                                    <Label Text="{Binding Post.CarSpecs.ManufacturerBinding}"
+                                   FontFamily="Roboto"
+                                   HorizontalOptions="Start"
+                                   FontSize="16"
+                                   Margin="0,0,0,5"/>
+                                    <Label Text="{Binding Post.CarSpecs.ModelBinding}"
+                                   FontFamily="Roboto"
+                                   HorizontalOptions="Start"
+                                   FontSize="16"
+                                   Margin="0,0,0,5"/>
+                                    <Label Text="{Binding Post.CarSpecs.GenerationBinding}"
+                                   FontFamily="Roboto"
+                                   IsVisible="{Binding Post.CarSpecs.HasGeneration}"
+                                   HorizontalOptions="Start"
+                                   FontSize="16"
+                                   Margin="0,0,0,5"/>
+                                    <Label Text="{Binding Post.CarSpecs.YearBinding}"
+                                   FontFamily="Roboto"
+                                   HorizontalOptions="Start"
+                                   FontSize="16"
+                                   Margin="0,0,0,5"/>
+                                    <Label Text="{Binding Post.CarSpecs.FuelTypeBinding}"
+                                   FontFamily="Roboto"
+                                   HorizontalOptions="Start"
+                                   FontSize="16"
+                                   Margin="0,0,0,5"/>
+                                    <Label Text="{Binding Post.CarSpecs.MileageBinding}"
+                                   FontFamily="Roboto"
+                                   HorizontalOptions="Start"
+                                   FontSize="16"
+                                   Margin="0,0,0,5"/>
+                                    <Label Text="{Binding Post.CarSpecs.EngineCapacityBinding}"
+                                   FontFamily="Roboto"
+                                   HorizontalOptions="Start"
+                                   FontSize="16"
+                                   Margin="0,0,0,5"/>
+                                    <Label Text="{Binding Post.CarSpecs.HorsepowerBinding}"
+                                   FontFamily="Roboto"
+                                   HorizontalOptions="Start"
+                                   FontSize="16"
+                                   Margin="0,0,0,5"/>
+                                    <Label Text="{Binding Post.CarSpecs.TorqueBinding}"
+                                   FontFamily="Roboto"
+                                   IsVisible="{Binding Post.CarSpecs.HasTorque}"
+                                   HorizontalOptions="Start"
+                                   FontSize="16"
+                                   Margin="0,0,0,5"/>
+                                    <Label Text="{Binding Post.CarSpecs.TransmissionBinding}"
+                                   FontFamily="Roboto"
+                                   FontSize="16"
+                                   Margin="0,0,0,5"/>
+                                </VerticalStackLayout>
+                                <VerticalStackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="SpecsCaretTapHandler"></TapGestureRecognizer>
+                                </VerticalStackLayout.GestureRecognizers>
+                            </VerticalStackLayout>
+                            <VerticalStackLayout>
+
+                                <HorizontalStackLayout Margin="0,30,0,30" HorizontalOptions="Center" x:Name="EquipmentHandlerMobile">
+                                    <Label Text="Equipment"
+                           FontFamily="Kollektif"
+                           FontSize="18"
+                           Margin="0,0,10,0"
+                           VerticalOptions="Center"
+                           FontAttributes="Bold"/>
+                                    <Image Source="{AppThemeBinding Dark=caretdowndark.png, Light=caretdownlight.png}"
+                               WidthRequest="18"
+                               x:Name="EquipmentCaretImageMobile"
+                               HeightRequest="18"
+                               VerticalOptions="Center"
+                        />
+
+                                </HorizontalStackLayout>
+                                <Label Text="{Binding Post.CarEquipment}"
+                           FontFamily="Roboto"
+                           x:Name="EquipmentTextMobile"
+                           IsVisible="False"
+                           Opacity="0"
+                           FontSize="16"
+                           ></Label>
+                                <VerticalStackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="EquipmentCaretTapHandler"></TapGestureRecognizer>
+                                </VerticalStackLayout.GestureRecognizers>
+                            </VerticalStackLayout>
+                            <HorizontalStackLayout HorizontalOptions="Center" Margin="0,30,0,30">
+                                <Label Text="Price: "
+                                   FontFamily="Kollektif"
+                                   FontSize="25"
+                                   FontAttributes="Bold"
+                                   TextColor="{AppThemeBinding Dark=Red, Light=#1C6758}"/>
+
+
+                                <Label Text="{Binding Post.CarSpecs.PriceBinding}"
+                                                               FontFamily="Kollektif"
+                                                               FontSize="25"
+                                                               FontAttributes="Bold"
+                                                               TextColor="{AppThemeBinding Dark=Red, Light=#1C6758}"/>
+                            </HorizontalStackLayout>
+                            <Button Text="Contact Owner"
+                            FontFamily="Kollektif"
+                            TextColor="White"
+                            IsVisible="{Binding IsNotOwner}"
+                            Margin="0,20,0,20"
+                            HorizontalOptions="Center"
+                            FontAttributes="Bold"
+                            WidthRequest="320"
+                            BorderColor="Transparent"
+                            BackgroundColor="{AppThemeBinding Dark=#03506F, Light=#3B5249}"
+                            Command="{Binding ToggleContactOptionsCommand}">
+                                <FlyoutBase.ContextFlyout>
+                                    <MenuFlyout >
+                                        <MenuFlyoutItem Text="{Binding ContactViaEmail}"
+                                            Command="{Binding SendEmailToOwnerCommand}"/>
+                                        <MenuFlyoutItem Text="{Binding ContactViaPhone}"
+                                            Command="{Binding DialOwnerCommand}"/>
+                                    </MenuFlyout>
+                                </FlyoutBase.ContextFlyout>
+                            </Button>
+
+                            <Button Text="{Binding FavoritesText}"
+                            BorderColor="Transparent"
+                            BackgroundColor="{AppThemeBinding Dark=#D65A31, Light=#FF5722}"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            FontFamily="Kollektif"
+                            HorizontalOptions="Center"
+                            Margin="0,10,0,10"
+                            Command="{Binding AddOrRemoveFavoritePostCommand}"/>
+
+                            <Button Text="Delete Post"
+                            IsVisible="{Binding IsOwner}"
+                            BorderColor="Transparent"
+                            TextColor="White"
+                            BackgroundColor="{AppThemeBinding Dark=#03506F, Light=#3B5249}"
+                            FontFamily="Kollektif"
+                            FontAttributes="Bold"
+                            HorizontalOptions="Center"
+                            Command="{Binding DeletePostCommand}"/>
+
+
+                            <HorizontalStackLayout Margin="0,40,0,0" HorizontalOptions="Center">
+                                <Image Source="{AppThemeBinding Dark=watchdark.png, Light=watchlight.png}"
+                                                               WidthRequest="25"
+                                                               HeightRequest="25"
+                                                               Margin="0,0,10,0" />
+                                <Label Text="{Binding Post.DateTimeAdded}"
+                                                               FontFamily="Kollektif"
+                                                               FontSize="18"
+                                                               HorizontalOptions="Start"
+                                                               VerticalOptions="Center" />
+
+                            </HorizontalStackLayout>
+
+                            <HorizontalStackLayout Margin="0,0,0,0" Grid.Column="1" HorizontalOptions="Center">
+                                <Border Stroke="{AppThemeBinding Light=Grey, Dark=#dbdbdb}"
+                                                                StrokeThickness="1"
+                                                                BackgroundColor="{AppThemeBinding Light=Grey, Dark=#dbdbdb}"
+                                                                StrokeShape="RoundRectangle 50"
+                                                                WidthRequest="25"
+                                                                HeightRequest="25">
+                                    <Image Source="{Binding Post.Owner.ProfileImageUrl}"
+                                                                   WidthRequest="25"
+                                                                   Aspect="Fill"
+                                                                   HeightRequest="25"/>
+                                </Border>
+                                <Label Text="{Binding Post.CarSpecs.UploadInformation}"
+                                                               FontFamily="Kollektif"
+                                                               FontSize="18"
+                                                               Margin="10,0,0,0"
+                                                               HorizontalOptions="Start"
+                                                               VerticalOptions="Center" />
+                            </HorizontalStackLayout>
+
+
+                            <HorizontalStackLayout Margin="0,0,0,0" HorizontalOptions="Center" Grid.Column="2">
+                                <Image Source="{AppThemeBinding Dark=eyeglassesdark.png, Light=eyeglasseslight.png}"
+                                                               WidthRequest="25"
+                                                               HeightRequest="25"
+                                                        />
+
+                                <Label Text="{Binding Post.CarSpecs.ViewedBy}"
+                                                               FontFamily="Kollektif"
+                                                               FontSize="18"
+                                                               Margin="10,0,0,0"
+                                                               HorizontalOptions="Start"
+                                                               VerticalOptions="Center"
+                                                        />
+                            </HorizontalStackLayout>
+
+
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

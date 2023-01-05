@@ -456,4 +456,16 @@ public partial class MotorEmpireViewModel : BaseViewModel
         CrossPlatformMessageRenderer.RenderMessages("The search bar cannot be empty!", "Retry", 4);
     }
 
+    [RelayCommand]
+    private async void ViewAllVehicles()
+    {
+        UpdateNeeded = true;
+        await Shell.Current.GoToAsync(nameof(PostFeed), true, new Dictionary<string, object>
+        {
+            ["UpdateNeeded"]=UpdateNeeded,
+        });
+
+        UpdateNeeded = false;
+    }
+
 }

@@ -261,6 +261,16 @@ namespace MVVM.View_Models.Post_Info
             }
         }
 
+        [RelayCommand]
+        private async void NavigateBack()
+        {
+            await Shell.Current.GoToAsync(nameof(PostFeed), true, new Dictionary<string, object>
+            {
+                {"UpdateNeeded",true }
+
+            });
+        }
+
     }
 
 }
