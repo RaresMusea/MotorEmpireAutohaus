@@ -28,6 +28,8 @@ using MVVM.Models;
 using MVVM.View.Post_Info;
 using MVVM.View_Models.Post_Info;
 using MVVM.Models.Vehicle_Models.Car.Car_Model;
+using MVVM.View.Favorite_Posts;
+using MVVM.View_Models.FavoritePosts;
 
 namespace MotorEmpireAutohaus;
 public static class MauiProgram
@@ -62,8 +64,8 @@ public static class MauiProgram
         builder.Services.AddSingleton<SignUp>();
         builder.Services.AddSingleton<AccountService>();
         builder.Services.AddSingleton<Search>();
-        builder.Services.AddSingleton<MotorEmpire>();
-        builder.Services.AddSingleton<MotorEmpireViewModel>();
+        builder.Services.AddTransient<MotorEmpire>();
+        builder.Services.AddTransient<MotorEmpireViewModel>();
         builder.Services.AddSingleton<CarFilterService>();
 
         builder.Services.AddSingleton<AppShell>();
@@ -91,6 +93,9 @@ public static class MauiProgram
         builder.Services.AddTransient<PostInfo>();
         builder.Services.AddSingleton<MVVM.Models.Vehicle_Models.Car.Car_Model.Car>();
         builder.Services.AddTransient<PostInfoViewModel>();
+
+        builder.Services.AddTransient<FavoritePosts>();
+        builder.Services.AddTransient<FavoritePostsViewModel>();
 
         return builder.Build();
     }

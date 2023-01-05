@@ -5,6 +5,9 @@
     <MauiXaml Update="AppShell.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="View\Favorite Posts\FavoritePosts.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="View\Landing\MotorEmpire.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

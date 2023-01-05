@@ -313,6 +313,98 @@ namespace MVVM.Services.Car_Post_Services
             }
 
             return true;
+        }
+
+        private List<string> GetFavoritesUuids(string userUuid)
+        {
+            List<string> result = new();
+
+            MySqlCommand command = new MySqlCommand("SELECT PostUUID FROM FavoritePosts WHERE" +
+                " UserUUID=@uuid", IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
+
+            command.Prepare();
+            command.Parameters.AddWithValue("@uuid", userUuid);
+
+            MySqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                result.Add(reader.GetString(0));
+            }
+
+            reader.Close();
+
+            if (result.Count == 0)
+            {
+                return null;
+            }
+
+            return result;
+        }
+
+        public CarPost RetrieveCarPostByUuid(string postUuid)
+        {
+            CarPost result = new();
+            int ownerId = -1;
+
+            MySqlCommand command = new($"SELECT * FROM {TableReference} WHERE UUID=@uuid",
+                    IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
+            command.Prepare();
+            command.Parameters.AddWithValue("@uuid", postUuid);
+            
+            MySqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string uuid = reader.GetString(1);
+                ownerId = reader.GetInt32(2);
+                string description = reader.GetString(4);
+                string carEquipment = reader.GetString(5);
+                int price = reader.GetInt32(6);
+                int views = reader.GetInt32(7);
+                string dateTimeAdded = reader.GetString(8);
+                CarPost carPost = new(null, description, carEquipment, price,
+                    null, views, dateTimeAdded)
+                {
+                        Uuid = uuid
+                };
+
+                result = carPost;
+            }
+                
+            reader.Close();
+
+                if (ownerId!=-1)
+                {
+
+                    result.Owner = accountService.GetUserById(ownerId);
+                    result.Car = (Models.Vehicle_Models.Car.Car_Model.Car)carService.RetrieveByUuid(result.Uuid);
+                    result.PostPictures = RetrieveCarPostPictures(result.Uuid);
+                    result.MainPostPicture = result.PostPictures.ElementAt(0);
+                    result.AddedToFavoritesByCurrentUser = WasPostAddedToFavoritesBy(result.Uuid,
+                    Logger.CurrentlyLoggedInUuid);
+                    return result;
+                }
+
+                return null;
+        }
+
+        public List<CarPost> RetrieveFavoritesForUser(string userUuid)
+        {
+            List<string> postUuids = GetFavoritesUuids(userUuid);
+            if(postUuids is null)
+            {
+                return null;
+            }
+
+            List<CarPost> result = new();
+
+            foreach(string postUuid in postUuids)
+            {
+                result.Add(RetrieveCarPostByUuid(postUuid));
+            }
+
+            return result;
 
         }
     }

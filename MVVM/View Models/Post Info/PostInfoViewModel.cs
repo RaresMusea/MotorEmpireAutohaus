@@ -6,18 +6,17 @@ using MVVM.Models.Post_Model;
 using MVVM.Models.Vehicle_Models.Car.Car_Model;
 using MVVM.Services.Car_Post_Services;
 using MVVM.View_Models.Base;
-using RestSharp;
-using System.Net;
-using System.Net.Mail;
 using Tools.Handlers;
 using Tools.Utility.Messages;
 using EASendMail;
 using MVVM.View.Post_Feed;
+using MVVM.View.Favorite_Posts;
 
 namespace MVVM.View_Models.Post_Info
 {
     [QueryProperty(nameof(Car), nameof(Car))]
     [QueryProperty(nameof(LoggedInUser), nameof(LoggedInUser))]
+    [QueryProperty(nameof(UpdateNeeded),nameof(UpdateNeeded))]
     public partial class PostInfoViewModel : BaseViewModel
     {
 
@@ -28,8 +27,10 @@ namespace MVVM.View_Models.Post_Info
         private CarPost post;
 
         [ObservableProperty]
-        private string loggedInUser;
+        private bool updateNeeded;
 
+        [ObservableProperty]
+        private string loggedInUser;
         public string ContactOwnerText => $"Contact {post.Owner.Name} via ";
 
         [ObservableProperty]
@@ -82,12 +83,18 @@ namespace MVVM.View_Models.Post_Info
             }
         }
 
-        private void AddPostToFavorites()
+        private async void AddPostToFavorites()
         {
+            UpdateNeeded = true;
             if (postService.AddToFavorites(post.Uuid, Logger.CurrentlyLoggedInUuid))
             {
                 CrossPlatformMessageRenderer.RenderMessages("Succesfully added this post to your favorites list!", "Ok", 4);
                 FavoritesText = "Remove from favorites";
+                if (PostInfoConfigurer.OnFavorites == true)
+                {
+                    await Shell.Current.GoToAsync($"{nameof(FavoritePosts)}?UpdateNeeded={UpdateNeeded}", true);
+                    UpdateNeeded = false;
+                }
                 return;
             }
 
@@ -96,10 +103,16 @@ namespace MVVM.View_Models.Post_Info
 
         private void RemovePostFromFavorites()
         {
+            UpdateNeeded = true;
             if (postService.RemoveFromFavorites(post.Uuid))
             {
                 CrossPlatformMessageRenderer.RenderMessages("Sucessfully removed post from your favorites list!", "Ok", 4);
                 FavoritesText = "Add to favorites";
+                if (PostInfoConfigurer.OnFavorites == true)
+                {
+                    Shell.Current.GoToAsync($"{nameof(FavoritePosts)}?UpdateNeeded={UpdateNeeded}", true);
+                    UpdateNeeded = false;
+                }
                 return;
             }
 
@@ -259,16 +272,6 @@ namespace MVVM.View_Models.Post_Info
                         {"UpdateNeeded",true },
                     });
             }
-        }
-
-        [RelayCommand]
-        private async void NavigateBack()
-        {
-            await Shell.Current.GoToAsync(nameof(PostFeed), true, new Dictionary<string, object>
-            {
-                {"UpdateNeeded",true }
-
-            });
         }
 
     }

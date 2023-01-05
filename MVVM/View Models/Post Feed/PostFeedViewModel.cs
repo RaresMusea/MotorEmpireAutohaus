@@ -17,10 +17,8 @@ namespace MVVM.View_Models.Post_Feed
 {
     [QueryProperty(nameof(CarFilter), nameof(CarFilter))]
     [QueryProperty(nameof(Models.Vehicle_Models.Car.Car_Model.Car), nameof(Models.Vehicle_Models.Car.Car_Model.Car))]
-    /*[QueryProperty(nameof(CarPost), nameof(CarPost))]*/
     [QueryProperty(nameof(SearchQueryText), nameof(SearchQueryText))]
     [QueryProperty (nameof(UpdateNeeded),nameof(UpdateNeeded))]
-    [QueryProperty (nameof(LoggedInUser),nameof(LoggedInUser))]
     public partial class PostFeedViewModel : BaseViewModel
     {
         private readonly PostFeedService postFeedService;
@@ -41,7 +39,6 @@ namespace MVVM.View_Models.Post_Feed
 
         [ObservableProperty] private string postsCountMessage;
 
-        [ObservableProperty] private string loggedInUser="marian";
 
 
         public PostFeedViewModel(PostFeedService postFeedService, CarFilter carFilter)

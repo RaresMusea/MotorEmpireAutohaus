@@ -21,7 +21,7 @@
                                Aspect="AspectFill"
                                HeightRequest="800"
                                WidthRequest="1900" />
-                        <Label AbsoluteLayout.LayoutBounds="575,100,700,250"
+                        <Label AbsoluteLayout.LayoutBounds="570,100,700,250"
                                Text="{Binding GreetingMessage}"
                                TextColor="White"
                                FontAttributes="Bold"
@@ -31,8 +31,8 @@
                                VerticalTextAlignment="Center" />
                         <Label
 
-                            AbsoluteLayout.LayoutBounds="445,120,710,300"
-                            Text="What would you like to search for today?"
+                            AbsoluteLayout.LayoutBounds="460,120,710,300"
+                            Text="What would you like to search today?"
                             TextColor="White"
                             FontAttributes="Bold"
                             HorizontalOptions="Start"
@@ -72,7 +72,7 @@
                             </HorizontalStackLayout>
                         </Frame>
 
-                        <Button AbsoluteLayout.LayoutBounds="100,510,1320,100"
+                        <Button AbsoluteLayout.LayoutBounds="100,450,1320,100"
                                 Text="Post an ad"
                                 WidthRequest="180"
                                 HeightRequest="60"
@@ -81,7 +81,15 @@
                                 FontFamily="Kollektif"
                                 FontSize="16"
                                 Command="{Binding NavigateToPostUploadCommand}" />
-                        <Button AbsoluteLayout.LayoutBounds="100,430,1320,100"
+                        <Button AbsoluteLayout.LayoutBounds="100,595,1320,100"
+                                Text="View all vehicles"
+                                WidthRequest="180"
+                                HeightRequest="60"
+                                FontFamily="Kollektif"
+                                TextColor="White"
+                                Command="{Binding ViewAllVehiclesCommand}"
+                                BackgroundColor="{AppThemeBinding Dark=#D65A31, Light=#FF5722}"/>
+                        <Button AbsoluteLayout.LayoutBounds="100,520,1320,100"
                                 Text="Or view categories"
                                 WidthRequest="200"
                                 HeightRequest="60"
@@ -224,10 +232,10 @@
                    Opacity="0">
                 <VerticalStackLayout>
                     <Frame CornerRadius="30"
-                           BackgroundColor="{AppThemeBinding Dark=#414141,Light=#EEF2E6}"
+                           BackgroundColor="{AppThemeBinding Dark=#676767,Light=#EEF2E6}"
                            x:Name="SecondaryFrame">
                         <VerticalStackLayout>
-                            <Frame CornerRadius="35" BackgroundColor="{AppThemeBinding Dark=#404040,Light=#EEF2E6}">
+                            <Frame CornerRadius="35" BackgroundColor="{AppThemeBinding Dark=#414141,Light=#EEF2E6}">
                                 <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Always">
                                     <VerticalStackLayout>
                                         <HorizontalStackLayout>

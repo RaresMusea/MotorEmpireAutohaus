@@ -12,6 +12,7 @@
     xmlns:postInfo="clr-namespace:MVVM.View_Models.Post_Info"
     xmlns:core1="clr-namespace:MVVM.View_Models.Core"
     xmlns:appSettings1="clr-namespace:MVVM.View.App_Settings"
+    xmlns:favorites="clr-namespace:MVVM.View.Favorite_Posts"
     x:DataType="core1:MotorEmpireViewModel"
     Shell.TabBarIsVisible="False"
     NavigationPage.HasBackButton="False"
@@ -69,6 +70,7 @@
         <ShellContent Title="Motor Empire Autohaus" ContentTemplate="{DataTemplate landing:MotorEmpire}" x:Name="MotorEmpireTab"></ShellContent>
         <ShellContent Title="All Cars" ContentTemplate="{DataTemplate allCars:PostFeed}" x:Name="SearchTab"></ShellContent>
         <ShellContent Title="My account" ContentTemplate="{DataTemplate accountManagement:Account}" x:Name="AccountTab"></ShellContent>
+        <ShellContent Title="Favorites" ContentTemplate="{DataTemplate favorites:FavoritePosts}"></ShellContent>
         <ShellContent Title="Settings" ContentTemplate="{DataTemplate appSettings1:AppSettings}"></ShellContent>
     </FlyoutItem>
     

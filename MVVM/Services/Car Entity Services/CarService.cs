@@ -69,7 +69,7 @@ namespace MVVM.Services.Car_Entity_Services
                 responseEntity.VehicleType = reader.GetString(3);
                 responseEntity.Manufacturer = reader.GetString(4);
                 responseEntity.Model = reader.GetString(5);
-                responseEntity.Generation = reader.GetString(6);
+                responseEntity.Generation = reader.IsDBNull(6)?null:reader.GetString(6);
                 responseEntity.Year = reader.GetInt32(7);
                 responseEntity.FuelType = reader.GetString(8);
                 responseEntity.Mileage = reader.GetInt32(9);
@@ -81,6 +81,7 @@ namespace MVVM.Services.Car_Entity_Services
             }
 
             responseEntity.Uuid = uuid;
+            reader.Close();
             return responseEntity;
 
         }

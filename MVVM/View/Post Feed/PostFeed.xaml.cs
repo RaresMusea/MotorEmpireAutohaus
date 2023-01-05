@@ -1,4 +1,6 @@
+using MVVM.View.Landing;
 using MVVM.View_Models.Post_Feed;
+using Tools.Handlers;
 
 namespace MVVM.View.Post_Feed;
 
@@ -6,8 +8,17 @@ public partial class PostFeed : ContentPage
 {
     public PostFeed(PostFeedViewModel viewModel)
     {
+        PostInfoConfigurer.OnPostFeed = true;
+        PostInfoConfigurer.OnFavorites = false;
         BindingContext = viewModel;
         InitializeComponent();
+    }
+
+    protected override bool OnBackButtonPressed()
+    {
+        Shell.Current.GoToAsync(nameof(MotorEmpire), true);
+        var value = base.OnBackButtonPressed();
+        return true;
     }
 
     protected override void OnAppearing()

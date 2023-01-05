@@ -1,5 +1,7 @@
 using MVVM.View.Post_Feed;
 using MVVM.View_Models.Post_Info;
+using MVVM.View.Favorite_Posts;
+using Tools.Handlers;
 
 namespace MVVM.View.Post_Info;
 
@@ -17,9 +19,16 @@ public partial class PostInfo : ContentPage
         base.OnAppearing();
     }
 
-    protected override  bool OnBackButtonPressed()
+    protected override bool OnBackButtonPressed()
     {
-		Shell.Current.GoToAsync(nameof(PostFeed), true);
+        if (PostInfoConfigurer.OnPostFeed)
+        {
+            Shell.Current.GoToAsync(nameof(PostFeed), true);
+        }
+        else
+        {
+            Shell.Current.GoToAsync($"{nameof(FavoritePosts)}?UpdateNeeded={true}", true);
+        }
         bool value=base.OnBackButtonPressed();
 		return true;
     }
