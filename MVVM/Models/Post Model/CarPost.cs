@@ -39,6 +39,8 @@ namespace MVVM.Models.Post_Model
 
         [ObservableProperty] private CarPost post;
 
+        [ObservableProperty] private bool addedToFavoritesByCurrentUser;
+
         public CarPost(UserAccount owner, string description, string carEquipment, int? price,
             List<PostPicture> postPictures, int views, string dateTimeAdded)
         {

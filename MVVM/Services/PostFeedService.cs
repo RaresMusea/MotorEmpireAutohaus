@@ -44,5 +44,10 @@ namespace MVVM.Services
         {
             postService.IncreaseViewsForPost(uuid);
         }
+
+        public bool WasPostAddedToFavoritesByAUser(string postUuid, string userUuid)
+        {
+            return postService.WasPostAddedToFavoritesBy(postUuid, userUuid);
+        }
     }
 }

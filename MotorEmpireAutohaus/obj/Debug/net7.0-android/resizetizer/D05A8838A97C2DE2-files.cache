@@ -27,6 +27,10 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\appsettingslight.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\auth.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\brakedisc.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\car.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\caretdowndark.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\caretdownlight.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\caretupdark.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\caretuplight.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\constructiontruck.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\dotnet_bot.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\eyeglassesdark.png
@@ -50,6 +54,10 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\appsettingslight.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\auth.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\brakedisc.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\car.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\caretdowndark.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\caretdownlight.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\caretupdark.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\caretuplight.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\constructiontruck.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\dotnet_bot.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\eyeglassesdark.png
@@ -73,6 +81,10 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\appsettingslight.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\auth.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\brakedisc.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\car.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\caretdowndark.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\caretdownlight.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\caretupdark.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\caretuplight.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\constructiontruck.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\dotnet_bot.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\eyeglassesdark.png
@@ -96,6 +108,10 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\appsettingslight.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\auth.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\brakedisc.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\car.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\caretdowndark.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\caretdownlight.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\caretupdark.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\caretuplight.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\constructiontruck.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\dotnet_bot.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\eyeglassesdark.png
@@ -119,6 +135,10 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\appsettingslight.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\auth.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\brakedisc.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\car.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\caretdowndark.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\caretdownlight.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\caretupdark.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\caretuplight.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\constructiontruck.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\dotnet_bot.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\eyeglassesdark.png

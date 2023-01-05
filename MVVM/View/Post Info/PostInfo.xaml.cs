@@ -1,3 +1,4 @@
+using MVVM.View.Post_Feed;
 using MVVM.View_Models.Post_Info;
 
 namespace MVVM.View.Post_Info;
@@ -16,7 +17,14 @@ public partial class PostInfo : ContentPage
         base.OnAppearing();
     }
 
-	private async void DetailsCaretTapHandler(object sender, EventArgs e)
+    protected override  bool OnBackButtonPressed()
+    {
+		Shell.Current.GoToAsync(nameof(PostFeed), true);
+        bool value=base.OnBackButtonPressed();
+		return true;
+    }
+
+    private async void DetailsCaretTapHandler(object sender, EventArgs e)
 	{
 		if (!DetailsText.IsVisible)
         {

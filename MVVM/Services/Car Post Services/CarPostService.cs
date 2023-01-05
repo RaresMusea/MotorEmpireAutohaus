@@ -204,5 +204,46 @@ namespace MVVM.Services.Car_Post_Services
             command.Parameters.AddWithValue("@uuid", postUuid);
             command.ExecuteNonQuery();
         }
+
+
+        public bool AddToFavorites(string postUuid, string userUuid)
+        {
+            MySqlCommand command = new("INSERT INTO FavoritePosts(PostUUID, UserUUID) " +
+                "VALUES (@postuuid, @useruuid)",
+                IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
+
+            command.Prepare();
+            command.Parameters.AddWithValue("@postuuid", postUuid);
+            command.Parameters.AddWithValue("@useruuid", userUuid);
+            try
+            {
+                command.ExecuteNonQuery();
+            }
+            catch (MySqlException)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public bool WasPostAddedToFavoritesBy(string postUuid,string userUuid)
+        {
+            MySqlCommand command = new("SELECT COUNT(*) FROM FavoritePosts WHERE PostUUID=@postuuid AND UserUUID=@useruuid",
+                IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
+            command.Prepare();
+            command.Parameters.AddWithValue("@postuuid", postUuid);
+            command.Parameters.AddWithValue("useruuid", userUuid);
+
+            MySqlDataReader reader = command.ExecuteReader();
+
+            int result=0;
+            while (reader.Read())
+            {
+                result = reader.GetInt32(0);
+            }
+
+            reader.Close();
+            return result != 0;
+        }
     }
 }

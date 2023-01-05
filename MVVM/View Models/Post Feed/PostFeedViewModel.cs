@@ -9,6 +9,7 @@ using MVVM.View.Post_Info;
 using MVVM.View_Models.Post_Info;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using Tools.Handlers;
 using BaseViewModel = MVVM.View_Models.Base.BaseViewModel;
 using CarFilter = MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter;
 
@@ -217,11 +218,22 @@ namespace MVVM.View_Models.Post_Feed
             }
         }
 
+        private void SetAddedToFavorites()
+        {
+            carPosts.ForEach(post =>
+            {
+                post.AddedToFavoritesByCurrentUser = postFeedService.WasPostAddedToFavoritesByAUser(post.Uuid,
+                    Logger.CurrentlyLoggedInUuid);
+
+            });
+        }
+
         private void RefreshPosts()
         {
             //SearchQueryText = "";
             posts.Clear();
             PopulateObservableCollection();
+            SetAddedToFavorites();
         }
 
 
