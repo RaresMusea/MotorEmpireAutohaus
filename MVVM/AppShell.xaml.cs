@@ -5,6 +5,7 @@ using MVVM.View.Landing;
 using MVVM.View.Post_Feed;
 using MVVM.View.Post_Info;
 using MVVM.View.Post_Upload;
+using Tools.Handlers;
 
 namespace MVVM;
 
@@ -12,7 +13,10 @@ public partial class AppShell : Shell
 {
     public AppShell()
     {
+
+       
         InitializeComponent();
+
         Routing.RegisterRoute(nameof(MotorEmpire), typeof(MotorEmpire));
         Routing.RegisterRoute(nameof(Account), typeof(Account));
         Routing.RegisterRoute(nameof(MotorEmpire), typeof(MotorEmpire));
@@ -23,22 +27,7 @@ public partial class AppShell : Shell
         Routing.RegisterRoute(nameof(FavoritePosts), typeof(FavoritePosts));
     }
 
-    protected override void OnAppearing()
-    {
-        base.OnAppearing();
-
-        if (this.AnimationIsRunning("TransitionAnimation"))
-        {
-            return;
-        }
-
-        Animation parentAnimation = new()
-        {
-            //{0,0.8,new Animation(v=>FlyoutImageBanner.Opacity=v,0,1,Easing.BounceIn)}
-        };
-
-        parentAnimation.Commit(this, "TransitionAnimation", 16, 2000);
-    }
+ 
 
     private async void SignOut(object o, EventArgs e)
     {

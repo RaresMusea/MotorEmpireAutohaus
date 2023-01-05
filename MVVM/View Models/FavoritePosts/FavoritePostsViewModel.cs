@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using MVVM.Models.Post_Model;
 using MVVM.Services;
 using MVVM.Services.Car_Post_Services;
+using MVVM.View.Landing;
 using MVVM.View.Post_Info;
 using MVVM.View_Models.Base;
 using MVVM.View_Models.Post_Info;
@@ -81,6 +82,12 @@ namespace MVVM.View_Models.FavoritePosts
                 UpdateNeeded = false;
             }
 
+        }
+
+        [RelayCommand]
+        private async void GoBack()
+        {
+            await Shell.Current.GoToAsync($"{nameof(MotorEmpire)}", true);
         }
     }
     }

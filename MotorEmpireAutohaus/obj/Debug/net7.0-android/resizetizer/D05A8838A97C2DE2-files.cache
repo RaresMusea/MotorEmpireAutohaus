@@ -42,6 +42,10 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\logo.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\postfeeddark.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\postfeedlight.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\search.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\setting.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\settingsdark.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\star.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\stardark.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\tractor.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\trailer.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\truck.png
@@ -69,6 +73,10 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\logo.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\postfeeddark.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\postfeedlight.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\search.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\setting.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\settingsdark.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\star.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\stardark.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\tractor.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\trailer.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\truck.png
@@ -96,6 +104,10 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\logo.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\postfeeddark.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\postfeedlight.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\search.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\setting.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\settingsdark.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\star.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\stardark.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\tractor.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\trailer.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\truck.png
@@ -123,6 +135,10 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\logo.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\postfeeddark.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\postfeedlight.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\search.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\setting.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\settingsdark.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\star.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\stardark.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\tractor.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\trailer.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\truck.png
@@ -150,6 +166,10 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\logo.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\postfeeddark.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\postfeedlight.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\search.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\setting.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\settingsdark.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\star.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\stardark.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\tractor.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\trailer.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\truck.png

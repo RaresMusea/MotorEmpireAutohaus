@@ -87,6 +87,7 @@ namespace MVVM.Services.Account_Services
                 Logger.CurrentlyLoggedInUuid = user.Uuid;
                 Logger.CurrentlyLoggedInEmail = user.EmailAddress;
                 Logger.CurrentlyLoggedInName = user.Name;
+                Logger.CurrentlyLoggedInProfileImage = user.ProfileImageUrl;
                 return true;
             }
         }

@@ -52,6 +52,8 @@
 	  <None Remove="Resources\Fonts\TTOctosquares.ttf" />
 	  <None Remove="Resources\Images\aboutdark.svg" />
 	  <None Remove="Resources\Images\aboutlight.svg" />
+	  <None Remove="Resources\Images\account.png" />
+	  <None Remove="Resources\Images\accountlight.svg" />
 	  <None Remove="Resources\Images\appsettingsdark.svg" />
 	  <None Remove="Resources\Images\appsettingslight.svg" />
 	  <None Remove="Resources\Images\auth.png" />
@@ -64,6 +66,7 @@
 	  <None Remove="Resources\Images\caretdownlight.svg" />
 	  <None Remove="Resources\Images\caretupdark.svg" />
 	  <None Remove="Resources\Images\caretuplight.svg" />
+	  <None Remove="Resources\Images\carlight.svg" />
 	  <None Remove="Resources\Images\constructiontruck.svg" />
 	  <None Remove="Resources\Images\email.png" />
 	  <None Remove="Resources\Images\eye.png" />
@@ -87,6 +90,10 @@
 	  <None Remove="Resources\Images\postuploaddark.png" />
 	  <None Remove="Resources\Images\postuploadlight.png" />
 	  <None Remove="Resources\Images\search.svg" />
+	  <None Remove="Resources\Images\setting.svg" />
+	  <None Remove="Resources\Images\star.svg" />
+	  <None Remove="Resources\Images\steeringdark.svg" />
+	  <None Remove="Resources\Images\steeringlight.svg" />
 	  <None Remove="Resources\Images\tag.png" />
 	  <None Remove="Resources\Images\tractor.png" />
 	  <None Remove="Resources\Images\trailer.svg" />
