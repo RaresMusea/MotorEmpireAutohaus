@@ -643,6 +643,14 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
+            "EASendMail": {
+              "target": "Package",
+              "version": "[7.9.1.1, )"
+            },
+            "Google.Apis.Oauth2.v2": {
+              "target": "Package",
+              "version": "[1.58.0.1869, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "suppressParent": "All",
               "target": "Package",
@@ -672,6 +680,10 @@
               "target": "Package",
               "version": "[7.0.52, )",
               "autoReferenced": true
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[108.0.3, )"
             }
           },
           "imports": [
@@ -720,6 +732,14 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
+            "EASendMail": {
+              "target": "Package",
+              "version": "[7.9.1.1, )"
+            },
+            "Google.Apis.Oauth2.v2": {
+              "target": "Package",
+              "version": "[1.58.0.1869, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "suppressParent": "All",
               "target": "Package",
@@ -749,6 +769,10 @@
               "target": "Package",
               "version": "[7.0.52, )",
               "autoReferenced": true
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[108.0.3, )"
             },
             "Xamarin.Android.Glide": {
               "suppressParent": "All",
@@ -866,6 +890,14 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
+            "EASendMail": {
+              "target": "Package",
+              "version": "[7.9.1.1, )"
+            },
+            "Google.Apis.Oauth2.v2": {
+              "target": "Package",
+              "version": "[1.58.0.1869, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "suppressParent": "All",
               "target": "Package",
@@ -895,6 +927,10 @@
               "target": "Package",
               "version": "[7.0.52, )",
               "autoReferenced": true
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[108.0.3, )"
             }
           },
           "imports": [
@@ -946,6 +982,14 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
+            "EASendMail": {
+              "target": "Package",
+              "version": "[7.9.1.1, )"
+            },
+            "Google.Apis.Oauth2.v2": {
+              "target": "Package",
+              "version": "[1.58.0.1869, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "suppressParent": "All",
               "target": "Package",
@@ -975,6 +1019,10 @@
               "target": "Package",
               "version": "[7.0.52, )",
               "autoReferenced": true
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[108.0.3, )"
             }
           },
           "imports": [
@@ -1027,6 +1075,14 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
+            "EASendMail": {
+              "target": "Package",
+              "version": "[7.9.1.1, )"
+            },
+            "Google.Apis.Oauth2.v2": {
+              "target": "Package",
+              "version": "[1.58.0.1869, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "suppressParent": "All",
               "target": "Package",
@@ -1074,6 +1130,10 @@
               "target": "Package",
               "version": "[1.2.221109.1, )",
               "autoReferenced": true
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[108.0.3, )"
             }
           },
           "imports": [

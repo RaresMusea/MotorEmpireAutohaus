@@ -1,32 +1,30 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using MotorEmpireAutohaus.MVVM.Models.Base;
-using MotorEmpireAutohaus.Tools.Encryption;
+using MVVM.Models.Base;
+using Tools.Encryption;
 
-
-namespace MotorEmpireAutohaus.MVVM.Models.User_Account_Model
+namespace MVVM.Models.User_Account_Model
 {
-    public abstract partial class Account: Entity
+    public abstract partial class Account : Entity
     {
-        [ObservableProperty]
-        private string name;
+        [ObservableProperty] private string name;
 
-        [ObservableProperty]
-        public string password;
+        [ObservableProperty] private string password;
 
-        public Account(string name, string password) : base()
+        protected Account(string name, string password)
         {
             Name = name;
             Password = Encrypter.EncryptPassword(password);
         }
 
-        public Account(string UUID, string name, string password) : base(UUID)
+        protected Account(string uuid, string name, string password) : base(uuid)
         {
             Name = name;
             Password = password;
         }
 
-        public Account() { }
-
+        protected Account()
+        {
+        }
 
         public abstract override bool IsEmpty();
     }

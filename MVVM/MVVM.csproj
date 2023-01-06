@@ -26,6 +26,9 @@
 	  <PackageReference Include="CommunityToolkit.Maui.Core" Version="3.1.0" />
 	  <PackageReference Include="CommunityToolkit.Maui.Markup" Version="2.1.0" />
 	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
+	  <PackageReference Include="EASendMail" Version="7.9.1.1" />
+	  <PackageReference Include="Google.Apis.Oauth2.v2" Version="1.58.0.1869" />
+	  <PackageReference Include="RestSharp" Version="108.0.3" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -67,6 +70,9 @@
 	  <MauiXaml Update="AppShell.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="View\Favorite Posts\FavoritePosts.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\Landing\MotorEmpire.xaml">
 	    <SubType>Designer</SubType>
 	    <Generator>MSBuild:Compile</Generator>
@@ -93,6 +99,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\Post Feed\PostFeed.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\Post Info\PostInfo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\Post Upload\UploadPost.xaml">

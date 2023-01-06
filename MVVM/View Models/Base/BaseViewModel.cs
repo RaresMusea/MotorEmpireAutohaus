@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CommunityToolkit.Maui;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace MotorEmpireAutohaus.MVVM.View_Models.Base
+namespace MVVM.View_Models.Base
 {
     public partial class BaseViewModel:ObservableObject
     {

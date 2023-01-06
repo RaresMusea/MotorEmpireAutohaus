@@ -33,11 +33,21 @@ namespace MVVM.Services
             for(int i=0;i<carPosts.Count;i++)
             {
                 carPosts[i].Car = cars[i];
+                carPosts[i].PostPictures = postService.RetrieveCarPostPictures(carPosts[i].Car.Uuid);
+                carPosts[i].MainPostPicture = carPosts[i].PostPictures.ElementAt(0);
             }
 
             return carPosts;
         }
 
+        public void UpdateViewsForPost(string uuid)
+        {
+            postService.IncreaseViewsForPost(uuid);
+        }
 
+        public bool WasPostAddedToFavoritesByAUser(string postUuid, string userUuid)
+        {
+            return postService.WasPostAddedToFavoritesBy(postUuid, userUuid);
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace MotorEmpireAutohaus.Storage.Exceptions
+﻿namespace Storage.Exceptions
 {
     public sealed class DatabaseConnectionFailedException : Exception
     {

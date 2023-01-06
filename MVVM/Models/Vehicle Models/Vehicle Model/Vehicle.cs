@@ -1,6 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using MotorEmpireAutohaus.MVVM.Models.Base;
-using System.Runtime.CompilerServices;
+using MVVM.Models.Base;
 
 namespace MVVM.Models.Vehicle_Models.Vehicle_Model
 {

@@ -1,4 +1,4 @@
-﻿namespace MotorEmpireAutohaus.Tools.Utility
+﻿namespace Tools.Utility.PlatformDependentStyling
 {
     public interface IPlatformDependentStyling
     {

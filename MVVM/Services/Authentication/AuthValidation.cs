@@ -1,15 +1,16 @@
 ﻿using System.Net.Mail;
-using MotorEmpireAutohaus.Tools.Utility.Messages;
-using MotorEmpireAutohaus.MVVM.Models.User_Account_Model;
-using MotorEmpireAutohaus.MVVM.Services.Interfaces;
+using MVVM.Services.Interfaces;
+using Tools.Utility.Messages;
+using UserAccount = MVVM.Models.User_Account_Model.UserAccount;
 
-namespace MotorEmpireAutohaus.MVVM.Services.Authentication
+namespace MVVM.Services.Authentication
 {
-    public enum OperationType{
-            UppercaseCheck,
-            LowercaseCheck,
-            DigitCheck,
-            SymbolCheck
+    public enum OperationType
+    {
+        UppercaseCheck,
+        LowercaseCheck,
+        DigitCheck,
+        SymbolCheck
     };
 
     public class AuthValidation : IAuthValidator
@@ -34,10 +35,12 @@ namespace MotorEmpireAutohaus.MVVM.Services.Authentication
 
             if (!name.Contains(' '))
             {
-                return new AuthValidationResult(false, "The Name field should contain both your first and last name, separated by a space!");
+                return new AuthValidationResult(false,
+                    "The Name field should contain both your first and last name, separated by a space!");
             }
 
-            if (name.Length < 5) {
+            if (name.Length < 5)
+            {
                 return new AuthValidationResult(false, "The input provided does not describe a name!");
             }
 
@@ -67,8 +70,10 @@ namespace MotorEmpireAutohaus.MVVM.Services.Authentication
                         }
                     }
                 }
+
                 return formatted;
             }
+
             return name;
         }
 
@@ -89,7 +94,7 @@ namespace MotorEmpireAutohaus.MVVM.Services.Authentication
                 return new AuthValidationResult(false, $"The provided email address is invalid! \n\n\n{e.Message}");
             }
 
-            return new AuthValidationResult(true,email.ToLower());
+            return new AuthValidationResult(true, email.ToLower());
         }
 
         private delegate bool Util(OperationType choice, char charToVerify);
@@ -112,21 +117,22 @@ namespace MotorEmpireAutohaus.MVVM.Services.Authentication
                 }
                 case OperationType.SymbolCheck:
                 {
-                    return (charToVerify=='@' || charToVerify=='$' || charToVerify=='^'||charToVerify=='&'||charToVerify=='*'||charToVerify=='('||charToVerify==')' || charToVerify=='_');
+                    return (charToVerify == '@' || charToVerify == '$' || charToVerify == '^' || charToVerify == '&' ||
+                            charToVerify == '*' || charToVerify == '(' || charToVerify == ')' || charToVerify == '_');
                 }
-
             }
+
             return true;
         }
 
         private static bool ContainsSpecificChar(string input, Util d, OperationType choice)
         {
-            foreach(char c in input)
+            foreach (char c in input)
             {
-                if (d(choice,c))
+                if (d(choice, c))
                     return true;
-
             }
+
             return false;
         }
 
@@ -142,7 +148,11 @@ namespace MotorEmpireAutohaus.MVVM.Services.Authentication
                 return new AuthValidationResult(false, "The Password field should contain at least 8 characters!");
             }
 
-            if (ContainsSpecificChar(password,DelegateMethod,OperationType.LowercaseCheck) && ContainsSpecificChar(password,DelegateMethod,OperationType.UppercaseCheck) && ContainsSpecificChar(password,DelegateMethod,OperationType.SymbolCheck) && ContainsSpecificChar(password,DelegateMethod,OperationType.DigitCheck) && password.Length >= 8){
+            if (ContainsSpecificChar(password, DelegateMethod, OperationType.LowercaseCheck) &&
+                ContainsSpecificChar(password, DelegateMethod, OperationType.UppercaseCheck) &&
+                ContainsSpecificChar(password, DelegateMethod, OperationType.SymbolCheck) &&
+                ContainsSpecificChar(password, DelegateMethod, OperationType.DigitCheck) && password.Length >= 8)
+            {
                 return new AuthValidationResult(true, "");
             }
 
@@ -151,13 +161,15 @@ namespace MotorEmpireAutohaus.MVVM.Services.Authentication
 
         public AuthValidationResult ValidatePasswords(string password, string passwordConfirmation)
         {
-            if(string.IsNullOrEmpty(password) || string.IsNullOrEmpty(passwordConfirmation))
+            if (string.IsNullOrEmpty(password) || string.IsNullOrEmpty(passwordConfirmation))
             {
                 return new AuthValidationResult(false, "The Password fields cannot be empty!");
             }
-            if(password.Length<8 || passwordConfirmation.Length < 8)
+
+            if (password.Length < 8 || passwordConfirmation.Length < 8)
             {
-                return new AuthValidationResult(false, "The password field should contain at least 8 characters, including:\n\tAt least one capital letter.\n\tAt least one lowercase letter.\n\tOne or more digits.\n\tOne ore more special characters/symbols[like %^&#@&()]");
+                return new AuthValidationResult(false,
+                    "The password field should contain at least 8 characters, including:\n\tAt least one capital letter.\n\tAt least one lowercase letter.\n\tOne or more digits.\n\tOne ore more special characters/symbols[like %^&#@&()]");
             }
 
             if (!ArePasswordsMatching(password, passwordConfirmation))
@@ -165,7 +177,10 @@ namespace MotorEmpireAutohaus.MVVM.Services.Authentication
                 return new AuthValidationResult(false, "The passwords do not match!");
             }
 
-            if(ContainsSpecificChar(password,DelegateMethod,OperationType.LowercaseCheck) && ContainsSpecificChar(password,DelegateMethod,OperationType.UppercaseCheck) && ContainsSpecificChar(password,DelegateMethod,OperationType.SymbolCheck) && ContainsSpecificChar(password,DelegateMethod,OperationType.DigitCheck) && password.Length >= 8)
+            if (ContainsSpecificChar(password, DelegateMethod, OperationType.LowercaseCheck) &&
+                ContainsSpecificChar(password, DelegateMethod, OperationType.UppercaseCheck) &&
+                ContainsSpecificChar(password, DelegateMethod, OperationType.SymbolCheck) &&
+                ContainsSpecificChar(password, DelegateMethod, OperationType.DigitCheck) && password.Length >= 8)
             {
                 return new AuthValidationResult(true, "");
             }
@@ -175,7 +190,7 @@ namespace MotorEmpireAutohaus.MVVM.Services.Authentication
 
         public AuthValidationResult ValidateUsername(string username)
         {
-            if(string.IsNullOrEmpty(username))
+            if (string.IsNullOrEmpty(username))
             {
                 return new AuthValidationResult(false, "The username field cannot be empty!");
             }
@@ -185,7 +200,7 @@ namespace MotorEmpireAutohaus.MVVM.Services.Authentication
                 return new AuthValidationResult(false, "Your username should have at least 4 characters!");
             }
 
-            if(username.Contains(' '))
+            if (username.Contains(' '))
             {
                 return new AuthValidationResult(false, "Your username cannot contain whitespaces!");
             }
@@ -196,7 +211,7 @@ namespace MotorEmpireAutohaus.MVVM.Services.Authentication
         public bool ValidateLogin(UserAccount u)
         {
             var emailValidation = ValidateEmailAddress(u.EmailAddress);
-            if (emailValidation.ValidationPassed==false)
+            if (emailValidation.ValidationPassed == false)
             {
                 u.EmailAddress = string.Empty;
                 CrossPlatformMessageRenderer.RenderMessages(emailValidation.Remark, "Retry", 6);
@@ -204,16 +219,18 @@ namespace MotorEmpireAutohaus.MVVM.Services.Authentication
             }
 
             var passwordValidation = ValidatePassword(u.Password);
-            if (passwordValidation.ValidationPassed==false)
+            if (passwordValidation.ValidationPassed == false)
             {
                 u.Password = string.Empty;
                 CrossPlatformMessageRenderer.RenderMessages(passwordValidation.Remark, "Retry", 6);
                 return false;
             }
+
             return true;
         }
 
-        public bool ValidateSignUp(UserAccount user){
+        public bool ValidateSignUp(UserAccount user)
+        {
             var nameValidation = ValidateName(user.Name);
             var usernameValidation = ValidateUsername(user.Username);
             var emailValidation = ValidateEmailAddress(user.EmailAddress);
@@ -226,24 +243,24 @@ namespace MotorEmpireAutohaus.MVVM.Services.Authentication
                 return false;
             }
 
-            if(!usernameValidation.ValidationPassed)
+            if (!usernameValidation.ValidationPassed)
             {
-                user.Username=string.Empty;
+                user.Username = string.Empty;
                 CrossPlatformMessageRenderer.RenderMessages(usernameValidation.Remark, "Retry", 5);
                 return false;
             }
 
             if (!emailValidation.ValidationPassed)
             {
-                user.EmailAddress=string.Empty;
+                user.EmailAddress = string.Empty;
                 CrossPlatformMessageRenderer.RenderMessages(emailValidation.Remark, "Retry", 5);
                 return false;
             }
 
             if (!passwordsValidation.ValidationPassed)
             {
-                user.Password=string.Empty;
-                user.PasswordConfirmation=string.Empty;
+                user.Password = string.Empty;
+                user.PasswordConfirmation = string.Empty;
                 CrossPlatformMessageRenderer.RenderMessages(passwordsValidation.Remark, "Retry", 8);
                 return false;
             }
@@ -255,8 +272,8 @@ namespace MotorEmpireAutohaus.MVVM.Services.Authentication
         public bool ValidateNewCredentialsBeforeUpdate(UserAccount user)
         {
             var emailValidation = ValidateEmailAddress(user.EmailAddress);
-            var nameValidation=ValidateName(user.Name);
-            var usernameValidation=ValidateUsername(user.Username);
+            var nameValidation = ValidateName(user.Name);
+            var usernameValidation = ValidateUsername(user.Username);
 
             if (!nameValidation.ValidationPassed)
             {

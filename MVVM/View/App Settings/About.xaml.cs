@@ -15,8 +15,8 @@ public partial class About : ContentPage
 
 	private void GenerateOpeningAnimation()
 	{
-        image.Opacity = 0;
-        mainFrame.Opacity = 0;
+        Image.Opacity = 0;
+        MainFrame.Opacity = 0;
 
         if (this.AnimationIsRunning("TransitionAnimation"))
         {
@@ -25,8 +25,8 @@ public partial class About : ContentPage
 
         Animation openingAnimation = new()
             {
-                {0,0.4, new Animation(v=>image.Opacity=v,0,1,Easing.CubicIn)},
-                {0.4,1, new Animation(v=>mainFrame.Opacity=v,0,1,Easing.CubicIn)}
+                {0,0.4, new Animation(v=>Image.Opacity=v,0,1,Easing.CubicIn)},
+                {0.4,1, new Animation(v=>MainFrame.Opacity=v,0,1,Easing.CubicIn)}
             };
 
         openingAnimation.Commit(this, "TransitionAnimation", 16, 2000);

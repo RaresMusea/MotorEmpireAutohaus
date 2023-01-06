@@ -2,9 +2,9 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:viewmodel="clr-namespace:MotorEmpireAutohaus.MVVM.View_Models.Account;assembly=MVVM"
-             x:DataType="viewmodel:UserAccountViewModel"
-             x:Class="MotorEmpireAutohaus.SignUp"
+             xmlns:account="using:MVVM.View_Models.Account"
+             x:DataType="account:UserAccountViewModel"
+             x:Class="MVVM.View.Authentication.SignUp"
              Title="SignUp">
     <ScrollView>
         <VerticalStackLayout>
@@ -113,7 +113,7 @@
                                            Margin="5" />
 
                                     <Entry Placeholder="Your username here"
-                                           x:Name="usernameEntry"
+                                           x:Name="UsernameEntry"
                                            MaxLength="50"
                                            TextColor="Black"
                                            WidthRequest="215"
@@ -155,7 +155,7 @@
                                            Margin="5" />
 
                                     <Entry Placeholder="Your email address here"
-                                           x:Name="emailEntry"
+                                           x:Name="EmailEntry"
                                            MaxLength="50"
                                            TextColor="Black"
                                            WidthRequest="215"
@@ -182,7 +182,7 @@
 
                             <Frame CornerRadius="15"
                                    HeightRequest="45"
-                                   x:Name="passwordFrame"
+                                   x:Name="PasswordFrame"
                                    WidthRequest="300"
                                    HasShadow="True"
                                    BorderColor="Transparent"
@@ -196,7 +196,7 @@
                                            HeightRequest="24"
                                            Margin="5" />
                                     <Entry Placeholder="Your Password here"
-                                           x:Name="passwordEntry"
+                                           x:Name="PasswordEntry"
                                            MaxLength="50"
                                            WidthRequest="215"
                                            TextColor="Black"
@@ -206,7 +206,7 @@
                                            Margin="5,0,0,0"
                                            Text="{Binding User.Password}" />
                                     <ImageButton Source="eye.png"
-                                                 x:Name="passwordShowButton"
+                                                 x:Name="PasswordShowButton"
                                                  WidthRequest="24"
                                                  HeightRequest="24"
                                                  HorizontalOptions="End"
@@ -225,7 +225,6 @@
 
                             <Frame CornerRadius="15"
                                    HeightRequest="45"
-                                   x:Name="passwordConfirmationFrame"
                                    WidthRequest="300"
                                    HasShadow="True"
                                    BorderColor="Transparent"
@@ -239,7 +238,7 @@
                                            HeightRequest="24"
                                            Margin="5" />
                                     <Entry Placeholder="Confirm your Password here"
-                                           x:Name="passwordConfirmationEntry"
+                                           x:Name="PasswordConfirmationEntry"
                                            MaxLength="50"
                                            WidthRequest="215"
                                            TextColor="Black"
@@ -249,7 +248,6 @@
                                            Margin="5,0,0,0"
                                            Text="{Binding User.PasswordConfirmation}" />
                                     <ImageButton Source="eye.png"
-                                                 x:Name="passwordShowButton2"
                                                  WidthRequest="24"
                                                  HeightRequest="24"
                                                  HorizontalOptions="End"

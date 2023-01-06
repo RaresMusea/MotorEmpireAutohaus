@@ -1,26 +1,23 @@
-using MotorEmpireAutohaus.Tools.Utility.Messages;
-using MVVM.Services.Car_Post_Services;
 using MVVM.View_Models.Post;
+using Tools.Utility.Messages;
 
 namespace MVVM.View.Post_Upload;
 
 public partial class UploadPost : ContentPage
 {
-	private readonly CarPostService carPostService;
-
-	public UploadPost(CarPostViewModel carPost)
-	{
-		BindingContext=carPost;
-		InitializeComponent();
-		StyleDependingOnOperatingSystem();
-	}
+    public UploadPost(CarPostViewModel carPost)
+    {
+        BindingContext = carPost;
+        InitializeComponent();
+        StyleDependingOnOperatingSystem();
+    }
 
 
-	protected override void OnAppearing()
-	{
-		pageImage.Opacity = 0;
-        uploadFrame.Opacity = 0;
-		carDetailsForm.Opacity = 0;
+    protected override void OnAppearing()
+    {
+        PageImage.Opacity = 0;
+        UploadFrame.Opacity = 0;
+        CarDetailsForm.Opacity = 0;
 
         base.OnAppearing();
 
@@ -30,14 +27,13 @@ public partial class UploadPost : ContentPage
         }
 
         Animation parentAnimation = new()
-            {
-            {0,0.3,new Animation(v=>pageImage.Opacity=v,0,1,Easing.CubicIn) },
-            {0.3,0.5,new Animation(v=>uploadFrame.Opacity=v,0,1,Easing.CubicIn)},
-            {0.5,1, new Animation(v=>carDetailsForm.Opacity=v,0,1,Easing.CubicIn)}
-            };
+        {
+            { 0, 0.3, new Animation(v => PageImage.Opacity = v, 0, 1, Easing.CubicIn) },
+            { 0.3, 0.5, new Animation(v => UploadFrame.Opacity = v, 0, 1, Easing.CubicIn) },
+            { 0.5, 1, new Animation(v => CarDetailsForm.Opacity = v, 0, 1, Easing.CubicIn) }
+        };
 
-        parentAnimation.Commit(this, "TransitionAnimation", 16, 2000, null, null);
-
+        parentAnimation.Commit(this, "TransitionAnimation", 16, 2000);
     }
 
     protected override void OnDisappearing()
@@ -49,371 +45,369 @@ public partial class UploadPost : ContentPage
     }
 
     private void StyleDependingOnOperatingSystem()
-	{
-		if(DeviceInfo.Platform==DevicePlatform.Android || DeviceInfo.Platform==DevicePlatform.iOS)
-		{
-			vehicleTypePicker.Margin = new Thickness(25, 0, 35, 0);
-			manufacturerPicker.Margin = new Thickness(35, 0, 35, 0);
-			generationPicker.Margin = new Thickness(16, 0, 35, 0);
-			fuelTypePicker.Margin = new Thickness(5, 0, 35, 0);
-			enginePowerEntry.Margin=new Thickness(40, 0, 35, 0);
-			engineTorqueEntry.Margin = new Thickness(15, 0, 35, 0);
-
-        }
-	}
-
-	/*private async void AnimateTransitionToPicturesUpload(object sender, EventArgs e)
-	{
-		if (!uploadPicturesLayout.IsVisible)
-		{
-			await carDetailsForm.FadeTo(0, 200, Easing.CubicOut);
-			carDetailsForm.IsVisible= false;
-			frameTitle.IsVisible = false;
-            uploadPicturesLayout.IsVisible = true;
-			await uploadPicturesLayout.FadeTo(1, 200, Easing.CubicIn);
-		}
-	}*/
-
-	private async void GoBack(object sender, EventArgs e)
-	{
-		if (!carDetailsForm.IsVisible) {
-			await uploadPicturesLayout.FadeTo(0, 200, Easing.CubicOut);
-			uploadPicturesLayout.IsVisible = false;
-			frameTitle.IsVisible = true;
-			carDetailsForm.IsVisible = true;
-			await carDetailsForm.FadeTo(1, 200, Easing.CubicIn);
-		}
-	}
-
-	private async void FinishEditingVehicleDescription(object sender, EventArgs e)
-	{
-		if (descriptionEditor.Text.Length > 3)
-		{
-			await finishEditingDescriptionButton.FadeTo(0, 200, Easing.CubicOut);
-			finishEditingDescriptionButton.IsVisible = false;
-
-			await descriptionDirectiveLabel.FadeTo(0, 200, Easing.CubicOut);
-			descriptionDirectiveLabel.IsVisible = false;
-
-			await descriptionEditor.FadeTo(0, 200, Easing.CubicOut);
-			descriptionEditor.IsVisible = false;
-
-			descriptionFormSuccessMessage.IsVisible = true;
-			await descriptionFormSuccessMessage.FadeTo(1, 200, Easing.CubicIn);
-
-			descriptionPreviewButton.IsVisible = true;
-			await descriptionPreviewButton.FadeTo(1, 200, Easing.CubicIn);
-
-			editTheDescriptionAgainButton.IsVisible = true;
-			await editTheDescriptionAgainButton.FadeTo(1, 200, Easing.CubicIn);
-
-			descriptionFormNextButton.IsVisible = true;
-			await descriptionFormNextButton.FadeTo(1, 200, Easing.CubicIn);
-
-			backToPictureUploadButton.IsVisible = true;
-			await backToPictureUploadButton.FadeTo(1, 200, Easing.CubicIn);
-			
-			return;
-		}
-
-		CrossPlatformMessageRenderer.RenderMessages("The description that you provided is not valid!\nTry again!", "Retry", 5);
-    }
-	
-	private async void DisplayDescriptionPreview(object sender, EventArgs e)
-	{
-		await descriptionPreviewButton.FadeTo(0,200,Easing.CubicOut);
-		descriptionPreviewButton.IsVisible = false;
-
-        descriptionFormSuccessMessage.IsVisible = false;
-        await descriptionFormSuccessMessage.FadeTo(0, 200, Easing.CubicOut);
-
-        await finishEditingDescriptionButton.FadeTo(0, 200, Easing.CubicInOut);
-        finishEditingDescriptionButton.IsVisible= false;
-
-		descriptionLabel.IsVisible = true;
-        await descriptionLabel.FadeTo(1, 200, Easing.CubicIn);
-
-        descriptionText.IsVisible = true;
-        await descriptionText.FadeTo(1, 200, Easing.CubicIn);
-
-		hideDescriptionPreviewButton.IsVisible = true;
-		await hideDescriptionPreviewButton.FadeTo(1, 200, Easing.CubicIn);
-    }
-
-	private async void HideTheDescriptionPreview(object sender, EventArgs e)
-	{
-
-        descriptionFormSuccessMessage.IsVisible = true;
-        await descriptionFormSuccessMessage.FadeTo(1, 200, Easing.CubicIn);
-
-        await descriptionLabel.FadeTo(0, 200, Easing.CubicOut);
-		descriptionLabel.IsVisible = false;
-
-		await descriptionText.FadeTo(0, 200, Easing.CubicOut);
-		descriptionText.IsVisible = false;
-
-		await hideDescriptionPreviewButton.FadeTo(0, 200,Easing.CubicOut);
-		hideDescriptionPreviewButton.IsVisible = false;
-
-		descriptionPreviewButton.IsVisible = true;
-		await descriptionPreviewButton.FadeTo(1, 200, Easing.CubicIn);
-
-    }
-
-	private async void BackToDescriptionEditor(object sender, EventArgs e)
-	{
-        await descriptionFormSuccessMessage.FadeTo(0, 200, Easing.CubicOut);
-        descriptionFormSuccessMessage.IsVisible = false;
-        
-        descriptionDirectiveLabel.IsVisible = true;
-		await descriptionDirectiveLabel.FadeTo(1, 200, Easing.CubicIn);
-
-		await descriptionLabel.FadeTo(0, 200, Easing.CubicOut);
-		descriptionLabel.IsVisible = false;
-
-        await descriptionText.FadeTo(0, 200, Easing.CubicOut);
-        descriptionText.IsVisible = false;
-
-		descriptionEditor.IsVisible = true;
-		await descriptionEditor.FadeTo(1, 200, Easing.CubicIn);
-
-        await descriptionPreviewButton.FadeTo(0, 200, Easing.CubicOut);
-        descriptionPreviewButton.IsVisible = false;
-
-		await editTheDescriptionAgainButton.FadeTo(0, 200, Easing.CubicOut);
-		editTheDescriptionAgainButton.IsVisible = false;
-
-		finishEditingDescriptionButton.IsVisible = true;
-		await finishEditingDescriptionButton.FadeTo(1, 200, Easing.CubicIn);
-	}
-
-	//==
-	private async void FinishEditingEquipmentDescription(object sender, EventArgs e) 
-	{
-        if (equipmentsEditor.Text.Length > 3)
+    {
+        if (DeviceInfo.Platform == DevicePlatform.Android || DeviceInfo.Platform == DevicePlatform.iOS)
         {
-            await finishEditingEquipmentButton.FadeTo(0, 200, Easing.CubicOut);
-            finishEditingEquipmentButton.IsVisible = false;
+            VehicleTypePicker.Margin = new Thickness(25, 0, 35, 0);
+            ManufacturerPicker.Margin = new Thickness(35, 0, 35, 0);
+            GenerationPicker.Margin = new Thickness(16, 0, 35, 0);
+            FuelTypePicker.Margin = new Thickness(5, 0, 35, 0);
+            EnginePowerEntry.Margin = new Thickness(40, 0, 35, 0);
+            EngineTorqueEntry.Margin = new Thickness(15, 0, 25, 0);
+        }
+    }
 
-            await equipmentFormDirective.FadeTo(0, 200, Easing.CubicOut);
-            equipmentFormDirective.IsVisible = false;
+    /*private async void AnimateTransitionToPicturesUpload(object sender, EventArgs e)
+    {
+        if (!uploadPicturesLayout.IsVisible)
+        {
+            await carDetailsForm.FadeTo(0, 200, Easing.CubicOut);
+            carDetailsForm.IsVisible= false;
+            frameTitle.IsVisible = false;
+            uploadPicturesLayout.IsVisible = true;
+            await uploadPicturesLayout.FadeTo(1, 200, Easing.CubicIn);
+        }
+    }*/
 
-            await equipmentsEditor.FadeTo(0, 200, Easing.CubicOut);
-            equipmentsEditor.IsVisible = false;
+    private async void GoBack(object sender, EventArgs e)
+    {
+        if (!CarDetailsForm.IsVisible)
+        {
+            await UploadPicturesLayout.FadeTo(0, 200, Easing.CubicOut);
+            UploadPicturesLayout.IsVisible = false;
+            FrameTitle.IsVisible = true;
+            CarDetailsForm.IsVisible = true;
+            await CarDetailsForm.FadeTo(1, 200, Easing.CubicIn);
+        }
+    }
 
-            equipmentMessageSuccess.IsVisible = true;
-            await equipmentMessageSuccess.FadeTo(1, 200, Easing.CubicIn);
+    private async void FinishEditingVehicleDescription(object sender, EventArgs e)
+    {
+        if (DescriptionEditor.Text.Length > 3)
+        {
+            await FinishEditingDescriptionButton.FadeTo(0, 200, Easing.CubicOut);
+            FinishEditingDescriptionButton.IsVisible = false;
 
-            equipmentPreviewButton.IsVisible = true;
-            await equipmentPreviewButton.FadeTo(1, 200, Easing.CubicIn);
+            await DescriptionDirectiveLabel.FadeTo(0, 200, Easing.CubicOut);
+            DescriptionDirectiveLabel.IsVisible = false;
 
-            editTheEquipmentListAgainButton.IsVisible = true;
-            await editTheEquipmentListAgainButton.FadeTo(1, 200, Easing.CubicIn);
+            await DescriptionEditor.FadeTo(0, 200, Easing.CubicOut);
+            DescriptionEditor.IsVisible = false;
 
-            uploadPost.IsVisible = true;
-            await uploadPost.FadeTo(1, 200, Easing.CubicIn);
+            DescriptionFormSuccessMessage.IsVisible = true;
+            await DescriptionFormSuccessMessage.FadeTo(1, 200, Easing.CubicIn);
 
-            backToPostDescriptionButton.IsVisible = true;
-            await backToPostDescriptionButton.FadeTo(1, 200, Easing.CubicIn);
+            DescriptionPreviewButton.IsVisible = true;
+            await DescriptionPreviewButton.FadeTo(1, 200, Easing.CubicIn);
+
+            EditTheDescriptionAgainButton.IsVisible = true;
+            await EditTheDescriptionAgainButton.FadeTo(1, 200, Easing.CubicIn);
+
+            DescriptionFormNextButton.IsVisible = true;
+            await DescriptionFormNextButton.FadeTo(1, 200, Easing.CubicIn);
+
+            BackToPictureUploadButton.IsVisible = true;
+            await BackToPictureUploadButton.FadeTo(1, 200, Easing.CubicIn);
 
             return;
         }
 
-        CrossPlatformMessageRenderer.RenderMessages("The car options that you provided are not valid!\nTry again!", "Retry", 5);
+        CrossPlatformMessageRenderer.RenderMessages("The description that you provided is not valid!\nTry again!",
+            "Retry", 5);
     }
 
-	private async void DisplayEquipmentPreview(object sender, EventArgs e)
-	{
-        await equipmentPreviewButton.FadeTo(0, 200, Easing.CubicOut);
-        equipmentPreviewButton.IsVisible = false;
+    private async void DisplayDescriptionPreview(object sender, EventArgs e)
+    {
+        await DescriptionPreviewButton.FadeTo(0, 200, Easing.CubicOut);
+        DescriptionPreviewButton.IsVisible = false;
 
-        equipmentMessageSuccess.IsVisible = false;
-        await equipmentMessageSuccess.FadeTo(0, 200, Easing.CubicOut);
+        DescriptionFormSuccessMessage.IsVisible = false;
+        await DescriptionFormSuccessMessage.FadeTo(0, 200, Easing.CubicOut);
 
-        await finishEditingEquipmentButton.FadeTo(0, 200, Easing.CubicInOut);
-        finishEditingEquipmentButton.IsVisible = false;
+        await FinishEditingDescriptionButton.FadeTo(0, 200, Easing.CubicInOut);
+        FinishEditingDescriptionButton.IsVisible = false;
 
-        equipmentPreviewLabel.IsVisible = true;
-        await equipmentPreviewLabel.FadeTo(1, 200, Easing.CubicIn);
+        DescriptionLabel.IsVisible = true;
+        await DescriptionLabel.FadeTo(1, 200, Easing.CubicIn);
 
-        equipmentText.IsVisible = true;
-        await equipmentText.FadeTo(1, 200, Easing.CubicIn);
+        DescriptionText.IsVisible = true;
+        await DescriptionText.FadeTo(1, 200, Easing.CubicIn);
 
-        hideEquipmentPreviewButton.IsVisible = true;
-        await hideEquipmentPreviewButton.FadeTo(1, 200, Easing.CubicIn);
+        HideDescriptionPreviewButton.IsVisible = true;
+        await HideDescriptionPreviewButton.FadeTo(1, 200, Easing.CubicIn);
+    }
 
+    private async void HideTheDescriptionPreview(object sender, EventArgs e)
+    {
+        DescriptionFormSuccessMessage.IsVisible = true;
+        await DescriptionFormSuccessMessage.FadeTo(1, 200, Easing.CubicIn);
+
+        await DescriptionLabel.FadeTo(0, 200, Easing.CubicOut);
+        DescriptionLabel.IsVisible = false;
+
+        await DescriptionText.FadeTo(0, 200, Easing.CubicOut);
+        DescriptionText.IsVisible = false;
+
+        await HideDescriptionPreviewButton.FadeTo(0, 200, Easing.CubicOut);
+        HideDescriptionPreviewButton.IsVisible = false;
+
+        DescriptionPreviewButton.IsVisible = true;
+        await DescriptionPreviewButton.FadeTo(1, 200, Easing.CubicIn);
+    }
+
+    private async void BackToDescriptionEditor(object sender, EventArgs e)
+    {
+        await DescriptionFormSuccessMessage.FadeTo(0, 200, Easing.CubicOut);
+        DescriptionFormSuccessMessage.IsVisible = false;
+
+        DescriptionDirectiveLabel.IsVisible = true;
+        await DescriptionDirectiveLabel.FadeTo(1, 200, Easing.CubicIn);
+
+        await DescriptionLabel.FadeTo(0, 200, Easing.CubicOut);
+        DescriptionLabel.IsVisible = false;
+
+        await DescriptionText.FadeTo(0, 200, Easing.CubicOut);
+        DescriptionText.IsVisible = false;
+
+        DescriptionEditor.IsVisible = true;
+        await DescriptionEditor.FadeTo(1, 200, Easing.CubicIn);
+
+        await DescriptionPreviewButton.FadeTo(0, 200, Easing.CubicOut);
+        DescriptionPreviewButton.IsVisible = false;
+
+        await EditTheDescriptionAgainButton.FadeTo(0, 200, Easing.CubicOut);
+        EditTheDescriptionAgainButton.IsVisible = false;
+
+        FinishEditingDescriptionButton.IsVisible = true;
+        await FinishEditingDescriptionButton.FadeTo(1, 200, Easing.CubicIn);
+    }
+
+    //==
+    private async void FinishEditingEquipmentDescription(object sender, EventArgs e)
+    {
+        if (EquipmentsEditor.Text.Length > 3)
+        {
+            await FinishEditingEquipmentButton.FadeTo(0, 200, Easing.CubicOut);
+            FinishEditingEquipmentButton.IsVisible = false;
+
+            await EquipmentFormDirective.FadeTo(0, 200, Easing.CubicOut);
+            EquipmentFormDirective.IsVisible = false;
+
+            await EquipmentsEditor.FadeTo(0, 200, Easing.CubicOut);
+            EquipmentsEditor.IsVisible = false;
+
+            EquipmentMessageSuccess.IsVisible = true;
+            await EquipmentMessageSuccess.FadeTo(1, 200, Easing.CubicIn);
+
+            EquipmentPreviewButton.IsVisible = true;
+            await EquipmentPreviewButton.FadeTo(1, 200, Easing.CubicIn);
+
+            EditTheEquipmentListAgainButton.IsVisible = true;
+            await EditTheEquipmentListAgainButton.FadeTo(1, 200, Easing.CubicIn);
+
+            uploadPost.IsVisible = true;
+            await uploadPost.FadeTo(1, 200, Easing.CubicIn);
+
+            BackToPostDescriptionButton.IsVisible = true;
+            await BackToPostDescriptionButton.FadeTo(1, 200, Easing.CubicIn);
+
+            return;
+        }
+
+        CrossPlatformMessageRenderer.RenderMessages("The car options that you provided are not valid!\nTry again!",
+            "Retry", 5);
+    }
+
+    private async void DisplayEquipmentPreview(object sender, EventArgs e)
+    {
+        await EquipmentPreviewButton.FadeTo(0, 200, Easing.CubicOut);
+        EquipmentPreviewButton.IsVisible = false;
+
+        EquipmentMessageSuccess.IsVisible = false;
+        await EquipmentMessageSuccess.FadeTo(0, 200, Easing.CubicOut);
+
+        await FinishEditingEquipmentButton.FadeTo(0, 200, Easing.CubicInOut);
+        FinishEditingEquipmentButton.IsVisible = false;
+
+        EquipmentPreviewLabel.IsVisible = true;
+        await EquipmentPreviewLabel.FadeTo(1, 200, Easing.CubicIn);
+
+        EquipmentText.IsVisible = true;
+        await EquipmentText.FadeTo(1, 200, Easing.CubicIn);
+
+        HideEquipmentPreviewButton.IsVisible = true;
+        await HideEquipmentPreviewButton.FadeTo(1, 200, Easing.CubicIn);
     }
 
     private async void HideTheVehicleEquipmentPreview(object sender, EventArgs e)
-	{
-        equipmentMessageSuccess.IsVisible = true;
-        await equipmentMessageSuccess.FadeTo(1, 200, Easing.CubicIn);
+    {
+        EquipmentMessageSuccess.IsVisible = true;
+        await EquipmentMessageSuccess.FadeTo(1, 200, Easing.CubicIn);
 
-        await equipmentPreviewLabel.FadeTo(0, 200, Easing.CubicOut);
-        equipmentPreviewLabel.IsVisible = false;
+        await EquipmentPreviewLabel.FadeTo(0, 200, Easing.CubicOut);
+        EquipmentPreviewLabel.IsVisible = false;
 
-        await equipmentText.FadeTo(0, 200, Easing.CubicOut);
-        equipmentText.IsVisible = false;
+        await EquipmentText.FadeTo(0, 200, Easing.CubicOut);
+        EquipmentText.IsVisible = false;
 
-        await hideEquipmentPreviewButton.FadeTo(0, 200, Easing.CubicOut);
-        hideEquipmentPreviewButton.IsVisible = false;
+        await HideEquipmentPreviewButton.FadeTo(0, 200, Easing.CubicOut);
+        HideEquipmentPreviewButton.IsVisible = false;
 
-        equipmentPreviewButton.IsVisible = true;
-        await equipmentPreviewButton.FadeTo(1, 200, Easing.CubicIn);
-
+        EquipmentPreviewButton.IsVisible = true;
+        await EquipmentPreviewButton.FadeTo(1, 200, Easing.CubicIn);
     }
 
-	private async void BackToEquipmentEditor(object sender, EventArgs e)
-	{
-        await equipmentMessageSuccess.FadeTo(0, 200, Easing.CubicOut);
-        equipmentMessageSuccess.IsVisible = false;
+    private async void BackToEquipmentEditor(object sender, EventArgs e)
+    {
+        await EquipmentMessageSuccess.FadeTo(0, 200, Easing.CubicOut);
+        EquipmentMessageSuccess.IsVisible = false;
 
-        equipmentFormDirective.IsVisible = true;
-        await equipmentFormDirective.FadeTo(1, 200, Easing.CubicIn);
+        EquipmentFormDirective.IsVisible = true;
+        await EquipmentFormDirective.FadeTo(1, 200, Easing.CubicIn);
 
-        await equipmentPreviewLabel.FadeTo(0, 200, Easing.CubicOut);
-        equipmentPreviewLabel.IsVisible = false;
+        await EquipmentPreviewLabel.FadeTo(0, 200, Easing.CubicOut);
+        EquipmentPreviewLabel.IsVisible = false;
 
-        await equipmentText.FadeTo(0, 200, Easing.CubicOut);
-        equipmentText.IsVisible = false;
+        await EquipmentText.FadeTo(0, 200, Easing.CubicOut);
+        EquipmentText.IsVisible = false;
 
-        equipmentsEditor.IsVisible = true;
-        await equipmentsEditor.FadeTo(1, 200, Easing.CubicIn);
+        EquipmentsEditor.IsVisible = true;
+        await EquipmentsEditor.FadeTo(1, 200, Easing.CubicIn);
 
-        await equipmentPreviewButton.FadeTo(0, 200, Easing.CubicOut);
-        equipmentPreviewButton.IsVisible = false;
+        await EquipmentPreviewButton.FadeTo(0, 200, Easing.CubicOut);
+        EquipmentPreviewButton.IsVisible = false;
 
-        await editTheEquipmentListAgainButton.FadeTo(0, 200, Easing.CubicOut);
-        editTheEquipmentListAgainButton.IsVisible = false;
+        await EditTheEquipmentListAgainButton.FadeTo(0, 200, Easing.CubicOut);
+        EditTheEquipmentListAgainButton.IsVisible = false;
 
-        finishEditingEquipmentButton.IsVisible = true;
-        await finishEditingEquipmentButton.FadeTo(1, 200, Easing.CubicIn);
+        FinishEditingEquipmentButton.IsVisible = true;
+        await FinishEditingEquipmentButton.FadeTo(1, 200, Easing.CubicIn);
     }
 
     private async Task RefreshTheDescriptionFrame()
     {
-        if (!descriptionDirectiveLabel.IsVisible)
+        if (!DescriptionDirectiveLabel.IsVisible)
         {
-            descriptionDirectiveLabel.IsVisible = true;
-            await descriptionDirectiveLabel.FadeTo(1, 200, Easing.CubicIn);
+            DescriptionDirectiveLabel.IsVisible = true;
+            await DescriptionDirectiveLabel.FadeTo(1, 200, Easing.CubicIn);
         }
 
-        if (descriptionFormSuccessMessage.IsVisible)
+        if (DescriptionFormSuccessMessage.IsVisible)
         {
-            await descriptionFormSuccessMessage.FadeTo(0,200,Easing.CubicOut);
-            descriptionFormSuccessMessage.IsVisible = false;
+            await DescriptionFormSuccessMessage.FadeTo(0, 200, Easing.CubicOut);
+            DescriptionFormSuccessMessage.IsVisible = false;
         }
 
-        if (descriptionLabel.IsVisible)
+        if (DescriptionLabel.IsVisible)
         {
-            await descriptionLabel.FadeTo(0, 200, Easing.CubicOut);
-            descriptionLabel.IsVisible = false;
+            await DescriptionLabel.FadeTo(0, 200, Easing.CubicOut);
+            DescriptionLabel.IsVisible = false;
         }
 
-        if (descriptionText.IsVisible)
+        if (DescriptionText.IsVisible)
         {
-            await descriptionText.FadeTo(0, 200, Easing.CubicOut);
-            descriptionText.IsVisible = false;
+            await DescriptionText.FadeTo(0, 200, Easing.CubicOut);
+            DescriptionText.IsVisible = false;
         }
 
-        if (!descriptionEditor.IsVisible)
+        if (!DescriptionEditor.IsVisible)
         {
-            descriptionEditor.IsVisible = true;
-            await descriptionEditor.FadeTo(1, 200, Easing.CubicIn);
+            DescriptionEditor.IsVisible = true;
+            await DescriptionEditor.FadeTo(1, 200, Easing.CubicIn);
         }
 
-        if (!finishEditingDescriptionButton.IsVisible)
+        if (!FinishEditingDescriptionButton.IsVisible)
         {
-            finishEditingDescriptionButton.IsVisible = true;
-            await finishEditingDescriptionButton.FadeTo(1,200,Easing.CubicIn);
+            FinishEditingDescriptionButton.IsVisible = true;
+            await FinishEditingDescriptionButton.FadeTo(1, 200, Easing.CubicIn);
         }
 
-        if (descriptionPreviewButton.IsVisible)
+        if (DescriptionPreviewButton.IsVisible)
         {
-            await descriptionPreviewButton.FadeTo(0, 200, Easing.CubicOut);
-            descriptionPreviewButton.IsVisible = false;
+            await DescriptionPreviewButton.FadeTo(0, 200, Easing.CubicOut);
+            DescriptionPreviewButton.IsVisible = false;
         }
 
-        if (hideDescriptionPreviewButton.IsVisible)
+        if (HideDescriptionPreviewButton.IsVisible)
         {
-            await hideDescriptionPreviewButton.FadeTo(0, 200, Easing.CubicOut);
-            hideDescriptionPreviewButton.IsVisible = false;
+            await HideDescriptionPreviewButton.FadeTo(0, 200, Easing.CubicOut);
+            HideDescriptionPreviewButton.IsVisible = false;
         }
 
-        if (editTheDescriptionAgainButton.IsVisible)
+        if (EditTheDescriptionAgainButton.IsVisible)
         {
-            await editTheDescriptionAgainButton.FadeTo(0, 200, Easing.CubicOut);
-            editTheDescriptionAgainButton.IsVisible = false;
+            await EditTheDescriptionAgainButton.FadeTo(0, 200, Easing.CubicOut);
+            EditTheDescriptionAgainButton.IsVisible = false;
         }
 
-        if (descriptionFormNextButton.IsVisible)
+        if (DescriptionFormNextButton.IsVisible)
         {
-            await descriptionFormNextButton.FadeTo(0, 200, Easing.CubicOut);
-            descriptionFormNextButton.IsVisible = false;
+            await DescriptionFormNextButton.FadeTo(0, 200, Easing.CubicOut);
+            DescriptionFormNextButton.IsVisible = false;
         }
 
-        if (backToPictureUploadButton.IsVisible)
+        if (BackToPictureUploadButton.IsVisible)
         {
-            await backToPictureUploadButton.FadeTo(0, 200, Easing.CubicOut);
-            backToPictureUploadButton.IsVisible = false;
+            await BackToPictureUploadButton.FadeTo(0, 200, Easing.CubicOut);
+            BackToPictureUploadButton.IsVisible = false;
         }
     }
 
     private async Task RefreshTheEquipmentFrame()
     {
-        if (!equipmentFormDirective.IsVisible)
+        if (!EquipmentFormDirective.IsVisible)
         {
-            equipmentFormDirective.IsVisible = true;
-            await equipmentFormDirective.FadeTo(1, 200, Easing.CubicIn);
+            EquipmentFormDirective.IsVisible = true;
+            await EquipmentFormDirective.FadeTo(1, 200, Easing.CubicIn);
         }
 
-        if (equipmentMessageSuccess.IsVisible)
+        if (EquipmentMessageSuccess.IsVisible)
         {
-            await equipmentMessageSuccess.FadeTo(0, 200, Easing.CubicOut);
-            equipmentMessageSuccess.IsVisible = false;
+            await EquipmentMessageSuccess.FadeTo(0, 200, Easing.CubicOut);
+            EquipmentMessageSuccess.IsVisible = false;
         }
 
-        if (equipmentPreviewLabel.IsVisible)
+        if (EquipmentPreviewLabel.IsVisible)
         {
-            await equipmentPreviewLabel.FadeTo(0, 200, Easing.CubicOut);
-            equipmentPreviewLabel.IsVisible = false;
+            await EquipmentPreviewLabel.FadeTo(0, 200, Easing.CubicOut);
+            EquipmentPreviewLabel.IsVisible = false;
         }
 
-        if (equipmentText.IsVisible)
+        if (EquipmentText.IsVisible)
         {
-            await equipmentText.FadeTo(0, 200, Easing.CubicOut);
-            equipmentText.IsVisible = false;
+            await EquipmentText.FadeTo(0, 200, Easing.CubicOut);
+            EquipmentText.IsVisible = false;
         }
 
-        if (!equipmentsEditor.IsVisible)
+        if (!EquipmentsEditor.IsVisible)
         {
-            equipmentsEditor.IsVisible = true;
-            await equipmentsEditor.FadeTo(1, 200, Easing.CubicIn);
+            EquipmentsEditor.IsVisible = true;
+            await EquipmentsEditor.FadeTo(1, 200, Easing.CubicIn);
         }
 
-        if (!finishEditingEquipmentButton.IsVisible)
+        if (!FinishEditingEquipmentButton.IsVisible)
         {
-            finishEditingEquipmentButton.IsVisible = true;
-            await finishEditingEquipmentButton.FadeTo(1, 200, Easing.CubicIn);
+            FinishEditingEquipmentButton.IsVisible = true;
+            await FinishEditingEquipmentButton.FadeTo(1, 200, Easing.CubicIn);
         }
 
-        if (equipmentPreviewButton.IsVisible)
+        if (EquipmentPreviewButton.IsVisible)
         {
-            await equipmentPreviewButton.FadeTo(0, 200, Easing.CubicOut);
-            equipmentPreviewButton.IsVisible = false;
-            equipmentPreviewButton.IsVisible = false;
+            await EquipmentPreviewButton.FadeTo(0, 200, Easing.CubicOut);
+            EquipmentPreviewButton.IsVisible = false;
+            EquipmentPreviewButton.IsVisible = false;
         }
 
-        if (hideEquipmentPreviewButton.IsVisible)
+        if (HideEquipmentPreviewButton.IsVisible)
         {
-            await hideEquipmentPreviewButton.FadeTo(0, 200, Easing.CubicOut);
-            hideEquipmentPreviewButton.IsVisible = false;
+            await HideEquipmentPreviewButton.FadeTo(0, 200, Easing.CubicOut);
+            HideEquipmentPreviewButton.IsVisible = false;
         }
 
-        if (editTheEquipmentListAgainButton.IsVisible)
+        if (EditTheEquipmentListAgainButton.IsVisible)
         {
-            await editTheEquipmentListAgainButton.FadeTo(0, 200, Easing.CubicOut);
-            editTheEquipmentListAgainButton.IsVisible = false;
+            await EditTheEquipmentListAgainButton.FadeTo(0, 200, Easing.CubicOut);
+            EditTheEquipmentListAgainButton.IsVisible = false;
         }
 
         if (uploadPost.IsVisible)
@@ -422,14 +416,14 @@ public partial class UploadPost : ContentPage
             uploadPost.IsVisible = false;
         }
 
-        if (backToPostDescriptionButton.IsVisible)
+        if (BackToPostDescriptionButton.IsVisible)
         {
-            await backToPostDescriptionButton.FadeTo(0, 200, Easing.CubicOut);
-            backToPostDescriptionButton.IsVisible = false;
+            await BackToPostDescriptionButton.FadeTo(0, 200, Easing.CubicOut);
+            BackToPostDescriptionButton.IsVisible = false;
         }
     }
 
-    private async void RefreshTheUI(object sender, EventArgs e)
+    private async void RefreshTheUi(object sender, EventArgs e)
     {
         await RefreshTheDescriptionFrame();
         await RefreshTheEquipmentFrame();

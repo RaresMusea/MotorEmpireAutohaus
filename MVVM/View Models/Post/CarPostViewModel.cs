@@ -1,11 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using Firebase.Storage;
-using MotorEmpireAutohaus.MVVM.Models.User_Account_Model;
-using MotorEmpireAutohaus.MVVM.View_Models.Base;
-using MotorEmpireAutohaus.Services.Feed;
-using MotorEmpireAutohaus.Storage.Firebase_Storage;
-using MotorEmpireAutohaus.Tools.Utility.Messages;
 using MVVM.Exceptions;
 using MVVM.Models;
 using MVVM.Models.Post_Model;
@@ -13,11 +7,15 @@ using MVVM.Services.Car_Entity_Services;
 using MVVM.Services.Car_Post_Services;
 using MVVM.Validations.Car_Post_Validation;
 using System.Collections.ObjectModel;
+using Storage.Firebase_Storage;
+using Tools.Utility.Messages;
+using BaseViewModel = MVVM.View_Models.Base.BaseViewModel;
+using UserAccount = MVVM.Models.User_Account_Model.UserAccount;
 
 namespace MVVM.View_Models.Post
 {
-    [QueryProperty (nameof(UserAccount), nameof(UserAccount))]
-    public partial class CarPostViewModel:BaseViewModel
+    [QueryProperty(nameof(UserAccount), nameof(UserAccount))]
+    public partial class CarPostViewModel : BaseViewModel
     {
         private readonly CarService carService;
 
@@ -25,125 +23,94 @@ namespace MVVM.View_Models.Post
 
         private readonly UserAccount owner;
 
-        [ObservableProperty]
-        CarPost post;
+        [ObservableProperty] CarPost post;
 
-        [ObservableProperty]
-        private List<string> vehicleTypes;
+        [ObservableProperty] private List<string> vehicleTypes;
 
-        [ObservableProperty]
-        [NotifyPropertyChangedFor (nameof(IsVehicleTypeSelected))]
+        [ObservableProperty] [NotifyPropertyChangedFor(nameof(IsVehicleTypeSelected))]
         private string selectedVehicleType;
 
         public bool IsVehicleTypeSelected => selectedVehicleType != null;
 
 
-        [ObservableProperty]
-        private List<string> chassisTypes;
+        [ObservableProperty] private List<string> chassisTypes;
 
-        [ObservableProperty]
-        private string selectedChassisType;
+        [ObservableProperty] private string selectedChassisType;
 
 
-        [ObservableProperty]
-        private List<string> manufacturers;
+        [ObservableProperty] private List<string> manufacturers;
 
-        [ObservableProperty]
-        [NotifyPropertyChangedFor (nameof(IsManufacturerSelected))]
+        [ObservableProperty] [NotifyPropertyChangedFor(nameof(IsManufacturerSelected))]
         private string selectedManufacturer;
 
-        [ObservableProperty]
-        private int selectedManufacturerIndex=-1;
+        [ObservableProperty] private int selectedManufacturerIndex = -1;
 
         public bool IsManufacturerSelected => selectedManufacturer != null;
 
-        [ObservableProperty]
-        private List<string> models;
+        [ObservableProperty] private List<string> models;
 
-        [ObservableProperty]
-        [NotifyPropertyChangedFor (nameof(IsModelSelected))]
+        [ObservableProperty] [NotifyPropertyChangedFor(nameof(IsModelSelected))]
         private string selectedModel;
 
-        [ObservableProperty]
-        private int selectedModelIndex=-1;
+        [ObservableProperty] private int selectedModelIndex = -1;
 
         public bool IsModelSelected => selectedModel != null;
 
-        [ObservableProperty]
-        [NotifyPropertyChangedFor (nameof(ModelHasGenerations))]
+        [ObservableProperty] [NotifyPropertyChangedFor(nameof(ModelHasGenerations))]
         private List<string> generations;
 
-        [ObservableProperty]
-        private string selectedGeneration;
+        [ObservableProperty] private string selectedGeneration;
 
-        public bool ModelHasGenerations => selectedModel!=null && generations.Count!=0;
+        public bool ModelHasGenerations => selectedModel != null && generations.Count != 0;
 
-        [ObservableProperty]
-        private int? year=null;
+        [ObservableProperty] private int? year;
 
-        [ObservableProperty]
-        private List<string> fuelTypes;
+        [ObservableProperty] private List<string> fuelTypes;
 
-        [ObservableProperty]
-        private string selectedFuelType;
+        [ObservableProperty] private string selectedFuelType;
 
-        [ObservableProperty]
-        private int? mileage =null;
+        [ObservableProperty] private int? mileage;
 
-        [ObservableProperty]
-        private string engineCapacity;
+        [ObservableProperty] private string engineCapacity;
 
-        [ObservableProperty]
-        private int? enginePower;
+        [ObservableProperty] private int? enginePower;
 
-        [ObservableProperty]
-        private int? torque;
+        [ObservableProperty] private int? torque;
 
-        [ObservableProperty]
-        private List<string> transmissionTypes;
+        [ObservableProperty] private List<string> transmissionTypes;
 
-        [ObservableProperty]
-        private string selectedTransmissionType;
+        [ObservableProperty] private string selectedTransmissionType;
 
-        [ObservableProperty]
-        private List<string> gearboxConfigurations;
+        [ObservableProperty] private List<string> gearboxConfigurations;
 
-        [ObservableProperty]
-        private string selectedGearboxConfiguration;
+        [ObservableProperty] private string selectedGearboxConfiguration;
 
-        [ObservableProperty]
-        private bool carDetailsFormVisible = true;
+        [ObservableProperty] private bool carDetailsFormVisible = true;
 
-        [ObservableProperty]
-        private bool pictureUploadVisible = false;
+        [ObservableProperty] private bool pictureUploadVisible;
 
-        [ObservableProperty]
-        private bool descriptionFormVisible = false;
+        [ObservableProperty] private bool descriptionFormVisible;
 
-        [ObservableProperty]
-        private bool equipmentFormVisible = false;
+        [ObservableProperty] private bool equipmentFormVisible;
 
-        [ObservableProperty]
-        private ObservableCollection<PostPicture> postPicturesObservable = new();
+        [ObservableProperty] private ObservableCollection<PostPicture> postPicturesObservable = new();
 
-        [ObservableProperty]
-        private bool postPicturesCollectionNotEmpty = false;
+        [ObservableProperty] private bool postPicturesCollectionNotEmpty;
 
-        [ObservableProperty]
-        private bool carouselVisible;
+        [ObservableProperty] private bool carouselVisible;
 
         private string firebaseUrlToFile;
 
-        [ObservableProperty]
-        private string vehicleEquipmentRaw;
+        [ObservableProperty] private string vehicleEquipmentRaw;
 
-        public CarPostViewModel(CarService carService, CarPostService carPostService, CarPost post, UserAccount userAccount)
+        public CarPostViewModel(CarService carService, CarPostService carPostService, CarPost post,
+            UserAccount userAccount)
         {
-            this.carService= carService;
-            this.carPostService= carPostService;
+            this.carService = carService;
+            this.carPostService = carPostService;
             this.post = post;
             owner = userAccount;
-            post.Owner= owner;
+            post.Owner = owner;
             post.Car = new Models.Vehicle_Models.Car.Car_Model.Car();
             InitializeCarPostUploadComponent();
             gearboxConfigurations = new List<string>
@@ -153,11 +120,12 @@ namespace MVVM.View_Models.Post
                 "5 + 1",
                 "6 + 1",
                 "7 + 1",
+                "8 + 1",
             };
             carouselVisible = false;
         }
 
-        private void InitializeCarPostUploadComponent() 
+        private void InitializeCarPostUploadComponent()
         {
             InitializePickerValues(GetAllVehicleTypes(), ref vehicleTypes);
             InitializePickerValues(GetAllChassis(), ref chassisTypes);
@@ -168,7 +136,7 @@ namespace MVVM.View_Models.Post
             InitializePickerValues(GetAllTransmissionTypes(), ref transmissionTypes);
         }
 
-        private void InitializePickerValues (List<string>providedList, ref List<string>pickerBackend)
+        private static void InitializePickerValues(List<string> providedList, ref List<string> pickerBackend)
         {
             pickerBackend = providedList;
         }
@@ -208,31 +176,9 @@ namespace MVVM.View_Models.Post
             return carPostService.RetrieveTransmissionTypes();
         }
 
-
-        private PickOptions ConfigureFileTypes()
-        {
-            var customFileType = new FilePickerFileType(
-                new Dictionary<DevicePlatform, IEnumerable<string>>
-                {
-                    { DevicePlatform.iOS, new[] { "jpg","png","svg" } }, 
-                    //{ /*DevicePlatform.Android, new[] { "jpg", "png", "svg" } }*/ 
-                    { DevicePlatform.WinUI, new[] { "jpg", "png", "svg" } },                     
-                    { DevicePlatform.Tizen, new[] {"jpg", "png", "svg" } },
-                    { DevicePlatform.macOS, new[] {"jpg", "png", "svg" } }, 
-                });
-
-            PickOptions options = new()
-            {
-                PickerTitle = "Please select at least one image of your car to upload",
-                FileTypes = customFileType,
-            };
-
-            return options;
-        }
-
         private async Task<List<FileResult>> PickCarPostPictures()
         {
-            List<FileResult> files = new();
+            List<FileResult> files;
             try
             {
                 IEnumerable<FileResult> photos = await FilePicker.PickMultipleAsync();
@@ -240,7 +186,9 @@ namespace MVVM.View_Models.Post
             }
             catch (Exception ex)
             {
-                CrossPlatformMessageRenderer.RenderMessages($"An error occurred while attempting to access the files you specified. Please try again.\nMore details:\n${ex.Message}", "Retry", 4);
+                CrossPlatformMessageRenderer.RenderMessages(
+                    $"An error occurred while attempting to access the files you specified. Please try again.\nMore details:\n${ex.Message}",
+                    "Retry", 4);
                 return null;
             }
 
@@ -248,35 +196,49 @@ namespace MVVM.View_Models.Post
         }
 
         [RelayCommand]
-        public void SwitchUploadFormWithPictureUpload()
+        private async void SwitchUploadFormWithPictureUpload()
         {
-            VehiclePostUploadValidationResult result = VehiclePostValidator.AreCarDetailsValid(post.Car);
-            if (result.ValidationPassed)
+            VehiclePostUploadValidationResult carDetails = VehiclePostValidator.AreCarDetailsValid(post.Car);
+            VehiclePostUploadValidationResult priceRange = VehiclePostValidator.IsPriceValid(post.Price);
+
+            if (carDetails.ValidationPassed && priceRange.ValidationPassed)
             {
                 CarDetailsFormVisible = false;
                 PictureUploadVisible = true;
             }
             else
             {
-                CrossPlatformMessageRenderer.RenderMessages(result.Remark, "Retry", 10);
+                string message = carDetails.Remark +
+                         "\n\nCannot go further with your car selling request because one ore more fields were mismatched!\nPlease retry" +
+                         " completing the form by paying more attention to the fields that were reset!\n"
+                         + priceRange.Remark;
+
+                if (DeviceInfo.Platform == DevicePlatform.WinUI)
+                {
+                    CrossPlatformMessageRenderer.RenderMessages(message, "Retry", 10);
+                    return;
+                }
+
+                await Application.Current.MainPage.DisplayAlert("Motor Empire Autogaus - Upload failed", message, "Retry");
             }
         }
 
         [RelayCommand]
-        public async void UploadCarPostPictures()
+        public async Task GoToDetails(CarPost post)
+        {
+            await Shell.Current.GoToAsync($"",true,
+                new Dictionary<string, object> {
+                    { "CarPost", Post },
+            });
+        }
+
+        [RelayCommand]
+        private async void UploadCarPostPictures()
         {
             List<FileResult> photos = await PickCarPostPictures();
-            string path = $"Images/VehiclePosts/{selectedVehicleType}/{post.Car.UUID}";
+            string path = $"Images/VehiclePosts/{selectedVehicleType}/{post.Car.Uuid}";
 
-            /*photos.ForEach(async photo =>
-            {
-                firebaseUrlToFile=await FirebaseCloudStorage.AddFileToFirebaseCloudStorageAsync(photo, path);
-                PostPicturesObservable.Add(new PostPicture(firebaseUrlToFile));
-                PostPicturesCollectionNotEmpty = true;
-                CarouselVisible = true;
-            });*/
-
-            foreach(FileResult photo in photos)
+            foreach (FileResult photo in photos)
             {
                 firebaseUrlToFile = await FirebaseCloudStorage.AddFileToFirebaseCloudStorageAsync(photo, path);
                 PostPicturesObservable.Add(new PostPicture(firebaseUrlToFile));
@@ -288,13 +250,13 @@ namespace MVVM.View_Models.Post
         }
 
         [RelayCommand]
-        public void DeletePicturesAndGoBack()
+        private void DeletePicturesAndGoBack()
         {
             try
             {
                 //await FirebaseCloudStorage.DeleteFirebaseDataFromAsync($"{post.Car.UUID}"); 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 CrossPlatformMessageRenderer.RenderMessages(ex.Message, "Retry", 4);
             }
@@ -309,7 +271,7 @@ namespace MVVM.View_Models.Post
         }
 
         [RelayCommand]
-        public void NavigateToDescription()
+        private void NavigateToDescription()
         {
             DescriptionFormVisible = true;
             PictureUploadVisible = false;
@@ -317,7 +279,7 @@ namespace MVVM.View_Models.Post
         }
 
         [RelayCommand]
-        public void GoToVehicleEquipment()
+        private void GoToVehicleEquipment()
         {
             EquipmentFormVisible = true;
             DescriptionFormVisible = false;
@@ -326,29 +288,28 @@ namespace MVVM.View_Models.Post
         }
 
         [RelayCommand]
-        public void BackToPictureUpload()
+        private void BackToPictureUpload()
         {
             DescriptionFormVisible = false;
             PictureUploadVisible = true;
         }
 
         [RelayCommand]
-        public void BackToPostDescription()
+        private void BackToPostDescription()
         {
-            DescriptionFormVisible=true;
+            DescriptionFormVisible = true;
             EquipmentFormVisible = false;
         }
 
         [RelayCommand]
-        public async void UploadCarPost()
+        private async void UploadCarPost()
         {
-            if(carService.Save(post.Car) is not null)
+            if (carService.Save(post.Car) is not null)
             {
                 try
                 {
-                    carPostService.UploadCarPost(Post, carService.retrieveCarIdentifierByUuid(post.Car.UUID));
+                    carPostService.UploadCarPost(Post, carService.RetrieveCarIdentifierByUuid(post.Car.Uuid));
                     CrossPlatformMessageRenderer.RenderMessages("Successfully added a new car !", "Good", 3);
-                    
                 }
                 catch (UploadFailedException uploadFailedExc)
                 {
@@ -362,7 +323,6 @@ namespace MVVM.View_Models.Post
             }
         }
 
-        
 
         partial void OnSelectedVehicleTypeChanged(string value)
         {
@@ -394,14 +354,14 @@ namespace MVVM.View_Models.Post
 
         partial void OnSelectedModelChanged(string value)
         {
-            try 
+            try
             {
                 post.Car.Model = value;
                 Generations = carPostService.RetrieveGenerationsForModel(value);
-            } 
+            }
             catch (ArgumentOutOfRangeException)
             {
-                Generations = null;
+                Generations = null!;
             }
         }
 
@@ -413,7 +373,7 @@ namespace MVVM.View_Models.Post
             }
             catch (ArgumentOutOfRangeException)
             {
-                Generations = null;
+                Generations = null!;
             }
         }
 
@@ -431,7 +391,7 @@ namespace MVVM.View_Models.Post
         {
             try
             {
-                post.Car.Year = (int)value;
+                if (value != null) post.Car.Year = (int)value;
             }
             catch (InvalidOperationException)
             {
@@ -443,7 +403,7 @@ namespace MVVM.View_Models.Post
         {
             try
             {
-                post.Car.Mileage = (int)value;
+                if (value != null) post.Car.Mileage = (int)value;
             }
             catch (InvalidOperationException)
             {
@@ -453,14 +413,14 @@ namespace MVVM.View_Models.Post
 
         partial void OnEngineCapacityChanged(string value)
         {
-            post.Car.EngineCapacity= value + " cmc";
+            post.Car.EngineCapacity = value + " cmc";
         }
 
         partial void OnEnginePowerChanged(int? value)
         {
             try
             {
-                post.Car.Horsepower = (int)value;
+                if (value != null) post.Car.Horsepower = (int)value;
             }
             catch (InvalidOperationException)
             {
@@ -472,7 +432,7 @@ namespace MVVM.View_Models.Post
         {
             try
             {
-                post.Car.Torque = (int)value;
+                if (value != null) post.Car.Torque = (int)value;
             }
             catch (InvalidOperationException)
             {
@@ -502,19 +462,19 @@ namespace MVVM.View_Models.Post
             DescriptionFormVisible = false;
             CarDetailsFormVisible = true;
             PictureUploadVisible = false;
-            SelectedChassisType = null;
-            SelectedFuelType = null;
-            SelectedGearboxConfiguration = null;
-            SelectedGeneration = null;
-            SelectedModel = null;
+            SelectedChassisType = null!;
+            SelectedFuelType = null!;
+            SelectedGearboxConfiguration = null!;
+            SelectedGeneration = null!;
+            SelectedModel = null!;
             SelectedModelIndex = -1;
-            SelectedManufacturer = null;
+            SelectedManufacturer = null!;
             SelectedManufacturerIndex = -1;
-            SelectedTransmissionType = null;
-            SelectedVehicleType = null;
+            SelectedTransmissionType = null!;
+            SelectedVehicleType = null!;
             Year = null;
             Mileage = null;
-            EngineCapacity = null;
+            EngineCapacity = null!;
             EnginePower = null;
             Torque = null;
             PostPicturesObservable = new();
@@ -524,12 +484,10 @@ namespace MVVM.View_Models.Post
             {
                 PostPictures = new(),
                 Car = new(),
-                Owner=owner,
+                Owner = owner,
             };
 
-            Post.UUID = Post.Car.UUID;
-
+            Post.Uuid = Post.Car.Uuid;
         }
     }
 }
-

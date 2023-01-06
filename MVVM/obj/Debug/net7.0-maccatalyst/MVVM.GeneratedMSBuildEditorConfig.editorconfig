@@ -58,6 +58,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = MVVM.View.Core.Feed.xaml
 build_metadata.AdditionalFiles.TargetPath = View\Core\Feed.xaml
 build_metadata.AdditionalFiles.RelativePath = View\Core\Feed.xaml
 
+[C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Modul 1/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MVVM/View/Favorite Posts/FavoritePosts.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MVVM.View.Favorite_Posts.FavoritePosts.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Favorite Posts\FavoritePosts.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Favorite Posts\FavoritePosts.xaml
+
 [C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Modul 1/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MVVM/View/Landing/MotorEmpire.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MVVM.View.Landing.MotorEmpire.xaml
@@ -69,6 +75,12 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MVVM.View.Post_Feed.PostFeed.xaml
 build_metadata.AdditionalFiles.TargetPath = View\Post Feed\PostFeed.xaml
 build_metadata.AdditionalFiles.RelativePath = View\Post Feed\PostFeed.xaml
+
+[C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Modul 1/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MVVM/View/Post Info/PostInfo.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MVVM.View.Post_Info.PostInfo.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Post Info\PostInfo.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Post Info\PostInfo.xaml
 
 [C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Modul 1/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MVVM/View/Post Upload/UploadPost.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

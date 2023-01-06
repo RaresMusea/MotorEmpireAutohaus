@@ -1,24 +1,21 @@
-﻿using MySqlConnector;
-using MotorEmpireAutohaus.Storage.MySQL;
-using MotorEmpireAutohaus.MVVM.Services.Interfaces;
+﻿using MVVM.Services.Interfaces;
+using MySqlConnector;
 
-namespace MotorEmpireAutohaus.Services.Feed
+namespace MVVM.Services.Car_Filter_Services
 {
-    public class CarFilterService:ICarFilter
+    public class CarFilterService : ICarFilter, IConnectableDataSource
     {
-        private DatabaseConfigurer _databaseConfigurer;
-
         public CarFilterService()
         {
-            _databaseConfigurer= new DatabaseConfigurer();
-            _databaseConfigurer.OpenConnection();
+            IConnectableDataSource.Connect();
         }
 
         public List<string> RetrieveCarBodyTypes()
         {
             List<string> types = new();
 
-            MySqlCommand command = new("SELECT * FROM CarBodyType", _databaseConfigurer.DatabaseConnection);
+            MySqlCommand command = new("SELECT * FROM CarBodyType",
+                IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
             command.Prepare();
 
             MySqlDataReader reader = command.ExecuteReader();
@@ -26,6 +23,7 @@ namespace MotorEmpireAutohaus.Services.Feed
             {
                 types.Add(reader.GetString(0));
             }
+
             reader.Close();
 
             return types;
@@ -33,11 +31,12 @@ namespace MotorEmpireAutohaus.Services.Feed
 
         public int GetIdByManufacturerName(string name)
         {
-            int id=-1;
-            MySqlCommand command = new("SELECT ID from Manufacturer WHERE Name=@name",_databaseConfigurer.DatabaseConnection);
+            int id = -1;
+            MySqlCommand command = new("SELECT ID from Manufacturer WHERE Name=@name",
+                IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
             command.Prepare();
             command.Parameters.AddWithValue("@name", name);
-            MySqlDataReader reader=command.ExecuteReader();
+            MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
                 id = reader.GetInt32(0);
@@ -51,7 +50,8 @@ namespace MotorEmpireAutohaus.Services.Feed
         public List<string> GetManufacturers()
         {
             List<string> result = new();
-            MySqlCommand command = new("SELECT Name FROM Manufacturer",_databaseConfigurer.DatabaseConnection);
+            MySqlCommand command = new("SELECT Name FROM Manufacturer",
+                IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
             command.Prepare();
             MySqlDataReader reader = command.ExecuteReader();
 
@@ -70,10 +70,11 @@ namespace MotorEmpireAutohaus.Services.Feed
             List<string> result = new();
 
             int manufacturerId = GetIdByManufacturerName(manufacturer);
-            MySqlCommand command = new("SELECT ModelName from Model WHERE Brand=@id",_databaseConfigurer.DatabaseConnection);
+            MySqlCommand command = new("SELECT ModelName from Model WHERE Brand=@id",
+                IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
             command.Prepare();
             command.Parameters.AddWithValue("@id", manufacturerId);
-            MySqlDataReader reader=command.ExecuteReader();
+            MySqlDataReader reader = command.ExecuteReader();
 
             while (reader.Read())
             {
@@ -86,7 +87,8 @@ namespace MotorEmpireAutohaus.Services.Feed
 
         public int GetModelIdByName(string modelName)
         {
-            MySqlCommand command = new("SELECT ID FROM Model WHERE ModelName=@modelname",_databaseConfigurer.DatabaseConnection);
+            MySqlCommand command = new("SELECT ID FROM Model WHERE ModelName=@modelname",
+                IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
             command.Prepare();
             command.Parameters.AddWithValue("@modelname", modelName);
             int id = -1;
@@ -105,7 +107,8 @@ namespace MotorEmpireAutohaus.Services.Feed
         {
             int identifier = GetModelIdByName(modelName);
             List<string> result = new();
-            MySqlCommand command = new("SELECT Generation FROM ModelGeneration WHERE ModelID=@identifier", _databaseConfigurer.DatabaseConnection);
+            MySqlCommand command = new("SELECT Generation FROM ModelGeneration WHERE ModelID=@identifier",
+                IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
             command.Prepare();
             command.Parameters.AddWithValue("@identifier", identifier);
             MySqlDataReader reader = command.ExecuteReader();

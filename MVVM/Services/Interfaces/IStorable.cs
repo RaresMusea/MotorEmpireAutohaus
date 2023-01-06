@@ -1,7 +1,6 @@
-﻿
-using MotorEmpireAutohaus.MVVM.Models.Base;
-namespace MotorEmpireAutohaus.MVVM.Services.Interfaces;
+﻿using MVVM.Models.Base;
 
+namespace MVVM.Services.Interfaces;
 
 public interface IStorable
 {

@@ -1,4 +1,4 @@
-﻿namespace MotorEmpireAutohaus.MVVM.Services.Interfaces
+﻿namespace MVVM.Services.Interfaces
 {
     interface ICarFilter
     {
@@ -13,7 +13,5 @@
         public int GetModelIdByName(string modelName);
 
         public List<string> GetGenerationBasedOnModel(string modelName);
-
-
     }
 }

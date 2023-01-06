@@ -1,13 +1,13 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using MotorEmpireAutohaus.MVVM.Models.Vehicle_Models.Car.Car_Filter_Model;
-using MotorEmpireAutohaus.MVVM.View_Models.Base;
+using BaseViewModel = MVVM.View_Models.Base.BaseViewModel;
+using CarFilter = MVVM.Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter;
 
-namespace MotorEmpireAutohaus.View_Model.Vehicles
+namespace MVVM.View_Models.Vehicles
 {
-    [QueryProperty (nameof(CarFilter),nameof(CarFilter))]
-    public partial class SearchResultsViewModel:BaseViewModel
+    [QueryProperty(nameof(Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter),
+        nameof(Models.Vehicle_Models.Car.Car_Filter_Model.CarFilter))]
+    public partial class SearchResultsViewModel : BaseViewModel
     {
-        [ObservableProperty]
-        CarFilter carFilter;
+        [ObservableProperty] private CarFilter carFilter;
     }
 }
