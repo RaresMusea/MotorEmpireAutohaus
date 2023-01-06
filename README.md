@@ -15,7 +15,7 @@ Aplicația este cross-platform, ceea ce înseamnă că aceasta profită la maxim
 
 ## Tehnologii utilizate
 ### Limbaje
--- C# 9.0 pe platforma .NET 6.0 (LTS)
+-- C# 9.0 pe platforma .NET 7.0
 
 ### Storage
 -- MySQL 8.0
