@@ -53,7 +53,7 @@ public partial class UploadPost : ContentPage
             GenerationPicker.Margin = new Thickness(16, 0, 35, 0);
             FuelTypePicker.Margin = new Thickness(5, 0, 35, 0);
             EnginePowerEntry.Margin = new Thickness(40, 0, 35, 0);
-            EngineTorqueEntry.Margin = new Thickness(15, 0, 35, 0);
+            EngineTorqueEntry.Margin = new Thickness(15, 0, 25, 0);
         }
     }
 

@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using MVVM.Services.Account_Services;
 using MVVM.Services.Authentication;
+using MVVM.View.Favorite_Posts;
 using Storage.Firebase_Storage;
 using Tools.Encryption;
 using Tools.Handlers;
@@ -14,6 +15,7 @@ using UserAccount = MVVM.Models.User_Account_Model.UserAccount;
 namespace MVVM.View_Models.Account
 {
     [QueryProperty(nameof(UserAccount), nameof(UserAccount))]
+    [QueryProperty(nameof(UpdateNeeded), nameof(UpdateNeeded))]
     public partial class UserAccountViewModel : BaseViewModel
     {
         
@@ -33,6 +35,8 @@ namespace MVVM.View_Models.Account
         [ObservableProperty] private bool addPhoneNumberVisible;
 
         [ObservableProperty] private bool removePhoneNumberVisible;
+
+        [ObservableProperty] private bool updateNeeded;
 
 
         public UserAccountViewModel()
@@ -259,6 +263,14 @@ namespace MVVM.View_Models.Account
             user.Uuid = oldUser.Uuid;
             user.ProfileImageUrl = oldUser.ProfileImageUrl;
             user.Password = currentPassword;
+        }
+
+        [RelayCommand]
+        private async void GoToSavedPosts()
+        {
+            UpdateNeeded = true;
+            await Shell.Current.GoToAsync($"{nameof(FavoritePosts)}?UpdateNeeded={UpdateNeeded}", true);
+            UpdateNeeded = false;
         }
 
         [RelayCommand]

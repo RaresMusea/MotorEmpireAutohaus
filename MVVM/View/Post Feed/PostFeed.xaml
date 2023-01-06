@@ -219,7 +219,7 @@
 
 
                                             <CarouselView ItemsSource="{Binding PostPictures}"
-                                                          IndicatorView="indicatorView" Margin="0,10,10,0">
+                                                          IndicatorView="indicatorView" Margin="5,10,5,0">
                                                 <CarouselView.ItemTemplate>
                                                     <DataTemplate x:DataType="pictures:PostPicture">
                                                         <StackLayout>

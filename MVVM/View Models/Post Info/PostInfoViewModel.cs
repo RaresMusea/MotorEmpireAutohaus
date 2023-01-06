@@ -110,6 +110,7 @@ namespace MVVM.View_Models.Post_Info
                 FavoritesText = "Add to favorites";
                 if (PostInfoConfigurer.OnFavorites == true)
                 {
+                    Application.Current.MainPage = new AppShell();
                     Shell.Current.GoToAsync($"{nameof(FavoritePosts)}?UpdateNeeded={UpdateNeeded}", true);
                     UpdateNeeded = false;
                 }

@@ -328,6 +328,7 @@
                             <Picker Grid.Row="22"
                                     Grid.Column="2"
                                     Title="Pick a transmission type"
+                                    x:Name="TransmissionPicker"
                                     FontFamily="Kollektif"
                                     WidthRequest="200"
                                     MaximumWidthRequest="200"

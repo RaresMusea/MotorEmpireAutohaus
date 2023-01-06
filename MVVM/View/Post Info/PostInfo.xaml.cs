@@ -27,7 +27,7 @@ public partial class PostInfo : ContentPage
         }
         else
         {
-            Shell.Current.GoToAsync($"{nameof(FavoritePosts)}?UpdateNeeded={true}", true);
+            Shell.Current.GoToAsync(nameof(FavoritePosts), true);
         }
         bool value=base.OnBackButtonPressed();
 		return true;

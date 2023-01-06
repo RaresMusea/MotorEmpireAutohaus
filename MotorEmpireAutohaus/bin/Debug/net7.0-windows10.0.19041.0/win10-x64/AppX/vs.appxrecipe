@@ -29,37 +29,37 @@
     <AppXManifest Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-01-05T21:56:58.971</Modified>
+      <Modified>2023-01-06T13:01:01.432</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-01-05T21:02:27.702</Modified>
+      <Modified>2023-01-06T12:57:51.955</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\MotorEmpireAutohaus.runtimeconfig.json">
       <PackagePath>MotorEmpireAutohaus.runtimeconfig.json</PackagePath>
-      <Modified>2023-01-04T09:46:19.638</Modified>
+      <Modified>2023-01-06T11:44:35.508</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\MotorEmpireAutohaus.dll">
       <PackagePath>MotorEmpireAutohaus.dll</PackagePath>
-      <Modified>2023-01-05T21:35:01.445</Modified>
+      <Modified>2023-01-06T12:57:50.261</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\bin\Debug\net7.0-windows10.0.19041.0\MVVM.dll">
       <PackagePath>MVVM.dll</PackagePath>
-      <Modified>2023-01-05T21:56:55.387</Modified>
+      <Modified>2023-01-06T13:00:55.633</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\Storage\bin\Debug\net7.0-windows10.0.19041.0\Storage.dll">
       <PackagePath>Storage.dll</PackagePath>
-      <Modified>2023-01-05T21:09:19.523</Modified>
+      <Modified>2023-01-06T11:39:43.922</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\Tools\bin\Debug\net7.0-windows10.0.19041.0\Tools.dll">
       <PackagePath>Tools.dll</PackagePath>
-      <Modified>2023-01-05T21:09:18.741</Modified>
+      <Modified>2023-01-06T11:39:38.960</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>MotorEmpireAutohaus.exe</PackagePath>
-      <Modified>2023-01-05T21:35:01.468</Modified>
+      <Modified>2023-01-06T12:57:50.284</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.1\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -991,7 +991,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\MotorEmpireAutohaus.deps.json">
       <PackagePath>MotorEmpireAutohaus.deps.json</PackagePath>
-      <Modified>2023-01-05T21:56:58.668</Modified>
+      <Modified>2023-01-06T13:01:01.084</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.Maui.Controls.Ref.win\7.0.52\ref\net7.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
@@ -1011,23 +1011,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\logoSplashScreen.scale-100.png">
       <PackagePath>logoSplashScreen.scale-100.png</PackagePath>
-      <Modified>2023-01-02T14:03:55.675</Modified>
+      <Modified>2023-01-06T11:40:17.695</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\logoSplashScreen.scale-125.png">
       <PackagePath>logoSplashScreen.scale-125.png</PackagePath>
-      <Modified>2023-01-02T14:03:55.696</Modified>
+      <Modified>2023-01-06T11:40:17.726</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\logoSplashScreen.scale-150.png">
       <PackagePath>logoSplashScreen.scale-150.png</PackagePath>
-      <Modified>2023-01-02T14:03:55.720</Modified>
+      <Modified>2023-01-06T11:40:17.770</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\logoSplashScreen.scale-200.png">
       <PackagePath>logoSplashScreen.scale-200.png</PackagePath>
-      <Modified>2023-01-02T14:03:55.769</Modified>
+      <Modified>2023-01-06T11:40:17.865</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\logoSplashScreen.scale-400.png">
       <PackagePath>logoSplashScreen.scale-400.png</PackagePath>
-      <Modified>2023-01-02T14:03:55.962</Modified>
+      <Modified>2023-01-06T11:40:18.167</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\Kollektif.ttf">
       <PackagePath>Kollektif.ttf</PackagePath>
@@ -1055,347 +1055,331 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\aboutdark.scale-100.png">
       <PackagePath>aboutdark.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.966</Modified>
+      <Modified>2023-01-06T11:40:18.316</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\aboutdark.scale-125.png">
       <PackagePath>aboutdark.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.996</Modified>
+      <Modified>2023-01-06T11:40:18.378</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\aboutdark.scale-150.png">
       <PackagePath>aboutdark.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.043</Modified>
+      <Modified>2023-01-06T11:40:18.454</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\aboutdark.scale-200.png">
       <PackagePath>aboutdark.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.119</Modified>
+      <Modified>2023-01-06T11:40:18.554</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\aboutdark.scale-400.png">
       <PackagePath>aboutdark.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.473</Modified>
+      <Modified>2023-01-06T11:40:19.044</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\aboutlight.scale-100.png">
       <PackagePath>aboutlight.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.450</Modified>
+      <Modified>2023-01-06T11:40:19.106</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\aboutlight.scale-125.png">
       <PackagePath>aboutlight.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.484</Modified>
+      <Modified>2023-01-06T11:40:19.274</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\aboutlight.scale-150.png">
       <PackagePath>aboutlight.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.521</Modified>
+      <Modified>2023-01-06T11:40:19.438</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\aboutlight.scale-200.png">
       <PackagePath>aboutlight.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.582</Modified>
+      <Modified>2023-01-06T11:40:19.642</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\aboutlight.scale-400.png">
       <PackagePath>aboutlight.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.803</Modified>
+      <Modified>2023-01-06T11:40:20.043</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\account.scale-100.png">
       <PackagePath>account.scale-100.png</PackagePath>
       <Modified>2023-01-05T20:47:55.582</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\account.scale-125.png">
-      <PackagePath>account.scale-125.png</PackagePath>
-      <Modified>2023-01-05T20:46:43.452</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\account.scale-150.png">
-      <PackagePath>account.scale-150.png</PackagePath>
-      <Modified>2023-01-05T20:46:43.459</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\account.scale-200.png">
-      <PackagePath>account.scale-200.png</PackagePath>
-      <Modified>2023-01-05T20:46:43.487</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\account.scale-400.png">
-      <PackagePath>account.scale-400.png</PackagePath>
-      <Modified>2023-01-05T20:46:43.506</Modified>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\accountdark.scale-100.png">
       <PackagePath>accountdark.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.945</Modified>
+      <Modified>2023-01-06T11:40:18.248</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\accountdark.scale-125.png">
       <PackagePath>accountdark.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.948</Modified>
+      <Modified>2023-01-06T11:40:18.249</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\accountdark.scale-150.png">
       <PackagePath>accountdark.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.950</Modified>
+      <Modified>2023-01-06T11:40:18.251</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\accountdark.scale-200.png">
       <PackagePath>accountdark.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.951</Modified>
+      <Modified>2023-01-06T11:40:18.252</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\accountdark.scale-400.png">
       <PackagePath>accountdark.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.953</Modified>
+      <Modified>2023-01-06T11:40:18.255</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\accountlight.scale-100.png">
       <PackagePath>accountlight.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.954</Modified>
+      <Modified>2023-01-06T11:40:18.284</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\accountlight.scale-125.png">
       <PackagePath>accountlight.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.955</Modified>
+      <Modified>2023-01-06T11:40:18.285</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\accountlight.scale-150.png">
       <PackagePath>accountlight.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.956</Modified>
+      <Modified>2023-01-06T11:40:18.287</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\accountlight.scale-200.png">
       <PackagePath>accountlight.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.957</Modified>
+      <Modified>2023-01-06T11:40:18.288</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\accountlight.scale-400.png">
       <PackagePath>accountlight.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.959</Modified>
+      <Modified>2023-01-06T11:40:18.309</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2023-01-05T21:35:00.501</Modified>
+      <Modified>2023-01-06T11:40:19.372</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.936</Modified>
+      <Modified>2023-01-06T11:40:20.304</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.953</Modified>
+      <Modified>2023-01-06T11:40:20.327</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.972</Modified>
+      <Modified>2023-01-06T11:40:20.364</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:35:01.025</Modified>
+      <Modified>2023-01-06T11:40:20.467</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:35:01.217</Modified>
+      <Modified>2023-01-06T11:40:20.799</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.664</Modified>
+      <Modified>2023-01-06T11:40:19.729</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.670</Modified>
+      <Modified>2023-01-06T11:40:19.740</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.693</Modified>
+      <Modified>2023-01-06T11:40:19.808</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.676</Modified>
+      <Modified>2023-01-06T11:40:19.750</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.683</Modified>
+      <Modified>2023-01-06T11:40:19.760</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.631</Modified>
+      <Modified>2023-01-06T11:40:19.649</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.637</Modified>
+      <Modified>2023-01-06T11:40:19.659</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.658</Modified>
+      <Modified>2023-01-06T11:40:19.694</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.642</Modified>
+      <Modified>2023-01-06T11:40:19.668</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.649</Modified>
+      <Modified>2023-01-06T11:40:19.677</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.567</Modified>
+      <Modified>2023-01-06T11:40:19.531</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.573</Modified>
+      <Modified>2023-01-06T11:40:19.554</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.579</Modified>
+      <Modified>2023-01-06T11:40:19.565</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.585</Modified>
+      <Modified>2023-01-06T11:40:19.575</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.593</Modified>
+      <Modified>2023-01-06T11:40:19.587</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.598</Modified>
+      <Modified>2023-01-06T11:40:19.596</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.604</Modified>
+      <Modified>2023-01-06T11:40:19.604</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.625</Modified>
+      <Modified>2023-01-06T11:40:19.640</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.610</Modified>
+      <Modified>2023-01-06T11:40:19.613</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.616</Modified>
+      <Modified>2023-01-06T11:40:19.624</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.770</Modified>
+      <Modified>2023-01-06T11:40:19.970</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.778</Modified>
+      <Modified>2023-01-06T11:40:19.984</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.787</Modified>
+      <Modified>2023-01-06T11:40:20.001</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.798</Modified>
+      <Modified>2023-01-06T11:40:20.022</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.847</Modified>
+      <Modified>2023-01-06T11:40:20.122</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.732</Modified>
+      <Modified>2023-01-06T11:40:19.897</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.738</Modified>
+      <Modified>2023-01-06T11:40:19.908</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.745</Modified>
+      <Modified>2023-01-06T11:40:19.920</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.752</Modified>
+      <Modified>2023-01-06T11:40:19.933</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.763</Modified>
+      <Modified>2023-01-06T11:40:19.956</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.699</Modified>
+      <Modified>2023-01-06T11:40:19.822</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.705</Modified>
+      <Modified>2023-01-06T11:40:19.839</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.712</Modified>
+      <Modified>2023-01-06T11:40:19.850</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.718</Modified>
+      <Modified>2023-01-06T11:40:19.865</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.726</Modified>
+      <Modified>2023-01-06T11:40:19.881</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.857</Modified>
+      <Modified>2023-01-06T11:40:20.136</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.866</Modified>
+      <Modified>2023-01-06T11:40:20.156</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.877</Modified>
+      <Modified>2023-01-06T11:40:20.175</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.892</Modified>
+      <Modified>2023-01-06T11:40:20.210</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.924</Modified>
+      <Modified>2023-01-06T11:40:20.277</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appsettingsdark.scale-100.png">
       <PackagePath>appsettingsdark.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.987</Modified>
+      <Modified>2023-01-06T11:40:18.405</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appsettingsdark.scale-125.png">
       <PackagePath>appsettingsdark.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.027</Modified>
+      <Modified>2023-01-06T11:40:18.483</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appsettingsdark.scale-150.png">
       <PackagePath>appsettingsdark.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.069</Modified>
+      <Modified>2023-01-06T11:40:18.687</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appsettingsdark.scale-200.png">
       <PackagePath>appsettingsdark.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.154</Modified>
+      <Modified>2023-01-06T11:40:18.882</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appsettingsdark.scale-400.png">
       <PackagePath>appsettingsdark.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.467</Modified>
+      <Modified>2023-01-06T11:40:19.356</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appsettingslight.scale-100.png">
       <PackagePath>appsettingslight.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.963</Modified>
+      <Modified>2023-01-06T11:40:18.309</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appsettingslight.scale-125.png">
       <PackagePath>appsettingslight.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.997</Modified>
+      <Modified>2023-01-06T11:40:18.371</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appsettingslight.scale-150.png">
       <PackagePath>appsettingslight.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.042</Modified>
+      <Modified>2023-01-06T11:40:18.434</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appsettingslight.scale-200.png">
       <PackagePath>appsettingslight.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.128</Modified>
+      <Modified>2023-01-06T11:40:18.590</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appsettingslight.scale-400.png">
       <PackagePath>appsettingslight.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.473</Modified>
+      <Modified>2023-01-06T11:40:18.992</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\auth.scale-100.png">
       <PackagePath>auth.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.549</Modified>
+      <Modified>2023-01-06T11:40:19.144</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\auth.scale-125.png">
       <PackagePath>auth.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.602</Modified>
+      <Modified>2023-01-06T11:40:19.356</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\auth.scale-150.png">
       <PackagePath>auth.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.685</Modified>
+      <Modified>2023-01-06T11:40:19.493</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\auth.scale-200.png">
       <PackagePath>auth.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.803</Modified>
+      <Modified>2023-01-06T11:40:19.674</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\auth.scale-400.png">
       <PackagePath>auth.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:22.283</Modified>
+      <Modified>2023-01-06T11:40:20.467</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\authentication.scale-100.png">
       <PackagePath>authentication.scale-100.png</PackagePath>
@@ -1407,183 +1391,183 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\brakedisc.scale-100.png">
       <PackagePath>brakedisc.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.945</Modified>
+      <Modified>2023-01-06T11:40:18.254</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\brakedisc.scale-125.png">
       <PackagePath>brakedisc.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.949</Modified>
+      <Modified>2023-01-06T11:40:18.284</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\brakedisc.scale-150.png">
       <PackagePath>brakedisc.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.952</Modified>
+      <Modified>2023-01-06T11:40:18.287</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\brakedisc.scale-200.png">
       <PackagePath>brakedisc.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.954</Modified>
+      <Modified>2023-01-06T11:40:18.314</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\brakedisc.scale-400.png">
       <PackagePath>brakedisc.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.960</Modified>
+      <Modified>2023-01-06T11:40:18.338</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\car.scale-100.png">
       <PackagePath>car.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.971</Modified>
+      <Modified>2023-01-06T11:40:18.314</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\car.scale-125.png">
       <PackagePath>car.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.031</Modified>
+      <Modified>2023-01-06T11:40:18.407</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\car.scale-150.png">
       <PackagePath>car.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.108</Modified>
+      <Modified>2023-01-06T11:40:18.591</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\car.scale-200.png">
       <PackagePath>car.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.269</Modified>
+      <Modified>2023-01-06T11:40:18.884</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\car.scale-400.png">
       <PackagePath>car.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.698</Modified>
+      <Modified>2023-01-06T11:40:19.753</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\cardark.scale-100.png">
       <PackagePath>cardark.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.988</Modified>
+      <Modified>2023-01-06T11:40:18.371</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\cardark.scale-125.png">
       <PackagePath>cardark.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.024</Modified>
+      <Modified>2023-01-06T11:40:18.434</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\cardark.scale-150.png">
       <PackagePath>cardark.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.071</Modified>
+      <Modified>2023-01-06T11:40:18.548</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\cardark.scale-200.png">
       <PackagePath>cardark.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.176</Modified>
+      <Modified>2023-01-06T11:40:18.681</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\cardark.scale-400.png">
       <PackagePath>cardark.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.534</Modified>
+      <Modified>2023-01-06T11:40:19.076</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\caretdowndark.scale-100.png">
       <PackagePath>caretdowndark.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.542</Modified>
+      <Modified>2023-01-06T11:40:19.084</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\caretdowndark.scale-125.png">
       <PackagePath>caretdowndark.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.551</Modified>
+      <Modified>2023-01-06T11:40:19.094</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\caretdowndark.scale-150.png">
       <PackagePath>caretdowndark.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.561</Modified>
+      <Modified>2023-01-06T11:40:19.108</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\caretdowndark.scale-200.png">
       <PackagePath>caretdowndark.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.575</Modified>
+      <Modified>2023-01-06T11:40:19.146</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\caretdowndark.scale-400.png">
       <PackagePath>caretdowndark.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.642</Modified>
+      <Modified>2023-01-06T11:40:19.302</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\caretdownlight.scale-100.png">
       <PackagePath>caretdownlight.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.949</Modified>
+      <Modified>2023-01-06T11:40:18.288</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\caretdownlight.scale-125.png">
       <PackagePath>caretdownlight.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.960</Modified>
+      <Modified>2023-01-06T11:40:18.308</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\caretdownlight.scale-150.png">
       <PackagePath>caretdownlight.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.972</Modified>
+      <Modified>2023-01-06T11:40:18.343</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\caretdownlight.scale-200.png">
       <PackagePath>caretdownlight.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.996</Modified>
+      <Modified>2023-01-06T11:40:18.368</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\caretdownlight.scale-400.png">
       <PackagePath>caretdownlight.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.082</Modified>
+      <Modified>2023-01-06T11:40:18.498</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\caretupdark.scale-100.png">
       <PackagePath>caretupdark.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.090</Modified>
+      <Modified>2023-01-06T11:40:18.581</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\caretupdark.scale-125.png">
       <PackagePath>caretupdark.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.100</Modified>
+      <Modified>2023-01-06T11:40:18.635</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\caretupdark.scale-150.png">
       <PackagePath>caretupdark.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.122</Modified>
+      <Modified>2023-01-06T11:40:18.652</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\caretupdark.scale-200.png">
       <PackagePath>caretupdark.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.151</Modified>
+      <Modified>2023-01-06T11:40:18.675</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\caretupdark.scale-400.png">
       <PackagePath>caretupdark.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.242</Modified>
+      <Modified>2023-01-06T11:40:18.899</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\caretuplight.scale-100.png">
       <PackagePath>caretuplight.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.249</Modified>
+      <Modified>2023-01-06T11:40:18.908</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\caretuplight.scale-125.png">
       <PackagePath>caretuplight.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.258</Modified>
+      <Modified>2023-01-06T11:40:18.917</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\caretuplight.scale-150.png">
       <PackagePath>caretuplight.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.274</Modified>
+      <Modified>2023-01-06T11:40:18.931</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\caretuplight.scale-200.png">
       <PackagePath>caretuplight.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.295</Modified>
+      <Modified>2023-01-06T11:40:18.962</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\caretuplight.scale-400.png">
       <PackagePath>caretuplight.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.385</Modified>
+      <Modified>2023-01-06T11:40:19.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\carlight.scale-100.png">
       <PackagePath>carlight.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.968</Modified>
+      <Modified>2023-01-06T11:40:18.309</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\carlight.scale-125.png">
       <PackagePath>carlight.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.005</Modified>
+      <Modified>2023-01-06T11:40:18.388</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\carlight.scale-150.png">
       <PackagePath>carlight.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.063</Modified>
+      <Modified>2023-01-06T11:40:18.505</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\carlight.scale-200.png">
       <PackagePath>carlight.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.159</Modified>
+      <Modified>2023-01-06T11:40:18.680</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\carlight.scale-400.png">
       <PackagePath>carlight.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.525</Modified>
+      <Modified>2023-01-06T11:40:19.288</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\constructiontruck.scale-100.png">
       <PackagePath>constructiontruck.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.390</Modified>
+      <Modified>2023-01-06T11:40:19.310</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\constructiontruck.scale-125.png">
       <PackagePath>constructiontruck.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.392</Modified>
+      <Modified>2023-01-06T11:40:19.312</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\constructiontruck.scale-150.png">
       <PackagePath>constructiontruck.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.394</Modified>
+      <Modified>2023-01-06T11:40:19.314</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\constructiontruck.scale-200.png">
       <PackagePath>constructiontruck.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.397</Modified>
+      <Modified>2023-01-06T11:40:19.319</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\constructiontruck.scale-400.png">
       <PackagePath>constructiontruck.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.423</Modified>
+      <Modified>2023-01-06T11:40:19.329</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\defaultprofilepic.scale-100.png">
       <PackagePath>defaultprofilepic.scale-100.png</PackagePath>
@@ -1591,23 +1575,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.985</Modified>
+      <Modified>2023-01-06T11:40:18.468</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.034</Modified>
+      <Modified>2023-01-06T11:40:18.628</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.096</Modified>
+      <Modified>2023-01-06T11:40:18.735</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.208</Modified>
+      <Modified>2023-01-06T11:40:18.974</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.549</Modified>
+      <Modified>2023-01-06T11:40:19.766</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\email.scale-100.png">
       <PackagePath>email.scale-100.png</PackagePath>
@@ -1619,43 +1603,43 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\eyeglassesdark.scale-100.png">
       <PackagePath>eyeglassesdark.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.945</Modified>
+      <Modified>2023-01-06T11:40:18.239</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\eyeglassesdark.scale-125.png">
       <PackagePath>eyeglassesdark.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.949</Modified>
+      <Modified>2023-01-06T11:40:18.241</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\eyeglassesdark.scale-150.png">
       <PackagePath>eyeglassesdark.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.950</Modified>
+      <Modified>2023-01-06T11:40:18.243</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\eyeglassesdark.scale-200.png">
       <PackagePath>eyeglassesdark.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.952</Modified>
+      <Modified>2023-01-06T11:40:18.246</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\eyeglassesdark.scale-400.png">
       <PackagePath>eyeglassesdark.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.956</Modified>
+      <Modified>2023-01-06T11:40:18.289</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\eyeglasseslight.scale-100.png">
       <PackagePath>eyeglasseslight.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.958</Modified>
+      <Modified>2023-01-06T11:40:18.309</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\eyeglasseslight.scale-125.png">
       <PackagePath>eyeglasseslight.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.959</Modified>
+      <Modified>2023-01-06T11:40:18.311</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\eyeglasseslight.scale-150.png">
       <PackagePath>eyeglasseslight.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.962</Modified>
+      <Modified>2023-01-06T11:40:18.333</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\eyeglasseslight.scale-200.png">
       <PackagePath>eyeglasseslight.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.964</Modified>
+      <Modified>2023-01-06T11:40:18.335</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\eyeglasseslight.scale-400.png">
       <PackagePath>eyeglasseslight.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.968</Modified>
+      <Modified>2023-01-06T11:40:18.339</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\flyoutbanner.scale-100.png">
       <PackagePath>flyoutbanner.scale-100.png</PackagePath>
@@ -1671,43 +1655,43 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\homedark.scale-100.png">
       <PackagePath>homedark.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:03:12.653</Modified>
+      <Modified>2023-01-06T11:40:18.767</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\homedark.scale-125.png">
       <PackagePath>homedark.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:03:12.866</Modified>
+      <Modified>2023-01-06T11:40:19.485</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\homedark.scale-150.png">
       <PackagePath>homedark.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:03:13.155</Modified>
+      <Modified>2023-01-06T11:40:20.191</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\homedark.scale-200.png">
       <PackagePath>homedark.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:03:13.701</Modified>
+      <Modified>2023-01-06T11:40:21.099</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\homedark.scale-400.png">
       <PackagePath>homedark.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:03:15.594</Modified>
+      <Modified>2023-01-06T11:40:24.258</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\homelight.scale-100.png">
       <PackagePath>homelight.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.215</Modified>
+      <Modified>2023-01-06T11:40:18.618</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\homelight.scale-125.png">
       <PackagePath>homelight.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.623</Modified>
+      <Modified>2023-01-06T11:40:19.135</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\homelight.scale-150.png">
       <PackagePath>homelight.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:22.076</Modified>
+      <Modified>2023-01-06T11:40:20.049</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\homelight.scale-200.png">
       <PackagePath>homelight.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:22.681</Modified>
+      <Modified>2023-01-06T11:40:20.996</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\homelight.scale-400.png">
       <PackagePath>homelight.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:25.224</Modified>
+      <Modified>2023-01-06T11:40:23.932</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\jumbotron.scale-100.gif">
       <PackagePath>jumbotron.scale-100.gif</PackagePath>
@@ -1715,63 +1699,63 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\jumbotronblack.scale-100.png">
       <PackagePath>jumbotronblack.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.045</Modified>
+      <Modified>2023-01-06T11:40:18.613</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\jumbotronblack.scale-125.png">
       <PackagePath>jumbotronblack.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.053</Modified>
+      <Modified>2023-01-06T11:40:18.657</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\jumbotronblack.scale-150.png">
       <PackagePath>jumbotronblack.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.068</Modified>
+      <Modified>2023-01-06T11:40:18.671</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\jumbotronblack.scale-200.png">
       <PackagePath>jumbotronblack.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.093</Modified>
+      <Modified>2023-01-06T11:40:18.755</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\jumbotronblack.scale-400.png">
       <PackagePath>jumbotronblack.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.199</Modified>
+      <Modified>2023-01-06T11:40:18.953</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\jumbotronwhite.scale-100.png">
       <PackagePath>jumbotronwhite.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.950</Modified>
+      <Modified>2023-01-06T11:40:18.350</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\jumbotronwhite.scale-125.png">
       <PackagePath>jumbotronwhite.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.965</Modified>
+      <Modified>2023-01-06T11:40:18.362</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\jumbotronwhite.scale-150.png">
       <PackagePath>jumbotronwhite.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.985</Modified>
+      <Modified>2023-01-06T11:40:18.450</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\jumbotronwhite.scale-200.png">
       <PackagePath>jumbotronwhite.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.010</Modified>
+      <Modified>2023-01-06T11:40:18.506</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\jumbotronwhite.scale-400.png">
       <PackagePath>jumbotronwhite.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.091</Modified>
+      <Modified>2023-01-06T11:40:18.785</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\landing.scale-100.png">
       <PackagePath>landing.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.192</Modified>
+      <Modified>2023-01-06T11:40:18.955</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\landing.scale-125.png">
       <PackagePath>landing.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.258</Modified>
+      <Modified>2023-01-06T11:40:19.102</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\landing.scale-150.png">
       <PackagePath>landing.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.350</Modified>
+      <Modified>2023-01-06T11:40:19.314</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\landing.scale-200.png">
       <PackagePath>landing.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.500</Modified>
+      <Modified>2023-01-06T11:40:19.529</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\landing.scale-400.png">
       <PackagePath>landing.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.961</Modified>
+      <Modified>2023-01-06T11:40:20.260</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\landingimage.scale-100.jpg">
       <PackagePath>landingimage.scale-100.jpg</PackagePath>
@@ -1799,23 +1783,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\postfeeddark.scale-100.png">
       <PackagePath>postfeeddark.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.271</Modified>
+      <Modified>2023-01-06T11:40:18.964</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\postfeeddark.scale-125.png">
       <PackagePath>postfeeddark.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.682</Modified>
+      <Modified>2023-01-06T11:40:19.776</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\postfeeddark.scale-150.png">
       <PackagePath>postfeeddark.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:22.152</Modified>
+      <Modified>2023-01-06T11:40:20.504</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\postfeeddark.scale-200.png">
       <PackagePath>postfeeddark.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:22.906</Modified>
+      <Modified>2023-01-06T11:40:21.408</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\postfeeddark.scale-400.png">
       <PackagePath>postfeeddark.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:26.086</Modified>
+      <Modified>2023-01-06T11:40:24.956</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\postfeedjumbotron.scale-100.jpg">
       <PackagePath>postfeedjumbotron.scale-100.jpg</PackagePath>
@@ -1823,23 +1807,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\postfeedlight.scale-100.png">
       <PackagePath>postfeedlight.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.288</Modified>
+      <Modified>2023-01-06T11:40:18.954</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\postfeedlight.scale-125.png">
       <PackagePath>postfeedlight.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.707</Modified>
+      <Modified>2023-01-06T11:40:19.659</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\postfeedlight.scale-150.png">
       <PackagePath>postfeedlight.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:22.189</Modified>
+      <Modified>2023-01-06T11:40:20.369</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\postfeedlight.scale-200.png">
       <PackagePath>postfeedlight.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:22.978</Modified>
+      <Modified>2023-01-06T11:40:21.380</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\postfeedlight.scale-400.png">
       <PackagePath>postfeedlight.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:26.190</Modified>
+      <Modified>2023-01-06T11:40:25.091</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\postuploaddark.scale-100.png">
       <PackagePath>postuploaddark.scale-100.png</PackagePath>
@@ -1851,143 +1835,143 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\search.scale-100.png">
       <PackagePath>search.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.945</Modified>
+      <Modified>2023-01-06T11:40:18.254</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\search.scale-125.png">
       <PackagePath>search.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.948</Modified>
+      <Modified>2023-01-06T11:40:18.255</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\search.scale-150.png">
       <PackagePath>search.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.949</Modified>
+      <Modified>2023-01-06T11:40:18.287</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\search.scale-200.png">
       <PackagePath>search.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.950</Modified>
+      <Modified>2023-01-06T11:40:18.317</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\search.scale-400.png">
       <PackagePath>search.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.952</Modified>
+      <Modified>2023-01-06T11:40:18.335</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\setting.scale-100.png">
       <PackagePath>setting.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.954</Modified>
+      <Modified>2023-01-06T11:40:18.337</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\setting.scale-125.png">
       <PackagePath>setting.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.954</Modified>
+      <Modified>2023-01-06T11:40:18.344</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\setting.scale-150.png">
       <PackagePath>setting.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.955</Modified>
+      <Modified>2023-01-06T11:40:18.345</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\setting.scale-200.png">
       <PackagePath>setting.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.956</Modified>
+      <Modified>2023-01-06T11:40:18.358</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\setting.scale-400.png">
       <PackagePath>setting.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.959</Modified>
+      <Modified>2023-01-06T11:40:18.360</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\settingsdark.scale-100.png">
       <PackagePath>settingsdark.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.961</Modified>
+      <Modified>2023-01-06T11:40:18.362</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\settingsdark.scale-125.png">
       <PackagePath>settingsdark.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.962</Modified>
+      <Modified>2023-01-06T11:40:18.363</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\settingsdark.scale-150.png">
       <PackagePath>settingsdark.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.963</Modified>
+      <Modified>2023-01-06T11:40:18.383</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\settingsdark.scale-200.png">
       <PackagePath>settingsdark.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.964</Modified>
+      <Modified>2023-01-06T11:40:18.385</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\settingsdark.scale-400.png">
       <PackagePath>settingsdark.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.966</Modified>
+      <Modified>2023-01-06T11:40:18.387</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\star.scale-100.png">
       <PackagePath>star.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.462</Modified>
+      <Modified>2023-01-06T11:40:18.389</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\star.scale-125.png">
       <PackagePath>star.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.463</Modified>
+      <Modified>2023-01-06T11:40:18.389</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\star.scale-150.png">
       <PackagePath>star.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.464</Modified>
+      <Modified>2023-01-06T11:40:18.390</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\star.scale-200.png">
       <PackagePath>star.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.465</Modified>
+      <Modified>2023-01-06T11:40:18.435</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\star.scale-400.png">
       <PackagePath>star.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:35:00.466</Modified>
+      <Modified>2023-01-06T11:40:18.437</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\stardark.scale-100.png">
       <PackagePath>stardark.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.974</Modified>
+      <Modified>2023-01-06T11:40:18.438</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\stardark.scale-125.png">
       <PackagePath>stardark.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.975</Modified>
+      <Modified>2023-01-06T11:40:18.439</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\stardark.scale-150.png">
       <PackagePath>stardark.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.986</Modified>
+      <Modified>2023-01-06T11:40:18.440</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\stardark.scale-200.png">
       <PackagePath>stardark.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.986</Modified>
+      <Modified>2023-01-06T11:40:18.441</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\stardark.scale-400.png">
       <PackagePath>stardark.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:20.988</Modified>
+      <Modified>2023-01-06T11:40:18.443</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\steeringdark.scale-100.png">
       <PackagePath>steeringdark.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:04:18.327</Modified>
+      <Modified>2023-01-06T11:40:18.445</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\steeringdark.scale-125.png">
       <PackagePath>steeringdark.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:04:18.338</Modified>
+      <Modified>2023-01-06T11:40:18.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\steeringdark.scale-150.png">
       <PackagePath>steeringdark.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:04:18.340</Modified>
+      <Modified>2023-01-06T11:40:18.448</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\steeringdark.scale-200.png">
       <PackagePath>steeringdark.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:04:18.343</Modified>
+      <Modified>2023-01-06T11:40:18.451</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\steeringdark.scale-400.png">
       <PackagePath>steeringdark.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:04:18.347</Modified>
+      <Modified>2023-01-06T11:40:18.461</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\steeringlight.scale-100.png">
       <PackagePath>steeringlight.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.008</Modified>
+      <Modified>2023-01-06T11:40:18.462</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\steeringlight.scale-125.png">
       <PackagePath>steeringlight.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.009</Modified>
+      <Modified>2023-01-06T11:40:18.463</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\steeringlight.scale-150.png">
       <PackagePath>steeringlight.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.010</Modified>
+      <Modified>2023-01-06T11:40:18.463</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\steeringlight.scale-200.png">
       <PackagePath>steeringlight.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.011</Modified>
+      <Modified>2023-01-06T11:40:18.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\steeringlight.scale-400.png">
       <PackagePath>steeringlight.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.013</Modified>
+      <Modified>2023-01-06T11:40:18.579</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\tag.scale-100.png">
       <PackagePath>tag.scale-100.png</PackagePath>
@@ -1995,63 +1979,63 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\tractor.scale-100.png">
       <PackagePath>tractor.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.077</Modified>
+      <Modified>2023-01-06T11:40:18.711</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\tractor.scale-125.png">
       <PackagePath>tractor.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.199</Modified>
+      <Modified>2023-01-06T11:40:18.908</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\tractor.scale-150.png">
       <PackagePath>tractor.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.370</Modified>
+      <Modified>2023-01-06T11:40:19.267</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\tractor.scale-200.png">
       <PackagePath>tractor.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.599</Modified>
+      <Modified>2023-01-06T11:40:19.886</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\tractor.scale-400.png">
       <PackagePath>tractor.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:22.303</Modified>
+      <Modified>2023-01-06T11:40:21.013</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\trailer.scale-100.png">
       <PackagePath>trailer.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:22.306</Modified>
+      <Modified>2023-01-06T11:40:21.017</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\trailer.scale-125.png">
       <PackagePath>trailer.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:22.308</Modified>
+      <Modified>2023-01-06T11:40:21.018</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\trailer.scale-150.png">
       <PackagePath>trailer.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:22.310</Modified>
+      <Modified>2023-01-06T11:40:21.020</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\trailer.scale-200.png">
       <PackagePath>trailer.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:22.312</Modified>
+      <Modified>2023-01-06T11:40:21.022</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\trailer.scale-400.png">
       <PackagePath>trailer.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:22.318</Modified>
+      <Modified>2023-01-06T11:40:21.026</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\truck.scale-100.png">
       <PackagePath>truck.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.210</Modified>
+      <Modified>2023-01-06T11:40:18.958</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\truck.scale-125.png">
       <PackagePath>truck.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.212</Modified>
+      <Modified>2023-01-06T11:40:18.964</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\truck.scale-150.png">
       <PackagePath>truck.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.214</Modified>
+      <Modified>2023-01-06T11:40:19.015</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\truck.scale-200.png">
       <PackagePath>truck.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.217</Modified>
+      <Modified>2023-01-06T11:40:19.019</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\truck.scale-400.png">
       <PackagePath>truck.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.226</Modified>
+      <Modified>2023-01-06T11:40:19.056</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\van.scale-100.png">
       <PackagePath>van.scale-100.png</PackagePath>
@@ -2059,43 +2043,43 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\watchdark.scale-100.png">
       <PackagePath>watchdark.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.238</Modified>
+      <Modified>2023-01-06T11:40:19.107</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\watchdark.scale-125.png">
       <PackagePath>watchdark.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.239</Modified>
+      <Modified>2023-01-06T11:40:19.124</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\watchdark.scale-150.png">
       <PackagePath>watchdark.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.240</Modified>
+      <Modified>2023-01-06T11:40:19.125</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\watchdark.scale-200.png">
       <PackagePath>watchdark.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.241</Modified>
+      <Modified>2023-01-06T11:40:19.126</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\watchdark.scale-400.png">
       <PackagePath>watchdark.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.242</Modified>
+      <Modified>2023-01-06T11:40:19.128</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\watchlight.scale-100.png">
       <PackagePath>watchlight.scale-100.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.244</Modified>
+      <Modified>2023-01-06T11:40:19.130</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\watchlight.scale-125.png">
       <PackagePath>watchlight.scale-125.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.245</Modified>
+      <Modified>2023-01-06T11:40:19.130</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\watchlight.scale-150.png">
       <PackagePath>watchlight.scale-150.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.245</Modified>
+      <Modified>2023-01-06T11:40:19.131</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\watchlight.scale-200.png">
       <PackagePath>watchlight.scale-200.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.247</Modified>
+      <Modified>2023-01-06T11:40:19.132</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MotorEmpireAutohaus\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\watchlight.scale-400.png">
       <PackagePath>watchlight.scale-400.png</PackagePath>
-      <Modified>2023-01-05T21:02:21.248</Modified>
+      <Modified>2023-01-06T11:40:19.134</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

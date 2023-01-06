@@ -6,7 +6,6 @@
              x:DataType="viewmodel:PostInfoViewModel"
              x:Class="MVVM.View.Post_Info.PostInfo"
              xmlns:pictures="clr-namespace:MVVM.Models"
-             Shell.PresentationMode="{OnPlatform Android=ModalAnimated}"
              Title="{Binding Post.HeadingTitle}">
     <ScrollView>
         <VerticalStackLayout>
@@ -325,7 +324,7 @@
                            FontAttributes="Bold"/>
 
                         <CarouselView ItemsSource="{Binding Post.PostPictures}"
-                                                          IndicatorView="indicatorView" Margin="0,10,10,0">
+                                                          IndicatorView="indicatorView" Margin="5,10,5,0">
                             <CarouselView.ItemTemplate>
                                 <DataTemplate x:DataType="pictures:PostPicture">
                                     <StackLayout>
@@ -337,8 +336,8 @@
                                                         HeightRequest="200">
                                             <StackLayout>
                                                 <Image Source="{Binding Picture}"
-                                                               Aspect="AspectFit"
-                                                               Margin="3"
+                                                               Aspect="AspectFill"
+                                                               Margin="5"
                                                                VerticalOptions="CenterAndExpand"/>
                                             </StackLayout>
                                         </Frame>
