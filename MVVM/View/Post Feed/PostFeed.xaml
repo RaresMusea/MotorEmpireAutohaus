@@ -4,8 +4,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodel="clr-namespace:MVVM.View_Models.Post_Feed"
              xmlns:model="clr-namespace:MVVM.Models.Post_Model"
-             xmlns:carpost="clr-namespace:MVVM.View_Models.Post"
-             xmlns:pictures="clr-namespace:MVVM.Models"
+             xmlns:pictureModel="clr-namespace:MVVM.Models.Vehicle_Models.Picture_Model"
              x:DataType="viewmodel:PostFeedViewModel"
              x:Class="MVVM.View.Post_Feed.PostFeed"
              Title="Post Feed">
@@ -105,10 +104,11 @@
                                                            HorizontalOptions="Center" />
 
                                                     <HorizontalStackLayout Margin="0,60,0,15">
-                                                        <Image Source="{AppThemeBinding Dark=watchdark.png, Light=watchlight.png}"
-                                                               WidthRequest="25"
-                                                               HeightRequest="25"
-                                                               Margin="20,0,20,0" />
+                                                        <Image
+                                                            Source="{AppThemeBinding Dark=watchdark.png, Light=watchlight.png}"
+                                                            WidthRequest="25"
+                                                            HeightRequest="25"
+                                                            Margin="20,0,20,0" />
                                                         <Label Text="{Binding DateTimeAdded}"
                                                                FontFamily="Kollektif"
                                                                FontSize="18"
@@ -125,7 +125,7 @@
                                                             <Image Source="{Binding Owner.ProfileImageUrl}"
                                                                    WidthRequest="25"
                                                                    Aspect="Fill"
-                                                                   HeightRequest="25"/>
+                                                                   HeightRequest="25" />
                                                         </Border>
                                                         <Label Text="{Binding CarSpecs.UploadInformation}"
                                                                FontFamily="Kollektif"
@@ -136,27 +136,26 @@
                                                     </HorizontalStackLayout>
 
                                                     <HorizontalStackLayout Margin="20,20,0,0">
-                                                        <Image Source="{AppThemeBinding Dark=eyeglassesdark.png, Light=eyeglasseslight.png}"
-                                                               WidthRequest="25"
-                                                               HeightRequest="25"
-                                                        />
+                                                        <Image
+                                                            Source="{AppThemeBinding Dark=eyeglassesdark.png, Light=eyeglasseslight.png}"
+                                                            WidthRequest="25"
+                                                            HeightRequest="25" />
 
                                                         <Label Text="{Binding CarSpecs.ViewedBy}"
                                                                FontFamily="Kollektif"
                                                                FontSize="18"
                                                                Margin="20,0,0,0"
                                                                HorizontalOptions="Start"
-                                                               VerticalOptions="Center"
-                                                        />
+                                                               VerticalOptions="Center" />
                                                     </HorizontalStackLayout>
 
                                                     <Label Text="{Binding CarSpecs.PriceBinding}"
-                                                               FontFamily="Kollektif"
-                                                               FontSize="25"
-                                                               HorizontalOptions="Center"
-                                                               Margin="0,30,0,30"
-                                                               FontAttributes="Bold"
-                                                               TextColor="{AppThemeBinding Dark=Red, Light=#1C6758}"/>
+                                                           FontFamily="Kollektif"
+                                                           FontSize="25"
+                                                           HorizontalOptions="Center"
+                                                           Margin="0,30,0,30"
+                                                           FontAttributes="Bold"
+                                                           TextColor="{AppThemeBinding Dark=Red, Light=#1C6758}" />
 
                                                     <Button Text="View more"
                                                             HorizontalOptions="Center"
@@ -166,7 +165,7 @@
                                                             BorderColor="Transparent"
                                                             CommandParameter="{Binding .}"
                                                             Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:PostFeedViewModel}}, Path=GoToDetailsPageCommand}"
-                                                            FontFamily="Kollektif"/>
+                                                            FontFamily="Kollektif" />
                                                 </VerticalStackLayout>
                                             </Grid>
                                         </VerticalStackLayout>
@@ -184,14 +183,13 @@
                        CornerRadius="20"
                        Padding="5,0,5,30">
                     <VerticalStackLayout>
-                    <Label Text="{Binding PostsCountMessage}"
+                        <Label Text="{Binding PostsCountMessage}"
                                Margin="00,25,0,30"
                                FontFamily="Kollektif"
                                FontAttributes="Bold"
                                HorizontalOptions="Center"
                                FontSize="20"
-                               TextColor="{AppThemeBinding Dark=White,Light=Black}" 
-                    />
+                               TextColor="{AppThemeBinding Dark=White,Light=Black}" />
 
                         <CollectionView ItemsSource="{Binding Posts}">
                             <CollectionView.ItemTemplate>
@@ -209,96 +207,95 @@
                                                    FontSize="18"
                                                    FontAttributes="Bold"
                                                    HorizontalTextAlignment="Center"
-                                                   Margin="0,10"
-                                                   />
+                                                   Margin="0,10" />
                                             <Label Text="{Binding CarSpecsOverview}"
                                                    FontSize="14"
                                                    HorizontalTextAlignment="Center"
                                                    Margin="0,10,0,20"
-                                                   FontFamily="Kollektif"/>
+                                                   FontFamily="Kollektif" />
 
 
                                             <CarouselView ItemsSource="{Binding PostPictures}"
                                                           IndicatorView="indicatorView" Margin="5,10,5,0">
                                                 <CarouselView.ItemTemplate>
-                                                    <DataTemplate x:DataType="pictures:PostPicture">
+                                                    <DataTemplate x:DataType="pictureModel:PostPicture">
                                                         <StackLayout>
                                                             <Frame HasShadow="True"
-                                                       BorderColor="DarkGray"
-                                                       BackgroundColor="{AppThemeBinding Dark=#676767, Light=#dbdbdb}"
-                                                       CornerRadius="15"
-                                                       Padding="0,5,0,5"
-                                                        HeightRequest="200">
+                                                                   BorderColor="DarkGray"
+                                                                   BackgroundColor="{AppThemeBinding Dark=#676767, Light=#dbdbdb}"
+                                                                   CornerRadius="15"
+                                                                   Padding="0,5,0,5"
+                                                                   HeightRequest="200">
                                                                 <StackLayout>
                                                                     <Image Source="{Binding Picture}"
-                                                               Aspect="AspectFit"
-                                                               Margin="3"
-                                                               VerticalOptions="CenterAndExpand"/>
+                                                                           Aspect="AspectFit"
+                                                                           Margin="3"
+                                                                           VerticalOptions="CenterAndExpand" />
                                                                 </StackLayout>
                                                             </Frame>
                                                         </StackLayout>
                                                     </DataTemplate>
                                                 </CarouselView.ItemTemplate>
                                             </CarouselView>
-                                            <IndicatorView  x:Name="indicatorView"
-                                                            HorizontalOptions="Center"
+                                            <IndicatorView x:Name="indicatorView"
+                                                           HorizontalOptions="Center"
                                                            IndicatorColor="{AppThemeBinding Dark=#dbdbdb, Light=#414141}"
                                                            SelectedIndicatorColor="{AppThemeBinding Dark=Red,Light=#1C6758}"
                                                            MaximumVisible="6"
                                                            Margin="0,10,0,20" />
 
                                             <HorizontalStackLayout Margin="0,30,0,15" HorizontalOptions="Center">
-                                                <Image Source="{AppThemeBinding Dark=watchdark.png, Light=watchlight.png}"
-                                                               WidthRequest="25"
-                                                               HeightRequest="25"
-                                                               Margin="0,0,5,0" />
+                                                <Image
+                                                    Source="{AppThemeBinding Dark=watchdark.png, Light=watchlight.png}"
+                                                    WidthRequest="25"
+                                                    HeightRequest="25"
+                                                    Margin="0,0,5,0" />
                                                 <Label Text="{Binding DateTimeAdded}"
-                                                               FontFamily="Kollektif"
-                                                               FontSize="16"
-                                                               HorizontalOptions="Start"
-                                                               VerticalOptions="Center" />
+                                                       FontFamily="Kollektif"
+                                                       FontSize="16"
+                                                       HorizontalOptions="Start"
+                                                       VerticalOptions="Center" />
                                             </HorizontalStackLayout>
                                             <HorizontalStackLayout HorizontalOptions="Center">
                                                 <Border Stroke="{AppThemeBinding Light=Grey, Dark=#dbdbdb}"
-                                                                StrokeThickness="1"
-                                                                BackgroundColor="{AppThemeBinding Light=Grey, Dark=#dbdbdb}"
-                                                                StrokeShape="RoundRectangle 50"
-                                                                WidthRequest="25"
-                                                                HeightRequest="25">
+                                                        StrokeThickness="1"
+                                                        BackgroundColor="{AppThemeBinding Light=Grey, Dark=#dbdbdb}"
+                                                        StrokeShape="RoundRectangle 50"
+                                                        WidthRequest="25"
+                                                        HeightRequest="25">
                                                     <Image Source="{Binding Owner.ProfileImageUrl}"
-                                                                   WidthRequest="25"
-                                                                   Aspect="Fill"
-                                                                   HeightRequest="25"/>
+                                                           WidthRequest="25"
+                                                           Aspect="Fill"
+                                                           HeightRequest="25" />
                                                 </Border>
                                                 <Label Text="{Binding CarSpecs.UploadInformation}"
-                                                               FontFamily="Kollektif"
-                                                               FontSize="16"
-                                                               Margin="5,0,0,0"
-                                                               HorizontalOptions="Start"
-                                                               VerticalOptions="Center" />
+                                                       FontFamily="Kollektif"
+                                                       FontSize="16"
+                                                       Margin="5,0,0,0"
+                                                       HorizontalOptions="Start"
+                                                       VerticalOptions="Center" />
                                             </HorizontalStackLayout>
                                             <HorizontalStackLayout HorizontalOptions="Center" Margin="0,10,0,0">
-                                                <Image Source="{AppThemeBinding Dark=eyeglassesdark.png, Light=eyeglasseslight.png}"
-                                                               WidthRequest="25"
-                                                               HeightRequest="25"
-                                                        />
+                                                <Image
+                                                    Source="{AppThemeBinding Dark=eyeglassesdark.png, Light=eyeglasseslight.png}"
+                                                    WidthRequest="25"
+                                                    HeightRequest="25" />
 
                                                 <Label Text="{Binding CarSpecs.ViewedBy}"
-                                                               FontFamily="Kollektif"
-                                                               FontSize="16"
-                                                               Margin="5,0,0,0"
-                                                               HorizontalOptions="Start"
-                                                               VerticalOptions="Center"
-                                                        />
+                                                       FontFamily="Kollektif"
+                                                       FontSize="16"
+                                                       Margin="5,0,0,0"
+                                                       HorizontalOptions="Start"
+                                                       VerticalOptions="Center" />
                                             </HorizontalStackLayout>
 
                                         </VerticalStackLayout>
                                         <Frame.GestureRecognizers>
-                                            <TapGestureRecognizer 
+                                            <TapGestureRecognizer
                                                 CommandParameter="{Binding .}"
-                                                Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:PostFeedViewModel}}, Path=GoToDetailsPageCommand}"/>
+                                                Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:PostFeedViewModel}}, Path=GoToDetailsPageCommand}" />
                                         </Frame.GestureRecognizers>
-                                        </Frame>
+                                    </Frame>
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>
                         </CollectionView>
@@ -306,7 +303,6 @@
                 </Frame>
             </VerticalStackLayout>
 
-            
 
         </VerticalStackLayout>
     </ScrollView>

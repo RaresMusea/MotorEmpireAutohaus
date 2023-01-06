@@ -8,6 +8,7 @@ using MVVM.View.Post_Info;
 using MVVM.View_Models.Base;
 using MVVM.View_Models.Post_Info;
 using System.Collections.ObjectModel;
+using MVVM.Services.Post_Feed_Service;
 using Tools.Handlers;
 
 namespace MVVM.View_Models.FavoritePosts

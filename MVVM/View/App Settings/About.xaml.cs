@@ -1,4 +1,4 @@
-namespace MotorEmpireAutohaus.View.App_Settings;
+namespace MVVM.View.App_Settings;
 
 public partial class About : ContentPage
 {

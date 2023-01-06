@@ -71,7 +71,7 @@
                             FontAttributes="Bold"
                             BorderColor="Transparent"
                             HorizontalOptions="Center"
-                            Command="{Binding GoToSavedPostsCommand}"/>
+                            Command="{Binding GoToSavedPostsCommand}" />
 
                     <Frame CornerRadius="15"
                            x:Name="ShowAccountDetailsFrame"

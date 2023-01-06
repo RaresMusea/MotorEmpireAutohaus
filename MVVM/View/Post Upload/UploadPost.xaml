@@ -4,6 +4,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:model="clr-namespace:MVVM.Models"
              xmlns:viewmodel="clr-namespace:MVVM.View_Models.Post"
+             xmlns:pictureModel="clr-namespace:MVVM.Models.Vehicle_Models.Picture_Model"
              x:DataType="viewmodel:CarPostViewModel"
              x:Class="MVVM.View.Post_Upload.UploadPost"
              Title="Sell a car - Upload a post">
@@ -426,7 +427,7 @@
                                 <CarouselView ItemsSource="{Binding PostPicturesObservable}" Margin="0,0,0,0"
                                               HorizontalOptions="Center" IndicatorView="indicatorView">
                                     <CarouselView.ItemTemplate>
-                                        <DataTemplate x:DataType="model:PostPicture">
+                                        <DataTemplate x:DataType="pictureModel:PostPicture">
                                             <StackLayout HeightRequest="300">
                                                 <Frame HasShadow="True"
                                                        BorderColor="DarkGray"
@@ -459,7 +460,7 @@
                                                  Margin="0,30,0,0">
                                 <ListView ItemsSource="{Binding PostPicturesObservable}">
                                     <ListView.ItemTemplate>
-                                        <DataTemplate x:DataType="model:PostPicture">
+                                        <DataTemplate x:DataType="pictureModel:PostPicture">
                                             <ViewCell>
                                                 <Image Source="{Binding Picture}"
                                                        x:Name="carImage"

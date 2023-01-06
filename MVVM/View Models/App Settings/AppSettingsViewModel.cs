@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using MotorEmpireAutohaus.View.App_Settings;
+using MVVM.View.App_Settings;
 using BaseViewModel = MVVM.View_Models.Base.BaseViewModel;
 
 namespace MVVM.View_Models.App_Settings;

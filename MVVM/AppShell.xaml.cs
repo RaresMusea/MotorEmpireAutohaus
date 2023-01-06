@@ -1,11 +1,10 @@
-﻿using MotorEmpireAutohaus.View.App_Settings;
-using MVVM.View.Account_Management;
+﻿using MVVM.View.Account_Management;
+using MVVM.View.App_Settings;
 using MVVM.View.Favorite_Posts;
 using MVVM.View.Landing;
 using MVVM.View.Post_Feed;
 using MVVM.View.Post_Info;
 using MVVM.View.Post_Upload;
-using Tools.Handlers;
 
 namespace MVVM;
 
@@ -13,8 +12,6 @@ public partial class AppShell : Shell
 {
     public AppShell()
     {
-
-       
         InitializeComponent();
 
         Routing.RegisterRoute(nameof(MotorEmpire), typeof(MotorEmpire));
@@ -27,7 +24,6 @@ public partial class AppShell : Shell
         Routing.RegisterRoute(nameof(FavoritePosts), typeof(FavoritePosts));
     }
 
- 
 
     private async void SignOut(object o, EventArgs e)
     {

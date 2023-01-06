@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
+
 <Shell
     x:Class="MVVM.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:appSettings="clr-namespace:MotorEmpireAutohaus.View.App_Settings"
     xmlns:allCars="clr-namespace:MVVM.View.Post_Feed"
     xmlns:postfeed="clr-namespace:MVVM.View.Post_Feed"
     xmlns:accountManagement="using:MVVM.View.Account_Management"
@@ -15,10 +15,9 @@
     xmlns:favorites="clr-namespace:MVVM.View.Favorite_Posts"
     x:DataType="core1:MotorEmpireViewModel"
     Shell.TabBarIsVisible="False"
-    NavigationPage.HasBackButton="False"
->
+    NavigationPage.HasBackButton="False">
 
-    
+
     <ShellContent
         Title=""
         ContentTemplate="{DataTemplate authentication:LogIn}"
@@ -39,51 +38,50 @@
 
     <ShellContent
         Title="About Application"
-        ContentTemplate="{DataTemplate appSettings:About}"
+        ContentTemplate="{DataTemplate appSettings1:About}"
         Route="About"
-        Shell.FlyoutItemIsVisible="False"/>
+        Shell.FlyoutItemIsVisible="False" />
 
     <ShellContent
         Title="Motor Empire Autohaus"
         ContentTemplate="{DataTemplate landing:MotorEmpire}"
         Route="MotorEmpire"
-        Shell.FlyoutItemIsVisible="False"/>
+        Shell.FlyoutItemIsVisible="False" />
 
     <ShellContent
         Title="Post Feed"
         ContentTemplate="{DataTemplate postfeed:PostFeed}"
         Route="PostFeed"
-        Shell.FlyoutItemIsVisible="False"/>
+        Shell.FlyoutItemIsVisible="False" />
 
     <ShellContent Title="Details"
                   ContentTemplate="{DataTemplate postInfo:PostInfoViewModel}"
                   Route="PostInfoViewModel"
-                  Shell.FlyoutItemIsVisible="False"
-                  />
+                  Shell.FlyoutItemIsVisible="False" />
 
 
     <FlyoutItem Route="MotorEmpire"
-        FlyoutDisplayOptions="AsMultipleItems"
+                FlyoutDisplayOptions="AsMultipleItems"
                 Shell.NavBarHasShadow="True"
                 Shell.NavBarIsVisible="True"
                 Shell.BackgroundColor="{AppThemeBinding Dark=Black, Light=#1C6758}"
                 x:Name="Flyout">
-        <ShellContent Title="Motor Empire Autohaus"  ContentTemplate="{DataTemplate landing:MotorEmpire}" x:Name="MotorEmpireTab"></ShellContent>
-        <ShellContent Title="All Cars"  ContentTemplate="{DataTemplate allCars:PostFeed}" x:Name="SearchTab"></ShellContent>
-        <ShellContent Title="My account"  ContentTemplate="{DataTemplate accountManagement:Account}" x:Name="AccountTab"></ShellContent>
+        <ShellContent Title="Motor Empire Autohaus" ContentTemplate="{DataTemplate landing:MotorEmpire}"
+                      x:Name="MotorEmpireTab">
+        </ShellContent>
+        <ShellContent Title="All Cars" ContentTemplate="{DataTemplate allCars:PostFeed}" x:Name="SearchTab"></ShellContent>
+        <ShellContent Title="My account" ContentTemplate="{DataTemplate accountManagement:Account}" x:Name="AccountTab"></ShellContent>
         <ShellContent Title="Favorites" ContentTemplate="{DataTemplate favorites:FavoritePosts}"></ShellContent>
         <ShellContent Title="Settings" ContentTemplate="{DataTemplate appSettings1:AppSettings}"></ShellContent>
     </FlyoutItem>
-    
-    
+
 
     <Shell.FlyoutHeader>
         <VerticalStackLayout>
             <Image Source="{AppThemeBinding Dark=flyoutbanner.png, Light=flyoutbannerlight.png}"
-               Margin="0,0,0,50"/>
+                   Margin="0,0,0,50" />
             <HorizontalStackLayout HorizontalOptions="Center"
-                                   Margin="0,0,0,35"
-                                   >
+                                   Margin="0,0,0,35">
                 <!--<Image Source="{Binding UserAccount.ProfileImageUrl}"
                    WidthRequest="30"
                    HeightRequest="30"
@@ -93,19 +91,17 @@
                    />-->
 
                 <Label Text="Motor Empire Autohaus"
-                        VerticalOptions="Center"
-                        FontAttributes="Bold"
-                        FontSize="16"
-                       />
+                       VerticalOptions="Center"
+                       FontAttributes="Bold"
+                       FontSize="16" />
             </HorizontalStackLayout>
             <VerticalStackLayout>
 
                 <Label Text="Menu"
-                   FontSize="Title"
-                   HorizontalOptions="Center"
-                   Margin="0,0,0,15"
-                   FontAttributes="Bold"
-                   />
+                       FontSize="Title"
+                       HorizontalOptions="Center"
+                       Margin="0,0,0,15"
+                       FontAttributes="Bold" />
             </VerticalStackLayout>
         </VerticalStackLayout>
     </Shell.FlyoutHeader>
@@ -122,8 +118,7 @@
                     HorizontalOptions="Center"
                     BackgroundColor="{AppThemeBinding Light=Orange,Dark=#FF4D00}"
                     TextColor="White"
-                    Clicked="SignOut"
-                    />
+                    Clicked="SignOut" />
 
         </VerticalStackLayout>
     </Shell.FlyoutFooter>

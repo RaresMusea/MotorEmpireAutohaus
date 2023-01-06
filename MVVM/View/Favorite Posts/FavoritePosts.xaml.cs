@@ -16,7 +16,7 @@ public partial class FavoritePosts : ContentPage
 
 	protected override bool OnBackButtonPressed()
 	{
-		bool value = base.OnBackButtonPressed();
+		var value = base.OnBackButtonPressed();
 		Shell.Current.GoToAsync(nameof(MotorEmpire), true);
 		return true;
 	}

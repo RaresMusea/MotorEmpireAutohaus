@@ -10,6 +10,7 @@ using System.Collections.ObjectModel;
 using Storage.Firebase_Storage;
 using Tools.Utility.Messages;
 using BaseViewModel = MVVM.View_Models.Base.BaseViewModel;
+using PostPicture = MVVM.Models.Vehicle_Models.Picture_Model.PostPicture;
 using UserAccount = MVVM.Models.User_Account_Model.UserAccount;
 
 namespace MVVM.View_Models.Post

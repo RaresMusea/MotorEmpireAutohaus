@@ -33,7 +33,8 @@ public partial class PostFeed : ContentPage
             { 0, 0.3, new Animation(v => BannerImage.Opacity = v, 0, 1, Easing.CubicIn) },
             { 0.3, 0.5, new Animation(v => IntroductionLabel.Opacity = v, 0, 1, Easing.CubicIn) },
             { 0.5, 1, new Animation(v => MainFrame.Opacity = v, 0, 1, Easing.CubicIn) },
-            { 0.5, 1, new Animation(v=>MainFrameMobile.Opacity=v,0,1,Easing.CubicIn) 
+            {
+                0.5, 1, new Animation(v => MainFrameMobile.Opacity = v, 0, 1, Easing.CubicIn)
             }
         };
 
