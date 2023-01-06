@@ -5,6 +5,9 @@
     <MauiXaml Update="AppShell.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="View\Favorite Posts\FavoritePosts.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="View\Landing\MotorEmpire.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
@@ -23,10 +26,10 @@
     <MauiXaml Update="View\Authentication\SignUp.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="View\Car.xaml">
+    <MauiXaml Update="View\Post Feed\PostFeed.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="View\Core\Feed.xaml">
+    <MauiXaml Update="View\Post Info\PostInfo.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="View\Post Upload\UploadPost.xaml">

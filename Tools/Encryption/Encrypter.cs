@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 
-namespace MotorEmpireAutohaus.Tools.Encryption
+namespace Tools.Encryption
 {
     public class Encrypter
     {

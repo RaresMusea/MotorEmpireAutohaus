@@ -1,4 +1,4 @@
-﻿namespace MotorEmpireAutohaus.Tools.Handlers
+﻿namespace Tools.Handlers
 {
     public class BorderlessEntry : Entry
     {

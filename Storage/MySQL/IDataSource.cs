@@ -1,4 +1,4 @@
-﻿namespace MotorEmpireAutohaus.Storage.MySQL
+﻿namespace Storage.MySQL
 {
     public interface IDataSource
     {

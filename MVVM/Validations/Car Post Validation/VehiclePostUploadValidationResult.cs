@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MVVM.Validations.Car_Post_Validation
+﻿namespace MVVM.Validations.Car_Post_Validation
 {
     public class VehiclePostUploadValidationResult
     {
@@ -12,11 +6,10 @@ namespace MVVM.Validations.Car_Post_Validation
 
         public string Remark { get; set; }
 
-        public VehiclePostUploadValidationResult(bool validationPassed, string remark) 
+        public VehiclePostUploadValidationResult(bool validationPassed, string remark)
         {
             ValidationPassed = validationPassed;
             Remark = remark;
         }
-
     }
 }

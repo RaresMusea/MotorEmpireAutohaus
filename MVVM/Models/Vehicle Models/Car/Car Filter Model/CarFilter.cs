@@ -1,14 +1,29 @@
-﻿
-namespace MotorEmpireAutohaus.MVVM.Models.Vehicle_Models.Car.Car_Filter_Model;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using BaseViewModel = MVVM.View_Models.Base.BaseViewModel;
 
-public class CarFilter
+namespace MVVM.Models.Vehicle_Models.Car.Car_Filter_Model;
+
+public partial class CarFilter : BaseViewModel
 {
-    public string Manufacturer { get; set; }
-    public string ModelName { get; set; }
-    public string Generation { get; set; }
-    public Tuple<int, int> PriceRange { get; set; }
-    public Tuple<int, int> YearRange { get; set; }
-    public  Tuple<int,int> MileageRange { get; set; }
-    public string FuelType { get; set; }
-    public CarFilter() { }
+    [ObservableProperty] private string chassisType;
+
+    [ObservableProperty] private string manufacturer;
+
+    [ObservableProperty] private string modelName;
+
+    [ObservableProperty] private string generation;
+
+    [ObservableProperty] private Tuple<int, int> priceRange;
+
+    [ObservableProperty] private Tuple<int, int> yearRange;
+
+    [ObservableProperty] private Tuple<int, int> mileageRange;
+
+    [ObservableProperty] private string fuelType;
+
+    public bool IsEmpty()
+    {
+        return string.IsNullOrEmpty(manufacturer) && string.IsNullOrEmpty(modelName) && priceRange == null
+               && mileageRange == null && string.IsNullOrEmpty(fuelType) && string.IsNullOrEmpty(chassisType);
+    }
 }

@@ -1,6 +1,6 @@
-﻿using MotorEmpireAutohaus.MVVM.Services.Authentication;
+﻿using MVVM.Services.Authentication;
 
-namespace MotorEmpireAutohaus.MVVM.Services.Interfaces
+namespace MVVM.Services.Interfaces
 {
     public interface IAuthValidator
     {

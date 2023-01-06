@@ -1,5 +1,6 @@
-﻿using MotorEmpireAutohaus.Tools.Handlers;
-using MotorEmpireAutohaus.Tools.Utility.StatusBarAppearance;
+﻿using MVVM;
+using Tools.Handlers;
+using Tools.Utility.StatusBarAppearance;
 
 namespace MotorEmpireAutohaus;
 

@@ -1,26 +1,26 @@
-﻿using MotorEmpireAutohaus.MVVM.View_Models.Base;
+﻿using BaseViewModel = MVVM.View_Models.Base.BaseViewModel;
 
-namespace MotorEmpireAutohaus.MVVM.Models.Base
+namespace MVVM.Models.Base
 {
-    public abstract class Entity:BaseViewModel
+    public abstract class Entity : BaseViewModel
     {
-        public string UUID { get;  set; }
+        public string Uuid { get; set; }
 
-        public Entity()
+        protected Entity()
         {
-            GenerateUUID();
+            GenerateUuid();
         }
 
-        public Entity(string UUID)
+        protected Entity(string uuid)
         {
-            this.UUID = UUID;
+            this.Uuid = uuid;
         }
 
         public abstract bool IsEmpty();
 
-        public void GenerateUUID()
+        public void GenerateUuid()
         {
-            UUID = Guid.NewGuid().ToString();
+            Uuid = Guid.NewGuid().ToString();
         }
     }
 }

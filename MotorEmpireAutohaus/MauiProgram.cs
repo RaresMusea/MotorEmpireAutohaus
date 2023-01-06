@@ -1,21 +1,31 @@
 ﻿using CommunityToolkit.Maui;
-using MotorEmpireAutohaus.MVVM.Services.Authentication;
-using MotorEmpireAutohaus.Services.Account_Services;
-using MotorEmpireAutohaus.View;
-using MotorEmpireAutohaus.Services.Feed;
-using MotorEmpireAutohaus.View_Model.Shell_Navigation;
-using MotorEmpireAutohaus.View.Core;
-using MotorEmpireAutohaus.View_Model.Vehicles;
-using MotorEmpireAutohaus.View.App_Settings;
-using MotorEmpireAutohaus.MVVM.View_Models.Account;
-using MotorEmpireAutohaus.MVVM.View_Models.Core;
-using MotorEmpireAutohaus.MVVM.Models.User_Account_Model;
-using MotorEmpireAutohaus.MVVM.View_Model.App_Settings;
+using MVVM;
 using MVVM.View.Post_Upload;
 using MVVM.Services.Car_Entity_Services;
 using MVVM.Services.Car_Post_Services;
 using MVVM.Models.Post_Model;
+using MVVM.Models.User_Account_Model;
+using MVVM.Models.Vehicle_Models.Car.Car_Filter_Model;
 using MVVM.View_Models.Post;
+using MVVM.View.Post_Feed;
+using MVVM.View_Models.Post_Feed;
+using MVVM.Services.Account_Services;
+using MVVM.Services.Authentication;
+using MVVM.Services.Car_Filter_Services;
+using MVVM.View_Models.Account;
+using MVVM.View_Models.App_Settings;
+using MVVM.View_Models.Core;
+using MVVM.View_Models.Shell_Navigation;
+using MVVM.View.App_Settings;
+using MVVM.View.Authentication;
+using MVVM.View.Landing;
+using Account = MVVM.View.Account_Management.Account;
+using MVVM.Models.Vehicle_Models.Picture_Model;
+using MVVM.Services.Post_Feed_Service;
+using MVVM.View.Post_Info;
+using MVVM.View_Models.Post_Info;
+using MVVM.View.Favorite_Posts;
+using MVVM.View_Models.FavoritePosts;
 
 namespace MotorEmpireAutohaus;
 public static class MauiProgram
@@ -34,30 +44,20 @@ public static class MauiProgram
             fonts.AddFont("TTOctosquares.ttf", "TTOctosquares");
         }).UseMauiCommunityToolkit();
 
-
-
-        //builder.Services.AddSingleton<AccountService>();
-        /*  builder.Services.AddSingleton<UserAccount>();
-          builder.Services.AddSingleton<LogIn>();
-          builder.Services.AddSingleton<SignUp>();
-          builder.Services.AddSingleton<MainPage>()*/
-        ;
-        //builder.Services.AddSingleton<AuthValidation>();
-        builder.Services.AddSingleton<MotorEmpireAutohaus.View.Account>();
+        builder.Services.AddSingleton<Account>();
         builder.Services.AddSingleton<UserAccount>();
         builder.Services.AddSingleton<LogIn>();
         builder.Services.AddSingleton<UserAccountViewModel>();
         builder.Services.AddSingleton<AuthValidation>();
         builder.Services.AddSingleton<SignUp>();
         builder.Services.AddSingleton<AccountService>();
-        builder.Services.AddSingleton<Search>();
-        builder.Services.AddSingleton<MotorEmpire>();
-        builder.Services.AddSingleton<MotorEmpireViewModel>();
+        
+        builder.Services.AddTransient<MotorEmpire>();
+        builder.Services.AddTransient<MotorEmpireViewModel>();
         builder.Services.AddSingleton<CarFilterService>();
+
         builder.Services.AddSingleton<AppShell>();
         builder.Services.AddSingleton<ShellViewModel>();
-        builder.Services.AddSingleton<Feed>();
-        builder.Services.AddSingleton<SearchResultsViewModel>();
 
         builder.Services.AddSingleton<AppSettings>();
         builder.Services.AddSingleton<AppSettingsViewModel>();
@@ -65,9 +65,25 @@ public static class MauiProgram
         builder.Services.AddSingleton<UploadPost>();
         builder.Services.AddSingleton<CarService>();
         builder.Services.AddSingleton<CarPostService>();
-        builder.Services.AddSingleton<CarPost>();
         builder.Services.AddSingleton<CarPostViewModel>();
+
+        builder.Services.AddSingleton<CarFilter>();
+        builder.Services.AddSingleton<PostFeed>();
+        builder.Services.AddSingleton<PostFeedViewModel>();
+        builder.Services.AddSingleton<PostFeedService>();
+
+        builder.Services.AddSingleton<CarPost>();
+        builder.Services.AddSingleton<PostPicture>();
+        builder.Services.AddSingleton<CarSpecs>();
+
+        builder.Services.AddTransient<PostInfo>();
+        builder.Services.AddSingleton<MVVM.Models.Vehicle_Models.Car.Car_Model.Car>();
+        builder.Services.AddTransient<PostInfoViewModel>();
+
+        builder.Services.AddTransient<FavoritePosts>();
+        builder.Services.AddTransient<FavoritePostsViewModel>();
 
         return builder.Build();
     }
+
 }

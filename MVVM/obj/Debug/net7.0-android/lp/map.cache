@@ -153,6 +153,7 @@ androidx.browser.browser.aar
 gifdecoder.aar
 glide.aar
 CommunityToolkit.Maui.Core.aar
+CommunityToolkit.Maui.aar
 GoogleGson.aar
 Microsoft.Maui.Controls.aar
 Microsoft.Maui.Controls.Compatibility.aar
@@ -162,4 +163,3 @@ Microsoft.Maui.Essentials.aar
 Storage.aar
 Tools.aar
 Xamarin.Google.Crypto.Tink.Android.aar
-CommunityToolkit.Maui.aar

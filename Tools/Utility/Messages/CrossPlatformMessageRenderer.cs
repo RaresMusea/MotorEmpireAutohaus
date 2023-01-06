@@ -1,12 +1,12 @@
-﻿using MotorEmpireAutohaus.Tools.Prebuilt_Components;
+﻿using Tools.Prebuilt_Components;
 
-namespace MotorEmpireAutohaus.Tools.Utility.Messages
+namespace Tools.Utility.Messages
 {
     public static class CrossPlatformMessageRenderer
     {
         private static async void DisplayDesktopAlert(string message, string actionButtonText)
         {
-            await Application.Current.MainPage.DisplayAlert("Motor Empire Autohaus", message, actionButtonText);
+            await Application.Current!.MainPage!.DisplayAlert("Motor Empire Autohaus", message, actionButtonText);
         }
 
         public static async void DisplayMobileSnackbar(string message, string actionButtonText, int durationInSeconds)

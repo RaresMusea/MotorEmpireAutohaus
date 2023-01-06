@@ -52,6 +52,8 @@
 	  <None Remove="Resources\Fonts\TTOctosquares.ttf" />
 	  <None Remove="Resources\Images\aboutdark.svg" />
 	  <None Remove="Resources\Images\aboutlight.svg" />
+	  <None Remove="Resources\Images\account.png" />
+	  <None Remove="Resources\Images\accountlight.svg" />
 	  <None Remove="Resources\Images\appsettingsdark.svg" />
 	  <None Remove="Resources\Images\appsettingslight.svg" />
 	  <None Remove="Resources\Images\auth.png" />
@@ -60,9 +62,16 @@
 	  <None Remove="Resources\Images\auth_light.png" />
 	  <None Remove="Resources\Images\brakedisc.svg" />
 	  <None Remove="Resources\Images\car.svg" />
+	  <None Remove="Resources\Images\caretdowndark.svg" />
+	  <None Remove="Resources\Images\caretdownlight.svg" />
+	  <None Remove="Resources\Images\caretupdark.svg" />
+	  <None Remove="Resources\Images\caretuplight.svg" />
+	  <None Remove="Resources\Images\carlight.svg" />
 	  <None Remove="Resources\Images\constructiontruck.svg" />
 	  <None Remove="Resources\Images\email.png" />
 	  <None Remove="Resources\Images\eye.png" />
+	  <None Remove="Resources\Images\eyeglassesdark.svg" />
+	  <None Remove="Resources\Images\eyeglasseslight.svg" />
 	  <None Remove="Resources\Images\flyoutbanner.png" />
 	  <None Remove="Resources\Images\flyoutbannerlight.png" />
 	  <None Remove="Resources\Images\gauges.jpg" />
@@ -75,14 +84,23 @@
 	  <None Remove="Resources\Images\motorempire.jpg" />
 	  <None Remove="Resources\Images\name.png" />
 	  <None Remove="Resources\Images\password.png" />
+	  <None Remove="Resources\Images\postfeeddark.svg" />
+	  <None Remove="Resources\Images\postfeedjumbotron.jpg" />
+	  <None Remove="Resources\Images\postfeedlight.svg" />
 	  <None Remove="Resources\Images\postuploaddark.png" />
 	  <None Remove="Resources\Images\postuploadlight.png" />
 	  <None Remove="Resources\Images\search.svg" />
+	  <None Remove="Resources\Images\setting.svg" />
+	  <None Remove="Resources\Images\star.svg" />
+	  <None Remove="Resources\Images\steeringdark.svg" />
+	  <None Remove="Resources\Images\steeringlight.svg" />
 	  <None Remove="Resources\Images\tag.png" />
 	  <None Remove="Resources\Images\tractor.png" />
 	  <None Remove="Resources\Images\trailer.svg" />
 	  <None Remove="Resources\Images\truck.svg" />
 	  <None Remove="Resources\Images\van.png" />
+	  <None Remove="Resources\Images\watchdark.svg" />
+	  <None Remove="Resources\Images\watchlight.svg" />
 	  <None Remove="Resources\Splash\logo.svg" />
 	</ItemGroup>
 

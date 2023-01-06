@@ -60,17 +60,18 @@ C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de p
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-android\lp\146\jl\files.cache
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-android\lp\151\jl\files.cache
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-android\lp\153\jl\files.cache
-C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-android\lp\156\jl\files.cache
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-android\lp\157\jl\files.cache
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-android\lp\158\jl\files.cache
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-android\lp\159\jl\files.cache
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-android\lp\160\jl\files.cache
+C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-android\lp\161\jl\files.cache
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-android\R.txt
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-android\R.cs.flag
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-android\MVVM.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-android\MVVM.AssemblyInfoInputs.cache
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-android\MVVM.AssemblyInfo.cs
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-android\MVVM.csproj.CoreCompileInputs.cache
+C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-android\XamlC.stamp
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-android\MVVM.csproj.CopyComplete
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-android\MVVM.dll
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-android\refint\MVVM.dll
@@ -84,4 +85,3 @@ C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de p
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-android\stamp\_CleanIntermediateIfNeeded.stamp
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-android\stamp\_ConvertResourcesCases.stamp
 C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-android\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\rares\OneDrive\Desktop\An 3 Facultate\Modul 1\Medii si instrumente de programare\Repos\MotorEmpireAutohaus\MVVM\obj\Debug\net7.0-android\XamlC.stamp
