@@ -5,12 +5,11 @@ using MVVM.Models.Base;
 using UserAccount = MVVM.Models.User_Account_Model.UserAccount;
 using CommunityToolkit.Mvvm.Input;
 using Tools.Utility.CarFilterAndValidator;
-using MVVM.View.Post_Info;
 
 namespace MVVM.Models.Post_Model
 {
-    [QueryProperty (nameof(UserAccount),nameof(UserAccount))]
-    [QueryProperty (nameof(Car),nameof(Car))]
+    [QueryProperty(nameof(UserAccount), nameof(UserAccount))]
+    [QueryProperty(nameof(Car), nameof(Car))]
     public partial class CarPost : Entity
     {
         [ObservableProperty] private UserAccount owner;
@@ -27,9 +26,9 @@ namespace MVVM.Models.Post_Model
 
         [ObservableProperty] private int? price;
 
-        [ObservableProperty] private List<PostPicture> postPictures = new();
+        [ObservableProperty] private List<Vehicle_Models.Picture_Model.PostPicture> postPictures = new();
 
-        [ObservableProperty] private PostPicture mainPostPicture;
+        [ObservableProperty] private Vehicle_Models.Picture_Model.PostPicture mainPostPicture;
 
         [ObservableProperty] private int views;
 
@@ -42,7 +41,7 @@ namespace MVVM.Models.Post_Model
         [ObservableProperty] private bool addedToFavoritesByCurrentUser;
 
         public CarPost(UserAccount owner, string description, string carEquipment, int? price,
-            List<PostPicture> postPictures, int views, string dateTimeAdded)
+            List<Vehicle_Models.Picture_Model.PostPicture> postPictures, int views, string dateTimeAdded)
         {
             carSpecs = new();
             this.owner = owner;
@@ -53,7 +52,6 @@ namespace MVVM.Models.Post_Model
             this.postPictures = postPictures;
             this.views = views;
             this.dateTimeAdded = dateTimeAdded;
-           
         }
 
         public CarPost()
@@ -85,13 +83,17 @@ namespace MVVM.Models.Post_Model
         [RelayCommand]
         private void NextPicture()
         {
-            MainPostPicture = postPictures.IndexOf(mainPostPicture) + 1 == postPictures.Count ? postPictures[0] : postPictures[postPictures.IndexOf(MainPostPicture) + 1];
+            MainPostPicture = postPictures.IndexOf(mainPostPicture) + 1 == postPictures.Count
+                ? postPictures[0]
+                : postPictures[postPictures.IndexOf(MainPostPicture) + 1];
         }
 
         [RelayCommand]
         private void PreviousPicture()
         {
-            MainPostPicture = postPictures.IndexOf(mainPostPicture) - 1 < 0 ? postPictures[postPictures.Count - 1] : postPictures[postPictures.IndexOf(MainPostPicture) - 1];
+            MainPostPicture = postPictures.IndexOf(mainPostPicture) - 1 < 0
+                ? postPictures[^1]
+                : postPictures[postPictures.IndexOf(MainPostPicture) - 1];
         }
 
 
@@ -101,10 +103,10 @@ namespace MVVM.Models.Post_Model
             if (!value.IsEmpty())
             {
                 CarSpecsOverview = $"• {value.Year}" +
-                    $" • {CarFilterFormatter.FormatMileage(value.Mileage)}" +
-                    $" • {value.EngineCapacity.Replace("cmc", "cm3")}" +
-                    $" • {value.Horsepower} hp" +
-                    $" • {value.FuelType} •";
+                                   $" • {CarFilterFormatter.FormatMileage(value.Mileage)}" +
+                                   $" • {value.EngineCapacity.Replace("cmc", "cm3")}" +
+                                   $" • {value.Horsepower} hp" +
+                                   $" • {value.FuelType} •";
 
                 if (DeviceInfo.Platform == DevicePlatform.WinUI || DeviceInfo.Platform == DevicePlatform.MacCatalyst)
                 {
@@ -115,7 +117,7 @@ namespace MVVM.Models.Post_Model
                     carSpecs.UploadInformation = $"Uploaded by {Owner.Name}";
                 }
 
-                carSpecs.ViewedBy =  $"{Views}" + (Views == 1 ? " view": " views");
+                carSpecs.ViewedBy = $"{Views}" + (Views == 1 ? " view" : " views");
                 carSpecs.ModelBinding = $"Model: {value.Model}";
                 carSpecs.ManufacturerBinding = $"Manufacturer: {value.Manufacturer}";
                 carSpecs.YearBinding = "Year: " + value.Year.ToString();
@@ -126,7 +128,6 @@ namespace MVVM.Models.Post_Model
                 carSpecs.PriceBinding = $"{CarFilterFormatter.FormatPrice((int)Price)}";
 
                 carSpecs.DescriptionBinding = description.Replace(headingTitle, "");
-
 
                 if (value.Generation is not null)
                 {
@@ -142,7 +143,6 @@ namespace MVVM.Models.Post_Model
                 }
 
                 carSpecs.TransmissionBinding = $"Transmission: {car.Gears} speed {car.Transmission} gearbox";
-
             }
         }
     }

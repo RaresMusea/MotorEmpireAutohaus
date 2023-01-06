@@ -1,14 +1,13 @@
 ﻿using MVVM.Exceptions;
-using MVVM.Models;
 using MVVM.Models.Post_Model;
 using MVVM.Services.Account_Services;
 using MVVM.Services.Car_Entity_Services;
 using MVVM.Services.Car_Filter_Services;
 using MVVM.Services.Interfaces;
 using MySqlConnector;
-using Storage.MySQL;
 using Tools.Handlers;
-using UserAccount = MVVM.Models.User_Account_Model.UserAccount;
+using PostPicture = MVVM.Models.Vehicle_Models.Picture_Model.PostPicture;
+
 
 namespace MVVM.Services.Car_Post_Services
 {
@@ -131,7 +130,6 @@ namespace MVVM.Services.Car_Post_Services
 
         private bool DeleteAssociatedPicturesForCarPost(string postUuid)
         {
-
             MySqlCommand command = new($"DELETE FROM {PostPicturesTableReference} WHERE Post=@carid",
                 IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
 
@@ -192,7 +190,7 @@ namespace MVVM.Services.Car_Post_Services
                 int price = reader.GetInt32(6);
                 int views = reader.GetInt32(7);
                 string dateTimeAdded = reader.GetString(8);
-             
+
                 CarPost carPost = new(null, description, carEquipment, price,
                     null, views, dateTimeAdded)
                 {
@@ -212,7 +210,6 @@ namespace MVVM.Services.Car_Post_Services
                 }
 
                 return posts;
-
             }
 
             return null;
@@ -232,7 +229,7 @@ namespace MVVM.Services.Car_Post_Services
         public bool AddToFavorites(string postUuid, string userUuid)
         {
             MySqlCommand command = new("INSERT INTO FavoritePosts(PostUUID, UserUUID) " +
-                "VALUES (@postuuid, @useruuid)",
+                                       "VALUES (@postuuid, @useruuid)",
                 IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
 
             command.Prepare();
@@ -246,12 +243,14 @@ namespace MVVM.Services.Car_Post_Services
             {
                 return false;
             }
+
             return true;
         }
 
-        public bool WasPostAddedToFavoritesBy(string postUuid,string userUuid)
+        public bool WasPostAddedToFavoritesBy(string postUuid, string userUuid)
         {
-            MySqlCommand command = new("SELECT COUNT(*) FROM FavoritePosts WHERE PostUUID=@postuuid AND UserUUID=@useruuid",
+            MySqlCommand command = new(
+                "SELECT COUNT(*) FROM FavoritePosts WHERE PostUUID=@postuuid AND UserUUID=@useruuid",
                 IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
             command.Prepare();
             command.Parameters.AddWithValue("@postuuid", postUuid);
@@ -259,7 +258,7 @@ namespace MVVM.Services.Car_Post_Services
 
             MySqlDataReader reader = command.ExecuteReader();
 
-            int result=0;
+            int result = 0;
             while (reader.Read())
             {
                 result = reader.GetInt32(0);
@@ -268,7 +267,7 @@ namespace MVVM.Services.Car_Post_Services
             reader.Close();
             return result != 0;
         }
-        
+
         public bool DeletePost(CarPost carPost)
         {
             if (WasPostAddedToFavoritesBy(carPost.Uuid, Logger.CurrentlyLoggedInUuid))
@@ -276,18 +275,17 @@ namespace MVVM.Services.Car_Post_Services
                 bool added = RemoveFromFavorites(carPost.Uuid);
             }
 
-            /*return carService.Delete(carPost.Car);*/
             MySqlCommand command = new($"DELETE FROM {TableReference} WHERE UUID=@uuid",
                 IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
 
             command.Prepare();
             command.Parameters.AddWithValue("@uuid", carPost.Uuid);
-            
+
             try
             {
                 command.ExecuteNonQuery();
             }
-            catch (MySqlException) 
+            catch (MySqlException)
             {
                 return false;
             }
@@ -303,7 +301,7 @@ namespace MVVM.Services.Car_Post_Services
             command.Prepare();
             command.Parameters.AddWithValue("@uuid", postUuid);
 
-            try 
+            try
             {
                 command.ExecuteNonQuery();
             }
@@ -320,7 +318,8 @@ namespace MVVM.Services.Car_Post_Services
             List<string> result = new();
 
             MySqlCommand command = new MySqlCommand("SELECT PostUUID FROM FavoritePosts WHERE" +
-                " UserUUID=@uuid", IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
+                                                    " UserUUID=@uuid",
+                IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
 
             command.Prepare();
             command.Parameters.AddWithValue("@uuid", userUuid);
@@ -348,10 +347,10 @@ namespace MVVM.Services.Car_Post_Services
             int ownerId = -1;
 
             MySqlCommand command = new($"SELECT * FROM {TableReference} WHERE UUID=@uuid",
-                    IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
+                IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
             command.Prepare();
             command.Parameters.AddWithValue("@uuid", postUuid);
-            
+
             MySqlDataReader reader = command.ExecuteReader();
 
             while (reader.Read())
@@ -366,46 +365,44 @@ namespace MVVM.Services.Car_Post_Services
                 CarPost carPost = new(null, description, carEquipment, price,
                     null, views, dateTimeAdded)
                 {
-                        Uuid = uuid
+                    Uuid = uuid
                 };
 
                 result = carPost;
             }
-                
+
             reader.Close();
 
-                if (ownerId!=-1)
-                {
-
-                    result.Owner = accountService.GetUserById(ownerId);
-                    result.Car = (Models.Vehicle_Models.Car.Car_Model.Car)carService.RetrieveByUuid(result.Uuid);
-                    result.PostPictures = RetrieveCarPostPictures(result.Uuid);
-                    result.MainPostPicture = result.PostPictures.ElementAt(0);
-                    result.AddedToFavoritesByCurrentUser = WasPostAddedToFavoritesBy(result.Uuid,
+            if (ownerId != -1)
+            {
+                result.Owner = accountService.GetUserById(ownerId);
+                result.Car = (Models.Vehicle_Models.Car.Car_Model.Car)carService.RetrieveByUuid(result.Uuid);
+                result.PostPictures = RetrieveCarPostPictures(result.Uuid);
+                result.MainPostPicture = result.PostPictures.ElementAt(0);
+                result.AddedToFavoritesByCurrentUser = WasPostAddedToFavoritesBy(result.Uuid,
                     Logger.CurrentlyLoggedInUuid);
-                    return result;
-                }
+                return result;
+            }
 
-                return null;
+            return null;
         }
 
         public List<CarPost> RetrieveFavoritesForUser(string userUuid)
         {
             List<string> postUuids = GetFavoritesUuids(userUuid);
-            if(postUuids is null)
+            if (postUuids is null)
             {
                 return null;
             }
 
             List<CarPost> result = new();
 
-            foreach(string postUuid in postUuids)
+            foreach (string postUuid in postUuids)
             {
                 result.Add(RetrieveCarPostByUuid(postUuid));
             }
 
             return result;
-
         }
     }
 }

@@ -6,7 +6,7 @@ namespace MVVM.Validations.Car_Post_Validation
 {
     public static class VehiclePostValidator
     {
-        private const int CurrentYear = 2022;
+        private const int CurrentYear = 2023;
 
         private static bool ProductionYearIsValid(int providedYear, string providedGeneration = null)
         {
@@ -80,7 +80,7 @@ namespace MVVM.Validations.Car_Post_Validation
             var validYear = IsYearValid(car.Year);
             if (!validYear.ValidationPassed)
             {
-                remark.Append(validYear.Remark+'\n');
+                remark.Append(validYear.Remark + '\n');
             }
 
             if (string.IsNullOrEmpty(car.FuelType))
@@ -123,20 +123,21 @@ namespace MVVM.Validations.Car_Post_Validation
                 return new VehiclePostUploadValidationResult(true, remark.ToString());
             }
 
-            
+
             return new VehiclePostUploadValidationResult(false, remark.ToString());
         }
 
         public static VehiclePostUploadValidationResult IsPriceValid(int? price)
         {
-            if(price is null)
+            if (price is null)
             {
                 return new VehiclePostUploadValidationResult(false, "The price field cannot be empty!");
             }
 
-            if (price < 1000 || price>250000)
+            if (price < 1000 || price > 250000)
             {
-                return new VehiclePostUploadValidationResult(false, "The price cannot be lower than 1 000 € and greater than 250 000 € !");
+                return new VehiclePostUploadValidationResult(false,
+                    "The price cannot be lower than 1 000 € and greater than 250 000 € !");
             }
 
             return new VehiclePostUploadValidationResult(true, "");
@@ -144,13 +145,13 @@ namespace MVVM.Validations.Car_Post_Validation
 
         private static VehiclePostUploadValidationResult IsYearValid(int year)
         {
-            if(year<1950 || year > 2023)
+            if (year < 1950 || year > 2023)
             {
-                return new VehiclePostUploadValidationResult(false, "The car you want to sell should be produced between 1950 and 2023!");
+                return new VehiclePostUploadValidationResult(false,
+                    "The car you want to sell should be produced between 1950 and 2023!");
             }
 
             return new VehiclePostUploadValidationResult(true, "");
         }
-
     }
 }

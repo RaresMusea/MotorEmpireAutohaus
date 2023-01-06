@@ -113,14 +113,6 @@ namespace MVVM.Services.Account_Services
 
             try
             {
-                /* string profileImgURL=PrepareDefaultProfilePicture($"/users/{userAccount.UUID}").Result;
-                 userAccount.ProfileImageURL = profileImgURL;*/
-
-
-                /*var stream = File.Open("C:\\Users\\rares\\OneDrive\\Desktop\\An 3 Facultate\\Medii si instrumente de programare\\Repos\\MotorEmpireAutohaus\\MotorEmpireAutohaus\\Resources\\Images\\defaultprofilepic.png",FileMode.Open);
-                var firebase = new FirebaseStorage("gs://motor-empire-autohaus.appspot.com").Child($"/users/{userAccount.UUID}/defaultprofilepic").PutAsync(stream);*/
-
-
                 MySqlCommand command = new(
                     $"INSERT INTO {TableReference} (UUID, Name, EmailAddress, Username,Password,ProfileImageURL)" +
                     $"VALUES (@uuid, @name, @email, @username, @password, @imageURL)",
@@ -156,11 +148,10 @@ namespace MVVM.Services.Account_Services
 
         public Entity Save(Entity e)
         {
-            bool result;
             UserAccount user = (UserAccount)e;
             try
             {
-                result = TrySave(e);
+                var result = TrySave(e);
                 if (result)
                 {
                     CrossPlatformMessageRenderer.RenderMessages(

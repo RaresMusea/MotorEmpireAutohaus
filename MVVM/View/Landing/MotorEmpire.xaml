@@ -6,10 +6,6 @@
              x:DataType="core:MotorEmpireViewModel"
              x:Class="MVVM.View.Landing.MotorEmpire"
              Title="Motor Empire Autohaus">
-    <!-- <Shell.BackButtonBehavior>
-        <BackButtonBehavior IsVisible="{OnPlatform Android=True, iOS=True, WinUI=False}" IsEnabled="True" />
-    </Shell.BackButtonBehavior>-->
-
 
     <ScrollView>
         <VerticalStackLayout>
@@ -60,14 +56,14 @@
                                        Margin="0"
                                        HeightRequest="30"
                                        WidthRequest="260" />
-                                <ImageButton Source="search.png" 
-                                        WidthRequest="24"
-                                        x:Name="SearchButtonImage"
-                                        HeightRequest="24"
-                                        BorderColor="Transparent"
-                                        Margin="-10,0,0,0"
-                                        VerticalOptions="Center"
-                                        Command="{Binding SearchButtonPressedCommand}">
+                                <ImageButton Source="search.png"
+                                             WidthRequest="24"
+                                             x:Name="SearchButtonImage"
+                                             HeightRequest="24"
+                                             BorderColor="Transparent"
+                                             Margin="-10,0,0,0"
+                                             VerticalOptions="Center"
+                                             Command="{Binding SearchButtonPressedCommand}">
                                 </ImageButton>
                             </HorizontalStackLayout>
                         </Frame>
@@ -89,7 +85,7 @@
                                 FontSize="16"
                                 TextColor="White"
                                 Command="{Binding ViewAllVehiclesCommand}"
-                                BackgroundColor="{AppThemeBinding Dark=#D65A31, Light=#FF5722}"/>
+                                BackgroundColor="{AppThemeBinding Dark=#D65A31, Light=#FF5722}" />
                         <Button AbsoluteLayout.LayoutBounds="100,600,1320,100"
                                 Text="Or view categories"
                                 WidthRequest="200"
@@ -175,17 +171,17 @@
                             FontAttributes="Bold"
                             FontFamily="Kollektif"
                             TextColor="White"
-                            Command="{Binding ViewAllVehiclesCommand}"/>
+                            Command="{Binding ViewAllVehiclesCommand}" />
 
                     <Button Text="Post an ad"
-                        WidthRequest="200"
-                        BackgroundColor="{AppThemeBinding Dark=#273851, Light=#346751}"
-                        TextColor="White"
-                        Margin="0,0,0,20"
-                        CornerRadius="15"
-                        FontFamily="Kollektif"
-                        FontAttributes="Bold"
-                        Command="{Binding NavigateToPostUploadCommand}" />
+                            WidthRequest="200"
+                            BackgroundColor="{AppThemeBinding Dark=#273851, Light=#346751}"
+                            TextColor="White"
+                            Margin="0,0,0,20"
+                            CornerRadius="15"
+                            FontFamily="Kollektif"
+                            FontAttributes="Bold"
+                            Command="{Binding NavigateToPostUploadCommand}" />
 
                     <Button BackgroundColor="{AppThemeBinding Dark=Red, Light=#1C6758}"
                             WidthRequest="230"

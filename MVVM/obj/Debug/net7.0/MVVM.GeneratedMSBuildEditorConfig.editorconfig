@@ -46,18 +46,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = MVVM.View.Authentication.S
 build_metadata.AdditionalFiles.TargetPath = View\Authentication\SignUp.xaml
 build_metadata.AdditionalFiles.RelativePath = View\Authentication\SignUp.xaml
 
-[C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Modul 1/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MVVM/View/Car.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = MVVM.View.Car.xaml
-build_metadata.AdditionalFiles.TargetPath = View\Car.xaml
-build_metadata.AdditionalFiles.RelativePath = View\Car.xaml
-
-[C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Modul 1/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MVVM/View/Core/Feed.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = MVVM.View.Core.Feed.xaml
-build_metadata.AdditionalFiles.TargetPath = View\Core\Feed.xaml
-build_metadata.AdditionalFiles.RelativePath = View\Core\Feed.xaml
-
 [C:/Users/rares/OneDrive/Desktop/An 3 Facultate/Modul 1/Medii si instrumente de programare/Repos/MotorEmpireAutohaus/MVVM/View/Favorite Posts/FavoritePosts.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MVVM.View.Favorite_Posts.FavoritePosts.xaml

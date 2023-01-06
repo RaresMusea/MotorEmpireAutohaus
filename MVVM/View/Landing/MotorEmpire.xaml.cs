@@ -143,7 +143,8 @@ public partial class MotorEmpire : ContentPage
         SearchBar.IsEnabled = false;
         SearchButtonImage.IsEnabled = false;
         CrossPlatformMessageRenderer.RenderMessages("The search bar is now disabled because you activated the" +
-                     " filter-based search. Close the filters in order to use the searchbar again", "OK", 4);
+                                                    " filter-based search. Close the filters in order to use the searchbar again",
+            "OK", 4);
 
         PrimaryFrame.IsVisible = true;
         await PrimaryFrame.FadeTo(1, 170, Easing.BounceIn);
@@ -157,9 +158,8 @@ public partial class MotorEmpire : ContentPage
         await Task.Delay(600);
         await PrimaryFrame.FadeTo(0, 250, Easing.CubicIn);
         PrimaryFrame.IsVisible = false;
-        
-        SearchBar.IsEnabled = true;
-        SearchButtonImage.IsEnabled=true;
-    }
 
+        SearchBar.IsEnabled = true;
+        SearchButtonImage.IsEnabled = true;
+    }
 }

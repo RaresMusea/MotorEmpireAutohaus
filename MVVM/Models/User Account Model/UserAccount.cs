@@ -43,9 +43,10 @@ namespace MVVM.Models.User_Account_Model
 
         public override bool Equals(object obj)
         {
-            if (obj is not UserAccount) return false;
+            var account = obj as UserAccount;
+            if (account is null) return false;
 
-            UserAccount castedProp = obj as UserAccount;
+            UserAccount castedProp = account;
             if (Username == castedProp.Username && EmailAddress == castedProp.EmailAddress)
                 return true;
 
