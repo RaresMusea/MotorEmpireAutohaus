@@ -63,7 +63,7 @@ namespace MVVM.Models.User_Account_Model
             return false;
         }
 
-        public static bool operator ==(UserAccount a, UserAccount b)
+        public static bool operator == (UserAccount a, UserAccount b)
         {
             return a!.Equals(b);
         }

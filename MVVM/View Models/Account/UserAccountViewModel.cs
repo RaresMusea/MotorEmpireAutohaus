@@ -58,6 +58,7 @@ namespace MVVM.View_Models.Account
                     string uuid = accountService.GetUuidByEmail(email);
                     this.user = (UserAccount)accountService.RetrieveByUuid(uuid);
                     this.user.Uuid = uuid;
+                    this.user.EmailAddress = email;
                 }
                 else
                 {

@@ -1,3 +1,6 @@
+using MVVM.Models.User_Account_Model;
+using MVVM.Services.Interfaces;
+using MySqlConnector;
 using UserAccountViewModel = MVVM.View_Models.Account.UserAccountViewModel;
 
 namespace MVVM.View.Account_Management;
@@ -6,6 +9,16 @@ public partial class Account : ContentPage
 {
     public Account(UserAccountViewModel usr)
     {
+        if(Preferences.Default.Get("email","") != "")
+        {
+            usr.User.PhoneNumber = GetPhoneNumber();
+            usr.User.EmailAddress = Preferences.Default.Get("email", "");
+            if (string.IsNullOrEmpty(usr.User.PhoneNumber))
+            {
+                usr.RemovePhoneNumberVisible = false;
+            }
+        }
+
         BindingContext = usr;
         InitializeComponent();
     }
@@ -73,5 +86,67 @@ public partial class Account : ContentPage
 
         await RevertEditChanges.FadeTo(0, 170, Easing.CubicInOut);
         RevertEditChanges.IsVisible = false;
+    }
+
+    private static string GetPhoneNumber()
+    {
+        string email = Preferences.Default.Get("email", "");
+        MySqlCommand command = new($"SELECT PhoneNumber FROM user WHERE EmailAddress=@email",
+               IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
+        command.Prepare();
+        command.Parameters.AddWithValue("@email", email);
+        string phoneNumber = "";
+        MySqlDataReader reader = command.ExecuteReader();
+        while (reader.Read())
+        {
+             phoneNumber = reader.IsDBNull(0) ? "" : reader.GetString(0);
+        }
+
+        reader.Close();
+        return phoneNumber;
+    }
+
+    private static UserAccount RetrieveRequiredAccountDetails()
+    {
+        string email = Preferences.Default.Get("email", "");
+        MySqlCommand command = new($"SELECT UUID FROM user WHERE EmailAddress=@email",
+               IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
+        command.Prepare();
+        command.Parameters.AddWithValue("@email", email);
+        MySqlDataReader reader = command.ExecuteReader();
+
+        string uuid = "";
+        while (reader.Read())
+        {
+            uuid = reader.GetString(0);
+        }
+
+
+        reader.Close();
+
+        MySqlCommand resCommand = new MySqlCommand($"SELECT * FROM user WHERE UUID=@id",
+               IConnectableDataSource.DatabaseConfigurer.DatabaseConnection);
+        resCommand.Prepare();
+        resCommand.Parameters.AddWithValue("@id", uuid);
+
+        MySqlDataReader resReader = resCommand.ExecuteReader();
+
+        UserAccount returnValue = null;
+
+        while (resReader.Read())
+        {
+            string unique = resReader.GetString(1);
+            string name = resReader.GetString(2);
+            string username = resReader.GetString(4);
+            string password = resReader.GetString(5);
+            string profileImage = resReader.GetString(6);
+            string phoneNumber = resReader.IsDBNull(7) ? null : reader.GetString(7);
+            returnValue = phoneNumber is not null
+                ? new UserAccount(unique, name, email, username, password, profileImage, phoneNumber)
+                : new UserAccount(unique, name, email, username, password, profileImage);
+        }
+
+        resReader.Close();
+        return returnValue;
     }
 }
