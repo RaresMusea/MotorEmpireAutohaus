@@ -1,14 +1,16 @@
 ﻿using MVVM;
+using MVVM.View.Landing;
 using Tools.Handlers;
 using Tools.Utility.StatusBarAppearance;
+using MotorEmpireViewModel = MVVM.View_Models.Core.MotorEmpireViewModel;
 
 namespace MotorEmpireAutohaus;
 
 public partial class App : Application,IStatusBarAppearance
 {
-	public App()
-	{
-		InitializeComponent();
+    public App()
+    {
+        InitializeComponent();
 
 #if WINDOWS10_0_19041_0_OR_GREATER
     Microsoft.Maui.Handlers.PickerHandler.Mapper.AppendToMapping(nameof(IPicker.Title), (handler, view) =>
@@ -21,10 +23,9 @@ public partial class App : Application,IStatusBarAppearance
          }
     });
 #endif
-
         ConfigureBorderless();
-		MainPage = new AppShell();
-	}
+        MainPage = new AppShell();
+    }
 	
     public void ConfigureBorderless()
     {

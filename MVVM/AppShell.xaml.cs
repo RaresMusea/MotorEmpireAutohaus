@@ -31,6 +31,8 @@ public partial class AppShell : Shell
             "Yes", "No");
         if (answer)
         {
+            Preferences.Clear();
+            UserPreferencesProvider.LoggedInAccount = null;
             await Current.GoToAsync("//LogIn", true);
         }
     }

@@ -123,8 +123,19 @@ public partial class MotorEmpireViewModel : BaseViewModel
         this.carFilterService = carFilterService;
         filter = carFilter;
         InitializeProps();
-        this.userAccount = userAccount;
-        LoggedInUser = userAccount.Uuid;
+
+        if (UserPreferencesProvider.LoggedInAccount is not null)
+        {
+            //this.userAccount = userAccount;
+            this.userAccount = UserPreferencesProvider.LoggedInAccount;
+            this.Name = UserPreferencesProvider.LoggedInAccount.Name;
+        }
+        else
+        {
+            this.userAccount = userAccount;
+        }
+
+        LoggedInUser = this.userAccount.Uuid;
     }
 
 
@@ -429,8 +440,9 @@ public partial class MotorEmpireViewModel : BaseViewModel
     [RelayCommand]
     private async void NavigateToPostUpload()
     {
-        await Shell.Current.GoToAsync($"{nameof(UploadPost)}?Name", true,
-            new Dictionary<string, object> { ["UserAccount"] = userAccount });
+        /*await Shell.Current.GoToAsync($"{nameof(UploadPost)}?Name", true,
+            new Dictionary<string, object> { ["UserAccount"] = userAccount });*/
+        await Shell.Current.GoToAsync($"{nameof(UploadPost)}", true);
     }
 
     [RelayCommand]

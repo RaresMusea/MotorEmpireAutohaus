@@ -196,7 +196,7 @@
             </VerticalStackLayout>
 
 
-            <Frame CornerRadius="0"
+            <Frame CornerRadius="25"
                    BackgroundColor="{AppThemeBinding Dark=#252525, Light=#dbdbdb}"
                    x:Name="PrimaryFrame"
                    IsVisible="False"

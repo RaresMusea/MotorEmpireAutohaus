@@ -15,7 +15,7 @@ public partial class MotorEmpire : ContentPage
     protected override void OnAppearing()
     {
         SearchByCategory.Opacity = 0;
-        SecondaryFrame.Opacity = 0;
+        //SecondaryFrame.Opacity = 0;
         TitleText.Opacity = 0;
         MobileView.Opacity = 0;
         JumbotronImageAnimation.Opacity = 0;
@@ -58,7 +58,6 @@ public partial class MotorEmpire : ContentPage
         if (DeviceInfo.Platform == DevicePlatform.WinUI)
         {
             SecondaryFrame.WidthRequest = 600;
-
             CarFilterRow1.Orientation = StackOrientation.Horizontal;
             CarFilterRow2.Orientation = StackOrientation.Horizontal;
             CarTypePicker.WidthRequest = 200;
@@ -78,6 +77,8 @@ public partial class MotorEmpire : ContentPage
 
         if (DeviceInfo.Platform == DevicePlatform.Android || DeviceInfo.Platform == DevicePlatform.iOS)
         {
+            SecondaryFrame.WidthRequest = 400;
+            ToggleCarFilters.Margin = new Thickness(10);
             CarFilterRow1.Orientation = StackOrientation.Vertical;
             CarFilterRow2.Orientation = StackOrientation.Vertical;
             VerticalStack1.Margin = new Thickness(0, 0, 0, 15);
@@ -92,7 +93,6 @@ public partial class MotorEmpire : ContentPage
             UpperPricePicker.WidthRequest = 70;
             LowerYear.WidthRequest = 70;
             UpperYear.WidthRequest = 70;
-            SecondaryFrame.WidthRequest = 420;
         }
     }
 
@@ -112,6 +112,7 @@ public partial class MotorEmpire : ContentPage
 
         CarFiltersForm.IsVisible = true;
         CarFiltersForm.FadeTo(1, 200, Easing.CubicIn);
+        SecondaryFrame.FadeTo(1, 200, Easing.CubicIn);
     }
 
     private async void OnTextChangedEvent(object o, EventArgs e)

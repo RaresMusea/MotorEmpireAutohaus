@@ -22,7 +22,8 @@ namespace MVVM.View_Models.Post
 
         private readonly CarPostService carPostService;
 
-        private readonly UserAccount owner;
+        [ObservableProperty]
+        private UserAccount owner;
 
         [ObservableProperty] CarPost post;
 
@@ -110,7 +111,7 @@ namespace MVVM.View_Models.Post
             this.carService = carService;
             this.carPostService = carPostService;
             this.post = post;
-            owner = userAccount;
+            owner = UserPreferencesProvider.LoggedInAccount;
             post.Owner = owner;
             post.Car = new Models.Vehicle_Models.Car.Car_Model.Car();
             InitializeCarPostUploadComponent();

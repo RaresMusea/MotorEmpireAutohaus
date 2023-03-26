@@ -56,7 +56,6 @@ public partial class SignUp : ContentPage, IPlatformDependentStyling
             PasswordFrame.WidthRequest = 300;
             AuthContainer.Margin = new Thickness(0, 0, 0, 20);
             RememberMeLabel.FontSize = 16;
-            ForgotPasswordLabel.FontSize = 16;
             WelcomeLabel.FontSize = 30;
             QuestionLabel.FontSize = 20;
             SignUpLabel.FontSize = 25;
@@ -68,15 +67,31 @@ public partial class SignUp : ContentPage, IPlatformDependentStyling
             UsernameEntry.HeightRequest = 45;
             EmailEntry.HeightRequest = 45;
             PasswordEntry.HeightRequest = 45;
-            PasswordEntry.WidthRequest = 225;
+            PasswordEntry.WidthRequest = 275;
             PasswordFrame.WidthRequest = 300;
-            PasswordShowButton.Margin = new Thickness(-5);
+            PasswordShowButton.Margin = new Thickness(5,0,0,0);
         }
     }
 
     private async void NavigateToSignInPage(object sender, EventArgs e)
     {
+        BindingContext = null;
         await AuthContainer.FadeTo(0);
         await Shell.Current.GoToAsync("//LogIn", true);
+    }
+
+    private void RememberUserOnChecked(object sender, EventArgs e)
+    {
+        if (RememberMeCheckBox.IsChecked)
+        {
+            Preferences.Default.Set("username", UsernameEntry.Text);
+            Preferences.Default.Set("pass", PasswordEntry.Text);
+            Preferences.Default.Set("realName", NameEntry.Text);
+            Preferences.Default.Set("email", EmailEntry.Text);
+            return;
+        }
+
+        Preferences.Clear();
+
     }
 }

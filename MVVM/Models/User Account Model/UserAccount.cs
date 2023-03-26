@@ -43,6 +43,16 @@ namespace MVVM.Models.User_Account_Model
 
         public override bool Equals(object obj)
         {
+            if(this == null && obj == null)
+            {
+                return true;
+            }
+
+            if (this == null)
+            {
+                return false;
+            }
+
             var account = obj as UserAccount;
             if (account is null) return false;
 

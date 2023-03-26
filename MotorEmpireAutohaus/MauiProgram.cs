@@ -26,6 +26,9 @@ using MVVM.View.Post_Info;
 using MVVM.View_Models.Post_Info;
 using MVVM.View.Favorite_Posts;
 using MVVM.View_Models.FavoritePosts;
+using Microsoft.Maui.LifecycleEvents;
+using MySqlConnector;
+using MVVM.Services.Interfaces;
 
 namespace MotorEmpireAutohaus;
 public static class MauiProgram
@@ -44,6 +47,22 @@ public static class MauiProgram
             fonts.AddFont("TTOctosquares.ttf", "TTOctosquares");
         }).UseMauiCommunityToolkit();
 
+        /*  builder.ConfigureLifecycleEvents(AppLifecycle =>
+          {*/
+        /*#if ANDROID
+                    AppLifecycle.AddAndroid(android => android.OnCreate(() => {
+                        string emailAddress = Preferences.Default.Get("email", "");
+                        if(!string.IsNullOrEmpty(emailAddress))
+                        {
+                            UserPreferencesProvider.LoggedInAccount = GetUserBasedOnPreferences();
+                            Logger.CurrentlyLoggedInUuid = UserPreferencesProvider.LoggedInAccount.Uuid;
+                            await Shell.Current.GoToAsync($"//MotorEmpire?Name={UserPreferencesProvider.LoggedInAccount.Name}",
+                            true);
+                        }
+                    }));
+        #endif
+                });*/
+
         builder.Services.AddSingleton<Account>();
         builder.Services.AddSingleton<UserAccount>();
         builder.Services.AddSingleton<LogIn>();
@@ -51,9 +70,10 @@ public static class MauiProgram
         builder.Services.AddSingleton<AuthValidation>();
         builder.Services.AddSingleton<SignUp>();
         builder.Services.AddSingleton<AccountService>();
-        
+
         builder.Services.AddTransient<MotorEmpire>();
         builder.Services.AddTransient<MotorEmpireViewModel>();
+        builder.Services.AddTransient<App>();
         builder.Services.AddSingleton<CarFilterService>();
 
         builder.Services.AddSingleton<AppShell>();
@@ -84,6 +104,6 @@ public static class MauiProgram
         builder.Services.AddTransient<FavoritePostsViewModel>();
 
         return builder.Build();
-    }
 
+    }
 }

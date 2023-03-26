@@ -46,7 +46,16 @@ namespace MVVM.Models.Post_Model
             carSpecs = new();
             this.owner = owner;
             this.description = description;
-            HeadingTitle = description.Split("\r")[0];
+
+            if (DeviceInfo.Platform == DevicePlatform.Android)
+            {
+                HeadingTitle = description.Split("\n")[0];
+            }
+            else
+            {
+                HeadingTitle = description.Split("\r")[0];
+            }
+
             this.carEquipment = carEquipment;
             this.price = price;
             this.postPictures = postPictures;

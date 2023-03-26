@@ -331,7 +331,7 @@ namespace MVVM.Services.Account_Services
             string phoneNumber = null;
             while (reader.Read())
             {
-                phoneNumber = reader.GetString(0);
+                phoneNumber = reader.IsDBNull(0)? "":reader.GetString(0);
             }
 
             reader.Close();

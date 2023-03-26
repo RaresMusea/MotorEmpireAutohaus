@@ -44,31 +44,37 @@ namespace MVVM.View_Models.Account
             accountService = new AccountService();
         }
 
-/*        public UserAccountViewModel(string name, string emailAddress, string username, string password) : base(name, password)
-        {
-            this._emailAddress = emailAddress;
-            this._username = username;
-        }*/
-/*
-        public UserAccountViewModel(string UUID, string name, string emailAddress, string username, string password,string profileImageURL) : base(UUID, name, password)
-        {
-            this._emailAddress = emailAddress;
-            this._username = username;
-            this._profileImageUrl= profileImageURL;
-        }*/
-
         //Dependency injection
         public UserAccountViewModel(AuthValidation authValidation, AccountService accountService, UserAccount user)
         {
             this.accountService = accountService;
             this.authValidation = authValidation;
-            user.Uuid = this.accountService.GetUuidByEmail(user.EmailAddress);
-            this.user = user;
+
+            if (UserPreferencesProvider.LoggedInAccount is null)
+            {
+                if (Preferences.ContainsKey("email") && Preferences.Default.Get("email", "") != "")
+                {
+                    string email = Preferences.Default.Get("email", "");
+                    string uuid = accountService.GetUuidByEmail(email);
+                    this.user = (UserAccount)accountService.RetrieveByUuid(uuid);
+                    this.user.Uuid = uuid;
+                }
+                else
+                {
+                    this.user = user;
+                    this.user.Uuid = this.accountService.GetUuidByEmail(this.user.EmailAddress);
+                }
+            }
+            else
+            {
+                this.user = UserPreferencesProvider.LoggedInAccount;
+                this.user.Uuid = this.accountService.GetUuidByEmail(this.user.EmailAddress);
+            }
             userCopy = new UserAccount();
             isEditable = false;
-            AddedPhoneNumber = !this.accountService.HasPhoneNumber(user.Uuid);
-            AddPhoneNumberVisible = !this.accountService.HasPhoneNumber(user.Uuid);
-            removePhoneNumberVisible = this.accountService.HasPhoneNumber(user.Uuid);
+            AddedPhoneNumber = !this.accountService.HasPhoneNumber(this.user.Uuid);
+            AddPhoneNumberVisible = !this.accountService.HasPhoneNumber(this.user.Uuid);
+            removePhoneNumberVisible = this.accountService.HasPhoneNumber(this.user.Uuid);
         }
 
         partial void OnAddPhoneNumberVisibleChanged(bool value)
@@ -122,15 +128,28 @@ namespace MVVM.View_Models.Account
 
         private static async Task<FileResult> PickPhoto()
         {
-            FileResult photo = await MediaPicker.PickPhotoAsync();
-            if (photo is not null)
+            try
             {
-                return photo;
+                FileResult photo = await MediaPicker.PickPhotoAsync();
+                if (photo is not null)
+                {
+                    return photo;
+                }
+                else
+                {
+                    CrossPlatformMessageRenderer.RenderMessages(
+                   "An error occured while attempting to access a resource which was recently accessed.\nPlease try again!",
+                   "Retry", 5);
+                }
+            }
+            catch (Exception)
+            {
+                CrossPlatformMessageRenderer.RenderMessages(
+                    "An error occured while attempting to access a resource which was recently accessed.\nPlease try again!",
+                    "Retry", 5);
+                return null;
             }
 
-            CrossPlatformMessageRenderer.RenderMessages(
-                "An error occured while attempting to access a resource which was recently accessed.\nPlease try again!",
-                "Retry", 5);
             return null;
         }
 
@@ -157,7 +176,8 @@ namespace MVVM.View_Models.Account
             {
                 if (accountService.SignUp(user))
                 {
-                    await Shell.Current.GoToAsync("//LogIn", true);
+                    await Shell.Current.GoToAsync($"//MotorEmpire?Name={user.Name}",
+                        true);
                 }
             }
         }
@@ -211,24 +231,37 @@ namespace MVVM.View_Models.Account
         [RelayCommand]
         private async Task PickPhotoAndUpload()
         {
-            FileResult photo = await PickPhoto();
-
-            if (photo is not null)
+            try
             {
-                string path = $"Images/ProfilePictures/{user.Uuid}";
-                string urlToPicture = await FirebaseCloudStorage.AddFileToFirebaseCloudStorageAsync(photo, path);
+                FileResult photo = await PickPhoto();
 
-                if (urlToPicture is not null)
+                if (photo is not null)
                 {
-                    accountService.UpdateProfilePictureForUser(user.Uuid, urlToPicture);
-                    user.ProfileImageUrl = urlToPicture;
+                    string path = $"Images/ProfilePictures/{user.Uuid}";
+                    string urlToPicture = await FirebaseCloudStorage.AddFileToFirebaseCloudStorageAsync(photo, path);
+
+                    if (urlToPicture is not null)
+                    {
+                        accountService.UpdateProfilePictureForUser(user.Uuid, urlToPicture);
+                        user.ProfileImageUrl = urlToPicture;
+                        return;
+                    }
+                }
+                else
+                {
+                    CrossPlatformMessageRenderer.RenderMessages(
+                    "An error occurred while attempting to manipulate the picture you've just chosen. Try to pick the profile picture again!",
+                    "Retry", 4);
                     return;
                 }
             }
+            catch (Exception)
+            {
 
-            CrossPlatformMessageRenderer.RenderMessages(
-                "An error occurred while attempting to manipulate the picture you've just chosen. Try to pick the profile picture again!",
-                "Retry", 4);
+                CrossPlatformMessageRenderer.RenderMessages(
+                    "An error occurred while attempting to manipulate the picture you've just chosen. Try to pick the profile picture again!",
+                    "Retry", 4);
+            }
         }
 
         [RelayCommand]

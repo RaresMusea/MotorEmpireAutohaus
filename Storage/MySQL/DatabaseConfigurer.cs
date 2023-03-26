@@ -16,7 +16,7 @@ namespace Storage.MySQL
         {
             ConnectionOpen = false;
             connectionString =
-                @"server=192.168.100.34;userid=root;password=password;database=motor_empire_autohaus_database;SSL Mode=None;";
+                @"server=192.168.1.188;userid=root;password=password;database=motor_empire_autohaus_database;SSL Mode=None;";
             EstablishConnection();
         }
 
